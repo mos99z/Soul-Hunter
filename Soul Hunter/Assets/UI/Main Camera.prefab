@@ -53,8 +53,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151290}
-  m_LocalRotation: {x: .382683456, y: 0, z: 0, w: .923879504}
-  m_LocalPosition: {x: 0, y: 14.1099997, z: -14.1099997}
+  m_LocalRotation: {x: .382684946, y: 0, z: 0, w: .923878908}
+  m_LocalPosition: {x: 0, y: 14, z: -12.4799995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 401370}
@@ -80,7 +80,7 @@ Camera:
   far clip plane: 50
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowTarget: {fileID: 0}
-  DistanceOffset: 14
+  DistanceOffset: 12
   HeightOffset: 14
   ObjectsToHide:
     serializedVersion: 2

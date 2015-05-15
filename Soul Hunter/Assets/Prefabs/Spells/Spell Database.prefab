@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 498456}
   - 114: {fileID: 11416190}
+  - 132: {fileID: 13211978}
   m_Layer: 0
   m_Name: Bolt Chain
   m_TagString: Untagged
@@ -59,6 +60,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 466242}
   - 114: {fileID: 11486276}
+  - 132: {fileID: 13211196}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -109,6 +111,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 463890}
   - 114: {fileID: 11409310}
+  - 132: {fileID: 13270400}
   m_Layer: 0
   m_Name: Fog
   m_TagString: Untagged
@@ -227,6 +230,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 425782}
   - 114: {fileID: 11463036}
+  - 132: {fileID: 13218004}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -243,6 +247,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 448052}
   - 114: {fileID: 11492968}
+  - 132: {fileID: 13218160}
   m_Layer: 0
   m_Name: Plasma
   m_TagString: Untagged
@@ -259,6 +264,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484432}
   - 114: {fileID: 11461274}
+  - 132: {fileID: 13239508}
   m_Layer: 0
   m_Name: Whirlwind
   m_TagString: Untagged
@@ -275,6 +281,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484392}
   - 114: {fileID: 11421748}
+  - 132: {fileID: 13219712}
   m_Layer: 0
   m_Name: Freeze
   m_TagString: Untagged
@@ -308,6 +315,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 450016}
   - 114: {fileID: 11499534}
+  - 132: {fileID: 13213048}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Untagged
@@ -324,6 +332,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 492432}
   - 114: {fileID: 11422316}
+  - 132: {fileID: 13219182}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -340,6 +349,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 476582}
   - 114: {fileID: 11457126}
+  - 132: {fileID: 13221246}
   m_Layer: 0
   m_Name: Muck
   m_TagString: Untagged
@@ -371,6 +381,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 459358}
   - 114: {fileID: 11452276}
+  - 132: {fileID: 13241756}
   m_Layer: 0
   m_Name: Steam
   m_TagString: Untagged
@@ -404,6 +415,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 431894}
   - 114: {fileID: 11459708}
+  - 132: {fileID: 13202626}
   m_Layer: 0
   m_Name: Concrete
   m_TagString: Untagged
@@ -437,6 +449,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 450062}
   - 114: {fileID: 11440928}
+  - 132: {fileID: 13299530}
   m_Layer: 0
   m_Name: Sand Blast
   m_TagString: Untagged
@@ -470,6 +483,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 450308}
   - 114: {fileID: 11441984}
+  - 132: {fileID: 13261490}
   m_Layer: 0
   m_Name: Poision Cloud
   m_TagString: Untagged
@@ -503,6 +517,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 455790}
   - 114: {fileID: 11462756}
+  - 132: {fileID: 13215662}
   m_Layer: 0
   m_Name: Wind Blade
   m_TagString: Untagged
@@ -536,6 +551,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 436794}
   - 114: {fileID: 11455116}
+  - 132: {fileID: 13218912}
   m_Layer: 0
   m_Name: Hydrant
   m_TagString: Untagged
@@ -620,6 +636,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 412596}
   - 114: {fileID: 11425866}
+  - 132: {fileID: 13273886}
   m_Layer: 0
   m_Name: Fire Ball
   m_TagString: Untagged
@@ -653,6 +670,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 458024}
   - 114: {fileID: 11445358}
+  - 132: {fileID: 13286290}
   m_Layer: 0
   m_Name: Magma
   m_TagString: Untagged
@@ -669,6 +687,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 421848}
   - 114: {fileID: 11417532}
+  - 132: {fileID: 13296040}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -685,6 +704,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 483786}
   - 114: {fileID: 11402754}
+  - 132: {fileID: 13261996}
   m_Layer: 0
   m_Name: Bolt
   m_TagString: Untagged
@@ -701,6 +721,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 406612}
   - 114: {fileID: 11497416}
+  - 132: {fileID: 13220850}
   m_Layer: 0
   m_Name: Crystal Spikes
   m_TagString: Untagged
@@ -717,6 +738,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 492480}
   - 114: {fileID: 11450906}
+  - 132: {fileID: 13273038}
   m_Layer: 0
   m_Name: Gravity Well
   m_TagString: Untagged
@@ -733,6 +755,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 419082}
   - 114: {fileID: 11433172}
+  - 132: {fileID: 13216296}
   m_Layer: 0
   m_Name: Shock Prism
   m_TagString: Untagged
@@ -783,6 +806,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 431844}
   - 114: {fileID: 11403326}
+  - 132: {fileID: 13246214}
   m_Layer: 0
   m_Name: Rock Spike
   m_TagString: Untagged
@@ -816,6 +840,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 429806}
   - 114: {fileID: 11463178}
+  - 132: {fileID: 13279796}
   m_Layer: 0
   m_Name: Aqua Jet
   m_TagString: Untagged
@@ -1421,7 +1446,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 4.63000011, z: 6.28000021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429806}
@@ -1777,6 +1802,581 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45fd3e21abb80647b4d8b404837daa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!132 &13202626
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146930}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13211196
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104640}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13211978
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101402}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13213048
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134238}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13215662
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158170}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Wind Blade,2,2,2
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13216296
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178776}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13218004
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130834}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Laser,1,1,4
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13218160
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130910}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13218912
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163014}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Hydrant,5,5,5
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13219182
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135810}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13219712
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131994}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Freeze,2,2,5
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13220850
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177318}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13221246
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136004}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13239508
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131646}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Whirlwind,2,2,4
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13241756
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141810}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Steam,1,1,5
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13246214
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184344}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Rock Spike,3,3,3
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13261490
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155006}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13261996
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177300}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Bolt,4,4,4
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13270400
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119422}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13273038
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177334}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13273886
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167960}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: FIre Ball,1,1,1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13279796
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194760}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Aqua Jet,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13286290
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172634}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Magma,1,1,3
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13296040
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177286}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Torch,2,2,1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!132 &13299530
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150318}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Name,#,#,#
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!198 &19805852
 ParticleSystem:
   m_ObjectHideFlags: 1
