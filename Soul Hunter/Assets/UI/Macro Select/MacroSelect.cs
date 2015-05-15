@@ -40,6 +40,9 @@ public class MacroSelect : MonoBehaviour
 	private Color32 selected;
 	private Color32 unSelected;
 
+	//Store Player
+	public GameObject Player;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -195,6 +198,8 @@ public class MacroSelect : MonoBehaviour
 		string info3 = spells [curMac].GetComponent<GUIText> ().text.ToString();
 		string[] data3 = info3.Split(',');
 		curSpell.text = data3[0];
+
+		Player.SendMessage ("ChangeSpell", spells[curMac], SendMessageOptions.RequireReceiver);
 
 		int.TryParse(data3[1], out temp);
 		element1.sprite = elements[temp - 1];
