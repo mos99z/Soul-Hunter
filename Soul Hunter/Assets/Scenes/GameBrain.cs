@@ -2,6 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 
+public enum Debuff{ 
+	NONE,
+	Slowed, 
+	Stunned,
+	Wet,
+	Burning,
+	Crippled,
+	Frozen
+}
+
 public class GameBrain : MonoBehaviour {
 
 	public int PlayerMaxHealth = 1000;
@@ -20,6 +30,7 @@ public class GameBrain : MonoBehaviour {
 	public double GameTime = 0.0;
 	public int NumCastedSpells = 0;
 	public GameObject SpellDatabase = null;
+	public GameObject HUD = null;
 
 	// Use this for initialization
 	void Start ()
@@ -27,6 +38,7 @@ public class GameBrain : MonoBehaviour {
 		//The Spell Database it's self should not be active.
 		//Only in scene for ease of development.
 		SpellDatabase.SetActive (false);
+		HUD.SetActive (true);
 	}
 	
 	// Update is called once per frame
