@@ -273,7 +273,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 123942519}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Bolt Chain,2,4,4
   m_Anchor: 0
@@ -339,7 +339,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148337318}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Explosion,1,3,3
   m_Anchor: 0
@@ -406,7 +406,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178731060}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Fire Ball,1,1,1
   m_Anchor: 0
@@ -1747,7 +1747,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 252201352}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Meteor,1,2,3
   m_Anchor: 0
@@ -2933,7 +2933,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 278976146}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Hydrant,5,5,5
   m_Anchor: 0
@@ -5476,7 +5476,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 481900151}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Plasma,1,4,4
   m_Anchor: 0
@@ -6662,7 +6662,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 535103646}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Bolt,4,4,4
   m_Anchor: 0
@@ -7979,7 +7979,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 671143644}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Barrier,1,4,5
   m_Anchor: 0
@@ -11527,7 +11527,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 816907419}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Aqua Jet,2,5,5
   m_Anchor: 0
@@ -17509,7 +17509,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118885786}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Muck,3,5,5
   m_Anchor: 0
@@ -18741,7 +18741,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1148660565}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Wind Blade,2,2,2
   m_Anchor: 0
@@ -18887,7 +18887,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1243102812}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Fog,1,2,5
   m_Anchor: 0
@@ -20139,7 +20139,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1314046343}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Sand Blast,2,3,3
   m_Anchor: 0
@@ -20257,7 +20257,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1329146427}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Magma,1,1,3
   m_Anchor: 0
@@ -23819,7 +23819,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1517855061}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Crystal Spikes,2,3,4
   m_Anchor: 0
@@ -23885,7 +23885,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1533650273}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Rock Spike,3,3,3
   m_Anchor: 0
@@ -23951,7 +23951,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1535262730}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Poison Cloud,3,4,5
   m_Anchor: 0
@@ -24021,7 +24021,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1575352065}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Laser,1,1,4
   m_Anchor: 0
@@ -24127,7 +24127,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1648183683}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Freeze,2,2,5
   m_Anchor: 0
@@ -24193,7 +24193,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1655609062}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Gravity Well,3,4,4
   m_Anchor: 0
@@ -24392,7 +24392,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1707020131}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Whirlwind,2,2,4
   m_Anchor: 0
@@ -24458,7 +24458,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725365659}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Shock Prism,4,5,5
   m_Anchor: 0
@@ -25673,7 +25673,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1780212652}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Steam,1,1,5
   m_Anchor: 0
@@ -36290,7 +36290,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2082773142}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Concrete,3,3,5
   m_Anchor: 0
@@ -36396,7 +36396,7 @@ GUIText:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097535413}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Torch,1,2,2
   m_Anchor: 0
