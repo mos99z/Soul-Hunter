@@ -39,4 +39,9 @@ public class Player_Caster_Controller : MonoBehaviour {
 	{
 		CurrSpell = _spell;
 	}
+
+	void SetRecoverTime(float _recovering)
+	{
+		RecoverTime = Recovering = _recovering;
+	}
 }

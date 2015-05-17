@@ -8,7 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 438824}
-  - 114: {fileID: 11426016}
   m_Layer: 2
   m_Name: Bio
   m_TagString: Spell
@@ -24,7 +23,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437378}
-  - 114: {fileID: 11460512}
   - 114: {fileID: 11454988}
   - 136: {fileID: 13604964}
   - 65: {fileID: 6554642}
@@ -43,7 +41,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 452382}
-  - 114: {fileID: 11460718}
   m_Layer: 2
   m_Name: Ice
   m_TagString: Spell
@@ -60,7 +57,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 439490}
   - 114: {fileID: 11441386}
-  - 114: {fileID: 11467016}
   - 65: {fileID: 6502848}
   - 82: {fileID: 8279470}
   - 82: {fileID: 8217502}
@@ -115,7 +111,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 449478}
-  - 114: {fileID: 11414214}
   m_Layer: 2
   m_Name: Concrete
   m_TagString: Spell
@@ -131,7 +126,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 473118}
-  - 114: {fileID: 11498400}
   m_Layer: 2
   m_Name: Sand
   m_TagString: Spell
@@ -147,7 +141,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 436746}
-  - 114: {fileID: 11457690}
   m_Layer: 2
   m_Name: Torch
   m_TagString: Spell
@@ -163,7 +156,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 421316}
-  - 114: {fileID: 11412880}
   m_Layer: 2
   m_Name: Steam
   m_TagString: Spell
@@ -179,7 +171,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493956}
-  - 114: {fileID: 11441064}
   m_Layer: 2
   m_Name: Whirl Wind
   m_TagString: Spell
@@ -198,7 +189,6 @@ GameObject:
   - 198: {fileID: 19884352}
   - 199: {fileID: 19948146}
   - 135: {fileID: 13598080}
-  - 114: {fileID: 11431926}
   m_Layer: 2
   m_Name: Impact Explosion
   m_TagString: Spell
@@ -232,7 +222,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 486178}
-  - 114: {fileID: 11409534}
   - 114: {fileID: 11438028}
   - 65: {fileID: 6513222}
   m_Layer: 2
@@ -250,7 +239,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 461052}
-  - 114: {fileID: 11463488}
   m_Layer: 2
   m_Name: Gravity
   m_TagString: Spell
@@ -266,7 +254,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 461210}
-  - 114: {fileID: 11424146}
   m_Layer: 2
   m_Name: Plasma
   m_TagString: Spell
@@ -282,7 +269,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400308}
-  - 114: {fileID: 11442018}
   m_Layer: 2
   m_Name: Bolt Chain
   m_TagString: Spell
@@ -298,7 +284,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 475600}
-  - 114: {fileID: 11488166}
   m_Layer: 2
   m_Name: Barrier
   m_TagString: Spell
@@ -314,7 +299,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 444362}
-  - 114: {fileID: 11410268}
   m_Layer: 2
   m_Name: Shock Prism
   m_TagString: Spell
@@ -330,7 +314,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 489554}
-  - 114: {fileID: 11499486}
   m_Layer: 2
   m_Name: Meteor
   m_TagString: Spell
@@ -347,7 +330,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 424096}
   - 114: {fileID: 11480282}
-  - 114: {fileID: 11494034}
   - 136: {fileID: 13640728}
   m_Layer: 2
   m_Name: Earth
@@ -364,7 +346,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451290}
-  - 114: {fileID: 11490810}
   m_Layer: 2
   m_Name: Explosion
   m_TagString: Spell
@@ -465,7 +446,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 416954}
-  - 114: {fileID: 11456120}
   m_Layer: 2
   m_Name: Aqua Jet
   m_TagString: Spell
@@ -481,7 +461,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 409064}
-  - 114: {fileID: 11412998}
   m_Layer: 2
   m_Name: Magma
   m_TagString: Spell
@@ -497,7 +476,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 403396}
-  - 114: {fileID: 11484040}
   m_Layer: 2
   m_Name: Laser
   m_TagString: Spell
@@ -530,7 +508,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460496}
-  - 114: {fileID: 11429100}
   m_Layer: 2
   m_Name: Crystal
   m_TagString: Spell
@@ -546,7 +523,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 480040}
-  - 114: {fileID: 11400756}
   m_Layer: 2
   m_Name: Fog
   m_TagString: Spell
@@ -562,7 +538,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 478510}
-  - 114: {fileID: 11497894}
   m_Layer: 2
   m_Name: Muck
   m_TagString: Spell
@@ -1666,206 +1641,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11400756
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11409534
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 10
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11410268
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11412880
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11412998
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11414214
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11424146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11426016
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11429100
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11431926
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 133070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 5
-  ApplyDebuff: 1
-  Duration: 10
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 4
-  Debuffs: {fileID: 164488, guid: 535de5d6e200c41428be05e7f8ec0f8b, type: 2}
 --- !u!114 &11438028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1884,27 +1659,7 @@ MonoBehaviour:
   Angle: 190
   GrowthRate: .75
   ImpactEffect: {fileID: 0}
-  SoundImpact: {fileID: 193846, guid: 5c49ddcc004943e4cbbc0c822a00b767, type: 2}
---- !u!114 &11441064
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
+  SoundImpact: {fileID: 0}
 --- !u!114 &11441386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1921,26 +1676,6 @@ MonoBehaviour:
   DropRate: .000500000024
   ImpactEffect: {fileID: 133070}
   Fireball: {fileID: 185988}
---- !u!114 &11442018
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
 --- !u!114 &11454988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1952,135 +1687,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8492935be306afd439f0ff82663a7219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownCost: 2.5999999
-  Duration: 1.29999995
+  CoolDownCost: 2.5
+  Duration: 1.25
   PushBackPower: 300
   Range: 15
   ImpactEffect: {fileID: 0}
   DamageTickSpeed: .100000001
   CollideWIth:
     serializedVersion: 2
-    m_Bits: 54784
---- !u!114 &11456120
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11457690
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11460512
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 2
-  ApplyDebuff: 1
-  Duration: 15
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 3
-  Debuffs: {fileID: 164488, guid: 535de5d6e200c41428be05e7f8ec0f8b, type: 2}
---- !u!114 &11460718
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11463488
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11467016
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 15
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
+    m_Bits: 50688
 --- !u!114 &11480282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2098,66 +1713,6 @@ MonoBehaviour:
   Range: 21
   ImpactEffect: {fileID: 0}
   Scaler: {x: 1, y: 7, z: 1}
---- !u!114 &11484040
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11488166
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11490810
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
 --- !u!114 &11491054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2169,95 +1724,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310089d4b6aea914298372338c22492b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoolDownCost: 0
-  Speed: 2
-  Range: 30
-  MaxSpreadAngle: 10
+  CoolDownCost: .25
+  Speed: 1.5
+  Range: 40
+  MaxSpreadAngle: 7
   ImpactEffect: {fileID: 0}
   Lightingbolt: {fileID: 134464}
-  Damage: 20
-  Stunned: {fileID: 137194, guid: 535de5d6e200c41428be05e7f8ec0f8b, type: 2}
-  StunDuration: 10
---- !u!114 &11494034
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 40
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11497894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11498400
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
---- !u!114 &11499486
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2827f31b3835441bfa18af9d147e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
-  FunctionName: 54616b6544616d616765
-  CollidableTag: 456e656d79
-  IsTagReciever: 1
-  AlternateReciever: 
-  DebuffType: 0
-  Debuffs: {fileID: 0}
+  Damage: 10
+  Stunned: {fileID: 0}
+  StunDuration: .5
 --- !u!135 &13598080
 SphereCollider:
   m_ObjectHideFlags: 1
