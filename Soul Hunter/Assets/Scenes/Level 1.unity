@@ -179,22 +179,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 126050, guid: 2b6e12da42803684d9ac56e5032a7793, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 154108, guid: 2b6e12da42803684d9ac56e5032a7793, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 117346, guid: 2b6e12da42803684d9ac56e5032a7793, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 142818, guid: 2b6e12da42803684d9ac56e5032a7793, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b6e12da42803684d9ac56e5032a7793, type: 2}
   m_IsPrefabParent: 0
@@ -504,6 +488,14 @@ Prefab:
     - target: {fileID: 151290, guid: 2fc8e97ffaa3ea44c9472db8d2f149a2, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429862, guid: 2fc8e97ffaa3ea44c9472db8d2f149a2, type: 2}
+      propertyPath: DistanceOffset
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2043070, guid: 2fc8e97ffaa3ea44c9472db8d2f149a2, type: 2}
+      propertyPath: orthographic size
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fc8e97ffaa3ea44c9472db8d2f149a2, type: 2}
