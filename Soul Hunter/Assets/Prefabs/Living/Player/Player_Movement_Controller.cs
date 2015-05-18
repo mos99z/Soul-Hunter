@@ -43,17 +43,9 @@ public class Player_Movement_Controller : MonoBehaviour {
 		#if (MOVEPLAYER)
 		currentVelocity.x = Input.GetAxisRaw ("Horizontal");
 		currentVelocity.z = Input.GetAxisRaw ("Vertical");
-		if (currentVelocity.magnitude < 1.0f)
-		{
-			gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-		}
-		else
-		{
-			gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-			currentVelocity.Normalize ();
-			currentVelocity *= Speed;
-			transform.position += currentVelocity;
-		}
+		currentVelocity.Normalize ();
+		currentVelocity *= Speed;
+		transform.position += currentVelocity;
 		#endif
 	}
 }
