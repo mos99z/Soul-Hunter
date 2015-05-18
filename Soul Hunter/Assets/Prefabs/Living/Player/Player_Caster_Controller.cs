@@ -42,6 +42,8 @@ public class Player_Caster_Controller : MonoBehaviour {
 
 	void SetRecoverTime(float _recovering)
 	{
+		if (_recovering > 0.0f)
+			CanCast = false;
 		RecoverTime = Recovering = _recovering;
 	}
 }

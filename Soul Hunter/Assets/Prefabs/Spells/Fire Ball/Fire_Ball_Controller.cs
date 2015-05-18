@@ -5,22 +5,34 @@ public class Fire_Ball_Controller : MonoBehaviour {
 
 	public float RecoveryCost = 0.0f;
 	public float Speed = 0.0f;
-	public float DropRate = 0.001f;
+	public float Range = 12.0f;
 	public float StartHeight = 1.5f;
 	public GameObject ImpactEffect = null;
 	public GameObject Fireball = null;
 
+	private Vector3 StartLoc = Vector3.zero;
+//	private float DropRate = 0.001f;
 	private Vector3 ForwardDirection = Vector3.zero;
 	private GameObject MouseMarker = null;
 	private GameObject Player = null;
 	private float killSwitch = 5.0f;
 	private bool dieing = false;
 
+	private float _50PercentDropRate = 0.0f;
+	private bool Reached50 = false;
+	private float _75PercentDropRate = 0.0f;
+	private bool Reached75 = false;
+	
 	void Start () {
+		_50PercentDropRate = 0.01f * StartHeight;
+		_75PercentDropRate = 0.03f * StartHeight;
+
 		// Start at desired height
 		Vector3 newHeight = transform.position;
 		newHeight.y = StartHeight;
 		transform.position = newHeight;
+
+		StartLoc = transform.position;
 
 		MouseMarker = GameObject.FindGameObjectWithTag ("MouseMarker");
 		Vector3 lookAt = MouseMarker.transform.position;
@@ -52,9 +64,21 @@ public class Fire_Ball_Controller : MonoBehaviour {
 	
 	void FixedUpdate () {
 		if (!dieing) {
-			// Slowly drop the fireball faster and faster, while moving it forward
-			ForwardDirection.y -= DropRate;
-			DropRate += DropRate * 0.1f;
+			if (!Reached75 && Reached50 && (StartLoc - transform.position).magnitude >= 0.75f * Range)
+			{
+				Reached75 = true;
+				ForwardDirection.y = -_75PercentDropRate;
+			}
+			else if (!Reached50 && (StartLoc - transform.position).magnitude >= 0.5f * Range)
+			{
+				Reached50 = true;
+				ForwardDirection.y = -_50PercentDropRate;
+			}
+
+//			// Slowly drop the fireball faster and faster, while moving it forward
+//			ForwardDirection.y -= DropRate;
+//			DropRate += DropRate * 0.1f;
+
 			transform.position += ForwardDirection;
 			// Set the box collider from the floor up 6 so spell wont go over or under targets.
 			Vector3 temp = GetComponent<BoxCollider> ().center;
