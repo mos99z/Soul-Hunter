@@ -50,8 +50,10 @@ public class GameBrain : MonoBehaviour {
 	void ModMaxHealth(int _value)
 	{
 		PlayerMaxHealth += _value;
-		if (PlayerMaxHealth < 0)
+		if (PlayerMaxHealth <= 0)
+		{
 			PlayerMaxHealth = 0;
+		}
 
 		if (PlayerCurrHealth > PlayerMaxHealth)
 			PlayerCurrHealth = PlayerMaxHealth;
@@ -60,8 +62,9 @@ public class GameBrain : MonoBehaviour {
 	{
 		PlayerMaxHealth = _NewMaxHealth;
 		if (PlayerMaxHealth < 0)
+		{
 			PlayerMaxHealth = 0;
-
+		}
 		if (PlayerCurrHealth > PlayerMaxHealth)
 			PlayerCurrHealth = PlayerMaxHealth;
 	}
@@ -72,14 +75,7 @@ public class GameBrain : MonoBehaviour {
 			DamageTaken -= _value;
 
 		PlayerCurrHealth += _value;
-		if (PlayerCurrHealth > PlayerMaxHealth)
-			PlayerCurrHealth = PlayerMaxHealth;
-
-		else if (PlayerCurrHealth < 0)
-		{
-			DamageTaken += PlayerCurrHealth;
-			PlayerCurrHealth = 0;
-		}
+		CheckHealth ();
 	}
 	void SetHealth(int _NewHealth)
 	{
@@ -87,13 +83,23 @@ public class GameBrain : MonoBehaviour {
 			DamageTaken += PlayerCurrHealth - _NewHealth;
 
 		PlayerCurrHealth = _NewHealth;
+		CheckHealth ();
+	}
+
+	void CheckHealth()
+	{
 		if (PlayerCurrHealth > PlayerMaxHealth)
 			PlayerCurrHealth = PlayerMaxHealth;
-
-		else if (PlayerCurrHealth < 0)
+		else if (PlayerCurrHealth <= 0)
 		{
 			DamageTaken += PlayerCurrHealth;
 			PlayerCurrHealth = 0;
+			ModLivesLeft( -1);
+
+			if (PlayerLivesLeft <= 0)
+				GameOver();
+			else
+				RespawnPlayer();
 		}
 	}
 
@@ -124,6 +130,16 @@ public class GameBrain : MonoBehaviour {
 		}
 	}
 
+	void RespawnPlayer()
+	{
+		PlayerCurrHealth = PlayerMaxHealth;
+	}
+
+	void GameOver()
+	{
+
+	}
+
 	void ModSouls(int _value)
 	{
 		SoulCount += _value;
@@ -147,4 +163,5 @@ public class GameBrain : MonoBehaviour {
 		// In the works
 		//SpellDatabase.transform.FindChild (_SpellName).GetComponent<GUIText>().text.;
 	}
+
 }

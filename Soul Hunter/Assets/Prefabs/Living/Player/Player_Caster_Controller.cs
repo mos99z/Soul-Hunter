@@ -24,15 +24,15 @@ public class Player_Caster_Controller : MonoBehaviour {
 				Recovering = 0.0f;
 				CanCast = true;
 			}
+		} else if (Input.GetMouseButtonDown (0))
+		{
+			CastSpell();
 		}
 	}
 
 	void CastSpell()
 	{
-		if (CanCast)
-		{
-			Instantiate(CurrSpell, transform.position, transform.rotation);
-		}
+		Instantiate(CurrSpell, transform.position, transform.rotation);
 	}
 
 	void ChangeSpell(GameObject _spell)

@@ -11,7 +11,6 @@ public class Fire_Ball_Controller : MonoBehaviour {
 	public GameObject Fireball = null;
 
 	private Vector3 ForwardDirection = Vector3.zero;
-	private GameObject Owner = null;
 	private GameObject MouseMarker = null;
 	private GameObject Player = null;
 	private float killSwitch = 5.0f;
@@ -66,7 +65,8 @@ public class Fire_Ball_Controller : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider _object){
 		if (!dieing) {
-			if (_object.tag == "Enemy" || _object.tag == "Solid") {
+			if (_object.tag == "Enemy" || _object.tag == "Solid")
+			{
 				DestroyMe ();
 			}
 		}
@@ -83,16 +83,18 @@ public class Fire_Ball_Controller : MonoBehaviour {
 	}
 	
 	void DestroyMe(){
-		dieing = true;
-		AudioSource[] sounds = GetComponents<AudioSource> ();
-		// Moving
-		sounds[0].Stop();
-		// Collision
-		sounds[1].Play();
-		
-		ImpactEffect.SetActive(true);
-		Destroy (gameObject, 1.5f);
-		Fireball.SetActive (false);
-		GetComponent<BoxCollider> ().enabled = false;
+		if (!dieing) {
+			dieing = true;
+			AudioSource[] sounds = GetComponents<AudioSource> ();
+			// Moving
+			sounds [0].Stop ();
+			// Collision
+			sounds [1].Play ();
+			
+			ImpactEffect.SetActive (true);
+			Destroy (gameObject, 1.5f);
+			Fireball.SetActive (false);
+			GetComponent<BoxCollider> ().enabled = false;
+		}
 	}
 }

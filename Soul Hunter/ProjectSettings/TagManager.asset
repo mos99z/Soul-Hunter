@@ -9,6 +9,7 @@ TagManager:
   - Spells
   - MouseMarker
   - Solid
+  - VOID
   layers:
   - Default
   - TransparentFX
