@@ -6,7 +6,7 @@ public class Player_Caster_Controller : MonoBehaviour {
 	private GameObject CurrSpell = null;
 	private string SpellName;
 	private float Recovering = 0.0f;
-	private float RecoverTime = 0.0f;
+	public float RecoverTime = 0.0f;
 	private bool CanCast = true;
 	
 	void Start ()

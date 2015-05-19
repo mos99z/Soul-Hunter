@@ -43,9 +43,13 @@ public class MacroSelect : MonoBehaviour
 	//Store Player
 	public GameObject Player;
 
+	public bool needsUpdate;
+
 	// Use this for initialization
 	void Start ()
 	{
+		needsUpdate = false;
+
 		scrollTime = 0;
 		scrollDelay = (float)0.05;
 		
@@ -58,9 +62,7 @@ public class MacroSelect : MonoBehaviour
 		slot1.color = selected;
 
 		toggleMacs();
-		
 		colorManagment();
-		
 		changeText();
 	}
 	
@@ -70,13 +72,15 @@ public class MacroSelect : MonoBehaviour
 		scrollTime += Time.deltaTime;
 
 		//only do calculations when needed
-		if (Input.GetAxis("Mouse ScrollWheel") != 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetAxis("Mouse ScrollWheel") != 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q) || needsUpdate)
 		{
 			toggleMacs();
 			
 			colorManagment();
 			
 			changeText();
+
+			needsUpdate = false;
 		}
 	}
 
@@ -94,33 +98,33 @@ public class MacroSelect : MonoBehaviour
 			scrollTime = 0;
 			curMac++;
 		}
-		
-		prevMac = curMac - 1;
-		nextMac = curMac + 1;
-		
-		if (prevMac < 0)
-		{
-			prevMac = 5 - 1;
-		}
-		if (prevMac >= 5)
-		{
-			prevMac = 0;
-		}
-		
+
 		if (curMac < 0)
 		{
-			curMac = 5 - 1;
+			curMac = 4;
 		}
-		if (curMac >= 5)
+		if (curMac > 4)
 		{
 			curMac = 0;
 		}
 		
+		prevMac = curMac - 1;
+		nextMac = curMac + 1;
+
+		if (prevMac < 0)
+		{
+			prevMac = 4;
+		}
+		if (prevMac > 4)
+		{
+			prevMac = 0;
+		}
+		
 		if (nextMac < 0)
 		{
-			nextMac = 5 - 1;
+			nextMac = 4;
 		}
-		if (nextMac >= 5)
+		if (nextMac > 4)
 		{
 			nextMac = 0;
 		}
@@ -185,17 +189,17 @@ public class MacroSelect : MonoBehaviour
 		int temp;
 
 		//Handle previous spell
-		string info1 = spells [prevMac].GetComponent<GUIText> ().text.ToString();
+		string info1 = spells[prevMac].GetComponent<GUIText> ().text.ToString();
 		string[] data1 = info1.Split(',');
 		prevSpell.text = data1[0];
 
 		//Handle next spell
-		string info2 = spells [nextMac].GetComponent<GUIText> ().text.ToString();
+		string info2 = spells[nextMac].GetComponent<GUIText> ().text.ToString();
 		string[] data2 = info2.Split(',');
 		nextSpell.text = data2[0];
 
 		//Handle current spell
-		string info3 = spells [curMac].GetComponent<GUIText> ().text.ToString();
+		string info3 = spells[curMac].GetComponent<GUIText> ().text.ToString();
 		string[] data3 = info3.Split(',');
 		curSpell.text = data3[0];
 

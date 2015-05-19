@@ -420,7 +420,7 @@ GameObject:
   m_Icon: {fileID: -2663371497217273435, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &141036
 GameObject:
   m_ObjectHideFlags: 1
@@ -1942,6 +1942,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3357b348dfaf30542a8849dd3da8c023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RecoveryCost: 0
+  StartHeight: 1.5
+  Speed: 0
+  Range: 10
+  MaxSpreadAngle: 0
+  ImpactEffect: {fileID: 0}
+  Lightingbolt: {fileID: 0}
+  Damage: 10
+  Stunned: {fileID: 0}
+  StunDuration: .5
 --- !u!114 &11403326
 MonoBehaviour:
   m_ObjectHideFlags: 1

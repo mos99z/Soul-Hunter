@@ -44,7 +44,7 @@ public class Bolt_Controller : MonoBehaviour {
 		Target.y = Player.transform.position.y;
 		Player.transform.LookAt(Target);
 		
-		GameObject.FindGameObjectWithTag("SpellCaster").GetComponent<SpellCaster>().SendMessage("SetCoolDown", CoolDownCost, SendMessageOptions.RequireReceiver);
+		GameObject.FindGameObjectWithTag("SpellCaster").GetComponent<SpellCaster>().SendMessage("SetCoolDown", RecoveryCost, SendMessageOptions.RequireReceiver);
 		GameObject.Find("Main").BroadcastMessage("SpellCasted", SendMessageOptions.DontRequireReceiver);
 	}
 	
