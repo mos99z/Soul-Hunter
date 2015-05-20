@@ -3,54 +3,47 @@ using System.Collections;
 
 public class Bolt_Controller : MonoBehaviour {
 
-	public float RecoveryCost = 0.0f;
+	public float Damage = 50.4f;
+	public float RecoveryCost = 1.0f;
 	public float StartHeight = 1.5f;
-	public float Speed = 0.0f;
+	public float Speed = 1.5f;
 	public float Range = 10.0f;
 	public float MaxSpreadAngle = 0.0f;
+	public GameObject SpellEffect = null;
 	public GameObject ImpactEffect = null;
-	public GameObject Lightingbolt = null;
-	public int Damage = 10;
 	public GameObject Stunned = null;
+	public AudioSource SFXMoving = null;
+	public AudioSource SFXImpact = null;
 	public float StunDuration = 0.5f;
 
-	private Vector3 Target = Vector3.zero;
-	private Vector3 StartLoc = Vector3.zero;
+	private Vector3 StartLocation = Vector3.zero;
 	private Vector3 ForwardDirection = Vector3.zero;
-
-//	private GameObject Owner = null;
-	private GameObject MouseMarker = null;
-	private GameObject Player = null;
 	private bool dieing = false;
-
-	void Start () {
+	private float killSwitch = 5.0f;
+	void Start ()
+	{
 		// Start at desired height
 		Vector3 newHeight = transform.position;
 		newHeight.y = StartHeight;
 		transform.position = newHeight;
 
-		Player = GameObject.FindGameObjectWithTag ("Player");
-		MouseMarker = GameObject.FindGameObjectWithTag ("MouseMarker");
-//		Owner = GameObject.FindGameObjectWithTag ("SpellCaster");
-		
-		Target = MouseMarker.transform.position;
-//		Target.y = Owner.transform.position.y;
-//		transform.position = Owner.transform.position;
-//		StartLoc = Owner.transform.position;
+		StartLocation = transform.position;
+
+		Vector3 Target = GameObject.FindGameObjectWithTag ("MouseMarker").transform.position;
+		Target.y = transform.position.y;
 		transform.LookAt(Target);
 		transform.RotateAround (transform.position, new Vector3 (0, 1, 0), Random.Range(-MaxSpreadAngle * 0.5f, MaxSpreadAngle * 0.5f));
 		ForwardDirection = transform.forward.normalized * Speed;
-		
-		Target.y = Player.transform.position.y;
-		Player.transform.LookAt(Target);
-		
-		GameObject.FindGameObjectWithTag("SpellCaster").GetComponent<SpellCaster>().SendMessage("SetCoolDown", RecoveryCost, SendMessageOptions.RequireReceiver);
-		GameObject.Find("Main").BroadcastMessage("SpellCasted", SendMessageOptions.DontRequireReceiver);
+
+		GameObject.FindGameObjectWithTag ("Player").SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
 	}
-	
-	// Update is called once per frame
+
 	void Update ()
 	{
+		killSwitch -= Time.deltaTime;
+		// Kill if alive too long, safty net incase no collision happens
+		if (killSwitch <= 0.0f)
+			Destroy (gameObject);
 	}
 
 	void FixedUpdate ()
@@ -58,51 +51,53 @@ public class Bolt_Controller : MonoBehaviour {
 		if (!dieing)
 		{
 			transform.position += ForwardDirection;
-			float distance = (transform.position - StartLoc).magnitude;
-			Vector3 Scale = transform.localScale;
-			Scale.z = 10.0f * (distance / Range);
-			transform.localScale = Scale;
-			
-			Vector3 temp = GetComponent<BoxCollider> ().size;
-			temp.y = transform.position.y * 2;
-			GetComponent<BoxCollider> ().size = temp;
-			temp = GetComponent<BoxCollider> ().center;
-			temp.y = -transform.position.y;
-			GetComponent<BoxCollider> ().center = temp;
+			float distance = (transform.position - StartLocation).magnitude;
 			
 			if (distance >= Range)
-			{
 				Destroy (gameObject);
-			}
 		}	
 	}
 	
 	void OnTriggerEnter(Collider _object)
 	{
-		float damageMod = 1.0f;
-		if (_object.tag == "Enemy")
+		if (!dieing)
 		{
-			if (_object.transform.Find("Wet(Clone)"))
+			float damageMod = 1.0f;
+			if (_object.tag == "Enemy")
 			{
-				GameObject stun = Instantiate(Stunned);
-				stun.transform.parent = _object.transform;
-				stun.transform.localPosition = new Vector3(0,-_object.transform.position.y,0);
-				stun.GetComponent<StunnedDebuffController>().LockPosition = _object.transform.position;
-				MonoBehaviour[] scripts = _object.transform.GetComponents<MonoBehaviour>();
-				stun.GetComponent<StunnedDebuffController>().Scripts = scripts;
-				stun.GetComponent<StunnedDebuffController>().Duration = StunDuration;
-				damageMod = 2.0f;
+				if (_object.transform.Find ("Wet(Clone)"))
+				{
+					GameObject stun = Instantiate (Stunned);
+					stun.transform.parent = _object.transform;
+					stun.transform.localPosition = new Vector3 (0, -_object.transform.position.y, 0);
+					stun.GetComponent<StunnedDebuffController> ().Duration = StunDuration;
+					damageMod = 2.0f;
+				}
+
+				_object.transform.SendMessage ("TakeDamage", Damage * damageMod);
+
+				DestroyMe();
 			}
-			_object.transform.SendMessage("TakeDamage",(int)(Damage * damageMod));
-			Lightingbolt.SetActive(false);
-			Destroy (gameObject, 0.4f);
-			dieing = true;
+			else if (_object.tag == "Solid")
+				DestroyMe();
 		}
-		else if (_object.tag == "Solid")
+	}
+
+	void DestroyMe()
+	{
+		if (!dieing)
 		{
-			Lightingbolt.SetActive(false);
-			Destroy (gameObject, 0.4f);
 			dieing = true;
+			if (SFXMoving != null)
+				SFXMoving.Stop();
+			if (SpellEffect != null)
+				SpellEffect.SetActive (false);
+			if (SFXImpact != null)
+				SFXImpact.Play();
+			if (ImpactEffect != null)
+				ImpactEffect.SetActive (true);
+			Destroy (gameObject, 0.4f);
+			GetComponent<BoxCollider> ().enabled = false;
 		}
 	}
 }

@@ -50,7 +50,8 @@ MonoBehaviour:
   DeathCount: 0
   GameTime: 0
   NumCastedSpells: 0
-  SpellDatabase: {fileID: 138790, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+  SpellDatabase: {fileID: 0}
+  HUD: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

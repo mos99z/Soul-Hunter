@@ -2,44 +2,38 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Wind_Blade_Controller : MonoBehaviour {
+public class Wind_Blade_Controller : MonoBehaviour
+{
 
-	public float RecoveryCost = 0.0f;
-	public float PushBackDistance = 0.0f;
-	public float Speed = 0.0f;
+	public float Damage = 20.2f;
+	public float RecoveryCost = 1.5f;
+	public float PushBackDistance = 0.5f;
+	public float Speed = 0.5f;
 	public float Range = 10.0f;
 	public float StartHeight = 1.0f;
-	public GameObject EffectImpact = null;
-	public GameObject SoundImpact = null;
-	
-	private Vector3 ForwardDirection = Vector3.zero;
-	private GameObject MouseMarker = null;
-	private GameObject Player = null;
+	public GameObject SpellEffect = null;
+	public GameObject ImpactEffectObj = null;
+	public AudioSource SFXMoving = null;
+
 	private Vector3 StartLocation = Vector3.zero;
+	private Vector3 ForwardDirection = Vector3.zero;
+	private float killSwitch = 5.0f;
 	
-	// Use this for initialization
 	void Start () {
+
 		// Start at desired height
 		Vector3 newHeight = transform.position;
 		newHeight.y = StartHeight;
 		transform.position = newHeight;
 		StartLocation = transform.position;
 
-		MouseMarker = GameObject.FindGameObjectWithTag ("MouseMarker");
-		Vector3 lookAt = MouseMarker.transform.position;
-		Player = GameObject.FindGameObjectWithTag ("Player");
-		
-		//		// Face player at target direction
-		//		lookAt.y = Player.transform.position.y;
-		//		Player.transform.LookAt (lookAt);
-		
-		Player.SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
-		GameObject.Find("GameBrain").BroadcastMessage("SpellCasted",gameObject.name, SendMessageOptions.DontRequireReceiver);
-		// Play movement sound
-		GetComponent<AudioSource>().Play();
 		// Face spell in right direction
+		Vector3 lookAt = GameObject.FindGameObjectWithTag ("MouseMarker").transform.position;
 		lookAt.y = StartHeight;
 		transform.LookAt (lookAt);
+		
+		GameObject.FindGameObjectWithTag ("Player").SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
+
 		// Set spell velocity
 		ForwardDirection = lookAt - transform.position;
 		ForwardDirection.Normalize ();
@@ -49,7 +43,10 @@ public class Wind_Blade_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-
+		killSwitch -= Time.deltaTime;
+		// Kill if alive too long, safty net incase no collision happens
+		if (killSwitch <= 0.0f)
+			Destroy (gameObject);
 	}
 	
 	void FixedUpdate ()
@@ -70,25 +67,20 @@ public class Wind_Blade_Controller : MonoBehaviour {
 			atCollider.Normalize();
 			float dotProduct = Vector3.Dot(transform.forward.normalized, atCollider);
 
-			// Make sure collided actually hit spell effect.
+			// Make sure collidie actually hit spell effect.
 			if (dotProduct >= 0.0f)
 			{
-				// If impact sound effect is set, play sound at hit location.
-				if (SoundImpact != null)
-				{
-					GameObject Sound = Instantiate(SoundImpact);
-					Sound.transform.parent = _object.transform;
-					Sound.transform.localPosition = new Vector3(0,0,0);
-					Destroy(Sound, 0.5f);
-				}
 				// If impact effect is set, play effect at hit loaction
-				if (EffectImpact != null)
+				if (ImpactEffectObj != null)
 				{
-					GameObject Effect = Instantiate(EffectImpact);
+					GameObject Effect = Instantiate(ImpactEffectObj);
 					Effect.transform.parent = _object.transform;
 					Effect.transform.localPosition = new Vector3(0,StartHeight,0);
 					Destroy(Effect, 0.5f);
 				}
+
+				_object.transform.SendMessage ("TakeDamage", Damage);
+
 				// Knock back hit target
 				//			Vector3 pushDirection = Owner.transform.position;
 				//			pushDirection.y = _object.transform.position.y;
