@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Hydrant_Controller : MonoBehaviour {
 
-	public float Damage = 20.2f;
+	public float Damage = 2.2f;
 	public float DamageTickRate = 0.1f;
 	public float RecoveryCostRate = 1.0f/3.0f;
 	public float PushBackForce = 0.75f;
@@ -18,7 +18,7 @@ public class Hydrant_Controller : MonoBehaviour {
 
 	private float DeltaT = 0.0f;
 	private GameObject PlayerFaceingIndicator = null;
-	private float Size = 10.0f;
+	private float Size = 1.0f;
 	private float RecoveryCost = 0.0f;
 	private float TickTime = 0.0f;
     private List<GameObject> Hitting = new List<GameObject>();
@@ -44,28 +44,14 @@ public class Hydrant_Controller : MonoBehaviour {
         float smallestSize = float.MaxValue;
         for (int i = 0; i < Hitting.Count; i++)
         {
-            if (Hitting[i].tag == "Solid")
-            {
-            Vector3 objPos = Hitting[i].transform.position;
-            objPos.y = PlayerFaceingIndicator.transform.position.y;
-            float sizeTest = (objPos - PlayerFaceingIndicator.transform.position).magnitude;
-            if (smallestSize > sizeTest)
-                smallestSize = sizeTest;
-            }
-            else
-            {
-                Vector3 rayOrigin = PlayerFaceingIndicator.transform.position;
-                rayOrigin.y = StartHeight;
-                Ray wallRangeCheck = new Ray(rayOrigin, transform.forward);
-
-                RaycastHit RayInfo;
-                Physics.Raycast(wallRangeCheck, out RayInfo, Range, WALLS);
-                if (smallestSize > RayInfo.distance)
-                    smallestSize = RayInfo.distance;
-            }
-
             if (Hitting[i].tag == "Enemy")
             {
+				Vector3 objPos = Hitting[i].transform.position;
+				objPos.y = PlayerFaceingIndicator.transform.position.y;
+				float sizeTest = (objPos - PlayerFaceingIndicator.transform.position).magnitude;
+				if (smallestSize > sizeTest)
+					smallestSize = sizeTest;
+
                 if (TickTime >= DamageTickRate)
                     Hitting[i].transform.SendMessage ("TakeDamage", Damage);
 
@@ -73,11 +59,26 @@ public class Hydrant_Controller : MonoBehaviour {
                     Hitting[i].transform.GetComponent<Rigidbody>().AddRelativeForce (transform.forward.normalized * PushBackForce);
             }
         }
+
         if (TickTime >= DamageTickRate)
             TickTime = 0.0f;
+
+		Vector3 rayOrigin = PlayerFaceingIndicator.transform.position;
+		rayOrigin.y = StartHeight;
+		Ray wallRangeCheck = new Ray(rayOrigin, transform.forward);
+		
+		RaycastHit RayInfo;
+		Physics.Raycast(wallRangeCheck, out RayInfo, Range, WALLS);
+		if (smallestSize > RayInfo.distance)
+			smallestSize = RayInfo.distance;
+
         Size = smallestSize;
-        if (Size > Range)
+		if (Size > Range || Size <= 0.0f)
             Size = Range;
+		if (Size < Range && !ImpactEffectObj.activeSelf)
+			ImpactEffectObj.SetActive (true);
+		else if (Size == Range)
+			ImpactEffectObj.SetActive (false);
 	}
 	
 	void FixedUpdate ()

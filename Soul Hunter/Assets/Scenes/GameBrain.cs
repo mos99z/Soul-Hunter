@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public enum Debuff{ 
+public enum Debuff
+{ 
 	NONE,
 	Slowed, 
 	Stunned,
@@ -10,6 +11,27 @@ public enum Debuff{
 	Burning,
 	Crippled,
 	Frozen
+}
+
+public enum Element
+{
+	None,
+	Fire,
+	Wind,
+	Earth,
+	Lightning,
+	Water
+}
+
+public enum SoulType
+{
+	None,
+	White,
+	Green,
+	Blue,
+	Purple,
+	Red,
+	Black
 }
 
 public class GameBrain : MonoBehaviour {
