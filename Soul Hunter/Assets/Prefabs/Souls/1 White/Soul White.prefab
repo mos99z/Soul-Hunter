@@ -29,7 +29,6 @@ GameObject:
   - 23: {fileID: 2356712}
   - 136: {fileID: 13681126}
   - 114: {fileID: 11428020}
-  - 114: {fileID: 11435760}
   m_Layer: 2
   m_Name: Soul White
   m_TagString: Untagged
@@ -72,7 +71,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: dea3a3121c1fa2241afb71bfb1c52ca1, type: 2}
+  - {fileID: 2100000, guid: 282b1b67db089e741a433a50a98a8a76, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -108,23 +107,7 @@ MonoBehaviour:
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
-  SoundEffect: {fileID: 0}
---- !u!114 &11435760
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SoulValue: 100
-  AliveTime: 10
-  CollectorTag: Player
-  MoveSpeed: .300000012
-  SoundEffect: {fileID: 0}
+  SFXCollectSoul: {fileID: 149914, guid: 37641ce7d35ae8249a3b7d962141f175, type: 2}
 --- !u!136 &13681126
 CapsuleCollider:
   m_ObjectHideFlags: 1

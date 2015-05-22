@@ -71,7 +71,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 35469bf69b4b3ef47ab0d0e6f2ac8954, type: 2}
+  - {fileID: 2100000, guid: 7e90e120a0bfca4468898c127c28433b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -107,7 +107,7 @@ MonoBehaviour:
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
-  SoundEffect: {fileID: 0}
+  SFXCollectSoul: {fileID: 149914, guid: 37641ce7d35ae8249a3b7d962141f175, type: 2}
 --- !u!136 &13641498
 CapsuleCollider:
   m_ObjectHideFlags: 1

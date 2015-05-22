@@ -22,6 +22,10 @@ public class Living_Obj : MonoBehaviour
 
 	// 3D text to dispaly: Crits, Resists, & Immunes.
 	private GameObject InfoDisaply = null;
+
+	private SpriteRenderer Image = null;
+	private float FlashSpeed = 0.1f;
+	private float FlashTimer = 0.0f;
 	void Start ()
 	{
 		if (CurrHealth <= 0)
@@ -57,17 +61,30 @@ public class Living_Obj : MonoBehaviour
 		InfoDisaply = GameObject.Find ("Display Text");
 		if (Souls == null)
 			Debug.LogError("Can NOT Find Display Text Prefab In Scene!");
+
+		if (transform.GetComponentInChildren<SpriteRenderer> ())
+			Image = transform.GetComponentInChildren<SpriteRenderer> ();
 	}
 
 	void Update()
 	{
-		if (!IsAlive)
-		{
+		if (!IsAlive) {
 			if (transform.GetComponent<Animation> ())
-				if (!transform.GetComponent<Animation> ().isPlaying)
-					DropSoul();
+			if (!transform.GetComponent<Animation> ().isPlaying)
+				DropSoul ();
 			else
-				DropSoul();
+				DropSoul ();
+		}
+
+		if (Image != null && FlashTimer > 0.0f)
+		{
+			FlashTimer -= Time.deltaTime;
+			if (FlashTimer <= 0.0f)
+			{
+				Color flash = transform.GetComponentInChildren<SpriteRenderer>().color;
+				flash.a = 1.0f;
+				transform.GetComponentInChildren<SpriteRenderer>().color = flash;
+			}
 		}
 	}
 
@@ -113,7 +130,18 @@ public class Living_Obj : MonoBehaviour
 			}
 				
 			// Take damage.
-			CurrHealth -= ActualDamage;
+			if (ActualDamage > 0)
+			{
+				CurrHealth -= ActualDamage;
+
+				if (Image != null)
+				{
+					Color flash = Image.color;
+					flash.a = 0.0f;
+					Image.color = flash;
+					FlashTimer = FlashSpeed;
+				}
+			}
 				
 			PulseCheck ();
 		}
