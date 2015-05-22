@@ -52,6 +52,7 @@ public class GameBrain : MonoBehaviour {
 	public double GameTime = 0.0;
 	public int NumCastedSpells = 0;
 	public GameObject SpellDatabase = null;
+	public GameObject Souls = null;
 	public GameObject HUD = null;
 
 	// Use this for initialization
@@ -60,6 +61,7 @@ public class GameBrain : MonoBehaviour {
 		//The Spell Database it's self should not be active.
 		//Only in scene for ease of development.
 		SpellDatabase.SetActive (false);
+		Souls.SetActive (false);
 		HUD.SetActive (true);
 	}
 	

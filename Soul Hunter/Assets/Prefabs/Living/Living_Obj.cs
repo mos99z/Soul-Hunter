@@ -18,9 +18,10 @@ public class Living_Obj : MonoBehaviour
 	private bool IsAlive = true;
 
 	public SoulType SoulValue = SoulType.None;
+	private GameObject Souls = null;
 
 	// 3D text to dispaly: Crits, Resists, & Immunes.
-	public GameObject InfoDisaply = null;
+	private GameObject InfoDisaply = null;
 	void Start ()
 	{
 		if (CurrHealth <= 0)
@@ -48,6 +49,14 @@ public class Living_Obj : MonoBehaviour
 			Debug.LogError(transform.name + "'s Curr Health can not start above it's Max Health " + transform.name + "'s Curr Health was set to Max Health of " + MaxHealth.ToString());
 			CurrHealth = MaxHealth;
 		}
+
+		Souls = GameObject.Find ("Souls");
+		if (Souls == null)
+			Debug.LogError("Can NOT Find Souls Prefab In Scene!");
+
+		InfoDisaply = GameObject.Find ("Display Text");
+		if (Souls == null)
+			Debug.LogError("Can NOT Find Display Text Prefab In Scene!");
 	}
 
 	void Update()
@@ -83,33 +92,21 @@ public class Living_Obj : MonoBehaviour
 					{
 						ActualDamage = 0;
 						// Display Immune - Red
-						GameObject DisplayText = (GameObject)Instantiate(InfoDisaply, transform.position, transform.rotation);
-						DisplayText.transform.position += new Vector3(0,2,0);
-						DisplayText.GetComponent<TextMesh>().text = "IMMUNE";
-						DisplayText.GetComponent<TextMesh>().color = new Color(1.0f, 0.0f, 0.0f);
-						DisplayText.GetComponent<TextMesh>().characterSize = 5.0f;
+						DisplayTextInfo("IMMUNE", new Color(1.0f, 0.0f, 0.0f), 5.0f);
 					}
 					// 0 being the same type
 					else if (ElementalDifference == 0)
 					{
 						ActualDamage = ActualDamage >> 1;
 						// Display Resist - White
-						GameObject DisplayText = (GameObject)Instantiate(InfoDisaply, transform.position, transform.rotation);
-						DisplayText.transform.position += new Vector3(0,2,0);
-						DisplayText.GetComponent<TextMesh>().text = "RESIST";
-						DisplayText.GetComponent<TextMesh>().color = new Color(1.0f, 1.0f, 1.0f);
-						DisplayText.GetComponent<TextMesh>().characterSize = 4.0f;
+						DisplayTextInfo("RESIST", new Color(1.0f, 1.0f, 1.0f), 4.0f);
 					}
 					// -1 being weak against
 					else if (ElementalDifference == -1)
 					{
 						ActualDamage = ActualDamage << 1;
 						// Display Crit - Yellow
-						GameObject DisplayText = (GameObject)Instantiate(InfoDisaply, transform.position, transform.rotation);
-						DisplayText.transform.position += new Vector3(0,2,0);
-						DisplayText.GetComponent<TextMesh>().text = "IMMUNE";
-						DisplayText.GetComponent<TextMesh>().color = new Color(1.0f, 1.0f, 0.0f);
-						DisplayText.GetComponent<TextMesh>().characterSize = 6.0f;
+						DisplayTextInfo("CRITICAL", new Color(1.0f, 1.0f, 0.0f), 6.0f);
 					}
 					// anything else has no effect on damage value
 				}
@@ -123,11 +120,7 @@ public class Living_Obj : MonoBehaviour
 		// Display Invincible - Orange
 		else
 		{
-			GameObject DisplayText = (GameObject)Instantiate(InfoDisaply, transform.position, transform.rotation);
-			DisplayText.transform.position += new Vector3(0,2,0);
-			DisplayText.GetComponent<TextMesh>().text = "INVINCIBLE";
-			DisplayText.GetComponent<TextMesh>().color = new Color(1.0f, 0.5f, 0.0f);
-			DisplayText.GetComponent<TextMesh>().characterSize = 8.0f;
+			DisplayTextInfo("INVINCIBLE", new Color(1.0f, 0.5f, 0.0f), 8.0f);
 		}
 	}
 	
@@ -145,11 +138,7 @@ public class Living_Obj : MonoBehaviour
 		// Display immortal - Blue
 		else if (!CanDie)
 		{
-			GameObject DisplayText = (GameObject)Instantiate(InfoDisaply, transform.position, transform.rotation);
-			DisplayText.transform.position += new Vector3(0,2,0);
-			DisplayText.GetComponent<TextMesh>().text = "IMMORTAL";
-			DisplayText.GetComponent<TextMesh>().color = new Color(0.0f, 0.0f, 1.0f);
-			DisplayText.GetComponent<TextMesh>().characterSize = 8.0f;
+			DisplayTextInfo("IMMORTAL", new Color(0.0f, 0.0f, 1.0f), 8.0f);
 		}
 	}
 
@@ -178,7 +167,24 @@ public class Living_Obj : MonoBehaviour
 
 	void DropSoul()
 	{
+		if (SoulValue != SoulType.None)
+		{
+			GameObject dropedSoul = Instantiate<GameObject> (Souls.transform.FindChild (System.Enum.GetName (typeof(SoulType), SoulValue)).gameObject);
+			Vector3 spawnPosition = transform.position;
+			spawnPosition.y = 0.5f;
+			dropedSoul.transform.position = spawnPosition;
+		}
 
 		Destroy (gameObject);
+	}
+
+	void DisplayTextInfo(string _text, Color _color, float _fontSize)
+	{
+		GameObject DisplayText = (GameObject)Instantiate(InfoDisaply, transform.position, transform.rotation);
+		DisplayText.transform.position += new Vector3(0,2,0);
+		DisplayText.GetComponent<TextMesh>().text = _text;
+		DisplayText.GetComponent<TextMesh>().color = _color;
+		DisplayText.GetComponent<TextMesh>().characterSize = _fontSize;
+		DisplayText.SetActive(true);
 	}
 }

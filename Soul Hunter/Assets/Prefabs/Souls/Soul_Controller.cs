@@ -9,32 +9,38 @@ public class Soul_Controller : MonoBehaviour {
 	public float MoveSpeed = 0.3f;
 	private float currentSpeed = 0.0f;
 	private GameObject target = null;
-	public GameObject SoundEffect = null;
+	public GameObject SFXCollectSoul = null;
 	private bool once = true;
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
 
-	if (target != null) {
+	void Start ()
+	{
+	}
+
+	void FixedUpdate ()
+	{
+
+	if (target != null)
+		{
 			Vector3 targetLoc = target.transform.position;
-			targetLoc.y += 2.0f;
+			targetLoc.y += 1.5f;
 			Vector3 moveDirection = targetLoc - transform.position;
 			float distance = moveDirection.magnitude;
 			moveDirection.Normalize();
 			moveDirection *= currentSpeed;
 			transform.position += moveDirection;
-			if (distance <= 2.25f && once){
-				GameObject main = GameObject.FindWithTag("Main");
-				main.SendMessage("CollectedSoul", SoulValue, SendMessageOptions.RequireReceiver);
-				GameObject soundeffect = Instantiate(SoundEffect);
-				soundeffect.transform.parent = GameObject.FindWithTag("Player").transform;
-				soundeffect.transform.localPosition = new Vector3(0,0,0);
-				Destroy(soundeffect, 1.7f);
+			if (distance <= 2.25f && once)
+			{
 				once = false;
-			}else if (distance <= 0.1f)
+				GameObject gameBrain = GameObject.Find("GameBrain");
+				gameBrain.SendMessage("ModSouls", SoulValue, SendMessageOptions.RequireReceiver);
+				if (SFXCollectSoul != null) {
+					GameObject soundeffect = Instantiate(SFXCollectSoul);
+					soundeffect.transform.parent = GameObject.FindWithTag("Player").transform;
+					soundeffect.transform.localPosition = new Vector3(0,0,0);
+					Destroy(soundeffect, soundeffect.GetComponent<AudioSource>().clip.length);
+				}
+			}
+			else if (distance <= 0.1f)
 				Destroy(gameObject);
 		}
 	}
@@ -52,7 +58,8 @@ public class Soul_Controller : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider _object){
-		if (_object.tag == CollectorTag) {
+		if (_object.tag == CollectorTag)
+		{
 			target = _object.gameObject;
 		}
 	}

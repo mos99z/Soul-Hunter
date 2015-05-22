@@ -17,7 +17,7 @@ public class FollowMouse : MonoBehaviour {
 		RaycastHit MousePosition;
 		Physics.Raycast(MouseAim,out MousePosition, float.MaxValue, CollisionLayers);
 		Vector3 newPosition = MousePosition.point;
-		newPosition.y = 0.001f;
+		newPosition.y += 0.005f;
 		transform.position = newPosition;
 		if (MousePosition.collider != null && MousePosition.collider.tag == "VOID") {
 			GetComponent<Renderer> ().enabled = false;
