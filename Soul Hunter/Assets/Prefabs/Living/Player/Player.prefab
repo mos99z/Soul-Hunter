@@ -177,11 +177,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 0
-  MaxHealth: 1
-  CurrHealth: 1
+  MaxHealth: 2000
+  CurrHealth: 2000
   CanTakeDamage: 1
   CanDie: 1
-  Lives: 1
+  Lives: 3
   SoulValue: 0
 --- !u!114 &11464652
 MonoBehaviour:

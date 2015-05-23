@@ -58,20 +58,25 @@ public class Living_Obj : MonoBehaviour
 		if (Souls == null)
 			Debug.LogError("Can NOT Find Souls Prefab In Scene!");
 
-		InfoDisaply = GameObject.Find ("Display Text");
-		if (Souls == null)
+		InfoDisaply = GameObject.Find ("GameBrain").GetComponent<GameBrain>().DisplayText;
+		if (InfoDisaply == null)
 			Debug.LogError("Can NOT Find Display Text Prefab In Scene!");
 
-		if (transform.GetComponentInChildren<SpriteRenderer> ())
+		if (transform.GetComponentInChildren<SpriteRenderer> () != null)
 			Image = transform.GetComponentInChildren<SpriteRenderer> ();
 	}
 
 	void Update()
 	{
-		if (!IsAlive) {
-			if (transform.GetComponent<Animation> ())
-			if (!transform.GetComponent<Animation> ().isPlaying)
-				DropSoul ();
+		if (!IsAlive)
+		{
+			if (transform.GetComponentInChildren<Animation> () != null)
+			{
+				if (!transform.GetComponentInChildren<Animation> ().isPlaying)
+				{
+					DropSoul ();
+				}
+			}
 			else
 				DropSoul ();
 		}
@@ -94,18 +99,18 @@ public class Living_Obj : MonoBehaviour
 		// Calculate damage reduction from defence before elements are accounted for.
 		int ActualDamage = (int)((int)_damage * (1.0f - Defence));
 
-		if (ElementType != Element.None)
+		if (CanTakeDamage)
 		{
-			if (CanTakeDamage)
+			if (ElementType != Element.None)
 			{
-				Element ElementalDamage = (Element)((int)(_damage - ActualDamage) * 10);
+				Element ElementalDamage = (Element)((_damage - ActualDamage) * 10.0f);
 				// If the obj's elemental type and the damage's elemental type are both not of type none.
 				if (ElementalDamage != Element.None)
 				{
 					// Get elemental difference between obj's elemental type and damage type.
 					int ElementalDifference = (int)ElementalDamage - (int)ElementType;
 					// 1 being strong against
-					if (ElementalDifference == 1)
+					if (ElementalDifference == 1 || ElementalDifference == -4)
 					{
 						ActualDamage = 0;
 						// Display Immune - Red
@@ -119,7 +124,7 @@ public class Living_Obj : MonoBehaviour
 						DisplayTextInfo("RESIST", new Color(1.0f, 1.0f, 1.0f), 4.0f);
 					}
 					// -1 being weak against
-					else if (ElementalDifference == -1)
+					else if (ElementalDifference == -1 || ElementalDifference == 4)
 					{
 						ActualDamage = ActualDamage << 1;
 						// Display Crit - Yellow
@@ -141,9 +146,9 @@ public class Living_Obj : MonoBehaviour
 					Image.color = flash;
 					FlashTimer = FlashSpeed;
 				}
+				PulseCheck ();
 			}
 				
-			PulseCheck ();
 		}
 		// Display Invincible - Orange
 		else
@@ -156,17 +161,17 @@ public class Living_Obj : MonoBehaviour
 	{
 		if (CurrHealth <= 0 && CanDie)
 		{
-			CurrHealth = 0;
 			Lives -= 1;
 			if (Lives <= 0)
-			{
 				Die();
-			}
+			else
+				CurrHealth = MaxHealth;
 		}
 		// Display immortal - Blue
 		else if (!CanDie)
 		{
 			DisplayTextInfo("IMMORTAL", new Color(0.0f, 0.0f, 1.0f), 8.0f);
+			CurrHealth = 1;
 		}
 	}
 
@@ -189,8 +194,8 @@ public class Living_Obj : MonoBehaviour
 	void Die()
 	{
 		IsAlive = false;
-		if (transform.GetComponent<Animation> ())
-			transform.GetComponent<Animation> ().Play ("Death");
+		if (transform.GetComponentInChildren<Animation> () != null)
+			transform.GetComponentInChildren<Animation> ().Play ("Death");
 	}
 
 	void DropSoul()

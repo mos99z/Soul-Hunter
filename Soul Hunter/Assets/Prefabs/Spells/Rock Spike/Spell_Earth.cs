@@ -22,15 +22,15 @@ public class Spell_Earth : MonoBehaviour {
 	void Start () {
 		Player = GameObject.FindGameObjectWithTag ("Player");
 		MouseMarker = GameObject.FindGameObjectWithTag ("MouseMarker");
-		Owner = GameObject.FindGameObjectWithTag ("SpellCaster");
+//		Owner = GameObject.FindGameObjectWithTag ("SpellCaster");
 		Vector3 lookat = MouseMarker.transform.position;
 		lookat.y = Player.transform.position.y;
 		Player.transform.LookAt (lookat);
 
-		GameObject.FindGameObjectWithTag("SpellCaster").GetComponent<SpellCaster>().SendMessage("SetCoolDown", CoolDownCost, SendMessageOptions.RequireReceiver);
-		GameObject.Find("Main").BroadcastMessage("SpellCasted", SendMessageOptions.DontRequireReceiver);
+//		GameObject.FindGameObjectWithTag("SpellCaster").GetComponent<SpellCaster>().SendMessage("SetCoolDown", CoolDownCost, SendMessageOptions.RequireReceiver);
+//		GameObject.Find("Main").BroadcastMessage("SpellCasted", SendMessageOptions.DontRequireReceiver);
 		transform.FindChild("Ground Spike").transform.GetComponent<AudioSource>().Play();
-		StartLoc = Owner.transform.position;
+//		StartLoc = Owner.transform.position;
 		StartLoc.y = -0.1f;
 		transform.position = StartLoc;
 		Vector3 TargetLoc = MouseMarker.transform.position;

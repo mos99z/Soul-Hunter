@@ -54,6 +54,7 @@ public class GameBrain : MonoBehaviour {
 	public GameObject SpellDatabase = null;
 	public GameObject Souls = null;
 	public GameObject HUD = null;
+	public GameObject DisplayText = null;
 
 	// Use this for initialization
 	void Start ()
