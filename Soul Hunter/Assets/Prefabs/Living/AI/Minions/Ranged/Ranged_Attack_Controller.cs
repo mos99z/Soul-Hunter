@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Mistral_Controller : MonoBehaviour {
-
-	public GameObject Perendi;
+public class Ranged_Attack_Controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
