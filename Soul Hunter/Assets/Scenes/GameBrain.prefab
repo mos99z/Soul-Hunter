@@ -3364,7 +3364,7 @@ MonoBehaviour:
   NumCastedSpells: 0
   SpellDatabase: {fileID: 164470}
   Souls: {fileID: 126014}
-  HUD: {fileID: 0}
+  HUD: {fileID: 192610, guid: 13429437a64de5b448172c473fc7b953, type: 2}
 --- !u!114 &11460516
 MonoBehaviour:
   m_ObjectHideFlags: 1
