@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Soul_Controller : MonoBehaviour {
 
-	public uint SoulValue = 100;
+	public int SoulValue = 100;
 	public float AliveTime = 10.0f;
 	public string CollectorTag = "Player";
 	public float MoveSpeed = 0.3f;
@@ -37,7 +37,10 @@ public class Soul_Controller : MonoBehaviour {
 					GameObject soundeffect = Instantiate(SFXCollectSoul);
 					soundeffect.transform.parent = GameObject.FindWithTag("Player").transform;
 					soundeffect.transform.localPosition = new Vector3(0,0,0);
-					Destroy(soundeffect, soundeffect.GetComponent<AudioSource>().clip.length);
+					float killtimer = 2.0f;
+					if (soundeffect.GetComponent<AudioSource>().clip != null)
+						killtimer = soundeffect.GetComponent<AudioSource>().clip.length;
+					Destroy(soundeffect, killtimer);
 				}
 			}
 			else if (distance <= 0.1f)
@@ -64,7 +67,7 @@ public class Soul_Controller : MonoBehaviour {
 		}
 	}
 
-	void SetValue(uint _value){
+	void SetValue(int _value){
 		SoulValue = _value;
 	}
 }

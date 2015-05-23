@@ -26,6 +26,9 @@ public class Living_Obj : MonoBehaviour
 	private SpriteRenderer Image = null;
 	private float FlashSpeed = 0.1f;
 	private float FlashTimer = 0.0f;
+
+	public bool isPlayer = false;
+	private GameObject GameBrain = null;
 	void Start ()
 	{
 		if (CurrHealth <= 0)
@@ -64,6 +67,14 @@ public class Living_Obj : MonoBehaviour
 
 		if (transform.GetComponentInChildren<SpriteRenderer> () != null)
 			Image = transform.GetComponentInChildren<SpriteRenderer> ();
+
+		if (isPlayer)
+		{
+			GameBrain = GameObject.Find ("GameBrain");
+			GameBrain.SendMessage("SetMaxHealth", MaxHealth);
+			GameBrain.SendMessage("SetHealth", CurrHealth);
+			GameBrain.SendMessage("SetLivesLeft", Lives);
+		}
 	}
 
 	void Update()
@@ -139,6 +150,9 @@ public class Living_Obj : MonoBehaviour
 			{
 				CurrHealth -= ActualDamage;
 
+				if(isPlayer)
+					GameBrain.SendMessage("ModHealth", -ActualDamage);
+
 				if (Image != null)
 				{
 					Color flash = Image.color;
@@ -165,7 +179,10 @@ public class Living_Obj : MonoBehaviour
 			if (Lives <= 0)
 				Die();
 			else
+			{
 				CurrHealth = MaxHealth;
+				GameBrain.SendMessage("SetHealth", MaxHealth);
+			}
 		}
 		// Display immortal - Blue
 		else if (!CanDie)
@@ -194,6 +211,8 @@ public class Living_Obj : MonoBehaviour
 	void Die()
 	{
 		IsAlive = false;
+		if (!isPlayer)
+			GameBrain.SendMessage ("AddKill");
 		if (transform.GetComponentInChildren<Animation> () != null)
 			transform.GetComponentInChildren<Animation> ().Play ("Death");
 	}

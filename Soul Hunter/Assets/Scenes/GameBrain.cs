@@ -69,29 +69,27 @@ public class GameBrain : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		GameTime += Time.deltaTime;
-	
 	}
 
 	void ModMaxHealth(int _value)
 	{
 		PlayerMaxHealth += _value;
-		if (PlayerMaxHealth <= 0)
-		{
-			PlayerMaxHealth = 0;
-		}
-
-		if (PlayerCurrHealth > PlayerMaxHealth)
-			PlayerCurrHealth = PlayerMaxHealth;
+		VerifyMaxHealth ();
 	}
 	void SetMaxHealth(int _NewMaxHealth)
 	{
 		PlayerMaxHealth = _NewMaxHealth;
-		if (PlayerMaxHealth < 0)
-		{
-			PlayerMaxHealth = 0;
-		}
+		VerifyMaxHealth ();
+	}
+
+	void VerifyMaxHealth()
+	{
+		if (PlayerMaxHealth <= 0)
+			PlayerMaxHealth = 1;
+
 		if (PlayerCurrHealth > PlayerMaxHealth)
 			PlayerCurrHealth = PlayerMaxHealth;
+		HUD.GetComponent<StatsDisplay> ().SetMaxHealthDisplay(PlayerMaxHealth);
 	}
 
 	void ModHealth(int _value)
@@ -126,6 +124,7 @@ public class GameBrain : MonoBehaviour {
 			else
 				RespawnPlayer();
 		}
+		HUD.GetComponent<StatsDisplay> ().SetHealthDisplay(PlayerCurrHealth);
 	}
 
 	void ModLivesLeft(int _value)
@@ -135,11 +134,7 @@ public class GameBrain : MonoBehaviour {
 		if (_value < 0)
 			DeathCount -= _value;
 
-		if (PlayerLivesLeft < 0)
-		{
-			DeathCount += PlayerLivesLeft;
-			PlayerLivesLeft = 0;
-		}
+		CheckLives ();
 	}
 	void SetLivesLeft(int _NewLives)
 	{
@@ -148,11 +143,17 @@ public class GameBrain : MonoBehaviour {
 
 		PlayerLivesLeft = _NewLives;
 
+		CheckLives ();
+	}
+
+	void CheckLives()
+	{
 		if (PlayerLivesLeft < 0)
 		{
 			DeathCount += PlayerLivesLeft;
 			PlayerLivesLeft = 0;
 		}
+		HUD.GetComponent<StatsDisplay> ().SetLivesDisplay((uint)PlayerLivesLeft);
 	}
 
 	void RespawnPlayer()
@@ -168,12 +169,15 @@ public class GameBrain : MonoBehaviour {
 	void ModSouls(int _value)
 	{
 		SoulCount += _value;
+		HUD.GetComponent<StatsDisplay> ().SetSoulsDisplay((uint)SoulCount);
 		if (_value > 0)
 			TotalSoulCount += _value;
 	}
+
 	void SetSouls(int _NewSouls)
 	{
 		SoulCount = _NewSouls;
+		HUD.GetComponent<StatsDisplay> ().SetSoulsDisplay((uint)SoulCount);
 	}
 
 	//Tally Specific Info
