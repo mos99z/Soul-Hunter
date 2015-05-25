@@ -82,27 +82,34 @@ public class Melee_Minion_Controller : Living_Obj {
 				if(currentAttackTimer <= 0.0f)
 				{
 					isAttacking = true;
-					lungeTimer = 0.5f;
+					lungeTimer = 1.5f;
 					currentAttackTimer = AttackTimer;
 					navigation.autoBraking = true;
 					navigation.updateRotation = true;
-					navigation.stoppingDistance = 1;
+					navigation.stoppingDistance = 0.25f;
 					destination = gameObject.transform.position;
 				}
 			}
 
 			if(isAttacking == true)
 			{
-					lungeTimer -= Time.deltaTime;
-					//gameObject.transform.LookAt(target.transform.position,Vector3.up);
-					navigation.SetDestination (target.transform.position);
-					
-					if(lungeTimer <= 0.0f)
-					{
-						isAttacking = false;
-						//SearchForNearestNode();
-						destination = attackingWaypoints[closestShadow].transform.position;
-					}
+				lungeTimer -= Time.deltaTime;
+				//gameObject.transform.LookAt(target.transform.position,Vector3.up);
+				navigation.SetDestination (target.transform.position);
+				
+				if(navigation.remainingDistance < 0.25)
+					AttackCollider.enabled = true;
+				else
+					AttackCollider.enabled = false;
+
+				if(lungeTimer <= 0.0f)
+				{
+					isAttacking = false;
+					navigation.stoppingDistance = 0.0f;
+					navigation.updateRotation = false;
+					//SearchForNearestNode();
+					destination = attackingWaypoints[closestShadow].transform.position;
+				}
 
 				
 			}
@@ -131,7 +138,6 @@ public class Melee_Minion_Controller : Living_Obj {
 			currentAttackTimer = AttackTimer;
 			isSwarming = true;
 			destination = attackingWaypoints[closestShadow].transform.position;
-			AttackCollider.enabled = true;
 		}
 	}
 

@@ -39,7 +39,7 @@ public class Fire_Ball_Controller : MonoBehaviour {
 		lookAt.y = StartHeight;
 		transform.LookAt (lookAt);
 
-		GameObject.FindGameObjectWithTag ("Player").SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
+		GameObject.FindGameObjectWithTag ("Player").transform.SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
 
 		// Set spell velocity
 		ForwardDirection = lookAt - transform.position;

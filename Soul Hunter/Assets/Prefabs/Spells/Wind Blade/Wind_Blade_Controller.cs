@@ -31,7 +31,6 @@ public class Wind_Blade_Controller : MonoBehaviour
 		Vector3 lookAt = GameObject.FindGameObjectWithTag ("MouseMarker").transform.position;
 		lookAt.y = StartHeight;
 		transform.LookAt (lookAt);
-		
 		GameObject.FindGameObjectWithTag ("Player").SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
 
 		// Set spell velocity
