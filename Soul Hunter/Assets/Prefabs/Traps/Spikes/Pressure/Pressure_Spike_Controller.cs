@@ -15,9 +15,14 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 	private float ResetTimer = 0.0f;
 	private bool Resetting = false;
 
-	private float MoveDistance = 1.0f;
-
 	private List<GameObject> OnTop = new List<GameObject>();
+
+	private Animator animations = null;
+
+	void Start()
+	{
+		animations = GetComponent<Animator> ();
+	}
 
 	void Update ()
 	{
@@ -78,7 +83,7 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 		Triggered = true;
 		Triggering = false;
 
-		// Move Spikes Down.
+		animations.Play ("Triggered");
 
 		for (int i = 0; i < OnTop.Count; i++)
 			OnTop[i].transform.SendMessage("TakeDamage", Damage);
@@ -90,6 +95,6 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 		Resetting = false;
 		Triggered = false;
 
-		// Move Spikes Down.
+		animations.Play ("Reset");
 	}
 }

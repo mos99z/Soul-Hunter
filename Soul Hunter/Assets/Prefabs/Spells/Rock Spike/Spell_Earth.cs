@@ -12,7 +12,7 @@ public class Spell_Earth : MonoBehaviour {
 	// PRIVATES
 	private Vector3 StartLoc = Vector3.zero;
 	private Vector3 ForwardDirection = Vector3.zero;
-	private GameObject Owner = null;
+//	private GameObject Owner = null;
 	private GameObject MouseMarker = null;
 	private GameObject Player = null;
 	private float impactPoints = 0.0f;
