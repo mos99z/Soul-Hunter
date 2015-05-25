@@ -13,7 +13,7 @@ public class HazeMaker : MonoBehaviour
 			for (int j = -50; j <= 400; j += 7)
 			{
 				Vector3 newPosition = new Vector3(i, 50, j);
-				GameObject newHaze = (GameObject)Instantiate(Haze, newPosition, Quaternion.identity);
+				Instantiate(Haze, newPosition, Quaternion.identity);
 			}
 		}
 	}

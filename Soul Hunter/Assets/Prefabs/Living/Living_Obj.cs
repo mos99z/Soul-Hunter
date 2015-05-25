@@ -57,9 +57,6 @@ public class Living_Obj : MonoBehaviour
 			CurrHealth = MaxHealth;
 		}
 
-		Souls = GameObject.Find ("Souls");
-		if (Souls == null)
-			Debug.LogError("Can NOT Find Souls Prefab In Scene!");
 
 		InfoDisaply = GameObject.Find ("GameBrain").GetComponent<GameBrain>().DisplayText;
 		if (InfoDisaply == null)
@@ -68,9 +65,12 @@ public class Living_Obj : MonoBehaviour
 		if (transform.GetComponentInChildren<SpriteRenderer> () != null)
 			Image = transform.GetComponentInChildren<SpriteRenderer> ();
 
+		GameBrain = GameObject.Find ("GameBrain");
+		Souls = GameBrain.transform.FindChild("Souls").gameObject;
+		if (Souls == null)
+			Debug.Log("Can NOT Find Souls Prefab In Scene!");
 		if (isPlayer)
 		{
-			GameBrain = GameObject.Find ("GameBrain");
 			GameBrain.SendMessage("SetMaxHealth", MaxHealth);
 			GameBrain.SendMessage("SetHealth", CurrHealth);
 			GameBrain.SendMessage("SetLivesLeft", Lives);
