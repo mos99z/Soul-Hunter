@@ -12,6 +12,7 @@ GameObject:
   - 136: {fileID: 13661080}
   - 54: {fileID: 5467190}
   - 114: {fileID: 11425858}
+  - 135: {fileID: 13571626}
   m_Layer: 0
   m_Name: Melee Minion
   m_TagString: Enemy
@@ -62,7 +63,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 0, z: -4}
+  m_LocalPosition: {x: -7.58999634, y: 0, z: 33.4509811}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 491750}
@@ -189,13 +190,27 @@ MonoBehaviour:
   CanDie: 1
   Lives: 1
   SoulValue: 0
+  isPlayer: 0
   attackingWaypoints: []
   isAttacking: 0
   isSwarming: 0
   WaitMinimum: 5
   WaitMaximum: 7
   AttackTimer: 5
-  LungeSpeed: 200
+  Damage: 100
+  AttackCollider: {fileID: 13571626}
+--- !u!135 &13571626
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 1, z: 1.5}
 --- !u!136 &13647816
 CapsuleCollider:
   m_ObjectHideFlags: 1

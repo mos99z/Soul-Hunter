@@ -64,7 +64,6 @@ GameObject:
   - 195: {fileID: 19548272}
   - 114: {fileID: 11445974}
   - 135: {fileID: 13523088}
-  - 114: {fileID: 11409316}
   - 114: {fileID: 11454146}
   m_Layer: 0
   m_Name: Kamikaze Minion
@@ -217,17 +216,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159790}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11409316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187082}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85ef1b769f6b9c14f8b4fe60c9e03211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11445974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,6 +227,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290e83ec9ef5a764c9d9af40f6ee5315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Defence: 0
+  ElementType: 0
+  MaxHealth: 1
+  CurrHealth: 1
+  CanTakeDamage: 1
+  CanDie: 1
+  Lives: 1
+  SoulValue: 0
+  isPlayer: 0
+  CountdownTimer: 1.5
   KamikazeDistance: 1
 --- !u!114 &11454146
 MonoBehaviour:
@@ -251,6 +249,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290e83ec9ef5a764c9d9af40f6ee5315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Defence: 0
+  ElementType: 0
+  MaxHealth: 1
+  CurrHealth: 1
+  CanTakeDamage: 1
+  CanDie: 1
+  Lives: 1
+  SoulValue: 0
+  isPlayer: 0
+  CountdownTimer: 1.5
   KamikazeDistance: 1
 --- !u!135 &13523088
 SphereCollider:

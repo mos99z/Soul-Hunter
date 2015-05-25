@@ -11,20 +11,19 @@ public class Melee_Minion_Controller : Living_Obj {
 	public GameObject[] attackingWaypoints;	// Used to rotate around the player
 
 	float waypointTimer = 0.0f;
-	float stopTimer = 0.0f;
 	float currentAttackTimer = 0.0f;
 	float lungeTimer = 0.0f;
 	GameObject player = null;			// 
 	int closestShadow = 0;				// 
 	float currentRotation = 0.0f;
 	float AngularAcceleration = 3.5f;
-	float originalMoveSpeed = 3.5f;
 	public bool isAttacking = false;
 	public bool isSwarming = false;
 	public float WaitMinimum = 5;
 	public float WaitMaximum = 7;
-	public float AttackTimer = 5.0f; 
-	public float LungeSpeed = 200.0f;
+	public float AttackTimer = 5.0f;
+	public float Damage = 100.0f;
+	public SphereCollider AttackCollider;
 
 	// Use this for initialization
 	void Start ()
@@ -42,7 +41,6 @@ public class Melee_Minion_Controller : Living_Obj {
 	// If there is a target, the enemy will rotate around the player and lunge in after a certain amount of time has passed
 	void FixedUpdate () 
 	{
-
 		if (target == null) 
 		{
 			waypointTimer -= Time.deltaTime;
@@ -81,25 +79,20 @@ public class Melee_Minion_Controller : Living_Obj {
 					destination = attackingWaypoints[closestShadow].transform.position;
 				}
 
-				//if(currentAttackTimer <= 0.0f)
-				//{
-				//	isAttacking = true;
-				//	lungeTimer = 0.5f;
-				//	currentAttackTimer = AttackTimer;
-				//	navigation.acceleration = 40.0f;
-				//	navigation.autoBraking = true;
-				//	navigation.speed = LungeSpeed;
-				//	destination = gameObject.transform.position;
-				//	stopTimer = 0.5f;
-				//}
+				if(currentAttackTimer <= 0.0f)
+				{
+					isAttacking = true;
+					lungeTimer = 0.5f;
+					currentAttackTimer = AttackTimer;
+					navigation.autoBraking = true;
+					navigation.updateRotation = true;
+					navigation.stoppingDistance = 1;
+					destination = gameObject.transform.position;
+				}
 			}
 
 			if(isAttacking == true)
 			{
-				stopTimer -= Time.deltaTime;
-				
-				if(stopTimer <= 0)
-				{
 					lungeTimer -= Time.deltaTime;
 					//gameObject.transform.LookAt(target.transform.position,Vector3.up);
 					navigation.SetDestination (target.transform.position);
@@ -108,11 +101,9 @@ public class Melee_Minion_Controller : Living_Obj {
 					{
 						isAttacking = false;
 						//SearchForNearestNode();
-						navigation.speed = originalMoveSpeed;
-						navigation.acceleration = 8.0f;
 						destination = attackingWaypoints[closestShadow].transform.position;
 					}
-				}
+
 				
 			}
 
@@ -140,6 +131,7 @@ public class Melee_Minion_Controller : Living_Obj {
 			currentAttackTimer = AttackTimer;
 			isSwarming = true;
 			destination = attackingWaypoints[closestShadow].transform.position;
+			AttackCollider.enabled = true;
 		}
 	}
 
@@ -219,6 +211,14 @@ public class Melee_Minion_Controller : Living_Obj {
 			{
 				closestShadow = i;
 			}
+		}
+	}
+
+	void OnTriggerEnter(Collider col)
+	{
+		if (col.tag == "Player") 
+		{
+			col.SendMessage("TakeDamage",Damage);
 		}
 	}
 }

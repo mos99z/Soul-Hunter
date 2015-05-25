@@ -3,15 +3,15 @@ using System.Collections;
 
 public class Enemy_Base : MonoBehaviour {
 
-	public int MaxHealth = 100;
-	int currentHealth;
-	public int Damage = 100;
-	public int Defense = 0;
+	//public int MaxHealth = 100;
+	//int currentHealth;
+	//public int Damage = 100;
+	//public int Defense = 0;
 
 	// Use this for initialization
 	void Start () 
 	{
-		currentHealth = MaxHealth;
+//		currentHealth = MaxHealth;
 
 	}
 	

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ranged_Minion_Controller : MonoBehaviour {
+public class Ranged_Minion_Controller : Living_Obj {
 
 	public float MinRange = 5.0f;		// Minimum Attack Range
 	public float MaxRange = 18.0f;		// Maximum Attack Range
@@ -20,6 +20,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	// Attack Variables
 	int attackCounter = 0;
 	public float AttackCooldown = 2.0f;
+	public GameObject FelMissile = null;
 	float currentAttackTimer = 0.0f;
 
 	
@@ -42,7 +43,8 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 
 			if(currentAttackTimer <= 0.0f)
 			{
-				Debug.Log("Enemy Attacked");
+				//Debug.Log("Enemy Attacked");
+				GameObject.Instantiate(FelMissile,gameObject.transform.position, gameObject.transform.rotation);
 				attackCounter++;
 				currentAttackTimer = AttackCooldown;
 			}
