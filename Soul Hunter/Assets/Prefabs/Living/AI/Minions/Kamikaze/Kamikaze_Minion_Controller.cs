@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Kamikaze_Minion_Controller : Living_Obj {
+public class Kamikaze_Minion_Controller : MonoBehaviour {
 
 	NavMeshAgent navigation;
 	Vector3 destination;
@@ -45,9 +45,7 @@ public class Kamikaze_Minion_Controller : Living_Obj {
 
 	void Explode()
 	{
-		SoulValue = SoulType.None;
-
-
+		GetComponent<Living_Obj>().SoulValue = SoulType.None;
 	}
 
 	void OnTriggerEnter(Collider col)

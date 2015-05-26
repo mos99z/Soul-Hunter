@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-public class Melee_Minion_Controller : Living_Obj {
+public class Melee_Minion_Controller : MonoBehaviour {
 
 	NavMeshAgent navigation;			// Used to allow the minion to use the NavMesh
 	GameObject target = null;			// When the minion notices the player, this will be used to store his location
