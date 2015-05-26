@@ -9,6 +9,7 @@ public class Pause_Script : MonoBehaviour {
 
 	public GameObject PauseMenu;
 	public GameObject OptionsMenu;
+	public GameObject UpgradesMenu;
 	public GameObject MessagePrompt;
 
 	// Use this for initialization
@@ -53,7 +54,7 @@ public class Pause_Script : MonoBehaviour {
 
 	public void Upgrades()
 	{
-
+		UpgradesMenu.SetActive (true);
 	}
 
 	public void SpellList()

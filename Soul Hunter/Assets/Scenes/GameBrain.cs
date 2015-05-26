@@ -39,23 +39,31 @@ public enum SoulType
 [Serializable]
 public class GameInfo
 {
-	int PlayerMaxHealth;
-	int PlayerCurrHealth;
-	int PlayerLivesLeft;
-	int SoulCount;
-	GameObject player;
+	public int PlayerMaxHealth;
+	public int PlayerCurrHealth;
+	public int PlayerLivesLeft;
+	public int SoulCount;
+	public GameObject player;
+
+	public int FireLevel;
+	public int WindLevel;
+	public int EarthLevel;
+	public int ElectricLevel;
+	public int WaterLevel;
+
+	public bool[] RoomsCleared;
 
 	// Level 0 is tutorial
-	int CurrentLevel;
+	public int CurrentLevel;
 
 
 	//Tally Specific Info
-	int NumEnemiesKilled;
-	int DamageTaken;
-	int TotalSoulCount;
-	int DeathCount;
-	double GameTime;
-	int NumCastedSpells;
+	public int NumEnemiesKilled;
+	public int DamageTaken;
+	public int TotalSoulCount;
+	public int DeathCount;
+	public double GameTime;
+	public int NumCastedSpells;
 }
 
 public class GameBrain : MonoBehaviour {
@@ -66,6 +74,14 @@ public class GameBrain : MonoBehaviour {
 	public int SoulCount = 0;
 	// Level 0 is tutorial
 	public int CurrentLevel = 1;
+
+	public GameInfo gameInfo;
+
+	public int FireLevel = 0;
+	public int WindLevel = 0;
+	public int EarthLevel = 0;
+	public int ElectricLevel = 0;
+	public int WaterLevel = 0;
 
 	//Tally Specific Info
 	public int NumEnemiesKilled = 0;
@@ -88,6 +104,8 @@ public class GameBrain : MonoBehaviour {
 		Souls.SetActive (false);
 		HUD.SetActive (true);
 		DontDestroyOnLoad (gameObject);
+		LoadPlayerData ();
+		//gameInfo.RoomsCleared [3] = false;
 	}
 	
 	// Update is called once per frame
@@ -217,4 +235,11 @@ public class GameBrain : MonoBehaviour {
 		//SpellDatabase.transform.FindChild (_SpellName).GetComponent<GUIText>().text.;
 	}
 
+	void LoadPlayerData()
+	{
+		if (File.Exists (Application.persistentDataPath + "/PlayerInfo.dat")) 
+		{
+
+		}
+	}
 }
