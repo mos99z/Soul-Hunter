@@ -7,29 +7,29 @@ public class Rock_Spike_Controller : MonoBehaviour {
 	public float ImpactRate = 0.0f;
 	private float TimePassed = 0.0f;
 	public int MaxChildren = 0;
-	private int Child = 1;
+	public int Child = 0;
 
 	void Start ()
 	{
-		GameObject Player = GameObject.FindGameObjectWithTag ("Player");
-		transform.forward = Player.transform.forward;
-		Player.GetComponent<Player_Caster_Controller>().SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
-		GameObject.Find("GameBrain").BroadcastMessage("SpellCasted", SendMessageOptions.DontRequireReceiver);
+		Vector3 lookAt = GameObject.FindGameObjectWithTag ("MouseMarker").transform.position;
+		lookAt.y = transform.position.y;
+		transform.LookAt (lookAt);
+		GameObject.FindGameObjectWithTag ("Player").GetComponent<Player_Caster_Controller>().SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
 	}
 	
 	void Update ()
 	{
-		if (MaxChildren <= Child)
-		{
-			Destroy(gameObject, 1.0f);
-		}
-
 		TimePassed += Time.deltaTime;
-		if (TimePassed >= ImpactRate)
-		{
+		if (TimePassed >= ImpactRate && MaxChildren > Child) {
 			TimePassed = 0.0f;
 			transform.GetChild (Child).gameObject.SetActive (true);
 			Child++;
+			if (MaxChildren <= Child)
+				Destroy (gameObject, 1.0f);
+		}
+		else if (MaxChildren <= Child)
+		{
+			transform.position -= new Vector3(0, 10.0f * Time.deltaTime, 0);
 		}
 	}
 }
