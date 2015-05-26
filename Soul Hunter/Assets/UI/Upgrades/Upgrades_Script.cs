@@ -129,6 +129,7 @@ public class Upgrades_Script : MonoBehaviour
 	public void UpgradeFire()
 	{
 		gameBrain.SoulCount -= LevelCost [gameBrain.FireLevel + 1];
+		//gameBrain.GetComponent<StatsDisplay> ().updateSoul = true;
 		gameBrain.FireLevel++;
 		CheckLevelAvailability ();
 	}

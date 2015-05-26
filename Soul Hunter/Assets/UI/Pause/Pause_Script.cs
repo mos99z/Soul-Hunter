@@ -64,16 +64,6 @@ public class Pause_Script : MonoBehaviour {
 
 	public void Exit()
 	{
-
-	}
-
-	public void Exit_Message_Yes()
-	{
-
-	}
-
-	public void Exit_Message_No()
-	{
-
+		MessagePrompt.SetActive (true);
 	}
 }
