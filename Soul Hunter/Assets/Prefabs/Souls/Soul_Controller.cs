@@ -43,7 +43,7 @@ public class Soul_Controller : MonoBehaviour {
 					Destroy(soundeffect, killtimer);
 				}
 			}
-			else if (distance <= 0.1f)
+			else if (distance <= 0.25f)
 				Destroy(gameObject);
 		}
 	}
