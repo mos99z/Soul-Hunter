@@ -63,6 +63,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 498938}
   - 195: {fileID: 19509814}
+  - 114: {fileID: 11434028}
   - 114: {fileID: 11426390}
   - 54: {fileID: 5486936}
   m_Layer: 0
@@ -375,6 +376,26 @@ MonoBehaviour:
   MaxAttackCooldown: 4
   SpellBarrageCooldown: 10
   AOECooldown: 1.5
+--- !u!114 &11434028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaf75ca4776b3745b68bd1c3e183610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Defence: 0
+  ElementType: 0
+  MaxHealth: 300
+  CurrHealth: 300
+  CanTakeDamage: 1
+  CanDie: 1
+  Lives: 1
+  SoulValue: 5
+  isPlayer: 0
 --- !u!135 &13512906
 SphereCollider:
   m_ObjectHideFlags: 1

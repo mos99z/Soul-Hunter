@@ -44,6 +44,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 449150}
+  - 114: {fileID: 11486548}
   - 114: {fileID: 11462842}
   - 114: {fileID: 11415188}
   - 195: {fileID: 19503828}
@@ -317,14 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157a19c7b905a4a47a949cac9ed68dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Defence: 0
-  ElementType: 0
-  MaxHealth: 1
-  CurrHealth: 1
-  CanTakeDamage: 1
-  CanDie: 1
-  Lives: 1
-  SoulValue: 0
   MinRange: 5
   MaxRange: 18
   Mask:
@@ -332,6 +325,26 @@ MonoBehaviour:
     m_Bits: 256
   AttackCooldown: 2
   FelMissile: {fileID: 141786, guid: 61477904adaa7ed4fbd715899be8a272, type: 2}
+--- !u!114 &11486548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaf75ca4776b3745b68bd1c3e183610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Defence: 0
+  ElementType: 0
+  MaxHealth: 100
+  CurrHealth: 100
+  CanTakeDamage: 1
+  CanDie: 1
+  Lives: 1
+  SoulValue: 1
+  isPlayer: 0
 --- !u!135 &13509792
 SphereCollider:
   m_ObjectHideFlags: 1

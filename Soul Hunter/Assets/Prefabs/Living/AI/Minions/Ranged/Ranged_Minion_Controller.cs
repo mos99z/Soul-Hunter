@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ranged_Minion_Controller : Living_Obj {
+public class Ranged_Minion_Controller : MonoBehaviour {
 
 	public float MinRange = 5.0f;		// Minimum Attack Range
 	public float MaxRange = 18.0f;		// Maximum Attack Range
