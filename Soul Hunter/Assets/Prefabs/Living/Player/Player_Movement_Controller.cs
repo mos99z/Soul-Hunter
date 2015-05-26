@@ -16,7 +16,7 @@ public class Player_Movement_Controller : MonoBehaviour {
 	private Vector3 currentVelocity = Vector3.zero;
 
 	void Start () {
-		//Cursor.visible = false;
+		//Cursor.visiblpie = false;
 		ScreenCamera = Camera.main;
 	}
 
@@ -36,6 +36,8 @@ public class Player_Movement_Controller : MonoBehaviour {
 				Animations.Play("Player_Down_Idle");
 		}
 		#endif
+
+
 	}
 
 	void FixedUpdate ()

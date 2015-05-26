@@ -86,7 +86,7 @@ public class Melee_Minion_Controller : Living_Obj {
 					currentAttackTimer = AttackTimer;
 					navigation.autoBraking = true;
 					navigation.updateRotation = true;
-					navigation.stoppingDistance = 0.25f;
+					navigation.stoppingDistance = 2.0f;
 					destination = gameObject.transform.position;
 				}
 			}
@@ -97,14 +97,13 @@ public class Melee_Minion_Controller : Living_Obj {
 				//gameObject.transform.LookAt(target.transform.position,Vector3.up);
 				navigation.SetDestination (target.transform.position);
 				
-				if(navigation.remainingDistance < 0.25)
+				if(navigation.remainingDistance < 2.5f)
 					AttackCollider.enabled = true;
-				else
-					AttackCollider.enabled = false;
 
 				if(lungeTimer <= 0.0f)
 				{
 					isAttacking = false;
+					AttackCollider.enabled = false;
 					navigation.stoppingDistance = 0.0f;
 					navigation.updateRotation = false;
 					//SearchForNearestNode();

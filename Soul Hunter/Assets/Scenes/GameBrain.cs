@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public enum Debuff
 { 
@@ -33,6 +36,27 @@ public enum SoulType
 	Red,
 	Black
 }
+[Serializable]
+public class GameInfo
+{
+	int PlayerMaxHealth;
+	int PlayerCurrHealth;
+	int PlayerLivesLeft;
+	int SoulCount;
+	GameObject player;
+
+	// Level 0 is tutorial
+	int CurrentLevel;
+
+
+	//Tally Specific Info
+	int NumEnemiesKilled;
+	int DamageTaken;
+	int TotalSoulCount;
+	int DeathCount;
+	double GameTime;
+	int NumCastedSpells;
+}
 
 public class GameBrain : MonoBehaviour {
 
@@ -42,7 +66,6 @@ public class GameBrain : MonoBehaviour {
 	public int SoulCount = 0;
 	// Level 0 is tutorial
 	public int CurrentLevel = 1;
-
 
 	//Tally Specific Info
 	public int NumEnemiesKilled = 0;
@@ -64,6 +87,7 @@ public class GameBrain : MonoBehaviour {
 		SpellDatabase.SetActive (false);
 		Souls.SetActive (false);
 		HUD.SetActive (true);
+		DontDestroyOnLoad (gameObject);
 	}
 	
 	// Update is called once per frame
