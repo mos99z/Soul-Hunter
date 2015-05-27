@@ -33,9 +33,19 @@ public class RS_Move_Up : MonoBehaviour {
 	void OnTriggerEnter(Collider _obj)
 	{
 		++CollisionCheck;
-		if (_obj.tag == "Enemy")
+		if (_obj.tag == "Enemy" && this.isActiveAndEnabled)
 		{
 			_obj.SendMessage ("TakeDamage", Damage);
+			Vector3 crossProd = Vector3.Cross(_obj.transform.position - transform.position.normalized, transform.forward.normalized);
+			GameObject pushDirection = new GameObject();
+			pushDirection.transform.forward  = transform.parent.forward;
+			Vector3 pushBack;
+			if (crossProd.y < 0)
+				pushDirection.transform.RotateAround(pushDirection.transform.position, new Vector3(0,1,0), 90.0f);
+			else
+				pushDirection.transform.RotateAround(pushDirection.transform.position, new Vector3(0,1,0), -90.0f);
+			pushBack = pushDirection.transform.forward.normalized * 10.0f;
+			_obj.transform.GetComponent<Rigidbody>().velocity = pushBack;
 		}
 	}
 }

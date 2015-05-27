@@ -36,6 +36,11 @@ public class Bolt_Controller : MonoBehaviour {
 		ForwardDirection = transform.forward.normalized * Speed;
 
 		GameObject.FindGameObjectWithTag ("Player").SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
+
+		if (Stunned == null) {
+			Debug.Log("To Reduce CPU Load Assign debuff \"Stunned\" to the parameter Stunned in prefab GameBrain/Spell Database/Bolt:Bolt_Controller.");
+			Stunned = GameObject.Find("GameBrain/Debuffs/Stunned");
+		}
 	}
 
 	void Update ()
@@ -65,16 +70,16 @@ public class Bolt_Controller : MonoBehaviour {
 			float damageMod = 1.0f;
 			if (_object.tag == "Enemy")
 			{
-				if (_object.transform.Find ("Wet(Clone)"))
+				if (_object.transform.FindChild ("Wet(Clone)"))
 				{
 					GameObject stun = Instantiate (Stunned);
 					stun.transform.parent = _object.transform;
 					stun.transform.localPosition = new Vector3 (0, -_object.transform.position.y, 0);
-					stun.GetComponent<StunnedDebuffController> ().Duration = StunDuration;
+					stun.GetComponent<Stunned_Controller> ().Duration = StunDuration;
 					damageMod = 2.0f;
 				}
 
-				_object.transform.SendMessage ("TakeDamage", Damage * damageMod);
+				_object.transform.SendMessage ("TakeDamage", (float)((int)Damage * damageMod) + 0.4f);
 
 				DestroyMe();
 			}

@@ -14,11 +14,16 @@ public class Hydrant_Controller : MonoBehaviour {
 	public float Duration = 10.0f;
 	public BoxCollider TheCollider = null;
     public GameObject SpellEffect = null;
+	public GameObject WetDebuff = null;
+	public float DebuffChance = 0.1f;
+	public float DebuffDuration = 10.0f;
     public LayerMask WALLS;
 
 	private float DeltaT = 0.0f;
 	private GameObject PlayerFaceingIndicator = null;
 	private float Size = 1.0f;
+	private float oldSize = 0.0f;
+	private float smallestSize = float.MaxValue;
 	private float RecoveryCost = 0.0f;
 	private float TickTime = 0.0f;
     private List<GameObject> Hitting = new List<GameObject>();
@@ -26,8 +31,13 @@ public class Hydrant_Controller : MonoBehaviour {
 
 	void Start ()
 	{
+		oldSize = Size;
 		PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
         transform.position = new Vector3(transform.position.x, StartHeight, transform.position.z);
+		if (WetDebuff == null) {
+			Debug.Log("To Reduce CPU Load assign Debuff \"Wet\" to the WetDebuff Parameter in the prefab GameBrain/Spell Database/Hydrant:Hydrant_Controller");
+			WetDebuff = GameObject.Find ("GameBrain/Debuffs/Wet");
+		}
 	}
 	
 	void Update ()
@@ -41,9 +51,16 @@ public class Hydrant_Controller : MonoBehaviour {
         }
 
         TickTime += Time.deltaTime;
-        float smallestSize = float.MaxValue;
+        smallestSize = float.MaxValue;
         for (int i = 0; i < Hitting.Count; i++)
         {
+			if(Hitting[i] == null)
+			{
+				Hitting.RemoveAt(i);
+				i--;
+				continue;
+			}
+
             if (Hitting[i].tag == "Enemy")
             {
 				Vector3 objPos = Hitting[i].transform.position;
@@ -52,11 +69,20 @@ public class Hydrant_Controller : MonoBehaviour {
 				if (smallestSize > sizeTest)
 					smallestSize = sizeTest;
 
-                if (TickTime >= DamageTickRate)
+                if (TickTime >= DamageTickRate){
                     Hitting[i].transform.SendMessage ("TakeDamage", Damage);
+					float roll = Random.Range(0.0f, 1.0f);
+					if (roll <= DebuffChance)
+					{
+						GameObject debuff = Instantiate(WetDebuff);
+						debuff.transform.parent = Hitting[i].transform;
+						debuff.transform.localPosition = Vector3.zero;
+						debuff.GetComponent<Wet_Controller>().Duration = DebuffDuration;
+					}
+				}
 
                 if (Hitting[i].transform.GetComponent<Rigidbody>())
-                    Hitting[i].transform.GetComponent<Rigidbody>().AddRelativeForce (transform.forward.normalized * PushBackForce);
+                    Hitting[i].transform.GetComponent<Rigidbody>().velocity += (transform.forward.normalized * PushBackForce);
             }
         }
 
@@ -69,7 +95,7 @@ public class Hydrant_Controller : MonoBehaviour {
 		
 		RaycastHit RayInfo;
 		Physics.Raycast(wallRangeCheck, out RayInfo, Range, WALLS);
-		if (smallestSize > RayInfo.distance)
+		if (smallestSize > RayInfo.distance && RayInfo.distance != 0.0f)
 			smallestSize = RayInfo.distance;
 
         Size = smallestSize;
@@ -83,19 +109,28 @@ public class Hydrant_Controller : MonoBehaviour {
 	
 	void FixedUpdate ()
     {
+		SpellEffect.SetActive (false);
+		if (oldSize > Size)
+        	TheCollider.transform.localScale = new Vector3(1.0f, 1.0f, Size);
+			
         transform.forward = PlayerFaceingIndicator.transform.forward;
         Vector3 newPosition = PlayerFaceingIndicator.transform.position;
         newPosition.y = StartHeight;
         Vector3 posChange = transform.forward.normalized * Size * 0.5f;
         newPosition += posChange;
         transform.position = newPosition;
-        TheCollider.transform.localScale = new Vector3(1.0f, 1.0f, Size);
+
+		if (oldSize <= Size)
+        	TheCollider.transform.localScale = new Vector3(1.0f, 1.0f, Size);
+
+		oldSize = Size;
 
         if (Once)
         {
             Once = false;
             SpellEffect.SetActive(true);
         }
+		SpellEffect.SetActive (true);
 	}
 	
 	void OnTriggerEnter(Collider _object)

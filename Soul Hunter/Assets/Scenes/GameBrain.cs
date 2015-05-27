@@ -92,6 +92,7 @@ public class GameBrain : MonoBehaviour {
 	public int NumCastedSpells = 0;
 	public GameObject SpellDatabase = null;
 	public GameObject Souls = null;
+	public GameObject Debuffs = null;
 	public GameObject HUD = null;
 	public GameObject DisplayText = null;
 
@@ -102,6 +103,7 @@ public class GameBrain : MonoBehaviour {
 		//Only in scene for ease of development.
 		SpellDatabase.SetActive (false);
 		Souls.SetActive (false);
+		Debuffs.SetActive (false);
 		HUD.SetActive (true);
 		DontDestroyOnLoad (gameObject);
 		LoadPlayerData ();

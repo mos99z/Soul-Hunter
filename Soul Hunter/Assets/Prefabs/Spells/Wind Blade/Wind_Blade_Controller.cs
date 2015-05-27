@@ -7,7 +7,6 @@ public class Wind_Blade_Controller : MonoBehaviour
 
 	public float Damage = 20.2f;
 	public float RecoveryCost = 1.5f;
-	public float PushBackDistance = 0.5f;
 	public float Speed = 0.5f;
 	public float Range = 10.0f;
 	public float StartHeight = 1.0f;
@@ -80,15 +79,12 @@ public class Wind_Blade_Controller : MonoBehaviour
 
 				_object.transform.SendMessage ("TakeDamage", Damage);
 
-				// Knock back hit target
-				//			Vector3 pushDirection = Owner.transform.position;
-				//			pushDirection.y = _object.transform.position.y;
-				//			pushDirection = _object.transform.position - pushDirection;
-				//			pushDirection.Normalize();
-				//			pushDirection.z *= PushBackDistance;
-				//			_object.transform.position += pushDirection;
-				//pushDirection = _object.transform.position - pushDirection;
-				//_object.transform.GetComponent<Rigidbody>().AddExplosionForce(PushBackDistance, pushDirection, 1.0f);
+//				Knock back hit target
+				Vector3 pushDirection = transform.forward;
+				pushDirection.y = 0.0f;
+				pushDirection.Normalize();
+				pushDirection *= 7.0f;
+				_object.transform.GetComponent<Rigidbody>().velocity = pushDirection;
 			}
 		}
 	}

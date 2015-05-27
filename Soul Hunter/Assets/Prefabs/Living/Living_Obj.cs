@@ -108,13 +108,14 @@ public class Living_Obj : MonoBehaviour
 	{
 		// Get actual damage value from damage parameter.
 		// Calculate damage reduction from defence before elements are accounted for.
-		int ActualDamage = (int)((int)_damage * (1.0f - Defence));
+		int rawDamage = (int)_damage;
+		int ActualDamage = (int)(((float)rawDamage) * (1.0f - Defence));
 
 		if (CanTakeDamage)
 		{
 			if (ElementType != Element.None)
 			{
-				Element ElementalDamage = (Element)((_damage - ActualDamage) * 10.0f);
+				Element ElementalDamage = (Element)Mathf.RoundToInt((_damage - rawDamage) * 10.0f);
 				// If the obj's elemental type and the damage's elemental type are both not of type none.
 				if (ElementalDamage != Element.None)
 				{

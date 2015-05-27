@@ -114,8 +114,6 @@ public class Melee_Minion_Controller : MonoBehaviour {
 			}
 
 		}
-
-
 	}
 
 	// Check distance to player. Will target the player if he is within distance
