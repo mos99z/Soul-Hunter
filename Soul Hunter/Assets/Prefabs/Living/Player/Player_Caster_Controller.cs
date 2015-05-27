@@ -8,9 +8,15 @@ public class Player_Caster_Controller : MonoBehaviour {
 	private float Recovering = 0.0f;
 	private bool CanCast = true;
 	public GameObject GameBrain = null;
+	public GameObject RecoveryBar = null;
 	
 	void Start ()
 	{
+		if (RecoveryBar == null)
+		{
+			Debug.Log("To Reduce CPU Load Assign \"Recovery Back\" from Main Camera to the Parameter RecoveryBar in the Prefab Player:Player_Caster_Controller.");
+			RecoveryBar = GameObject.Find("Main Camera/RecoveryBack");
+		}
 	}
 
 	void Update ()
@@ -49,5 +55,8 @@ public class Player_Caster_Controller : MonoBehaviour {
 		if (_recovering > 0.0f)
 			CanCast = false;
 		Recovering = _recovering;
+
+		RecoveryBar.SetActive (true);
+		RecoveryBar.SendMessage ("SetCoolDown", _recovering);
 	}
 }

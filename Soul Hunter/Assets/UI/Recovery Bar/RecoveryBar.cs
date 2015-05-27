@@ -32,6 +32,7 @@ public class RecoveryBar : MonoBehaviour
 
 	void SetCoolDown(float _cooldown)
 	{
+		RecoverBar.transform.localScale = new Vector3(0.0f, 1.0f, 1.0f);
 		this.gameObject.SetActive(true);
 		CoolDownTime = _cooldown;
 		CoolDown = _cooldown;

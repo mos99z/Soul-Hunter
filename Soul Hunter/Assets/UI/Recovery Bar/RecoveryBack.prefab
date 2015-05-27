@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 463392}
   - 33: {fileID: 3305476}
-  - 64: {fileID: 6431354}
   - 23: {fileID: 2310122}
   m_Layer: 0
   m_Name: RecoveryBar
@@ -27,16 +26,15 @@ GameObject:
   m_Component:
   - 4: {fileID: 418976}
   - 33: {fileID: 3392452}
-  - 64: {fileID: 6402784}
   - 23: {fileID: 2388240}
-  - 114: {fileID: 11462988}
+  - 114: {fileID: 11450344}
   m_Layer: 0
   m_Name: RecoveryBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &418976
 Transform:
   m_ObjectHideFlags: 1
@@ -44,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144492}
   m_LocalRotation: {x: -.546862185, y: 0, z: 0, w: .837222695}
-  m_LocalPosition: {x: 0, y: .200000003, z: 14.1599998}
+  m_LocalPosition: {x: 0, y: -2.48000002, z: 2.6500001}
   m_LocalScale: {x: .400000006, y: 1, z: .0399999991}
   m_Children:
   - {fileID: 463392}
@@ -57,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: .0599999987, z: -.100000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418976}
@@ -72,7 +70,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4d184c737157f6f41a1b843946496068, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -96,7 +94,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 266955d9370516c48b9cb00c0b710b7e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -124,31 +122,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144492}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &6402784
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144492}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &6431354
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103584}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11462988
+--- !u!114 &11450344
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -156,9 +130,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 144492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: e29903eaad0015642b140a30bed551bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RecoverBar: {fileID: 103584}
+  CoolDown: 1
+  CoolDownTime: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
