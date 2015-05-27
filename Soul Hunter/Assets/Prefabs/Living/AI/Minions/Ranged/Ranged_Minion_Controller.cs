@@ -44,7 +44,14 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 			if(currentAttackTimer <= 0.0f)
 			{
 				//Debug.Log("Enemy Attacked");
-				GameObject.Instantiate(FelMissile,gameObject.transform.position, gameObject.transform.rotation);
+				Vector3 startLoc = transform.position;
+				startLoc.y = 1.5f;
+				GameObject RangedAttack = GameObject.Instantiate(FelMissile);
+				RangedAttack.transform.position = startLoc;
+				Vector3 newForward = (target.transform.position - transform.position);
+				newForward.y = 0.0f;
+				newForward.Normalize();
+				RangedAttack.transform.forward = newForward;
 				attackCounter++;
 				currentAttackTimer = AttackCooldown;
 			}
