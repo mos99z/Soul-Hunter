@@ -15,6 +15,7 @@ TagManager:
   - SafeZone
   - Trap
   - PlayerMarker
+  - Debuffs
   layers:
   - Default
   - TransparentFX

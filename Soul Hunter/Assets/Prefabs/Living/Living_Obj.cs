@@ -26,6 +26,7 @@ public class Living_Obj : MonoBehaviour
 	private SpriteRenderer Image = null;
 	private float FlashSpeed = 0.1f;
 	private float FlashTimer = 0.0f;
+	private float FlashCoolDown = 0.0f;
 
 	public bool isPlayer = false;
 	private GameObject GameBrain = null;
@@ -102,6 +103,9 @@ public class Living_Obj : MonoBehaviour
 				transform.GetComponentInChildren<SpriteRenderer>().color = flash;
 			}
 		}
+
+		if (FlashCoolDown > 0.0f)
+			FlashCoolDown -= Time.deltaTime;
 	}
 
 	void TakeDamage (float _damage)
@@ -154,12 +158,13 @@ public class Living_Obj : MonoBehaviour
 				if(isPlayer)
 					GameBrain.SendMessage("ModHealth", -ActualDamage);
 
-				if (Image != null)
+				if (Image != null && FlashCoolDown <= 0.0f)
 				{
 					Color flash = Image.color;
 					flash.a = 0.0f;
 					Image.color = flash;
 					FlashTimer = FlashSpeed;
+					FlashCoolDown = 0.25f;
 				}
 				PulseCheck ();
 			}
