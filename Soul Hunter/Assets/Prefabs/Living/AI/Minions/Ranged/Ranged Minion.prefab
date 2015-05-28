@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 454700}
   - 33: {fileID: 3319630}
-  - 136: {fileID: 13640764}
   - 23: {fileID: 2387626}
   m_Layer: 0
   m_Name: Nose
@@ -27,7 +26,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 436124}
   - 33: {fileID: 3332968}
-  - 136: {fileID: 13675044}
   - 23: {fileID: 2391624}
   m_Layer: 0
   m_Name: Right Arm
@@ -49,7 +47,8 @@ GameObject:
   - 195: {fileID: 19503828}
   - 54: {fileID: 5493480}
   - 135: {fileID: 13509792}
-  m_Layer: 0
+  - 136: {fileID: 13684048}
+  m_Layer: 11
   m_Name: Ranged Minion
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -65,7 +64,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 482692}
   - 33: {fileID: 3362212}
-  - 136: {fileID: 13627732}
   - 23: {fileID: 2385184}
   m_Layer: 0
   m_Name: Left Arm
@@ -83,7 +81,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 421402}
   - 33: {fileID: 3364670}
-  - 136: {fileID: 13675310}
   - 23: {fileID: 2343858}
   m_Layer: 0
   m_Name: Body
@@ -332,7 +329,7 @@ MonoBehaviour:
   CanDie: 1
   Lives: 1
   SoulValue: 1
-  isPlayer: 0
+  entType: 1
 --- !u!135 &13509792
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -345,58 +342,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.25
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13627732
+--- !u!136 &13684048
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173808}
+  m_GameObject: {fileID: 144128}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13640764
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114784}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13675044
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131792}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13675310
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174270}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!195 &19503828
 NavMeshAgent:
   m_ObjectHideFlags: 1

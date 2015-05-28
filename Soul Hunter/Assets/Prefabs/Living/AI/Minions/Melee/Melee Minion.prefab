@@ -30,9 +30,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 491750}
   - 33: {fileID: 3398740}
-  - 136: {fileID: 13663492}
   - 23: {fileID: 2399674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +47,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 453398}
   - 33: {fileID: 3350314}
-  - 136: {fileID: 13647816}
   - 23: {fileID: 2384174}
   m_Layer: 0
   m_Name: Nose
@@ -191,7 +189,7 @@ MonoBehaviour:
   CanDie: 1
   Lives: 1
   SoulValue: 1
-  isPlayer: 0
+  entType: 1
 --- !u!114 &11425858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,19 +221,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 1, z: 1}
---- !u!136 &13647816
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188196}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13661080
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -249,19 +234,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!136 &13663492
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159866}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &19561548
 NavMeshAgent:
   m_ObjectHideFlags: 1

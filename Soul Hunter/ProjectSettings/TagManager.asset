@@ -15,6 +15,7 @@ TagManager:
   - SafeZone
   - Trap
   - PlayerMarker
+  - Debuffs
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Wall
   - Floor
   - MiniMap
-  - 
+  - Enemy
   - 
   - 
   - 
