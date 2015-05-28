@@ -39,6 +39,7 @@ public class Player_Caster_Controller : MonoBehaviour {
 	void CastSpell()
 	{
 		Instantiate(CurrSpell, transform.position, transform.rotation);
+		GameBrain.SendMessage ("SpellWasCast", CurrSpell);
 		if (GameBrain != null)
 			GameBrain.BroadcastMessage ("SpellCasted", CurrSpell.name, SendMessageOptions.RequireReceiver);
 		else

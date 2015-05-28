@@ -95,6 +95,10 @@ public class GameBrain : MonoBehaviour {
 	public GameObject Debuffs = null;
 	public GameObject HUD = null;
 	public GameObject DisplayText = null;
+	public bool[] SpellHasBeenCast = {false, false, false, false, false, false, false, false, false,
+		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
+	string[] spellNames = {"Aqua Jet","Barrier","Bolt","Bolt Chain","Concrete","Crystal Spikes","Explosion","Fire Ball","Fog","Freeze","Gravity Well","Hydrant",
+		"Laser","Magma","Meteor","Muck","Plasma","Poison Cloud","Rock Spike","Sand Blast", "Shock Prism","Steam", "Torch","Whirlwind","Wind Blade"};
 
 	// Use this for initialization
 	void Start ()
@@ -235,6 +239,17 @@ public class GameBrain : MonoBehaviour {
 		++NumCastedSpells;
 		// In the works
 		//SpellDatabase.transform.FindChild (_SpellName).GetComponent<GUIText>().text.;
+	}
+
+	void SpellWasCast(GameObject spell)
+	{
+		for (int i = 0; i < spellNames.Length; i++) 
+		{
+			if(spell.name == spellNames[i])
+				SpellHasBeenCast[i] = true;
+		}
+
+
 	}
 
 	void LoadPlayerData()
