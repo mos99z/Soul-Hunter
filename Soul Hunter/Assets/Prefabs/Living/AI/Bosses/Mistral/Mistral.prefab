@@ -189,7 +189,7 @@ MonoBehaviour:
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
-  SoulValue: 5
+  SoulValue: 0
   isPlayer: 0
 --- !u!114 &11439698
 MonoBehaviour:
@@ -207,7 +207,7 @@ MonoBehaviour:
   MaxRange: 18
   Mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   MinWaitTime: 5
   MaxWaitTime: 7
   AttackCooldown: 2

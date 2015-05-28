@@ -270,5 +270,12 @@ public class Mistral_Controller : MonoBehaviour
 	{
 		perendiAlive = false;
 		attackingWaypoints = GameObject.FindGameObjectsWithTag ("Shadow").OrderBy(waypoint => waypoint.name).ToArray<GameObject>();
+		gameObject.GetComponent<Living_Obj>().SoulValue = SoulType.Red;
+	}
+
+	void OnDestroy()
+	{
+		if(perendiAlive)
+			Perendi.SendMessage ("OtherBossDead");
 	}
 }

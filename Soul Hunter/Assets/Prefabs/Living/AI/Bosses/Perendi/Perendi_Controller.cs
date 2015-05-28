@@ -16,6 +16,7 @@ public class Perendi_Controller : MonoBehaviour {
 	int closestShadow = 0;				// 
 	float currentRotation = 0.0f;
 	float AngularAcceleration = 3.5f;
+	bool mistralAlive = true;
 	public bool isAttacking = false;
 	public bool isSwarming = false;
 	public float AttackMinimum = 5;
@@ -145,8 +146,16 @@ public class Perendi_Controller : MonoBehaviour {
 
 	void OtherBossDead()
 	{
+		mistralAlive = false;
 		navigation.speed *= 1.5f;
 		AttackMinimum *= 0.5f;
 		AttackMaximum *= 0.5f;
+		gameObject.GetComponent<Living_Obj>().SoulValue = SoulType.Red;
+	}
+
+	void OnDestroy()
+	{
+		if (mistralAlive)
+		Mistral.SendMessage ("OtherBossDead");
 	}
 }
