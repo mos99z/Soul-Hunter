@@ -88,6 +88,7 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 		for (int i = 0; i < OnTop.Count; i++) {
 			if(OnTop[i] == null){
 				OnTop.RemoveAt(i);
+				--i;
 			}
 			else
 				OnTop[i].transform.SendMessage("TakeDamage", Damage);
