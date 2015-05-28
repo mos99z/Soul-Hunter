@@ -4686,7 +4686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffcf782f52f22b41bea8b5db1adf1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MessagePrompt: {fileID: 113696, guid: 49799b79461fca245bd7c067cda7de03, type: 2}
+  MessagePrompt: {fileID: 119932}
 --- !u!114 &11456448
 MonoBehaviour:
   m_ObjectHideFlags: 1

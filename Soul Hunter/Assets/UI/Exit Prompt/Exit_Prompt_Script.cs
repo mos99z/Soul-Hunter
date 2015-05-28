@@ -17,8 +17,7 @@ public class Exit_Prompt_Script : MonoBehaviour {
 
 	public void Exit_Message_Yes()
 	{
-		Debug.Log ("Return to Main Menu");
-		MessagePrompt.SetActive (false);
+		Application.LoadLevel ("Main menu");
 	}
 	
 	public void Exit_Message_No()
