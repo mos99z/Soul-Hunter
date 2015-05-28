@@ -974,10 +974,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11401022, guid: 13429437a64de5b448172c473fc7b953, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 22486610, guid: 13429437a64de5b448172c473fc7b953, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1050,10 +1046,18 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11450888, guid: 13429437a64de5b448172c473fc7b953, type: 2}
+    - target: {fileID: 11467254, guid: 13429437a64de5b448172c473fc7b953, type: 2}
       propertyPath: gameBrain
       value: 
       objectReference: {fileID: 16733967}
+    - target: {fileID: 11405832, guid: 13429437a64de5b448172c473fc7b953, type: 2}
+      propertyPath: plyr
+      value: 
+      objectReference: {fileID: 1362144073}
+    - target: {fileID: 11405832, guid: 13429437a64de5b448172c473fc7b953, type: 2}
+      propertyPath: spellDatabase
+      value: 
+      objectReference: {fileID: 2104173685}
     - target: {fileID: 11437484, guid: 13429437a64de5b448172c473fc7b953, type: 2}
       propertyPath: spells.Array.data[0]
       value: 
@@ -1078,38 +1082,10 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1362144073}
-    - target: {fileID: 11405832, guid: 13429437a64de5b448172c473fc7b953, type: 2}
-      propertyPath: plyr
-      value: 
-      objectReference: {fileID: 1362144073}
-    - target: {fileID: 11405832, guid: 13429437a64de5b448172c473fc7b953, type: 2}
-      propertyPath: spellDatabase
-      value: 
-      objectReference: {fileID: 2104173685}
-    - target: {fileID: 11467254, guid: 13429437a64de5b448172c473fc7b953, type: 2}
+    - target: {fileID: 11450888, guid: 13429437a64de5b448172c473fc7b953, type: 2}
       propertyPath: gameBrain
       value: 
       objectReference: {fileID: 16733967}
-    - target: {fileID: 11401022, guid: 13429437a64de5b448172c473fc7b953, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11401022, guid: 13429437a64de5b448172c473fc7b953, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11401022, guid: 13429437a64de5b448172c473fc7b953, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1647296720}
-    - target: {fileID: 11401022, guid: 13429437a64de5b448172c473fc7b953, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateSpellList
-      objectReference: {fileID: 0}
-    - target: {fileID: 11401022, guid: 13429437a64de5b448172c473fc7b953, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13429437a64de5b448172c473fc7b953, type: 2}
   m_IsPrefabParent: 0
@@ -1466,12 +1442,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 192610, guid: 13429437a64de5b448172c473fc7b953, type: 2}
   m_PrefabInternal: {fileID: 964827501}
---- !u!114 &1647296720 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11450888, guid: 13429437a64de5b448172c473fc7b953,
-    type: 2}
-  m_PrefabInternal: {fileID: 964827501}
-  m_Script: {fileID: 11500000, guid: df996d60300763641afeb3204e6ccb51, type: 3}
 --- !u!1 &1706586111 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 111962, guid: 6c723069a845b694d8fe0a9c03547f8d, type: 2}

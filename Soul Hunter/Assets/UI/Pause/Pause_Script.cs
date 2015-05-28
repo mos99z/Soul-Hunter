@@ -5,7 +5,6 @@ public class Pause_Script : MonoBehaviour {
 
 	// Pause Functionality
 	public static bool gamePaused = false;
-	public static float pauseTimer = 0.0f;
 
 	public GameObject PauseMenu;
 	public GameObject OptionsMenu;
@@ -20,18 +19,15 @@ public class Pause_Script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-	{
-		pauseTimer -= 0.033f;
-		
-		if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == false /*&& pauseTimer <= 0.0f*/) 
+	{		
+		if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == false) 
 		{
 			Time.timeScale = 0;
 			gamePaused = true;
-			pauseTimer = 1.0f;
 			PauseMenu.SetActive(true);
 		}
 		
-		else if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == true /*&& pauseTimer <= 0.0f*/ )
+		else if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == true)
 		{
 			Resume();
 		}
@@ -46,7 +42,6 @@ public class Pause_Script : MonoBehaviour {
 		{
 			Time.timeScale = 1;
 			gamePaused = false;
-			pauseTimer = 1.0f;
 			PauseMenu.SetActive(false);
 		}
 	}
