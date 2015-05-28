@@ -6,6 +6,7 @@ public class Living_Obj : MonoBehaviour
 {
 	// Negitave defence results in taking more damage overall.
 	// Defence rating of 1 takes no damage and 0 takes normal damage.
+	[Header ("Defence range between 1 and 0")]
 	public float Defence = 0.0f;
 	public Element ElementType = Element.None;
 
@@ -26,8 +27,11 @@ public class Living_Obj : MonoBehaviour
 	private SpriteRenderer Image = null;
 	private float FlashSpeed = 0.1f;
 	private float FlashTimer = 0.0f;
+	private float FlashCoolDown = 0.0f;
 
-	public bool isPlayer = false;
+	public enum EntityType {Player, Minion, Captain, Boss}
+	public EntityType entType = EntityType.Minion;
+
 	private GameObject GameBrain = null;
 	void Start ()
 	{
@@ -69,7 +73,7 @@ public class Living_Obj : MonoBehaviour
 		Souls = GameBrain.transform.FindChild("Souls").gameObject;
 		if (Souls == null)
 			Debug.Log("Can NOT Find Souls Prefab In Scene!");
-		if (isPlayer)
+		if (entType == EntityType.Player)
 		{
 			GameBrain.SendMessage("SetMaxHealth", MaxHealth);
 			GameBrain.SendMessage("SetHealth", CurrHealth);
@@ -85,7 +89,13 @@ public class Living_Obj : MonoBehaviour
 			{
 				if (!transform.GetComponentInChildren<Animation> ().isPlaying)
 				{
-					DropSoul ();
+					if (entType == EntityType.Player)
+					{
+						// TODO: Restart Level
+
+					}
+					else
+						DropSoul ();
 				}
 			}
 			else
@@ -102,6 +112,9 @@ public class Living_Obj : MonoBehaviour
 				transform.GetComponentInChildren<SpriteRenderer>().color = flash;
 			}
 		}
+
+		if (FlashCoolDown > 0.0f)
+			FlashCoolDown -= Time.deltaTime;
 	}
 
 	void TakeDamage (float _damage)
@@ -151,15 +164,16 @@ public class Living_Obj : MonoBehaviour
 			{
 				CurrHealth -= ActualDamage;
 
-				if(isPlayer)
+				if(entType == EntityType.Player)
 					GameBrain.SendMessage("ModHealth", -ActualDamage);
 
-				if (Image != null)
+				if (Image != null && FlashCoolDown <= 0.0f)
 				{
 					Color flash = Image.color;
 					flash.a = 0.0f;
 					Image.color = flash;
 					FlashTimer = FlashSpeed;
+					FlashCoolDown = 0.25f;
 				}
 				PulseCheck ();
 			}
@@ -183,6 +197,11 @@ public class Living_Obj : MonoBehaviour
 			{
 				CurrHealth = MaxHealth;
 				GameBrain.SendMessage("SetHealth", MaxHealth);
+				if (entType == EntityType.Player)
+				{
+					// TODO: Respawn Player @ Check Point
+
+				}
 			}
 		}
 		// Display immortal - Blue
@@ -212,7 +231,7 @@ public class Living_Obj : MonoBehaviour
 	void Die()
 	{
 		IsAlive = false;
-		if (!isPlayer)
+		if (entType != EntityType.Player)
 			GameBrain.SendMessage ("AddKill");
 		if (transform.GetComponentInChildren<Animation> () != null)
 			transform.GetComponentInChildren<Animation> ().Play ("Death");
@@ -227,7 +246,7 @@ public class Living_Obj : MonoBehaviour
 			spawnPosition.y = 0.5f;
 			dropedSoul.transform.position = spawnPosition;
 		}
-
+		
 		Destroy (gameObject);
 	}
 

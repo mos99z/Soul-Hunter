@@ -1512,7 +1512,7 @@ GameObject:
   m_Icon: {fileID: -2663371497217273435, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &189950
 GameObject:
   m_ObjectHideFlags: 1
@@ -2018,7 +2018,7 @@ Transform:
   m_GameObject: {fileID: 154326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 110}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450586}
   - {fileID: 446848}
@@ -4616,6 +4616,7 @@ MonoBehaviour:
   Debuffs: {fileID: 115918}
   HUD: {fileID: 0}
   DisplayText: {fileID: 196368}
+  SpellHasBeenCast: 00000000000000000000000000000000000000000000000000
 --- !u!114 &11458280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10009,7 +10010,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .100000001
+      scalar: .0500000007
       maxCurve:
         serializedVersion: 2
         m_Curve:

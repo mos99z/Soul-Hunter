@@ -24,7 +24,7 @@ public class Hydrant_Controller : MonoBehaviour {
 	private float Size = 1.0f;
 	private float oldSize = 0.0f;
 	private float smallestSize = float.MaxValue;
-	private float RecoveryCost = 0.0f;
+	private float RecoveryCost = 0.5f;
 	private float TickTime = 0.0f;
     private List<GameObject> Hitting = new List<GameObject>();
     private bool Once = true;
@@ -38,6 +38,7 @@ public class Hydrant_Controller : MonoBehaviour {
 			Debug.Log("To Reduce CPU Load assign Debuff \"Wet\" to the WetDebuff Parameter in the prefab GameBrain/Spell Database/Hydrant:Hydrant_Controller");
 			WetDebuff = GameObject.Find ("GameBrain/Debuffs/Wet");
 		}
+		SpellEffect.SetActive (false);
 	}
 	
 	void Update ()
@@ -109,7 +110,6 @@ public class Hydrant_Controller : MonoBehaviour {
 	
 	void FixedUpdate ()
     {
-		SpellEffect.SetActive (false);
 		if (oldSize > Size)
         	TheCollider.transform.localScale = new Vector3(1.0f, 1.0f, Size);
 			
@@ -129,8 +129,8 @@ public class Hydrant_Controller : MonoBehaviour {
         {
             Once = false;
             SpellEffect.SetActive(true);
+			SpellEffect.GetComponent<ParticleSystem>().Play();
         }
-		SpellEffect.SetActive (true);
 	}
 	
 	void OnTriggerEnter(Collider _object)
