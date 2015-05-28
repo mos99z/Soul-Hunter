@@ -85,8 +85,11 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 
 		animations.Play ("Triggered");
 
-		for (int i = 0; i < OnTop.Count; i++)
+		for (int i = 0; i < OnTop.Count; i++) {
+			if(OnTop[i] == null)
+				OnTop.RemoveAt(i);
 			OnTop[i].transform.SendMessage("TakeDamage", Damage);
+		}
 
 	}
 

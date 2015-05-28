@@ -27,8 +27,8 @@ public class SpellCaster : MonoBehaviour {
 				ChargeBar.SetActive(false);
 			}
 		}
-	
-		if (Input.GetMouseButtonDown(0) && CoolDown <= 0.0f) {
+
+		if (Input.GetMouseButtonDown(0) && CoolDown <= 0.0f && Pause_Script.gamePaused == false) {
 			Instantiate(CurrentSpell, transform.position, transform.rotation);
 //			gameObject.GetComponent<AudioSource>().Play();
 		}

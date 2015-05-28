@@ -11,96 +11,67 @@ public class Main_Menu_Script : MonoBehaviour {
 	public Text ExitGame;
 
 	public GameObject NewGamePrompt;
+	public GameObject OptionsMenu;
 
 	int selectedIndex = 0;
-
-	RectTransform newGameArea;
-	RectTransform continueArea;
-	RectTransform optionsArea;
-	RectTransform creditsArea;
-	RectTransform exitGameArea;
 	
 	// Use this for initialization
 	void Start () 
 	{
-		newGameArea = NewGame.rectTransform;
-		continueArea = Continue.rectTransform;
-		optionsArea = Options.rectTransform;
-		creditsArea = Credits.rectTransform;
-		exitGameArea = ExitGame.rectTransform;
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		// Mouse Input
-		if(newGameArea.rect.Contains(Input.mousePosition))
-		{
-			selectedIndex = 0;
-		}
-
-		else if(continueArea.rect.Contains(Input.mousePosition))
-		{
-			selectedIndex = 1;
-		}
-
-		else if(optionsArea.rect.Contains(Input.mousePosition))
-		{
-			selectedIndex = 2;
-		}
-
-		else if(creditsArea.rect.Contains(Input.mousePosition))
-		{
-			selectedIndex = 3;
-		}
-
-		else if(exitGameArea.rect.Contains(Input.mousePosition))
-		{
-			selectedIndex = 4;
-		}
-
 		// Keyboard Input
-		if(Input.GetKeyDown(KeyCode.UpArrow))
+		if (Input.GetKeyDown (KeyCode.UpArrow)) 
 		{
 			selectedIndex--;
-			if(selectedIndex < 0)
+			if (selectedIndex < 0)
 				selectedIndex = 4;
-		}
+		} 
 
-		else if(Input.GetKeyDown(KeyCode.DownArrow))
+		else if (Input.GetKeyDown (KeyCode.DownArrow))
 		{
 			selectedIndex++;
-			if(selectedIndex > 4)
+			if (selectedIndex > 4)
 				selectedIndex = 0;
 		}
 
-		UpdateHighlighted ();
+		else if (Input.GetKeyDown (KeyCode.Return)) 
+		{
+			switch (selectedIndex) 
+			{
+			case 0:
+			{
+				MouseClick0 ();
+				break;
+			}
+			case 1:
+			{
+				MouseClick1 ();
+				break;
+			}
+			case 2:
+			{
+				MouseClick2 ();
+				break;
+			}
+			case 3:
+			{
+				MouseClick3 ();
+				break;
+			}
+			case 4:
+			{
+				MouseClick4 ();
+				break;
+			}
+			}
+		}
 
-		// Mouse Selection
-		if(newGameArea.rect.Contains(Input.mousePosition) && Input.GetMouseButtonDown(0))
-		{
-			NewGamePrompt.SetActive(true);
-		}
-		
-		else if(continueArea.rect.Contains(Input.mousePosition) && Input.GetMouseButtonDown(0))
-		{
-			Debug.Log("Continue from autosave");
-		}
-		
-		else if(optionsArea.rect.Contains(Input.mousePosition) && Input.GetMouseButtonDown(0))
-		{
-			Debug.Log("Load Options Menu Here");
-		}
-		
-		else if(creditsArea.rect.Contains(Input.mousePosition) && Input.GetMouseButtonDown(0))
-		{
-			Application.LoadLevel("Credits");
-		}
-		
-		else if(exitGameArea.rect.Contains(Input.mousePosition) && Input.GetMouseButtonDown(0))
-		{
-			Application.Quit();
-		}
+		UpdateHighlighted ();
 	}
 
 	void UpdateHighlighted()
@@ -148,7 +119,57 @@ public class Main_Menu_Script : MonoBehaviour {
 
 	public void LoadLevel1()
 	{
-			Application.LoadLevel("Level 1");
+		Application.LoadLevel("Level 1");
+	}
+
+	public void MouseOver0()
+	{
+		selectedIndex = 0;
+	}
+
+	public void MouseOver1()
+	{
+		selectedIndex = 1;
+	}
+
+	public void MouseOver2()
+	{
+		selectedIndex = 2;
+	}
+
+	public void MouseOver3()
+	{
+		selectedIndex = 3;
+	}
+
+	public void MouseOver4()
+	{
+		selectedIndex = 4;
+	}
+
+	public void MouseClick0()
+	{
+		NewGamePrompt.SetActive(true);
+	}
+
+	public void MouseClick1()
+	{
+		Debug.Log("Continue from autosave");
+	}
+
+	public void MouseClick2()
+	{
+		OptionsMenu.SetActive (true);
+	}
+
+	public void MouseClick3()
+	{
+		Application.LoadLevel("Credits");
+	}
+
+	public void MouseClick4()
+	{
+		Application.Quit();
 	}
 
 }    
