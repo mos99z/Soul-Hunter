@@ -62,12 +62,11 @@ GameObject:
   - 195: {fileID: 19548272}
   - 114: {fileID: 11405262}
   - 114: {fileID: 11445974}
-  - 135: {fileID: 13523088}
   - 54: {fileID: 5417054}
   - 136: {fileID: 13671802}
   m_Layer: 0
   m_Name: Kamikaze Minion
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.33724594, y: 0, z: -4.28307533}
+  m_LocalPosition: {x: -6.73388004, y: 0, z: 146.493317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488574}
@@ -244,8 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 1
-  MaxHealth: 20
-  CurrHealth: 20
+  MaxHealth: 400
+  CurrHealth: 400
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
@@ -263,21 +262,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CountdownTimer: 1.5
-  KamikazeDistance: 1
+  KamikazeDistance: 2
   ExplosionDamage: 100
-  ExplosionRange: {fileID: 0}
---- !u!135 &13523088
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3
-  m_Center: {x: 0, y: 1, z: 0}
+  ExplosionRange: 3
 --- !u!136 &13671802
 CapsuleCollider:
   m_ObjectHideFlags: 1
