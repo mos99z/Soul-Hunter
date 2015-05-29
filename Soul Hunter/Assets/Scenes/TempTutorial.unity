@@ -250,10 +250,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 160376, guid: bb1ca28337327fe46bc0cc4df83ba22c, type: 2}
   m_PrefabInternal: {fileID: 1852321047}
---- !u!1 &1402314645 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 147014, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-  m_PrefabInternal: {fileID: 1920123051}
 --- !u!1001 &1494826476
 Prefab:
   m_ObjectHideFlags: 0
@@ -489,42 +485,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11456504, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-      propertyPath: HUD
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 22428316, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22424828, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11420916, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-      propertyPath: ScreenCamera
-      value: 
-      objectReference: {fileID: 476543624}
-    - target: {fileID: 11420916, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-      propertyPath: GameOver
-      value: 
-      objectReference: {fileID: 1402314645}
-    - target: {fileID: 11456504, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-      propertyPath: CurrentLevel
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 11436736, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
       propertyPath: RecoveryBar
       value: 
       objectReference: {fileID: 124849520}
-    - target: {fileID: 147014, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 174142, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 11420916, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: ScreenCamera
+      value: 
+      objectReference: {fileID: 476543624}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
   m_IsPrefabParent: 0

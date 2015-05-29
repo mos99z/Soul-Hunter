@@ -10800,8 +10800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10740610a64df554c8d9550e1a4e54f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curHealth: 100
-  maxHealth: 100
+  curHealth: 2000
+  maxHealth: 2000
   numSouls: 0
   numLives: 3
   healthTransform: {fileID: 22493336}
