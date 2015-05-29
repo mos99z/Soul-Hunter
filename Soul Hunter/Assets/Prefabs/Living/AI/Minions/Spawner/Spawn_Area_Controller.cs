@@ -54,7 +54,7 @@ public class Spawn_Area_Controller : MonoBehaviour {
 
 	void OnTriggerExit(Collider col)
 	{
-		if (col.tag == "ddPlayer") 
+		if (col.tag == "Player") 
 		{
 			for (int i = 0; i < Spawners.Length; i++)
 			{

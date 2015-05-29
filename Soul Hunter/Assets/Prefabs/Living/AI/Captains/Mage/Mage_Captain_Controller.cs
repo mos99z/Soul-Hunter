@@ -9,7 +9,7 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	
 	// Movement Variables
 	NavMeshAgent navigation;			// Used to allow the minion to use the NavMesh
-	GameObject target;					// Used to know where the player is at all times
+	public GameObject target;					// Used to know where the player is at all times
 	bool isMoving = false;				// a boolean used to prevent the enemy from continuously trying to update position
 	bool isCastingSpellBarrage = false;	// a boolean used to check if the Mage Captain is casting spell barrage 
 	bool isCastingAOE = false;
@@ -54,107 +54,114 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	void Update () 
 	{
 		currentAOETimer -= Time.deltaTime;
-		
-		if (isCastingSpellBarrage == false) 
+
+		if (target == null) {
+		}
+
+		else 
 		{
-			currentSpellBarrageTimer -= Time.deltaTime;
-			if(currentSpellBarrageTimer <= 0)
+			if (isCastingSpellBarrage == false) 
 			{
-				isCastingSpellBarrage = true;
-				navigation.updateRotation = false;
-				return;
-			}
-
-			if(isCastingAOE == false)
-			{
-				if (CheckPlayerDistance () == true && isMoving == false) 
+				currentSpellBarrageTimer -= Time.deltaTime;
+				if(currentSpellBarrageTimer <= 0)
 				{
-					TurnTowardsPlayer();
-					currentAttackTimer -= Time.deltaTime;
-
-					if(currentAttackTimer <= 0.0f)
+					isCastingSpellBarrage = true;
+					navigation.updateRotation = false;
+					return;
+				}
+				
+				if(isCastingAOE == false)
+				{
+					if (CheckPlayerDistance () == true && isMoving == false) 
 					{
-						Vector3 startLoc = transform.position;
-						startLoc.y = 1.5f;
-						GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
-						//RangedAttack.transform.position = startLoc;0
-						//Vector3 newForward = (target.transform.position - transform.position);
-						//newForward.y = 0.0f;
-						//newForward.Normalize();
-						//RangedAttack.transform.forward = newForward;
-
-						attackCounter++;
-						currentAttackTimer = Random.Range(MinAttackCooldown,MaxAttackCooldown);
+						TurnTowardsPlayer();
+						currentAttackTimer -= Time.deltaTime;
+						
+						if(currentAttackTimer <= 0.0f)
+						{
+							Vector3 startLoc = transform.position;
+							startLoc.y = 1.5f;
+							GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
+							//RangedAttack.transform.position = startLoc;0
+							//Vector3 newForward = (target.transform.position - transform.position);
+							//newForward.y = 0.0f;
+							//newForward.Normalize();
+							//RangedAttack.transform.forward = newForward;
+							
+							attackCounter++;
+							currentAttackTimer = Random.Range(MinAttackCooldown,MaxAttackCooldown);
+						}
+						
+						if(attackCounter >= 3)
+						{
+							SideStrafe();
+							isMoving = true;
+						}
 					}
 					
-					if(attackCounter >= 3)
+					else
 					{
-						SideStrafe();
-						isMoving = true;
+						if(isMoving == false)
+						{
+							Reposition();
+							isMoving = true;
+						}
+						
+						else if(isMoving == true)
+						{
+							
+							navigation.SetDestination(destination);
+							if(navigation.remainingDistance == 0)
+							{
+								isMoving = false;
+								navigation.updateRotation = false;
+							}
+							
+						}
 					}
 				}
 				
-				else
+				if(playerDistance.magnitude <= 1.5f && isCastingAOE == false && currentAOETimer <= 0.0f)
 				{
-					if(isMoving == false)
-					{
-						Reposition();
-						isMoving = true;
-					}
+					isCastingAOE = true;
+					AOE.SetActive(true);
+					currentAOETimer = AOEChargeUp;
+					Debug.Log ("AOE Enabled");
+				}
+				
+				if(isCastingAOE == true)
+				{
+					navigation.SetDestination(gameObject.transform.position);
 					
-					else if(isMoving == true)
+					
+					if(currentAOETimer <= 0.0f)
 					{
-						
-						navigation.SetDestination(destination);
-						if(navigation.remainingDistance == 0)
-						{
-							isMoving = false;
-							navigation.updateRotation = false;
-						}
-						
+						Debug.Log ("AOE Disabled");
+						AOE.SetActive(false);
+						currentAOETimer = AOECooldown;
+						isCastingAOE = false;
 					}
 				}
 			}
-
-			if(playerDistance.magnitude <= 1.5f && isCastingAOE == false && currentAOETimer <= 0.0f)
-			{
-				isCastingAOE = true;
-				AOE.SetActive(true);
-				currentAOETimer = AOEChargeUp;
-				Debug.Log ("AOE Enabled");
-			}
-
-			if(isCastingAOE == true)
+			
+			else
 			{
 				navigation.SetDestination(gameObject.transform.position);
-
-
-				if(currentAOETimer <= 0.0f)
+				if(navigation.remainingDistance == 0)
 				{
-					Debug.Log ("AOE Disabled");
-					AOE.SetActive(false);
-					currentAOETimer = AOECooldown;
-					isCastingAOE = false;
+					if(TurnTowardsPlayer())
+					{
+						Vector3 startLoc = transform.position;
+						startLoc.y = 1.5f;
+						GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);
+						isCastingSpellBarrage = false;
+						currentSpellBarrageTimer = SpellBarrageCooldown;
+						navigation.updateRotation = true;
+					}
 				}
 			}
 		}
 
-		else
-		{
-			navigation.SetDestination(gameObject.transform.position);
-			if(navigation.remainingDistance == 0)
-			{
-				if(TurnTowardsPlayer())
-				{
-					Vector3 startLoc = transform.position;
-					startLoc.y = 1.5f;
-					GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);
-					isCastingSpellBarrage = false;
-					currentSpellBarrageTimer = SpellBarrageCooldown;
-					navigation.updateRotation = true;
-				}
-			}
-		}
 	}
 	
 	// This function will check the distance of the player. It will return true if
@@ -277,5 +284,10 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		randomDirection.origin = new Vector3 (randomDirection.origin.x, 0.5f, randomDirection.origin.z);
 		randomDirection.direction = direction;
 		destination = randomDirection.GetPoint(currentDistance);
+	}
+
+	void PlayerDead()
+	{
+		target = null;
 	}
 }

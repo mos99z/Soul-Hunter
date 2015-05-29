@@ -12,6 +12,7 @@ public class Main_Menu_Script : MonoBehaviour {
 
 	public GameObject NewGamePrompt;
 	public GameObject OptionsMenu;
+	public GameObject GameOver;
 
 	int selectedIndex = 0;
 	
@@ -117,6 +118,7 @@ public class Main_Menu_Script : MonoBehaviour {
 
 	public void LoadTutorial()
 	{
+		//GameOver.SendMessage ("Reset");
 		int zero = 0;
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
 		Application.LoadLevel ("Tutorial");

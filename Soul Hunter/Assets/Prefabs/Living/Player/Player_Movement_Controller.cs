@@ -14,6 +14,7 @@ public class Player_Movement_Controller : MonoBehaviour {
 
 	public Camera ScreenCamera = null;
 	private Vector3 currentVelocity = Vector3.zero;
+	public GameObject GameOver;
 
 	void Start () {
 		//Cursor.visiblpie = false;
@@ -49,5 +50,17 @@ public class Player_Movement_Controller : MonoBehaviour {
 		currentVelocity *= Speed;
 		transform.position += currentVelocity;
 		#endif
+	}
+
+	void OnDestroy()
+	{
+		GameObject[] enemyList = GameObject.FindGameObjectsWithTag ("Enemy");
+		for (int i = 0; i < enemyList.Length; i++) 
+		{
+			enemyList[i].SendMessage("PlayerDead");
+		}
+
+		//GameOver.SendMessage ("PlayerDead");
+		GameOver.SetActive (true);
 	}
 }

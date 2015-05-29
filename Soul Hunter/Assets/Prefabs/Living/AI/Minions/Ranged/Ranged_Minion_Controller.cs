@@ -9,7 +9,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 
 	// Movement Variables
 	NavMeshAgent navigation;			// Used to allow the minion to use the NavMesh
-	GameObject target;					// Used to know where the player is at all times
+	public GameObject target;					// Used to know where the player is at all times
 	bool isMoving = false;				// a boolean used to prevent the enemy from continuously trying to update position
 	GameObject[] safeZones;
 	Vector3 destination;				// Location to move to using the NavMesh
@@ -36,53 +36,61 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (CheckPlayerDistance () == true && isMoving == false && attackCounter < 3) 
-		{
-			TurnTowardsPlayer();
-			currentAttackTimer -= Time.deltaTime;
-
-			if(currentAttackTimer <= 0.0f)
-			{
-				//Debug.Log("Enemy Attacked");
-				Vector3 startLoc = transform.position;
-				startLoc.y = 1.5f;
-				GameObject RangedAttack = GameObject.Instantiate(FelMissile);
-				RangedAttack.transform.position = startLoc;
-				Vector3 newForward = (target.transform.position - transform.position);
-				newForward.y = 0.0f;
-				newForward.Normalize();
-				RangedAttack.transform.forward = newForward;
-				attackCounter++;
-				currentAttackTimer = AttackCooldown;
-			}
-
-			if(attackCounter >= 3)
-			{
-				SideStrafe();
-				isMoving = true;
-			}
+		if (target == null) {
 		}
-		
+
 		else
 		{
-			if(isMoving == false)
+			if (CheckPlayerDistance () == true && isMoving == false && attackCounter < 3) 
 			{
-				Reposition();
-				isMoving = true;
-			}
-			
-			else if(isMoving == true)
-			{
-
-				navigation.SetDestination(destination);
-				if(navigation.remainingDistance == 0)
+				TurnTowardsPlayer();
+				currentAttackTimer -= Time.deltaTime;
+				
+				if(currentAttackTimer <= 0.0f)
 				{
-					isMoving = false;
-					navigation.updateRotation = false;
+					//Debug.Log("Enemy Attacked");
+					Vector3 startLoc = transform.position;
+					startLoc.y = 1.5f;
+					GameObject RangedAttack = GameObject.Instantiate(FelMissile);
+					RangedAttack.transform.position = startLoc;
+					Vector3 newForward = (target.transform.position - transform.position);
+					newForward.y = 0.0f;
+					newForward.Normalize();
+					RangedAttack.transform.forward = newForward;
+					attackCounter++;
+					currentAttackTimer = AttackCooldown;
 				}
 				
+				if(attackCounter >= 3)
+				{
+					SideStrafe();
+					isMoving = true;
+				}
+			}
+			
+			else
+			{
+				if(isMoving == false)
+				{
+					Reposition();
+					isMoving = true;
+				}
+				
+				else if(isMoving == true)
+				{
+					
+					navigation.SetDestination(destination);
+					if(navigation.remainingDistance == 0)
+					{
+						isMoving = false;
+						navigation.updateRotation = false;
+					}
+					
+				}
 			}
 		}
+
+
 
 
 	}
@@ -216,5 +224,10 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 		randomDirection.origin = new Vector3 (randomDirection.origin.x, 0.5f, randomDirection.origin.z);
 		randomDirection.direction = direction;
 		destination = randomDirection.GetPoint(currentDistance);
+	}
+
+	void PlayerDead()
+	{
+		target = null;
 	}
 }

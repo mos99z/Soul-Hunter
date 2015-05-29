@@ -10,18 +10,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main menu.unity
   - enabled: 1
-    path: Assets/Scenes/Options Menu.unity
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
-  - enabled: 1
-    path: Assets/Scenes/Attract Mode.unity
-  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
   - enabled: 1
+    path: Assets/Scenes/Credits.unity
+  - enabled: 0
     path: Assets/Scenes/Level 2.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 3.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Final Fight.unity
+  - enabled: 0
+    path: Assets/Scenes/Options Menu.unity
+  - enabled: 0
+    path: Assets/Scenes/Attract Mode.unity

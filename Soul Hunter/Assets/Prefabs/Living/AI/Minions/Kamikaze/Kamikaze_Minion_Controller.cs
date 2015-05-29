@@ -5,7 +5,7 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 
 	NavMeshAgent navigation;
 	Vector3 destination;
-	GameObject target;
+	public GameObject target;
 	bool isCountingDown = false;
 
 	public float CountdownTimer = 1.5f;
@@ -23,27 +23,34 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (isCountingDown == false) 
+		if (target == null) {
+		}
+
+		else 
 		{
-			destination = target.transform.position;
-			navigation.SetDestination (destination);
-			float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
-			if (playerDistance <= KamikazeDistance) 
+			if (isCountingDown == false) 
 			{
-				isCountingDown = true;
-				navigation.Stop();
+				destination = target.transform.position;
+				navigation.SetDestination (destination);
+				float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
+				if (playerDistance <= KamikazeDistance) 
+				{
+					isCountingDown = true;
+					navigation.Stop();
+				}
+			}
+			
+			if (isCountingDown == true) 
+			{
+				CountdownTimer -= Time.deltaTime;
+				
+				if(CountdownTimer <= 0)
+				{
+					Explode();
+				}
 			}
 		}
 
-		if (isCountingDown == true) 
-		{
-			CountdownTimer -= Time.deltaTime;
-
-			if(CountdownTimer <= 0)
-			{
-				Explode();
-			}
-		}
 	}
 
 	void Explode()
@@ -61,5 +68,10 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	{
 		if (col.tag == "Trap")
 			Explode ();
+	}
+
+	void PlayerDead()
+	{
+		target = null;
 	}
 }
