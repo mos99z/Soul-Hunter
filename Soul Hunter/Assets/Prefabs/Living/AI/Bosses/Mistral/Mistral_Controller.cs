@@ -67,8 +67,8 @@ public class Mistral_Controller : MonoBehaviour
 					/*GameObject Hurricane = */GameObject.Instantiate (Whirlwind, target.transform.position,target.transform.rotation);
 					//Hurricane.transform.position = target.transform.position;
 					currentAttackTimer = AttackCooldown;
+					SideStrafe ();
 				}
-				SideStrafe ();
 				isMoving = true;
 			} 
 			else if (isMoving == false)
@@ -117,7 +117,7 @@ public class Mistral_Controller : MonoBehaviour
 					currentAttackTimer = AttackTimer;
 					navigation.autoBraking = true;
 					navigation.updateRotation = true;
-					navigation.stoppingDistance = 2.0f;
+					navigation.stoppingDistance = 4.0f;
 					destination = gameObject.transform.position;
 				}
 			}
@@ -264,6 +264,14 @@ public class Mistral_Controller : MonoBehaviour
 		randomDirection.origin = new Vector3 (randomDirection.origin.x, 0.5f, randomDirection.origin.z);
 		randomDirection.direction = direction;
 		destination = randomDirection.GetPoint(currentDistance);
+	}
+
+	void OnTriggerEnter(Collider col)
+	{
+		if (col.tag == "Player") 
+		{
+			col.SendMessage("TakeDamage",Damage);
+		}
 	}
 
 	void OtherBossDead()
