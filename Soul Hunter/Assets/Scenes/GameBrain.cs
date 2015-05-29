@@ -300,14 +300,22 @@ public class GameBrain : MonoBehaviour {
 	void SetLevel(int _Level)
 	{
 		CurrentLevel = _Level;
-		if (CurrentLevel >= 0)
-		{
+		if (CurrentLevel >= 0) {
 			if (Player != null)
 				Player.SetActive (true);
 			if (MouseMarker != null)
 				MouseMarker.SetActive (true);
 			if (HUDMaster != null)
 				HUDMaster.SetActive (true);
+		}
+		else
+		{
+			if (Player != null)
+				Player.SetActive (false);
+			if (MouseMarker != null)
+				MouseMarker.SetActive (false);
+			if (HUDMaster != null)
+				HUDMaster.SetActive (false);
 		}
 	}
 

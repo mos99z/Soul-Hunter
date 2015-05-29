@@ -2114,6 +2114,7 @@ MonoBehaviour:
   ExitGame: {fileID: 11456546}
   NewGamePrompt: {fileID: 157956}
   OptionsMenu: {fileID: 137964}
+  GameOver: {fileID: 0}
 --- !u!114 &11498828
 MonoBehaviour:
   m_ObjectHideFlags: 1

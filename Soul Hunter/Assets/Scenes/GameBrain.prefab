@@ -1984,7 +1984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &139780
 GameObject:
   m_ObjectHideFlags: 1
@@ -2514,7 +2514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &148820
 GameObject:
   m_ObjectHideFlags: 1
@@ -4825,7 +4825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &189134
 GameObject:
   m_ObjectHideFlags: 1
@@ -13096,8 +13096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10740610a64df554c8d9550e1a4e54f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curHealth: 100
-  maxHealth: 100
+  curHealth: 2000
+  maxHealth: 2000
   numSouls: 0
   numLives: 3
   healthTransform: {fileID: 22402068}
@@ -14016,7 +14016,7 @@ MonoBehaviour:
   PlayerCurrHealth: 2000
   PlayerLivesLeft: 3
   SoulCount: 0
-  CurrentLevel: 1
+  CurrentLevel: -1
   FireLevel: 0
   WindLevel: 0
   EarthLevel: 0

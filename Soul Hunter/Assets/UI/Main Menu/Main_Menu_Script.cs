@@ -121,7 +121,7 @@ public class Main_Menu_Script : MonoBehaviour {
 		//GameOver.SendMessage ("Reset");
 		int zero = 0;
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
-		Application.LoadLevel ("Tutorial");
+		Application.LoadLevel ("TempTutorial");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
 	}
