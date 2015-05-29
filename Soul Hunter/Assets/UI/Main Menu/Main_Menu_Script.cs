@@ -13,6 +13,7 @@ public class Main_Menu_Script : MonoBehaviour {
 	public GameObject NewGamePrompt;
 	public GameObject OptionsMenu;
 	public GameObject GameOver;
+//	public GameObject player = null;
 
 	int selectedIndex = 0;
 	
@@ -129,6 +130,10 @@ public class Main_Menu_Script : MonoBehaviour {
 	public void LoadLevel1()
 	{
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", 1);
+//		DestroyImmediate (GameBrain.Instance.transform.FindChild ("Player").gameObject);
+//		GameObject newPlayer = Instantiate (player);
+//		newPlayer.transform.parent = GameBrain.Instance.transform;
+//		newPlayer.transform.localPosition = Vector3.zero;
 		Application.LoadLevel("Level 1");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		

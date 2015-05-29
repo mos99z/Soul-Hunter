@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -163,7 +164,19 @@ public class GameBrain : MonoBehaviour {
 	}
 	
 	void Update () {
-		GameTime += Time.deltaTime;
+		if (CurrentLevel > 0)
+			GameTime += Time.deltaTime;
+		else if (CurrentLevel == -2) {
+			GameObject TallyScreen = GameObject.Find ("TallyScreenBack");
+
+			TallyScreen.transform.FindChild("Game Time Count").GetComponent<Text>().text = GameTime.ToString();
+			TallyScreen.transform.FindChild("Damage Dealt Count").GetComponent<Text>().text = DamageDealt.ToString();
+			TallyScreen.transform.FindChild("Enemies Defeated Count").GetComponent<Text>().text = NumEnemiesKilled.ToString();
+			TallyScreen.transform.FindChild("Souls Collected Count").GetComponent<Text>().text = TotalSoulCount.ToString();
+			TallyScreen.transform.FindChild("Damage Taken Count").GetComponent<Text>().text = DamageTaken.ToString();
+			TallyScreen.transform.FindChild("Lives Lost Count").GetComponent<Text>().text = DeathCount.ToString();
+			TallyScreen.transform.FindChild("Spells Casted Count").GetComponent<Text>().text = NumCastedSpells.ToString();
+		}
 	}
 
 	void ModMaxHealth(int _value)

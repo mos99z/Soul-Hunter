@@ -255,6 +255,8 @@ public class Living_Obj : MonoBehaviour
 		else
 		{
 // TODO: Player "Death"
+			Application.LoadLevel("Tally Scene");
+			GameBrain.SendMessage("SetLevel", -2);
 		}
 	}
 

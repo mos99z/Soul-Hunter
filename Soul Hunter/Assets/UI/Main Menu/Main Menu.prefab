@@ -2115,6 +2115,7 @@ MonoBehaviour:
   NewGamePrompt: {fileID: 157956}
   OptionsMenu: {fileID: 137964}
   GameOver: {fileID: 0}
+  player: {fileID: 142818, guid: 2b6e12da42803684d9ac56e5032a7793, type: 2}
 --- !u!114 &11498828
 MonoBehaviour:
   m_ObjectHideFlags: 1

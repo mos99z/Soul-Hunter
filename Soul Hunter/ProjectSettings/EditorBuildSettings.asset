@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Options Menu.unity
   - enabled: 0
     path: Assets/Scenes/Attract Mode.unity
+  - enabled: 1
+    path: Assets/Scenes/Tally Scene.unity
