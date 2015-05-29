@@ -18,8 +18,9 @@ public class Main_Menu_Script : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		//GetComponent<AudioSource>().Play();
-		
+		int zero = 0;
+		GameBrain.Instance.SendMessage ("ChangeMusic", zero);
+
 		//AudioSource[] sounds = GetComponents<AudioSource> ();
 	}
 	
@@ -119,12 +120,16 @@ public class Main_Menu_Script : MonoBehaviour {
 		int zero = 0;
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
 		Application.LoadLevel ("Tutorial");
+		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
+		
 	}
 
 	public void LoadLevel1()
 	{
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", 1);
 		Application.LoadLevel("Level 1");
+		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
+		
 	}
 
 	public void Cancel()

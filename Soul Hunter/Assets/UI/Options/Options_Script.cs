@@ -5,14 +5,15 @@ using System.Collections;
 public class Options_Script : MonoBehaviour {
 
 	public GameObject Options;
-	public int SFXVolume;
-	public int MusicVolume;
+	public float SFXVolume;
+	public float MusicVolume;
 	public Slider MusicSlider;
 	public Slider SFXSlider;
+	public Text FullScreen;
 	//public 
 
 	// Use this for initialization
-	void Awake () 
+	void Start () 
 	{
 		LoadData ();
 	}
@@ -25,33 +26,55 @@ public class Options_Script : MonoBehaviour {
 
 	void LoadData()
 	{
-		MusicVolume = PlayerPrefs.GetInt ("MusicVolume", 100);
-		SFXVolume = PlayerPrefs.GetInt ("SFXVolume", 100);
+		MusicVolume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		MusicSlider.value = MusicVolume;
 		SFXSlider.value = SFXVolume;
 	}
 
 	public void AdjustMusVol()
 	{
-		MusicVolume = (int)MusicSlider.value;
+		MusicVolume = MusicSlider.value;
+		if (Options.activeSelf) 
+		{
+			GameBrain.Instance.Music [0].volume = MusicVolume;
+			GameBrain.Instance.Music [1].volume = MusicVolume;
+		}
 	}
 
 	public void AdjustSFXVol()
 	{
-		SFXVolume = (int)SFXSlider.value;
+		SFXVolume = SFXSlider.value;
+		if (Options.activeSelf) 
+		{
+			GameBrain.Instance.Music [2].volume = SFXVolume;
+			if(GameBrain.Instance.Music[2].isPlaying == false)
+				GameBrain.Instance.Music [2].Play();		
+		}
+	}
+
+	public void ToggleFullscreen()
+	{
+		Screen.fullScreen = !Screen.fullScreen;
+
+		FullScreen.text = Screen.fullScreen ? "Fullscreen" : "Windowed";
 	}
 
 	public void SaveAndClose()
 	{
-		PlayerPrefs.SetInt ("MusicVolume", MusicVolume);
-		PlayerPrefs.SetInt ("SFXVolume", SFXVolume);
+		PlayerPrefs.SetFloat ("MusicVolume", MusicVolume);
+		PlayerPrefs.SetFloat ("SFXVolume", SFXVolume);
+		GameBrain.Instance.Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		GameBrain.Instance.Music [1].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		Options.SetActive (false);
 	}
 
 	public void Close()
 	{
-		MusicSlider.value = PlayerPrefs.GetInt ("MusicVolume", 100);
-		SFXSlider.value = PlayerPrefs.GetInt ("SFXVolume", 100);
+		MusicSlider.value = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		SFXSlider.value = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
+		GameBrain.Instance.Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		GameBrain.Instance.Music [1].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		Options.SetActive (false);
 	}
 }
