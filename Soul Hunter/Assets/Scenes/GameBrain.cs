@@ -75,7 +75,7 @@ public class GameBrain : MonoBehaviour {
 	// Level 0 is tutorial
 	public int CurrentLevel = 1;
 
-	public GameInfo gameInfo;
+	private GameInfo gameInfo;
 
 	public int FireLevel = 0;
 	public int WindLevel = 0;
@@ -86,6 +86,7 @@ public class GameBrain : MonoBehaviour {
 	//Tally Specific Info
 	public int NumEnemiesKilled = 0;
 	public int DamageTaken = 0;
+	public int DamageDealt = 0;
 	public int TotalSoulCount = 0;
 	public int DeathCount = 0;
 	public double GameTime = 0.0;

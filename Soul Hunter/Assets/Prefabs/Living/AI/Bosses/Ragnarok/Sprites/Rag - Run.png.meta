@@ -1,0 +1,1991 @@
+fileFormatVersion: 2
+guid: f98d3918ec3b8da40ac9a39983c54a16
+timeCreated: 1432858150
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Rag - Run_0
+    21300002: Rag - Run_1
+    21300004: Rag - Run_2
+    21300006: Rag - Run_3
+    21300008: Rag - Run_4
+    21300010: Rag - Run_5
+    21300012: Rag - Run_6
+    21300014: Rag - Run_7
+    21300016: Rag - Run_8
+    21300018: Rag - Run_9
+    21300020: Rag - Run_10
+    21300022: Rag - Run_11
+    21300024: Rag - Run_12
+    21300026: Rag - Run_13
+    21300028: Rag - Run_14
+    21300030: Rag - Run_15
+    21300032: Rag - Run_16
+    21300034: Rag - Run_17
+    21300036: Rag - Run_18
+    21300038: Rag - Run_19
+    21300040: Rag - Run_20
+    21300042: Rag - Run_21
+    21300044: Rag - Run_22
+    21300046: Rag - Run_23
+    21300048: Rag - Run_24
+    21300050: Rag - Run_25
+    21300052: Rag - Run_26
+    21300054: Rag - Run_27
+    21300056: Rag - Run_28
+    21300058: Rag - Run_29
+    21300060: Rag - Run_30
+    21300062: Rag - Run_31
+    21300064: Rag - Run_32
+    21300066: Rag - Run_33
+    21300068: Rag - Run_34
+    21300070: Rag - Run_35
+    21300072: Rag - Run_36
+    21300074: Rag - Run_37
+    21300076: Rag - Run_38
+    21300078: Rag - Run_39
+    21300080: Rag - Run_40
+    21300082: Rag - Run_41
+    21300084: Rag - Run_42
+    21300086: Rag - Run_43
+    21300088: Rag - Run_44
+    21300090: Rag - Run_45
+    21300092: Rag - Run_46
+    21300094: Rag - Run_47
+    21300096: Rag - Run_48
+    21300098: Rag - Run_49
+    21300100: Rag - Run_50
+    21300102: Rag - Run_51
+    21300104: Rag - Run_52
+    21300106: Rag - Run_53
+    21300108: Rag - Run_54
+    21300110: Rag - Run_55
+    21300112: Rag - Run_56
+    21300114: Rag - Run_57
+    21300116: Rag - Run_58
+    21300118: Rag - Run_59
+    21300120: Rag - Run_60
+    21300122: Rag - Run_61
+    21300124: Rag - Run_62
+    21300126: Rag - Run_63
+    21300128: Rag - Run_64
+    21300130: Rag - Run_65
+    21300132: Rag - Run_66
+    21300134: Rag - Run_67
+    21300136: Rag - Run_68
+    21300138: Rag - Run_69
+    21300140: Rag - Run_70
+    21300142: Rag - Run_71
+    21300144: Rag - Run_72
+    21300146: Rag - Run_73
+    21300148: Rag - Run_74
+    21300150: Rag - Run_75
+    21300152: Rag - Run_76
+    21300154: Rag - Run_77
+    21300156: Rag - Run_78
+    21300158: Rag - Run_79
+    21300160: Rag - Run_80
+    21300162: Rag - Run_81
+    21300164: Rag - Run_82
+    21300166: Rag - Run_83
+    21300168: Rag - Run_84
+    21300170: Rag - Run_85
+    21300172: Rag - Run_86
+    21300174: Rag - Run_87
+    21300176: Rag - Run_88
+    21300178: Rag - Run_89
+    21300180: Rag - Run_90
+    21300182: Rag - Run_91
+    21300184: Rag - Run_92
+    21300186: Rag - Run_93
+    21300188: Rag - Run_94
+    21300190: Rag - Run_95
+    21300192: Rag - Run_96
+    21300194: Rag - Run_97
+    21300196: Rag - Run_98
+    21300198: Rag - Run_99
+    21300200: Rag - Run_100
+    21300202: Rag - Run_101
+    21300204: Rag - Run_102
+    21300206: Rag - Run_103
+    21300208: Rag - Run_104
+    21300210: Rag - Run_105
+    21300212: Rag - Run_106
+    21300214: Rag - Run_107
+    21300216: Rag - Run_108
+    21300218: Rag - Run_109
+    21300220: Rag - Run_110
+    21300222: Rag - Run_111
+    21300224: Rag - Run_112
+    21300226: Rag - Run_113
+    21300228: Rag - Run_114
+    21300230: Rag - Run_115
+    21300232: Rag - Run_116
+    21300234: Rag - Run_117
+    21300236: Rag - Run_118
+    21300238: Rag - Run_119
+    21300240: Rag - Run_120
+    21300242: Rag - Run_121
+    21300244: Rag - Run_122
+    21300246: Rag - Run_123
+    21300248: Rag - Run_124
+    21300250: Rag - Run_125
+    21300252: Rag - Run_126
+    21300254: Rag - Run_127
+    21300256: Rag - Run_128
+    21300258: Rag - Run_129
+    21300260: Rag - Run_130
+    21300262: Rag - Run_131
+    21300264: Rag - Run_132
+    21300266: Rag - Run_133
+    21300268: Rag - Run_134
+    21300270: Rag - Run_135
+    21300272: Rag - Run_136
+    21300274: Rag - Run_137
+    21300276: Rag - Run_138
+    21300278: Rag - Run_139
+    21300280: Rag - Run_140
+    21300282: Rag - Run_141
+    21300284: Rag - Run_142
+    21300286: Rag - Run_143
+    21300288: Rag - Run_144
+    21300290: Rag - Run_145
+    21300292: Rag - Run_146
+    21300294: Rag - Run_147
+    21300296: Rag - Run_148
+    21300298: Rag - Run_149
+    21300300: Rag - Run_150
+    21300302: Rag - Run_151
+    21300304: Rag - Run_152
+    21300306: Rag - Run_153
+    21300308: Rag - Run_154
+    21300310: Rag - Run_155
+    21300312: Rag - Run_156
+    21300314: Rag - Run_157
+    21300316: Rag - Run_158
+    21300318: Rag - Run_159
+    21300320: Rag - Run_160
+    21300322: Rag - Run_161
+    21300324: Rag - Run_162
+    21300326: Rag - Run_163
+    21300328: Rag - Run_164
+    21300330: Rag - Run_165
+    21300332: Rag - Run_166
+    21300334: Rag - Run_167
+    21300336: Rag - Run_168
+    21300338: Rag - Run_169
+    21300340: Rag - Run_170
+    21300342: Rag - Run_171
+    21300344: Rag - Run_172
+    21300346: Rag - Run_173
+    21300348: Rag - Run_174
+    21300350: Rag - Run_175
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Rag - Run_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1818
+        width: 139
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1821
+        width: 143
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1824
+        width: 146
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_3
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1821
+        width: 143
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_4
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1804
+        width: 132
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_5
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1788
+        width: 113
+        height: 159
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_6
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 1781
+        width: 110
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_7
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 1794
+        width: 109
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_8
+      rect:
+        serializedVersion: 2
+        x: 2581
+        y: 1798
+        width: 106
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_9
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 1788
+        width: 100
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_10
+      rect:
+        serializedVersion: 2
+        x: 3185
+        y: 1785
+        width: 113
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_11
+      rect:
+        serializedVersion: 2
+        x: 3497
+        y: 1785
+        width: 119
+        height: 155
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_12
+      rect:
+        serializedVersion: 2
+        x: 3812
+        y: 1784
+        width: 110
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_13
+      rect:
+        serializedVersion: 2
+        x: 4118
+        y: 1784
+        width: 116
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_14
+      rect:
+        serializedVersion: 2
+        x: 4433
+        y: 1781
+        width: 109
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_15
+      rect:
+        serializedVersion: 2
+        x: 4709
+        y: 1785
+        width: 142
+        height: 149
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_16
+      rect:
+        serializedVersion: 2
+        x: 5001
+        y: 1791
+        width: 156
+        height: 143
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_17
+      rect:
+        serializedVersion: 2
+        x: 5289
+        y: 1788
+        width: 180
+        height: 146
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_18
+      rect:
+        serializedVersion: 2
+        x: 5671
+        y: 1765
+        width: 106
+        height: 202
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_19
+      rect:
+        serializedVersion: 2
+        x: 5986
+        y: 1795
+        width: 127
+        height: 155
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_20
+      rect:
+        serializedVersion: 2
+        x: 6295
+        y: 1818
+        width: 110
+        height: 152
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_21
+      rect:
+        serializedVersion: 2
+        x: 6581
+        y: 1818
+        width: 136
+        height: 157
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_22
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1572
+        width: 160
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_23
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1575
+        width: 166
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_24
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1565
+        width: 173
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_25
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1555
+        width: 166
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_26
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 1546
+        width: 162
+        height: 172
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_27
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 1535
+        width: 153
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_28
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 1529
+        width: 156
+        height: 172
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_29
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 1535
+        width: 155
+        height: 176
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_30
+      rect:
+        serializedVersion: 2
+        x: 2558
+        y: 1542
+        width: 159
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_31
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 1555
+        width: 193
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_32
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 1542
+        width: 219
+        height: 176
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_33
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 1542
+        width: 199
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_34
+      rect:
+        serializedVersion: 2
+        x: 3779
+        y: 1539
+        width: 179
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_35
+      rect:
+        serializedVersion: 2
+        x: 4098
+        y: 1532
+        width: 169
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_36
+      rect:
+        serializedVersion: 2
+        x: 4420
+        y: 1529
+        width: 156
+        height: 172
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_37
+      rect:
+        serializedVersion: 2
+        x: 4725
+        y: 1529
+        width: 156
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_38
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 1532
+        width: 159
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_39
+      rect:
+        serializedVersion: 2
+        x: 5270
+        y: 1535
+        width: 215
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_40
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 1532
+        width: 209
+        height: 181
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_41
+      rect:
+        serializedVersion: 2
+        x: 5943
+        y: 1532
+        width: 143
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_42
+      rect:
+        serializedVersion: 2
+        x: 6272
+        y: 1565
+        width: 139
+        height: 153
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_43
+      rect:
+        serializedVersion: 2
+        x: 6594
+        y: 1575
+        width: 142
+        height: 153
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_44
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1316
+        width: 216
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_45
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1316
+        width: 236
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_46
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1316
+        width: 239
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_47
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1316
+        width: 239
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_48
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1320
+        width: 239
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_49
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1313
+        width: 232
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_50
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1303
+        width: 226
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_51
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 1306
+        width: 223
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_52
+      rect:
+        serializedVersion: 2
+        x: 2551
+        y: 1303
+        width: 219
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_53
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1320
+        width: 239
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_54
+      rect:
+        serializedVersion: 2
+        x: 3125
+        y: 1323
+        width: 256
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_55
+      rect:
+        serializedVersion: 2
+        x: 3431
+        y: 1326
+        width: 265
+        height: 143
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_56
+      rect:
+        serializedVersion: 2
+        x: 3753
+        y: 1323
+        width: 258
+        height: 129
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_57
+      rect:
+        serializedVersion: 2
+        x: 4071
+        y: 1313
+        width: 246
+        height: 146
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_58
+      rect:
+        serializedVersion: 2
+        x: 4393
+        y: 1303
+        width: 226
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_59
+      rect:
+        serializedVersion: 2
+        x: 4708
+        y: 1303
+        width: 223
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_60
+      rect:
+        serializedVersion: 2
+        x: 5014
+        y: 1303
+        width: 219
+        height: 153
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_61
+      rect:
+        serializedVersion: 2
+        x: 5316
+        y: 1306
+        width: 216
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_62
+      rect:
+        serializedVersion: 2
+        x: 5568
+        y: 1306
+        width: 276
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_63
+      rect:
+        serializedVersion: 2
+        x: 5910
+        y: 1293
+        width: 229
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_64
+      rect:
+        serializedVersion: 2
+        x: 6272
+        y: 1310
+        width: 202
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_65
+      rect:
+        serializedVersion: 2
+        x: 6588
+        y: 1313
+        width: 210
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_66
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1064
+        width: 209
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_67
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1041
+        width: 236
+        height: 186
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_68
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1028
+        width: 229
+        height: 202
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_69
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1028
+        width: 229
+        height: 202
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_70
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1041
+        width: 225
+        height: 189
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_71
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1054
+        width: 206
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_72
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1057
+        width: 209
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_73
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 1047
+        width: 206
+        height: 180
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_74
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 1037
+        width: 194
+        height: 196
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_75
+      rect:
+        serializedVersion: 2
+        x: 2866
+        y: 1047
+        width: 193
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_76
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 1057
+        width: 215
+        height: 180
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_77
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1071
+        width: 226
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_78
+      rect:
+        serializedVersion: 2
+        x: 3766
+        y: 1077
+        width: 225
+        height: 136
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_79
+      rect:
+        serializedVersion: 2
+        x: 4078
+        y: 1071
+        width: 219
+        height: 146
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_80
+      rect:
+        serializedVersion: 2
+        x: 4393
+        y: 1057
+        width: 209
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_81
+      rect:
+        serializedVersion: 2
+        x: 4708
+        y: 1057
+        width: 203
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_82
+      rect:
+        serializedVersion: 2
+        x: 5021
+        y: 1054
+        width: 199
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_83
+      rect:
+        serializedVersion: 2
+        x: 5329
+        y: 1067
+        width: 202
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_84
+      rect:
+        serializedVersion: 2
+        x: 5625
+        y: 1077
+        width: 202
+        height: 143
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_85
+      rect:
+        serializedVersion: 2
+        x: 5910
+        y: 1071
+        width: 226
+        height: 152
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_86
+      rect:
+        serializedVersion: 2
+        x: 6269
+        y: 1064
+        width: 199
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_87
+      rect:
+        serializedVersion: 2
+        x: 6571
+        y: 1064
+        width: 209
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_88
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 815
+        width: 123
+        height: 152
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_89
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 752
+        width: 125
+        height: 215
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_90
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 736
+        width: 126
+        height: 235
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_91
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 742
+        width: 120
+        height: 232
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_92
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 759
+        width: 106
+        height: 215
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_93
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 775
+        width: 93
+        height: 196
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_94
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 782
+        width: 93
+        height: 186
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_95
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 766
+        width: 93
+        height: 208
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_96
+      rect:
+        serializedVersion: 2
+        x: 2581
+        y: 755
+        width: 93
+        height: 223
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_97
+      rect:
+        serializedVersion: 2
+        x: 2896
+        y: 772
+        width: 86
+        height: 212
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_98
+      rect:
+        serializedVersion: 2
+        x: 3205
+        y: 785
+        width: 83
+        height: 199
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_99
+      rect:
+        serializedVersion: 2
+        x: 3514
+        y: 798
+        width: 82
+        height: 180
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_100
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 818
+        width: 86
+        height: 143
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_101
+      rect:
+        serializedVersion: 2
+        x: 4128
+        y: 795
+        width: 93
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_102
+      rect:
+        serializedVersion: 2
+        x: 4436
+        y: 782
+        width: 93
+        height: 186
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_103
+      rect:
+        serializedVersion: 2
+        x: 4745
+        y: 785
+        width: 129
+        height: 182
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_104
+      rect:
+        serializedVersion: 2
+        x: 5054
+        y: 789
+        width: 146
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_105
+      rect:
+        serializedVersion: 2
+        x: 5362
+        y: 799
+        width: 136
+        height: 172
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_106
+      rect:
+        serializedVersion: 2
+        x: 5671
+        y: 818
+        width: 90
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_107
+      rect:
+        serializedVersion: 2
+        x: 5967
+        y: 825
+        width: 112
+        height: 149
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_108
+      rect:
+        serializedVersion: 2
+        x: 6272
+        y: 808
+        width: 106
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_109
+      rect:
+        serializedVersion: 2
+        x: 6581
+        y: 808
+        width: 129
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_110
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 576
+        width: 195
+        height: 143
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_111
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 530
+        width: 209
+        height: 192
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_112
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 510
+        width: 206
+        height: 218
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_113
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 520
+        width: 195
+        height: 212
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_114
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 536
+        width: 192
+        height: 196
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_115
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 553
+        width: 179
+        height: 172
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_116
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 559
+        width: 183
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_117
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 546
+        width: 182
+        height: 183
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_118
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 536
+        width: 189
+        height: 199
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_119
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 553
+        width: 213
+        height: 186
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_120
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 560
+        width: 229
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_121
+      rect:
+        serializedVersion: 2
+        x: 3441
+        y: 573
+        width: 212
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_122
+      rect:
+        serializedVersion: 2
+        x: 3739
+        y: 589
+        width: 206
+        height: 123
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_123
+      rect:
+        serializedVersion: 2
+        x: 4051
+        y: 573
+        width: 196
+        height: 146
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_124
+      rect:
+        serializedVersion: 2
+        x: 4363
+        y: 559
+        width: 183
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_125
+      rect:
+        serializedVersion: 2
+        x: 4675
+        y: 563
+        width: 189
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_126
+      rect:
+        serializedVersion: 2
+        x: 4994
+        y: 556
+        width: 202
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_127
+      rect:
+        serializedVersion: 2
+        x: 5306
+        y: 563
+        width: 242
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_128
+      rect:
+        serializedVersion: 2
+        x: 5618
+        y: 573
+        width: 199
+        height: 154
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_129
+      rect:
+        serializedVersion: 2
+        x: 5950
+        y: 579
+        width: 149
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_130
+      rect:
+        serializedVersion: 2
+        x: 6229
+        y: 566
+        width: 169
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_131
+      rect:
+        serializedVersion: 2
+        x: 6518
+        y: 573
+        width: 185
+        height: 149
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_132
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 317
+        width: 196
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_133
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 317
+        width: 229
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_134
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 317
+        width: 232
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_135
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 320
+        width: 236
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_136
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 320
+        width: 232
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_137
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 314
+        width: 225
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_138
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 310
+        width: 220
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_139
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 310
+        width: 225
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_140
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 324
+        width: 219
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_141
+      rect:
+        serializedVersion: 2
+        x: 2797
+        y: 324
+        width: 248
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_142
+      rect:
+        serializedVersion: 2
+        x: 3113
+        y: 340
+        width: 271
+        height: 146
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_143
+      rect:
+        serializedVersion: 2
+        x: 3414
+        y: 330
+        width: 256
+        height: 143
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_144
+      rect:
+        serializedVersion: 2
+        x: 3719
+        y: 307
+        width: 246
+        height: 149
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_145
+      rect:
+        serializedVersion: 2
+        x: 4031
+        y: 307
+        width: 236
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_146
+      rect:
+        serializedVersion: 2
+        x: 4363
+        y: 384
+        width: 7
+        height: 6
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_147
+      rect:
+        serializedVersion: 2
+        x: 4652
+        y: 311
+        width: 222
+        height: 155
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_148
+      rect:
+        serializedVersion: 2
+        x: 4974
+        y: 324
+        width: 216
+        height: 142
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_149
+      rect:
+        serializedVersion: 2
+        x: 5279
+        y: 331
+        width: 249
+        height: 138
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_150
+      rect:
+        serializedVersion: 2
+        x: 5591
+        y: 340
+        width: 279
+        height: 130
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_151
+      rect:
+        serializedVersion: 2
+        x: 5910
+        y: 330
+        width: 213
+        height: 149
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_152
+      rect:
+        serializedVersion: 2
+        x: 6192
+        y: 320
+        width: 206
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_153
+      rect:
+        serializedVersion: 2
+        x: 6491
+        y: 317
+        width: 212
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_154
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 71
+        width: 176
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_155
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 71
+        width: 196
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_156
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 71
+        width: 202
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_157
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 68
+        width: 203
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_158
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 65
+        width: 193
+        height: 166
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_159
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 65
+        width: 179
+        height: 149
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_160
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 58
+        width: 182
+        height: 149
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_161
+      rect:
+        serializedVersion: 2
+        x: 2229
+        y: 58
+        width: 173
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_162
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 68
+        width: 163
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_163
+      rect:
+        serializedVersion: 2
+        x: 2846
+        y: 48
+        width: 170
+        height: 176
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_164
+      rect:
+        serializedVersion: 2
+        x: 3155
+        y: 61
+        width: 199
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_165
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 45
+        width: 215
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_166
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 38
+        width: 202
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_167
+      rect:
+        serializedVersion: 2
+        x: 4088
+        y: 45
+        width: 192
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_168
+      rect:
+        serializedVersion: 2
+        x: 4397
+        y: 58
+        width: 182
+        height: 149
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_169
+      rect:
+        serializedVersion: 2
+        x: 4705
+        y: 65
+        width: 176
+        height: 139
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_170
+      rect:
+        serializedVersion: 2
+        x: 5011
+        y: 68
+        width: 172
+        height: 133
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_171
+      rect:
+        serializedVersion: 2
+        x: 5313
+        y: 62
+        width: 185
+        height: 139
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_172
+      rect:
+        serializedVersion: 2
+        x: 5631
+        y: 51
+        width: 216
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_173
+      rect:
+        serializedVersion: 2
+        x: 5937
+        y: 81
+        width: 219
+        height: 139
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_174
+      rect:
+        serializedVersion: 2
+        x: 6239
+        y: 68
+        width: 166
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Run_175
+      rect:
+        serializedVersion: 2
+        x: 6548
+        y: 68
+        width: 169
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
