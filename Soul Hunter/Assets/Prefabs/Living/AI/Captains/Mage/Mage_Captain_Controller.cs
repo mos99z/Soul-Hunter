@@ -26,6 +26,9 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	public float MaxAttackCooldown = 4.0f;
 	public float SpellBarrageCooldown = 10.0f;
 	public float AOECooldown = 5.0f;
+	public GameObject FelMissile;
+	public GameObject SpellBarrage;
+	public GameObject AOE;
 	float currentAttackTimer = 0.0f;
 	float currentSpellBarrageTimer = 0.0f;
 	float AOEChargeUp = 0.5f;
@@ -68,11 +71,19 @@ public class Mage_Captain_Controller : MonoBehaviour {
 				{
 					TurnTowardsPlayer();
 					currentAttackTimer -= Time.deltaTime;
-					
-					//gameObject.GetComponent <Ranged_Attack_Controller>().enabled = true;
+
 					if(currentAttackTimer <= 0.0f)
 					{
 						Debug.Log("Enemy Attacked");
+						Vector3 startLoc = transform.position;
+						startLoc.y = 1.5f;
+						GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
+						//RangedAttack.transform.position = startLoc;0
+						//Vector3 newForward = (target.transform.position - transform.position);
+						//newForward.y = 0.0f;
+						//newForward.Normalize();
+						//RangedAttack.transform.forward = newForward;
+
 						attackCounter++;
 						currentAttackTimer = Random.Range(MinAttackCooldown,MaxAttackCooldown);
 					}
@@ -109,7 +120,9 @@ public class Mage_Captain_Controller : MonoBehaviour {
 			if(playerDistance.magnitude <= 1.5f && isCastingAOE == false && currentAOETimer <= 0.0f)
 			{
 				isCastingAOE = true;
+				AOE.SetActive(true);
 				currentAOETimer = AOEChargeUp;
+				Debug.Log ("AOE Enabled");
 			}
 
 			if(isCastingAOE == true)
@@ -119,7 +132,8 @@ public class Mage_Captain_Controller : MonoBehaviour {
 
 				if(currentAOETimer <= 0.0f)
 				{
-					Debug.Log ("AOE Enabled");
+					Debug.Log ("AOE Disabled");
+					AOE.SetActive(false);
 					currentAOETimer = AOECooldown;
 					isCastingAOE = false;
 				}
@@ -134,6 +148,9 @@ public class Mage_Captain_Controller : MonoBehaviour {
 				if(TurnTowardsPlayer())
 				{
 					Debug.Log("Cast Spell Barrage");
+					Vector3 startLoc = transform.position;
+					startLoc.y = 1.5f;
+					GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);
 					isCastingSpellBarrage = false;
 					currentSpellBarrageTimer = SpellBarrageCooldown;
 					navigation.updateRotation = true;

@@ -9,9 +9,9 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	bool isCountingDown = false;
 
 	public float CountdownTimer = 1.5f;
-	public float KamikazeDistance = 1.0f;
+	public float KamikazeDistance = 2.0f;
 	public float ExplosionDamage = 100.0f;
-	public SphereCollider ExplosionRange;
+	public float ExplosionRange = 3.0f;
 
 	// Use this for initialization
 	void Start () 
@@ -27,10 +27,11 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 		{
 			destination = target.transform.position;
 			navigation.SetDestination (destination);
-			
-			if (navigation.remainingDistance <= KamikazeDistance) 
+			float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
+			if (playerDistance <= KamikazeDistance) 
 			{
 				isCountingDown = true;
+				navigation.Stop();
 			}
 		}
 
@@ -48,8 +49,8 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	void Explode()
 	{
 		GetComponent<Living_Obj>().SoulValue = SoulType.None;
-		float playerDistance = (target.transform.position - ExplosionRange.center).magnitude;
-		if (playerDistance < ExplosionRange.radius) 
+		float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
+		if (playerDistance < ExplosionRange) 
 		{
 			target.SendMessage("TakeDamage", ExplosionDamage);
 		}

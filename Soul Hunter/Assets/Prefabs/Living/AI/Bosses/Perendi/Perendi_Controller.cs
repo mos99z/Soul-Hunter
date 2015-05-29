@@ -18,12 +18,18 @@ public class Perendi_Controller : MonoBehaviour {
 	float AngularAcceleration = 3.5f;
 	bool mistralAlive = true;
 	public bool isAttacking = false;
-	public bool isSwarming = false;
 	public float AttackMinimum = 5;
-	public float AttackMaximum = 7;
+	public float AttackMaximum = 10;
 	public float Damage = 100.0f;
 	public SphereCollider AttackCollider;
-	
+	public GameObject ShockDischarge;
+	public float SDCooldown = 6.0f;
+	public float SDDistance = 2.0f;
+	float currentSDCooldown = 0.0f;
+	public float SDChargeUp = 1.0f;
+	bool DischargingStatic = false;
+	bool CurrentlyDischarging = false;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -37,62 +43,97 @@ public class Perendi_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	// The enemy will rotate around the player and lunge in after a certain amount of time has passed
+	// After another amount of time has passed, the enemy has the ability to use a Shock Discharge, but only if the player is within range
 	void FixedUpdate () 
 	{
-
-		//destination = attackingWaypoints[closestShadow].transform.position;
-		TurnTowardsPlayer ();
+		if (DischargingStatic == false) 
+		{
+			currentSDCooldown -= Time.deltaTime;
 			
-		if (isAttacking == false) 
-		{	
-			destination = attackingWaypoints [closestShadow].transform.position;
-			navigation.SetDestination (destination);
-			currentAttackTimer -= Time.deltaTime;
-			waypointTimer -= Time.deltaTime;
-			if (navigation.remainingDistance <= 0.3f && waypointTimer <= 0.0f) 
+			//destination = attackingWaypoints[closestShadow].transform.position;
+			TurnTowardsPlayer ();
+			
+			if (isAttacking == false) 
+			{	
+				destination = attackingWaypoints [closestShadow].transform.position;
+				navigation.SetDestination (destination);
+				currentAttackTimer -= Time.deltaTime;
+				waypointTimer -= Time.deltaTime;
+				if (navigation.remainingDistance <= 0.3f && waypointTimer <= 0.0f) 
+				{
+					waypointTimer = 0.3f;
+					closestShadow++;
+					if (closestShadow >= attackingWaypoints.Length)
+						closestShadow = 0;
+					
+					
+					destination = attackingWaypoints [closestShadow].transform.position;
+				}
+				
+				if (currentAttackTimer <= 0.0f) 
+				{
+					isAttacking = true;
+					lungeTimer = 1.5f;
+					float AttackTimer = Random.Range(AttackMinimum,AttackMaximum);
+					currentAttackTimer = AttackTimer;
+					navigation.autoBraking = true;
+					navigation.updateRotation = true;
+					navigation.stoppingDistance = 2.0f;
+					destination = gameObject.transform.position;
+				}
+			}
+			
+			if (isAttacking == true) {
+				lungeTimer -= Time.deltaTime;
+				//gameObject.transform.LookAt(target.transform.position,Vector3.up);
+				navigation.SetDestination (target.transform.position);
+				
+				if (navigation.remainingDistance < 2.5f)
+					AttackCollider.enabled = true;
+				
+				if (lungeTimer <= 0.0f)
+				{
+					isAttacking = false;
+					AttackCollider.enabled = false;
+					navigation.stoppingDistance = 0.0f;
+					navigation.updateRotation = false;
+					//SearchForNearestNode();
+					destination = attackingWaypoints [closestShadow].transform.position;
+				}	
+			}
+			
+			float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
+			
+			if (currentSDCooldown <= 0.0f && playerDistance < SDDistance) 
 			{
-				waypointTimer = 0.3f;
-				closestShadow++;
-				if (closestShadow >= attackingWaypoints.Length)
-					closestShadow = 0;
-					
-					
-				destination = attackingWaypoints [closestShadow].transform.position;
-			}
-				
-			if (currentAttackTimer <= 0.0f) {
-				isAttacking = true;
-				lungeTimer = 1.5f;
-				float AttackTimer = Random.Range(AttackMinimum,AttackMaximum);
-				currentAttackTimer = AttackTimer;
-				navigation.autoBraking = true;
-				navigation.updateRotation = true;
-				navigation.stoppingDistance = 2.0f;
-				destination = gameObject.transform.position;
+				navigation.Stop();
+				Debug.Log("Stopped Movement");
+				currentSDCooldown = SDChargeUp;
+				DischargingStatic = true;
 			}
 		}
-			
-		if (isAttacking == true) {
-			lungeTimer -= Time.deltaTime;
-			//gameObject.transform.LookAt(target.transform.position,Vector3.up);
-			navigation.SetDestination (target.transform.position);
-				
-			if (navigation.remainingDistance < 2.5f)
-				AttackCollider.enabled = true;
-				
-			if (lungeTimer <= 0.0f) {
-				isAttacking = false;
-				AttackCollider.enabled = false;
-				navigation.stoppingDistance = 0.0f;
-				navigation.updateRotation = false;
-				//SearchForNearestNode();
-				destination = attackingWaypoints [closestShadow].transform.position;
-			}
-				
-				
-		}
-			
 
+		else if (DischargingStatic == true) 
+		{
+			currentSDCooldown -= Time.deltaTime;
+			if(currentSDCooldown <= 0.0f && CurrentlyDischarging == false)
+			{
+				ShockDischarge.SetActive(true);
+				CurrentlyDischarging = true;
+				currentSDCooldown = Random.Range(2.0f,3.0f);
+			}
+			if(currentSDCooldown <= 0.0f && CurrentlyDischarging == true)
+			{
+				ShockDischarge.SetActive(false);
+				CurrentlyDischarging = false;
+				currentSDCooldown = SDCooldown;
+				DischargingStatic = false;
+				navigation.Resume();
+				Debug.Log("Resumed Movement");
+			}
+
+
+		}
 	}
 	
 	

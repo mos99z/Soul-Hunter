@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.85212183, y: 0, z: 11.2817764}
+  m_LocalPosition: {x: -6.75626421, y: 0, z: 265.503204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479754}
@@ -210,7 +210,7 @@ MonoBehaviour:
   MinWaitTime: 5
   MaxWaitTime: 7
   AttackCooldown: 2
-  Whirlwind: {fileID: 0}
+  Whirlwind: {fileID: 112914, guid: 88fb95954ab2f274dba8962fde63c319, type: 2}
   attackingWaypoints: []
   isAttacking: 0
   WaitMinimum: 5
@@ -229,7 +229,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Center: {x: 0, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 2}
 --- !u!136 &13642506
 CapsuleCollider:
   m_ObjectHideFlags: 1

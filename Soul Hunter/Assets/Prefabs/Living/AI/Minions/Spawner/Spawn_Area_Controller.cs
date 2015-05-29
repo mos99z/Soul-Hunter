@@ -6,6 +6,9 @@ public class Spawn_Area_Controller : MonoBehaviour {
 	public GameObject[] Spawners = null;
 	public bool AreaContainsCaptain = false;
 	public GameObject Captain;
+
+	//float captainTimer = 2.0f;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -44,7 +47,9 @@ public class Spawn_Area_Controller : MonoBehaviour {
 			{
 				Spawners[i].SetActive(true);
 			}
+			Captain.SetActive (true);
 		}
+
 	}
 
 	void OnTriggerExit(Collider col)
