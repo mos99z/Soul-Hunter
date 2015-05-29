@@ -517,6 +517,14 @@ Prefab:
       propertyPath: RecoveryBar
       value: 
       objectReference: {fileID: 124849520}
+    - target: {fileID: 147014, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174142, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
   m_IsPrefabParent: 0

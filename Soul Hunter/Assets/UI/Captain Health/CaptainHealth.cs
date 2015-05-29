@@ -29,7 +29,7 @@ public class CaptainHealth : MonoBehaviour
 	void Start ()
 	{
 		updateHP = true;
-		displayCaptBar = true;
+		displayCaptBar = false;
 
 		maxCaptainHealth = curCaptainHealth = 100;
 

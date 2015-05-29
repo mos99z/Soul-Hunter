@@ -2528,7 +2528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &147148
 GameObject:
   m_ObjectHideFlags: 1
@@ -11116,7 +11116,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483648
   ScreenCamera: {fileID: 0}
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 147014}
 --- !u!114 &11420934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12297,7 +12297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameBrain: {fileID: 150098}
-  RecoveryBar: {fileID: 141212}
+  RecoveryBar: {fileID: 0}
 --- !u!114 &11436970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13993,7 +13993,7 @@ MonoBehaviour:
   PlayerCurrHealth: 2000
   PlayerLivesLeft: 3
   SoulCount: 0
-  CurrentLevel: -1
+  CurrentLevel: 0
   FireLevel: 0
   WindLevel: 0
   EarthLevel: 0
