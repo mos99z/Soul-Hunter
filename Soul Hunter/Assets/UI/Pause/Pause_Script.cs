@@ -22,14 +22,17 @@ public class Pause_Script : MonoBehaviour {
 	{		
 		if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == false) 
 		{
+			int zero = 0;
 			Time.timeScale = 0;
 			gamePaused = true;
 			PauseMenu.SetActive(true);
+			GameBrain.Instance.SendMessage("ChangeMusic",zero);
 		}
 		
 		else if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == true)
 		{
 			Resume();
+			GameBrain.Instance.SendMessage("ChangeMusic",1);
 		}
 	}
 

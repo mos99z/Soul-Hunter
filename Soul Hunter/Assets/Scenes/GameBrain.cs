@@ -5,6 +5,7 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
+
 public enum Debuff
 { 
 	NONE,
@@ -102,7 +103,7 @@ public class GameBrain : MonoBehaviour {
 	public GameObject Souls = null;
 	public GameObject Debuffs = null;
 	public GameObject DisplayText = null;
-
+	public AudioSource[] Music;// = GetComponents<AudioSource> ();
 
 
 
@@ -121,10 +122,15 @@ public class GameBrain : MonoBehaviour {
 			DontDestroyOnLoad (gameObject);
 			Instance = this;
 		}
+
+
+		
 	}
 
 	void Start ()
 	{
+		Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		Music [1].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 
 		if (CurrentLevel >= 0) {
 			if (Player != null)
@@ -310,6 +316,27 @@ public class GameBrain : MonoBehaviour {
 		if (File.Exists (Application.persistentDataPath + "/PlayerInfo.dat")) 
 		{
 
+		}
+	}
+
+	void ChangeMusic(int index)
+	{
+		if (Music [index].isPlaying)
+			return;
+
+		switch (index) {
+		case 0:
+		{
+			Music[1].Stop();
+			Music[0].Play();
+			break;
+		}
+		case 1:
+		{
+			Music[0].Stop();
+			Music[1].Play();
+			break;
+		}
 		}
 	}
 }
