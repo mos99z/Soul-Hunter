@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 461910}
   - 65: {fileID: 6537422}
+  - 114: {fileID: 11418882}
   m_Layer: 0
   m_Name: Boss Room Trigger
   m_TagString: Untagged
@@ -23,8 +24,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.75, y: 0, z: 196.100006}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.709999979, y: 0, z: 216.850006}
+  m_LocalScale: {x: 1.66550553, y: 1, z: .0598366708}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -35,11 +36,25 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111962}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 15, y: 3, z: 15}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &11418882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e8db107fdff2a4abc322074e0e55e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numBosses:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

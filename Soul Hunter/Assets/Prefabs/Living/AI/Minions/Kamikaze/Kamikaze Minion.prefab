@@ -243,8 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 1
-  MaxHealth: 400
-  CurrHealth: 400
+  MaxHealth: 20
+  CurrHealth: 20
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1

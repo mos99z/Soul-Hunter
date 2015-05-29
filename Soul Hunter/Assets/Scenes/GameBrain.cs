@@ -104,13 +104,17 @@ public class GameBrain : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		DontDestroyOnLoad (gameObject);
 		//The Spell Database it's self should not be active.
 		//Only in scene for ease of development.
-		SpellDatabase.SetActive (false);
-		Souls.SetActive (false);
-		Debuffs.SetActive (false);
-		HUD.SetActive (true);
-		DontDestroyOnLoad (gameObject);
+		if (SpellDatabase != null)
+			SpellDatabase.SetActive (false);
+		if (Souls != null)
+			Souls.SetActive (false);
+		if (Debuffs != null)
+			Debuffs.SetActive (false);
+		if (HUD != null)
+			HUD.SetActive (true);
 		LoadPlayerData ();
 		//gameInfo.RoomsCleared [3] = false;
 	}
