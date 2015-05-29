@@ -25,9 +25,14 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	public float Damage = 100.0f;
 	public SphereCollider AttackCollider;
 
+	public GameObject DirectionIndicator = null;
+	public Animator Animate = null;
+
 	// Use this for initialization
 	void Start ()
 	{
+		if (Animate == null)
+			Animate = transform.GetComponentInChildren<Animator> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
 		navigation = GetComponent<NavMeshAgent> ();
 		destination = Random.insideUnitSphere * 7;
@@ -142,25 +147,57 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	// This function makes the enemy always face towards the player while rotating around him
 	void TurnTowardsPlayer()
 	{
-		Vector3 Forward = transform.forward;
-		Vector3 PlayerDistance = target.transform.position - transform.position;
-		PlayerDistance.y = 0.0f;
-		float rotation = 0.0f;
-		float angle = Vector3.Angle(PlayerDistance, Forward);
-
-		// Rotation
-		if (angle > 5.0f)
-		{
-			if(Vector3.Cross(PlayerDistance, Forward).y > 0)
-				rotation = -1 * AngularAcceleration;
-			if(Vector3.Cross(PlayerDistance, Forward).y < 0)
-				rotation = 1 * AngularAcceleration;
-
-			currentRotation += rotation;
-			currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-			currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-			transform.Rotate (0, currentRotation, 0);
+//		DirectionIndicator.transform.LookAt(target.transform, new Vector3(0,1,0));
+		Vector3 movementDirection = navigation.velocity.normalized;
+		if (movementDirection.magnitude >= 1.0f) {
+			DirectionIndicator.transform.forward = navigation.velocity.normalized;
+			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (dotProd >= 0.75f)
+				Animate.Play ("Melee_Idle_Up");
+			else if (dotProd <= -0.75f)
+				Animate.Play ("Melee_Idle_Down");
+			else if (dotProd > -0.25f && dotProd <= 0.25f)
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Melee_Idle_Left");
+				else
+					Animate.Play ("Melee_Idle_Right");
+			}
+			else if (dotProd > 0.25f && dotProd < 0.75f)
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Melee_Idle_UpLeft");
+				else
+					Animate.Play ("Melee_Idle_UpRight");
+			}
+			else
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Melee_Idle_DownLeft");
+				else
+					Animate.Play ("Melee_Idle_DownRight");
+			}
 		}
+//		Vector3 Forward = currentRotationtransform.forward;
+//		Vector3 PlayerDistance = target.transform.position - transform.position;
+//		PlayerDistance.y = 0.0f;
+//		float rotation = 0.0f;
+//		float angle = Vector3.Angle(PlayerDistance, Forward);
+//
+//		// Rotation
+//		if (angle > 5.0f)
+//		{
+//			if(Vector3.Cross(PlayerDistance, Forward).y > 0)
+//				rotation = -1 * AngularAcceleration;
+//			if(Vector3.Cross(PlayerDistance, Forward).y < 0)
+//				rotation = 1 * AngularAcceleration;
+//
+//			currentRotation += rotation;
+//			currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
+//			currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
+//			DirectionIndicator.transform.Rotate (0, 0, currentRotation);
+//		}
 	}
 
 

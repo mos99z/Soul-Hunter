@@ -166,6 +166,8 @@ public class Living_Obj : MonoBehaviour
 
 				if(entType == EntityType.Player)
 					GameBrain.SendMessage("ModHealth", -ActualDamage);
+				else
+					GameBrain.GetComponent<GameBrain>().DamageDealt += ActualDamage;
 
 				if (Image != null && FlashCoolDown <= 0.0f)
 				{

@@ -4581,25 +4581,6 @@ MonoBehaviour:
   PlayerLivesLeft: 3
   SoulCount: 10000
   CurrentLevel: 1
-  gameInfo:
-    PlayerMaxHealth: 0
-    PlayerCurrHealth: 0
-    PlayerLivesLeft: 0
-    SoulCount: 0
-    player: {fileID: 0}
-    FireLevel: 0
-    WindLevel: 0
-    EarthLevel: 0
-    ElectricLevel: 0
-    WaterLevel: 0
-    RoomsCleared: 
-    CurrentLevel: 0
-    NumEnemiesKilled: 0
-    DamageTaken: 0
-    TotalSoulCount: 0
-    DeathCount: 0
-    GameTime: 0
-    NumCastedSpells: 0
   FireLevel: 0
   WindLevel: 0
   EarthLevel: 0
@@ -4607,6 +4588,7 @@ MonoBehaviour:
   WaterLevel: 0
   NumEnemiesKilled: 0
   DamageTaken: 0
+  DamageDealt: 0
   TotalSoulCount: 0
   DeathCount: 0
   GameTime: 0
@@ -58265,7 +58247,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MaxParticleSize: .5
   m_CameraVelocityScale: 0

@@ -1,0 +1,1111 @@
+fileFormatVersion: 2
+guid: 4235c4287ab5c9440b0d13cf599461dc
+timeCreated: 1432865287
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Rag - Idle_0
+    21300002: Rag - Idle_1
+    21300004: Rag - Idle_2
+    21300006: Rag - Idle_3
+    21300008: Rag - Idle_4
+    21300010: Rag - Idle_5
+    21300012: Rag - Idle_6
+    21300014: Rag - Idle_7
+    21300016: Rag - Idle_8
+    21300018: Rag - Idle_9
+    21300020: Rag - Idle_10
+    21300022: Rag - Idle_11
+    21300024: Rag - Idle_12
+    21300026: Rag - Idle_13
+    21300028: Rag - Idle_14
+    21300030: Rag - Idle_15
+    21300032: Rag - Idle_16
+    21300034: Rag - Idle_17
+    21300036: Rag - Idle_18
+    21300038: Rag - Idle_19
+    21300040: Rag - Idle_20
+    21300042: Rag - Idle_21
+    21300044: Rag - Idle_22
+    21300046: Rag - Idle_23
+    21300048: Rag - Idle_24
+    21300050: Rag - Idle_25
+    21300052: Rag - Idle_26
+    21300054: Rag - Idle_27
+    21300056: Rag - Idle_28
+    21300058: Rag - Idle_29
+    21300060: Rag - Idle_30
+    21300062: Rag - Idle_31
+    21300064: Rag - Idle_32
+    21300066: Rag - Idle_33
+    21300068: Rag - Idle_34
+    21300070: Rag - Idle_35
+    21300072: Rag - Idle_36
+    21300074: Rag - Idle_37
+    21300076: Rag - Idle_38
+    21300078: Rag - Idle_39
+    21300080: Rag - Idle_40
+    21300082: Rag - Idle_41
+    21300084: Rag - Idle_42
+    21300086: Rag - Idle_43
+    21300088: Rag - Idle_44
+    21300090: Rag - Idle_45
+    21300092: Rag - Idle_46
+    21300094: Rag - Idle_47
+    21300096: Rag - Idle_48
+    21300098: Rag - Idle_49
+    21300100: Rag - Idle_50
+    21300102: Rag - Idle_51
+    21300104: Rag - Idle_52
+    21300106: Rag - Idle_53
+    21300108: Rag - Idle_54
+    21300110: Rag - Idle_55
+    21300112: Rag - Idle_56
+    21300114: Rag - Idle_57
+    21300116: Rag - Idle_58
+    21300118: Rag - Idle_59
+    21300120: Rag - Idle_60
+    21300122: Rag - Idle_61
+    21300124: Rag - Idle_62
+    21300126: Rag - Idle_63
+    21300128: Rag - Idle_64
+    21300130: Rag - Idle_65
+    21300132: Rag - Idle_66
+    21300134: Rag - Idle_67
+    21300136: Rag - Idle_68
+    21300138: Rag - Idle_69
+    21300140: Rag - Idle_70
+    21300142: Rag - Idle_71
+    21300144: Rag - Idle_72
+    21300146: Rag - Idle_73
+    21300148: Rag - Idle_74
+    21300150: Rag - Idle_75
+    21300152: Rag - Idle_76
+    21300154: Rag - Idle_77
+    21300156: Rag - Idle_78
+    21300158: Rag - Idle_79
+    21300160: Rag - Idle_80
+    21300162: Rag - Idle_81
+    21300164: Rag - Idle_82
+    21300166: Rag - Idle_83
+    21300168: Rag - Idle_84
+    21300170: Rag - Idle_85
+    21300172: Rag - Idle_86
+    21300174: Rag - Idle_87
+    21300176: Rag - Idle_88
+    21300178: Rag - Idle_89
+    21300180: Rag - Idle_90
+    21300182: Rag - Idle_91
+    21300184: Rag - Idle_92
+    21300186: Rag - Idle_93
+    21300188: Rag - Idle_94
+    21300190: Rag - Idle_95
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Rag - Idle_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1535
+        width: 138
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_1
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1535
+        width: 135
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_2
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1535
+        width: 130
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_3
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1535
+        width: 127
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1535
+        width: 127
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 1535
+        width: 126
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_6
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 1535
+        width: 125
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1535
+        width: 125
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_8
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 1535
+        width: 127
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_9
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 1536
+        width: 129
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_10
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 1535
+        width: 130
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_11
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1535
+        width: 133
+        height: 160
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_12
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1327
+        width: 138
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_13
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1327
+        width: 133
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_14
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1327
+        width: 130
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_15
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 1327
+        width: 128
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_16
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 1327
+        width: 127
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_17
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 1327
+        width: 125
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_18
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1327
+        width: 128
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_19
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 1327
+        width: 130
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_20
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 1327
+        width: 131
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_21
+      rect:
+        serializedVersion: 2
+        x: 2451
+        y: 1327
+        width: 133
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_22
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 1327
+        width: 133
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_23
+      rect:
+        serializedVersion: 2
+        x: 2973
+        y: 1327
+        width: 132
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_24
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1104
+        width: 185
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_25
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1104
+        width: 182
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_26
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1104
+        width: 179
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_27
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 1104
+        width: 179
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_28
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 1104
+        width: 178
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_29
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 1104
+        width: 181
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 1104
+        width: 181
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_31
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 1104
+        width: 182
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_32
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1104
+        width: 184
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_33
+      rect:
+        serializedVersion: 2
+        x: 2451
+        y: 1104
+        width: 185
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_34
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 1104
+        width: 185
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_35
+      rect:
+        serializedVersion: 2
+        x: 2972
+        y: 1104
+        width: 185
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_36
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 891
+        width: 201
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_37
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 891
+        width: 201
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_38
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 891
+        width: 199
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_39
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 891
+        width: 199
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_40
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 891
+        width: 198
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_41
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 891
+        width: 200
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_42
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 889
+        width: 201
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_43
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 886
+        width: 201
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_44
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 886
+        width: 200
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_45
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 889
+        width: 200
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_46
+      rect:
+        serializedVersion: 2
+        x: 2692
+        y: 891
+        width: 205
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_47
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 891
+        width: 207
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_48
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 673
+        width: 121
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_49
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 667
+        width: 121
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_50
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 659
+        width: 118
+        height: 172
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_51
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 653
+        width: 118
+        height: 178
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_52
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 647
+        width: 116
+        height: 184
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_53
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 641
+        width: 118
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_54
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 638
+        width: 117
+        height: 193
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_55
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 636
+        width: 116
+        height: 195
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_56
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 638
+        width: 116
+        height: 193
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_57
+      rect:
+        serializedVersion: 2
+        x: 2449
+        y: 641
+        width: 118
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_58
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 647
+        width: 119
+        height: 184
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_59
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 658
+        width: 121
+        height: 171
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_60
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 466
+        width: 161
+        height: 155
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_61
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 458
+        width: 157
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_62
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 451
+        width: 155
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_63
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 444
+        width: 155
+        height: 175
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_64
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 440
+        width: 155
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_65
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 435
+        width: 156
+        height: 184
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_66
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 435
+        width: 158
+        height: 184
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_67
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 435
+        width: 160
+        height: 184
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_68
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 440
+        width: 161
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_69
+      rect:
+        serializedVersion: 2
+        x: 2409
+        y: 444
+        width: 161
+        height: 175
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_70
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 447
+        width: 163
+        height: 174
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_71
+      rect:
+        serializedVersion: 2
+        x: 2939
+        y: 452
+        width: 161
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_72
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 257
+        width: 180
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_73
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 257
+        width: 181
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_74
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 257
+        width: 181
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_75
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 257
+        width: 179
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_76
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 257
+        width: 182
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_77
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 257
+        width: 185
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_78
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 257
+        width: 186
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_79
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 257
+        width: 187
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_80
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 257
+        width: 185
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_81
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 257
+        width: 183
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_82
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 257
+        width: 185
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_83
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 257
+        width: 187
+        height: 163
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_84
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 44
+        width: 184
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_85
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 44
+        width: 182
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_86
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 44
+        width: 181
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_87
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 44
+        width: 178
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_88
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 44
+        width: 177
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_89
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 44
+        width: 176
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_90
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 44
+        width: 175
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_91
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 44
+        width: 173
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_92
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 44
+        width: 172
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_93
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 44
+        width: 173
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_94
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 44
+        width: 178
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Idle_95
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 44
+        width: 184
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

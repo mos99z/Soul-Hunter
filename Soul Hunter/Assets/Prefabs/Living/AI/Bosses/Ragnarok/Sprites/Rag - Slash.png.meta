@@ -1,0 +1,1826 @@
+fileFormatVersion: 2
+guid: be3edf77eea2756459790959abec1b8c
+timeCreated: 1432864704
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Rag - Slash_0
+    21300002: Rag - Slash_1
+    21300004: Rag - Slash_2
+    21300006: Rag - Slash_3
+    21300008: Rag - Slash_4
+    21300010: Rag - Slash_5
+    21300012: Rag - Slash_6
+    21300014: Rag - Slash_7
+    21300016: Rag - Slash_8
+    21300018: Rag - Slash_9
+    21300020: Rag - Slash_10
+    21300022: Rag - Slash_11
+    21300024: Rag - Slash_12
+    21300026: Rag - Slash_13
+    21300028: Rag - Slash_14
+    21300030: Rag - Slash_15
+    21300032: Rag - Slash_16
+    21300034: Rag - Slash_17
+    21300036: Rag - Slash_18
+    21300038: Rag - Slash_19
+    21300040: Rag - Slash_20
+    21300042: Rag - Slash_21
+    21300044: Rag - Slash_22
+    21300046: Rag - Slash_23
+    21300048: Rag - Slash_24
+    21300050: Rag - Slash_25
+    21300052: Rag - Slash_26
+    21300054: Rag - Slash_27
+    21300056: Rag - Slash_28
+    21300058: Rag - Slash_29
+    21300060: Rag - Slash_30
+    21300062: Rag - Slash_31
+    21300064: Rag - Slash_32
+    21300066: Rag - Slash_33
+    21300068: Rag - Slash_34
+    21300070: Rag - Slash_35
+    21300072: Rag - Slash_36
+    21300074: Rag - Slash_37
+    21300076: Rag - Slash_38
+    21300078: Rag - Slash_39
+    21300080: Rag - Slash_40
+    21300082: Rag - Slash_41
+    21300084: Rag - Slash_42
+    21300086: Rag - Slash_43
+    21300088: Rag - Slash_44
+    21300090: Rag - Slash_45
+    21300092: Rag - Slash_46
+    21300094: Rag - Slash_47
+    21300096: Rag - Slash_48
+    21300098: Rag - Slash_49
+    21300100: Rag - Slash_50
+    21300102: Rag - Slash_51
+    21300104: Rag - Slash_52
+    21300106: Rag - Slash_53
+    21300108: Rag - Slash_54
+    21300110: Rag - Slash_55
+    21300112: Rag - Slash_56
+    21300114: Rag - Slash_57
+    21300116: Rag - Slash_58
+    21300118: Rag - Slash_59
+    21300120: Rag - Slash_60
+    21300122: Rag - Slash_61
+    21300124: Rag - Slash_62
+    21300126: Rag - Slash_63
+    21300128: Rag - Slash_64
+    21300130: Rag - Slash_65
+    21300132: Rag - Slash_66
+    21300134: Rag - Slash_67
+    21300136: Rag - Slash_68
+    21300138: Rag - Slash_69
+    21300140: Rag - Slash_70
+    21300142: Rag - Slash_71
+    21300144: Rag - Slash_72
+    21300146: Rag - Slash_73
+    21300148: Rag - Slash_74
+    21300150: Rag - Slash_75
+    21300152: Rag - Slash_76
+    21300154: Rag - Slash_77
+    21300156: Rag - Slash_78
+    21300158: Rag - Slash_79
+    21300160: Rag - Slash_80
+    21300162: Rag - Slash_81
+    21300164: Rag - Slash_82
+    21300166: Rag - Slash_83
+    21300168: Rag - Slash_84
+    21300170: Rag - Slash_85
+    21300172: Rag - Slash_86
+    21300174: Rag - Slash_87
+    21300176: Rag - Slash_88
+    21300178: Rag - Slash_89
+    21300180: Rag - Slash_90
+    21300182: Rag - Slash_91
+    21300184: Rag - Slash_92
+    21300186: Rag - Slash_93
+    21300188: Rag - Slash_94
+    21300190: Rag - Slash_95
+    21300192: Rag - Slash_96
+    21300194: Rag - Slash_97
+    21300196: Rag - Slash_98
+    21300198: Rag - Slash_99
+    21300200: Rag - Slash_100
+    21300202: Rag - Slash_101
+    21300204: Rag - Slash_102
+    21300206: Rag - Slash_103
+    21300208: Rag - Slash_104
+    21300210: Rag - Slash_105
+    21300212: Rag - Slash_106
+    21300214: Rag - Slash_107
+    21300216: Rag - Slash_108
+    21300218: Rag - Slash_109
+    21300220: Rag - Slash_110
+    21300222: Rag - Slash_111
+    21300224: Rag - Slash_112
+    21300226: Rag - Slash_113
+    21300228: Rag - Slash_114
+    21300230: Rag - Slash_115
+    21300232: Rag - Slash_116
+    21300234: Rag - Slash_117
+    21300236: Rag - Slash_118
+    21300238: Rag - Slash_119
+    21300240: Rag - Slash_120
+    21300242: Rag - Slash_121
+    21300244: Rag - Slash_122
+    21300246: Rag - Slash_123
+    21300248: Rag - Slash_124
+    21300250: Rag - Slash_125
+    21300252: Rag - Slash_126
+    21300254: Rag - Slash_127
+    21300256: Rag - Slash_128
+    21300258: Rag - Slash_129
+    21300260: Rag - Slash_130
+    21300262: Rag - Slash_131
+    21300264: Rag - Slash_132
+    21300266: Rag - Slash_133
+    21300268: Rag - Slash_134
+    21300270: Rag - Slash_135
+    21300272: Rag - Slash_136
+    21300274: Rag - Slash_137
+    21300276: Rag - Slash_138
+    21300278: Rag - Slash_139
+    21300280: Rag - Slash_140
+    21300282: Rag - Slash_141
+    21300284: Rag - Slash_142
+    21300286: Rag - Slash_143
+    21300288: Rag - Slash_144
+    21300290: Rag - Slash_145
+    21300292: Rag - Slash_146
+    21300294: Rag - Slash_147
+    21300296: Rag - Slash_148
+    21300298: Rag - Slash_149
+    21300300: Rag - Slash_150
+    21300302: Rag - Slash_151
+    21300304: Rag - Slash_152
+    21300306: Rag - Slash_153
+    21300308: Rag - Slash_154
+    21300310: Rag - Slash_155
+    21300312: Rag - Slash_156
+    21300314: Rag - Slash_157
+    21300316: Rag - Slash_158
+    21300318: Rag - Slash_159
+    21300320: Rag - Slash_160
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Rag - Slash_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2055
+        width: 138
+        height: 161
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_1
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2055
+        width: 150
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_2
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 2055
+        width: 158
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_3
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 2055
+        width: 161
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_4
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 2055
+        width: 165
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_5
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 2055
+        width: 167
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_6
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 2055
+        width: 165
+        height: 199
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_7
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 2055
+        width: 164
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_8
+      rect:
+        serializedVersion: 2
+        x: 2366
+        y: 2055
+        width: 153
+        height: 225
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_9
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 2055
+        width: 147
+        height: 232
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_10
+      rect:
+        serializedVersion: 2
+        x: 2940
+        y: 2055
+        width: 141
+        height: 232
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_11
+      rect:
+        serializedVersion: 2
+        x: 3226
+        y: 2055
+        width: 141
+        height: 232
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_12
+      rect:
+        serializedVersion: 2
+        x: 3525
+        y: 2055
+        width: 179
+        height: 202
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_13
+      rect:
+        serializedVersion: 2
+        x: 3811
+        y: 2055
+        width: 167
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_14
+      rect:
+        serializedVersion: 2
+        x: 4102
+        y: 2038
+        width: 124
+        height: 184
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_15
+      rect:
+        serializedVersion: 2
+        x: 4388
+        y: 2046
+        width: 127
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_16
+      rect:
+        serializedVersion: 2
+        x: 4676
+        y: 2049
+        width: 124
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_17
+      rect:
+        serializedVersion: 2
+        x: 4962
+        y: 2055
+        width: 124
+        height: 161
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_18
+      rect:
+        serializedVersion: 2
+        x: 5247
+        y: 2055
+        width: 121
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_19
+      rect:
+        serializedVersion: 2
+        x: 5535
+        y: 2055
+        width: 130
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_20
+      rect:
+        serializedVersion: 2
+        x: 5746
+        y: 2147
+        width: 160
+        height: 140
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_21
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1772
+        width: 138
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_22
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1772
+        width: 139
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_23
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1772
+        width: 135
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_24
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1772
+        width: 138
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_25
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1772
+        width: 142
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_26
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 1772
+        width: 147
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_27
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 1772
+        width: 159
+        height: 185
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_28
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 1772
+        width: 161
+        height: 202
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_29
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 1772
+        width: 168
+        height: 214
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_30
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1772
+        width: 164
+        height: 225
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_31
+      rect:
+        serializedVersion: 2
+        x: 2940
+        y: 1772
+        width: 164
+        height: 228
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_32
+      rect:
+        serializedVersion: 2
+        x: 3228
+        y: 1769
+        width: 165
+        height: 234
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_33
+      rect:
+        serializedVersion: 2
+        x: 3523
+        y: 1769
+        width: 161
+        height: 188
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_34
+      rect:
+        serializedVersion: 2
+        x: 3825
+        y: 1769
+        width: 147
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_35
+      rect:
+        serializedVersion: 2
+        x: 4102
+        y: 1758
+        width: 159
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_36
+      rect:
+        serializedVersion: 2
+        x: 4393
+        y: 1758
+        width: 159
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_37
+      rect:
+        serializedVersion: 2
+        x: 4685
+        y: 1761
+        width: 170
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_38
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 1762
+        width: 167
+        height: 169
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_39
+      rect:
+        serializedVersion: 2
+        x: 5270
+        y: 1766
+        width: 141
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_40
+      rect:
+        serializedVersion: 2
+        x: 5550
+        y: 1772
+        width: 138
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_41
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1475
+        width: 187
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_42
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1475
+        width: 185
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_43
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1475
+        width: 185
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_44
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1475
+        width: 187
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_45
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 1475
+        width: 182
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_46
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1475
+        width: 185
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_47
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 1475
+        width: 190
+        height: 188
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_48
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 1475
+        width: 190
+        height: 205
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_49
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 1475
+        width: 193
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_50
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 1475
+        width: 188
+        height: 225
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_51
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 1475
+        width: 185
+        height: 231
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_52
+      rect:
+        serializedVersion: 2
+        x: 3243
+        y: 1475
+        width: 184
+        height: 231
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_53
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 1478
+        width: 187
+        height: 182
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_54
+      rect:
+        serializedVersion: 2
+        x: 3785
+        y: 1481
+        width: 236
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_55
+      rect:
+        serializedVersion: 2
+        x: 4102
+        y: 1475
+        width: 193
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_56
+      rect:
+        serializedVersion: 2
+        x: 4399
+        y: 1475
+        width: 188
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_57
+      rect:
+        serializedVersion: 2
+        x: 4685
+        y: 1475
+        width: 196
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_58
+      rect:
+        serializedVersion: 2
+        x: 4967
+        y: 1475
+        width: 205
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_59
+      rect:
+        serializedVersion: 2
+        x: 5250
+        y: 1475
+        width: 205
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_60
+      rect:
+        serializedVersion: 2
+        x: 5535
+        y: 1475
+        width: 191
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_61
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1187
+        width: 202
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_62
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1187
+        width: 214
+        height: 161
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_63
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1187
+        width: 225
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_64
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1187
+        width: 237
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_65
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1187
+        width: 237
+        height: 161
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_66
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1187
+        width: 225
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_67
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 1187
+        width: 213
+        height: 190
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_68
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 1181
+        width: 194
+        height: 211
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_69
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 1178
+        width: 170
+        height: 225
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_70
+      rect:
+        serializedVersion: 2
+        x: 2695
+        y: 1178
+        width: 153
+        height: 234
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_71
+      rect:
+        serializedVersion: 2
+        x: 2989
+        y: 1175
+        width: 144
+        height: 240
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_72
+      rect:
+        serializedVersion: 2
+        x: 3277
+        y: 1175
+        width: 145
+        height: 237
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_73
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 1172
+        width: 214
+        height: 205
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_74
+      rect:
+        serializedVersion: 2
+        x: 3765
+        y: 1181
+        width: 230
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_75
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 1187
+        width: 142
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_76
+      rect:
+        serializedVersion: 2
+        x: 4408
+        y: 1181
+        width: 133
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_77
+      rect:
+        serializedVersion: 2
+        x: 4693
+        y: 1178
+        width: 127
+        height: 170
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_78
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 1178
+        width: 136
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_79
+      rect:
+        serializedVersion: 2
+        x: 5256
+        y: 1184
+        width: 173
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_80
+      rect:
+        serializedVersion: 2
+        x: 5533
+        y: 1190
+        width: 193
+        height: 155
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_81
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 893
+        width: 124
+        height: 158
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_82
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 890
+        width: 130
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_83
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 884
+        width: 138
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_84
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 872
+        width: 150
+        height: 188
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_85
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 864
+        width: 162
+        height: 210
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_86
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 861
+        width: 170
+        height: 228
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_87
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 861
+        width: 173
+        height: 242
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_88
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 858
+        width: 173
+        height: 254
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_89
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 858
+        width: 167
+        height: 262
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_90
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 861
+        width: 164
+        height: 265
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_91
+      rect:
+        serializedVersion: 2
+        x: 2940
+        y: 861
+        width: 159
+        height: 271
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_92
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 861
+        width: 156
+        height: 268
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_93
+      rect:
+        serializedVersion: 2
+        x: 3479
+        y: 858
+        width: 188
+        height: 245
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_94
+      rect:
+        serializedVersion: 2
+        x: 3805
+        y: 887
+        width: 147
+        height: 176
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_95
+      rect:
+        serializedVersion: 2
+        x: 4111
+        y: 901
+        width: 124
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_96
+      rect:
+        serializedVersion: 2
+        x: 4399
+        y: 901
+        width: 127
+        height: 153
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_97
+      rect:
+        serializedVersion: 2
+        x: 4682
+        y: 898
+        width: 132
+        height: 153
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_98
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 898
+        width: 136
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_99
+      rect:
+        serializedVersion: 2
+        x: 5267
+        y: 895
+        width: 124
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_100
+      rect:
+        serializedVersion: 2
+        x: 5559
+        y: 893
+        width: 118
+        height: 155
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_101
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 610
+        width: 164
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_102
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 607
+        width: 162
+        height: 159
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_103
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 598
+        width: 162
+        height: 171
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_104
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 593
+        width: 167
+        height: 187
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_105
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 590
+        width: 173
+        height: 207
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_106
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 590
+        width: 173
+        height: 222
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_107
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 590
+        width: 173
+        height: 236
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_108
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 590
+        width: 176
+        height: 245
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_109
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 590
+        width: 176
+        height: 254
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_110
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 593
+        width: 170
+        height: 256
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_111
+      rect:
+        serializedVersion: 2
+        x: 2917
+        y: 596
+        width: 170
+        height: 256
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_112
+      rect:
+        serializedVersion: 2
+        x: 3205
+        y: 596
+        width: 170
+        height: 253
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_113
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 604
+        width: 189
+        height: 225
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_114
+      rect:
+        serializedVersion: 2
+        x: 3756
+        y: 624
+        width: 182
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_115
+      rect:
+        serializedVersion: 2
+        x: 4056
+        y: 624
+        width: 173
+        height: 156
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_116
+      rect:
+        serializedVersion: 2
+        x: 4336
+        y: 624
+        width: 176
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_117
+      rect:
+        serializedVersion: 2
+        x: 4610
+        y: 624
+        width: 190
+        height: 147
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_118
+      rect:
+        serializedVersion: 2
+        x: 4895
+        y: 624
+        width: 188
+        height: 145
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_119
+      rect:
+        serializedVersion: 2
+        x: 5204
+        y: 624
+        width: 173
+        height: 142
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_120
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 616
+        width: 162
+        height: 150
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_121
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 327
+        width: 182
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_122
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 327
+        width: 182
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_123
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 327
+        width: 188
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_124
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 327
+        width: 196
+        height: 165
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_125
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 327
+        width: 204
+        height: 185
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_126
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 327
+        width: 208
+        height: 202
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_127
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 327
+        width: 207
+        height: 217
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_128
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 327
+        width: 208
+        height: 228
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_129
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 327
+        width: 201
+        height: 234
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_130
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 327
+        width: 202
+        height: 240
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_131
+      rect:
+        serializedVersion: 2
+        x: 2888
+        y: 327
+        width: 199
+        height: 243
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_132
+      rect:
+        serializedVersion: 2
+        x: 3176
+        y: 327
+        width: 197
+        height: 243
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_133
+      rect:
+        serializedVersion: 2
+        x: 3453
+        y: 327
+        width: 191
+        height: 220
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_134
+      rect:
+        serializedVersion: 2
+        x: 3742
+        y: 327
+        width: 213
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_135
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 327
+        width: 191
+        height: 168
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_136
+      rect:
+        serializedVersion: 2
+        x: 4336
+        y: 327
+        width: 179
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_137
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 327
+        width: 182
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_138
+      rect:
+        serializedVersion: 2
+        x: 4910
+        y: 327
+        width: 187
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_139
+      rect:
+        serializedVersion: 2
+        x: 5187
+        y: 327
+        width: 201
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_140
+      rect:
+        serializedVersion: 2
+        x: 5484
+        y: 327
+        width: 190
+        height: 162
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_141
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 39
+        width: 182
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_142
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 39
+        width: 190
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_143
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 39
+        width: 199
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_144
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 39
+        width: 196
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_145
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 42
+        width: 193
+        height: 173
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_146
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 42
+        width: 185
+        height: 196
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_147
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 39
+        width: 170
+        height: 216
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_148
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 39
+        width: 153
+        height: 228
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_149
+      rect:
+        serializedVersion: 2
+        x: 2340
+        y: 42
+        width: 139
+        height: 233
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_150
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 42
+        width: 124
+        height: 242
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_151
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 42
+        width: 121
+        height: 245
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_152
+      rect:
+        serializedVersion: 2
+        x: 3208
+        y: 42
+        width: 121
+        height: 245
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_153
+      rect:
+        serializedVersion: 2
+        x: 3502
+        y: 39
+        width: 162
+        height: 219
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_154
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 39
+        width: 198
+        height: 179
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_155
+      rect:
+        serializedVersion: 2
+        x: 4099
+        y: 39
+        width: 124
+        height: 167
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_156
+      rect:
+        serializedVersion: 2
+        x: 4388
+        y: 39
+        width: 118
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_157
+      rect:
+        serializedVersion: 2
+        x: 4676
+        y: 39
+        width: 124
+        height: 161
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_158
+      rect:
+        serializedVersion: 2
+        x: 4967
+        y: 39
+        width: 124
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_159
+      rect:
+        serializedVersion: 2
+        x: 5241
+        y: 39
+        width: 147
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rag - Slash_160
+      rect:
+        serializedVersion: 2
+        x: 5512
+        y: 42
+        width: 176
+        height: 164
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
