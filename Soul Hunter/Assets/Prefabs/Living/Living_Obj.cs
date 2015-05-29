@@ -202,6 +202,7 @@ public class Living_Obj : MonoBehaviour
 				if (entType == EntityType.Player)
 				{
 					// TODO: Respawn Player @ Check Point
+					transform.position = Vector3.zero;
 
 				}
 			}
@@ -249,7 +250,12 @@ public class Living_Obj : MonoBehaviour
 			dropedSoul.transform.position = spawnPosition;
 		}
 		
-		Destroy (gameObject);
+		if (entType != EntityType.Player)
+			Destroy (gameObject);
+		else
+		{
+// TODO: Player "Death"
+		}
 	}
 
 	void DisplayTextInfo(string _text, Color _color, float _fontSize)

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: efb299a70bed7c646a41005ea0e99c3a
-timeCreated: 1432899692
+timeCreated: 1432906780
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -47,7 +47,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 2009
+  spritePixelsToUnits: 50
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -56,12 +56,12 @@ TextureImporter:
     - name: Trap_Cracks_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 512
         width: 511
         height: 511
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .509872913, y: .492301673}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Trap_Cracks_1
       rect:
@@ -71,7 +71,7 @@ TextureImporter:
         width: 511
         height: 511
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Trap_Cracks_2
       rect:
@@ -81,7 +81,7 @@ TextureImporter:
         width: 511
         height: 511
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Trap_Cracks_3
       rect:
@@ -91,7 +91,7 @@ TextureImporter:
         width: 511
         height: 511
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

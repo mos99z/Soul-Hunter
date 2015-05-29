@@ -1,10 +1,17 @@
 fileFormatVersion: 2
 guid: d4a97dcc0fe4cb942beb74fbb7244bde
-timeCreated: 1431639691
+timeCreated: 1432906493
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Player: {fileID: 109972, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+  - MouseMarker: {fileID: 139714, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+  - HUDMaster: {fileID: 113884, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+  - SpellDatabase: {fileID: 189658, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+  - Souls: {fileID: 126014, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+  - Debuffs: {fileID: 115918, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+  - DisplayText: {fileID: 196368, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

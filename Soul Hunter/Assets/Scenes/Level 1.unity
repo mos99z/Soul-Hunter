@@ -90,7 +90,49 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 23800000, guid: c945feafa8c15e04e813e05c3256a0c7, type: 2}
---- !u!1001 &1721125970
+--- !u!1001 &3584706
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 485286, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 485286, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 485286, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 485286, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 485286, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 485286, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 485286, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 485286, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &627945031
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -132,69 +174,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47db093d2f8a04046a4cb400f75ca552, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1721125971 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 490120, guid: 47db093d2f8a04046a4cb400f75ca552, type: 2}
-  m_PrefabInternal: {fileID: 1721125970}
---- !u!1 &2133814791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 181310, guid: 47db093d2f8a04046a4cb400f75ca552, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2133814792}
-  - 33: {fileID: 2133814794}
-  - 23: {fileID: 2133814793}
-  m_Layer: 9
-  m_Name: Cracks
-  m_TagString: Solid
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2133814792
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 490120, guid: 47db093d2f8a04046a4cb400f75ca552, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2133814791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .00999999978, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1721125971}
-  m_RootOrder: 0
---- !u!23 &2133814793
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2349880, guid: 47db093d2f8a04046a4cb400f75ca552,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2133814791}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: be1864754ea106f44914feb8d96e6093, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &2133814794
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3374776, guid: 47db093d2f8a04046a4cb400f75ca552,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2133814791}
-  m_Mesh: {fileID: 4300000, guid: 878fd0368d9870142bb0b54813522ee3, type: 3}
