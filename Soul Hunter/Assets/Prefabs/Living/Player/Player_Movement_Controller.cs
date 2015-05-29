@@ -12,7 +12,7 @@ public class Player_Movement_Controller : MonoBehaviour {
 	public Animator Animations = null;
 	public LayerMask CursorColliders;
 
-	private Camera ScreenCamera = null;
+	public Camera ScreenCamera = null;
 	private Vector3 currentVelocity = Vector3.zero;
 
 	void Start () {

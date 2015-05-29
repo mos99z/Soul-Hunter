@@ -15,15 +15,15 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	float lungeTimer = 0.0f;
 	GameObject player = null;			// 
 	int closestShadow = 0;				// 
-	float currentRotation = 0.0f;
-	float AngularAcceleration = 3.5f;
+//	float currentRotation = 0.0f;
+//	float AngularAcceleration = 3.5f;
 	public bool isAttacking = false;
 	public bool isSwarming = false;
 	public float WaitMinimum = 5;
 	public float WaitMaximum = 7;
 	public float AttackTimer = 5.0f;
 	public float Damage = 100.0f;
-	public SphereCollider AttackCollider;
+	public SphereCollider AttackCollider = null;
 
 	public GameObject DirectionIndicator = null;
 	public Animator Animate = null;
@@ -39,6 +39,10 @@ public class Melee_Minion_Controller : MonoBehaviour {
 		destination.y = 0;
 		destination += transform.position;
 		attackingWaypoints = GameObject.FindGameObjectsWithTag ("Shadow").OrderBy(waypoint => waypoint.name).ToArray<GameObject>();
+		if (DirectionIndicator == null)
+			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
+		if (AttackCollider == null)
+			AttackCollider = transform.GetComponent<SphereCollider> ();
 	}
 	
 	// Update is called once per frame

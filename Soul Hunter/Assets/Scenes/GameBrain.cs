@@ -68,12 +68,14 @@ public class GameInfo
 
 public class GameBrain : MonoBehaviour {
 
+	public static GameBrain Instance;
+
 	public int PlayerMaxHealth = 1000;
 	public int PlayerCurrHealth = 1000;
 	public int PlayerLivesLeft = 3;
 	public int SoulCount = 0;
 	// Level 0 is tutorial
-	public int CurrentLevel = 1;
+	public int CurrentLevel = -1;
 
 	private GameInfo gameInfo;
 
@@ -91,35 +93,69 @@ public class GameBrain : MonoBehaviour {
 	public int DeathCount = 0;
 	public double GameTime = 0.0;
 	public int NumCastedSpells = 0;
+
+	[Header("Must Be Set with Children!")]
+	public GameObject Player = null;
+	public GameObject MouseMarker = null;
+	public GameObject HUDMaster = null;
 	public GameObject SpellDatabase = null;
 	public GameObject Souls = null;
 	public GameObject Debuffs = null;
-	public GameObject HUD = null;
 	public GameObject DisplayText = null;
+
+
+
+
+
 	public bool[] SpellHasBeenCast = {false, false, false, false, false, false, false, false, false,
 		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
 	string[] spellNames = {"Aqua Jet","Barrier","Bolt","Bolt Chain","Concrete","Crystal Spikes","Explosion","Fire Ball","Fog","Freeze","Gravity Well","Hydrant",
 		"Laser","Magma","Meteor","Muck","Plasma","Poison Cloud","Rock Spike","Sand Blast", "Shock Prism","Steam", "Torch","Whirlwind","Wind Blade"};
 
-	// Use this for initialization
+	void Awake()
+	{
+		if (Instance)
+			DestroyImmediate (gameObject);
+		else
+		{
+			DontDestroyOnLoad (gameObject);
+			Instance = this;
+		}
+	}
+
 	void Start ()
 	{
-		DontDestroyOnLoad (gameObject);
-		//The Spell Database it's self should not be active.
-		//Only in scene for ease of development.
+
+		if (CurrentLevel >= 0) {
+			if (Player != null)
+				Player.SetActive (true);
+			if (MouseMarker != null)
+				MouseMarker.SetActive (true);
+			if (HUDMaster != null)
+				HUDMaster.SetActive (true);
+		}
+		else
+		{
+			if (Player != null)
+				Player.SetActive (false);
+			if (MouseMarker != null)
+				MouseMarker.SetActive (false);
+			if (HUDMaster != null)
+				HUDMaster.SetActive (false);
+		}
+
 		if (SpellDatabase != null)
 			SpellDatabase.SetActive (false);
 		if (Souls != null)
 			Souls.SetActive (false);
 		if (Debuffs != null)
 			Debuffs.SetActive (false);
-		if (HUD != null)
-			HUD.SetActive (true);
+		if (DisplayText != null)
+			DisplayText.SetActive (false);
 		LoadPlayerData ();
 		//gameInfo.RoomsCleared [3] = false;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		GameTime += Time.deltaTime;
 	}
@@ -142,7 +178,7 @@ public class GameBrain : MonoBehaviour {
 
 		if (PlayerCurrHealth > PlayerMaxHealth)
 			PlayerCurrHealth = PlayerMaxHealth;
-		HUD.GetComponent<StatsDisplay> ().SetMaxHealthDisplay(PlayerMaxHealth);
+		HUDMaster.GetComponent<StatsDisplay> ().SetMaxHealthDisplay(PlayerMaxHealth);
 	}
 
 	void ModHealth(int _value)
@@ -177,7 +213,7 @@ public class GameBrain : MonoBehaviour {
 			else
 				RespawnPlayer();
 		}
-		HUD.GetComponent<StatsDisplay> ().SetHealthDisplay(PlayerCurrHealth);
+		HUDMaster.GetComponent<StatsDisplay> ().SetHealthDisplay(PlayerCurrHealth);
 	}
 
 	void ModLivesLeft(int _value)
@@ -206,7 +242,7 @@ public class GameBrain : MonoBehaviour {
 			DeathCount += PlayerLivesLeft;
 			PlayerLivesLeft = 0;
 		}
-		HUD.GetComponent<StatsDisplay> ().SetLivesDisplay((uint)PlayerLivesLeft);
+		HUDMaster.GetComponent<StatsDisplay> ().SetLivesDisplay((uint)PlayerLivesLeft);
 	}
 
 	void RespawnPlayer()
@@ -222,7 +258,7 @@ public class GameBrain : MonoBehaviour {
 	void ModSouls(int _value)
 	{
 		SoulCount += _value;
-		HUD.GetComponent<StatsDisplay> ().SetSoulsDisplay((uint)SoulCount);
+		HUDMaster.GetComponent<StatsDisplay> ().SetSoulsDisplay((uint)SoulCount);
 		if (_value > 0)
 			TotalSoulCount += _value;
 	}
@@ -230,7 +266,7 @@ public class GameBrain : MonoBehaviour {
 	void SetSouls(int _NewSouls)
 	{
 		SoulCount = _NewSouls;
-		HUD.GetComponent<StatsDisplay> ().SetSoulsDisplay((uint)SoulCount);
+		HUDMaster.GetComponent<StatsDisplay> ().SetSoulsDisplay((uint)SoulCount);
 	}
 
 	//Tally Specific Info
@@ -253,8 +289,20 @@ public class GameBrain : MonoBehaviour {
 			if(spell.name == spellNames[i])
 				SpellHasBeenCast[i] = true;
 		}
+	}
 
-
+	void SetLevel(int _Level)
+	{
+		CurrentLevel = _Level;
+		if (CurrentLevel >= 0)
+		{
+			if (Player != null)
+				Player.SetActive (true);
+			if (MouseMarker != null)
+				MouseMarker.SetActive (true);
+			if (HUDMaster != null)
+				HUDMaster.SetActive (true);
+		}
 	}
 
 	void LoadPlayerData()

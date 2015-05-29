@@ -74,7 +74,6 @@ public class Mage_Captain_Controller : MonoBehaviour {
 
 					if(currentAttackTimer <= 0.0f)
 					{
-						Debug.Log("Enemy Attacked");
 						Vector3 startLoc = transform.position;
 						startLoc.y = 1.5f;
 						GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
@@ -147,7 +146,6 @@ public class Mage_Captain_Controller : MonoBehaviour {
 			{
 				if(TurnTowardsPlayer())
 				{
-					Debug.Log("Cast Spell Barrage");
 					Vector3 startLoc = transform.position;
 					startLoc.y = 1.5f;
 					GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);

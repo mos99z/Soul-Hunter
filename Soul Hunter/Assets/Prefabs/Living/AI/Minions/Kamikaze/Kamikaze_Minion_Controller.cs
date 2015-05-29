@@ -17,7 +17,7 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	void Start () 
 	{
 		navigation = GetComponent<NavMeshAgent>();
-		target = GameObject.FindGameObjectWithTag ("Player");
+		target = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame

@@ -12,10 +12,8 @@ public class Player_Caster_Controller : MonoBehaviour {
 	
 	void Start ()
 	{
-		if (RecoveryBar == null)
-		{
-			Debug.Log("To Reduce CPU Load Assign \"Recovery Back\" from Main Camera to the Parameter RecoveryBar in the Prefab Player:Player_Caster_Controller.");
-			RecoveryBar = GameObject.Find("Main Camera/RecoveryBack");
+		if (RecoveryBar == null) {
+			Debug.LogError ("Assign \"Recovery Back\" from Main Camera to the Parameter RecoveryBar in the Prefab Player:Player_Caster_Controller.");
 		}
 	}
 

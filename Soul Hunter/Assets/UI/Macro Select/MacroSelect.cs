@@ -41,7 +41,7 @@ public class MacroSelect : MonoBehaviour
 	private Color32 unSelected;
 
 	//Store Player
-	public GameObject Player;
+	public GameObject Player = null;
 
 	public bool needsUpdate;
 

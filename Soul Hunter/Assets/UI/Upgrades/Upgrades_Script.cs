@@ -4,8 +4,8 @@ using System.Collections;
 
 public class Upgrades_Script : MonoBehaviour 
 {
-	public GameBrain gameBrain;
-	public GameObject UpgradeMenu;
+	public GameBrain gameBrain = null;
+	public GameObject UpgradeMenu = null;
 
 	//int FireLevel;
 	//int WindLevel;

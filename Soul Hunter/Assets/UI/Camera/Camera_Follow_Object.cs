@@ -15,8 +15,13 @@ public class Camera_Follow_Object : MonoBehaviour {
 	}
 
 	void Update () {
-		
-		if (FollowTarget != null) {
+
+		if (FollowTarget == null) {
+			FollowTarget = GameObject.FindGameObjectWithTag ("Player");
+			FollowTarget.GetComponent<Player_Movement_Controller>().ScreenCamera = transform.GetComponent<Camera>();
+		}
+		else
+		{
 			Vector3 newPosition = transform.position;
 			newPosition.x = FollowTarget.transform.position.x;
 			newPosition.y = FollowTarget.transform.position.y + HeightOffset;

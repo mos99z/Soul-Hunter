@@ -26,15 +26,19 @@ public class Whirlwind_Controller : MonoBehaviour {
 	{
 		if (Once)
 		{
-			GameObject player = GameObject.Find ("Player");
+			GameObject player = GameObject.FindGameObjectWithTag ("Player");
 			Vector3 rayDirection = player.transform.FindChild("Direction Indicator").transform.forward;
-			rayDirection.y = transform.position.y;
-			Ray wallCheckRay = new Ray(transform.position, rayDirection);
+			rayDirection.y = 0.0f;
+			Vector3 PlayerPos = player.transform.position;
+			PlayerPos.y = 1.0f;
+			Ray wallCheckRay = new Ray(PlayerPos, rayDirection);
 			GameObject mouseMarker = GameObject.Find ("MouseMarker");
-			float DistanceCheck = (mouseMarker.transform.position - transform.position).magnitude + 2.0f;
+			Vector3 mousePos = mouseMarker.transform.position;
+			mousePos.y = 0.0f;
+			PlayerPos.y = 0.0f;
+			float DistanceCheck = (mousePos - PlayerPos).magnitude + 3.0f;
 			if (Physics.Raycast (wallCheckRay, DistanceCheck, WALLS))
 			{
-				player.SendMessage("SetRecoverTime", 0.0f);
 				Destroy(gameObject);
 				return;
 			}

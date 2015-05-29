@@ -18,7 +18,9 @@ public class Main_Menu_Script : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-
+		//GetComponent<AudioSource>().Play();
+		
+		//AudioSource[] sounds = GetComponents<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -114,12 +116,20 @@ public class Main_Menu_Script : MonoBehaviour {
 
 	public void LoadTutorial()
 	{
+		int zero = 0;
+		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
 		Application.LoadLevel ("Tutorial");
 	}
 
 	public void LoadLevel1()
 	{
+		GameObject.Find ("GameBrain").SendMessage ("SetLevel", 1);
 		Application.LoadLevel("Level 1");
+	}
+
+	public void Cancel()
+	{
+		NewGamePrompt.SetActive (false);
 	}
 
 	public void MouseOver0()

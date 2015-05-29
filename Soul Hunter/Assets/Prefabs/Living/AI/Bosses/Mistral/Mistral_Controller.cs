@@ -40,7 +40,7 @@ public class Mistral_Controller : MonoBehaviour
 	public float Damage = 100.0f;
 	public SphereCollider AttackCollider;
 
-	private Living_Obj healthScript = null;
+//	private Living_Obj healthScript = null;
 	
 	// Use this for initialization
 	void Start () 
@@ -49,7 +49,7 @@ public class Mistral_Controller : MonoBehaviour
 		target = GameObject.FindGameObjectWithTag ("Player");
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
 
-		healthScript = gameObject.GetComponent<Living_Obj> ();
+//		healthScript = gameObject.GetComponent<Living_Obj> ();
 	}
 	
 	// Update is called once per frame
