@@ -138,6 +138,14 @@ Prefab:
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 1010616301}
+    - target: {fileID: 22428316, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22424828, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
   m_IsPrefabParent: 0
