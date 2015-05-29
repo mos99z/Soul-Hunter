@@ -40,7 +40,7 @@ public class Mistral_Controller : MonoBehaviour
 	public float Damage = 100.0f;
 	public SphereCollider AttackCollider;
 
-	Living_Obj healthScript;
+	private Living_Obj healthScript = null;
 	
 	// Use this for initialization
 	void Start () 
