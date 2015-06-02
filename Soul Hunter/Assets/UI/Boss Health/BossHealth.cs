@@ -16,20 +16,20 @@ public class BossHealth : MonoBehaviour
 	//UI images
 	public RectTransform healthTransform;
 	public Text bossHealthText;
+	public Text bossNameTxt;
 	public Image bossHealthImg;
 	public GameObject bossObj;
 	
 	//Helper Variables
 	private bool updateHP;
-	
-	//Render Variable
-	private bool displayBossBar;
+	private bool firstRun;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		updateHP = true;
-		displayBossBar = false;
+		bossObj.SetActive(false);
+		firstRun = true;
 		
 		cachedY = healthTransform.position.y;
 		maxX = healthTransform.position.x;
@@ -45,7 +45,6 @@ public class BossHealth : MonoBehaviour
 		{
 			HandleHpBar();
 		}
-		bossObj.SetActive(displayBossBar);
 	}
 	
 	private void HandleHpBar()
@@ -60,9 +59,29 @@ public class BossHealth : MonoBehaviour
 		bossHealthImg.color = new Color ((float)1.0 - percent * 1.75f, (float)0.0, (float)0.0, (float)0.75);
 	}
 	
-	public void SetCaptainHealthDisplay(int _health)
+	public void SetBossHealthDisplay(int _health)
 	{
 		curBossHealth = _health;
+		if (firstRun)
+		{
+			maxBossHealth = _health;
+			firstRun = false;
+		}
 		updateHP = true;
+	}
+
+	public void ActivateBossBar()
+	{
+		bossObj.SetActive(true);
+	}
+
+	public void DeactivateBossBar()
+	{
+		bossObj.SetActive(false);
+	}
+
+	public void SetBossName(string _name)
+	{
+		bossNameTxt.text = _name;
 	}
 }

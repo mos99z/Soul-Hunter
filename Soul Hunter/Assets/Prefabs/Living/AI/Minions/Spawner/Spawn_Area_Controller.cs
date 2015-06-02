@@ -7,12 +7,14 @@ public class Spawn_Area_Controller : MonoBehaviour {
 	public bool AreaContainsCaptain = false;
 	public GameObject Captain;
 
+	private GameObject HUDMast;
+
 	//float captainTimer = 2.0f;
 
 	// Use this for initialization
 	void Start () 
 	{
-
+		HUDMast = GameBrain.Instance.HUDMaster;
 	}
 	
 	// Update is called once per frame
@@ -47,9 +49,12 @@ public class Spawn_Area_Controller : MonoBehaviour {
 			{
 				Spawners[i].SetActive(true);
 			}
-			Captain.SetActive (true);
+			if (AreaContainsCaptain)
+			{
+				Captain.SetActive(true);
+				HUDMast.SendMessage("ActivateCaptBar", 0);
+			}
 		}
-
 	}
 
 	void OnTriggerExit(Collider col)
