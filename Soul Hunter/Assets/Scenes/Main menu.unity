@@ -267,6 +267,34 @@ Prefab:
       propertyPath: m_TagString
       value: Spell
       objectReference: {fileID: 0}
+    - target: {fileID: 22405436, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405436, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22425020, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22425020, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22425020, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22401458, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22444634, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
   m_IsPrefabParent: 0
