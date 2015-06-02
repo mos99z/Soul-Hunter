@@ -21,15 +21,14 @@ public class CaptainHealth : MonoBehaviour
 
 	//Helper Variables
 	private bool updateHP;
-
-	//Render Variable
-	private bool displayCaptBar;
+	private bool firstGo;
 
 	// Use this for initialization
 	void Start ()
 	{
 		updateHP = true;
-		displayCaptBar = false;
+		captainObj.SetActive(false);
+		firstGo = true;
 
 		maxCaptainHealth = curCaptainHealth = 100;
 
@@ -47,7 +46,6 @@ public class CaptainHealth : MonoBehaviour
 		{
 			HandleHpBar();
 		}
-		captainObj.SetActive(displayCaptBar);
 	}
 
 	private void HandleHpBar()
@@ -65,6 +63,20 @@ public class CaptainHealth : MonoBehaviour
 	public void SetCaptainHealthDisplay(int _health)
 	{
 		curCaptainHealth = _health;
+		if (firstGo)
+		{
+			maxCaptainHealth = _health;
+			firstGo = false;
+		}
 		updateHP = true;
+	}
+
+	public void ActivateCaptBar()
+	{
+		captainObj.SetActive(true);
+	}
+	public void DeactivateCaptBar()
+	{
+		captainObj.SetActive(false);
 	}
 }
