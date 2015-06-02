@@ -163,6 +163,110 @@ Prefab:
       propertyPath: bossNameTxt
       value: 
       objectReference: {fileID: 1864864948}
+    - target: {fileID: 139010, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 102428, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 124796, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 182580, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 153108, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 169606, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 155388, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 154888, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 124764, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 185190, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 148226, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 161126, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 140430, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 125864, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 158258, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 146552, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 173422, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 199858, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 148414, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 101406, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 115462, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 119834, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 103004, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 156328, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 103070, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 192010, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
   m_IsPrefabParent: 0
