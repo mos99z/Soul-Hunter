@@ -15,13 +15,13 @@ public class Laser_Controller : MonoBehaviour
 	public float Duration = 10.0f;
 	public BoxCollider TheCollider = null;
 	public GameObject SpellEffect = null;
-	public GameObject WetDebuff = null;
+	public GameObject BurnDebuff = null;
 	public float DebuffChance = 0.1f;
 	public float DebuffDuration = 10.0f;
 	public LayerMask WALLS;
-	
+	public GameObject PlayerFaceingIndicator = null;	// this MUST be set manually
+
 	private float DeltaT = 0.0f;
-	private GameObject PlayerFaceingIndicator = null;
 	private float Size = 1.0f;
 	private float oldSize = 0.0f;
 	private float smallestSize = float.MaxValue;
@@ -33,11 +33,11 @@ public class Laser_Controller : MonoBehaviour
 	void Start ()
 	{
 		oldSize = Size;
-		PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
+		//PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
 		transform.position = new Vector3(transform.position.x, StartHeight, transform.position.z);
-		if (WetDebuff == null) {
+		if (BurnDebuff == null) {
 			Debug.Log("To Reduce CPU Load assign Debuff \"Wet\" to the WetDebuff Parameter in the prefab GameBrain/Spell Database/Hydrant:Hydrant_Controller");
-			WetDebuff = GameObject.Find ("GameBrain/Debuffs/Wet");
+			BurnDebuff = GameObject.Find ("GameBrain/Debuffs/Wet");
 		}
 		SpellEffect.SetActive (false);
 	}
@@ -76,7 +76,7 @@ public class Laser_Controller : MonoBehaviour
 					float roll = Random.Range(0.0f, 1.0f);
 					if (roll <= DebuffChance)
 					{
-						GameObject debuff = Instantiate(WetDebuff);
+						GameObject debuff = Instantiate(BurnDebuff);
 						debuff.transform.parent = Hitting[i].transform;
 						debuff.transform.localPosition = Vector3.zero;
 						debuff.GetComponent<Wet_Controller>().Duration = DebuffDuration;

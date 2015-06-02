@@ -18,9 +18,9 @@ public class Hydrant_Controller : MonoBehaviour {
 	public float DebuffChance = 0.1f;
 	public float DebuffDuration = 10.0f;
     public LayerMask WALLS;
+	public GameObject PlayerFaceingIndicator = null;	// this object must be manually set, or an enemy indicator may be assigned instead
 
 	private float DeltaT = 0.0f;
-	private GameObject PlayerFaceingIndicator = null;
 	private float Size = 1.0f;
 	private float oldSize = 0.0f;
 	private float smallestSize = float.MaxValue;
@@ -32,7 +32,7 @@ public class Hydrant_Controller : MonoBehaviour {
 	void Start ()
 	{
 		oldSize = Size;
-		PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
+		//PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
         transform.position = new Vector3(transform.position.x, StartHeight, transform.position.z);
 		if (WetDebuff == null) {
 			Debug.Log("To Reduce CPU Load assign Debuff \"Wet\" to the WetDebuff Parameter in the prefab GameBrain/Spell Database/Hydrant:Hydrant_Controller");

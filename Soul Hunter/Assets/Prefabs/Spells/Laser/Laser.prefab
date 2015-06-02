@@ -123,19 +123,20 @@ MonoBehaviour:
   Duration: 10
   TheCollider: {fileID: 6513484}
   SpellEffect: {fileID: 192684}
-  WetDebuff: {fileID: 0}
+  BurnDebuff: {fileID: 0}
   DebuffChance: .100000001
   DebuffDuration: 10
   WALLS:
     serializedVersion: 2
     m_Bits: 256
+  PlayerFaceingIndicator: {fileID: 0}
 --- !u!132 &13227124
 GUIText:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144366}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: Laser,1,1,4
   m_Anchor: 0
