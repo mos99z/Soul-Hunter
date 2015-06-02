@@ -108,6 +108,16 @@ public class Living_Obj : MonoBehaviour
 			}
 		}
 
+		if (entType == EntityType.Boss)
+		{
+			GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay", CurrHealth);
+			GameBrain.Instance.HUDMaster.SendMessage("SetBossName", gameObject.name);
+			if (CurrHealth == 0)
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar", 0);
+			}
+		}
+
 		if (Image != null && FlashTimer > 0.0f)
 		{
 			FlashTimer -= Time.deltaTime;

@@ -11999,7 +11999,7 @@ MonoBehaviour:
   CanDie: 1
   Lives: 1
   SoulValue: 0
-  entType: 1
+  entType: 3
 --- !u!135 &1806046321
 SphereCollider:
   m_ObjectHideFlags: 0
