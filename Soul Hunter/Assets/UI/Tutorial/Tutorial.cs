@@ -24,9 +24,12 @@ public class Tutorial : MonoBehaviour
 	bool activatedTxt;
 	bool task1;
 	bool task2;
-	public GameObject macMen;
 	float taskTicker;
 	float taskTime;
+
+	//OutSide objects
+	public GameObject macMen;
+	public GameObject macTab;
 
 	// Use this for initialization
 	void Start ()
@@ -36,6 +39,9 @@ public class Tutorial : MonoBehaviour
 		task1 = false;
 		task2 = false;
 		taskTicker = 0;
+
+		macMen = GameBrain.Instance.HUDMaster.transform.GetChild(3).gameObject;
+		macTab = GameBrain.Instance.HUDMaster.transform.GetChild(2).gameObject;
 	}
 	
 	// Update is called once per frame
@@ -224,6 +230,8 @@ public class Tutorial : MonoBehaviour
 			Tutorial7.SetActive(true);
 			activatedTxt = true;
 			DummieMinion.SetActive(true);
+			macMen.SetActive(false);
+			macTab.SetActive(true);
 		}
 		if (task1)
 		{

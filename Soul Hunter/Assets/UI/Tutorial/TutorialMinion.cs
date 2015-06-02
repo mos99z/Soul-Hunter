@@ -21,7 +21,7 @@ public class TutorialMinion : MonoBehaviour
 	public Material tutorMat;
 
 	//get player's spell
-	public GameObject macSelect;
+	GameObject macSelect;
 	MacroSelect macSel;
 
 	//Tutorial progression
@@ -47,6 +47,7 @@ public class TutorialMinion : MonoBehaviour
 		elements[4] = new Color32 (64, 64, 255, 255);
 		correct = new Color32 (0, 255, 0, 255);
 
+		macSelect = GameBrain.Instance.transform.GetChild(1).gameObject;
 		macSel = (MacroSelect)macSelect.GetComponent("MacroSelect");
 	}
 	
