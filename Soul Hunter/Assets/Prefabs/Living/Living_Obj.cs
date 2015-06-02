@@ -32,7 +32,6 @@ public class Living_Obj : MonoBehaviour
 	public enum EntityType {Player, Minion, Captain, Boss}
 	public EntityType entType = EntityType.Minion;
 
-	private GameObject GameBrain = null;
 	void Start ()
 	{
 		if (CurrHealth <= 0)
@@ -61,23 +60,21 @@ public class Living_Obj : MonoBehaviour
 			CurrHealth = MaxHealth;
 		}
 
-
-		InfoDisaply = GameObject.Find ("GameBrain").GetComponent<GameBrain>().DisplayText;
+		InfoDisaply = GameBrain.Instance.GetComponent<GameBrain>().DisplayText;
 		if (InfoDisaply == null)
 			Debug.LogError("Can NOT Find Display Text Prefab In Scene!");
 
 		if (transform.GetComponentInChildren<SpriteRenderer> () != null)
 			Image = transform.GetComponentInChildren<SpriteRenderer> ();
 
-		GameBrain = GameObject.Find ("GameBrain");
-		Souls = GameBrain.transform.FindChild("Souls").gameObject;
+		Souls = GameBrain.Instance.Souls;
 		if (Souls == null)
 			Debug.Log("Can NOT Find Souls Prefab In Scene!");
 		if (entType == EntityType.Player)
 		{
-			GameBrain.SendMessage("SetMaxHealth", MaxHealth);
-			GameBrain.SendMessage("SetHealth", CurrHealth);
-			GameBrain.SendMessage("SetLivesLeft", Lives);
+			GameBrain.Instance.SendMessage("SetMaxHealth", MaxHealth);
+			GameBrain.Instance.SendMessage("SetHealth", CurrHealth);
+			GameBrain.Instance.SendMessage("SetLivesLeft", Lives);
 		}
 	}
 
@@ -100,6 +97,25 @@ public class Living_Obj : MonoBehaviour
 			}
 			else
 				DropSoul ();
+		}
+
+		if (entType == EntityType.Captain)
+		{
+			GameBrain.Instance.HUDMaster.SendMessage("SetCaptainHealthDisplay", CurrHealth);
+			if (CurrHealth == 0)
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar", 0);
+			}
+		}
+
+		if (entType == EntityType.Boss)
+		{
+			GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay", CurrHealth);
+			GameBrain.Instance.HUDMaster.SendMessage("SetBossName", gameObject.name);
+			if (CurrHealth == 0)
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar", 0);
+			}
 		}
 
 		if (Image != null && FlashTimer > 0.0f)
@@ -165,9 +181,9 @@ public class Living_Obj : MonoBehaviour
 				CurrHealth -= ActualDamage;
 
 				if(entType == EntityType.Player)
-					GameBrain.SendMessage("ModHealth", -ActualDamage);
+					GameBrain.Instance.SendMessage("ModHealth", -ActualDamage);
 				else
-					GameBrain.GetComponent<GameBrain>().DamageDealt += ActualDamage;
+					GameBrain.Instance.GetComponent<GameBrain>().DamageDealt += ActualDamage;
 
 				if (Image != null && FlashCoolDown <= 0.0f)
 				{
@@ -186,6 +202,11 @@ public class Living_Obj : MonoBehaviour
 		{
 			DisplayTextInfo("INVINCIBLE", new Color(1.0f, 0.5f, 0.0f), 8.0f);
 		}
+
+		if (CurrHealth < 0)
+		{
+			CurrHealth = 0;
+		}
 	}
 	
 	void PulseCheck()
@@ -198,7 +219,7 @@ public class Living_Obj : MonoBehaviour
 			else
 			{
 				CurrHealth = MaxHealth;
-				GameBrain.SendMessage("SetHealth", MaxHealth);
+				GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
 				if (entType == EntityType.Player)
 				{
 					// TODO: Respawn Player @ Check Point
@@ -235,7 +256,7 @@ public class Living_Obj : MonoBehaviour
 	{
 		IsAlive = false;
 		if (entType != EntityType.Player)
-			GameBrain.SendMessage ("AddKill");
+			GameBrain.Instance.SendMessage ("AddKill");
 		if (transform.GetComponentInChildren<Animation> () != null)
 			transform.GetComponentInChildren<Animation> ().Play ("Death");
 	}
@@ -256,7 +277,7 @@ public class Living_Obj : MonoBehaviour
 		{
 // TODO: Player "Death"
 			Application.LoadLevel("Tally Scene");
-			GameBrain.SendMessage("SetLevel", -2);
+			GameBrain.Instance.SendMessage("SetLevel", -2);
 		}
 	}
 
