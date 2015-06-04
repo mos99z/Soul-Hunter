@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FlameThrowerDamage : MonoBehaviour 
+public class PoisonCloudDamage : MonoBehaviour 
 {
-	public float damage = 10.1f;		// the amount of damage a flamethrower does
-	public float hurtDelay = 0.5f;		// how long to wait between dealing damage
-
+	public float damage = 15.0f;		// the amount of damage a flamethrower does
+	public float hurtDelay = 0.3f;		// how long to wait between dealing damage
+	
 	float timer;						// used for counting against delay
 	void Start () 
 	{
@@ -19,7 +19,7 @@ public class FlameThrowerDamage : MonoBehaviour
 			other.SendMessage("TakeDamage", damage);
 		}
 	}
-
+	
 	void OnTriggerStay(Collider other)
 	{
 		if (other.tag == "Player" || other.tag == "Enemy")
@@ -32,12 +32,11 @@ public class FlameThrowerDamage : MonoBehaviour
 			}
 		}
 	}
-
+	
 	void OnTriggerExit(Collider other)
 	{
 		if (other.tag == "Player" || other.tag == "Enemy")
 		{
 			timer = 0.0f;
 		}
-	}
-}
+	}}
