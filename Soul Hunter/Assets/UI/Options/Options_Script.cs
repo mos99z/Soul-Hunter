@@ -2,19 +2,31 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Options_Script : MonoBehaviour {
-
+public class Options_Script : MonoBehaviour
+{
+	//Handle Menus
 	public GameObject Options;
+	public GameObject MainMenu = null;
+
+	//Handle Buttons
 	public float SFXVolume;
 	public float MusicVolume;
 	public Slider MusicSlider;
 	public Slider SFXSlider;
 	public Text FullScreen;
-	//public 
+	public GameObject FullOn;
+	public GameObject FullOff;
+
+	//Get MainMenu Variables
+	private Main_Menu_Script mainMenScript;
 
 	// Use this for initialization
 	void Start () 
 	{
+		if (MainMenu != null)
+		{
+			mainMenScript = (Main_Menu_Script)MainMenu.GetComponent("Main_Menu_Script");
+		}
 		LoadData ();
 	}
 	
@@ -30,6 +42,8 @@ public class Options_Script : MonoBehaviour {
 		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		MusicSlider.value = MusicVolume;
 		SFXSlider.value = SFXVolume;
+		FullOn.SetActive(false);
+		FullOff.SetActive(true);
 	}
 
 	public void AdjustMusVol()
@@ -58,6 +72,17 @@ public class Options_Script : MonoBehaviour {
 		Screen.fullScreen = !Screen.fullScreen;
 
 		FullScreen.text = Screen.fullScreen ? "Fullscreen" : "Windowed";
+
+		if (Screen.fullScreen)
+		{
+			FullOn.SetActive(true);
+			FullOff.SetActive(false);
+		}
+		else
+		{
+			FullOn.SetActive(false);
+			FullOff.SetActive(true);
+		}
 	}
 
 	public void SaveAndClose()
@@ -67,6 +92,14 @@ public class Options_Script : MonoBehaviour {
 		GameBrain.Instance.Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		GameBrain.Instance.Music [1].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		Options.SetActive (false);
+		if (MainMenu != null)
+		{
+			for (int i = 0; i < mainMenScript.buttons.Length; i++)
+			{
+				mainMenScript.buttons[i].interactable = true;
+				mainMenScript.stall = false;
+			}
+		}
 	}
 
 	public void Close()
@@ -76,5 +109,13 @@ public class Options_Script : MonoBehaviour {
 		GameBrain.Instance.Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		GameBrain.Instance.Music [1].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		Options.SetActive (false);
+		if (MainMenu != null)
+		{
+			for (int i = 0; i < mainMenScript.buttons.Length; i++)
+			{
+				mainMenScript.buttons[i].interactable = true;
+				mainMenScript.stall = false;
+			}
+		}
 	}
 }

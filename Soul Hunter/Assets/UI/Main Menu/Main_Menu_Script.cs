@@ -13,43 +13,48 @@ public class Main_Menu_Script : MonoBehaviour
 	//helper variables
 	private int index;
 	private bool needsUpdate;
+	public bool stall;
 
 	//other menus or popups
 	public GameObject NewGamePrompt;
 	public GameObject OptionsMenu;
-	public GameObject GameOver;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		int zero = 0;
-		GameBrain.Instance.SendMessage ("ChangeMusic", zero);
+		GameBrain.Instance.SendMessage("ChangeMusic", zero);
 
 		needsUpdate = false;
 
 		index = 0;
 		buttons[index].Select();
 		SpellIndexs[index].SetActive(true);
+		stall = false;
 		//AudioSource[] sounds = GetComponents<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown (KeyCode.UpArrow)) 
+		if (!stall)
 		{
-			index--;
-			if (index < 0)
-				index = 4;
-			needsUpdate = true;
+			if (Input.GetKeyDown (KeyCode.UpArrow)) 
+			{
+				index--;
+				if (index < 0)
+					index = 4;
+				needsUpdate = true;
+			}
+			else if (Input.GetKeyDown (KeyCode.DownArrow))
+			{
+				index++;
+				if (index > 4)
+					index = 0;
+				needsUpdate = true;
+			}
 		}
-		else if (Input.GetKeyDown (KeyCode.DownArrow))
-		{
-			index++;
-			if (index > 4)
-				index = 0;
-			needsUpdate = true;
-		}
+
 		if (Input.GetKeyDown (KeyCode.Return)) 
 		{
 			switch (index)
@@ -100,28 +105,43 @@ public class Main_Menu_Script : MonoBehaviour
 
 	public void SetIndex0()
 	{
-		index = 0;
-		needsUpdate = true;
+		if (!stall)
+		{
+			index = 0;
+			needsUpdate = true;
+		}
 	}
 	public void SetIndex1()
 	{
-		index = 1;
-		needsUpdate = true;
+		if (!stall)
+		{
+			index = 1;
+			needsUpdate = true;
+		}
 	}
 	public void SetIndex2()
 	{
-		index = 2;
-		needsUpdate = true;
+		if (!stall)
+		{
+			index = 2;
+			needsUpdate = true;
+		}
 	}
 	public void SetIndex3()
 	{
-		index = 3;
-		needsUpdate = true;
+		if (!stall)
+		{
+			index = 3;
+			needsUpdate = true;
+		}
 	}
 	public void SetIndex4()
 	{
-		index = 4;
-		needsUpdate = true;
+		if (!stall)
+		{
+			index = 4;
+			needsUpdate = true;
+		}
 	}
 
 	public void LoadTutorial()
@@ -156,6 +176,11 @@ public class Main_Menu_Script : MonoBehaviour
 		NewGamePrompt.SetActive(true);
 		index = 0;
 		needsUpdate = true;
+		for (int i = 0; i < buttons.Length; i++)
+		{
+			buttons[i].interactable = false;
+		}
+		stall = true;
 	}
 
 	public void MouseClick1()
@@ -170,6 +195,11 @@ public class Main_Menu_Script : MonoBehaviour
 		OptionsMenu.SetActive (true);
 		index = 2;
 		needsUpdate = true;
+		for (int i = 0; i < buttons.Length; i++)
+		{
+			buttons[i].interactable = false;
+		}
+		stall = true;
 	}
 
 	public void MouseClick3()
@@ -178,7 +208,6 @@ public class Main_Menu_Script : MonoBehaviour
 		index = 3;
 		needsUpdate = true;
 	}
-
 	public void MouseClick4()
 	{
 		Application.Quit();
