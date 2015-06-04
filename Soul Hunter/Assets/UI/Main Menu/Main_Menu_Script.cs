@@ -2,20 +2,22 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Main_Menu_Script : MonoBehaviour {
+public class Main_Menu_Script : MonoBehaviour
+{
+	//holds button info
+	public Button[] buttons = new Button[5];
 
-	public Text NewGame;
-	public Text Continue;
-	public Text Options;
-	public Text Credits;
-	public Text ExitGame;
+	//holds soul index sprites
+	public GameObject[] SpellIndexs = new GameObject[5];
 
+	//helper variables
+	private int index;
+	private bool needsUpdate;
+
+	//other menus or popups
 	public GameObject NewGamePrompt;
 	public GameObject OptionsMenu;
 	public GameObject GameOver;
-//	public GameObject player = null;
-
-	int selectedIndex = 0;
 	
 	// Use this for initialization
 	void Start () 
@@ -23,30 +25,34 @@ public class Main_Menu_Script : MonoBehaviour {
 		int zero = 0;
 		GameBrain.Instance.SendMessage ("ChangeMusic", zero);
 
+		needsUpdate = false;
+
+		index = 0;
+		buttons[index].Select();
+		SpellIndexs[index].SetActive(true);
 		//AudioSource[] sounds = GetComponents<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		// Keyboard Input
 		if (Input.GetKeyDown (KeyCode.UpArrow)) 
 		{
-			selectedIndex--;
-			if (selectedIndex < 0)
-				selectedIndex = 4;
-		} 
-
+			index--;
+			if (index < 0)
+				index = 4;
+			needsUpdate = true;
+		}
 		else if (Input.GetKeyDown (KeyCode.DownArrow))
 		{
-			selectedIndex++;
-			if (selectedIndex > 4)
-				selectedIndex = 0;
+			index++;
+			if (index > 4)
+				index = 0;
+			needsUpdate = true;
 		}
-
-		else if (Input.GetKeyDown (KeyCode.Return)) 
+		if (Input.GetKeyDown (KeyCode.Return)) 
 		{
-			switch (selectedIndex) 
+			switch (index)
 			{
 			case 0:
 			{
@@ -75,46 +81,47 @@ public class Main_Menu_Script : MonoBehaviour {
 			}
 			}
 		}
-
-		UpdateHighlighted ();
+		if (needsUpdate)
+		{
+			MoveSoul();
+			needsUpdate = false;
+		}
 	}
 
-	void UpdateHighlighted()
+	private void MoveSoul()
 	{
-		NewGame.color = Color.black;
-		Continue.color = Color.black;
-		Options.color = Color.black;
-		Credits.color = Color.black;
-		ExitGame.color = Color.black;
+		for (int i = 0; i < SpellIndexs.Length; i++)
+		{
+			SpellIndexs[i].SetActive(false);
+		}
+		SpellIndexs[index].SetActive(true);
+		buttons[index].Select();
+	}
 
-		switch (selectedIndex) 
-		{
-		case 0:
-		{
-			NewGame.color = Color.yellow;
-			break;
-		}
-		case 1:
-		{
-			Continue.color = Color.yellow;
-			break;
-		}
-		case 2:
-		{
-			Options.color = Color.yellow;
-			break;
-		}
-		case 3:
-		{
-			Credits.color = Color.yellow;
-			break;
-		}
-		case 4:
-		{
-			ExitGame.color = Color.yellow;
-			break;
-		}
-		}
+	public void SetIndex0()
+	{
+		index = 0;
+		needsUpdate = true;
+	}
+	public void SetIndex1()
+	{
+		index = 1;
+		needsUpdate = true;
+	}
+	public void SetIndex2()
+	{
+		index = 2;
+		needsUpdate = true;
+	}
+	public void SetIndex3()
+	{
+		index = 3;
+		needsUpdate = true;
+	}
+	public void SetIndex4()
+	{
+		index = 4;
+		needsUpdate = true;
 	}
 
 	public void LoadTutorial()
@@ -144,54 +151,39 @@ public class Main_Menu_Script : MonoBehaviour {
 		NewGamePrompt.SetActive (false);
 	}
 
-	public void MouseOver0()
-	{
-		selectedIndex = 0;
-	}
-
-	public void MouseOver1()
-	{
-		selectedIndex = 1;
-	}
-
-	public void MouseOver2()
-	{
-		selectedIndex = 2;
-	}
-
-	public void MouseOver3()
-	{
-		selectedIndex = 3;
-	}
-
-	public void MouseOver4()
-	{
-		selectedIndex = 4;
-	}
-
 	public void MouseClick0()
 	{
 		NewGamePrompt.SetActive(true);
+		index = 0;
+		needsUpdate = true;
 	}
 
 	public void MouseClick1()
 	{
 		Debug.Log("Continue from autosave");
+		index = 1;
+		needsUpdate = true;
 	}
 
 	public void MouseClick2()
 	{
 		OptionsMenu.SetActive (true);
+		index = 2;
+		needsUpdate = true;
 	}
 
 	public void MouseClick3()
 	{
 		Application.LoadLevel("Credits");
+		index = 3;
+		needsUpdate = true;
 	}
 
 	public void MouseClick4()
 	{
 		Application.Quit();
+		index = 4;
+		needsUpdate = true;
 	}
 
 }    

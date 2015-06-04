@@ -47,7 +47,7 @@ public class TutorialMinion : MonoBehaviour
 		elements[4] = new Color32 (64, 64, 255, 255);
 		correct = new Color32 (0, 255, 0, 255);
 
-		macSelect = GameBrain.Instance.transform.GetChild(1).gameObject;
+		macSelect = GameBrain.Instance.HUDMaster;
 		macSel = (MacroSelect)macSelect.GetComponent("MacroSelect");
 	}
 	
