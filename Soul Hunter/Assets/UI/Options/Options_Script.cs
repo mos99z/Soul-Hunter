@@ -17,12 +17,21 @@ public class Options_Script : MonoBehaviour
 	public GameObject FullOn;
 	public GameObject FullOff;
 
+	//handle SoulIndex
+	public GameObject[] soulIcons = new GameObject[5];
+
 	//Get MainMenu Variables
 	private Main_Menu_Script mainMenScript;
+
+	//helper vars
+	private int index;
+	private bool needsUpdate;
+	private bool opening;
 
 	// Use this for initialization
 	void Start () 
 	{
+		opening = true;
 		if (MainMenu != null)
 		{
 			mainMenScript = (Main_Menu_Script)MainMenu.GetComponent("Main_Menu_Script");
@@ -33,7 +42,111 @@ public class Options_Script : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if (opening)
+		{
+			OpeningMenu();
+			opening = false;
+		}
+		if (needsUpdate)
+		{
+			for (int i = 0; i < soulIcons.Length; i++)
+			{
+				soulIcons[i].SetActive(false);
+			}
+			soulIcons[index].SetActive(true);
+			needsUpdate = false;
+		}
+
+		if (Input.GetKeyDown(KeyCode.DownArrow))
+		{
+			index++;
+			if (index > 4)
+			{
+				index = 0;
+			}
+			needsUpdate = true;
+		}
+		if (Input.GetKeyDown(KeyCode.UpArrow))
+		{
+			index--;
+			if (index < 0)
+			{
+				index = 4;
+			}
+			needsUpdate = true;
+		}
 		//MusicVolume;
+		switch (index)
+		{
+		case 0:
+		{
+			if (Input.GetKey(KeyCode.LeftArrow))
+			{
+				SFXSlider.value -= Time.deltaTime;
+			}
+			if (Input.GetKey(KeyCode.RightArrow))
+			{
+				SFXSlider.value += Time.deltaTime;
+			}
+			break;
+		}
+		case 1:
+		{
+			if (Input.GetKey(KeyCode.LeftArrow))
+			{
+				MusicSlider.value -= Time.deltaTime;
+			}
+			if (Input.GetKey(KeyCode.RightArrow))
+			{
+				MusicSlider.value += Time.deltaTime;
+			}
+			break;
+		}
+		case 2:
+		{
+			if (Input.GetKey(KeyCode.Return))
+			{
+				ToggleFullscreen();
+			}
+			break;
+		}
+		case 3:
+		{
+			if (Input.GetKey(KeyCode.Return))
+			{
+				Input.ResetInputAxes();
+				SaveAndClose();
+			}
+			if (Input.GetKey(KeyCode.RightArrow))
+			{
+				index++;
+				needsUpdate = true;
+			}
+			break;
+		}
+		case 4:
+		{
+			if (Input.GetKey(KeyCode.Return))
+			{
+				Input.ResetInputAxes();
+				Close();
+			}
+			if (Input.GetKey(KeyCode.LeftArrow))
+			{
+				index--;
+				needsUpdate = true;
+			}
+			break;
+		}
+		default:
+			break;
+		}
+	}
+
+	private void OpeningMenu()
+	{
+		index = 0;
+		needsUpdate = true;
 	}
 
 	void LoadData()
@@ -87,6 +200,7 @@ public class Options_Script : MonoBehaviour
 
 	public void SaveAndClose()
 	{
+		opening = true;
 		PlayerPrefs.SetFloat ("MusicVolume", MusicVolume);
 		PlayerPrefs.SetFloat ("SFXVolume", SFXVolume);
 		GameBrain.Instance.Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
@@ -104,6 +218,7 @@ public class Options_Script : MonoBehaviour
 
 	public void Close()
 	{
+		opening = true;
 		MusicSlider.value = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		SFXSlider.value = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		GameBrain.Instance.Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
@@ -117,5 +232,31 @@ public class Options_Script : MonoBehaviour
 				mainMenScript.stall = false;
 			}
 		}
+	}
+
+	public void SetIndex0()
+	{
+		index = 0;
+		needsUpdate = true;
+	}
+	public void SetIndex1()
+	{
+		index = 1;
+		needsUpdate = true;
+	}
+	public void SetIndex2()
+	{
+		index = 2;
+		needsUpdate = true;
+	}
+	public void SetIndex3()
+	{
+		index = 3;
+		needsUpdate = true;
+	}
+	public void SetIndex4()
+	{
+		index = 4;
+		needsUpdate = true;
 	}
 }

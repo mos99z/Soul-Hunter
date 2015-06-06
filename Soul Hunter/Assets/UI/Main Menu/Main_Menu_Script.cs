@@ -14,16 +14,20 @@ public class Main_Menu_Script : MonoBehaviour
 	private int index;
 	private bool needsUpdate;
 	public bool stall;
+	public GameObject MainMenu = null;
 
 	//other menus or popups
 	public GameObject NewGamePrompt;
 	public GameObject OptionsMenu;
+	private Main_Menu_Script mainMenScript;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		int zero = 0;
 		GameBrain.Instance.SendMessage("ChangeMusic", zero);
+
+		mainMenScript = (Main_Menu_Script)MainMenu.GetComponent("Main_Menu_Script");
 
 		needsUpdate = false;
 
@@ -169,6 +173,14 @@ public class Main_Menu_Script : MonoBehaviour
 	public void Cancel()
 	{
 		NewGamePrompt.SetActive (false);
+		if (MainMenu != null)
+		{
+			for (int i = 0; i < mainMenScript.buttons.Length; i++)
+			{
+				mainMenScript.buttons[i].interactable = true;
+				mainMenScript.stall = false;
+			}
+		}
 	}
 
 	public void MouseClick0()

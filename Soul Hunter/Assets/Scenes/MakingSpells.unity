@@ -9094,11 +9094,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Options: {fileID: 826415198}
+  MainMenu: {fileID: 0}
   SFXVolume: 100
   MusicVolume: 100
   MusicSlider: {fileID: 2055730288}
   SFXSlider: {fileID: 254868296}
   FullScreen: {fileID: 148121262}
+  FullOn: {fileID: 0}
+  FullOff: {fileID: 0}
 --- !u!114 &193033008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23337,7 +23340,7 @@ Transform:
   - {fileID: 830077698}
   - {fileID: 1465619836}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!114 &561328834
 MonoBehaviour:
   m_ObjectHideFlags: 0
