@@ -15,6 +15,7 @@ public class Player_Movement_Controller : MonoBehaviour {
 	public Camera ScreenCamera = null;
 	private Vector3 currentVelocity = Vector3.zero;
 	public GameObject GameOver;
+	public bool isCrippled;		// used for checking cripple on player
 
 	void Start () {
 		//Cursor.visiblpie = false;

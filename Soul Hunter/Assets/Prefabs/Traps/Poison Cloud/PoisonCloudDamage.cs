@@ -5,6 +5,7 @@ public class PoisonCloudDamage : MonoBehaviour
 {
 	public float damage = 15.0f;		// the amount of damage a flamethrower does
 	public float hurtDelay = 0.3f;		// how long to wait between dealing damage
+	[Header ("Optional. If null, slow debuff does not apply in cloud")]
 	public GameObject slowedDebuff;		// apply a slow debuff when entering poison cloud
 	
 	float timer;						// used for counting against delay

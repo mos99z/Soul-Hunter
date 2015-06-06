@@ -31,8 +31,8 @@ public class Soul_Controller : MonoBehaviour {
 			if (distance <= 2.25f && once)
 			{
 				once = false;
-				GameObject gameBrain = GameObject.Find("GameBrain");
-				gameBrain.SendMessage("ModSouls", SoulValue, SendMessageOptions.RequireReceiver);
+				//GameObject gameBrain = GameObject.Find("GameBrain");
+				GameBrain.Instance.SendMessage("ModSouls", SoulValue, SendMessageOptions.RequireReceiver);
 				if (SFXCollectSoul != null) {
 					GameObject soundeffect = Instantiate(SFXCollectSoul);
 					soundeffect.transform.parent = GameObject.FindWithTag("Player").transform;

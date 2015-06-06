@@ -18,8 +18,7 @@ public class Fire_Ball_Impact_Controller : MonoBehaviour {
 			else if (IgniteChance < 0.0f)
 				IgniteChance = 0.0f;
 
-			Debug.Log("To Reduce CPU Cycles assign the Debuff \"Burning\" to the Burning Debuff Parameter on prefab GameBrain/Spell Database/" + transform.parent.transform.parent.name + "/" + transform.parent.name + ":" + name);
-			BurningDebuff = GameObject.Find("GameBrain/Debuffs/Burning");
+			BurningDebuff = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
 		}
 	}
 	

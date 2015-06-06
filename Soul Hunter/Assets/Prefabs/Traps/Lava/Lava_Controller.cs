@@ -14,6 +14,8 @@ public class Lava_Controller : MonoBehaviour
 	void Start () 
 	{
 		timer = 0.0f;
+		if (burnDebuff == null)
+			burnDebuff = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
 	}
 
 	void OnTriggerEnter(Collider other)

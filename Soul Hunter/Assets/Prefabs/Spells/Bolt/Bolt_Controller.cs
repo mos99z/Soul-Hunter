@@ -37,10 +37,8 @@ public class Bolt_Controller : MonoBehaviour {
 
 		GameObject.FindGameObjectWithTag ("Player").SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
 
-		if (Stunned == null) {
-			Debug.Log("To Reduce CPU Load Assign debuff \"Stunned\" to the parameter Stunned in prefab GameBrain/Spell Database/Bolt:Bolt_Controller.");
-			Stunned = GameObject.Find("GameBrain/Debuffs/Stunned");
-		}
+		if (Stunned == null) 
+			Stunned = GameBrain.Instance.GetComponent<DebuffMasterList>().stunned;
 	}
 
 	void Update ()

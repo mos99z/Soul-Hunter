@@ -21,6 +21,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	int attackCounter = 0;
 	public float AttackCooldown = 2.0f;
 	public GameObject FelMissile = null;
+	public float missleDamage;			// This is used for the cripple debuff
 	float currentAttackTimer = 0.0f;
 
 	
@@ -30,7 +31,9 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 		navigation = GetComponent<NavMeshAgent> ();
 		target = GameObject.FindGameObjectWithTag ("Player");
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
-		
+
+		if (FelMissile)
+			missleDamage = FelMissile.GetComponent<Fel_Missile_Controller>().Damage;
 	}
 	
 	// Update is called once per frame
@@ -52,6 +55,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 					Vector3 startLoc = transform.position;
 					startLoc.y = 1.5f;
 					GameObject RangedAttack = GameObject.Instantiate(FelMissile);
+					RangedAttack.GetComponent<Fel_Missile_Controller>().Damage = missleDamage;	// this assignment is necessary for cripple
 					RangedAttack.transform.position = startLoc;
 					Vector3 newForward = (target.transform.position - transform.position);
 					newForward.y = 0.0f;
