@@ -34,10 +34,8 @@ public class Hydrant_Controller : MonoBehaviour {
 		oldSize = Size;
 		//PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
         transform.position = new Vector3(transform.position.x, StartHeight, transform.position.z);
-		if (WetDebuff == null) {
-			Debug.Log("To Reduce CPU Load assign Debuff \"Wet\" to the WetDebuff Parameter in the prefab GameBrain/Spell Database/Hydrant:Hydrant_Controller");
-			WetDebuff = GameObject.Find ("GameBrain/Debuffs/Wet");
-		}
+		if (WetDebuff == null) 
+			WetDebuff = GameBrain.Instance.GetComponent<DebuffMasterList>().wet;
 		SpellEffect.SetActive (false);
 	}
 	

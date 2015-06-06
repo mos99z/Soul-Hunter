@@ -8,6 +8,8 @@ public class Saw_Controller : MonoBehaviour
 	public float hurtDelay = 0.25f;			// how long to wait in seconds before dealing damage again
 	public float cycleTime = 3.0f;			// how long to wait in seconds between going up and down
 	public float hideSpeed = 2.0f;			// how fast the blade moves in and out of the floor
+	[Header ("Optional. If null, crippled debuff does not apply in saw")]
+	public GameObject crippledDebuff;		// applies a crippled debuff if provided
 
 	float damageTimer;						// used for ticking damage
 	float cycleTimer;						// used for cycling 
@@ -68,6 +70,12 @@ public class Saw_Controller : MonoBehaviour
 		if (other.tag == "Player" || other.tag == "Enemy")
 		{
 			other.SendMessage("TakeDamage", damage);
+			if (crippledDebuff != null)
+			{
+				GameObject debuff = Instantiate(crippledDebuff);
+				debuff.transform.parent = other.transform;
+				debuff.transform.localPosition = Vector3.zero;
+			}
 		}
 	}
 

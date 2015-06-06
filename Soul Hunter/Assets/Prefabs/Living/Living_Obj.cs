@@ -140,6 +140,24 @@ public class Living_Obj : MonoBehaviour
 		int rawDamage = (int)_damage;
 		int ActualDamage = (int)(((float)rawDamage) * (1.0f - Defence));
 
+		Debug.Log(ActualDamage + " Damage recieved by " + transform.name);
+		
+		if (GameBrain.Instance.Player.GetComponent<Player_Movement_Controller>().isCrippled &&
+		    entType != EntityType.Player)
+		{
+			int children = GameBrain.Instance.Player.transform.childCount;
+			for (int child = 0; child < children; child++)
+			{
+				if (GameBrain.Instance.Player.transform.GetChild(child).name.Contains("Crippled"))
+				{
+					float tempDamage = (float)ActualDamage;		// type conversion nonsense
+					tempDamage *= GameBrain.Instance.Player.transform.GetChild(child).GetComponent<Crippled_Controller>().damageReductionModifier;
+					ActualDamage = (int)tempDamage;
+				}
+			}
+			Debug.Log(ActualDamage + " Damage recieved by " + transform.name + " due to cripple");
+		}
+
 		if (CanTakeDamage)
 		{
 			if (ElementType != Element.None)

@@ -29,6 +29,7 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	public GameObject FelMissile;
 	public GameObject SpellBarrage;
 	public GameObject AOE;
+	public float missileDamage, spellDamage, aoeDamage;		// needed for crippled controller
 	float currentAttackTimer = 0.0f;
 	float currentSpellBarrageTimer = 0.0f;
 	float AOEChargeUp = 0.5f;
@@ -42,7 +43,9 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		target = GameObject.FindGameObjectWithTag ("Player");
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
 		currentSpellBarrageTimer = SpellBarrageCooldown;
-		
+		missileDamage = FelMissile.GetComponent<Fel_Missile_Controller> ().Damage;
+		spellDamage = SpellBarrage.GetComponent<Spell_Barrage_Controller> ().Damage;
+		aoeDamage = AOE.GetComponent<AOE_Controller> ().Damage;
 	}
 	
 	// Update is called once per frame
@@ -81,7 +84,8 @@ public class Mage_Captain_Controller : MonoBehaviour {
 						{
 							Vector3 startLoc = transform.position;
 							startLoc.y = 1.5f;
-							GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
+							GameObject missile = (GameObject)GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
+							missile.GetComponent<Fel_Missile_Controller>().Damage = missileDamage; 		// needed for cripple
 							//RangedAttack.transform.position = startLoc;0
 							//Vector3 newForward = (target.transform.position - transform.position);
 							//newForward.y = 0.0f;
@@ -125,6 +129,7 @@ public class Mage_Captain_Controller : MonoBehaviour {
 				{
 					isCastingAOE = true;
 					AOE.SetActive(true);
+					AOE.GetComponent<AOE_Controller>().Damage = aoeDamage;		// needed for cripple
 					currentAOETimer = AOEChargeUp;
 					Debug.Log ("AOE Enabled");
 				}
@@ -153,7 +158,8 @@ public class Mage_Captain_Controller : MonoBehaviour {
 					{
 						Vector3 startLoc = transform.position;
 						startLoc.y = 1.5f;
-						GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);
+						GameObject spell = (GameObject)GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);
+						spell.GetComponent<Spell_Barrage_Controller>().Damage = spellDamage;		// needed for cripple
 						isCastingSpellBarrage = false;
 						currentSpellBarrageTimer = SpellBarrageCooldown;
 						navigation.updateRotation = true;
