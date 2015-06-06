@@ -23,6 +23,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	public GameObject FelMissile = null;
 	public float missleDamage;			// This is used for the cripple debuff
 	float currentAttackTimer = 0.0f;
+	public bool isFrozen = false;		// used for frozen debuff
 
 	
 	// Use this for initialization
@@ -39,6 +40,9 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (isFrozen)
+			return;
+
 		if (target == null) {
 		}
 

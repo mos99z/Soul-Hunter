@@ -12,6 +12,7 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	public float KamikazeDistance = 2.0f;
 	public float ExplosionDamage = 100.0f;
 	public float ExplosionRange = 3.0f;
+	public bool isFrozen = false;	// used for frozen debuff
 
 	// Use this for initialization
 	void Start () 
@@ -23,6 +24,8 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		if (isFrozen)
+			return;
 		if (target == null) {
 		}
 
