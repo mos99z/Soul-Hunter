@@ -16812,7 +16812,7 @@ MonoBehaviour:
   blinded: {fileID: 100058, guid: 334c0795bad10b546b8dff258ca9c2f3, type: 2}
   burning: {fileID: 158764, guid: 8a1c1cb0b6641904ba77091a2b687b5b, type: 2}
   crippled: {fileID: 169850, guid: f59cbcdee176bf444a23ac848b1dc966, type: 2}
-  frozen: {fileID: 0}
+  frozen: {fileID: 183714, guid: 313109ada39e82648aad961eab12a34d, type: 2}
   stunned: {fileID: 145190, guid: a0313986448e0264c8763d913c601fc5, type: 2}
   wet: {fileID: 111420, guid: 715abe3e7f4cdf64eb87818a5d939aa4, type: 2}
 --- !u!114 &11496140
