@@ -1,0 +1,1 @@
+2,2,4,Whirlwind,Cast a whirlwind at your cursor’s location unless it is too close to a wall or outside of the world. Though it deals light damage it pulls enemies into its center and trapped enemies constantly receive damage over time.

@@ -367,6 +367,11 @@ public class GameBrain : MonoBehaviour {
 		}
 	}
 
+	public void ChangeSoulHud()
+	{
+		HUDMaster.GetComponent<StatsDisplay> ().SetSoulsDisplay((uint)SoulCount);
+	}
+
 	// call this function anywhere to save the game at anytime
 	public void Save()
 	{

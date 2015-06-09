@@ -1,0 +1,1 @@
+4,4,4,Bolt,Cast a thin bolt of lightning from your hands in the direction of your coursor. It can stun wet foes and deal extra damage to wet foes. Though bolt is powerful it is inaccurate and can only hit one foe.

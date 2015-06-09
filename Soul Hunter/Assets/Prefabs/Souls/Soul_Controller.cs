@@ -33,7 +33,9 @@ public class Soul_Controller : MonoBehaviour {
 				once = false;
 				//GameObject gameBrain = GameObject.Find("GameBrain");
 				GameBrain.Instance.SendMessage("ModSouls", SoulValue, SendMessageOptions.RequireReceiver);
-				if (SFXCollectSoul != null) {
+				GameBrain.Instance.HUDMaster.SendMessage("CheckLevelAvailability", 0);
+				if (SFXCollectSoul != null)
+				{
 					GameObject soundeffect = Instantiate(SFXCollectSoul);
 					soundeffect.transform.parent = GameObject.FindWithTag("Player").transform;
 					soundeffect.transform.localPosition = new Vector3(0,0,0);

@@ -2,12 +2,12 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Options_Script : MonoBehaviour
+public class Options_Script2 : MonoBehaviour
 {
 	//Handle Menus
 	public GameObject Options;
 	public GameObject MainMenu = null;
-
+	
 	//Handle Buttons
 	public float SFXVolume;
 	public float MusicVolume;
@@ -16,18 +16,18 @@ public class Options_Script : MonoBehaviour
 	public Text FullScreen;
 	public GameObject FullOn;
 	public GameObject FullOff;
-
+	
 	//handle SoulIndex
 	public GameObject[] soulIcons = new GameObject[5];
-
+	
 	//Get MainMenu Variables
 	private Main_Menu_Script mainMenScript;
-
+	
 	//helper vars
 	private int index;
 	private bool needsUpdate;
 	private bool opening;
-
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -56,7 +56,7 @@ public class Options_Script : MonoBehaviour
 			soulIcons[index].SetActive(true);
 			needsUpdate = false;
 		}
-
+		
 		if (Input.GetKeyDown(KeyCode.DownArrow))
 		{
 			index++;
@@ -114,7 +114,6 @@ public class Options_Script : MonoBehaviour
 		{
 			if (Input.GetKey(KeyCode.Return))
 			{
-				Input.ResetInputAxes();
 				SaveAndClose();
 			}
 			if (Input.GetKey(KeyCode.RightArrow))
@@ -128,7 +127,6 @@ public class Options_Script : MonoBehaviour
 		{
 			if (Input.GetKey(KeyCode.Return))
 			{
-				Input.ResetInputAxes();
 				Close();
 			}
 			if (Input.GetKey(KeyCode.LeftArrow))
@@ -142,13 +140,13 @@ public class Options_Script : MonoBehaviour
 			break;
 		}
 	}
-
+	
 	private void OpeningMenu()
 	{
 		index = 0;
 		needsUpdate = true;
 	}
-
+	
 	void LoadData()
 	{
 		MusicVolume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
@@ -158,7 +156,7 @@ public class Options_Script : MonoBehaviour
 		FullOn.SetActive(false);
 		FullOff.SetActive(true);
 	}
-
+	
 	public void AdjustMusVol()
 	{
 		MusicVolume = MusicSlider.value;
@@ -168,7 +166,7 @@ public class Options_Script : MonoBehaviour
 			GameBrain.Instance.Music [1].volume = MusicVolume;
 		}
 	}
-
+	
 	public void AdjustSFXVol()
 	{
 		SFXVolume = SFXSlider.value;
@@ -179,13 +177,13 @@ public class Options_Script : MonoBehaviour
 				GameBrain.Instance.Music [2].Play();		
 		}
 	}
-
+	
 	public void ToggleFullscreen()
 	{
 		Screen.fullScreen = !Screen.fullScreen;
-
+		
 		FullScreen.text = Screen.fullScreen ? "Fullscreen" : "Windowed";
-
+		
 		if (Screen.fullScreen)
 		{
 			FullOn.SetActive(true);
@@ -197,7 +195,7 @@ public class Options_Script : MonoBehaviour
 			FullOff.SetActive(true);
 		}
 	}
-
+	
 	public void SaveAndClose()
 	{
 		opening = true;
@@ -215,7 +213,7 @@ public class Options_Script : MonoBehaviour
 			}
 		}
 	}
-
+	
 	public void Close()
 	{
 		opening = true;
@@ -233,7 +231,7 @@ public class Options_Script : MonoBehaviour
 			}
 		}
 	}
-
+	
 	public void SetIndex0()
 	{
 		index = 0;

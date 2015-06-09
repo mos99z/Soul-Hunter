@@ -1,0 +1,1 @@
+1,1,1,Fire Ball,Cast a ball of fire from your hands in the direction of your coursor. It will burst into a small AOE when it hits a foe or the floor and may ingite foes on fire.
