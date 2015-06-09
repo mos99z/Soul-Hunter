@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 492592}
   - 114: {fileID: 11460332}
+  - 132: {fileID: 13239254}
   m_Layer: 0
   m_Name: Wind Blade
   m_TagString: Untagged
@@ -69,6 +70,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f210ae77df01d548b470041eca381a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 20.2000008
+  RecoveryCost: 1.5
+  Speed: .5
+  Range: 10
+  StartHeight: 1
+  SpellEffect: {fileID: 0}
+  ImpactEffectObj: {fileID: 0}
+  SFXMoving: {fileID: 0}
+--- !u!132 &13239254
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141492}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Wind Blade,2,2,2
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!198 &19819416
 ParticleSystem:
   m_ObjectHideFlags: 1

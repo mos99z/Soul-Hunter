@@ -106,8 +106,8 @@ public class GameBrain : MonoBehaviour {
 	public GameObject Player = null;
 	public GameObject MouseMarker = null;
 	public GameObject HUDMaster = null;
-	public GameObject SpellDatabase = null;
-	public GameObject Souls = null;
+	//public GameObject SpellDatabase = null;
+	public GameObject Souls = null;		// replaced with master spell list
 	//public GameObject Debuffs = null;		// replaced with master list script
 	public GameObject DisplayText = null;
 	public AudioSource[] Music;// = GetComponents<AudioSource> ();
@@ -157,8 +157,8 @@ public class GameBrain : MonoBehaviour {
 				HUDMaster.SetActive (false);
 		}
 
-		if (SpellDatabase != null)
-			SpellDatabase.SetActive (false);
+//		if (SpellDatabase != null)
+//			SpellDatabase.SetActive (false);
 		if (Souls != null)
 			Souls.SetActive (false);
 //		if (Debuffs != null)

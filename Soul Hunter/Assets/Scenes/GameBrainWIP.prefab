@@ -12875,7 +12875,6 @@ MonoBehaviour:
   Player: {fileID: 119260}
   MouseMarker: {fileID: 142160}
   HUDMaster: {fileID: 191138}
-  SpellDatabase: {fileID: 137822}
   Souls: {fileID: 194464}
   DisplayText: {fileID: 155462}
   Music:
@@ -14043,31 +14042,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8278d5b2df38db46abd355c7bf678aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aquaJet: {fileID: 0}
-  barrier: {fileID: 0}
-  bolt: {fileID: 0}
-  boltChain: {fileID: 0}
-  concrete: {fileID: 0}
-  crystalSpikes: {fileID: 0}
-  explosion: {fileID: 0}
-  fireBall: {fileID: 0}
-  fog: {fileID: 0}
-  freeze: {fileID: 0}
-  gravityWell: {fileID: 0}
-  hydrant: {fileID: 0}
-  laser: {fileID: 0}
-  magma: {fileID: 0}
-  meteor: {fileID: 0}
-  muck: {fileID: 0}
-  plasma: {fileID: 0}
-  poisonCloud: {fileID: 0}
-  rockSpike: {fileID: 0}
-  sandBlast: {fileID: 0}
-  shockPrism: {fileID: 0}
-  steam: {fileID: 0}
-  torch: {fileID: 0}
-  whirlwind: {fileID: 0}
-  windBlade: {fileID: 0}
+  aquaJet: {fileID: 119832, guid: 568feda227c835e43bedf7ddc5029b47, type: 2}
+  barrier: {fileID: 143110, guid: 6fda2548d99fb5a428b304a7a06824fd, type: 2}
+  bolt: {fileID: 165526, guid: da55929be6a1b964a9c0ac7b650cbb71, type: 2}
+  boltChain: {fileID: 186748, guid: 7a6fe17527252704199e5cf6494ade59, type: 2}
+  concrete: {fileID: 142736, guid: 75d488bc697e0964aa13cfab8fe75e5a, type: 2}
+  crystalSpikes: {fileID: 113630, guid: 821ece5d27c73bf4391a6bbca2978391, type: 2}
+  explosion: {fileID: 139492, guid: fc61a6a71c0150246b8b611ae83169ae, type: 2}
+  fireBall: {fileID: 142770, guid: 83c10b60b4c83f6468c8d5fbc1f24c4b, type: 2}
+  fog: {fileID: 196290, guid: 23637a362f5bd4a4cb4954e9b528613f, type: 2}
+  freeze: {fileID: 192324, guid: fa32a30e9430f9743ad13335a8fcbb7b, type: 2}
+  gravityWell: {fileID: 163394, guid: 9a86f65833e984a48a870a78ad820d4c, type: 2}
+  hydrant: {fileID: 106946, guid: 9f045e96fc861b142ac45e4a29e1146d, type: 2}
+  laser: {fileID: 144366, guid: 3bfdd45522ea51e4d8adfbe12daf4864, type: 2}
+  magma: {fileID: 102032, guid: 1a079f3280cad6744afeb40685a44c6d, type: 2}
+  meteor: {fileID: 183790, guid: 38d448cc56bd7f34fa181f1cdb72d39e, type: 2}
+  muck: {fileID: 148016, guid: c867f4025376ecb47b9abe0bfbe94931, type: 2}
+  plasma: {fileID: 120504, guid: 731111f9e8f84c0458a781b9da3defb4, type: 2}
+  poisonCloud: {fileID: 124558, guid: fda60be0d2b55684798618879ebbb0fc, type: 2}
+  rockSpike: {fileID: 187164, guid: d129af5d7a6874e40bee5dd25ee00f9d, type: 2}
+  sandBlast: {fileID: 167172, guid: 54cb4b0cfdf0d994fab0e72630af084f, type: 2}
+  shockPrism: {fileID: 180198, guid: 9d0a91a5ae52d434c9d8d090a2a4ba9c, type: 2}
+  steam: {fileID: 105958, guid: 343cd7cfe05acad49bb33d1a9c9233b2, type: 2}
+  torch: {fileID: 144598, guid: 07664ebd6d14bc9469d5c51901a44140, type: 2}
+  whirlwind: {fileID: 141492, guid: 9d589fe13e4b6db438a7f3bdbb49809a, type: 2}
+  windBlade: {fileID: 141492, guid: f51911d126b051945bba444433b8beec, type: 2}
 --- !u!114 &11458876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16338,6 +16337,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199a8f76da31ddf4a8974d4a023faa10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5.0999999
+  tickRate: .200000003
+  recoveryTime: 2
+  growSpeed: 2
+  scaleValue: 4
+  mouseMarker: {fileID: 0}
+  burning: {fileID: 0}
+  burnChance: .899999976
+  burningDuration: 5
+  burningTick: 1
+  burningDamage: 5.0999999
 --- !u!114 &11488566
 MonoBehaviour:
   m_ObjectHideFlags: 1
