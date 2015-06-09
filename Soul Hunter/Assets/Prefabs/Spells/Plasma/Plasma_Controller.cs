@@ -3,12 +3,11 @@ using System.Collections;
 
 public class Plasma_Controller : MonoBehaviour 
 {
-	public float minDamage = 5.4f;		// range of damage
-	public float maxDamage = 25.4f;
+	public float damage = 25.4f;		// how much damage to deal
 	public float recoveryCost = 1.5f;	// how long before player can cast again
 	public float startHeight = 1.0f;	// where to move spell on y-axis for travel
-	public float speed = 1.0f;			// how fast to move the plasma ball
-	public float range = 5.0f;			// how far the plasma ball will travel
+	public float speed = 0.2f;			// how fast to move the plasma ball
+	public float range = 10.0f;			// how far the plasma ball will travel
 	public GameObject mouseMarker;		// pull from the gamebrain
 
 	Vector3 startLoc = Vector3.zero;	// where the spell will spawn
@@ -17,10 +16,12 @@ public class Plasma_Controller : MonoBehaviour
 
 	void Start ()
 	{
+		// set the appropriate spawn point
 		Vector3 spawn = GameBrain.Instance.Player.transform.position;
 		spawn.y = startHeight;
 		transform.position = startLoc = spawn;
 
+		// set the appropriate target location
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
 		Vector3 target = mouseMarker.transform.position;
@@ -51,8 +52,6 @@ public class Plasma_Controller : MonoBehaviour
 	{
 		if (other.tag == "Enemy")
 		{
-			float damage = Random.Range((int)minDamage, (int)maxDamage);
-			damage += minDamage % 1.0f;
 			other.transform.SendMessage ("TakeDamage", damage);
 			
 			Destroy(gameObject);

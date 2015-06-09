@@ -6526,6 +6526,12 @@ MonoBehaviour:
   UpgradesMenu: {fileID: 1974546768}
   SpellListMenu: {fileID: 1131692212}
   MessagePrompt: {fileID: 945520139}
+  pauseSouls:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &267653915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6540,6 +6546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellListMenu: {fileID: 1131692212}
   gameBrain: {fileID: 501258140}
+  NumSpellsDiscovered: {fileID: 1764262930}
   spellSlots:
   - {fileID: 1812897173}
   - {fileID: 1046411284}
@@ -6566,33 +6573,9 @@ MonoBehaviour:
   - {fileID: 820699004}
   - {fileID: 1221599812}
   - {fileID: 668690273}
-  infoCards:
-  - {fileID: 28787798}
-  - {fileID: 1217497847}
-  - {fileID: 1223766492}
-  - {fileID: 177994728}
-  - {fileID: 1367182538}
-  - {fileID: 1193602971}
-  - {fileID: 915653576}
-  - {fileID: 649878148}
-  - {fileID: 1864762974}
-  - {fileID: 789858477}
-  - {fileID: 1693255777}
-  - {fileID: 2131175545}
-  - {fileID: 370863122}
-  - {fileID: 1782522375}
-  - {fileID: 1020096299}
-  - {fileID: 1480635348}
-  - {fileID: 834167530}
-  - {fileID: 309101300}
-  - {fileID: 1205782227}
-  - {fileID: 73935353}
-  - {fileID: 183554625}
-  - {fileID: 815353475}
-  - {fileID: 927147508}
-  - {fileID: 329581474}
-  - {fileID: 1556354340}
-  NumSpellsDiscovered: {fileID: 1764262930}
+  spellName: {fileID: 0}
+  spellInfo: {fileID: 0}
+  spellCombo: {fileID: 0}
 --- !u!114 &267653916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6605,13 +6588,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3da7ed1ae70664449d31dd591dd1616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameBrain: {fileID: 501258140}
   UpgradeMenu: {fileID: 1974546768}
   FireUpgrade: {fileID: 1363712230}
   WindUpgrade: {fileID: 945638765}
   EarthUpgrade: {fileID: 282561952}
   ElectricUpgrade: {fileID: 981289484}
   WaterUpgrade: {fileID: 2018165962}
+  FireImage: {fileID: 0}
+  WindImage: {fileID: 0}
+  EarthImage: {fileID: 0}
+  ElectricImage: {fileID: 0}
+  WaterImage: {fileID: 0}
   FireText: {fileID: 1020249669}
   WindText: {fileID: 385458617}
   EarthText: {fileID: 804080211}
@@ -6643,6 +6630,12 @@ MonoBehaviour:
   FullScreen: {fileID: 926229009}
   FullOn: {fileID: 0}
   FullOff: {fileID: 0}
+  soulIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &267653918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33671,7 +33664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &912307040
 Transform:
   m_ObjectHideFlags: 0
