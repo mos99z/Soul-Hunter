@@ -360,4 +360,9 @@ public class GameBrain : MonoBehaviour {
 		}
 		}
 	}
+
+	public void ChangeSoulHud()
+	{
+		HUDMaster.GetComponent<StatsDisplay> ().SetSoulsDisplay((uint)SoulCount);
+	}
 }

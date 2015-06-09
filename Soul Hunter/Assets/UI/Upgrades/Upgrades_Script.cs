@@ -4,45 +4,57 @@ using System.Collections;
 
 public class Upgrades_Script : MonoBehaviour 
 {
-	public GameBrain gameBrain = null;
 	public GameObject UpgradeMenu = null;
-
-	//int FireLevel;
-	//int WindLevel;
-	//int EarthLevel;
-	//int ElectricLevel;
-	//int WaterLevel;
+	private GameBrain GB;
 
 	int[] LevelCost = {0,1000,2000,3000};
 
+	//Upgrade Buttons
 	public Button FireUpgrade;
 	public Button WindUpgrade;
 	public Button EarthUpgrade;
 	public Button ElectricUpgrade;
 	public Button WaterUpgrade;
 
+	//Button Images
+	public Image FireImage;
+	public Image WindImage;
+	public Image EarthImage;
+	public Image ElectricImage;
+	public Image WaterImage;
+
+	//Button text
 	public Text FireText;
 	public Text WindText;
 	public Text EarthText;
 	public Text ElectricText;
 	public Text WaterText;
 
+	//Description Text
 	public Text FireCost;
 	public Text WindCost;
 	public Text EarthCost;
 	public Text ElectricCost;
 	public Text WaterCost;
 
+	//Helper variales
+	private byte[] ELVs = new byte[3];
+
 	// Use this for initialization
 	void Start () 
 	{
-		//currentSouls = gameBrain.SoulCount;
-		//FireLevel = gameBrain.gameInfo.FireLevel;
-		//WindLevel = gameBrain.gameInfo.WindLevel;
-		//EarthLevel = gameBrain.gameInfo.EarthLevel;
-		//ElectricLevel = gameBrain.gameInfo.ElectricLevel;
-		//WaterLevel = gameBrain.gameInfo.WaterLevel;
-		
+		ELVs[0] = 128;
+		ELVs[1] = 64;
+		ELVs[2] = 0;
+		//currentSouls = GB.SoulCount;
+		//FireLevel = GB.gameInfo.FireLevel;
+		//WindLevel = GB.gameInfo.WindLevel;
+		//EarthLevel = GB.gameInfo.EarthLevel;
+		//ElectricLevel = GB.gameInfo.ElectricLevel;
+		//WaterLevel = GB.gameInfo.WaterLevel;
+
+		GB = GameBrain.Instance;
+
 		CheckLevelAvailability ();
 	}
 	
@@ -54,73 +66,81 @@ public class Upgrades_Script : MonoBehaviour
 
 	void CheckLevelAvailability()
 	{
-		if (gameBrain.FireLevel == 3 || gameBrain.SoulCount < LevelCost [gameBrain.FireLevel + 1]) 
+		if (GB.FireLevel == 3 || GB.SoulCount < LevelCost [GB.FireLevel + 1])
 		{
 			FireUpgrade.interactable = false;
 		}
 		else
+		{
 			FireUpgrade.interactable = true;
-			
+		}			
 
-		if (gameBrain.WindLevel == 3 || gameBrain.SoulCount < LevelCost [gameBrain.WindLevel + 1]) 
+		if (GB.WindLevel == 3 || GB.SoulCount < LevelCost [GB.WindLevel + 1])
 		{
 			WindUpgrade.interactable = false;
 		}
 		else
+		{
 			WindUpgrade.interactable = true;
+		}
 			
 
-		if (gameBrain.EarthLevel == 3 || gameBrain.SoulCount < LevelCost [gameBrain.EarthLevel + 1]) {
+		if (GB.EarthLevel == 3 || GB.SoulCount < LevelCost [GB.EarthLevel + 1])
+		{
 			EarthUpgrade.interactable = false;
 		}
 		else
+		{
 			EarthUpgrade.interactable = true;
-			
+		}
 
-		if (gameBrain.ElectricLevel == 3 || gameBrain.SoulCount < LevelCost [gameBrain.ElectricLevel + 1]) 
+		if (GB.ElectricLevel == 3 || GB.SoulCount < LevelCost [GB.ElectricLevel + 1]) 
 		{
 			ElectricUpgrade.interactable = false;
 		}
 		else
+		{
 			ElectricUpgrade.interactable = true;
-			
+		}
 
-		if (gameBrain.WaterLevel == 3 || gameBrain.SoulCount < LevelCost [gameBrain.WaterLevel + 1]) 
+		if (GB.WaterLevel == 3 || GB.SoulCount < LevelCost [GB.WaterLevel + 1]) 
 		{
 			WaterUpgrade.interactable = false;
 		}
 		else
+		{
 			WaterUpgrade.interactable = true;
+		}
 			
 
-		FireText.text = "Upgrade Fire (" + gameBrain.FireLevel.ToString() + "/3)";
-		WindText.text = "Upgrade Wind (" + gameBrain.WindLevel.ToString() + "/3)";
-		EarthText.text = "Upgrade Earth (" + gameBrain.EarthLevel.ToString() + "/3)";
-		ElectricText.text = "Upgrade Electric (" + gameBrain.ElectricLevel.ToString() + "/3)";
-		WaterText.text = "Upgrade Water (" + gameBrain.WaterLevel.ToString() + "/3)";
+		FireText.text = "Upgrade Fire (" + GB.FireLevel.ToString() + "/3)";
+		WindText.text = "Upgrade Wind (" + GB.WindLevel.ToString() + "/3)";
+		EarthText.text = "Upgrade Earth (" + GB.EarthLevel.ToString() + "/3)";
+		ElectricText.text = "Upgrade Electric (" + GB.ElectricLevel.ToString() + "/3)";
+		WaterText.text = "Upgrade Water (" + GB.WaterLevel.ToString() + "/3)";
 
-		if (gameBrain.FireLevel < 3)
-			FireCost.text = "Fire Upgrade Cost: " + LevelCost [gameBrain.FireLevel + 1];
+		if (GB.FireLevel < 3)
+			FireCost.text = "Fire Upgrade Cost: " + LevelCost [GB.FireLevel + 1];
 		else
 			FireCost.text = "Fire Upgrade Cost: Fully Upgraded";
 
-		if (gameBrain.WindLevel < 3)
-			WindCost.text = "Wind Upgrade Cost: " + LevelCost [gameBrain.WindLevel + 1];
+		if (GB.WindLevel < 3)
+			WindCost.text = "Wind Upgrade Cost: " + LevelCost [GB.WindLevel + 1];
 		else
 			WindCost.text = "Wind Upgrade Cost: Fully Upgraded";
 
-		if (gameBrain.EarthLevel < 3)
-			EarthCost.text = "Earth Upgrade Cost: " + LevelCost [gameBrain.EarthLevel + 1];
+		if (GB.EarthLevel < 3)
+			EarthCost.text = "Earth Upgrade Cost: " + LevelCost [GB.EarthLevel + 1];
 		else
 			EarthCost.text = "Earth Upgrade Cost: Fully Upgraded";
 
-		if (gameBrain.ElectricLevel < 3)
-			ElectricCost.text = "Electric Upgrade Cost: " + LevelCost [gameBrain.ElectricLevel + 1];
+		if (GB.ElectricLevel < 3)
+			ElectricCost.text = "Electric Upgrade Cost: " + LevelCost [GB.ElectricLevel + 1];
 		else
 			ElectricCost.text = "Electric Upgrade Cost: Fully Upgraded";
 
-		if (gameBrain.WaterLevel < 3)
-			WaterCost.text = "Water Upgrade Cost: " + LevelCost [gameBrain.WaterLevel + 1];
+		if (GB.WaterLevel < 3)
+			WaterCost.text = "Water Upgrade Cost: " + LevelCost [GB.WaterLevel + 1];
 		else
 			WaterCost.text = "Water Upgrade Cost: Fully Upgraded";
 			
@@ -128,38 +148,104 @@ public class Upgrades_Script : MonoBehaviour
 
 	public void UpgradeFire()
 	{
-		gameBrain.SoulCount -= LevelCost [gameBrain.FireLevel + 1];
-		//gameBrain.GetComponent<StatsDisplay> ().updateSoul = true;
-		gameBrain.FireLevel++;
+		GB.SoulCount -= LevelCost [GB.FireLevel + 1];
+		//GB.GetComponent<StatsDisplay> ().updateSoul = true;
+		GB.FireLevel++;
 		CheckLevelAvailability ();
+		FireImage.color = new Color32(255, ELVs[GB.FireLevel - 1], ELVs[GB.FireLevel - 1], 255);
+		GB.ChangeSoulHud();
 	}
 
 	public void UpgradeWind()
 	{
-		gameBrain.SoulCount -= LevelCost [gameBrain.WindLevel + 1];
-		gameBrain.WindLevel++;
+		GB.SoulCount -= LevelCost [GB.WindLevel + 1];
+		GB.WindLevel++;
 		CheckLevelAvailability ();
+
+		byte R = 0;
+		byte G = 0;
+		byte B = 0;
+		
+		switch (GB.WindLevel)
+		{
+		case 1:
+		{
+			R = G = B = 192;
+			break;
+		}
+		case 2:
+		{
+			R = G = B = 128;
+			break;
+		}
+		case 3:
+		{
+			R = G = B = 64;
+			break;
+		}
+		default:
+			break;
+		}
+		WindImage.color = new Color32(R, G, B, 255);
+		GB.ChangeSoulHud();
 	}
 
 	public void UpgradeEarth()
 	{
-		gameBrain.SoulCount -= LevelCost [gameBrain.EarthLevel + 1];
-		gameBrain.EarthLevel++;
+		GB.SoulCount -= LevelCost [GB.EarthLevel + 1];
+		GB.EarthLevel++;
 		CheckLevelAvailability ();
+
+		byte R = 0;
+		byte G = 0;
+		byte B = 0;
+
+		switch (GB.EarthLevel)
+		{
+		case 1:
+		{
+			R = 160;
+			G = 125;
+			B = 65;
+			break;
+		}
+		case 2:
+		{
+			R = 180;
+			G = 130;
+			B = 50;
+			break;
+		}
+		case 3:
+		{
+			R = 170;
+			G = 100;
+			B = 0;
+			break;
+		}
+		default:
+			break;
+		}
+		EarthImage.color = new Color32(R, G, B, 255);
+		GB.ChangeSoulHud();
 	}
 
 	public void UpgradeElectric()
 	{
-		gameBrain.SoulCount -= LevelCost [gameBrain.ElectricLevel + 1];
-		gameBrain.ElectricLevel++;
+		GB.SoulCount -= LevelCost [GB.ElectricLevel + 1];
+		GB.ElectricLevel++;
 		CheckLevelAvailability ();
+		ElectricImage.color = new Color32(255, 255, ELVs[GB.ElectricLevel - 1], 255);
+		GB.ChangeSoulHud();
 	}
 
 	public void UpgradeWater()
 	{
-		gameBrain.SoulCount -= LevelCost [gameBrain.WaterLevel + 1];
-		gameBrain.WaterLevel++;
+		GB.SoulCount -= LevelCost [GB.WaterLevel + 1];
+		GB.WaterLevel++;
 		CheckLevelAvailability ();
+		WaterImage.color = new Color32(ELVs[GB.WaterLevel - 1], ELVs[GB.WaterLevel - 1], 255, 255);
+		GB.ChangeSoulHud();
 	}
 
 	public void Close()

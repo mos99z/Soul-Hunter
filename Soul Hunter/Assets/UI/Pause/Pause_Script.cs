@@ -12,8 +12,11 @@ public class Pause_Script : MonoBehaviour {
 	public GameObject SpellListMenu;
 	public GameObject MessagePrompt;
 
+	public GameObject[] pauseSouls = new GameObject[5];
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 	
 	}
 	
@@ -38,6 +41,10 @@ public class Pause_Script : MonoBehaviour {
 
 	public void Resume()
 	{
+		for (int i = 0; i < pauseSouls.Length; i++)
+		{
+			pauseSouls[i].SetActive(false);
+		}
 		if (OptionsMenu.activeSelf == false && 
 			UpgradesMenu.activeSelf == false &&
 		    SpellListMenu.activeSelf == false &&
@@ -67,5 +74,47 @@ public class Pause_Script : MonoBehaviour {
 	public void Exit()
 	{
 		MessagePrompt.SetActive (true);
+	}
+
+	public void ActivateSoul1()
+	{
+		pauseSouls[0].SetActive(true);
+	}
+	public void ActivateSoul2()
+	{
+		pauseSouls[1].SetActive(true);
+	}
+	public void ActivateSoul3()
+	{
+		pauseSouls[2].SetActive(true);
+	}
+	public void ActivateSoul4()
+	{
+		pauseSouls[3].SetActive(true);
+	}
+	public void ActivateSoul5()
+	{
+		pauseSouls[4].SetActive(true);
+	}
+
+	public void DeactivateSoul1()
+	{
+		pauseSouls[0].SetActive(false);
+	}
+	public void DeactivateSoul2()
+	{
+		pauseSouls[1].SetActive(false);
+	}
+	public void DeactivateSoul3()
+	{
+		pauseSouls[2].SetActive(false);
+	}
+	public void DeactivateSoul4()
+	{
+		pauseSouls[3].SetActive(false);
+	}
+	public void DeactivateSoul5()
+	{
+		pauseSouls[4].SetActive(false);
 	}
 }
