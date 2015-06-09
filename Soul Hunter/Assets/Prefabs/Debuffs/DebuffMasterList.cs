@@ -10,6 +10,7 @@ public class DebuffMasterList : MonoBehaviour
 	public GameObject burning;
 	public GameObject crippled;
 	public GameObject frozen;
+	public GameObject slowed;
 	public GameObject stunned;
 	public GameObject wet;
 }
