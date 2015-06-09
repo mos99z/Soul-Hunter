@@ -4902,6 +4902,7 @@ GameObject:
   - 82: {fileID: 8233680}
   - 82: {fileID: 8236202}
   - 114: {fileID: 11495970}
+  - 114: {fileID: 11458850}
   m_Layer: 2
   m_Name: GameBrainWIP
   m_TagString: Untagged
@@ -12858,6 +12859,7 @@ MonoBehaviour:
   PlayerLivesLeft: 3
   SoulCount: 0
   CurrentLevel: 1
+  RoomsCleared: 
   FireLevel: 0
   WindLevel: 0
   EarthLevel: 0
@@ -12875,7 +12877,6 @@ MonoBehaviour:
   HUDMaster: {fileID: 191138}
   SpellDatabase: {fileID: 137822}
   Souls: {fileID: 194464}
-  Debuffs: {fileID: 0}
   DisplayText: {fileID: 155462}
   Music:
   - {fileID: 8236202}
@@ -14031,6 +14032,42 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11458850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8278d5b2df38db46abd355c7bf678aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aquaJet: {fileID: 0}
+  barrier: {fileID: 0}
+  bolt: {fileID: 0}
+  boltChain: {fileID: 0}
+  concrete: {fileID: 0}
+  crystalSpikes: {fileID: 0}
+  explosion: {fileID: 0}
+  fireBall: {fileID: 0}
+  fog: {fileID: 0}
+  freeze: {fileID: 0}
+  gravityWell: {fileID: 0}
+  hydrant: {fileID: 0}
+  laser: {fileID: 0}
+  magma: {fileID: 0}
+  meteor: {fileID: 0}
+  muck: {fileID: 0}
+  plasma: {fileID: 0}
+  poisonCloud: {fileID: 0}
+  rockSpike: {fileID: 0}
+  sandBlast: {fileID: 0}
+  shockPrism: {fileID: 0}
+  steam: {fileID: 0}
+  torch: {fileID: 0}
+  whirlwind: {fileID: 0}
+  windBlade: {fileID: 0}
 --- !u!114 &11458876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16775,7 +16812,7 @@ MonoBehaviour:
   blinded: {fileID: 100058, guid: 334c0795bad10b546b8dff258ca9c2f3, type: 2}
   burning: {fileID: 158764, guid: 8a1c1cb0b6641904ba77091a2b687b5b, type: 2}
   crippled: {fileID: 169850, guid: f59cbcdee176bf444a23ac848b1dc966, type: 2}
-  frozen: {fileID: 186412, guid: 313109ada39e82648aad961eab12a34d, type: 2}
+  frozen: {fileID: 0}
   stunned: {fileID: 145190, guid: a0313986448e0264c8763d913c601fc5, type: 2}
   wet: {fileID: 111420, guid: 715abe3e7f4cdf64eb87818a5d939aa4, type: 2}
 --- !u!114 &11496140

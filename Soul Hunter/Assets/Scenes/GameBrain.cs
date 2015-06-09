@@ -39,21 +39,22 @@ public enum SoulType
 	Black
 }
 [Serializable]
-public class GameInfo
+public class GameInfo		// for game save/load
 {
 	public int PlayerMaxHealth;
 	public int PlayerCurrHealth;
 	public int PlayerLivesLeft;
 	public int SoulCount;
-	public GameObject player;
+	//public GameObject player;		// this shouldn't be needed
 
+	// upgrades
 	public int FireLevel;
 	public int WindLevel;
 	public int EarthLevel;
 	public int ElectricLevel;
 	public int WaterLevel;
 
-	public bool[] RoomsCleared;
+	public List<int> RoomsCleared;	// used for keeping track of minion rooms cleared and where to spawn player
 
 	// Level 0 is tutorial
 	public int CurrentLevel;
@@ -66,6 +67,11 @@ public class GameInfo
 	public int DeathCount;
 	public double GameTime;
 	public int NumCastedSpells;
+
+	// other info
+	public bool[] spellsCast;
+	public GameObject[] selectedMacros;
+	//public bool[,] miniMap;	// to be enabled once figured out
 }
 
 public class GameBrain : MonoBehaviour {
@@ -78,7 +84,7 @@ public class GameBrain : MonoBehaviour {
 	public int SoulCount = 0;
 	// Level 0 is tutorial
 	public int CurrentLevel = -1;
-
+	public List<int> RoomsCleared;
 	private GameInfo gameInfo;
 
 	public int FireLevel = 0;
@@ -102,7 +108,7 @@ public class GameBrain : MonoBehaviour {
 	public GameObject HUDMaster = null;
 	public GameObject SpellDatabase = null;
 	public GameObject Souls = null;
-	public GameObject Debuffs = null;
+	//public GameObject Debuffs = null;		// replaced with master list script
 	public GameObject DisplayText = null;
 	public AudioSource[] Music;// = GetComponents<AudioSource> ();
 
@@ -155,8 +161,8 @@ public class GameBrain : MonoBehaviour {
 			SpellDatabase.SetActive (false);
 		if (Souls != null)
 			Souls.SetActive (false);
-		if (Debuffs != null)
-			Debuffs.SetActive (false);
+//		if (Debuffs != null)
+//			Debuffs.SetActive (false);
 		if (DisplayText != null)
 			DisplayText.SetActive (false);
 		LoadPlayerData ();
@@ -169,7 +175,7 @@ public class GameBrain : MonoBehaviour {
 		else if (CurrentLevel == -2) {
 			GameObject TallyScreen = GameObject.Find ("TallyScreenBack");
 
-			TallyScreen.transform.FindChild("Game Time Count").GetComponent<Text>().text = GameTime.ToString();
+			TallyScreen.transform.FindChild("Game Time Count").GetComponent<Text>().text = GameTime.ToString("##00.00");
 			TallyScreen.transform.FindChild("Damage Dealt Count").GetComponent<Text>().text = DamageDealt.ToString();
 			TallyScreen.transform.FindChild("Enemies Defeated Count").GetComponent<Text>().text = NumEnemiesKilled.ToString();
 			TallyScreen.transform.FindChild("Souls Collected Count").GetComponent<Text>().text = TotalSoulCount.ToString();
@@ -360,4 +366,133 @@ public class GameBrain : MonoBehaviour {
 		}
 		}
 	}
+
+	// call this function anywhere to save the game at anytime
+	public void Save()
+	{
+		BinaryFormatter bf = new BinaryFormatter ();
+
+		string saveDestination = Application.persistentDataPath + "/PlayerInfo.dat";
+		Debug.Log (saveDestination);
+		FileStream file = File.Create (saveDestination);
+		
+		// store all the game information into our container class
+		GameInfo info = new GameInfo();
+		info.PlayerMaxHealth = PlayerMaxHealth;
+		info.PlayerCurrHealth = PlayerCurrHealth;
+		info.PlayerLivesLeft = PlayerLivesLeft;
+		info.SoulCount = SoulCount;
+
+		info.FireLevel = FireLevel;
+		info.WindLevel = WindLevel;
+		info.EarthLevel = EarthLevel;
+		info.ElectricLevel = ElectricLevel;
+		info.WaterLevel = WaterLevel;
+
+		info.RoomsCleared.Clear();	// should be empty, but clearing to make sure
+		for (int i = 0; i < RoomsCleared.Count; i++)
+			info.RoomsCleared.Add(RoomsCleared[i]);
+
+		info.CurrentLevel = CurrentLevel;
+		info.NumEnemiesKilled = NumEnemiesKilled;
+		info.DamageTaken = DamageTaken;
+		info.TotalSoulCount = TotalSoulCount;
+		info.DeathCount = DeathCount;
+		info.GameTime = GameTime;
+		info.NumCastedSpells = NumCastedSpells;
+
+		info.spellsCast = SpellHasBeenCast;
+		info.selectedMacros = new GameObject[5];
+		for (int i = 0; i < 5; ++i)
+			info.selectedMacros[i] = GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i];
+
+		bf.Serialize (file, info);
+		file.Close ();
+	}
+
+	// call this function when selecting new game to nuke the original file
+	public void EraseFile()
+	{
+		BinaryFormatter bf = new BinaryFormatter ();
+		
+		string saveDestination = Application.persistentDataPath + "/PlayerInfo.dat";
+		Debug.Log (saveDestination);
+		FileStream file = File.Create (saveDestination);
+		
+		// store all the game information into our container class
+		GameInfo info = new GameInfo();
+		info.PlayerMaxHealth = 2000;
+		info.PlayerCurrHealth = 2000;
+		info.PlayerLivesLeft = 3;
+		info.SoulCount = 0;
+		
+		info.FireLevel = 0;
+		info.WindLevel = 0;
+		info.EarthLevel = 0;
+		info.ElectricLevel = 0;
+		info.WaterLevel = 0;
+
+		info.RoomsCleared.Clear();
+
+		info.CurrentLevel = 0;
+		info.NumEnemiesKilled = 0;
+		info.DamageTaken = 0;
+		info.TotalSoulCount = 0;
+		info.DeathCount = 0;
+		info.GameTime = 0;
+		info.NumCastedSpells = 0;
+
+		info.spellsCast = new bool[25];
+		for (int i = 0; i < 25; ++i)
+			info.spellsCast[i] = false;
+		info.selectedMacros = new GameObject[5];
+		for (int i = 0; i < 5; ++i)			// TODO: when refactoring spells, assign the defaults here
+			info.selectedMacros[i] = GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i];
+
+		
+		bf.Serialize (file, info);
+		file.Close ();
+	}
+
+	// call this function when selecting continue
+	public void Load()
+	{
+		string loadFile = Application.persistentDataPath + "/PlayerInfo.dat";
+		
+		if(File.Exists(loadFile))
+		{
+			BinaryFormatter bf = new BinaryFormatter();
+			FileStream file = File.Open(loadFile, FileMode.Open);
+			GameInfo info = (GameInfo)bf.Deserialize(file);
+			file.Close();
+			
+			// set values of our gameBrain to those loaded from save
+			PlayerMaxHealth = info.PlayerMaxHealth;
+			PlayerCurrHealth = info.PlayerCurrHealth;
+			PlayerLivesLeft = info.PlayerLivesLeft;
+			SoulCount = info.SoulCount;
+
+			FireLevel = info.FireLevel;
+			WindLevel = info.WindLevel;
+			EarthLevel = info.EarthLevel;
+			ElectricLevel = info.ElectricLevel;
+			WaterLevel = info.WaterLevel;
+
+			for (int i = 0; i < info.RoomsCleared.Count; ++i)
+				RoomsCleared.Add(info.RoomsCleared[i]);
+
+			CurrentLevel = info.CurrentLevel;
+			NumEnemiesKilled = info.NumEnemiesKilled;
+			DamageTaken = info.DamageTaken;
+			TotalSoulCount = info.TotalSoulCount;
+			DeathCount = info.DeathCount;
+			GameTime = info.GameTime;
+			NumCastedSpells = info.NumCastedSpells;
+
+			SpellHasBeenCast = info.spellsCast;
+			for (int i = 0; i < 5; i++)
+				GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i] = info.selectedMacros[i];
+		}
+	}
+
 }
