@@ -24235,6 +24235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1b9ab9f5a217b409ee726bec6253ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  duration: 1
+  recoveryTime: .75
+  slowed: {fileID: 0}
+  mouseMarker: {fileID: 0}
 --- !u!1 &748582369
 GameObject:
   m_ObjectHideFlags: 0
@@ -26112,6 +26117,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199a8f76da31ddf4a8974d4a023faa10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5.0999999
+  tickRate: .200000003
+  recoveryTime: 2
+  growSpeed: 2
+  scaleValue: 4
+  mouseMarker: {fileID: 0}
+  burning: {fileID: 0}
+  burnChance: .899999976
+  burningDuration: 5
+  burningTick: 1
+  burningDamage: 5.0999999
 --- !u!1 &812985597
 GameObject:
   m_ObjectHideFlags: 0
@@ -43581,6 +43597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67338ab285c9f640b6f4c9e0da25424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 10
 --- !u!1 &1193850011
 GameObject:
   m_ObjectHideFlags: 0
@@ -49998,6 +50015,7 @@ MonoBehaviour:
   PlayerLivesLeft: 3
   SoulCount: 20000
   CurrentLevel: -1
+  RoomsCleared: 
   FireLevel: 0
   WindLevel: 0
   EarthLevel: 0
@@ -50013,9 +50031,7 @@ MonoBehaviour:
   Player: {fileID: 2031991668}
   MouseMarker: {fileID: 316358188}
   HUDMaster: {fileID: 882392391}
-  SpellDatabase: {fileID: 1364572801}
   Souls: {fileID: 1026269815}
-  Debuffs: {fileID: 1582543605}
   DisplayText: {fileID: 530516780}
   Music:
   - {fileID: 1329567337}
