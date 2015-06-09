@@ -7,7 +7,6 @@ public class Crippled_Controller : MonoBehaviour
 	public float slowSpeedModifier = 0.5f;			// fraction to reduce objects speed by
 	public float damageReductionModifier = 0.5f;	// fraction to reduce enemy attacks
 
-	float timer;				// keep track of reference to duration
 	float origSpeed;			// remember objects original speed
 	float origDamage;			// remember original damage value
 	float origSpell, origAOE;	// for mage captain
@@ -15,7 +14,6 @@ public class Crippled_Controller : MonoBehaviour
 
 	void Start () 
 	{
-		timer = 0.0f;
 		check = true;
 	}
 	
@@ -23,6 +21,17 @@ public class Crippled_Controller : MonoBehaviour
 	{
 		if (check && transform.parent != null)
 		{
+			int children = transform.parent.childCount;
+			for (int child = 0; child < children; child++)
+			{
+				if (transform.parent.GetChild(child).name.Contains("Crippled") && transform.parent.GetChild(child) != this.transform)
+				{
+					transform.parent.GetChild(child).GetComponent<Crippled_Controller>().duration = duration; // reset timer on original, and kill self
+					Destroy(gameObject);
+					return;
+				}
+			}
+			check = false;
 			if (transform.parent.tag == "Player")
 			{
 				origSpeed = transform.parent.GetComponent<Player_Movement_Controller>().Speed;
@@ -69,18 +78,9 @@ public class Crippled_Controller : MonoBehaviour
 					transform.parent.GetComponent<Mage_Captain_Controller>().spellDamage *= damageReductionModifier;
 				}
 			}
-			int children = transform.parent.childCount;
-			for (int child = 0; child < children; child++)
-			{
-				if (transform.parent.GetChild(child).name == "Crippled(Clone)" && transform.parent.GetChild(child) != transform)
-				{
-					Destroy(transform.parent.GetChild(child).gameObject);
-				}
-			}
-			check = false;
 		}
-		timer += Time.deltaTime;
-		if (timer >= duration)
+		duration -= Time.deltaTime;
+		if (duration <= 0.0f)
 		{
 			if (transform.parent.tag == "Player")
 			{

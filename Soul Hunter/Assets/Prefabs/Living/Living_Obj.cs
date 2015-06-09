@@ -158,6 +158,18 @@ public class Living_Obj : MonoBehaviour
 			Debug.Log(ActualDamage + " Damage recieved by " + transform.name + " due to cripple");
 		}
 
+		// check if frozen, set frozen duration to 0 to let debuff kill self if taking damage
+		if (entType == EntityType.Minion)
+		{
+			int children = transform.childCount;
+			for (int child = 0; child < children; ++child)
+			{
+				if (transform.GetChild(child).name.Contains("Frozen"))
+					transform.GetChild(child).GetComponent<Frozen_Controller>().duration = 0.0f;
+			}
+
+		}
+
 		if (CanTakeDamage)
 		{
 			if (ElementType != Element.None)

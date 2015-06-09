@@ -27,6 +27,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 
 	public GameObject DirectionIndicator = null;
 	public Animator Animate = null;
+	public bool isFrozen = false;		// used for frozen debuff
 
 	// Use this for initialization
 	void Start ()
@@ -50,6 +51,8 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	// If there is a target, the enemy will rotate around the player and lunge in after a certain amount of time has passed
 	void FixedUpdate () 
 	{
+		if (isFrozen)
+			return;
 		if (player == null) {
 		}
 
