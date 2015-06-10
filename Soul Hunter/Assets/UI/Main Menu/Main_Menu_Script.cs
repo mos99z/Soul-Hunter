@@ -153,6 +153,7 @@ public class Main_Menu_Script : MonoBehaviour
 		//GameOver.SendMessage ("Reset");
 		int zero = 0;
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
+		GameBrain.Instance.EraseFile();
 		Application.LoadLevel ("TempTutorial");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
@@ -165,6 +166,7 @@ public class Main_Menu_Script : MonoBehaviour
 //		GameObject newPlayer = Instantiate (player);
 //		newPlayer.transform.parent = GameBrain.Instance.transform;
 //		newPlayer.transform.localPosition = Vector3.zero;
+		GameBrain.Instance.EraseFile();
 		Application.LoadLevel("Level 1");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
