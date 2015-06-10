@@ -53367,6 +53367,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11407122, guid: 75d488bc697e0964aa13cfab8fe75e5a, type: 2}
+      propertyPath: slow
+      value: 
+      objectReference: {fileID: 150616, guid: 07fd5da6258277544b6f0208a016c4b3, type: 2}
+    - target: {fileID: 11407122, guid: 75d488bc697e0964aa13cfab8fe75e5a, type: 2}
+      propertyPath: mouseMarker
+      value: 
+      objectReference: {fileID: 1734050711}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75d488bc697e0964aa13cfab8fe75e5a, type: 2}
   m_IsPrefabParent: 0

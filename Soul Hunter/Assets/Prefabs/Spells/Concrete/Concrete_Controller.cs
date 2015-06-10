@@ -9,6 +9,8 @@ public class Concrete_Controller : MonoBehaviour
 	public float rotateSpeed = 90.0f;	// how much spin to give the spell
 	public float recoveryCost = 2.0f;	// how long for spell to cooldown
 
+	public GameObject slow;				// slowed debuff
+
 	void Start () 
 	{
 		if (mouseMarker == null)
@@ -27,5 +29,16 @@ public class Concrete_Controller : MonoBehaviour
 		duration -= Time.deltaTime;
 		if (duration <= 0.0f)
 			Destroy(gameObject);
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Enemy")
+		{
+			GameObject debuff = Instantiate(slow);
+			debuff.transform.parent = other.transform;
+			debuff.transform.localPosition = Vector3.zero;
+			debuff.GetComponent<Slowed_Controller>().fromConcrete = true;
+		}
 	}
 }
