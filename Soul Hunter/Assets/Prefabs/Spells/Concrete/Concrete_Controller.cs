@@ -20,6 +20,9 @@ public class Concrete_Controller : MonoBehaviour
 		transform.position = spawn;
 		transform.Rotate(Vector3.right, 270.0f);
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryCost);
+
+		if (slow == null)
+			slow = GameBrain.Instance.GetComponent<DebuffMasterList>().slowed;
 	}
 	
 	void Update () 

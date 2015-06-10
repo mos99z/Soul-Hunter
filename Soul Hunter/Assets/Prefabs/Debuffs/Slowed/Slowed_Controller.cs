@@ -36,7 +36,8 @@ public class Slowed_Controller : MonoBehaviour
 			{
 				if (transform.parent.GetChild(child).name == "Slowed(Clone)" && transform.parent.GetChild(child) != transform)
 				{
-					Destroy(transform.parent.GetChild(child).gameObject);
+					transform.parent.GetChild(child).GetComponent<Slowed_Controller>().duration = duration;
+					Destroy(gameObject);
 				}
 			}
 			check = false;

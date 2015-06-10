@@ -75,6 +75,16 @@ public class Explosion_Controller : MonoBehaviour
 			cripple = GameBrain.Instance.GetComponent<DebuffMasterList>().crippled;
 
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
+
+		if (GameBrain.Instance.FireLevel > 0)
+		{
+			switch (GameBrain.Instance.FireLevel)
+			{
+			case 1: damage = damage*2.0f - 0.1f; break;
+			case 2: damage = damage*3.0f - 0.2f; break;
+			case 3: damage = damage*4.0f - 0.3f; break;
+			}
+		}
 	}
 	
 	void Update () 
