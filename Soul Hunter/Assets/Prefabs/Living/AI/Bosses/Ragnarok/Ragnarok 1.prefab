@@ -40,12 +40,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 476262}
   - 195: {fileID: 19594514}
-  - 136: {fileID: 13610310}
   - 54: {fileID: 5433414}
-  - 114: {fileID: 11449168}
-  - 114: {fileID: 11427866}
-  - 135: {fileID: 13594916}
-  m_Layer: 0
+  - 136: {fileID: 13666178}
+  m_Layer: 11
   m_Name: Ragnarok 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -63,7 +60,7 @@ GameObject:
   - 212: {fileID: 21208426}
   - 95: {fileID: 9510852}
   m_Layer: 0
-  m_Name: Melee Image
+  m_Name: Ragnarok Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.39999998, y: 0, z: 15}
+  m_LocalPosition: {x: -.870000005, y: 0, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 478856}
@@ -144,7 +141,7 @@ Animator:
   m_GameObject: {fileID: 192728}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2659c847e3c256c44b3f457ceef9a68b, type: 2}
+  m_Controller: {fileID: 9100000, guid: b7743e1b84e771d4d8a99a5ca5422517, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -152,62 +149,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11427866
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55454eb8dc7f9d9449f27210b0e8314f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  attackingWaypoints: []
-  isAttacking: 0
-  isSwarming: 0
-  WaitMinimum: 5
-  WaitMaximum: 7
-  AttackTimer: 5
-  Damage: 100
-  AttackCollider: {fileID: 13594916}
-  DirectionIndicator: {fileID: 136678}
-  Animate: {fileID: 9510852}
-  isFrozen: 0
---- !u!114 &11449168
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaaf75ca4776b3745b68bd1c3e183610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Defence: 0
-  ElementType: 0
-  MaxHealth: 100
-  CurrHealth: 100
-  CanTakeDamage: 1
-  CanDie: 1
-  Lives: 1
-  SoulValue: 1
-  entType: 1
---- !u!135 &13594916
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185894}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 1.25
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!136 &13610310
+--- !u!136 &13666178
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -216,10 +158,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
+  m_Radius: 1.5
+  m_Height: 7
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 2.75, z: 0}
 --- !u!195 &19594514
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -236,7 +178,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 4
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -264,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0e925c22bacd2d34aadd32f5a37d16bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4235c4287ab5c9440b0d13cf599461dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21260876
 SpriteRenderer:
