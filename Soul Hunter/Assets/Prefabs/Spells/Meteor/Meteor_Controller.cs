@@ -18,13 +18,15 @@ public class Meteor_Controller : MonoBehaviour
 	public float burnTime = 5.0f;		// how long burning lasts
 	public GameObject cripple;			// crippled debuff
 
+	Vector3 origPos;	// for lerp function
+
 	void Start () 
 	{
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
 		Vector3 spawn = target = mouseMarker.transform.position;
 		spawn.y = startHeight;
-		transform.position = spawn;
+		transform.position = origPos = spawn;
 
 		if (burn == null)
 			burn = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
@@ -39,7 +41,7 @@ public class Meteor_Controller : MonoBehaviour
 	{
 		float currentTime = 0.0f;
 		do {
-			transform.position = Vector3.Lerp (transform.position, target, currentTime / time);
+			transform.position = Vector3.Lerp (origPos, target, currentTime / time);
 			currentTime += Time.deltaTime;
 			yield return null;
 		} while (currentTime < time);
