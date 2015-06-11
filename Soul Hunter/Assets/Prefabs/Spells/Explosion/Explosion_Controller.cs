@@ -50,17 +50,18 @@ public class Explosion_Controller : MonoBehaviour
 				chance = Random.Range(0.0f,1.0f);
 				if (chance <= crippleChance)
 				{
-					int children = other.transform.childCount;
-					for (int child = 0; child < children; child++)
-					{
-						if (transform.GetChild(child).name.Contains("Frozen"))
-						{
-							other.GetComponent<Living_Obj>().CurrHealth = 0;
-							other.SendMessage("PulseCheck");
-							Debug.Log("cripple + frozen killed " + other.name);
-							return;
-						}
-					}
+					// TODO: make frozen debuff kill object
+//					int children = other.transform.childCount;
+//					for (int child = 0; child < children; child++)
+//					{
+//					if (transform.FindChild("Frozen(Clone)"))
+//						{
+//							other.GetComponent<Living_Obj>().CurrHealth = 0;
+//							other.SendMessage("PulseCheck");
+//							Debug.Log("cripple + frozen killed " + other.name);
+//							return;
+//						}
+//					}
 
 					GameObject cripp = Instantiate(cripple);
 					cripp.transform.parent = other.transform;
@@ -113,17 +114,17 @@ public class Explosion_Controller : MonoBehaviour
 			chance = Random.Range(0.0f,1.0f);
 			if (chance <= crippleChance)
 			{
-				int children = other.transform.childCount;
-				for (int child = 0; child < children; child++)
-				{
-					if (transform.GetChild(child).name.Contains("Frozen"))
-					{
-						other.GetComponent<Living_Obj>().CurrHealth = 0;
-						other.SendMessage("PulseCheck");
-						Debug.Log("cripple + frozen killed " + other.name);
-						return;
-					}
-				}
+//					int children = other.transform.childCount;
+//					for (int child = 0; child < children; child++)
+//					{
+//					if (transform.FindChild("Frozen(Clone)"))
+//						{
+//							other.GetComponent<Living_Obj>().CurrHealth = 0;
+//							other.SendMessage("PulseCheck");
+//							Debug.Log("cripple + frozen killed " + other.name);
+//							return;
+//						}
+//					}
 				GameObject cripp = Instantiate(cripple);
 				cripp.transform.parent = other.transform;
 				cripp.transform.localPosition = Vector3.zero;
