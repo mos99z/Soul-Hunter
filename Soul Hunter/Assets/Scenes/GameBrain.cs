@@ -316,10 +316,42 @@ public class GameBrain : MonoBehaviour {
 	void Update () {
 		if (CurrentLevel > 0)
 			GameTime += Time.deltaTime;
-		else if (CurrentLevel == -2) {
+		else if (CurrentLevel == -2)
+		{
 			GameObject TallyScreen = GameObject.Find ("TallyScreenBack");
+			double tempTime = GameTime;
+			int hours = (int)(tempTime / 3600);
+			tempTime = (int)tempTime - hours * 3600;
+			int minutes = (int)(tempTime / 60);
+			int seconds = (int)tempTime - minutes * 60;
 
-			TallyScreen.transform.FindChild("Game Time Count").GetComponent<Text>().text = GameTime.ToString("##00.00");
+			string fulltime;
+			if (hours < 10)
+			{
+				fulltime = "0" + hours + ":";
+			}
+			else
+			{
+				fulltime = hours + ":";
+			}
+			if (minutes < 10)
+			{
+				fulltime += "0" + minutes + ":";
+			}
+			else
+			{
+				fulltime += minutes + ":";
+			}
+			if (seconds < 10)
+			{
+				fulltime += "0" + seconds;
+			}
+			else
+			{
+				fulltime += seconds.ToString();
+			}
+
+			TallyScreen.transform.FindChild("Game Time Count").GetComponent<Text>().text = fulltime;
 			TallyScreen.transform.FindChild("Damage Dealt Count").GetComponent<Text>().text = DamageDealt.ToString();
 			TallyScreen.transform.FindChild("Enemies Defeated Count").GetComponent<Text>().text = NumEnemiesKilled.ToString();
 			TallyScreen.transform.FindChild("Souls Collected Count").GetComponent<Text>().text = TotalSoulCount.ToString();

@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 500
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 1000
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 75
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 50
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
