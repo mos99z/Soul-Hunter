@@ -82,6 +82,7 @@ public class GameBrain : MonoBehaviour {
 	public int PlayerCurrHealth = 1000;
 	public int PlayerLivesLeft = 3;
 	public int SoulCount = 0;
+	public int MeleeEnemyCounter = 0;
 	// Level 0 is tutorial
 	public int CurrentLevel = -1;
 	public List<int> RoomsCleared;
