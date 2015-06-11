@@ -16250,7 +16250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 1000
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .150000006
@@ -35960,7 +35960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 50
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -43460,7 +43460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 500
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -66338,6 +66338,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5f45cba6929284793401c7f7042151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 4
+  startHeight: 30
+  explosion: {fileID: 0}
+  damage: 25
+  recoveryCost: 3
+  burn: {fileID: 0}
+  burnDamage: 8.10000038
+  burnTick: 1
+  burnTime: 5
+  cripple: {fileID: 0}
 --- !u!1 &1748371648
 GameObject:
   m_ObjectHideFlags: 0
@@ -66382,7 +66393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 75
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -74182,7 +74193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 250
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012

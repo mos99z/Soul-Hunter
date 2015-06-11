@@ -4121,7 +4121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 75
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -11363,6 +11363,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89af3951d816d28419eb09744e842d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 25.1000004
+  duration: 1
+  recoveryTime: 2
+  mouseMarker: {fileID: 0}
+  spawnHeight: 1
+  forceMode: 0
+  knockback: 300
+  radius: 2
+  burning: {fileID: 0}
+  burnChance: .100000001
+  burnDuration: 5
+  burnTick: 1
+  burnDamage: 10.1000004
+  cripple: {fileID: 0}
+  crippleChance: .150000006
 --- !u!1 &409158248
 GameObject:
   m_ObjectHideFlags: 0
@@ -11581,6 +11596,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394750ed4fc191944bfc14a0c5c4a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 25.3999996
+  recoveryCost: 1.5
+  startHeight: 1
+  speed: .200000003
+  range: 10
+  mouseMarker: {fileID: 0}
 --- !u!1 &426888495
 GameObject:
   m_ObjectHideFlags: 0
@@ -12194,6 +12215,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5f45cba6929284793401c7f7042151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 4
+  startHeight: 30
+  explosion: {fileID: 0}
+  damage: 25
+  recoveryCost: 3
+  burn: {fileID: 0}
+  burnDamage: 8.10000038
+  burnTick: 1
+  burnTime: 5
+  cripple: {fileID: 0}
 --- !u!1 &481535315
 GameObject:
   m_ObjectHideFlags: 0
@@ -15156,7 +15188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 1000
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .150000006
@@ -15393,7 +15425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 250
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -18375,7 +18407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 500
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
@@ -33680,6 +33712,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07daae433b17b346aecbfe16934b7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  spawnHeight: .0500000007
+  duration: 4
+  rotateSpeed: 135
+  recoveryCost: 2
+  scaleShrink: .5
+  slow: {fileID: 0}
+  weakness: 5
 --- !u!1 &1160732241
 GameObject:
   m_ObjectHideFlags: 0
@@ -46967,6 +47007,10 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!1 &1470118933 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 192728, guid: 95482516ff99abd40b93bd060feb97c1, type: 2}
+  m_PrefabInternal: {fileID: 176879255}
 --- !u!1 &1470178204
 GameObject:
   m_ObjectHideFlags: 0
@@ -57266,6 +57310,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88858237277154a42bb4da2eb16d18b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crystals:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mouseMarker: {fileID: 0}
+  spawnHeight: -3
+  speed: 1
+  recoveryCost: 2
+  duration: 1
+  damage: 5
+  tickTime: .25
+  slow: {fileID: 0}
 --- !u!1 &1612898698
 GameObject:
   m_ObjectHideFlags: 0
@@ -57614,6 +57670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 561819693}
+  sprite: {fileID: 1470118933}
   wayPointMinTicker: 9
   wayPointMaxTicker: 7
   wayPointTicker: 0
@@ -57634,17 +57691,18 @@ MonoBehaviour:
   meteorMaxTicker: 1
   meteorDamge: 0
   meteorRange: 5
-  meteorCollider: {fileID: 0}
   Firbreath: {fileID: 1934571679}
   Claw: {fileID: 1702875269}
   WarpDirection: {fileID: 763410979}
   Reapear: {fileID: 1704268691}
+  meteor: {fileID: 114528, guid: b09f60d80de030d49b3f9de3ed0524cd, type: 2}
   waypoints:
   - {fileID: 115635737}
   - {fileID: 1184575687}
   - {fileID: 1734762829}
   - {fileID: 2046478650}
   - {fileID: 1810558229}
+  bossCollider: {fileID: 1640976773}
   ImpactDamage: 10.1000004
   IgniteChance: 1
   BurningDOTDuration: 10
@@ -57664,7 +57722,7 @@ MonoBehaviour:
   Defence: 0
   ElementType: 1
   MaxHealth: 500
-  CurrHealth: 500
+  CurrHealth: 255
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
@@ -58105,6 +58163,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b965c38840dd39745a9ae1ca7563e60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterDamage: 10.5
+  windDamage: 5.19999981
+  duration: 1.5
+  recoveryCost: 1.5
+  spawnHeight: 2.5
+  mouseMarker: {fileID: 0}
+  frozen: {fileID: 0}
+  chance: .5
+  frozenDuration: 4
 --- !u!1 &1669031410
 GameObject:
   m_ObjectHideFlags: 0
@@ -59634,6 +59701,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef7a65bc7263284182ea6f9ec005d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  spawnHeight: .0500000007
+  duration: 4
+  rotateSpeed: 90
+  recoveryCost: 2
+  slow: {fileID: 0}
 --- !u!1 &1702875269
 GameObject:
   m_ObjectHideFlags: 0
@@ -62348,7 +62421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282232f5401cc4f418c71707e70b0945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoulValue: 100
+  SoulValue: 50
   AliveTime: 10
   CollectorTag: Player
   MoveSpeed: .300000012
