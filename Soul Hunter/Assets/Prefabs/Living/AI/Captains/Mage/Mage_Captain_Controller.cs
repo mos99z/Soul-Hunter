@@ -20,7 +20,8 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	float currentRotation = 0.0f;
 	float AngularAcceleration = 3.5f;
 	Vector3 playerDistance;
-	
+	public GameObject boundingWalls;	// walls to summon when facing captain
+
 	// Attack Variables
 	int attackCounter = 0;
 	public float MinAttackCooldown = 2.0f;
@@ -47,8 +48,13 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		missileDamage = FelMissile.GetComponent<Fel_Missile_Controller> ().Damage;
 		spellDamage = SpellBarrage.GetComponent<Spell_Barrage_Controller> ().Damage;
 		aoeDamage = AOE.GetComponent<AOE_Controller> ().Damage;
+		boundingWalls.SendMessage("ActivateWalls");
 	}
-	
+
+	void OnDestroy()
+	{
+		boundingWalls.SendMessage("DestroyWalls");
+	}
 	// Update is called once per frame
 	// The enemy will attack if the player is within range and is not currently moving towards a waypoint
 	// The enemy will move if: the player moves out of his comfort range; the enemy gets too close to a wall
