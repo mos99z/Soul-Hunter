@@ -5,6 +5,7 @@ public class Slowed_Controller : MonoBehaviour
 {
 	public float duration = 5.0f;			// how long in seconds for the debuff to last
 	public float slowSpeedModifier = 0.5f;	// fraction to reduce objects speed by
+	public bool fromConcrete = false;		// used to cast stun after slow wears off from concrete spell
 
 	float timer;							// keep track of reference to duration
 	float origSpeed;						// remember objects original speed
@@ -35,7 +36,8 @@ public class Slowed_Controller : MonoBehaviour
 			{
 				if (transform.parent.GetChild(child).name == "Slowed(Clone)" && transform.parent.GetChild(child) != transform)
 				{
-					Destroy(transform.parent.GetChild(child).gameObject);
+					transform.parent.GetChild(child).GetComponent<Slowed_Controller>().duration = duration;
+					Destroy(gameObject);
 				}
 			}
 			check = false;
@@ -48,6 +50,15 @@ public class Slowed_Controller : MonoBehaviour
 				transform.parent.GetComponent<Player_Movement_Controller>().Speed = origSpeed;
 			else if (transform.parent.tag == "Enemy")
 				transform.parent.GetComponent<NavMeshAgent>().speed = origSpeed;
+
+			if (fromConcrete)
+			{
+				GameObject stun = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().stunned);
+				stun.transform.parent = transform.parent;
+				stun.transform.localPosition = Vector3.zero;
+				stun.GetComponent<Stunned_Controller>().Duration = 4.0f;
+			}
+
 			Destroy(gameObject);
 		}
 	}

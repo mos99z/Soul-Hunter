@@ -35,8 +35,8 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	{
 		if (Animate == null)
 			Animate = transform.GetComponentInChildren<Animator> ();
-		player = GameObject.FindGameObjectWithTag ("Player");
-		navigation = GetComponent<NavMeshAgent> ();
+		player = GameBrain.Instance.Player;
+		navigation = GetComponent<NavMeshAgent>();
 		destination = Random.insideUnitSphere * 7;
 		destination.y = 0;
 		destination += transform.position;
@@ -161,9 +161,13 @@ public class Melee_Minion_Controller : MonoBehaviour {
 			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
 			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
 			if (dotProd >= 0.75f)
+			{
 				Animate.Play ("Melee_Idle_Up");
+			}
 			else if (dotProd <= -0.75f)
+			{
 				Animate.Play ("Melee_Idle_Down");
+			}
 			else if (dotProd > -0.25f && dotProd <= 0.25f)
 			{
 				if (crossProd.y < 0.0f)

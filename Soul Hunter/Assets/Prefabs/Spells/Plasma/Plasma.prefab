@@ -71,11 +71,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394750ed4fc191944bfc14a0c5c4a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 5.4000001
-  maxDamage: 25.3999996
+  damage: 25.3999996
   recoveryCost: 1.5
   startHeight: 1
-  speed: 1
+  speed: .200000003
   range: 5
   mouseMarker: {fileID: 0}
 --- !u!132 &13265928
