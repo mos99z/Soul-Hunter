@@ -24,10 +24,11 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	public float AttackTimer = 5.0f;
 	public float Damage = 100.0f;
 	public SphereCollider AttackCollider = null;
+	public bool isFrozen = false;		// used for frozen debuff
+	
 
 	public GameObject DirectionIndicator = null;
 	public Animator Animate = null;
-	public bool isFrozen = false;		// used for frozen debuff
 
 	// Use this for initialization
 	void Start ()
@@ -51,99 +52,89 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	// If there is a target, the enemy will rotate around the player and lunge in after a certain amount of time has passed
 	void FixedUpdate () 
 	{
-		if (isFrozen)
-			return;
-		if (player == null) {
-		}
-
-		else
+		
+		if (target == null) 
 		{
-			if (target == null) 
+			waypointTimer -= Time.deltaTime;
+			if(waypointTimer <= 0.0f)
+				navigation.SetDestination (destination);
+			
+			
+			if (navigation.remainingDistance == 0 && waypointTimer <= 0.0f) 
 			{
+				waypointTimer = Random.Range(WaitMinimum,WaitMaximum);
+				destination = Random.insideUnitSphere * 7;
+				destination.y = 0;
+				destination += transform.position;
+			}
+			SearchForPlayer ();
+		}
+		
+		else if (target != null) 
+		{
+			//destination = attackingWaypoints[closestShadow].transform.position;
+			TurnTowardsPlayer();
+			
+			if(isAttacking == false)
+			{
+				navigation.SetDestination (destination);
+				currentAttackTimer -= Time.deltaTime;
 				waypointTimer -= Time.deltaTime;
-				if(waypointTimer <= 0.0f)
-					navigation.SetDestination (destination);
-				
-				
-				if (navigation.remainingDistance == 0 && waypointTimer <= 0.0f) 
+				if (navigation.remainingDistance <= 0.3f && waypointTimer <= 0.0f) 
 				{
-					waypointTimer = Random.Range(WaitMinimum,WaitMaximum);
-					destination = Random.insideUnitSphere * 7;
-					destination.y = 0;
-					destination += transform.position;
+					waypointTimer = 0.3f;
+					closestShadow++;
+					if(closestShadow >= attackingWaypoints.Length)
+						closestShadow = 0;
+					
+					
+					destination = attackingWaypoints[closestShadow].transform.position;
 				}
-				SearchForPlayer ();
+				
+				if(currentAttackTimer <= 0.0f)
+				{
+					Vector3 playerDirection = player.transform.position - gameObject.transform.position;
+					isAttacking = true;
+					lungeTimer = 1.5f;
+					currentAttackTimer = AttackTimer;
+					navigation.autoBraking = true;
+					navigation.speed = 8.0f;
+					navigation.updateRotation = true;
+					navigation.stoppingDistance = 2.0f;
+					destination = gameObject.transform.position;
+					DirectionIndicator.transform.forward = playerDirection.normalized;
+					
+				}
 			}
 			
-			else if (target != null) 
+			if(isAttacking == true)
 			{
-				//destination = attackingWaypoints[closestShadow].transform.position;
-				TurnTowardsPlayer();
+				lungeTimer -= Time.deltaTime;
+				//gameObject.transform.LookAt(target.transform.position,Vector3.up);
+				navigation.SetDestination (target.transform.position);
 				
-				if(isAttacking == false)
+				if(navigation.remainingDistance < 2.5f)
+					AttackCollider.enabled = true;
+				
+				if(lungeTimer <= 0.0f)
 				{
-					navigation.SetDestination (destination);
-					currentAttackTimer -= Time.deltaTime;
-					waypointTimer -= Time.deltaTime;
-					if (navigation.remainingDistance <= 0.3f && waypointTimer <= 0.0f) 
-					{
-						waypointTimer = 0.3f;
-						closestShadow++;
-						if(closestShadow >= attackingWaypoints.Length)
-							closestShadow = 0;
-						
-						
-						destination = attackingWaypoints[closestShadow].transform.position;
-					}
-					
-					if(currentAttackTimer <= 0.0f)
-					{
-						isAttacking = true;
-						lungeTimer = 1.5f;
-						currentAttackTimer = AttackTimer;
-						navigation.autoBraking = true;
-						navigation.updateRotation = true;
-						navigation.stoppingDistance = 2.0f;
-						destination = gameObject.transform.position;
-					}
+					isAttacking = false;
+					AttackCollider.enabled = false;
+					navigation.stoppingDistance = 0.0f;
+					navigation.updateRotation = false;
+					navigation.speed = 3.5f;
+					//SearchForNearestNode();
+					destination = attackingWaypoints[closestShadow].transform.position;
 				}
-				
-				if(isAttacking == true)
-				{
-					lungeTimer -= Time.deltaTime;
-					//gameObject.transform.LookAt(target.transform.position,Vector3.up);
-					navigation.SetDestination (target.transform.position);
-					
-					if(navigation.remainingDistance < 2.5f)
-						AttackCollider.enabled = true;
-					
-					if(lungeTimer <= 0.0f)
-					{
-						isAttacking = false;
-						AttackCollider.enabled = false;
-						navigation.stoppingDistance = 0.0f;
-						navigation.updateRotation = false;
-						//SearchForNearestNode();
-						destination = attackingWaypoints[closestShadow].transform.position;
-					}
-					
-					
-				}
-				
 			}
 		}
-
-
 	}
 
 	// Check distance to player. Will target the player if he is within distance
 	void SearchForPlayer()
 	{
-		if (CheckPlayerAvailability () == false)
-			return;
-		
 		Vector3 playerDistance = player.transform.position - gameObject.transform.position;
-		if (playerDistance.magnitude < aggroDistance) 
+		if (playerDistance.magnitude < aggroDistance && GameBrain.Instance.MeleeEnemyCounter < 7) 
 		{
 			target = player;
 
@@ -155,6 +146,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 			currentAttackTimer = AttackTimer;
 			isSwarming = true;
 			destination = attackingWaypoints[closestShadow].transform.position;
+			GameBrain.Instance.MeleeEnemyCounter++;
 		}
 	}
 
@@ -215,44 +207,6 @@ public class Melee_Minion_Controller : MonoBehaviour {
 //		}
 	}
 
-
-	// This function will check to see if the player has too many enemies circling him already
-	// Will return true if there is space available to circle the player or if there are 5 or less enemies remaining
-	// Will return false if there are too many other enemies swarming
-	bool CheckPlayerAvailability()
-	{
-		GameObject[] enemyList = GameObject.FindGameObjectsWithTag ("Enemy");
-
-		if(enemyList.Length <= 5)
-		{
-			aggroDistance = 100;
-			return true;
-		}
-
-		int swarmingCounter = 0;
-
-		for (int i = 0; i < enemyList.Length; i++) 
-		{
-			if(enemyList[i] == gameObject)
-				continue;
-			if(enemyList[i].name.Contains("Melee"))
-			{
-				Melee_Minion_Controller enemyScript = enemyList[i].GetComponent<Melee_Minion_Controller>();
-
-				if(enemyScript.isSwarming == true)
-					swarmingCounter++;
-				
-				if(swarmingCounter >= 5)
-					return false;
-			}
-
-			else
-				continue;
-		}
-
-		return true;
- 	}
-
 	void SearchForNearestNode()
 	{
 		closestShadow = 0;
@@ -269,12 +223,48 @@ public class Melee_Minion_Controller : MonoBehaviour {
 		}
 	}
 
+	void TakeEvasiveActions()
+	{
+		destination = Random.insideUnitSphere * 7;
+		destination.y = 0;
+		destination += transform.position;
+	}
+
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.tag == "Player") 
 		{
 			col.SendMessage("TakeDamage",Damage);
 		}
+
+		if(col.name.Contains("Melee") && !isAttacking)
+		{
+			TakeEvasiveActions();
+		}
+
+		if (col.tag == "Spell") 
+		{
+			if(target == null)
+			{
+				target = player;
+				
+				SearchForNearestNode();
+				
+				navigation.updateRotation = false;
+				navigation.autoBraking = false;
+				waypointTimer = 0.0f;
+				currentAttackTimer = AttackTimer;
+				isSwarming = true;
+				destination = attackingWaypoints[closestShadow].transform.position;
+				GameBrain.Instance.MeleeEnemyCounter++;
+			}
+		}
+	}
+
+	void OnDestroy()
+	{
+		if (isSwarming)
+			GameBrain.Instance.MeleeEnemyCounter--;
 	}
 
 	void PlayerDead()
