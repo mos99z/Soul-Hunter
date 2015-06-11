@@ -38,7 +38,7 @@ public enum SoulType
 	Red,
 	Black
 }
-[Serializable]
+[System.Serializable]
 public class GameInfo		// for game save/load
 {
 	public int PlayerMaxHealth;
@@ -53,13 +53,13 @@ public class GameInfo		// for game save/load
 	public int EarthLevel;
 	public int ElectricLevel;
 	public int WaterLevel;
-
-	public List<int> RoomsCleared;	// used for keeping track of minion rooms cleared and where to spawn player
-
+	
+	public int[] RoomsCleared;	// used for keeping track of minion rooms cleared and where to spawn player
+	
 	// Level 0 is tutorial
 	public int CurrentLevel;
-
-
+	
+	
 	//Tally Specific Info
 	public int NumEnemiesKilled;
 	public int DamageTaken;
@@ -67,10 +67,10 @@ public class GameInfo		// for game save/load
 	public int DeathCount;
 	public double GameTime;
 	public int NumCastedSpells;
-
+	
 	// other info
 	public bool[] spellsCast;
-	public GameObject[] selectedMacros;
+	//public GameObject[] selectedMacros;	
 	//public bool[,] miniMap;	// to be enabled once figured out
 }
 
@@ -168,7 +168,151 @@ public class GameBrain : MonoBehaviour {
 		LoadPlayerData ();
 		//gameInfo.RoomsCleared [3] = false;
 	}
-	
+
+	void OnLevelWasLoaded(int level)
+	{
+		// level variable passed in is the build order scene level
+
+		// currently using gamebrains actual level to load level position approriately
+		int count = RoomsCleared.Count;
+		if (CurrentLevel == 1)
+		{
+			if (count == 0)
+				Player.transform.position = Vector3.zero;
+			else
+			{
+				for (int i = 0; i < count; ++i)
+				{
+					switch (RoomsCleared[i])
+					{
+					case 1: Destroy(GameObject.Find("Room 01").transform.FindChild("Spawn Area").gameObject); break;
+					case 2: 
+					{
+						Destroy(GameObject.Find("Room 02").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 02").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					case 3: 
+					{
+						Destroy(GameObject.Find("Room 03").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 03").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					case 4: Destroy(GameObject.Find("Room 04").transform.FindChild("Spawn Area").gameObject); break;
+					case 5: 
+					{
+						Destroy(GameObject.Find("Room 05").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 05").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					}
+				}
+				switch (RoomsCleared[count-1]) // spawn player in room last cleared
+				{
+				case 1: Player.transform.position = Vector3.zero; break;
+				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
+				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
+				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
+				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
+				}
+			}
+			GameBrain.Instance.HUDMaster.SetActive(true);
+			GameBrain.Instance.Player.SetActive(true);
+			GameBrain.Instance.MouseMarker.SetActive(true);
+		}
+		else if (CurrentLevel == 2)
+		{
+			if (count == 0)
+				Player.transform.position = Vector3.zero;
+			else
+			{
+				for (int i = 0; i < count; ++i)
+				{
+					switch (RoomsCleared[i])
+					{
+					case 1: Destroy(GameObject.Find("Room 01").transform.FindChild("Spawn Area").gameObject); break;
+					case 2: 
+					{
+						Destroy(GameObject.Find("Room 02").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 02").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					case 3: 
+					{
+						Destroy(GameObject.Find("Room 03").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 03").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					case 4: Destroy(GameObject.Find("Room 04").transform.FindChild("Spawn Area").gameObject); break;
+					case 5: 
+					{
+						Destroy(GameObject.Find("Room 05").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 05").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					}
+				}
+				switch (RoomsCleared[count-1]) // spawn player in room last cleared
+				{
+				case 1: Player.transform.position = Vector3.zero; break;
+				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
+				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
+				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
+				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
+				}
+			}
+			GameBrain.Instance.HUDMaster.SetActive(true);
+			GameBrain.Instance.Player.SetActive(true);
+			GameBrain.Instance.MouseMarker.SetActive(true);
+		}
+		else if (CurrentLevel == 3)
+		{
+			if (count == 0)
+				Player.transform.position = Vector3.zero;
+			else
+			{
+				for (int i = 0; i < count; ++i)
+				{
+					switch (RoomsCleared[i])
+					{
+					case 1: Destroy(GameObject.Find("Room 01").transform.FindChild("Spawn Area").gameObject); break;
+					case 2: 
+					{
+						Destroy(GameObject.Find("Room 02").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 02").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					case 3: 
+					{
+						Destroy(GameObject.Find("Room 03").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 03").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					case 4: Destroy(GameObject.Find("Room 04").transform.FindChild("Spawn Area").gameObject); break;
+					case 5: 
+					{
+						Destroy(GameObject.Find("Room 05").transform.FindChild("Spawn Area").gameObject);
+						Destroy(GameObject.Find("Room 05").transform.FindChild("Mage Captain").gameObject);
+						break;
+					}
+					}
+				}
+				switch (RoomsCleared[count-1]) // spawn player in room last cleared
+				{
+				case 1: Player.transform.position = Vector3.zero; break;
+				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
+				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
+				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
+				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
+				}
+			}
+			GameBrain.Instance.HUDMaster.SetActive(true);
+			GameBrain.Instance.Player.SetActive(true);
+			GameBrain.Instance.MouseMarker.SetActive(true);
+		}
+
+
+	}
 	void Update () {
 		if (CurrentLevel > 0)
 			GameTime += Time.deltaTime;
@@ -394,10 +538,10 @@ public class GameBrain : MonoBehaviour {
 		info.ElectricLevel = ElectricLevel;
 		info.WaterLevel = WaterLevel;
 
-		info.RoomsCleared.Clear();	// should be empty, but clearing to make sure
+		info.RoomsCleared = new int[RoomsCleared.Count];
 		for (int i = 0; i < RoomsCleared.Count; i++)
-			info.RoomsCleared.Add(RoomsCleared[i]);
-
+			info.RoomsCleared[i] = RoomsCleared[i];
+		
 		info.CurrentLevel = CurrentLevel;
 		info.NumEnemiesKilled = NumEnemiesKilled;
 		info.DamageTaken = DamageTaken;
@@ -405,11 +549,11 @@ public class GameBrain : MonoBehaviour {
 		info.DeathCount = DeathCount;
 		info.GameTime = GameTime;
 		info.NumCastedSpells = NumCastedSpells;
-
+		
 		info.spellsCast = SpellHasBeenCast;
-		info.selectedMacros = new GameObject[5];
-		for (int i = 0; i < 5; ++i)
-			info.selectedMacros[i] = GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i];
+		//info.selectedMacros = new GameObject[5];
+		//for (int i = 0; i < 5; ++i)
+		//	info.selectedMacros[i] = GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i];
 
 		bf.Serialize (file, info);
 		file.Close ();
@@ -437,7 +581,8 @@ public class GameBrain : MonoBehaviour {
 		info.ElectricLevel = 0;
 		info.WaterLevel = 0;
 
-		info.RoomsCleared.Clear();
+		info.RoomsCleared = new int[1];
+		info.RoomsCleared[0] = 0;
 
 		info.CurrentLevel = 0;
 		info.NumEnemiesKilled = 0;
@@ -450,9 +595,9 @@ public class GameBrain : MonoBehaviour {
 		info.spellsCast = new bool[25];
 		for (int i = 0; i < 25; ++i)
 			info.spellsCast[i] = false;
-		info.selectedMacros = new GameObject[5];
-		for (int i = 0; i < 5; ++i)			// TODO: when refactoring spells, assign the defaults here
-			info.selectedMacros[i] = GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i];
+//		info.selectedMacros = new string[5];
+//		for (int i = 0; i < 5; ++i)			// TODO: when refactoring spells, assign the defaults here
+//			info.selectedMacros[i] = GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i].transform.name;
 
 		
 		bf.Serialize (file, info);
@@ -483,7 +628,8 @@ public class GameBrain : MonoBehaviour {
 			ElectricLevel = info.ElectricLevel;
 			WaterLevel = info.WaterLevel;
 
-			for (int i = 0; i < info.RoomsCleared.Count; ++i)
+			RoomsCleared.Clear();
+			for (int i = 0; i < info.RoomsCleared.Length; ++i)
 				RoomsCleared.Add(info.RoomsCleared[i]);
 
 			CurrentLevel = info.CurrentLevel;
@@ -495,8 +641,8 @@ public class GameBrain : MonoBehaviour {
 			NumCastedSpells = info.NumCastedSpells;
 
 			SpellHasBeenCast = info.spellsCast;
-			for (int i = 0; i < 5; i++)
-				GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i] = info.selectedMacros[i];
+//			for (int i = 0; i < 5; i++)
+//				GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i] = info.selectedMacros[i];
 		}
 	}
 

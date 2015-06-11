@@ -153,6 +153,7 @@ public class Main_Menu_Script : MonoBehaviour
 		//GameOver.SendMessage ("Reset");
 		int zero = 0;
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
+		GameBrain.Instance.EraseFile();
 		Application.LoadLevel ("TempTutorial");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
@@ -165,6 +166,7 @@ public class Main_Menu_Script : MonoBehaviour
 //		GameObject newPlayer = Instantiate (player);
 //		newPlayer.transform.parent = GameBrain.Instance.transform;
 //		newPlayer.transform.localPosition = Vector3.zero;
+		GameBrain.Instance.EraseFile();
 		Application.LoadLevel("Level 1");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
@@ -197,7 +199,21 @@ public class Main_Menu_Script : MonoBehaviour
 
 	public void MouseClick1()
 	{
-		Debug.Log("Continue from autosave");
+		//Debug.Log("Continue from autosave");
+		GameBrain.Instance.Load();
+		if (GameBrain.Instance.CurrentLevel == 0)
+			LoadTutorial();
+		else if (GameBrain.Instance.CurrentLevel > 0)
+		{
+			switch (GameBrain.Instance.CurrentLevel)
+			{
+			case 1: Application.LoadLevel("Level 1"); break;
+			case 2: Application.LoadLevel("Level 2"); break;
+			case 3: Application.LoadLevel("Level 3"); break;
+			}
+		}
+
+
 		index = 1;
 		needsUpdate = true;
 	}
