@@ -27,6 +27,7 @@ public class Mistral_Controller : MonoBehaviour
 	public float AttackCooldown = 2.0f;
 	public GameObject Whirlwind = null;
 	float currentAttackTimer = 0.0f;
+	float currentWhirlwindTimer = 0.0f;
 
 	public GameObject[] attackingWaypoints;	// Used to rotate around the player
 	
@@ -55,102 +56,105 @@ public class Mistral_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (target == null) {
-		}
-
-		else
+		if (perendiAlive) 
 		{
-			if (perendiAlive) 
-			{
-				if (CheckPlayerDistance () == true && isMoving == false) 
-				{
-					TurnTowardsPlayer ();
-					currentAttackTimer -= Time.deltaTime;
-					
-					if (currentAttackTimer <= 0.0f) 
-					{
-						/*GameObject Hurricane = */GameObject.Instantiate (Whirlwind, target.transform.position,target.transform.rotation);
-						//Hurricane.transform.position = target.transform.position;
-						currentAttackTimer = AttackCooldown;
-						SideStrafe ();
-					}
-					isMoving = true;
-				} 
-				else if (isMoving == false)
-				{
-					Reposition ();
-					isMoving = true;
-					
-				}
-				else if (isMoving == true) 
-				{
-					navigation.SetDestination (destination);
-					if (navigation.remainingDistance == 0) 
-					{
-						isMoving = false;
-						navigation.updateRotation = false;
-					}
-					
-				}
-				
-			}
-			
-			
-			else 
+			if (CheckPlayerDistance () == true && isMoving == false) 
 			{
 				TurnTowardsPlayer ();
+				currentAttackTimer -= Time.deltaTime;
 				
-				if (isAttacking == false) 
+				if (currentAttackTimer <= 0.0f) 
 				{
-					navigation.SetDestination (destination);
-					currentAttackTimer -= Time.deltaTime;
-					waypointTimer -= Time.deltaTime;
-					if (navigation.remainingDistance <= 0.3f && waypointTimer <= 0.0f) {
-						waypointTimer = 0.3f;
-						closestShadow++;
-						if (closestShadow >= attackingWaypoints.Length)
-							closestShadow = 0;
-						
-						
-						destination = attackingWaypoints [closestShadow].transform.position;
-					}
-					
-					if (currentAttackTimer <= 0.0f)
-					{
-						isAttacking = true;
-						lungeTimer = 1.5f;
-						currentAttackTimer = AttackTimer;
-						navigation.autoBraking = true;
-						navigation.updateRotation = true;
-						navigation.stoppingDistance = 4.0f;
-						destination = gameObject.transform.position;
-					}
+					/*GameObject Hurricane = */GameObject.Instantiate (Whirlwind, target.transform.position,target.transform.rotation);
+					//Hurricane.transform.position = target.transform.position;
+					currentAttackTimer = AttackCooldown;
+					SideStrafe ();
+				}
+				isMoving = true;
+			} 
+			else if (isMoving == false)
+			{
+				Reposition ();
+				isMoving = true;
+				
+			}
+			else if (isMoving == true) 
+			{
+				navigation.SetDestination (destination);
+				if (navigation.remainingDistance == 0) 
+				{
+					isMoving = false;
+					navigation.updateRotation = false;
 				}
 				
-				if(isAttacking == true)
+			}
+			
+		}
+		
+		
+		else 
+		{
+			TurnTowardsPlayer ();
+
+			currentWhirlwindTimer -= Time.deltaTime;
+			
+			if (currentWhirlwindTimer <= 0.0f) 
+			{
+				GameObject.Instantiate (Whirlwind, target.transform.position,target.transform.rotation);
+				currentWhirlwindTimer = AttackCooldown;
+			}
+
+			if (isAttacking == false) 
+			{
+				navigation.SetDestination (destination);
+				currentAttackTimer -= Time.deltaTime;
+				waypointTimer -= Time.deltaTime;
+				if (navigation.remainingDistance <= 0.3f && waypointTimer <= 0.0f) {
+					waypointTimer = 0.3f;
+					closestShadow++;
+					if (closestShadow >= attackingWaypoints.Length)
+						closestShadow = 0;
+					
+					
+					destination = attackingWaypoints [closestShadow].transform.position;
+				}
+				
+				if (currentAttackTimer <= 0.0f)
 				{
-					lungeTimer -= Time.deltaTime;
-					//gameObject.transform.LookAt(target.transform.position,Vector3.up);
-					navigation.SetDestination (target.transform.position);
-					
-					if(navigation.remainingDistance < 2.5f)
-						AttackCollider.enabled = true;
-					
-					if(lungeTimer <= 0.0f)
-					{
-						isAttacking = false;
-						AttackCollider.enabled = false;
-						navigation.stoppingDistance = 0.0f;
-						navigation.updateRotation = false;
-						//SearchForNearestNode();
-						destination = attackingWaypoints[closestShadow].transform.position;
-					}
-					
-					
+					isAttacking = true;
+					lungeTimer = 1.5f;
+					currentAttackTimer = AttackTimer;
+					navigation.autoBraking = true;
+					navigation.updateRotation = true;
+					navigation.stoppingDistance = 4.0f;
+					destination = gameObject.transform.position;
 				}
 			}
+			
+			if(isAttacking == true)
+			{
+				lungeTimer -= Time.deltaTime;
+				//gameObject.transform.LookAt(target.transform.position,Vector3.up);
+				navigation.SetDestination (target.transform.position);
+				
+				if(navigation.remainingDistance < 2.5f)
+					AttackCollider.enabled = true;
+				
+				if(lungeTimer <= 0.0f)
+				{
+					isAttacking = false;
+					AttackCollider.enabled = false;
+					navigation.stoppingDistance = 0.0f;
+					navigation.updateRotation = false;
+					//SearchForNearestNode();
+					destination = attackingWaypoints[closestShadow].transform.position;
+				}
+				
+				
+			}
 		}
-
+		
+		
 }
 
 	
@@ -284,7 +288,9 @@ public class Mistral_Controller : MonoBehaviour
 	void OtherBossDead()
 	{
 		perendiAlive = false;
+		currentWhirlwindTimer = AttackCooldown;
 		attackingWaypoints = GameObject.FindGameObjectsWithTag ("Shadow").OrderBy(waypoint => waypoint.name).ToArray<GameObject>();
+		navigation.speed = 8.0f;
 		gameObject.GetComponent<Living_Obj>().SoulValue = SoulType.Red;
 	}
 

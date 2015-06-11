@@ -16,6 +16,7 @@ TagManager:
   - Trap
   - PlayerMarker
   - Debuffs
+  - Wall
   layers:
   - Default
   - TransparentFX
