@@ -156,6 +156,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88858237277154a42bb4da2eb16d18b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crystals:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mouseMarker: {fileID: 0}
+  spawnHeight: -3
+  speed: 1
+  recoveryCost: 2
+  duration: 1
+  damage: 5
+  tickTime: .25
+  slow: {fileID: 0}
 --- !u!1 &12941130
 GameObject:
   m_ObjectHideFlags: 0
@@ -9502,7 +9514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441344, guid: c7a9bba0a2a0aef469d6301c3637c868, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 119470, guid: c7a9bba0a2a0aef469d6301c3637c868, type: 2}
       propertyPath: m_IsActive
@@ -12699,6 +12711,10 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389269245}
+--- !u!1 &389824925 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100230, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+  m_PrefabInternal: {fileID: 1309413522}
 --- !u!1 &390183106
 GameObject:
   m_ObjectHideFlags: 0
@@ -13451,6 +13467,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   target: {fileID: 0}
+  boundingWalls: {fileID: 0}
   MinAttackCooldown: 2
   MaxAttackCooldown: 4
   SpellBarrageCooldown: 10
@@ -14878,6 +14895,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89af3951d816d28419eb09744e842d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 25.1000004
+  duration: 1
+  recoveryTime: 2
+  mouseMarker: {fileID: 0}
+  spawnHeight: 1
+  forceMode: 0
+  knockback: 300
+  radius: 2
+  burning: {fileID: 0}
+  burnChance: .100000001
+  burnDuration: 5
+  burnTick: 1
+  burnDamage: 10.1000004
+  cripple: {fileID: 0}
+  crippleChance: .150000006
 --- !u!1 &448294034
 GameObject:
   m_ObjectHideFlags: 0
@@ -20718,8 +20750,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 428252, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 195828, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489368, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
+      propertyPath: CurrHealth
+      value: 490
+      objectReference: {fileID: 0}
+    - target: {fileID: 11457790, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
+      propertyPath: StalactiteDrop
+      value: 
+      objectReference: {fileID: 389824925}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
   m_IsPrefabParent: 0
@@ -24262,6 +24306,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45fd3e21abb80647b4d8b404837daa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 4
+  damage: 2
+  rotationSpeed: 90
+  defence: .5
+  recoveryTime: 2
 --- !u!1 &635691978
 GameObject:
   m_ObjectHideFlags: 0
@@ -30907,7 +30956,7 @@ Transform:
   - {fileID: 958327743}
   - {fileID: 1778870063}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &782519225
 GameObject:
   m_ObjectHideFlags: 0
@@ -30990,6 +31039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   slowSpeedModifier: .5
+  fromConcrete: 0
 --- !u!1001 &784159472
 Prefab:
   m_ObjectHideFlags: 0
@@ -31027,7 +31077,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
       propertyPath: m_IsActive
@@ -35299,6 +35349,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b965c38840dd39745a9ae1ca7563e60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterDamage: 10.5
+  windDamage: 5.19999981
+  duration: 1.5
+  recoveryCost: 1.5
+  spawnHeight: 2.5
+  mouseMarker: {fileID: 0}
+  frozen: {fileID: 0}
+  chance: .5
+  frozenDuration: 4
 --- !u!1 &973758110
 GameObject:
   m_ObjectHideFlags: 0
@@ -42584,6 +42643,52 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!1001 &1122018776
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 423108, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.52689934
+      objectReference: {fileID: 0}
+    - target: {fileID: 423108, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423108, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.3373289
+      objectReference: {fileID: 0}
+    - target: {fileID: 423108, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423108, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423108, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423108, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423108, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 187082, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1127215487
 GameObject:
   m_ObjectHideFlags: 0
@@ -44914,6 +45019,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07daae433b17b346aecbfe16934b7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  spawnHeight: .0500000007
+  duration: 4
+  rotateSpeed: 135
+  recoveryCost: 2
+  scaleShrink: .5
+  slow: {fileID: 0}
+  weakness: 5
 --- !u!1 &1209181280
 GameObject:
   m_ObjectHideFlags: 0
@@ -49238,6 +49351,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1302793408}
   m_Mesh: {fileID: 4300004, guid: 3a53b48f513395e47b0e7406dc605bd4, type: 3}
+--- !u!1001 &1309413522
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458236, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458236, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 458236, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 24.2999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 458236, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458236, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458236, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458236, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458236, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466782, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+      propertyPath: NumStalactites
+      value: 200
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 02836af5a5ee04249b84b46424944dda, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1311150115
 GameObject:
   m_ObjectHideFlags: 0
@@ -60796,6 +60955,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac5cbc14b488fe40b13446f0a88be20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  startHeight: 1.5
+  duration: 1
+  damage: 5.5
+  recoveryTime: 1.5
+  maxHits: 5
 --- !u!222 &1550878764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71312,6 +71477,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5f45cba6929284793401c7f7042151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 4
+  startHeight: 30
+  explosion: {fileID: 0}
+  damage: 25
+  recoveryCost: 3
+  burn: {fileID: 0}
+  burnDamage: 8.10000038
+  burnTick: 1
+  burnTime: 5
+  cripple: {fileID: 0}
 --- !u!1 &1709294062
 GameObject:
   m_ObjectHideFlags: 0
@@ -82837,23 +83013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e61d48326939a4889c0cfeb025e2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 2.20000005
-  DamageTickRate: .100000001
-  RecoveryCostRate: .333333343
-  PushBackForce: .75
-  Range: 10
-  StartHeight: 1
-  ImpactEffectObj: {fileID: 0}
-  Duration: 10
-  TheCollider: {fileID: 0}
-  SpellEffect: {fileID: 0}
-  BurnDebuff: {fileID: 0}
-  DebuffChance: .100000001
-  DebuffDuration: 10
-  WALLS:
-    serializedVersion: 2
-    m_Bits: 0
-  PlayerFaceingIndicator: {fileID: 0}
 --- !u!1 &1946046966
 GameObject:
   m_ObjectHideFlags: 0
@@ -83284,6 +83443,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef7a65bc7263284182ea6f9ec005d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  spawnHeight: .0500000007
+  duration: 4
+  rotateSpeed: 90
+  recoveryCost: 2
+  slow: {fileID: 0}
 --- !u!1 &1980045752
 GameObject:
   m_ObjectHideFlags: 0
@@ -92403,7 +92568,7 @@ Transform:
   - {fileID: 1456681504}
   - {fileID: 1632864953}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &2115980258
 MonoBehaviour:
   m_ObjectHideFlags: 0
