@@ -6082,7 +6082,7 @@ Prefab:
       objectReference: {fileID: 1734050711}
     - target: {fileID: 11426050, guid: 38d448cc56bd7f34fa181f1cdb72d39e, type: 2}
       propertyPath: duration
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11426050, guid: 38d448cc56bd7f34fa181f1cdb72d39e, type: 2}
       propertyPath: burn
