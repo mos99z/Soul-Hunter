@@ -3321,6 +3321,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   target: {fileID: 0}
+  boundingWalls: {fileID: 0}
   MinAttackCooldown: 2
   MaxAttackCooldown: 4
   SpellBarrageCooldown: 10
@@ -6257,9 +6258,9 @@ MonoBehaviour:
   AttackTimer: 5
   Damage: 100
   AttackCollider: {fileID: 809444948}
+  isFrozen: 0
   DirectionIndicator: {fileID: 1107831100}
   Animate: {fileID: 30644888}
-  isFrozen: 0
 --- !u!114 &809444950
 MonoBehaviour:
   m_ObjectHideFlags: 0
