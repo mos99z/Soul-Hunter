@@ -40,15 +40,19 @@ public class Ragnorak_Controller : MonoBehaviour
 	private float jumpHieght;
 	private bool goingUp;
 	private bool doOnce;
+	public SphereCollider SockWaveCollider;
+	public float shockDamge = 1;
 
 	//Needed components
 	private GameObject DirectionIndicator = null;
 	private Animator Animate = null;
 	public GameObject Firbreath;
+	public GameObject AOEJump;
 	public GameObject Claw;
 	public GameObject WarpDirection;
 	public GameObject Reapear;
 	public GameObject meteor;
+	public GameObject meteor2;
 	//waypoints
 	public Transform[] waypoints = new Transform[5];
 	public SphereCollider bossCollider;
@@ -64,6 +68,8 @@ public class Ragnorak_Controller : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		player = GameBrain.Instance.Player;
+
 		behaviorState = 0;
 		jumpHieght = 0;
 		goingUp = true;
@@ -95,6 +101,7 @@ public class Ragnorak_Controller : MonoBehaviour
 		if (LVObj.CurrHealth <= LVObj.MaxHealth * 0.5)
 		{
 			behaviorState = 1;
+			animationTicker = 1;
 		}
 		if (player != null)
 		{
@@ -131,6 +138,7 @@ public class Ragnorak_Controller : MonoBehaviour
 		meleeTicker -= Time.deltaTime;
 		flameBreathTicker -= Time.deltaTime;
 		meteorTicker -= Time.deltaTime;
+		SockWaveCollider.enabled = false;
 	}
 
 	private void Over50HP()
@@ -250,10 +258,13 @@ public class Ragnorak_Controller : MonoBehaviour
 					jumpHieght = 0;
 					tempPos.y = jumpHieght;
 					sprite.transform.position = tempPos;
+					AOEJump.SetActive(false);
+					AOEJump.SetActive(true);
 					goingUp = true;
 					wayPointTicker = Random.Range(wayPointMinTicker, wayPointMaxTicker);
 					doOnce = false;
 					bossCollider.enabled = true;
+					SockWaveCollider.enabled = true;
 				}
 			}
 		}
@@ -293,6 +304,11 @@ public class Ragnorak_Controller : MonoBehaviour
 				}
 				flameBreathCollider.enabled = true;
 			}
+		}
+		if (meteorTicker <= 0)
+		{
+			meteorTicker = 1;
+			Instantiate(meteor2);
 		}
 	}
 
@@ -349,6 +365,11 @@ public class Ragnorak_Controller : MonoBehaviour
 			{
 				col.SendMessage("TakeDamage", flameBreathDamge);
 				flameBreathCollider.enabled = false;
+			}
+			if (SockWaveCollider.enabled)
+			{
+				col.SendMessage("TakeDamage", shockDamge);
+				SockWaveCollider.enabled = false;
 			}
 		}
 	}
