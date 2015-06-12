@@ -175,6 +175,11 @@ public class GameBrain : MonoBehaviour {
 		// level variable passed in is the build order scene level
 
 		// currently using gamebrains actual level to load level position approriately
+
+		// send these messages to deactivate in case they are active
+		GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
+		GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
+
 		int count = RoomsCleared.Count;
 		if (CurrentLevel == 1)
 		{

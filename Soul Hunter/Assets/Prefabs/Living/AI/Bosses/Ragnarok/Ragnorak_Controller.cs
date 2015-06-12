@@ -12,6 +12,8 @@ public class Ragnorak_Controller : MonoBehaviour
 	private Living_Obj LVObj;
 	private Transform playerShadow;
 
+	public GameObject boundingWalls;		// this will lock the player in a room
+
 	//Behavior vars
 	public float wayPointMinTicker = 3;
 	public float wayPointMaxTicker = 3;
@@ -90,11 +92,16 @@ public class Ragnorak_Controller : MonoBehaviour
 		navigation.updateRotation = false;
 		meleeCollider.enabled = false;
 		flameBreathCollider.enabled = false;
+		boundingWalls.SendMessage("ActivateWalls");
 		LVObj = (Living_Obj)this.gameObject.GetComponent("Living_Obj");
 		playerShadow = player.transform;
 		playerShadow.position = player.transform.position;
 	}
-	
+
+	void OnDestroy()
+	{
+		boundingWalls.SendMessage("DestroyWalls");
+	}
 	// Update is called once per frame
 	void Update ()
 	{

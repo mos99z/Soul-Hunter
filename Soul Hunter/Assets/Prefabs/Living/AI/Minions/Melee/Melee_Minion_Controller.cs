@@ -77,7 +77,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 			
 			if(isAttacking == false)
 			{
-				navigation.SetDestination (destination);
+				navigation.SetDestination (attackingWaypoints[closestShadow].transform.position);
 				currentAttackTimer -= Time.deltaTime;
 				waypointTimer -= Time.deltaTime;
 				if (navigation.remainingDistance <= 0.3f && waypointTimer <= 0.0f) 
@@ -122,7 +122,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 					AttackCollider.enabled = false;
 					navigation.stoppingDistance = 0.0f;
 					navigation.updateRotation = false;
-					navigation.speed = 3.5f;
+					navigation.speed = 5.0f;
 					//SearchForNearestNode();
 					destination = attackingWaypoints[closestShadow].transform.position;
 				}
@@ -239,6 +239,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 		if (col.tag == "Player") 
 		{
 			col.SendMessage("TakeDamage",Damage);
+			lungeTimer = 0.0f;
 		}
 
 		if(col.name.Contains("Melee") && !isAttacking)

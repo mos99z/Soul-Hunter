@@ -1,14 +1,16 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &144598
+--- !u!1 &115242
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 427788}
-  - 114: {fileID: 11465908}
+  - 4: {fileID: 449522}
+  - 114: {fileID: 11409418}
+  - 132: {fileID: 13279162}
+  - 65: {fileID: 6559540}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -16,66 +18,101 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &157392
+--- !u!1 &171102
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 454390}
-  - 198: {fileID: 19826562}
-  - 199: {fileID: 19944780}
+  - 4: {fileID: 418720}
+  - 198: {fileID: 19859114}
+  - 199: {fileID: 19978506}
   m_Layer: 0
-  m_Name: SpellEffectNameHere
+  m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &427788
+--- !u!4 &418720
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144598}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 454390}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!4 &454390
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157392}
+  m_GameObject: {fileID: 171102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 427788}
+  m_Father: {fileID: 449522}
   m_RootOrder: 0
---- !u!114 &11465908
+--- !u!4 &449522
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 9.10000038, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 418720}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!65 &6559540
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 4.63999987}
+  m_Center: {x: 0, y: 0, z: 2.1500001}
+--- !u!114 &11409418
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144598}
+  m_GameObject: {fileID: 115242}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0aad2e43b11fa141a2450bbcf25cb1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!198 &19826562
+--- !u!132 &13279162
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115242}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Torch,1,2,2
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!198 &19859114
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157392}
-  lengthInSec: 5
+  m_GameObject: {fileID: 171102}
+  lengthInSec: 2
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -86,7 +123,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 5
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -119,7 +156,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 5
+      scalar: 5.76999998
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -317,13 +354,13 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 4
+    type: 5
     radius: 1
     angle: 25
     length: 5
-    boxX: 1
-    boxY: 1
-    boxZ: 1
+    boxX: .5
+    boxY: .5
+    boxZ: .5
     arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
@@ -332,7 +369,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 10
+      scalar: 500
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -374,7 +411,7 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 0
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
@@ -386,7 +423,7 @@ ParticleSystem:
           outSlope: 0
           tangentMode: 0
         - time: 1
-          value: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -444,15 +481,15 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4281319414
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4281282550
         key2:
           serializedVersion: 2
           rgba: 0
@@ -472,7 +509,7 @@ ParticleSystem:
           serializedVersion: 2
           rgba: 0
         ctime0: 0
-        ctime1: 65535
+        ctime1: 17348
         ctime2: 0
         ctime3: 0
         ctime4: 0
@@ -575,7 +612,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 1
     tilesX: 1
-    tilesY: 1
+    tilesY: 8
     animationType: 0
     rowIndex: 0
     cycles: 1
@@ -1122,12 +1159,12 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19944780
+--- !u!199 &19978506
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157392}
+  m_GameObject: {fileID: 171102}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1167,5 +1204,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 144598}
+  m_RootGameObject: {fileID: 115242}
   m_IsPrefabParent: 1

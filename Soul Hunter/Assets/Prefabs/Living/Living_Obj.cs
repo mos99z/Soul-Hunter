@@ -252,20 +252,26 @@ public class Living_Obj : MonoBehaviour
 				GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
 				if (entType == EntityType.Player)
 				{
-					int count = GameBrain.Instance.RoomsCleared.Count;
-					if (count > 0)
-					{
-						switch (GameBrain.Instance.RoomsCleared[count - 1])
-						{
-						case 1: GameBrain.Instance.Player.transform.position = Vector3.zero; break;
-						case 2: GameBrain.Instance.Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
-						case 3: GameBrain.Instance.Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
-						case 4: GameBrain.Instance.Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
-						case 5: GameBrain.Instance.Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
-						}
-					}
-					else
-						GameBrain.Instance.Player.transform.position = Vector3.zero;
+					GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
+					GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
+					Application.LoadLevel(Application.loadedLevel);	// gamebrain assigns player location based on save when scene loads
+
+					// below works to respawn player when dead, above should do so more eloquently
+
+					//int count = GameBrain.Instance.RoomsCleared.Count;
+					//if (count > 0)
+					//{
+					//	switch (GameBrain.Instance.RoomsCleared[count - 1])
+					//	{
+					//	case 1: GameBrain.Instance.Player.transform.position = Vector3.zero; break;
+					//	case 2: GameBrain.Instance.Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
+					//	case 3: GameBrain.Instance.Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
+					//	case 4: GameBrain.Instance.Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
+					//	case 5: GameBrain.Instance.Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
+					//	}
+					//}
+					//else
+					//	GameBrain.Instance.Player.transform.position = Vector3.zero;
 				}
 			}
 		}

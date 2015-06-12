@@ -4,7 +4,7 @@ using System.Collections;
 public class Meteor_Controller : MonoBehaviour 
 {
 	public GameObject mouseMarker;		// mouse marker from game brain
-	public float duration = 4.0f;		// how long for meteor to hit the ground
+	public float duration = 2.0f;		// how long for meteor to hit the ground
 	public float startHeight = 30.0f;	// where on the yaxis to spawn the meteor
 	public GameObject explosion;		// the explosion effect to play when colliding
 	Vector3 target;						// where the meteor will land

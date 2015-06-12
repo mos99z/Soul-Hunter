@@ -1,31 +1,16 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &156788
+--- !u!1 &152368
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 489756}
-  - 198: {fileID: 19801104}
-  - 199: {fileID: 19913844}
-  m_Layer: 0
-  m_Name: SpellEffectNameHere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &167172
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 477814}
-  - 114: {fileID: 11460912}
+  - 4: {fileID: 484624}
+  - 114: {fileID: 11411108}
+  - 132: {fileID: 13284466}
+  - 136: {fileID: 13626738}
   m_Layer: 0
   m_Name: Sand Blast
   m_TagString: Untagged
@@ -33,49 +18,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &477814
+--- !u!1 &154430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 444624}
+  - 198: {fileID: 19821930}
+  - 199: {fileID: 19976380}
+  m_Layer: 0
+  m_Name: Effect Cone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &444624
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 489756}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!4 &489756
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156788}
+  m_GameObject: {fileID: 154430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 477814}
+  m_Father: {fileID: 484624}
   m_RootOrder: 0
---- !u!114 &11460912
+--- !u!4 &484624
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.273, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 444624}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11411108
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167172}
+  m_GameObject: {fileID: 152368}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 751e0c471d00baf4292b224f5430cf65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!198 &19801104
+--- !u!132 &13284466
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152368}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Sand Blast,2,3,3
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!136 &13626738
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2.9000001
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 1.39999998}
+--- !u!198 &19821930
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156788}
-  lengthInSec: 5
+  m_GameObject: {fileID: 154430}
+  lengthInSec: 2
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -86,7 +124,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 5
+      scalar: .200000003
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -243,19 +281,14 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4278210977
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: .600000024
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
           value: 1
           inSlope: 0
           outSlope: 0
@@ -266,18 +299,13 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
-          value: 0
+          value: .833333313
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 3
     startRotation:
       scalar: 0
       maxCurve:
@@ -313,14 +341,14 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 4
-    radius: 1
-    angle: 25
-    length: 5
+    type: 8
+    radius: .100000001
+    angle: 11.3999996
+    length: 2
     boxX: 1
     boxY: 1
     boxZ: 1
@@ -332,7 +360,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 10
+      scalar: 500
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1122,17 +1150,17 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19913844
+--- !u!199 &19976380
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 156788}
+  m_GameObject: {fileID: 154430}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: acb372672b3d9d243a84b11f48d82df6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1167,5 +1195,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 167172}
+  m_RootGameObject: {fileID: 152368}
   m_IsPrefabParent: 1

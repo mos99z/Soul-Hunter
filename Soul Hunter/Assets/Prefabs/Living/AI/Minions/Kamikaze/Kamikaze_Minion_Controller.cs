@@ -14,11 +14,19 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	public float ExplosionRange = 3.0f;
 	public bool isFrozen = false;	// used for frozen debuff
 
+	public GameObject DirectionIndicator = null;
+	public Animator Animate = null;
+
 	// Use this for initialization
 	void Start () 
 	{
+		if (Animate == null)
+			Animate = transform.GetComponentInChildren<Animator> ();
+		if (DirectionIndicator == null)
+			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 		navigation = GetComponent<NavMeshAgent>();
 		target = GameObject.FindGameObjectWithTag("Player");
+		navigation.updateRotation = false;
 	}
 	
 	// Update is called once per frame
@@ -26,33 +34,31 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	{
 		if (isFrozen)
 			return;
-		if (target == null) {
+
+		TurnTowardsPlayer ();
+
+		if (isCountingDown == false) 
+		{
+			destination = target.transform.position;
+			navigation.SetDestination (destination);
+			float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
+			if (playerDistance <= KamikazeDistance) 
+			{
+				isCountingDown = true;
+				navigation.Stop();
+			}
+		}
+		
+		if (isCountingDown == true) 
+		{
+			CountdownTimer -= Time.deltaTime;
+			
+			if(CountdownTimer <= 0)
+			{
+				Explode();
+			}
 		}
 
-		else 
-		{
-			if (isCountingDown == false) 
-			{
-				destination = target.transform.position;
-				navigation.SetDestination (destination);
-				float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
-				if (playerDistance <= KamikazeDistance) 
-				{
-					isCountingDown = true;
-					navigation.Stop();
-				}
-			}
-			
-			if (isCountingDown == true) 
-			{
-				CountdownTimer -= Time.deltaTime;
-				
-				if(CountdownTimer <= 0)
-				{
-					Explode();
-				}
-			}
-		}
 
 	}
 
@@ -65,6 +71,47 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 			target.SendMessage("TakeDamage", ExplosionDamage);
 		}
 		Destroy (gameObject);
+	}
+
+	// This function makes the enemy always face towards the player while rotating around him
+	void TurnTowardsPlayer()
+	{
+		//		DirectionIndicator.transform.LookAt(target.transform, new Vector3(0,1,0));
+		Vector3 movementDirection = navigation.velocity.normalized;
+		if (movementDirection.magnitude >= 1.0f) {
+			DirectionIndicator.transform.forward = navigation.velocity.normalized;
+			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (dotProd >= 0.75f)
+			{
+				Animate.Play ("Kamikaze_Up");
+			}
+			else if (dotProd <= -0.75f)
+			{
+				Animate.Play ("Kamikaze_Down");
+			}
+			else if (dotProd > -0.25f && dotProd <= 0.25f)
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Kamikaze_Left");
+				else
+					Animate.Play ("Kamikaze_Right");
+			}
+			else if (dotProd > 0.25f && dotProd < 0.75f)
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Kamikaze_UpLeft");
+				else
+					Animate.Play ("Kamikaze_UpRight");
+			}
+			else
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Kamikaze_DownLeft");
+				else
+					Animate.Play ("Kamikaze_DownRight");
+			}
+		}
 	}
 
 	void OnTriggerEnter(Collider col)
