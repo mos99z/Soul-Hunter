@@ -7,6 +7,9 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	public LayerMask WallCheck;
 	public GameObject target;
 	public float Damage = 100.0f;
+
+	public GameObject boundingWalls;		// use this to summon bounding walls
+
 	GameObject[] safeZones;
 	int closestSafeZone;
 	NavMeshAgent navigation;
@@ -45,8 +48,13 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		FindNewPosition ();
 		navigation.updateRotation = false;
 		FindNewPosition ();
+		boundingWalls.SendMessage("ActivateWalls");
 	}
-	
+
+	void OnDestroy()
+	{
+		boundingWalls.SendMessage("DestroyWalls");
+	}
 	// Update is called once per frame
 	void Update () 
 	{
