@@ -89,7 +89,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: .166666672
     manualCellSize: 0
-  m_NavMeshData: {fileID: 23800000, guid: c945feafa8c15e04e813e05c3256a0c7, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 674231ba639354a4a9bcfaaa297e1388, type: 2}
 --- !u!1 &13022528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,7 +3391,7 @@ GameObject:
   m_TagString: Solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &437890954
 Transform:
@@ -3483,8 +3483,8 @@ GameObject:
   m_Name: Walls
   m_TagString: Solid
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &441811331
 Transform:
@@ -10951,6 +10951,7 @@ MonoBehaviour:
   Mistral: {fileID: 1806046317}
   target: {fileID: 0}
   attackingWaypoints: []
+  boundingWalls: {fileID: 0}
   isAttacking: 0
   AttackMinimum: 5
   AttackMaximum: 7
