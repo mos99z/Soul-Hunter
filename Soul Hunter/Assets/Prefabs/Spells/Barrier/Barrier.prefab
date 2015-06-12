@@ -71,6 +71,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45fd3e21abb80647b4d8b404837daa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 4
+  damage: 2
+  rotationSpeed: 90
+  defence: .5
+  recoveryTime: 2
 --- !u!132 &13241262
 GUIText:
   m_ObjectHideFlags: 1
@@ -118,7 +123,7 @@ ParticleSystem:
   speed: 1
   randomSeed: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   moveWithTransform: 1
   InitialModule:
