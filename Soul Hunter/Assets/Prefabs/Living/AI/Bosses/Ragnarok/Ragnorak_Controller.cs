@@ -5,9 +5,12 @@ public class Ragnorak_Controller : MonoBehaviour
 {
 	//Helper Variables
 	public GameObject player;
+	public GameObject sprite;
 	private int behaviorState; //0-normal, 1-second state
 	private Vector3 destination;
 	private NavMeshAgent navigation;
+	private Living_Obj LVObj;
+	private Transform playerShadow;
 
 	public GameObject boundingWalls;		// this will lock the player in a room
 
@@ -36,17 +39,25 @@ public class Ragnorak_Controller : MonoBehaviour
 	private float meteorTicker;
 	public float meteorDamge;
 	public float meteorRange = 5;
-	public SphereCollider meteorCollider;
+	private float jumpHieght;
+	private bool goingUp;
+	private bool doOnce;
+	public SphereCollider SockWaveCollider;
+	public float shockDamge = 1;
 
 	//Needed components
 	private GameObject DirectionIndicator = null;
 	private Animator Animate = null;
 	public GameObject Firbreath;
+	public GameObject AOEJump;
 	public GameObject Claw;
 	public GameObject WarpDirection;
 	public GameObject Reapear;
+	public GameObject meteor;
+	public GameObject meteor2;
 	//waypoints
 	public Transform[] waypoints = new Transform[5];
+	public SphereCollider bossCollider;
 
 	//Debuffs
 	public float ImpactDamage = 10.1f;
@@ -59,7 +70,12 @@ public class Ragnorak_Controller : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		player = GameBrain.Instance.Player;
+
 		behaviorState = 0;
+		jumpHieght = 0;
+		goingUp = true;
+		doOnce = false;
 
 		if (Animate == null)
 		{
@@ -77,6 +93,9 @@ public class Ragnorak_Controller : MonoBehaviour
 		meleeCollider.enabled = false;
 		flameBreathCollider.enabled = false;
 		boundingWalls.SendMessage("ActivateWalls");
+		LVObj = (Living_Obj)this.gameObject.GetComponent("Living_Obj");
+		playerShadow = player.transform;
+		playerShadow.position = player.transform.position;
 	}
 
 	void OnDestroy()
@@ -86,6 +105,11 @@ public class Ragnorak_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (LVObj.CurrHealth <= LVObj.MaxHealth * 0.5)
+		{
+			behaviorState = 1;
+			animationTicker = 1;
+		}
 		if (player != null)
 		{
 			if (animationTicker == 1)
@@ -121,6 +145,7 @@ public class Ragnorak_Controller : MonoBehaviour
 		meleeTicker -= Time.deltaTime;
 		flameBreathTicker -= Time.deltaTime;
 		meteorTicker -= Time.deltaTime;
+		SockWaveCollider.enabled = false;
 	}
 
 	private void Over50HP()
@@ -193,6 +218,14 @@ public class Ragnorak_Controller : MonoBehaviour
 				flameBreathCollider.enabled = true;
 			}
 		}
+		else
+		{
+			if (meteorTicker <= 0)
+			{
+				meteorTicker = Random.Range(meteorMinTicker, meteorMaxTicker);
+				Instantiate(meteor);
+			}
+		}
 	}
 
 	private void Under50HP()
@@ -200,32 +233,46 @@ public class Ragnorak_Controller : MonoBehaviour
 		Vector3 distanceToPlayer = player.transform.position - this.gameObject.transform.position;
 		if (wayPointTicker <= 0)
 		{
+			Vector3 tempPos = this.gameObject.transform.position;
 			Firbreath.SetActive(false);
-			Reapear.SetActive(false);
-			if (animationTicker == 1.0f)
+			if (!doOnce)
 			{
-				navigation.SetDestination(waypoints[currWayPoint].position);
-				WarpDirection.SetActive(true);
+				playerShadow.position = player.transform.position;
+				bossCollider.enabled = false;
+				doOnce = true;
 			}
-			animationTicker -= Time.deltaTime;
-			if (animationTicker <= 0)
+			if (goingUp)
 			{
-				WarpDirection.SetActive(false);
-				navigation.Warp(waypoints[currWayPoint].position);
-				Reapear.SetActive(true);
-				wayPointTicker = Random.Range(wayPointMinTicker, wayPointMaxTicker);
-				int tempWayPoint;
-				while (true)
+				jumpHieght += Time.deltaTime * 15;
+				tempPos.y = jumpHieght;
+				sprite.transform.position = tempPos;
+				if (jumpHieght >= 30)
 				{
-					tempWayPoint = Random.Range(0, 4);
-					if (tempWayPoint == currWayPoint)
-					{
-						continue;
-					}
-					currWayPoint = tempWayPoint;
-					break;
+					jumpHieght = 30;
+					tempPos.y = jumpHieght;
+					sprite.transform.position = tempPos;
+					navigation.Warp(playerShadow.position);
+					goingUp = false;
 				}
-				animationTicker = 1.0f;
+			}
+			else
+			{
+				jumpHieght -= Time.deltaTime * 15;
+				tempPos.y = jumpHieght;
+				sprite.transform.position = tempPos;
+				if (jumpHieght <= 0)
+				{
+					jumpHieght = 0;
+					tempPos.y = jumpHieght;
+					sprite.transform.position = tempPos;
+					AOEJump.SetActive(false);
+					AOEJump.SetActive(true);
+					goingUp = true;
+					wayPointTicker = Random.Range(wayPointMinTicker, wayPointMaxTicker);
+					doOnce = false;
+					bossCollider.enabled = true;
+					SockWaveCollider.enabled = true;
+				}
 			}
 		}
 		else if (distanceToPlayer.magnitude < meleeRange)
@@ -264,6 +311,11 @@ public class Ragnorak_Controller : MonoBehaviour
 				}
 				flameBreathCollider.enabled = true;
 			}
+		}
+		if (meteorTicker <= 0)
+		{
+			meteorTicker = 1;
+			Instantiate(meteor2);
 		}
 	}
 
@@ -320,6 +372,11 @@ public class Ragnorak_Controller : MonoBehaviour
 			{
 				col.SendMessage("TakeDamage", flameBreathDamge);
 				flameBreathCollider.enabled = false;
+			}
+			if (SockWaveCollider.enabled)
+			{
+				col.SendMessage("TakeDamage", shockDamge);
+				SockWaveCollider.enabled = false;
 			}
 		}
 	}

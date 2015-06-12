@@ -3015,7 +3015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c5c39f464f2764bbf8e34ca0bf0c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Haze: {fileID: 199842, guid: 5744e49cd12d8ed4f881c63a1934ebba, type: 2}
+  Haze: {fileID: 191248, guid: c95368455345b424fb56eed21f7257ba, type: 2}
 --- !u!1 &334029609
 GameObject:
   m_ObjectHideFlags: 0
@@ -10526,43 +10526,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22407740, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22407740, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22409454, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22409454, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22409454, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22427490, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22427490, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22483552, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22483552, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22483552, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65b61dbf1a6e01f428936fd5c5da85e5, type: 2}
