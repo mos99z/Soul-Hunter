@@ -18927,6 +18927,7 @@ GameObject:
   - 82: {fileID: 1329567335}
   - 82: {fileID: 1329567336}
   - 82: {fileID: 1329567337}
+  - 114: {fileID: 1329567338}
   m_Layer: 2
   m_Name: GameBrain
   m_TagString: Untagged
@@ -19205,6 +19206,24 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1329567338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1329567332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0b0c78b774372439ddff4c38553204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinded: {fileID: 100058, guid: 334c0795bad10b546b8dff258ca9c2f3, type: 2}
+  burning: {fileID: 158764, guid: 8a1c1cb0b6641904ba77091a2b687b5b, type: 2}
+  crippled: {fileID: 169850, guid: f59cbcdee176bf444a23ac848b1dc966, type: 2}
+  frozen: {fileID: 183714, guid: 313109ada39e82648aad961eab12a34d, type: 2}
+  slowed: {fileID: 150616, guid: 07fd5da6258277544b6f0208a016c4b3, type: 2}
+  stunned: {fileID: 145190, guid: a0313986448e0264c8763d913c601fc5, type: 2}
+  wet: {fileID: 111420, guid: 715abe3e7f4cdf64eb87818a5d939aa4, type: 2}
 --- !u!1 &1329957439
 GameObject:
   m_ObjectHideFlags: 0
