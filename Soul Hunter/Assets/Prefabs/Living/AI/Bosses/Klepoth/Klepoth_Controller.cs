@@ -8,6 +8,7 @@ public class Klepoth_Controller : MonoBehaviour {
 	bool isAttacking = false;
 	bool movementState = false;
 	bool startedCharging = false;
+	bool pounding = false;
 	Living_Obj healthCheck;
 	GameObject target;
 	public GameObject TailWhip;
@@ -169,12 +170,44 @@ public class Klepoth_Controller : MonoBehaviour {
 		}
 		case (int)Attack_State.GROUND_POUND:
 		{
+			if(pounding == false)
+			{
+				Vector3 movementDirection = navigation.velocity.normalized;
+				float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+				Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+				if (dotProd >= 0.75f)
+					Animate.Play ("Klepoth_GroundPound_Up");
+				else if (dotProd <= -0.75f)
+					Animate.Play ("Klepoth_GroundPound_Down");
+				else if (dotProd > -0.25f && dotProd <= 0.25f)
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Klepoth_GroundPound_Left");
+					else
+						Animate.Play ("Klepoth_GroundPound_Right");
+				}
+				else if (dotProd > 0.25f && dotProd < 0.75f)
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Klepoth_GroundPound_UpLeft");
+					else
+						Animate.Play ("Klepoth_GroundPound_UpRight");
+				}
+				else
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Klepoth_GroundPound_DownLeft");
+					else
+						Animate.Play ("Klepoth_GroundPound_DownRight");
+				}
+				pounding = true;
+			}
+
 			currentGroundPoundTimer -= Time.deltaTime;
+
 			if(currentGroundPoundTimer <= 0.0f)
 			{
 				GroundPound.SetActive(true);
-				currentGroundPoundTimer = GroundPoundTimer;
-				AttackForm = (int)Attack_State.NULL;
 
 				groundPoundChecker -= Time.deltaTime;
 				if(groundPoundChecker <= 0.0f)
@@ -217,11 +250,18 @@ public class Klepoth_Controller : MonoBehaviour {
 			{
 				AttackForm = (int)Attack_State.NULL;
 			}
+
+			if(navigation.velocity == Vector3.zero && healthCheck.CurrHealth < healthCheck.MaxHealth * 0.5f)
+			{
+				AttackForm = (int)Attack_State.GROUND_POUND;
+			}
 			break;
 		}
 		case (int)Attack_State.NULL:
 		{
 			groundPoundChecker = 0.5f;
+			currentGroundPoundTimer = GroundPoundTimer;
+			
 			currentStunTimer = StunTimer;
 			navigation.acceleration = 8;
 			Debug.Log("Stopped");
@@ -232,6 +272,7 @@ public class Klepoth_Controller : MonoBehaviour {
 			isAttacking = false;
 			startedCharging = false;
 			Carrot.transform.position = Vector3.zero;
+			pounding = false;
 			break;
 		}
 		}
@@ -309,7 +350,7 @@ public class Klepoth_Controller : MonoBehaviour {
 			if (col.tag == "Player")
 				col.SendMessage ("TakeDamage", GroundPoundDamage);
 
-			if(healthCheck.CurrHealth < healthCheck.MaxHealth * 0.5f)
+			if(col.tag == "Player" && healthCheck.CurrHealth < healthCheck.MaxHealth * 0.5f)
 			{
 				col.SendMessage ("TakeDamage", GroundPoundDamage);
 			}
@@ -344,6 +385,7 @@ public class Klepoth_Controller : MonoBehaviour {
 			if(healthCheck.CurrHealth < healthCheck.MaxHealth * 0.5f)
 			{
 				Debug.Log("Stalactite Drop");
+				StalactiteDrop.GetComponent<Stalactite_Area_Controller>().enabled = true;
 			}
 		}
 	}

@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.39999998, y: 0, z: 15}
+  m_LocalPosition: {x: -2.58330727, y: 0, z: 25.3875656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 496570}
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55454eb8dc7f9d9449f27210b0e8314f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   attackingWaypoints: []
   isAttacking: 0
   isSwarming: 0
@@ -191,6 +192,7 @@ MonoBehaviour:
   AttackTimer: 5
   Damage: 100
   AttackCollider: {fileID: 13571626}
+  isFrozen: 0
   DirectionIndicator: {fileID: 193342}
   Animate: {fileID: 9577718}
 --- !u!135 &13571626
@@ -226,7 +228,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 126538}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
