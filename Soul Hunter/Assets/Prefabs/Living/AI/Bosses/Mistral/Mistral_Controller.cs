@@ -9,7 +9,9 @@ public class Mistral_Controller : MonoBehaviour
 	public float MinRange = 5.0f;		// Minimum Attack Range
 	public float MaxRange = 18.0f;		// Maximum Attack Range
 	public LayerMask Mask;				// Layers to ignore
-	
+
+	public GameObject boundingWalls;
+
 	// Movement Variables
 	NavMeshAgent navigation;			// Used to allow the minion to use the NavMesh
 	public GameObject target;					// Used to know where the player is at all times
@@ -49,10 +51,11 @@ public class Mistral_Controller : MonoBehaviour
 		navigation = GetComponent<NavMeshAgent> ();
 		target = GameObject.FindGameObjectWithTag ("Player");
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
-
+		boundingWalls.SendMessage("ActivateWalls");
+		
 //		healthScript = gameObject.GetComponent<Living_Obj> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
@@ -298,6 +301,8 @@ public class Mistral_Controller : MonoBehaviour
 	{
 		if(perendiAlive)
 			Perendi.SendMessage ("OtherBossDead");
+		if (!perendiAlive)
+			boundingWalls.SendMessage("DestroyWalls");
 	}
 
 	void PlayerDead()

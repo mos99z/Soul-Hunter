@@ -41,8 +41,9 @@ public class Perendi_Controller : MonoBehaviour {
 		destination.y = 0;
 		destination += transform.position;
 		attackingWaypoints = GameObject.FindGameObjectsWithTag ("Shadow").OrderBy(waypoint => waypoint.name).ToArray<GameObject>();
+		boundingWalls.SendMessage("ActivateWalls");
 	}
-	
+
 	// Update is called once per frame
 	// The enemy will rotate around the player and lunge in after a certain amount of time has passed
 	// After another amount of time has passed, the enemy has the ability to use a Shock Discharge, but only if the player is within range
@@ -205,7 +206,10 @@ public class Perendi_Controller : MonoBehaviour {
 	void OnDestroy()
 	{
 		if (mistralAlive)
-		Mistral.SendMessage ("OtherBossDead");
+			Mistral.SendMessage ("OtherBossDead");
+		if (!mistralAlive)
+			boundingWalls.SendMessage("DestroyWalls");
+
 	}
 
 	void PlayerDead()

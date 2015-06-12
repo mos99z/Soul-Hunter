@@ -20,6 +20,8 @@ public class Klepoth_Controller : MonoBehaviour {
 	Vector3 destination;
 	int AttackForm = 0;
 
+	public GameObject boundingWalls;		// used for bounding player in room
+
 	public float AttackCooldown = 10.0f;
 	float currentAttackCooldown = 0.0f;
 	public float StunTimer = 2.0f;
@@ -55,9 +57,14 @@ public class Klepoth_Controller : MonoBehaviour {
 		currentStunTimer = StunTimer;
 		navigation = GetComponent<NavMeshAgent> ();
 		navigation.updateRotation = false;
-		
+
+		boundingWalls.SendMessage("ActivateWalls");
 	}
-	
+
+	void OnDestroy()
+	{
+		boundingWalls.SendMessage("DestroyWalls");
+	}
 	// Update is called once per frame
 	void Update () 
 	{

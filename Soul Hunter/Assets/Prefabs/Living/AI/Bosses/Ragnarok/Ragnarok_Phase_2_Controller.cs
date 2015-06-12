@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ragnorak_Controller : MonoBehaviour
-{
+public class Ragnarok_Phase_2_Controller : MonoBehaviour {
+
 	//Helper Variables
 	public GameObject player;
 	private int behaviorState; //0-normal, 1-second state
 	private Vector3 destination;
 	private NavMeshAgent navigation;
-
-	public GameObject boundingWalls;		// this will lock the player in a room
-
+	
+	//public GameObject boundingWalls;		// this will lock the player in a room
+	
 	//Behavior vars
 	public float wayPointMinTicker = 3;
 	public float wayPointMaxTicker = 3;
@@ -37,7 +37,7 @@ public class Ragnorak_Controller : MonoBehaviour
 	public float meteorDamge;
 	public float meteorRange = 5;
 	public SphereCollider meteorCollider;
-
+	
 	//Needed components
 	private GameObject DirectionIndicator = null;
 	private Animator Animate = null;
@@ -47,7 +47,7 @@ public class Ragnorak_Controller : MonoBehaviour
 	public GameObject Reapear;
 	//waypoints
 	public Transform[] waypoints = new Transform[5];
-
+	
 	//Debuffs
 	public float ImpactDamage = 10.1f;
 	public float IgniteChance = 1.0f;
@@ -55,12 +55,12 @@ public class Ragnorak_Controller : MonoBehaviour
 	public float BurningDOTTickCycle = 0.5f;
 	public float BurningDOTTickDamage = 5.1f;
 	private GameObject BurningDebuff = null;
-
+	
 	// Use this for initialization
 	void Start ()
 	{
 		behaviorState = 0;
-
+		
 		if (Animate == null)
 		{
 			Animate = transform.GetComponentInChildren<Animator> ();
@@ -70,18 +70,18 @@ public class Ragnorak_Controller : MonoBehaviour
 			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 		}
 		BurningDebuff = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
-
-//		player = GameBrain.Instance.Player;
+		
+		player = GameBrain.Instance.Player;
 		navigation = GetComponent<NavMeshAgent>();
 		navigation.updateRotation = false;
 		meleeCollider.enabled = false;
 		flameBreathCollider.enabled = false;
-		boundingWalls.SendMessage("ActivateWalls");
+		//boundingWalls.SendMessage("ActivateWalls");
 	}
-
+	
 	void OnDestroy()
 	{
-		boundingWalls.SendMessage("DestroyWalls");
+		//boundingWalls.SendMessage("DestroyWalls");
 	}
 	// Update is called once per frame
 	void Update ()
@@ -114,7 +114,7 @@ public class Ragnorak_Controller : MonoBehaviour
 			}
 		}
 	}
-
+	
 	private void UpdateTickers()
 	{
 		wayPointTicker -= Time.deltaTime;
@@ -122,7 +122,7 @@ public class Ragnorak_Controller : MonoBehaviour
 		flameBreathTicker -= Time.deltaTime;
 		meteorTicker -= Time.deltaTime;
 	}
-
+	
 	private void Over50HP()
 	{
 		Vector3 distanceToPlayer = player.transform.position - this.gameObject.transform.position;
@@ -194,7 +194,7 @@ public class Ragnorak_Controller : MonoBehaviour
 			}
 		}
 	}
-
+	
 	private void Under50HP()
 	{
 		Vector3 distanceToPlayer = player.transform.position - this.gameObject.transform.position;
@@ -266,7 +266,7 @@ public class Ragnorak_Controller : MonoBehaviour
 			}
 		}
 	}
-
+	
 	private void TurnTowardsPlayer()
 	{
 		DirectionIndicator.transform.LookAt(player.transform.position, new Vector3(0,1,0));
@@ -306,7 +306,7 @@ public class Ragnorak_Controller : MonoBehaviour
 			}
 		}
 	}
-
+	
 	private void OnTriggerEnter(Collider col)
 	{
 		if (col.tag == "Player") 
