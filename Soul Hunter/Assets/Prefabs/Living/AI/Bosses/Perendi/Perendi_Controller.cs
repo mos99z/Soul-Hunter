@@ -9,7 +9,9 @@ public class Perendi_Controller : MonoBehaviour {
 	public GameObject target = null;
 	Vector3 destination;				// Location to move to using the NavMesh
 	public GameObject[] attackingWaypoints;	// Used to rotate around the player
-	
+
+	public GameObject boundingWalls;	// object to raise walls
+
 	float waypointTimer = 0.0f;
 	float currentAttackTimer = 0.0f;
 	float lungeTimer = 0.0f;

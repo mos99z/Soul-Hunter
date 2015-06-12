@@ -7656,6 +7656,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45fd3e21abb80647b4d8b404837daa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 4
+  damage: 2
+  rotationSpeed: 90
+  defence: .5
+  recoveryTime: 2
 --- !u!1 &195980560
 GameObject:
   m_ObjectHideFlags: 0
@@ -11619,23 +11624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e61d48326939a4889c0cfeb025e2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 2.20000005
-  DamageTickRate: .100000001
-  RecoveryCostRate: .333333343
-  PushBackForce: .75
-  Range: 10
-  StartHeight: 1
-  ImpactEffectObj: {fileID: 0}
-  Duration: 10
-  TheCollider: {fileID: 0}
-  SpellEffect: {fileID: 0}
-  BurnDebuff: {fileID: 0}
-  DebuffChance: .100000001
-  DebuffDuration: 10
-  WALLS:
-    serializedVersion: 2
-    m_Bits: 0
-  PlayerFaceingIndicator: {fileID: 0}
 --- !u!1 &292295744
 GameObject:
   m_ObjectHideFlags: 0
@@ -15732,6 +15720,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef7a65bc7263284182ea6f9ec005d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  spawnHeight: .0500000007
+  duration: 4
+  rotateSpeed: 90
+  recoveryCost: 2
+  slow: {fileID: 0}
 --- !u!1 &487759677
 GameObject:
   m_ObjectHideFlags: 0
@@ -16409,6 +16403,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac5cbc14b488fe40b13446f0a88be20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  startHeight: 1.5
+  duration: 1
+  damage: 5.5
+  recoveryTime: 1.5
+  maxHits: 5
 --- !u!222 &549487025
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16811,6 +16811,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88858237277154a42bb4da2eb16d18b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crystals:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mouseMarker: {fileID: 0}
+  spawnHeight: -3
+  speed: 1
+  recoveryCost: 2
+  duration: 1
+  damage: 5
+  tickTime: .25
+  slow: {fileID: 0}
 --- !u!1 &558983308
 GameObject:
   m_ObjectHideFlags: 0
@@ -19549,6 +19561,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394750ed4fc191944bfc14a0c5c4a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 25.3999996
+  recoveryCost: 1.5
+  startHeight: 1
+  speed: .200000003
+  range: 10
+  mouseMarker: {fileID: 0}
 --- !u!1 &630573908
 GameObject:
   m_ObjectHideFlags: 0
@@ -50014,6 +50032,7 @@ MonoBehaviour:
   PlayerCurrHealth: 2000
   PlayerLivesLeft: 3
   SoulCount: 20000
+  MeleeEnemyCounter: 0
   CurrentLevel: -1
   RoomsCleared: 
   FireLevel: 0
@@ -66272,6 +66291,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5f45cba6929284793401c7f7042151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  startHeight: 30
+  explosion: {fileID: 0}
+  damage: 25
+  recoveryCost: 3
+  burn: {fileID: 0}
+  burnDamage: 8.10000038
+  burnTick: 1
+  burnTime: 5
+  cripple: {fileID: 0}
 --- !u!1 &1748371648
 GameObject:
   m_ObjectHideFlags: 0
@@ -66737,6 +66767,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89af3951d816d28419eb09744e842d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 25.1000004
+  duration: 1
+  recoveryTime: 2
+  mouseMarker: {fileID: 0}
+  spawnHeight: 1
+  forceMode: 0
+  knockback: 300
+  radius: 2
+  burning: {fileID: 0}
+  burnChance: .100000001
+  burnDuration: 5
+  burnTick: 1
+  burnDamage: 10.1000004
+  cripple: {fileID: 0}
+  crippleChance: .150000006
 --- !u!1 &1797245408
 GameObject:
   m_ObjectHideFlags: 0
@@ -72239,6 +72284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   slowSpeedModifier: .5
+  fromConcrete: 0
 --- !u!1 &1887203740
 GameObject:
   m_ObjectHideFlags: 0
@@ -72305,6 +72351,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b965c38840dd39745a9ae1ca7563e60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterDamage: 10.5
+  windDamage: 5.19999981
+  duration: 1.5
+  recoveryCost: 1.5
+  spawnHeight: 2.5
+  mouseMarker: {fileID: 0}
+  frozen: {fileID: 0}
+  chance: .5
+  frozenDuration: 4
 --- !u!1 &1899484179
 GameObject:
   m_ObjectHideFlags: 0
@@ -73546,6 +73601,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07daae433b17b346aecbfe16934b7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  spawnHeight: .0500000007
+  duration: 4
+  rotateSpeed: 135
+  recoveryCost: 2
+  scaleShrink: .5
+  slow: {fileID: 0}
+  weakness: 5
 --- !u!1 &1912277009
 GameObject:
   m_ObjectHideFlags: 0
