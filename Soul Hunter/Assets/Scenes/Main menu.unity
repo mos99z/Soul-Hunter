@@ -8699,6 +8699,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3170714c2cc01504688d7302f6fa9814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!1 &530516780
 GameObject:
   m_ObjectHideFlags: 0
@@ -16428,6 +16432,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11428086, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      propertyPath: WetDebuff
+      value: 
+      objectReference: {fileID: 111420, guid: 715abe3e7f4cdf64eb87818a5d939aa4, type: 2}
+    - target: {fileID: 11428086, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      propertyPath: PlayerFaceingIndicator
+      value: 
+      objectReference: {fileID: 962110945}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
   m_IsPrefabParent: 0
@@ -27786,6 +27798,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0aad2e43b11fa141a2450bbcf25cb1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!1 &1772036219
 GameObject:
   m_ObjectHideFlags: 0
@@ -27931,6 +27947,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d94e3c5fb5f934fa33ea4f6ac0d43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!1 &1799035990
 GameObject:
   m_ObjectHideFlags: 0
