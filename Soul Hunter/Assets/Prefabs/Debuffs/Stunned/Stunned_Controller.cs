@@ -39,7 +39,8 @@ public class Stunned_Controller : MonoBehaviour {
 			{
 				Scripts[i].enabled = false;
 			}
-			transform.parent.GetComponent<NavMeshAgent>().enabled = false;
+			if(transform.parent.tag == "Enemy")
+				transform.parent.GetComponent<NavMeshAgent>().enabled = false;
 			transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
 			transform.parent.transform.position = LockPosition;
 			checkOnce = false;
@@ -48,7 +49,8 @@ public class Stunned_Controller : MonoBehaviour {
 		timeAlive += Time.deltaTime;
 		if (timeAlive >= Duration)
 		{
-			transform.parent.GetComponent<NavMeshAgent>().enabled = true;
+			if(transform.parent.tag == "Enemy")
+				transform.parent.GetComponent<NavMeshAgent>().enabled = true;
 			for (int i = 0; i < Scripts.Length; i++)
 			{
 				Scripts[i].enabled = true;

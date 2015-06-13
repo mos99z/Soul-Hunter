@@ -10,6 +10,8 @@ public class SummonWall : MonoBehaviour
 		float tempY = walls[0].transform.position.y;
 		for (int i = 0; i < walls.Length; i++)
 		{
+			if(walls[i] == null)
+				continue;
 			Vector3 pos = walls[i].transform.position;
 			pos.y = yPos;
 			walls[i].transform.position = pos;
@@ -21,6 +23,8 @@ public class SummonWall : MonoBehaviour
 	{
 		for (int i = 0; i < walls.Length; i++)
 		{
+			if(walls[i] == null)
+				continue;
 			Vector3 pos = walls[i].transform.position;
 			pos.y = yPos;
 			walls[i].transform.position = pos;
@@ -30,6 +34,10 @@ public class SummonWall : MonoBehaviour
 	void DestroyWalls()
 	{
 		for (int i = 0; i < walls.Length; i++)
-			Destroy(walls[i]);
+		{
+			if(walls[i] == null)
+				continue;
+			Destroy (walls [i]);
+		}
 	}
 }

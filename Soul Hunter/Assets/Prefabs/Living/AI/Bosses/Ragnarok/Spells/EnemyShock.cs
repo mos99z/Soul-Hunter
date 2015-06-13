@@ -8,6 +8,8 @@ public class EnemyShock : MonoBehaviour
 	private bool startDamage;
 	public GameObject zapPart;
 	public SphereCollider zapCol;
+	public float StunDuration = 1.0f;
+	public GameObject Stunned = null;
 	
 	// Use this for initialization
 	void Start ()
@@ -18,6 +20,8 @@ public class EnemyShock : MonoBehaviour
 		zapPart.GetComponent<ParticleSystem>().maxParticles = 10;
 		zapCol.enabled = false;
 		startDamage = false;
+		if (Stunned == null) 
+			Stunned = GameBrain.Instance.GetComponent<DebuffMasterList>().stunned;
 	}
 	
 	void Update ()
@@ -47,12 +51,15 @@ public class EnemyShock : MonoBehaviour
 	
 	private void OnTriggerEnter(Collider col)
 	{
-		float damageMod = 1.0f;
 		if (col.tag == "Player")
 		{
 			if (col.transform.FindChild ("Wet(Clone)"))
 			{
 				col.SendMessage("TakeDamage", 10);
+				GameObject stun = Instantiate (Stunned);
+				stun.transform.parent = col.transform;
+				stun.transform.localPosition = new Vector3 (0, -col.transform.position.y, 0);
+				stun.GetComponent<Stunned_Controller> ().Duration = StunDuration;
 			}
 			else
 			{

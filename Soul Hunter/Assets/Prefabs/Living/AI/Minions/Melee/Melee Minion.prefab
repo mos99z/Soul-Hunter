@@ -190,7 +190,7 @@ MonoBehaviour:
   WaitMinimum: 5
   WaitMaximum: 7
   AttackTimer: 5
-  Damage: 100
+  Damage: 25
   AttackCollider: {fileID: 13571626}
   isFrozen: 0
   DirectionIndicator: {fileID: 193342}

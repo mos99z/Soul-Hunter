@@ -35,7 +35,7 @@ public class Klepoth_Controller : MonoBehaviour {
 	public Animator Animate = null;
 	public GameObject DirectionIndicator = null;
 	public GameObject StalactiteDrop = null;
-	float debugTimer = 0.0f;
+	//float debugTimer = 0.0f;
 	float groundPoundChecker = 0.5f;
 	Vector3 stunnedPosition;
 	
