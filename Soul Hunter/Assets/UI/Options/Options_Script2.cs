@@ -182,9 +182,7 @@ public class Options_Script2 : MonoBehaviour
 	{
 		Screen.fullScreen = !Screen.fullScreen;
 		
-		FullScreen.text = Screen.fullScreen ? "Fullscreen" : "Windowed";
-		
-		if (Screen.fullScreen)
+		if (!Screen.fullScreen)
 		{
 			FullOn.SetActive(true);
 			FullOff.SetActive(false);

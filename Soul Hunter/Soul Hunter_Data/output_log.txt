@@ -6,45 +6,30 @@ Direct3D:
     Vendor:   Intel
     VRAM:     512 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.156 seconds
+Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.095 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: F:\code\SGP\Working Repo\Catastrophic\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\System.dll (this message is harmless)
+Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\System.dll (this message is harmless)
+UnityException: Transform child out of bounds
+  at (wrapper managed-to-native) UnityEngine.Transform:GetChild (int)
+  at Freeze_Controller.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: aa4 -> priority: 1 
-  Thread -> id: 37d8 -> priority: 1 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.154860 ms
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2871.
-Total: 1.325227 ms (FindLiveObjects: 0.152664 ms CreateObjectMapping: 0.067138 ms MarkObjects: 1.090886 ms  DeleteObjects: 0.014111 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Spawn_Area_Controller.OnTriggerEnter (UnityEngine.Collider col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Spawn_Area_Controller.OnTriggerEnter (UnityEngine.Collider col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Spawn_Area_Controller.OnTriggerEnter (UnityEngine.Collider col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
+  Thread -> id: 2a68 -> priority: 1 
+  Thread -> id: 1f40 -> priority: 1 
 NullReferenceException
   at (wrapper managed-to-native) UnityEngine.GameObject:SetActive (bool)
   at Player_Movement_Controller.OnDestroy () [0x00000] in <filename unknown>:0 

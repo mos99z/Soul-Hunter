@@ -1790,7 +1790,7 @@ RectTransform:
   m_Father: {fileID: 1912277010}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -4560,8 +4560,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1840401375}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -6622,7 +6622,7 @@ RectTransform:
   m_Father: {fileID: 1366458617}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -8663,9 +8663,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
 --- !u!132 &522860414
 GUIText:
   m_ObjectHideFlags: 0
@@ -12521,7 +12518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Windowed
+  m_Text: Fullscreen
 --- !u!114 &771778701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17142,8 +17139,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1859250779}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -27813,9 +27810,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
 --- !u!132 &1770342351
 GUIText:
   m_ObjectHideFlags: 0
@@ -27961,9 +27955,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
 --- !u!132 &1797245410
 GUIText:
   m_ObjectHideFlags: 0
@@ -29405,6 +29396,14 @@ Prefab:
       propertyPath: LoadingScreen
       value: 
       objectReference: {fileID: 1896255470}
+    - target: {fileID: 113400, guid: 336b851fb80e57b499cd77878ed44184, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499514, guid: 336b851fb80e57b499cd77878ed44184, type: 2}
+      propertyPath: m_Text
+      value: Fullscreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 336b851fb80e57b499cd77878ed44184, type: 2}
   m_IsPrefabParent: 0
