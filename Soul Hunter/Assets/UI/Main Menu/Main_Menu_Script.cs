@@ -95,8 +95,12 @@ public class Main_Menu_Script : MonoBehaviour
 
 		else
 		{
-			LoadingScreen.SetActive(true);
-			LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
+			Debug.Log(ao.progress);
+			if (ao.progress == 0.9f) 
+			{
+				LoadingScreen.SetActive(false);
+				ao.allowSceneActivation = true;
+			}
 		}
 	}
 
@@ -157,6 +161,8 @@ public class Main_Menu_Script : MonoBehaviour
 		int zero = 0;
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
 		GameBrain.Instance.EraseFile();
+		LoadingScreen.SetActive(true);
+		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync ("TempTutorial");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
@@ -170,7 +176,10 @@ public class Main_Menu_Script : MonoBehaviour
 //		newPlayer.transform.parent = GameBrain.Instance.transform;
 //		newPlayer.transform.localPosition = Vector3.zero;
 		GameBrain.Instance.EraseFile();
+		LoadingScreen.SetActive(true);
+		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync("Level 1");
+		ao.allowSceneActivation = false;
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
 	}

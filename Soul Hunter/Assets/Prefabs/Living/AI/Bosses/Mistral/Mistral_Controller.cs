@@ -18,9 +18,7 @@ public class Mistral_Controller : MonoBehaviour
 	bool isMoving = false;				// a boolean used to prevent the enemy from continuously trying to update position
 	GameObject[] safeZones;
 	Vector3 destination;				// Location to move to using the NavMesh
-	int closestSafeZone;// = 0;			// 
-	float currentRotation = 0.0f;
-	float AngularAcceleration = 3.5f;
+	int closestSafeZone;// = 0;			
 	public float MinWaitTime = 5.0f;
 	public float MaxWaitTime = 7.0f;
 	bool perendiAlive = true;
@@ -42,17 +40,20 @@ public class Mistral_Controller : MonoBehaviour
 	public float AttackTimer = 5.0f;
 	public float Damage = 100.0f;
 	public SphereCollider AttackCollider;
-
+	public GameObject DirectionIndicator = null;
+	
 //	private Living_Obj healthScript = null;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		navigation = GetComponent<NavMeshAgent> ();
+		navigation.updateRotation = false;
 		target = GameObject.FindGameObjectWithTag ("Player");
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
 		boundingWalls.SendMessage("ActivateWalls");
-		
+		if (DirectionIndicator == null)
+			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 //		healthScript = gameObject.GetComponent<Living_Obj> ();
 	}
 
@@ -87,7 +88,6 @@ public class Mistral_Controller : MonoBehaviour
 				if (navigation.remainingDistance == 0) 
 				{
 					isMoving = false;
-					navigation.updateRotation = false;
 				}
 				
 			}
@@ -128,7 +128,6 @@ public class Mistral_Controller : MonoBehaviour
 					lungeTimer = 1.5f;
 					currentAttackTimer = AttackTimer;
 					navigation.autoBraking = true;
-					navigation.updateRotation = true;
 					navigation.stoppingDistance = 4.0f;
 					destination = gameObject.transform.position;
 				}
@@ -148,7 +147,6 @@ public class Mistral_Controller : MonoBehaviour
 					isAttacking = false;
 					AttackCollider.enabled = false;
 					navigation.stoppingDistance = 0.0f;
-					navigation.updateRotation = false;
 					//SearchForNearestNode();
 					destination = attackingWaypoints[closestShadow].transform.position;
 				}
@@ -169,8 +167,7 @@ public class Mistral_Controller : MonoBehaviour
 		Vector3 distance = target.transform.position - gameObject.transform.position;
 		if (distance.magnitude > MinRange && distance.magnitude < MaxRange)
 			return true;
-		
-		navigation.updateRotation = true;
+
 		return false;
 	}
 	
@@ -205,35 +202,39 @@ public class Mistral_Controller : MonoBehaviour
 	// This function turns the enemy towards the player
 	// It will return a true if the player is in front of the enemy
 	// It will return false if the player is not in front of the enemy
-	bool TurnTowardsPlayer()
+	void TurnTowardsPlayer()
 	{
-		Vector3 Forward = transform.forward;
-		Vector3 PlayerDistance = target.transform.position - transform.position;
-		PlayerDistance.y = 0.0f;
-		float rotation = 0.0f;
-		float angle = Vector3.Angle(PlayerDistance, Forward);
-		
-		// Rotation
-		if (angle > 5.0f)
-		{
-			if (Vector3.Cross (PlayerDistance, Forward).y > 0)
-				rotation = -1 * AngularAcceleration;
-			if (Vector3.Cross (PlayerDistance, Forward).y < 0)
-				rotation = 1 * AngularAcceleration;
-			
-			currentRotation += rotation;
-			currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-			currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-			transform.Rotate (0, currentRotation, 0);
-			
-			return false;
-		} 
-		
-		else
-		{
-			gameObject.transform.LookAt(target.transform.position);
-			return true;
+		Vector3 movementDirection = navigation.velocity.normalized;
+		if (movementDirection.magnitude >= 1.0f) {
+			DirectionIndicator.transform.forward = navigation.velocity.normalized;
 		}
+		//Vector3 Forward = transform.forward;
+		//Vector3 PlayerDistance = target.transform.position - transform.position;
+		//PlayerDistance.y = 0.0f;
+		//float rotation = 0.0f;
+		//float angle = Vector3.Angle(PlayerDistance, Forward);
+		//
+		//// Rotation
+		//if (angle > 5.0f)
+		//{
+		//	if (Vector3.Cross (PlayerDistance, Forward).y > 0)
+		//		rotation = -1 * AngularAcceleration;
+		//	if (Vector3.Cross (PlayerDistance, Forward).y < 0)
+		//		rotation = 1 * AngularAcceleration;
+		//	
+		//	currentRotation += rotation;
+		//	currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
+		//	currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
+		//	transform.Rotate (0, currentRotation, 0);
+		//	
+		//	return false;
+		//} 
+		//
+		//else
+		//{
+		//	gameObject.transform.LookAt(target.transform.position);
+		//	return true;
+		//}
 	}
 	
 	// This function will search for the nearest safe zone. When found, it will
@@ -258,7 +259,6 @@ public class Mistral_Controller : MonoBehaviour
 		randomPosition.y = 0;
 		
 		destination = safeZones [closestSafeZone].transform.position + randomPosition;
-		navigation.updateRotation = true;
 		isMoving = true;
 	}
 	
