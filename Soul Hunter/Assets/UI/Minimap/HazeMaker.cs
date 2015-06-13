@@ -8,12 +8,12 @@ public class HazeMaker : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		for (int i = -150; i <= 150; i += 7)
+		for (int i = -150; i <= 150; i += 5)
 		{
-			for (int j = -50; j <= 400; j += 7)
+			for (int j = -50; j <= 400; j += 5)
 			{
 				Vector3 newPosition = new Vector3(i, 50, j);
-				Instantiate(Haze, newPosition, Quaternion.identity);
+				Instantiate(Haze, newPosition, Haze.transform.rotation);
 			}
 		}
 	}
