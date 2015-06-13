@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Soul_Controller : MonoBehaviour {
 
-	public int SoulValue = 100;
+	public int SoulValue = 0;
 	public float AliveTime = 10.0f;
 	public string CollectorTag = "Player";
 	public float MoveSpeed = 0.3f;
@@ -33,6 +33,7 @@ public class Soul_Controller : MonoBehaviour {
 				once = false;
 				//GameObject gameBrain = GameObject.Find("GameBrain");
 				GameBrain.Instance.SendMessage("ModSouls", SoulValue, SendMessageOptions.RequireReceiver);
+				GameBrain.Instance.SendMessage("ModHealth", SoulValue, SendMessageOptions.RequireReceiver);
 				GameBrain.Instance.HUDMaster.SendMessage("CheckLevelAvailability", 0);
 				if (SFXCollectSoul != null)
 				{
