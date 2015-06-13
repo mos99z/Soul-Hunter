@@ -52984,6 +52984,7 @@ MonoBehaviour:
   Mistral: {fileID: 1806046317}
   target: {fileID: 0}
   attackingWaypoints: []
+  boundingWalls: {fileID: 0}
   isAttacking: 0
   AttackMinimum: 5
   AttackMaximum: 7
@@ -57151,6 +57152,7 @@ MonoBehaviour:
   Mask:
     serializedVersion: 2
     m_Bits: 256
+  boundingWalls: {fileID: 0}
   target: {fileID: 0}
   MinWaitTime: 5
   MaxWaitTime: 7
@@ -60841,6 +60843,14 @@ Prefab:
     - target: {fileID: 462590, guid: 9d0a91a5ae52d434c9d8d090a2a4ba9c, type: 2}
       propertyPath: m_RootOrder
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487102, guid: 9d0a91a5ae52d434c9d8d090a2a4ba9c, type: 2}
+      propertyPath: startHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487102, guid: 9d0a91a5ae52d434c9d8d090a2a4ba9c, type: 2}
+      propertyPath: duration
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d0a91a5ae52d434c9d8d090a2a4ba9c, type: 2}

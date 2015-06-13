@@ -320,6 +320,8 @@ public class GameBrain : MonoBehaviour {
 
 	}
 	void Update () {
+		if (Input.GetKeyDown(KeyCode.I))
+		    Player.GetComponent<Living_Obj>().CanTakeDamage = !Player.GetComponent<Living_Obj>().CanTakeDamage;
 		if (CurrentLevel > 0)
 			GameTime += Time.deltaTime;
 		else if (CurrentLevel == -2) {
