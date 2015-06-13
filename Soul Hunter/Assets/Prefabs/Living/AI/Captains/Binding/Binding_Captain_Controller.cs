@@ -9,6 +9,7 @@ public class Binding_Captain_Controller : MonoBehaviour
 	private Player_Caster_Controller PCC;
 	private Player_Movement_Controller PMC;
 	public bool isSurrounded;
+	public GameObject boundingWalls;	// for setting walls to lock room
 
 	//behavior vars
 	public float meleeMinTicker = 1;

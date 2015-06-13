@@ -17,7 +17,7 @@ public class Exit_Prompt_Script : MonoBehaviour {
 	{
 		if (ao != null) 
 		{
-			if (ao.isDone) 
+			if (ao.progress == 0.9f) 
 			{
 				LoadingScreen.SetActive(false);
 				ao.allowSceneActivation = true;

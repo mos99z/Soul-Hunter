@@ -12,6 +12,13 @@ public class Credits_Controller : MonoBehaviour {
 	void Update () 
 	{
 		if (Input.anyKey)
+		{
+			// save level as 0 to not break the save file
+			GameBrain.Instance.CurrentLevel = 0;
+			GameBrain.Instance.Save();
+			// set to -1 to load the main menu
+			GameBrain.Instance.CurrentLevel = -1;
 			Application.LoadLevel ("Main menu");
+		}
 	}
 }
