@@ -17,8 +17,6 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	GameObject[] safeZones;
 	Vector3 destination;				// Location to move to using the NavMesh
 	int closestSafeZone;// = 0;			// 
-	float currentRotation = 0.0f;
-	float AngularAcceleration = 3.5f;
 	Vector3 playerDistance;
 	public GameObject boundingWalls;	// walls to summon when facing captain
 
@@ -36,12 +34,14 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	float currentSpellBarrageTimer = 0.0f;
 	float AOEChargeUp = 0.5f;
 	float currentAOETimer = 0.0f;
+	public GameObject DirectionIndicator = null;
 	
 	
 	// Use this for initialization
 	void Start () 
 	{
 		navigation = GetComponent<NavMeshAgent> ();
+		navigation.updateRotation = false;
 		target = GameObject.FindGameObjectWithTag ("Player");
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
 		currentSpellBarrageTimer = SpellBarrageCooldown;
@@ -49,6 +49,8 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		spellDamage = SpellBarrage.GetComponent<Spell_Barrage_Controller> ().Damage;
 		aoeDamage = AOE.GetComponent<AOE_Controller> ().Damage;
 		boundingWalls.SendMessage("ActivateWalls");
+		if (DirectionIndicator == null)
+			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 	}
 
 	void OnDestroy()
@@ -65,116 +67,109 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	{
 		currentAOETimer -= Time.deltaTime;
 
-		if (target == null) {
-		}
-
-		else 
+		if (isCastingSpellBarrage == false) 
 		{
-			if (isCastingSpellBarrage == false) 
+			currentSpellBarrageTimer -= Time.deltaTime;
+			if(currentSpellBarrageTimer <= 0)
 			{
-				currentSpellBarrageTimer -= Time.deltaTime;
-				if(currentSpellBarrageTimer <= 0)
+				isCastingSpellBarrage = true;
+				return;
+			}
+			
+			if(isCastingAOE == false)
+			{
+				TurnTowardsPlayer();
+				if (CheckPlayerDistance () == true && isMoving == false) 
 				{
-					isCastingSpellBarrage = true;
-					navigation.updateRotation = false;
-					return;
-				}
-				
-				if(isCastingAOE == false)
-				{
-					if (CheckPlayerDistance () == true && isMoving == false) 
+					currentAttackTimer -= Time.deltaTime;
+					Vector3 lookAtPlayer = target.transform.position - transform.position;
+					DirectionIndicator.transform.forward = lookAtPlayer.normalized;
+
+					if(currentAttackTimer <= 0.0f)
 					{
-						TurnTowardsPlayer();
-						currentAttackTimer -= Time.deltaTime;
+						Vector3 startLoc = transform.position;
+						startLoc.y = 1.5f;
+						GameObject missile = (GameObject)GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
+						missile.GetComponent<Fel_Missile_Controller>().Damage = missileDamage; 		// needed for cripple
+						//RangedAttack.transform.position = startLoc;0
+						//Vector3 newForward = (target.transform.position - transform.position);
+						//newForward.y = 0.0f;
+						//newForward.Normalize();
+						//RangedAttack.transform.forward = newForward;
 						
-						if(currentAttackTimer <= 0.0f)
-						{
-							Vector3 startLoc = transform.position;
-							startLoc.y = 1.5f;
-							GameObject missile = (GameObject)GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
-							missile.GetComponent<Fel_Missile_Controller>().Damage = missileDamage; 		// needed for cripple
-							//RangedAttack.transform.position = startLoc;0
-							//Vector3 newForward = (target.transform.position - transform.position);
-							//newForward.y = 0.0f;
-							//newForward.Normalize();
-							//RangedAttack.transform.forward = newForward;
-							
-							attackCounter++;
-							currentAttackTimer = Random.Range(MinAttackCooldown,MaxAttackCooldown);
-						}
-						
-						if(attackCounter >= 3)
-						{
-							SideStrafe();
-							isMoving = true;
-						}
+						attackCounter++;
+						currentAttackTimer = Random.Range(MinAttackCooldown,MaxAttackCooldown);
 					}
 					
-					else
+					if(attackCounter >= 3)
 					{
-						if(isMoving == false)
-						{
-							Reposition();
-							isMoving = true;
-						}
-						
-						else if(isMoving == true)
-						{
-							
-							navigation.SetDestination(destination);
-							if(navigation.remainingDistance == 0)
-							{
-								isMoving = false;
-								navigation.updateRotation = false;
-							}
-							
-						}
+						SideStrafe();
+						isMoving = true;
 					}
 				}
 				
-				if(playerDistance.magnitude <= 1.5f && isCastingAOE == false && currentAOETimer <= 0.0f)
+				else
 				{
-					isCastingAOE = true;
-					AOE.SetActive(true);
-					AOE.GetComponent<AOE_Controller>().Damage = aoeDamage;		// needed for cripple
-					currentAOETimer = AOEChargeUp;
-					Debug.Log ("AOE Enabled");
-				}
-				
-				if(isCastingAOE == true)
-				{
-					navigation.SetDestination(gameObject.transform.position);
-					
-					
-					if(currentAOETimer <= 0.0f)
+					if(isMoving == false)
 					{
-						Debug.Log ("AOE Disabled");
-						AOE.SetActive(false);
-						currentAOETimer = AOECooldown;
-						isCastingAOE = false;
+						Reposition();
+						isMoving = true;
+					}
+					
+					else if(isMoving == true)
+					{
+						
+						navigation.SetDestination(destination);
+						if(navigation.remainingDistance == 0)
+						{
+							isMoving = false;
+						}
+						
 					}
 				}
 			}
 			
-			else
+			if(playerDistance.magnitude <= 1.5f && isCastingAOE == false && currentAOETimer <= 0.0f)
+			{
+				isCastingAOE = true;
+				AOE.SetActive(true);
+				AOE.GetComponent<AOE_Controller>().Damage = aoeDamage;		// needed for cripple
+				currentAOETimer = AOEChargeUp;
+				Debug.Log ("AOE Enabled");
+			}
+			
+			if(isCastingAOE == true)
 			{
 				navigation.SetDestination(gameObject.transform.position);
-				if(navigation.remainingDistance == 0)
+				
+				
+				if(currentAOETimer <= 0.0f)
 				{
-					if(TurnTowardsPlayer())
-					{
-						Vector3 startLoc = transform.position;
-						startLoc.y = 1.5f;
-						GameObject spell = (GameObject)GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);
-						spell.GetComponent<Spell_Barrage_Controller>().Damage = spellDamage;		// needed for cripple
-						isCastingSpellBarrage = false;
-						currentSpellBarrageTimer = SpellBarrageCooldown;
-						navigation.updateRotation = true;
-					}
+					Debug.Log ("AOE Disabled");
+					AOE.SetActive(false);
+					currentAOETimer = AOECooldown;
+					isCastingAOE = false;
 				}
 			}
 		}
+		
+		else
+		{
+			navigation.SetDestination(gameObject.transform.position);
+			if(navigation.remainingDistance == 0)
+			{
+				Vector3 lookAtPlayer = target.transform.position - transform.position;
+				DirectionIndicator.transform.forward = lookAtPlayer.normalized;
 
+				Vector3 startLoc = transform.position;
+				startLoc.y = 1.5f;
+				GameObject spell = (GameObject)GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);
+				spell.GetComponent<Spell_Barrage_Controller>().Damage = spellDamage;		// needed for cripple
+				isCastingSpellBarrage = false;
+				currentSpellBarrageTimer = SpellBarrageCooldown;
+				
+			}
+		}
 	}
 	
 	// This function will check the distance of the player. It will return true if
@@ -185,8 +180,7 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		playerDistance = target.transform.position - gameObject.transform.position;
 		if (playerDistance.magnitude > MinRange && playerDistance.magnitude < MaxRange)
 			return true;
-		
-		navigation.updateRotation = true;
+
 		return false;
 	}
 	
@@ -222,35 +216,39 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	// This function turns the enemy towards the player
 	// It will return a true if the player is in front of the enemy
 	// It will return false if the player is not in front of the enemy
-	bool TurnTowardsPlayer()
+	void TurnTowardsPlayer()
 	{
-		Vector3 Forward = transform.forward;
-		Vector3 PlayerDistance = target.transform.position - transform.position;
-		PlayerDistance.y = 0.0f;
-		float rotation = 0.0f;
-		float angle = Vector3.Angle(PlayerDistance, Forward);
-		
-		// Rotation
-		if (angle > 5.0f)
-		{
-			if (Vector3.Cross (PlayerDistance, Forward).y > 0)
-				rotation = -1 * AngularAcceleration;
-			if (Vector3.Cross (PlayerDistance, Forward).y < 0)
-				rotation = 1 * AngularAcceleration;
-			
-			currentRotation += rotation;
-			currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-			currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-			transform.Rotate (0, currentRotation, 0);
-			
-			return false;
-		} 
-		
-		else
-		{
-			gameObject.transform.LookAt(target.transform.position);
-			return true;
+		Vector3 movementDirection = navigation.velocity.normalized;
+		if (movementDirection.magnitude >= 1.0f) {
+			DirectionIndicator.transform.forward = navigation.velocity.normalized;
 		}
+		//Vector3 Forward = transform.forward;
+		//Vector3 PlayerDistance = target.transform.position - transform.position;
+		//PlayerDistance.y = 0.0f;
+		//float rotation = 0.0f;
+		//float angle = Vector3.Angle(PlayerDistance, Forward);
+		//
+		//// Rotation
+		//if (angle > 5.0f)
+		//{
+		//	if (Vector3.Cross (PlayerDistance, Forward).y > 0)
+		//		rotation = -1 * AngularAcceleration;
+		//	if (Vector3.Cross (PlayerDistance, Forward).y < 0)
+		//		rotation = 1 * AngularAcceleration;
+		//	
+		//	currentRotation += rotation;
+		//	currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
+		//	currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
+		//	transform.Rotate (0, currentRotation, 0);
+		//	
+		//	return false;
+		//} 
+		//
+		//else
+		//{
+		//	gameObject.transform.LookAt(target.transform.position);
+		//	return true;
+		//}
 	}
 	
 	// This function will search for the nearest safe zone. When found, it will
@@ -276,7 +274,6 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		randomPosition.y = 0;
 		
 		destination = safeZones [closestSafeZone].transform.position + randomPosition;
-		navigation.updateRotation = true;
 		isMoving = true;
 	}
 
