@@ -174,43 +174,47 @@ Prefab:
       objectReference: {fileID: 1801908752}
     - target: {fileID: 22437652, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22437652, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22455462, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22455462, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22455462, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22449542, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22449542, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22461540, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22461540, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22461540, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 187434, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
+      propertyPath: m_Name
+      value: GameBrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 850311a11a74b4d49a7e0733bbd9d106, type: 2}
