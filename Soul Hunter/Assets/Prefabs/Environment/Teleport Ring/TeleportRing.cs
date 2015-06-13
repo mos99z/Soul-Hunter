@@ -10,7 +10,7 @@ public class TeleportRing : MonoBehaviour
 
 	void Start()
 	{
-		LoadingScreen = GameBrain.Instance.transform.FindChild("Loading Screen").gameObject;
+		LoadingScreen = GameBrain.Instance.loadingScreen;
 	}
 
 	void Update()

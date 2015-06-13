@@ -107,10 +107,11 @@ public class GameBrain : MonoBehaviour {
 	public GameObject Player = null;
 	public GameObject MouseMarker = null;
 	public GameObject HUDMaster = null;
-	//public GameObject SpellDatabase = null;
-	public GameObject Souls = null;		// replaced with master spell list
+	//public GameObject SpellDatabase = null; // replaced with master spell list
+	public GameObject Souls = null;		
 	//public GameObject Debuffs = null;		// replaced with master list script
 	public GameObject DisplayText = null;
+	public GameObject loadingScreen = null;
 	public AudioSource[] Music;// = GetComponents<AudioSource> ();
 
 

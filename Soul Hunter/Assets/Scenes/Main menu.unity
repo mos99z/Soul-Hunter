@@ -19001,6 +19001,7 @@ MonoBehaviour:
   HUDMaster: {fileID: 882392391}
   Souls: {fileID: 1026269815}
   DisplayText: {fileID: 530516780}
+  loadingScreen: {fileID: 1896255470}
   Music:
   - {fileID: 1329567337}
   - {fileID: 1329567336}
