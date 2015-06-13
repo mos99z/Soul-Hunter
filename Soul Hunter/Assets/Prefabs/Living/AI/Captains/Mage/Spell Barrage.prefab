@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09111cba8fad5b44b8f2173f1eac013a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 500
+  Damage: 200
   Speed: .150000006
   TurnSpeed: 90
   StartHeight: 1.5

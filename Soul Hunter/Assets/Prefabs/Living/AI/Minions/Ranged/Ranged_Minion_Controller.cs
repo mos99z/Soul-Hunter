@@ -13,9 +13,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	bool isMoving = false;				// a boolean used to prevent the enemy from continuously trying to update position
 	GameObject[] safeZones;
 	Vector3 destination;				// Location to move to using the NavMesh
-	int closestSafeZone;// = 0;			// 
-	float currentRotation = 0.0f;
-	float AngularAcceleration = 3.5f;
+	int closestSafeZone;// = 0;			
 
 	// Attack Variables
 	int attackCounter = 0;
@@ -24,17 +22,21 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	public float missleDamage;			// This is used for the cripple debuff
 	float currentAttackTimer = 0.0f;
 	public bool isFrozen = false;		// used for frozen debuff
-
+	public GameObject DirectionIndicator = null;
+	
 	
 	// Use this for initialization
 	void Start () 
 	{
 		navigation = GetComponent<NavMeshAgent> ();
+		navigation.updateRotation = false;
 		target = GameObject.FindGameObjectWithTag ("Player");
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
 
 		if (FelMissile)
 			missleDamage = FelMissile.GetComponent<Fel_Missile_Controller>().Damage;
+		if (DirectionIndicator == null)
+			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 	}
 	
 	// Update is called once per frame
@@ -43,60 +45,59 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 		if (isFrozen)
 			return;
 
-		if (target == null) {
-		}
+		TurnTowardsPlayer();
 
-		else
+		if (CheckPlayerDistance () == true && isMoving == false && attackCounter < 3) 
 		{
-			if (CheckPlayerDistance () == true && isMoving == false && attackCounter < 3) 
+			currentAttackTimer -= Time.deltaTime;
+			Vector3 lookAtPlayer = target.transform.position - transform.position;
+			DirectionIndicator.transform.forward = lookAtPlayer.normalized;
+			
+			if(currentAttackTimer <= 0.0f)
 			{
-				TurnTowardsPlayer();
-				currentAttackTimer -= Time.deltaTime;
+				//Debug.Log("Enemy Attacked");
 				
-				if(currentAttackTimer <= 0.0f)
-				{
-					//Debug.Log("Enemy Attacked");
-					Vector3 startLoc = transform.position;
-					startLoc.y = 1.5f;
-					GameObject RangedAttack = GameObject.Instantiate(FelMissile);
-					RangedAttack.GetComponent<Fel_Missile_Controller>().Damage = missleDamage;	// this assignment is necessary for cripple
-					RangedAttack.transform.position = startLoc;
-					Vector3 newForward = (target.transform.position - transform.position);
-					newForward.y = 0.0f;
-					newForward.Normalize();
-					RangedAttack.transform.forward = newForward;
-					attackCounter++;
-					currentAttackTimer = AttackCooldown;
-				}
-				
-				if(attackCounter >= 3)
-				{
-					SideStrafe();
-					isMoving = true;
-				}
+				Vector3 startLoc = transform.position;
+				startLoc.y = 1.5f;
+				GameObject RangedAttack = GameObject.Instantiate(FelMissile);
+				RangedAttack.GetComponent<Fel_Missile_Controller>().Damage = missleDamage;	// this assignment is necessary for cripple
+				RangedAttack.transform.position = startLoc;
+				Vector3 newForward = (target.transform.position - transform.position);
+				newForward.y = 0.0f;
+				newForward.Normalize();
+				RangedAttack.transform.forward = newForward;
+				attackCounter++;
+				currentAttackTimer = AttackCooldown;
 			}
 			
-			else
+			if(attackCounter >= 3)
 			{
-				if(isMoving == false)
-				{
-					Reposition();
-					isMoving = true;
-				}
-				
-				else if(isMoving == true)
-				{
-					
-					navigation.SetDestination(destination);
-					if(navigation.remainingDistance == 0)
-					{
-						isMoving = false;
-						navigation.updateRotation = false;
-					}
-					
-				}
+				SideStrafe();
+				isMoving = true;
 			}
 		}
+		
+		else
+		{
+			if(isMoving == false)
+			{
+				Reposition();
+				isMoving = true;
+			}
+			
+			else if(isMoving == true)
+			{
+				
+				navigation.SetDestination(destination);
+				if(navigation.remainingDistance == 0)
+				{
+					isMoving = false;
+				}
+				
+			}
+		}
+		
+
 
 
 
@@ -111,8 +112,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 		Vector3 distance = target.transform.position - gameObject.transform.position;
 		if (distance.magnitude > MinRange && distance.magnitude < MaxRange)
 			return true;
-		
-		navigation.updateRotation = true;
+
 		return false;
 	}
 
@@ -148,35 +148,39 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	// This function turns the enemy towards the player
 	// It will return a true if the player is in front of the enemy
 	// It will return false if the player is not in front of the enemy
-	bool TurnTowardsPlayer()
+	void TurnTowardsPlayer()
 	{
-		Vector3 Forward = transform.forward;
-		Vector3 PlayerDistance = target.transform.position - transform.position;
-		PlayerDistance.y = 0.0f;
-		float rotation = 0.0f;
-		float angle = Vector3.Angle(PlayerDistance, Forward);
-		
-		// Rotation
-		if (angle > 5.0f)
-		{
-			if (Vector3.Cross (PlayerDistance, Forward).y > 0)
-				rotation = -1 * AngularAcceleration;
-			if (Vector3.Cross (PlayerDistance, Forward).y < 0)
-				rotation = 1 * AngularAcceleration;
-			
-			currentRotation += rotation;
-			currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-			currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-			transform.Rotate (0, currentRotation, 0);
-		
-			return false;
-		} 
-		
-		else
-		{
-			gameObject.transform.LookAt(target.transform.position);
-			return true;
+		Vector3 movementDirection = navigation.velocity.normalized;
+		if (movementDirection.magnitude >= 1.0f) {
+			DirectionIndicator.transform.forward = navigation.velocity.normalized;
 		}
+		//Vector3 Forward = transform.forward;
+		//Vector3 PlayerDistance = target.transform.position - transform.position;
+		//PlayerDistance.y = 0.0f;
+		//float rotation = 0.0f;
+		//float angle = Vector3.Angle(PlayerDistance, Forward);
+		//
+		//// Rotation
+		//if (angle > 5.0f)
+		//{
+		//	if (Vector3.Cross (PlayerDistance, Forward).y > 0)
+		//		rotation = -1 * AngularAcceleration;
+		//	if (Vector3.Cross (PlayerDistance, Forward).y < 0)
+		//		rotation = 1 * AngularAcceleration;
+		//	
+		//	currentRotation += rotation;
+		//	currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
+		//	currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
+		//	transform.Rotate (0, currentRotation, 0);
+		//
+		//	return false;
+		//} 
+		//
+		//else
+		//{
+		//	gameObject.transform.LookAt(target.transform.position);
+		//	return true;
+		//}
 	}
 
 	// This function will search for the nearest safe zone. When found, it will
@@ -202,7 +206,6 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 		randomPosition.y = 0;
 
 		destination = safeZones [closestSafeZone].transform.position + randomPosition;
-		navigation.updateRotation = true;
 		isMoving = true;
 	}
 
