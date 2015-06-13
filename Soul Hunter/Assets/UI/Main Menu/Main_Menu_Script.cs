@@ -15,11 +15,12 @@ public class Main_Menu_Script : MonoBehaviour
 	private bool needsUpdate;
 	public bool stall;
 	public GameObject MainMenu = null;
-
+	public GameObject LoadingScreen;
 	//other menus or popups
 	public GameObject NewGamePrompt;
 	public GameObject OptionsMenu;
 	private Main_Menu_Script mainMenScript;
+	AsyncOperation ao = null;
 	
 	// Use this for initialization
 	void Start () 
@@ -41,59 +42,61 @@ public class Main_Menu_Script : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (!stall)
+		if (ao == null) 
 		{
-			if (Input.GetKeyDown (KeyCode.UpArrow)) 
-			{
-				index--;
-				if (index < 0)
-					index = 4;
-				needsUpdate = true;
+			if (!stall) {
+				if (Input.GetKeyDown (KeyCode.UpArrow)) {
+					index--;
+					if (index < 0)
+						index = 4;
+					needsUpdate = true;
+				} else if (Input.GetKeyDown (KeyCode.DownArrow)) {
+					index++;
+					if (index > 4)
+						index = 0;
+					needsUpdate = true;
+				}
 			}
-			else if (Input.GetKeyDown (KeyCode.DownArrow))
-			{
-				index++;
-				if (index > 4)
-					index = 0;
-				needsUpdate = true;
+			
+			if (Input.GetKeyDown (KeyCode.Return)) {
+				switch (index) {
+				case 0:
+					{
+						MouseClick0 ();
+						break;
+					}
+				case 1:
+					{
+						MouseClick1 ();
+						break;
+					}
+				case 2:
+					{
+						MouseClick2 ();
+						break;
+					}
+				case 3:
+					{
+						MouseClick3 ();
+						break;
+					}
+				case 4:
+					{
+						MouseClick4 ();
+						break;
+					}
+				}
+			}
+			if (needsUpdate) {
+				MoveSoul ();
+				needsUpdate = false;
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.Return)) 
+		else
 		{
-			switch (index)
-			{
-			case 0:
-			{
-				MouseClick0 ();
-				break;
-			}
-			case 1:
-			{
-				MouseClick1 ();
-				break;
-			}
-			case 2:
-			{
-				MouseClick2 ();
-				break;
-			}
-			case 3:
-			{
-				MouseClick3 ();
-				break;
-			}
-			case 4:
-			{
-				MouseClick4 ();
-				break;
-			}
-			}
-		}
-		if (needsUpdate)
-		{
-			MoveSoul();
-			needsUpdate = false;
+			LoadingScreen.SetActive(true);
+			LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		}
 	}
 
@@ -154,7 +157,7 @@ public class Main_Menu_Script : MonoBehaviour
 		int zero = 0;
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
 		GameBrain.Instance.EraseFile();
-		Application.LoadLevel ("TempTutorial");
+		ao = Application.LoadLevelAsync ("TempTutorial");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
 	}
@@ -167,7 +170,7 @@ public class Main_Menu_Script : MonoBehaviour
 //		newPlayer.transform.parent = GameBrain.Instance.transform;
 //		newPlayer.transform.localPosition = Vector3.zero;
 		GameBrain.Instance.EraseFile();
-		Application.LoadLevel("Level 1");
+		ao = Application.LoadLevelAsync("Level 1");
 		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
 		
 	}
