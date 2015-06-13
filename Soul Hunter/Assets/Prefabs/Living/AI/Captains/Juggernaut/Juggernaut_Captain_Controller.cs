@@ -15,8 +15,8 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	NavMeshAgent navigation;
 	Vector3 destination;
 	float movementTimer = 0.0f;
-	float currentRotation = 0.0f;
-	float AngularAcceleration = 3.5f;
+	//float currentRotation = 0.0f;
+	//float AngularAcceleration = 3.5f;
 	public float AttackTimer = 2.0f;
 	float currentAttackTimer = 0.0f;
 	public float ChargeCooldown = 10.0f;
