@@ -15,9 +15,7 @@ public class Perendi_Controller : MonoBehaviour {
 	float waypointTimer = 0.0f;
 	float currentAttackTimer = 0.0f;
 	float lungeTimer = 0.0f;
-	int closestShadow = 0;				// 
-	float currentRotation = 0.0f;
-	float AngularAcceleration = 3.5f;
+	int closestShadow = 0;				
 	bool mistralAlive = true;
 	public bool isAttacking = false;
 	public float AttackMinimum = 5;
@@ -31,17 +29,21 @@ public class Perendi_Controller : MonoBehaviour {
 	public float SDChargeUp = 1.0f;
 	bool DischargingStatic = false;
 	bool CurrentlyDischarging = false;
-
+	public GameObject DirectionIndicator = null;
+	
 	// Use this for initialization
 	void Start ()
 	{
 		target = GameObject.FindGameObjectWithTag ("Player");
 		navigation = GetComponent<NavMeshAgent> ();
+		navigation.updateRotation = false;
 		destination = Random.insideUnitSphere * 7;
 		destination.y = 0;
 		destination += transform.position;
 		attackingWaypoints = GameObject.FindGameObjectsWithTag ("Shadow").OrderBy(waypoint => waypoint.name).ToArray<GameObject>();
 		boundingWalls.SendMessage("ActivateWalls");
+		if (DirectionIndicator == null)
+			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 	}
 
 	// Update is called once per frame
@@ -85,7 +87,6 @@ public class Perendi_Controller : MonoBehaviour {
 						float AttackTimer = Random.Range(AttackMinimum,AttackMaximum);
 						currentAttackTimer = AttackTimer;
 						navigation.autoBraking = true;
-						navigation.updateRotation = true;
 						navigation.stoppingDistance = 2.0f;
 						destination = gameObject.transform.position;
 					}
@@ -93,12 +94,14 @@ public class Perendi_Controller : MonoBehaviour {
 				
 				if (isAttacking == true) {
 					lungeTimer -= Time.deltaTime;
+					Vector3 lookAtPlayer = target.transform.position - transform.position;
+					DirectionIndicator.transform.forward = lookAtPlayer.normalized;
 					//gameObject.transform.LookAt(target.transform.position,Vector3.up);
 					navigation.SetDestination (target.transform.position);
 					
 					if (navigation.remainingDistance < 2.5f)
 						AttackCollider.enabled = true;
-					
+
 					if (lungeTimer <= 0.0f)
 					{
 						isAttacking = false;
@@ -149,25 +152,29 @@ public class Perendi_Controller : MonoBehaviour {
 	// This function makes the enemy always face towards the player while rotating around him
 	void TurnTowardsPlayer()
 	{
-		Vector3 Forward = transform.forward;
-		Vector3 PlayerDistance = target.transform.position - transform.position;
-		PlayerDistance.y = 0.0f;
-		float rotation = 0.0f;
-		float angle = Vector3.Angle(PlayerDistance, Forward);
-		
-		// Rotation
-		if (angle > 5.0f)
-		{
-			if(Vector3.Cross(PlayerDistance, Forward).y > 0)
-				rotation = -1 * AngularAcceleration;
-			if(Vector3.Cross(PlayerDistance, Forward).y < 0)
-				rotation = 1 * AngularAcceleration;
-			
-			currentRotation += rotation;
-			currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-			currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-			transform.Rotate (0, currentRotation, 0);
+		Vector3 movementDirection = navigation.velocity.normalized;
+		if (movementDirection.magnitude >= 1.0f) {
+			DirectionIndicator.transform.forward = navigation.velocity.normalized;
 		}
+		//Vector3 Forward = transform.forward;
+		//Vector3 PlayerDistance = target.transform.position - transform.position;
+		//PlayerDistance.y = 0.0f;
+		//float rotation = 0.0f;
+		//float angle = Vector3.Angle(PlayerDistance, Forward);
+		//
+		//// Rotation
+		//if (angle > 5.0f)
+		//{
+		//	if(Vector3.Cross(PlayerDistance, Forward).y > 0)
+		//		rotation = -1 * AngularAcceleration;
+		//	if(Vector3.Cross(PlayerDistance, Forward).y < 0)
+		//		rotation = 1 * AngularAcceleration;
+		//	
+		//	currentRotation += rotation;
+		//	currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
+		//	currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
+		//	transform.Rotate (0, currentRotation, 0);
+		//}
 	}
 	
 	void SearchForNearestNode()
