@@ -14,25 +14,37 @@ Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_
 Loading F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.095 seconds
+- Completed reload, in  0.103 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\Previous Classes\SGP1\Soul-Hunter\Soul Hunter\Soul Hunter_Data\Managed\System.dll (this message is harmless)
-UnityException: Transform child out of bounds
-  at (wrapper managed-to-native) UnityEngine.Transform:GetChild (int)
-  at Freeze_Controller.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2a68 -> priority: 1 
-  Thread -> id: 1f40 -> priority: 1 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.GameObject:SetActive (bool)
-  at Player_Movement_Controller.OnDestroy () [0x00000] in <filename unknown>:0 
+  Thread -> id: 2328 -> priority: 1 
+  Thread -> id: 2b80 -> priority: 1 
+C:/Users/Caripsol/AppData/LocalLow/DefaultCompany/Soul Hunter/PlayerInfo.dat
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+0.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+UnloadTime: 0.469977 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 30775.
+Total: 19.160898 ms (FindLiveObjects: 2.077054 ms CreateObjectMapping: 8.950533 ms MarkObjects: 8.025117 ms  DeleteObjects: 0.107765 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 55.297878 ms
+
+Unloading 319 unused Assets to reduce memory usage. Loaded Objects now: 2206.
+Total: 1.693032 ms (FindLiveObjects: 0.103916 ms CreateObjectMapping: 0.072271 ms MarkObjects: 1.167460 ms  DeleteObjects: 0.349382 ms)
 
