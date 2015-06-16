@@ -9,12 +9,13 @@ public class BindingMinionCheck : MonoBehaviour
 	private Binding_Captain_Controller BCC;
 
 	//helper vars
-	private int numMinions = 0;
+	public int numMinions = 0;
 	public int numMinionsAllowed = 5;
 
 	void Start ()
 	{
 		BCC = (Binding_Captain_Controller)BindCapt.GetComponent("Binding_Captain_Controller");
+		player = GameBrain.Instance.Player;
 	}
 	
 	// Update is called once per frame

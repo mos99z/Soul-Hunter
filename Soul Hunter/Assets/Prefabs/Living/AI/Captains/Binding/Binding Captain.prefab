@@ -285,6 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   isSurrounded: 0
+  boundingWalls: {fileID: 0}
   meleeMinTicker: 3
   meleeMaxTicker: 5
   meleeDamge: 250
@@ -314,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   BindCapt: {fileID: 148052}
+  numMinions: 0
   numMinionsAllowed: 5
 --- !u!114 &11470186
 MonoBehaviour:
@@ -328,13 +330,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 1
-  MaxHealth: 500
-  CurrHealth: 255
+  MaxHealth: 1000
+  CurrHealth: 1000
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
   SoulValue: 6
-  entType: 3
+  entType: 2
 --- !u!135 &13513754
 SphereCollider:
   m_ObjectHideFlags: 1
