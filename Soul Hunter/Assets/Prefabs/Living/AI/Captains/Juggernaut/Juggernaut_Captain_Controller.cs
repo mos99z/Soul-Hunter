@@ -12,17 +12,18 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 
 	NavMeshAgent navigation;
 	Vector3 destination;
-	//float currentRotation = 0.0f;
-	//float AngularAcceleration = 3.5f;
 	public float AttackTimer = 2.0f;
 	float currentAttackTimer = 0.0f;
 	public float ChargeCooldown = 10.0f;
+	public float ChargeChargeUp = 1.0f;
+	float currentChargeChargeUp = 0.0f;
 	public GameObject Carrot;
 	float currentChargeCooldown = 0.0f;
 	float collisionTimer = 0.0f;
 	bool hasHitPlayer = false;
 	bool hasTurnedOffAttackArea = false;
 	bool isCharging = false;
+	bool hasChargedUp = false;
 	bool hasCollided = false;
 	public Animator Animate = null;
 	public GameObject DirectionIndicator = null;
@@ -38,6 +39,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		
 		navigation = GetComponent<NavMeshAgent> ();
 		currentChargeCooldown = ChargeCooldown;
+		currentChargeChargeUp = ChargeChargeUp;
 		navigation.updateRotation = false;
 		boundingWalls.SendMessage("ActivateWalls");
 	}
@@ -56,11 +58,22 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		{
 			Vector3 playerDistance = target.transform.position - gameObject.transform.position;
 			TurnTowardsPlayer ();
-			if(currentChargeCooldown <= 0.0f && playerDistance.magnitude > 4.0f)
+			if(hasChargedUp == false && currentChargeCooldown <= 0.0f && playerDistance.magnitude > 4.0f)
+			{
+				currentChargeChargeUp -= Time.deltaTime;
+				navigation.SetDestination(gameObject.transform.position);
+				DirectionIndicator.transform.forward = playerDistance.normalized;
+				if(currentChargeChargeUp <= 0.0f)
+					hasChargedUp = true;
+				return;
+			}
+			if(hasChargedUp)
 			{
 				isCharging = true;
+				hasChargedUp = false;
 				navigation.velocity = Vector3.zero;
 				DirectionIndicator.transform.forward = playerDistance.normalized;
+				currentChargeChargeUp = ChargeChargeUp;
 				
 				navigation.speed = 50.0f;
 				navigation.acceleration = 50.0f;
