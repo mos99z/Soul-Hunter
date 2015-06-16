@@ -6767,7 +6767,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 22.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -10414,6 +10414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0aad2e43b11fa141a2450bbcf25cb1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11415592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10615,6 +10619,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b750a917fd667b24ca2848caa3d71a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11419854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11717,6 +11725,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751e0c471d00baf4292b224f5430cf65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11431984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13119,6 +13131,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2581ecd0a94e2949b161078641751f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  startHeight: 0
+  duration: 2
+  damage: 5.5
+  recoveryTime: 1.5
+  maxHits: 5
 --- !u!114 &11443370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14754,6 +14772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MessagePrompt: {fileID: 198134}
   PauseMenu: {fileID: 122010}
+  LoadingScreen: {fileID: 0}
 --- !u!114 &11469214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14970,6 +14989,7 @@ MonoBehaviour:
   HUDMaster: {fileID: 115472}
   Souls: {fileID: 153334}
   DisplayText: {fileID: 123814}
+  loadingScreen: {fileID: 0}
   Music:
   - {fileID: 8234292}
   - {fileID: 8219968}
@@ -15385,6 +15405,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d94e3c5fb5f934fa33ea4f6ac0d43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11473862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16044,7 +16068,7 @@ MonoBehaviour:
   WALLS:
     serializedVersion: 2
     m_Bits: 256
-  PlayerFaceingIndicator: {fileID: 0}
+  PlayerFaceingIndicator: {fileID: 116266}
 --- !u!114 &11481244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16482,6 +16506,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90693b157974a64f881c6e91b7a3cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11485822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16707,6 +16735,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e61d48326939a4889c0cfeb025e2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  startHeight: 1.5
+  duration: .300000012
+  damage: 15.1000004
+  recoveryTime: 1.5
+  maxHits: 4
 --- !u!114 &11488038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17173,6 +17207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3170714c2cc01504688d7302f6fa9814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11495322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31368,7 +31406,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294910588
+        rgba: 4288610369
       minMaxState: 0
     startSize:
       scalar: 10
