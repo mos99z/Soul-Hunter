@@ -116,10 +116,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1403295306}
   m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 160, y: 70}
+  m_AnchorMin: {x: .411772847, y: .49000001}
+  m_AnchorMax: {x: .588454425, y: .64662379}
+  m_AnchoredPosition: {x: 0, y: -.5}
+  m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &91779919
 MonoBehaviour:
@@ -152,7 +152,9 @@ MonoBehaviour:
 
     Austin Ware
 
-    Steven Quast'
+    Steven Quast
+
+    Josh Stankiewicz'
 --- !u!222 &91779920
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -175,7 +177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &515277409
 RectTransform:
   m_ObjectHideFlags: 0
@@ -188,10 +190,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1403295306}
   m_RootOrder: 4
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -223}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: .411772847, y: .0270000007}
+  m_AnchorMax: {x: .588454425, y: .0820000023}
+  m_AnchoredPosition: {x: 0, y: 1.5}
+  m_SizeDelta: {x: 2, y: 3}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &515277410
 MonoBehaviour:
@@ -254,10 +256,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1403295306}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 160, y: 40}
+  m_AnchorMin: {x: .411772847, y: .658504963}
+  m_AnchorMax: {x: .588454425, y: .738000035}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &804498279
 MonoBehaviour:
@@ -488,6 +490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade8aa7c724ab36479c1f4ea3c85c855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PhaseOneObjects: []
+  PhaseTwoObjects: []
+  PhaseThreeObjects:
+  - {fileID: 515277408}
+  TimeUntilPhase3: 2
 --- !u!114 &1403295308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,10 +641,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1403295306}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 140}
-  m_SizeDelta: {x: 160, y: 40}
+  m_AnchorMin: {x: .411772847, y: .738000035}
+  m_AnchorMax: {x: .588454425, y: .812000036}
+  m_AnchoredPosition: {x: 0, y: 1}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1485990114
 MonoBehaviour:
@@ -702,10 +709,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1403295306}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 180}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: .411772847, y: .828000069}
+  m_AnchorMax: {x: .588454425, y: .887000024}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1746068894
 MonoBehaviour:
