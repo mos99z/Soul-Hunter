@@ -78,5 +78,6 @@ public class CaptainHealth : MonoBehaviour
 	public void DeactivateCaptBar()
 	{
 		captainObj.SetActive(false);
+		firstGo = true;
 	}
 }
