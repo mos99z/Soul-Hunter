@@ -11,7 +11,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main menu.unity
   - enabled: 1
     path: Assets/Scenes/TempTutorial.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
