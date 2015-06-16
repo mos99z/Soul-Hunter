@@ -21,6 +21,7 @@ public class Exit_Prompt_Script : MonoBehaviour {
 			{
 				LoadingScreen.SetActive(false);
 				ao.allowSceneActivation = true;
+				GameBrain.Instance.SendMessage ("SetLevel", -1);
 			}
 		}
 	}
@@ -28,7 +29,6 @@ public class Exit_Prompt_Script : MonoBehaviour {
 	public void Exit_Message_Yes()
 	{
 		int zero = 0;
-		GameBrain.Instance.SendMessage ("SetLevel", -1);
 		LoadingScreen.SetActive(true);
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync ("Main menu");

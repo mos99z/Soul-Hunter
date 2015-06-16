@@ -1532,6 +1532,10 @@ Prefab:
       propertyPath: m_Name
       value: Ragnarok Phase 2
       objectReference: {fileID: 0}
+    - target: {fileID: 101224, guid: 9c4280649b7f8614abc26de41b3c6c96, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c4280649b7f8614abc26de41b3c6c96, type: 2}
   m_IsPrefabParent: 0
@@ -3595,6 +3599,7 @@ MonoBehaviour:
   missileDamage: 0
   spellDamage: 0
   aoeDamage: 0
+  DirectionIndicator: {fileID: 0}
 --- !u!114 &414997442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4329,7 +4334,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11489368, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
       propertyPath: CurrHealth
-      value: 490
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 11457790, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
       propertyPath: StalactiteDrop
@@ -9736,6 +9741,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 161374, guid: 635a4431c2761244b86df8d5ce880fce, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 635a4431c2761244b86df8d5ce880fce, type: 2}
   m_IsPrefabParent: 0
@@ -11661,6 +11670,7 @@ MonoBehaviour:
   SDCooldown: 6
   SDDistance: 2
   SDChargeUp: 1
+  DirectionIndicator: {fileID: 0}
 --- !u!54 &1662483244
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12839,6 +12849,7 @@ MonoBehaviour:
   AttackTimer: 5
   Damage: 100
   AttackCollider: {fileID: 1806046321}
+  DirectionIndicator: {fileID: 0}
 --- !u!54 &1806046324
 Rigidbody:
   m_ObjectHideFlags: 0
