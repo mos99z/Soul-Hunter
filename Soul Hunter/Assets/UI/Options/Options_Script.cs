@@ -155,8 +155,16 @@ public class Options_Script : MonoBehaviour
 		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		MusicSlider.value = MusicVolume;
 		SFXSlider.value = SFXVolume;
-		FullOn.SetActive(false);
-		FullOff.SetActive(true);
+		if (!Screen.fullScreen)
+		{
+			FullOn.SetActive(true);
+			FullOff.SetActive(false);
+		}
+		else
+		{
+			FullOn.SetActive(false);
+			FullOff.SetActive(true);
+		}
 	}
 
 	public void AdjustMusVol()
@@ -184,9 +192,7 @@ public class Options_Script : MonoBehaviour
 	{
 		Screen.fullScreen = !Screen.fullScreen;
 
-		FullScreen.text = Screen.fullScreen ? "Fullscreen" : "Windowed";
-
-		if (Screen.fullScreen)
+		if (!Screen.fullScreen)
 		{
 			FullOn.SetActive(true);
 			FullOff.SetActive(false);

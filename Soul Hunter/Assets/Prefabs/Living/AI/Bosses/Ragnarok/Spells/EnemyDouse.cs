@@ -43,7 +43,7 @@ public class EnemyDouse : MonoBehaviour
 				GameObject debuff = Instantiate(WetDebuff);
 				debuff.transform.parent = col.transform;
 				debuff.transform.localPosition = Vector3.zero;
-				debuff.GetComponent<Wet_Controller>().Duration = 10;
+				debuff.GetComponent<Wet_Controller>().Duration = 20;
 			}
 			douseCol.enabled = false;
 		}

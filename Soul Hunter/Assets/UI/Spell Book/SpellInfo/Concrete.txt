@@ -1,1 +1,1 @@
-0,0,0,Concrete,Place holder.
+3,3,5,Concrete,Cast a pool of extreemly thick and fast drying mud. It instantly slows foes that walk into it and then paralizes them.
