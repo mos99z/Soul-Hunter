@@ -1,0 +1,112 @@
+fileFormatVersion: 2
+guid: ea07cfa57fd817842912daccff0d8b36
+timeCreated: 1434462965
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: initialShadingGroup_pCube1
+    100002: initialShadingGroup_pCube2_polySurface4
+    100004: initialShadingGroup_pCube3_polySurface2
+    100006: initialShadingGroup_pCube4_polySurface6
+    100008: initialShadingGroup_pCube5_polySurface8
+    100010: initialShadingGroup_polySurface1_pCube3
+    100012: initialShadingGroup_polySurface3_pCube2
+    100014: initialShadingGroup_polySurface5_pCube4
+    100016: initialShadingGroup_polySurface7_pCube5
+    100018: //RootNode
+    400000: initialShadingGroup_pCube1
+    400002: initialShadingGroup_pCube2_polySurface4
+    400004: initialShadingGroup_pCube3_polySurface2
+    400006: initialShadingGroup_pCube4_polySurface6
+    400008: initialShadingGroup_pCube5_polySurface8
+    400010: initialShadingGroup_polySurface1_pCube3
+    400012: initialShadingGroup_polySurface3_pCube2
+    400014: initialShadingGroup_polySurface5_pCube4
+    400016: initialShadingGroup_polySurface7_pCube5
+    400018: //RootNode
+    2300000: initialShadingGroup_pCube1
+    2300002: initialShadingGroup_pCube2_polySurface4
+    2300004: initialShadingGroup_pCube3_polySurface2
+    2300006: initialShadingGroup_pCube4_polySurface6
+    2300008: initialShadingGroup_pCube5_polySurface8
+    2300010: initialShadingGroup_polySurface1_pCube3
+    2300012: initialShadingGroup_polySurface3_pCube2
+    2300014: initialShadingGroup_polySurface5_pCube4
+    2300016: initialShadingGroup_polySurface7_pCube5
+    3300000: initialShadingGroup_pCube1
+    3300002: initialShadingGroup_pCube2_polySurface4
+    3300004: initialShadingGroup_pCube3_polySurface2
+    3300006: initialShadingGroup_pCube4_polySurface6
+    3300008: initialShadingGroup_pCube5_polySurface8
+    3300010: initialShadingGroup_polySurface1_pCube3
+    3300012: initialShadingGroup_polySurface3_pCube2
+    3300014: initialShadingGroup_polySurface5_pCube4
+    3300016: initialShadingGroup_polySurface7_pCube5
+    4300000: initialShadingGroup_pCube1
+    4300002: initialShadingGroup_pCube2_polySurface4
+    4300004: initialShadingGroup_pCube3_polySurface2
+    4300006: initialShadingGroup_pCube4_polySurface6
+    4300008: initialShadingGroup_pCube5_polySurface8
+    4300010: initialShadingGroup_polySurface1_pCube3
+    4300012: initialShadingGroup_polySurface3_pCube2
+    4300014: initialShadingGroup_polySurface5_pCube4
+    4300016: initialShadingGroup_polySurface7_pCube5
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
