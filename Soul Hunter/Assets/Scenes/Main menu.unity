@@ -12975,6 +12975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MessagePrompt: {fileID: 696894302}
+  H: {fileID: 0}
   PauseMenu: {fileID: 1804831538}
   LoadingScreen: {fileID: 1896255470}
 --- !u!222 &882392402
@@ -19104,6 +19105,7 @@ MonoBehaviour:
   MeleeEnemyCounter: 0
   CurrentLevel: -1
   RoomsCleared: 
+  RespawnLoc: {x: 0, y: 0, z: 0}
   FireLevel: 0
   WindLevel: 0
   EarthLevel: 0
@@ -33804,6 +33806,8 @@ MonoBehaviour:
   Lives: 3
   SoulValue: 0
   entType: 0
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
 --- !u!54 &2031991671
 Rigidbody:
   m_ObjectHideFlags: 0

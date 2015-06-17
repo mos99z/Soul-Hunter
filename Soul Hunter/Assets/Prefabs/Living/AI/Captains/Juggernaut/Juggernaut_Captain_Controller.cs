@@ -10,25 +10,21 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 
 	public GameObject boundingWalls;		// use this to summon bounding walls
 
-	GameObject[] safeZones;
-	int closestSafeZone;
 	NavMeshAgent navigation;
 	Vector3 destination;
-	float movementTimer = 0.0f;
-	//float currentRotation = 0.0f;
-	//float AngularAcceleration = 3.5f;
 	public float AttackTimer = 2.0f;
 	float currentAttackTimer = 0.0f;
 	public float ChargeCooldown = 10.0f;
+	public float ChargeChargeUp = 1.0f;
+	float currentChargeChargeUp = 0.0f;
 	public GameObject Carrot;
 	float currentChargeCooldown = 0.0f;
 	float collisionTimer = 0.0f;
-	bool movementState = false;
 	bool hasHitPlayer = false;
 	bool hasTurnedOffAttackArea = false;
 	bool isCharging = false;
+	bool hasChargedUp = false;
 	bool hasCollided = false;
-	bool hasAttacked = false;
 	public Animator Animate = null;
 	public GameObject DirectionIndicator = null;
 	
@@ -40,14 +36,11 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		if (DirectionIndicator == null)
 			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 		target = GameObject.FindGameObjectWithTag ("Player");
-		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
 		
 		navigation = GetComponent<NavMeshAgent> ();
 		currentChargeCooldown = ChargeCooldown;
-		movementTimer = 5.0f;
-		FindNewPosition ();
+		currentChargeChargeUp = ChargeChargeUp;
 		navigation.updateRotation = false;
-		FindNewPosition ();
 		boundingWalls.SendMessage("ActivateWalls");
 	}
 
@@ -65,11 +58,22 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		{
 			Vector3 playerDistance = target.transform.position - gameObject.transform.position;
 			TurnTowardsPlayer ();
-			if(currentChargeCooldown <= 0.0f && playerDistance.magnitude > 4.0f)
+			if(hasChargedUp == false && currentChargeCooldown <= 0.0f && playerDistance.magnitude > 4.0f)
+			{
+				currentChargeChargeUp -= Time.deltaTime;
+				navigation.SetDestination(gameObject.transform.position);
+				DirectionIndicator.transform.forward = playerDistance.normalized;
+				if(currentChargeChargeUp <= 0.0f)
+					hasChargedUp = true;
+				return;
+			}
+			if(hasChargedUp)
 			{
 				isCharging = true;
+				hasChargedUp = false;
 				navigation.velocity = Vector3.zero;
 				DirectionIndicator.transform.forward = playerDistance.normalized;
+				currentChargeChargeUp = ChargeChargeUp;
 				
 				navigation.speed = 50.0f;
 				navigation.acceleration = 50.0f;
@@ -78,28 +82,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 				return;
 			}
 
-			if (movementState) 
-			{
-				if(navigation.remainingDistance == 0.0f)
-				{
-					movementState = false;
-					FindNewPosition();
-					navigation.SetDestination (destination);
-					movementTimer = 5.0f;
-				}
-			}
-			else
-			{
-				movementTimer -= Time.deltaTime;
-				
-				if(movementTimer <= 0.0f || navigation.remainingDistance == 0.0f)
-				{
-					movementState = true;
-					FindNewPosition();
-					navigation.SetDestination (destination);
-				}
-				
-			}
+			navigation.SetDestination (target.transform.position);
 		}
 
 		else if (isCharging == true) 
@@ -107,7 +90,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 			if(hasCollided == false)
 			{
 				navigation.SetDestination(Carrot.transform.position);
-
+				Debug.Log(DirectionIndicator.transform.forward);
 			}
 
 			else if (hasCollided == true)
@@ -116,68 +99,14 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 				collisionTimer -= Time.deltaTime;
 				if(collisionTimer <= 0.0f)
 				{
-					FindNewPosition();
 					isCharging = false;
 					hasCollided = false;
 					currentChargeCooldown = ChargeCooldown;
 					navigation.Resume();
 				}
 			}
-
-
 		}
-
-
 		CheckForAttack ();
-	}
-
-	void FindNewPosition()
-	{
-		if (hasAttacked) 
-		{
-			closestSafeZone = 0;
-			
-			for (int i = 0; i < safeZones.Length; i++) 
-			{
-				Vector3 currWaypoint = safeZones[closestSafeZone].transform.position - gameObject.transform.position;
-				Vector3 nextWaypoint = safeZones[i].transform.position - gameObject.transform.position;
-				
-				if(nextWaypoint.magnitude < currWaypoint.magnitude)
-				{
-					closestSafeZone = i;
-				}
-			}
-			
-			float safeZoneRadius = safeZones[closestSafeZone].GetComponent<SphereCollider>().radius;
-			Vector3 randomPosition = Random.insideUnitSphere * safeZoneRadius;
-			randomPosition.y = 0;
-			
-			destination = safeZones [closestSafeZone].transform.position + randomPosition;
-			movementState = false;
-			movementTimer = 1.0f;
-		}
-
-		else if (movementState) 
-		{
-			Vector3 direction = gameObject.transform.position - target.transform.position;
-			float currentDistance = direction.magnitude;
-			direction.y = 0;
-			direction.Normalize ();
-			float variance = Random.Range (-5.0f, 5.0f);
-			direction = Quaternion.Euler (0, variance, 0) * direction;
-			
-			Ray randomDirection = new Ray();
-			randomDirection.origin = target.transform.position;
-			randomDirection.origin = new Vector3 (randomDirection.origin.x, 0.0f, randomDirection.origin.z);
-			randomDirection.direction = direction;
-			destination = randomDirection.GetPoint(currentDistance);
-
-		}
-
-		else 
-		{
-			destination = target.transform.position;
-		}
 	}
 
 	void CheckForAttack()
@@ -203,7 +132,6 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		if (playerDistance.magnitude < 2.5f && currentAttackTimer <= 0.0f) 
 		{
 			MeleeAttack.SetActive(true);
-			hasAttacked = true;
 			currentAttackTimer = AttackTimer;
 		}
 	}

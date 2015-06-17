@@ -4,12 +4,14 @@ using System.Collections;
 public class Exit_Prompt_Script : MonoBehaviour {
 
 	public GameObject MessagePrompt;
+	public GameObject H;
 	public GameObject PauseMenu;
 	public GameObject LoadingScreen;
 	AsyncOperation ao = null;
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		LoadingScreen = GameBrain.Instance.loadingScreen;
 	}
 	
 	// Update is called once per frame
@@ -19,8 +21,12 @@ public class Exit_Prompt_Script : MonoBehaviour {
 		{
 			if (ao.progress == 0.9f) 
 			{
-				LoadingScreen.SetActive(false);
 				ao.allowSceneActivation = true;
+				if(ao.progress == 1.0f)
+				{
+					LoadingScreen.SetActive(false);
+					GameBrain.Instance.SendMessage ("SetLevel", -1);
+				}
 			}
 		}
 	}
@@ -28,7 +34,6 @@ public class Exit_Prompt_Script : MonoBehaviour {
 	public void Exit_Message_Yes()
 	{
 		int zero = 0;
-		GameBrain.Instance.SendMessage ("SetLevel", -1);
 		LoadingScreen.SetActive(true);
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync ("Main menu");
@@ -36,6 +41,8 @@ public class Exit_Prompt_Script : MonoBehaviour {
 		GameBrain.Instance.SendMessage ("ChangeMusic", zero);
 		MessagePrompt.SetActive (false);
 		PauseMenu.SetActive (false);
+		Time.timeScale = 1.0f;
+		Pause_Script.gamePaused = false;
 	}
 	
 	public void Exit_Message_No()
