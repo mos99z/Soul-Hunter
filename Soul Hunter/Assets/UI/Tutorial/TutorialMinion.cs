@@ -17,8 +17,12 @@ public class TutorialMinion : MonoBehaviour
 
 	//Handle Minion's Color
 	Color32[] elements = new Color32[5];
-	Color32 correct;
-	public Material tutorMat;
+	Color32 success;
+	Color32 failure;
+	public Animator Animate = null;
+	public GameObject sprt = null;
+	private Living_Obj LvObj = null;
+	public GameObject debuff = null;
 
 	//get player's spell
 	GameObject macSelect;
@@ -45,23 +49,33 @@ public class TutorialMinion : MonoBehaviour
 		elements[2] = new Color32 (96, 64, 32, 255);
 		elements[3] = new Color32 (255, 196, 32, 255);
 		elements[4] = new Color32 (64, 64, 255, 255);
-		correct = new Color32 (0, 255, 0, 255);
+		success = new Color32 (0, 255, 0, 255);
+		failure = new Color32 (32, 32, 32, 255);
+		LvObj = (Living_Obj)this.gameObject.GetComponent("Living_Obj");
 
+		navigation.updateRotation = false;
 		macSelect = GameBrain.Instance.HUDMaster;
 		macSel = (MacroSelect)macSelect.GetComponent("MacroSelect");
 	}
-	
+
+	void Update()
+	{
+		int numChildren = this.transform.childCount;
+		if (numChildren > 2)
+		{
+			debuff = this.transform.GetChild(2).gameObject;
+			if (debuff != null)
+			{
+				Destroy(debuff);
+				debuff = null;
+			}
+		}
+	}
 	// Update is called once per frame
 	// If there is no target, the enemy will move to a random waypoint in the navmesh in a patrol-like fashion
 	// If there is a target, the enemy will rotate around the player and lunge in after a certain amount of time has passed
 	void FixedUpdate () 
 	{
-		if (progression == 3)
-		{
-			++progression;
-			tutor.GetComponent<Tutorial>().SetTask1(true);
-		}
-
 		if (moveOn)
 		{
 			destination.x = Random.Range(-10, 10);
@@ -79,109 +93,182 @@ public class TutorialMinion : MonoBehaviour
 		staleTimer -= Time.deltaTime;
 		if (staleTimer <= 0.0f)
 		{
+			if (progression == 3)
+			{
+				++progression;
+			}
+
 			if (progression >= 4)
 			{
-				this.gameObject.SetActive(false);
+				LvObj.CanDie = true;
+				LvObj.SendMessage("TakeDamage", 1000);
 			}
 			currEl = Random.Range(0, 4);
-			tutorMat.color = elements[currEl];
+			sprt.GetComponent<SpriteRenderer>().color = elements[currEl];
+			switch (currEl)
+			{
+			case 0:
+			{
+				LvObj.ElementType = Element.Fire;
+				break;
+			}
+			case 1:
+			{
+				LvObj.ElementType = Element.Wind;
+				break;
+			}
+			case 2:
+			{
+				LvObj.ElementType = Element.Earth;
+				break;
+			}
+			case 3:
+			{
+				LvObj.ElementType = Element.Lightning;
+				break;
+			}
+			case 4:
+			{
+				LvObj.ElementType = Element.Water;
+				break;
+			}
+			default:
+				break;
+			}
 			staleTimer = Random.Range(5, 20);
+		}
+
+		Vector3 movementDirection = navigation.velocity.normalized;
+		if (movementDirection.magnitude >= 1.0f)
+		{
+			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (dotProd >= 0.75f)
+			{
+				Animate.Play ("Tutor_Idl_Up");
+			}
+			else if (dotProd <= -0.75f)
+			{
+				Animate.Play ("Tutor_Idl_Down");
+			}
+			else if (dotProd > -0.25f && dotProd <= 0.25f)
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Tutor_Idl_Left");
+				else
+					Animate.Play ("Tutor_Idl_Right");
+			}
+			else if (dotProd > 0.25f && dotProd < 0.75f)
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Tutor_Idl_Up_Left");
+				else
+					Animate.Play ("Tutor_Idl_Up_Right");
+			}
+			else
+			{
+				if (crossProd.y < 0.0f)
+					Animate.Play ("Tutor_Idl_Down_Left");
+				else
+					Animate.Play ("Tutor_Idl_Down_Right");
+			}
 		}
 	}
 
 	void TakeDamage (float _damage)
 	{
-		GUIText guiStuff = macSel.spells[macSel.curMac].GetComponent<GUIText>();
-		string wholeStr = guiStuff.text.ToString();
+		GUIText guiStuff = macSel.spells [macSel.curMac].GetComponent<GUIText> ();
+		string wholeStr = guiStuff.text.ToString ();
 		string[] bits = wholeStr.Split (',');
-		int a = int.Parse (bits[1]);
-		int b = int.Parse (bits[2]);
-		int c = int.Parse (bits[3]);
+		int a = int.Parse(bits [1]);
+		int b = int.Parse(bits [2]);
+		int c = int.Parse(bits [3]);
 
-		if (currEl == 5)
+		if (LvObj.ElementType == Element.None)
 		{
 			return;
 		}
 
-		if ((a == 1 && b == 1) || (a == 1 && c == 1) ||  (b == 1 && c == 1))
+		switch (LvObj.ElementType)
 		{
-			if (currEl == 1)
+		case Element.Fire:
+		{
+			if ((a == 5 && b == 5) || (b == 5 && c == 5) || (a == 5 && c == 5))
 			{
-				tutorMat.color = correct;
-				staleTimer = 3;
-				currEl = 5;
-				++progression;
+				sprt.GetComponent<SpriteRenderer>().color = success;
+				progression++;
 			}
 			else
 			{
-				tutorMat.color = new Color32(32, 32, 32, 255);
-				staleTimer = 3;
-				currEl = 5;
+				LvObj.GetComponent<SpriteRenderer>().color = failure;
 			}
+			staleTimer = 3;
+			break;
 		}
-		else if ((a == 2 && b == 2) || (a == 2 && c == 2) ||  (b == 2 && c == 2))
+		case Element.Wind:
 		{
-			if (currEl == 2)
+			if ((a == 1 && b == 1) || (b == 1 && c == 1) || (a == 1 && c == 1))
 			{
-				tutorMat.color = correct;
-				staleTimer = 3;
-				currEl = 5;
-				++progression;
+				sprt.GetComponent<SpriteRenderer>().color = success;
+				progression++;
 			}
 			else
 			{
-				tutorMat.color = new Color32(32, 32, 32, 255);
-				staleTimer = 3;
-				currEl = 5;
+				LvObj.GetComponent<SpriteRenderer>().color = failure;
 			}
+			staleTimer = 3;
+			break;
 		}
-		else if ((a == 3 && b == 3) || (a == 3 && c == 3) ||  (b == 3 && c == 3))
+		case Element.Earth:
 		{
-			if (currEl == 3)
+			if ((a == 2 && b == 2) || (b == 2 && c == 2) || (a == 2 && c == 2))
 			{
-				tutorMat.color = correct;
-				staleTimer = 3;
-				currEl = 5;
-				++progression;
+				sprt.GetComponent<SpriteRenderer>().color = success;
+				progression++;
 			}
 			else
 			{
-				tutorMat.color = new Color32(32, 32, 32, 255);
-				staleTimer = 3;
-				currEl = 5;
+				LvObj.GetComponent<SpriteRenderer>().color = failure;
 			}
+			staleTimer = 3;
+			break;
 		}
-		else if ((a == 4 && b == 4) || (a == 4 && c == 4) ||  (b == 4 && c == 4))
+		case Element.Lightning:
 		{
-			if (currEl == 4)
+			if ((a == 3 && b == 3) || (b == 3 && c == 3) || (a == 3 && c == 3))
 			{
-				tutorMat.color = correct;
-				staleTimer = 3;
-				currEl = 5;
-				++progression;
+				sprt.GetComponent<SpriteRenderer>().color = success;
+				progression++;
 			}
 			else
 			{
-				tutorMat.color = new Color32(32, 32, 32, 255);
-				staleTimer = 3;
-				currEl = 5;
+				LvObj.GetComponent<SpriteRenderer>().color = failure;
 			}
+			staleTimer = 3;
+			break;
 		}
-		else if ((a == 5 && b == 5) || (a == 5 && c == 5) ||  (b == 5 && c == 5))
+		case Element.Water:
 		{
-			if (currEl == 0)
+			if ((a == 4 && b == 4) || (b == 4 && c == 4) || (a == 4 && c == 4))
 			{
-				tutorMat.color = correct;
-				staleTimer = 3;
-				currEl = 5;
-				++progression;
+				sprt.GetComponent<SpriteRenderer>().color = success;
+				progression++;
 			}
 			else
 			{
-				tutorMat.color = new Color32(32, 32, 32, 255);
-				staleTimer = 3;
-				currEl = 5;
+				LvObj.GetComponent<SpriteRenderer>().color = failure;
 			}
+			staleTimer = 3;
+			break;
 		}
+		default:
+			break;
+		}
+		LvObj.ElementType = Element.None;
+	}
+
+	void OnDestroy()
+	{
+		tutor.GetComponent<Tutorial>().SetTask1(true);
 	}
 }

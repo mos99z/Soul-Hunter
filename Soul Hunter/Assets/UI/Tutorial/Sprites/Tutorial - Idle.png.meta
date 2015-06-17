@@ -1,0 +1,1023 @@
+fileFormatVersion: 2
+guid: f314a393cfce4e64d80a155af4b731e3
+timeCreated: 1434485506
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Tutorial - Idle_0
+    21300002: Tutorial - Idle_1
+    21300004: Tutorial - Idle_2
+    21300006: Tutorial - Idle_3
+    21300008: Tutorial - Idle_4
+    21300010: Tutorial - Idle_5
+    21300012: Tutorial - Idle_6
+    21300014: Tutorial - Idle_7
+    21300016: Tutorial - Idle_8
+    21300018: Tutorial - Idle_9
+    21300020: Tutorial - Idle_10
+    21300022: Tutorial - Idle_11
+    21300024: Tutorial - Idle_12
+    21300026: Tutorial - Idle_13
+    21300028: Tutorial - Idle_14
+    21300030: Tutorial - Idle_15
+    21300032: Tutorial - Idle_16
+    21300034: Tutorial - Idle_17
+    21300036: Tutorial - Idle_18
+    21300038: Tutorial - Idle_19
+    21300040: Tutorial - Idle_20
+    21300042: Tutorial - Idle_21
+    21300044: Tutorial - Idle_22
+    21300046: Tutorial - Idle_23
+    21300048: Tutorial - Idle_24
+    21300050: Tutorial - Idle_25
+    21300052: Tutorial - Idle_26
+    21300054: Tutorial - Idle_27
+    21300056: Tutorial - Idle_28
+    21300058: Tutorial - Idle_29
+    21300060: Tutorial - Idle_30
+    21300062: Tutorial - Idle_31
+    21300064: Tutorial - Idle_32
+    21300066: Tutorial - Idle_33
+    21300068: Tutorial - Idle_34
+    21300070: Tutorial - Idle_35
+    21300072: Tutorial - Idle_36
+    21300074: Tutorial - Idle_37
+    21300076: Tutorial - Idle_38
+    21300078: Tutorial - Idle_39
+    21300080: Tutorial - Idle_40
+    21300082: Tutorial - Idle_41
+    21300084: Tutorial - Idle_42
+    21300086: Tutorial - Idle_43
+    21300088: Tutorial - Idle_44
+    21300090: Tutorial - Idle_45
+    21300092: Tutorial - Idle_46
+    21300094: Tutorial - Idle_47
+    21300096: Tutorial - Idle_48
+    21300098: Tutorial - Idle_49
+    21300100: Tutorial - Idle_50
+    21300102: Tutorial - Idle_51
+    21300104: Tutorial - Idle_52
+    21300106: Tutorial - Idle_53
+    21300108: Tutorial - Idle_54
+    21300110: Tutorial - Idle_55
+    21300112: Tutorial - Idle_56
+    21300114: Tutorial - Idle_57
+    21300116: Tutorial - Idle_58
+    21300118: Tutorial - Idle_59
+    21300120: Tutorial - Idle_60
+    21300122: Tutorial - Idle_61
+    21300124: Tutorial - Idle_62
+    21300126: Tutorial - Idle_63
+    21300128: Tutorial - Idle_64
+    21300130: Tutorial - Idle_65
+    21300132: Tutorial - Idle_66
+    21300134: Tutorial - Idle_67
+    21300136: Tutorial - Idle_68
+    21300138: Tutorial - Idle_69
+    21300140: Tutorial - Idle_70
+    21300142: Tutorial - Idle_71
+    21300144: Tutorial - Idle_72
+    21300146: Tutorial - Idle_73
+    21300148: Tutorial - Idle_74
+    21300150: Tutorial - Idle_75
+    21300152: Tutorial - Idle_76
+    21300154: Tutorial - Idle_77
+    21300156: Tutorial - Idle_78
+    21300158: Tutorial - Idle_79
+    21300160: Tutorial - Idle_80
+    21300162: Tutorial - Idle_81
+    21300164: Tutorial - Idle_82
+    21300166: Tutorial - Idle_83
+    21300168: Tutorial - Idle_84
+    21300170: Tutorial - Idle_85
+    21300172: Tutorial - Idle_86
+    21300174: Tutorial - Idle_87
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Tutorial - Idle_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 381
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 381
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 381
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_3
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 381
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_4
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 380
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 380
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_6
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 380
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_7
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 380
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_8
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 380
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_9
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 381
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_10
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 381
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 323
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_12
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 323
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_13
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 323
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_14
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 323
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_15
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 323
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_16
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 323
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_17
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 323
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_18
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 323
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_19
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 323
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_20
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 323
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_21
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 324
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_22
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 273
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_23
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 273
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_24
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 273
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_25
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 273
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_26
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 273
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_27
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 273
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_28
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 273
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_29
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 273
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_30
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 273
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_31
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 273
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_32
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 274
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 217
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_34
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 217
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_35
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 217
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_36
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 217
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_37
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 216
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_38
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 216
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_39
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 216
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_40
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 216
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_41
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 217
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_42
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 217
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_43
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 217
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_44
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 162
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_45
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 162
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_46
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 161
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_47
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 161
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_48
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 161
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_49
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 161
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_50
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 161
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_51
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 161
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_52
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 161
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_53
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 162
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_54
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 162
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_55
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 115
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_56
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 115
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_57
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 115
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_58
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 115
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_59
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 115
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_60
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 115
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_61
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 115
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_62
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 115
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_63
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 115
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_64
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 115
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_65
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 115
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_67
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 62
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_68
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 62
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_69
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 62
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_70
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 62
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_71
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 62
+        width: 51
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_72
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 61
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_73
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 61
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_74
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 62
+        width: 51
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_75
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 62
+        width: 51
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_76
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 62
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_77
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 4
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_78
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 3
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_79
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 2
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_80
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 2
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_81
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 2
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_82
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 2
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_83
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_84
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 3
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_85
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 3
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_86
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 3
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tutorial - Idle_87
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 3
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
