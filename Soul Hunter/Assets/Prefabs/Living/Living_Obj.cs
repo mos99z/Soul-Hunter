@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class Living_Obj : MonoBehaviour
@@ -31,6 +32,8 @@ public class Living_Obj : MonoBehaviour
 
 	public enum EntityType {Player, Minion, Captain, Boss}
 	public EntityType entType = EntityType.Minion;
+	public int RoomNumber = 0;
+	public GameObject SavePoint = null;
 
 	void Start ()
 	{
@@ -131,6 +134,17 @@ public class Living_Obj : MonoBehaviour
 
 		if (FlashCoolDown > 0.0f)
 			FlashCoolDown -= Time.deltaTime;
+	}
+
+	void Heal (int _heal)
+	{
+		if (_heal > 0)
+		{
+			CurrHealth += _heal;
+			if (CurrHealth > MaxHealth)
+				CurrHealth = MaxHealth;
+			GameBrain.Instance.SendMessage("ModHealth", _heal);
+		}
 	}
 
 	void TakeDamage (float _damage)
@@ -249,9 +263,9 @@ public class Living_Obj : MonoBehaviour
 			else
 			{
 				CurrHealth = MaxHealth;
-				GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
 				if (entType == EntityType.Player)
 				{
+					GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
 					GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
 					GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
 					Application.LoadLevel(Application.loadedLevel);	// gamebrain assigns player location based on save when scene loads
@@ -278,8 +292,8 @@ public class Living_Obj : MonoBehaviour
 		// Display immortal - Blue
 		else if (!CanDie)
 		{
-			DisplayTextInfo("IMMORTAL", new Color(0.0f, 0.0f, 1.0f), 8.0f);
 			CurrHealth = 1;
+			DisplayTextInfo("IMMORTAL", new Color(1.0f, 0.0f, 1.0f), 8.0f);
 		}
 	}
 
@@ -322,28 +336,36 @@ public class Living_Obj : MonoBehaviour
 		// TODO: check for entire rooms death for room cleared
 		if (entType == EntityType.Captain)
 		{
-			if (transform.name.Contains("Mage"))
-			{
-				GameBrain.Instance.RoomsCleared.Add(GetComponent<Mage_Captain_Controller>().roomNumber);
-				GameBrain.Instance.Save();
-			}
-			else if (transform.name.Contains("Binding"))
-			{
-				// TODO: get roomnumber
-			}			
-			else if (transform.name.Contains("Juggernaut"))
-			{
-				// TODO: get roomnumber
-			}
+			GameBrain.Instance.RoomsCleared.Add(RoomNumber);
+			if (SavePoint != null)
+				GameBrain.Instance.RespawnLoc = SavePoint.transform.position;
+			else
+				GameBrain.Instance.RespawnLoc = Vector3.zero;
+				
+			GameBrain.Instance.Save();
 		}
 
 		if (entType != EntityType.Player)
 			Destroy (gameObject);
 		else
 		{
-// TODO: Player "Death"
-			Application.LoadLevel("Tally Scene");
-			GameBrain.Instance.SendMessage("SetLevel", -2);
+//	TODO: Player "Death"
+			GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
+			GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
+
+			GameBrain.Instance.SendMessage("SetMaxHealth", MaxHealth);
+			GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
+			CurrHealth = MaxHealth;
+			GameBrain.Instance.SendMessage("SetLivesLeft", 3);
+			Lives = 3;
+			GameBrain.Instance.SendMessage("SetSouls", 0);
+			GameBrain.Instance.RoomsCleared.Clear();
+			GameBrain.Instance.RoomsCleared = new List<int>();
+			IsAlive = true;
+			Application.LoadLevel(Application.loadedLevel);
+
+//			Application.LoadLevel("Tally Scene");
+//			GameBrain.Instance.SendMessage("SetLevel", -2);
 		}
 	}
 

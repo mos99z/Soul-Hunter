@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Mage_Captain_Controller : MonoBehaviour {
 
-	public int roomNumber;				// room the captain is in
 	public float MinRange = 5.0f;		// Minimum Attack Range
 	public float MaxRange = 18.0f;		// Maximum Attack Range
 	public LayerMask Mask;				// Layers to ignore
