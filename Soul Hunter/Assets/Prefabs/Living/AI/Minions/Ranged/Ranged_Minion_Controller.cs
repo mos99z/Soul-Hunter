@@ -9,7 +9,8 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 
 	// Movement Variables
 	NavMeshAgent navigation;			// Used to allow the minion to use the NavMesh
-	public GameObject target;					// Used to know where the player is at all times
+	GameObject player;
+	GameObject target;					// Used to know where the player is at all times
 	bool isMoving = false;				// a boolean used to prevent the enemy from continuously trying to update position
 	GameObject[] safeZones;
 	Vector3 destination;				// Location to move to using the NavMesh
@@ -30,7 +31,14 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	{
 		navigation = GetComponent<NavMeshAgent> ();
 		navigation.updateRotation = false;
-		target = GameObject.FindGameObjectWithTag ("Player");
+		player = GameBrain.Instance.Player;
+		if (GameBrain.Instance.PlayerInFog == true)
+		{
+
+		}
+		else
+			target = player;
+
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
 
 		if (FelMissile)

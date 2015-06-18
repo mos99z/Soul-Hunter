@@ -5,10 +5,7 @@ public class Fog_Controller : MonoBehaviour
 {
 	public GameObject mouseMarker;		// mouse marker from game brain
 	public float duration = 2.0f;		// how long spell lasts
-	public float damage = 5.0f;			// how much damage it does
 	public float recoveryTime = 1.5f;	// how long for spell to recharge
-
-	float timer = 0.0f;		// for ticking damage
 
 	// TODO: enable this when blind is implemented
 //	public GameObject blind;	// debuff to apply
@@ -27,25 +24,27 @@ public class Fog_Controller : MonoBehaviour
 			Destroy (gameObject);
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerEnter(Collider col)
 	{
-		if (other.tag == "Enemy")
+		if (col.tag == "Player") 
 		{
-			other.transform.SendMessage("TakeDamage", damage);
+			GameBrain.Instance.PlayerInFog = true;
+			if(Fog_Event_Manager.PlayerEntered != null)
+				Fog_Event_Manager.PlayerEntered();
+		}
+		if (col.tag == "Enemy")
+		{
 			// TODO: apply blind debuff
 		}
 	}
 
-	void OnTriggerStay(Collider other)
+	void OnTriggerExit(Collider col)
 	{
-		if (other.tag == "Enemy")
+		if (col.tag == "Player") 
 		{
-			timer += Time.deltaTime;
-			if (timer >= 0.5f)
-			{
-				timer = 0.0f;
-				other.transform.SendMessage("TakeDamage", damage);
-			}
+			GameBrain.Instance.PlayerInFog = false;
+			if(Fog_Event_Manager.PlayerLeft != null)
+				Fog_Event_Manager.PlayerLeft();
 		}
 	}
 }

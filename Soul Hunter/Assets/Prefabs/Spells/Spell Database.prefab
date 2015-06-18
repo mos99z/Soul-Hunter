@@ -632,7 +632,7 @@ GameObject:
   - 132: {fileID: 13278430}
   - 135: {fileID: 13502458}
   m_Layer: 0
-  m_Name: Aqua Jet
+  m_Name: Title Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1419,7 +1419,7 @@ Transform:
   m_Children:
   - {fileID: 483598}
   m_Father: {fileID: 403986}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!4 &403288
 Transform:
   m_ObjectHideFlags: 1
@@ -1433,7 +1433,7 @@ Transform:
   - {fileID: 437760}
   - {fileID: 452016}
   m_Father: {fileID: 403986}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &403986
 Transform:
   m_ObjectHideFlags: 1
@@ -1444,7 +1444,6 @@ Transform:
   m_LocalPosition: {x: 0, y: -100, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 430924}
   - {fileID: 468750}
   - {fileID: 444604}
   - {fileID: 494926}
@@ -1466,6 +1465,7 @@ Transform:
   - {fileID: 476948}
   - {fileID: 431050}
   - {fileID: 487640}
+  - {fileID: 430924}
   - {fileID: 410424}
   - {fileID: 430232}
   - {fileID: 485870}
@@ -1536,7 +1536,7 @@ Transform:
   - {fileID: 469590}
   - {fileID: 412908}
   m_Father: {fileID: 403986}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!4 &412908
 Transform:
   m_ObjectHideFlags: 1
@@ -1567,7 +1567,7 @@ Transform:
   - {fileID: 462638}
   - {fileID: 433298}
   m_Father: {fileID: 403986}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!4 &414990
 Transform:
   m_ObjectHideFlags: 1
@@ -1592,7 +1592,7 @@ Transform:
   m_Children:
   - {fileID: 426696}
   m_Father: {fileID: 403986}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!4 &416602
 Transform:
   m_ObjectHideFlags: 1
@@ -1667,7 +1667,7 @@ Transform:
   - {fileID: 455206}
   - {fileID: 476578}
   m_Father: {fileID: 403986}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!4 &425592
 Transform:
   m_ObjectHideFlags: 1
@@ -1742,7 +1742,7 @@ Transform:
   m_Children:
   - {fileID: 450734}
   m_Father: {fileID: 403986}
-  m_RootOrder: 0
+  m_RootOrder: 21
 --- !u!4 &431050
 Transform:
   m_ObjectHideFlags: 1
@@ -1756,7 +1756,7 @@ Transform:
   - {fileID: 463592}
   - {fileID: 427086}
   m_Father: {fileID: 403986}
-  m_RootOrder: 20
+  m_RootOrder: 19
 --- !u!4 &433298
 Transform:
   m_ObjectHideFlags: 1
@@ -1782,7 +1782,7 @@ Transform:
   m_Children:
   - {fileID: 443936}
   m_Father: {fileID: 403986}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &434402
 Transform:
   m_ObjectHideFlags: 1
@@ -1854,7 +1854,7 @@ Transform:
   m_LocalScale: {x: .25, y: .25, z: .25}
   m_Children: []
   m_Father: {fileID: 403986}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!4 &438500
 Transform:
   m_ObjectHideFlags: 1
@@ -1891,7 +1891,7 @@ Transform:
   m_Children:
   - {fileID: 418162}
   m_Father: {fileID: 403986}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!4 &441944
 Transform:
   m_ObjectHideFlags: 1
@@ -1930,7 +1930,7 @@ Transform:
   m_Children:
   - {fileID: 408956}
   m_Father: {fileID: 403986}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &444616
 Transform:
   m_ObjectHideFlags: 1
@@ -1967,7 +1967,7 @@ Transform:
   m_Children:
   - {fileID: 434402}
   m_Father: {fileID: 403986}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!4 &447352
 Transform:
   m_ObjectHideFlags: 1
@@ -2054,7 +2054,7 @@ Transform:
   - {fileID: 444718}
   - {fileID: 491680}
   m_Father: {fileID: 403986}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!4 &455102
 Transform:
   m_ObjectHideFlags: 1
@@ -2144,7 +2144,7 @@ Transform:
   m_Children:
   - {fileID: 435742}
   m_Father: {fileID: 403986}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &469590
 Transform:
   m_ObjectHideFlags: 1
@@ -2172,7 +2172,7 @@ Transform:
   - {fileID: 455102}
   - {fileID: 441944}
   m_Father: {fileID: 403986}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &472918
 Transform:
   m_ObjectHideFlags: 1
@@ -2185,7 +2185,7 @@ Transform:
   m_Children:
   - {fileID: 417228}
   m_Father: {fileID: 403986}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!4 &472932
 Transform:
   m_ObjectHideFlags: 1
@@ -2246,7 +2246,7 @@ Transform:
   m_Children:
   - {fileID: 498726}
   m_Father: {fileID: 403986}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!4 &477208
 Transform:
   m_ObjectHideFlags: 1
@@ -2259,7 +2259,7 @@ Transform:
   m_Children:
   - {fileID: 482656}
   m_Father: {fileID: 403986}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!4 &479068
 Transform:
   m_ObjectHideFlags: 1
@@ -2320,7 +2320,7 @@ Transform:
   m_Children:
   - {fileID: 441620}
   m_Father: {fileID: 403986}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!4 &485870
 Transform:
   m_ObjectHideFlags: 1
@@ -2346,7 +2346,7 @@ Transform:
   m_Children:
   - {fileID: 488974}
   m_Father: {fileID: 403986}
-  m_RootOrder: 21
+  m_RootOrder: 20
 --- !u!4 &488974
 Transform:
   m_ObjectHideFlags: 1
@@ -2396,7 +2396,7 @@ Transform:
   m_Children:
   - {fileID: 450032}
   m_Father: {fileID: 403986}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &498116
 Transform:
   m_ObjectHideFlags: 1
@@ -3840,6 +3840,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751e0c471d00baf4292b224f5430cf65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11402796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3934,6 +3938,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d94e3c5fb5f934fa33ea4f6ac0d43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11416990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4017,7 +4025,7 @@ MonoBehaviour:
   Duration: 10
   TheCollider: {fileID: 6556858}
   SpellEffect: {fileID: 101728}
-  WetDebuff: {fileID: 0}
+  WetDebuff: {fileID: 111420, guid: 715abe3e7f4cdf64eb87818a5d939aa4, type: 2}
   DebuffChance: .100000001
   DebuffDuration: 10
   WALLS:
@@ -4047,6 +4055,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e61d48326939a4889c0cfeb025e2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  startHeight: 1.5
+  duration: .300000012
+  damage: 15.1000004
+  recoveryTime: 1.5
+  maxHits: 4
 --- !u!114 &11441260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4081,6 +4095,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3170714c2cc01504688d7302f6fa9814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11450258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4124,6 +4142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b750a917fd667b24ca2848caa3d71a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11457766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4157,6 +4179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2581ecd0a94e2949b161078641751f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  startHeight: 0
+  duration: 2
+  damage: 5.5
+  recoveryTime: 1.5
+  maxHits: 5
 --- !u!114 &11468548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4272,6 +4300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90693b157974a64f881c6e91b7a3cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11479592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4283,6 +4315,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0aad2e43b11fa141a2450bbcf25cb1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseMarker: {fileID: 0}
+  duration: 2
+  damage: 5
+  recoveryTime: 1.5
 --- !u!114 &11481706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4888,7 +4924,7 @@ GUIText:
   m_GameObject: {fileID: 136752}
   m_Enabled: 0
   serializedVersion: 3
-  m_Text: Aqua Jet,2,5,5
+  m_Text: Title Wave,2,5,5
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -32420,7 +32456,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -32435,7 +32471,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .100000016
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -32477,12 +32513,12 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: 1
+    radius: 7
     angle: 0
     length: .319999993
     boxX: 1
@@ -46656,7 +46692,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MaxParticleSize: .5
   m_CameraVelocityScale: 0
