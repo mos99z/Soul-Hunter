@@ -316,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   BindCapt: {fileID: 148052}
+  numMinions: 0
   numMinionsAllowed: 5
 --- !u!114 &11470186
 MonoBehaviour:
@@ -330,8 +331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 1
-  MaxHealth: 500
-  CurrHealth: 255
+  MaxHealth: 1000
+  CurrHealth: 1000
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
