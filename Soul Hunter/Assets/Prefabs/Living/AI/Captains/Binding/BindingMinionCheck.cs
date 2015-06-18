@@ -4,7 +4,6 @@ using System.Collections;
 public class BindingMinionCheck : MonoBehaviour
 {
 	//need objects
-	public GameObject player;
 	public GameObject BindCapt;
 	private Binding_Captain_Controller BCC;
 
@@ -20,7 +19,7 @@ public class BindingMinionCheck : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		this.transform.position = player.transform.position;
+		this.transform.position = GameBrain.Instance.Player.transform.position;
 		if (numMinions >= numMinionsAllowed)
 		{
 			BCC.isSurrounded = true;

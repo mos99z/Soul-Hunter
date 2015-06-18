@@ -21,6 +21,11 @@ public class Slowed_Controller : MonoBehaviour
 	{
 		if (check && transform.parent != null)
 		{
+			if (transform.parent.GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Boss)
+			{
+				Destroy(gameObject);
+				return;
+			}
 			if (transform.parent.tag == "Player")
 			{
 				origSpeed = transform.parent.GetComponent<Player_Movement_Controller>().Speed;

@@ -21,6 +21,11 @@ public class Crippled_Controller : MonoBehaviour
 	{
 		if (check && transform.parent != null)
 		{
+			if (transform.parent.GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Boss)
+			{
+				Destroy(gameObject);
+				return;
+			}
 			int children = transform.parent.childCount;
 			for (int child = 0; child < children; child++)
 			{

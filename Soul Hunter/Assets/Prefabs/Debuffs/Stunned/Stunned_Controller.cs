@@ -20,6 +20,11 @@ public class Stunned_Controller : MonoBehaviour {
 		
 		if (checkOnce)
 		{
+			if (transform.parent.GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Boss)
+			{
+				Destroy(gameObject);
+				return;
+			}
 			int children = transform.parent.childCount;
 			for (int child = 0; child < children; child++)
 			{
