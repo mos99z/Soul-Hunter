@@ -141,8 +141,8 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		Vector3 movementDirection = navigation.velocity.normalized;
 		if (movementDirection.magnitude >= 1.0f) {
 			DirectionIndicator.transform.forward = navigation.velocity.normalized;
-			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
-			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+//			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+//			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
 			//if (dotProd >= 0.75f)
 			//	Animate.Play ("Melee_Idle_Up");
 			//else if (dotProd <= -0.75f)

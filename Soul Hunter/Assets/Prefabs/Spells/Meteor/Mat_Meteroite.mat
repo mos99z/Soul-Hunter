@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Meteroite
-  m_Shader: {fileID: 10751, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Name: Mat_Meteroite
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _PARALLAXMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -19,7 +19,7 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 2800000, guid: d6849312ee205b2499a36e3190c76e3c, type: 3}
-          m_Scale: {x: 3, y: 3}
+          m_Scale: {x: 9, y: 9}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -39,7 +39,7 @@ Material:
         first:
           name: _ParallaxMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: e08c295755c0885479ad19f518286ff2, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -105,6 +105,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -113,11 +120,15 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .078125
+        second: 1
       data:
         first:
           name: _Smoothness
-        second: .5
+        second: 1
+      data:
+        first:
+          name: _WindQuality
+        second: 0
       data:
         first:
           name: _SrcBlend
@@ -129,15 +140,7 @@ Material:
       data:
         first:
           name: _Parallax
-        second: .0199999996
-      data:
-        first:
-          name: _EdgeLength
-        second: 10
-      data:
-        first:
-          name: _InvFade
-        second: .00999999978
+        second: .0799999982
       data:
         first:
           name: _ZWrite
@@ -176,8 +179,20 @@ Material:
         second: 1
       data:
         first:
+          name: _InvFade
+        second: .00999999978
+      data:
+        first:
+          name: _EdgeLength
+        second: 3
+      data:
+        first:
           name: _Outline
         second: .00499999989
+      data:
+        first:
+          name: _Cull
+        second: 2
     m_Colors:
       data:
         first:
@@ -186,20 +201,24 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .625, g: .625, b: .625, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _HueVariation
+        second: {r: 1, g: .5, b: 0, a: .100000001}
