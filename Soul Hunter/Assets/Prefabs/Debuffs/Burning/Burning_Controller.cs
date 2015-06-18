@@ -12,6 +12,7 @@ public class Burning_Controller : MonoBehaviour {
 
 	void Start ()
 	{
+
 	}
 
 	void Update ()

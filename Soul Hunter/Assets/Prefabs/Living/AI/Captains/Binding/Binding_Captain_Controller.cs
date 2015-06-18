@@ -133,7 +133,7 @@ public class Binding_Captain_Controller : MonoBehaviour
 			navigation.SetDestination (player.transform.position);
 		}
 		DirectionIndicator.transform.LookAt(player.transform.position, new Vector3(0,1,0));
-		Vector3 movementDirection = DirectionIndicator.transform.forward;
+//		Vector3 movementDirection = DirectionIndicator.transform.forward;
 	}
 
 	private void OnTriggerEnter(Collider col)
