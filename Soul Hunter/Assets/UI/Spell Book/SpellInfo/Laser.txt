@@ -1,1 +1,1 @@
-0,0,0,Laser,Place holder.
+1,1,4,Laser,Cast a continuous flowing beam of energy capable of piercing multiple foes in its travel. The longer this spell is held out the greater fatigued you'll have.

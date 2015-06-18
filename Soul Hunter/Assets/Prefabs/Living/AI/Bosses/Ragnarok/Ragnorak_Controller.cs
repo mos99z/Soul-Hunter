@@ -67,6 +67,10 @@ public class Ragnorak_Controller : MonoBehaviour
 	public float BurningDOTTickDamage = 5.1f;
 	private GameObject BurningDebuff = null;
 
+	//sprite anmation
+	private bool slashing;
+	private float slashTicker;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -76,6 +80,7 @@ public class Ragnorak_Controller : MonoBehaviour
 		jumpHieght = 0;
 		goingUp = true;
 		doOnce = false;
+		slashing = false;
 
 		if (Animate == null)
 		{
@@ -146,6 +151,11 @@ public class Ragnorak_Controller : MonoBehaviour
 		flameBreathTicker -= Time.deltaTime;
 		meteorTicker -= Time.deltaTime;
 		SockWaveCollider.enabled = false;
+		slashTicker -= Time.deltaTime;
+		if (slashTicker <= 0)
+		{
+			slashing = false;
+		}
 	}
 
 	private void Over50HP()
@@ -190,6 +200,8 @@ public class Ragnorak_Controller : MonoBehaviour
 				Claw.SetActive(true);
 				meleeTicker = Random.Range(meleeMinTicker, meleeMaxTicker);
 				meleeCollider.enabled = true;
+				slashing = true;
+				slashTicker = 1.75f;
 			}
 		}
 		else if (distanceToPlayer.magnitude < flameBreathRange)
@@ -233,7 +245,7 @@ public class Ragnorak_Controller : MonoBehaviour
 		Vector3 distanceToPlayer = player.transform.position - this.gameObject.transform.position;
 		if (wayPointTicker <= 0)
 		{
-			Vector3 tempPos = this.gameObject.transform.position;
+			Vector3 tempPos = new Vector3(-0.5f, 0, -3);
 			Firbreath.SetActive(false);
 			if (!doOnce)
 			{
@@ -245,12 +257,12 @@ public class Ragnorak_Controller : MonoBehaviour
 			{
 				jumpHieght += Time.deltaTime * 15;
 				tempPos.y = jumpHieght;
-				sprite.transform.position = tempPos;
+				sprite.transform.localPosition = tempPos;
 				if (jumpHieght >= 30)
 				{
 					jumpHieght = 30;
 					tempPos.y = jumpHieght;
-					sprite.transform.position = tempPos;
+					sprite.transform.localPosition = tempPos;
 					navigation.Warp(playerShadow.position);
 					goingUp = false;
 				}
@@ -259,12 +271,12 @@ public class Ragnorak_Controller : MonoBehaviour
 			{
 				jumpHieght -= Time.deltaTime * 15;
 				tempPos.y = jumpHieght;
-				sprite.transform.position = tempPos;
+				sprite.transform.localPosition = tempPos;
 				if (jumpHieght <= 0)
 				{
 					jumpHieght = 0;
 					tempPos.y = jumpHieght;
-					sprite.transform.position = tempPos;
+					sprite.transform.localPosition = tempPos;
 					AOEJump.SetActive(false);
 					AOEJump.SetActive(true);
 					goingUp = true;
@@ -284,6 +296,8 @@ public class Ragnorak_Controller : MonoBehaviour
 				Claw.SetActive(true);
 				meleeTicker = Random.Range(meleeMinTicker, meleeMaxTicker);
 				meleeCollider.enabled = true;
+				slashing = true;
+				slashTicker = 1.75f;
 			}
 		}
 		else if (distanceToPlayer.magnitude < flameBreathRange)
@@ -327,34 +341,88 @@ public class Ragnorak_Controller : MonoBehaviour
 		{
 			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
 			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (slashing)
+			{
+				Vector3 tempPos = new Vector3(0, 5, -1);
+				sprite.transform.localPosition = tempPos;
+			}
+			else if (wayPointTicker > 0)
+			{
+				Vector3 tempPos = new Vector3(-0.5f, 0, -3);
+				sprite.transform.localPosition = tempPos;
+			}
 			if (dotProd >= 0.75f)
 			{
-				Animate.Play ("Rag_Idle_Up");
+				if (!slashing)
+				{
+					Animate.Play ("Rag_Idle_Up");
+				}
+				else
+				{
+					Animate.Play ("Rag_Slash_Up");
+				}
 			}
 			else if (dotProd <= -0.75f)
 			{
-				Animate.Play ("Rag_Idle_Down");
+				if (!slashing)
+				{
+					Animate.Play ("Rag_Idle_Down");
+				}
+				else
+				{
+					Animate.Play ("Rag_Slash_Down");
+				}
 			}
 			else if (dotProd > -0.25f && dotProd <= 0.25f)
 			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Rag_Idle_Left");
+				if (!slashing)
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Idle_Left");
+					else
+						Animate.Play ("Rag_Idle_Right");
+				}
 				else
-					Animate.Play ("Rag_Idle_Right");
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Slash_Left");
+					else
+						Animate.Play ("Rag_Slash_Right");
+				}
 			}
 			else if (dotProd > 0.25f && dotProd < 0.75f)
 			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Rag_Idle_Up_Left");
+				if (!slashing)
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Idle_Up_Left");
+					else
+						Animate.Play ("Rag_Idle_Up_Right");
+				}
 				else
-					Animate.Play ("Rag_Idle_Up_Right");
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Slash_Up_Left");
+					else
+						Animate.Play ("Rag_Slash_Up_Right");
+				}
 			}
 			else
 			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Rag_Idle_Down_Left");
+				if (!slashing)
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Idle_Down_Left");
+					else
+						Animate.Play ("Rag_Idle_Down_Right");
+				}
 				else
-					Animate.Play ("Rag_Idle_Down_Right");
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Slash_Down_Left");
+					else
+						Animate.Play ("Rag_Slash_Down_Right");
+				}
 			}
 		}
 	}

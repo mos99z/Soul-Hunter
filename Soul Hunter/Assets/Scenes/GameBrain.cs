@@ -87,6 +87,7 @@ public class GameBrain : MonoBehaviour {
 	// Level 0 is tutorial
 	public int CurrentLevel = -1;
 	public List<int> RoomsCleared;
+	public Vector3 RespawnLoc = Vector3.zero;
 	private GameInfo gameInfo;
 
 	public int FireLevel = 0;
@@ -203,26 +204,27 @@ public class GameBrain : MonoBehaviour {
 					case 3: 
 					{
 						Destroy(GameObject.Find("Room 03").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 03").transform.FindChild("Mage Captain").gameObject);
+						Destroy(GameObject.Find("Room 03").transform.FindChild("Juggernaut Captain").gameObject);
 						break;
 					}
 					case 4: Destroy(GameObject.Find("Room 04").transform.FindChild("Spawn Area").gameObject); break;
 					case 5: 
 					{
 						Destroy(GameObject.Find("Room 05").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 05").transform.FindChild("Mage Captain").gameObject);
+						Destroy(GameObject.Find("Room 05").transform.FindChild("Binding Captain").gameObject);
 						break;
 					}
 					}
 				}
-				switch (RoomsCleared[count-1]) // spawn player in room last cleared
-				{
-				case 1: Player.transform.position = Vector3.zero; break;
-				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
-				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
-				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
-				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
-				}
+//				switch (RoomsCleared[count-1]) // spawn player in room last cleared
+//				{
+//				case 1: Player.transform.position = Vector3.zero; break;
+//				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
+//				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
+//				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
+//				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
+//				}
+				Player.transform.position = RespawnLoc;
 			}
 			GameBrain.Instance.HUDMaster.SetActive(true);
 			GameBrain.Instance.Player.SetActive(true);
@@ -260,14 +262,15 @@ public class GameBrain : MonoBehaviour {
 					}
 					}
 				}
-				switch (RoomsCleared[count-1]) // spawn player in room last cleared
-				{
-				case 1: Player.transform.position = Vector3.zero; break;
-				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
-				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
-				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
-				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
-				}
+//				switch (RoomsCleared[count-1]) // spawn player in room last cleared
+//				{
+//				case 1: Player.transform.position = Vector3.zero; break;
+//				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
+//				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
+//				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
+//				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
+//				}
+				Player.transform.position = RespawnLoc;
 			}
 			GameBrain.Instance.HUDMaster.SetActive(true);
 			GameBrain.Instance.Player.SetActive(true);
@@ -305,14 +308,15 @@ public class GameBrain : MonoBehaviour {
 					}
 					}
 				}
-				switch (RoomsCleared[count-1]) // spawn player in room last cleared
-				{
-				case 1: Player.transform.position = Vector3.zero; break;
-				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
-				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
-				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
-				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
-				}
+//				switch (RoomsCleared[count-1]) // spawn player in room last cleared
+//				{
+//				case 1: Player.transform.position = Vector3.zero; break;
+//				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
+//				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
+//				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
+//				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
+//				}
+				Player.transform.position = RespawnLoc;
 			}
 			GameBrain.Instance.HUDMaster.SetActive(true);
 			GameBrain.Instance.Player.SetActive(true);
@@ -660,8 +664,14 @@ public class GameBrain : MonoBehaviour {
 			
 			// set values of our gameBrain to those loaded from save
 			PlayerMaxHealth = info.PlayerMaxHealth;
+			GameBrain.Instance.Player.GetComponent<Living_Obj>().MaxHealth = info.PlayerMaxHealth;
+
 			PlayerCurrHealth = info.PlayerCurrHealth;
+			GameBrain.Instance.Player.GetComponent<Living_Obj>().CurrHealth = info.PlayerCurrHealth;
+
 			PlayerLivesLeft = info.PlayerLivesLeft;
+			GameBrain.Instance.Player.GetComponent<Living_Obj>().Lives = info.PlayerLivesLeft;
+
 			SoulCount = info.SoulCount;
 
 			FireLevel = info.FireLevel;

@@ -30,6 +30,7 @@ public class Tutorial : MonoBehaviour
 	//OutSide objects
 	public GameObject macMen;
 	public GameObject macTab;
+	public GameObject portal;
 
 	// Use this for initialization
 	void Start ()
@@ -42,6 +43,7 @@ public class Tutorial : MonoBehaviour
 
 		macMen = GameBrain.Instance.HUDMaster.transform.GetChild(3).gameObject;
 		macTab = GameBrain.Instance.HUDMaster.transform.GetChild(2).gameObject;
+		portal.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -49,10 +51,14 @@ public class Tutorial : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
+			Time.timeScale = 1.0f;
 			progression++;
 			MouseTrigger.SetActive(false);
 			PlayerTrigger.SetActive(false);
-			DummieMinion.SetActive(false);
+			if (DummieMinion != null)
+			{
+				DummieMinion.SetActive(false);
+			}
 			TutorialBack1.SetActive(false);
 			TutorialBack2.SetActive(false);
 			Tutorial2.SetActive(false);
@@ -123,6 +129,11 @@ public class Tutorial : MonoBehaviour
 		case 7:
 		{
 			part7();
+			break;
+		}
+		case 8:
+		{
+			part8();
 			break;
 		}
 		default:
@@ -251,16 +262,19 @@ public class Tutorial : MonoBehaviour
 			TutorialBack2.SetActive(true);
 			Tutorial8.SetActive(true);
 			activatedTxt = true;
-			taskTicker = 3;
+			taskTicker = 0.5f;
 		}
 		if (taskTicker <= 0)
 		{
-			++progression;
-			TutorialBack2.SetActive(false);
-			Tutorial8.SetActive(false);
-			activatedTxt = false;
-			taskTicker = 0;
+			Time.timeScale = 0.0f;
 		}
+	}
+
+	void part8()
+	{
+		int zero = 0;
+		GameBrain.Instance.SendMessage ("SetSouls", zero);
+		portal.SetActive(true);
 	}
 
 	public void SetTask1(bool _comp)

@@ -2,63 +2,153 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Laser_Controller : MonoBehaviour 
-{
-	public GameObject mouseMarker;		// mouse marker from game brain
-	public float startHeight = 1.5f;	// where to overwrite the y-axis
-	public float duration = 0.3f;		// how long in seconds for spell to travel
-	public float damage = 15.1f;			// how much damage to deal
-	public float recoveryTime = 1.5f;	// how long for spell to cooldwon
-	public int maxHits = 4;				// how many times spelll can hit before dieing
+public class Laser_Controller : MonoBehaviour {
 	
-	int hits = 0;		// keep track of the hits
-	Vector3 origPos;	// where the spell starts
-	Vector3 targetPos;	// where the spell ends
-
-	void Start () 
+	public float DamageFire = 10.1f;
+	public float DamageLightning = 10.4f;
+	public float DamageTickRate = 0.1f;
+	public float RecoveryCostRate = 1.0f/3.0f;
+	public float Range = 15.0f;
+	public float StartHeight = 1.0f;
+	public GameObject ImpactEffectObj = null;
+	public float Duration = 10.0f;
+	public BoxCollider TheCollider = null;
+	public GameObject SpellEffect = null;
+	public GameObject BurningDebuff = null;
+	public float BurningDamage = 5.0f;
+	public float DebuffChance = 0.5f;
+	public float DebuffDuration = 3.0f;
+	public LayerMask WALLS;
+	public GameObject PlayerFaceingIndicator = null;	// this object must be manually set, or an enemy indicator may be assigned instead
+	
+	private float DeltaT = 0.0f;
+	private float Size = 1.0f;
+	private float oldSize = 0.0f;
+	private float RecoveryCost = 0.5f;
+	private float TickTime = 0.0f;
+	private List<GameObject> Hitting = new List<GameObject>();
+	private bool Once = true;
+	
+	void Start ()
 	{
-		Vector3 spawn = GameBrain.Instance.Player.transform.position;
-		spawn.y = startHeight;
-		transform.position = origPos = spawn;
-		if (mouseMarker == null)
-			mouseMarker = GameBrain.Instance.MouseMarker;
-		spawn = mouseMarker.transform.position;
-		spawn.y = startHeight;
-		targetPos = spawn;
-		
-		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
-		
-		if (GameBrain.Instance.FireLevel > 0)
+		oldSize = Size;
+		//PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
+		transform.position = new Vector3(transform.position.x, StartHeight, transform.position.z);
+		if (BurningDebuff == null) 
+			BurningDebuff = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
+		SpellEffect.SetActive (false);
+	}
+	
+	void Update ()
+	{
+		Size = Range;
+		DeltaT += Time.deltaTime;
+		RecoveryCost += RecoveryCostRate * Time.deltaTime;
+		if (Input.GetMouseButtonUp(0) || DeltaT >= Duration)
 		{
-			switch (GameBrain.Instance.FireLevel)
+			GameObject.FindGameObjectWithTag("Player").SendMessage("SetRecoverTime", RecoveryCost, SendMessageOptions.RequireReceiver);
+			Destroy(gameObject);
+		}
+		
+		TickTime += Time.deltaTime;
+		for (int i = 0; i < Hitting.Count; i++)
+		{
+			if(Hitting[i] == null)
 			{
-			case 1: damage = damage*2.0f - 0.1f; break;
-			case 2: damage = damage*3.0f - 0.2f; break;
-			case 3: damage = damage*4.0f - 0.3f; break;
+				Hitting.RemoveAt(i);
+				i--;
+				continue;
+			}
+			
+			if (Hitting[i].tag == "Enemy")
+			{
+				if (TickTime >= DamageTickRate){
+					Hitting[i].transform.SendMessage ("TakeDamage", DamageFire);
+					Hitting[i].transform.SendMessage ("TakeDamage", DamageLightning);
+					float roll = Random.Range(0.0f, 1.0f);
+					if (roll <= DebuffChance)
+					{
+						GameObject debuff = Instantiate(BurningDebuff);
+						debuff.transform.parent = Hitting[i].transform;
+						debuff.transform.localPosition = Vector3.zero;
+						debuff.GetComponent<Burning_Controller>().Duration = DebuffDuration;
+						debuff.GetComponent<Burning_Controller>().Damage = BurningDamage;
+					}
+				}
 			}
 		}
-		StartCoroutine("MoveSpell", duration);
+		
+		if (TickTime >= DamageTickRate)
+			TickTime = 0.0f;
+		
+		Vector3 rayOrigin = PlayerFaceingIndicator.transform.position;
+		rayOrigin.y = StartHeight;
+		Ray wallRangeCheck = new Ray(rayOrigin, transform.forward);
+		
+		RaycastHit RayInfo;
+		Physics.Raycast(wallRangeCheck, out RayInfo, Range, WALLS);
+		if (RayInfo.distance != 0.0f)
+			Size = RayInfo.distance;
+
+		if (Size > Range || Size <= 0.0f)
+			Size = Range;
 	}
 	
-	IEnumerator MoveSpell(float time)
+	void FixedUpdate ()
 	{
-		float currentTime = 0.0f;
-		do{
-			transform.position = Vector3.Lerp(origPos, targetPos, currentTime/time);
-			currentTime += Time.deltaTime;
-			yield return null;
-		} while (currentTime < time);
-		Destroy(gameObject, 0.1f);		// safety timer to kill self
-	}
-	
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Enemy")
+		if (oldSize > Size)
+			TheCollider.transform.localScale = new Vector3(1.0f, 1.0f, Size);
+		
+		transform.forward = PlayerFaceingIndicator.transform.forward;
+		Vector3 newPosition = PlayerFaceingIndicator.transform.position;
+		newPosition.y = StartHeight;
+		Vector3 posChange = transform.forward.normalized * Size * 0.5f;
+		newPosition += posChange;
+		transform.position = newPosition;
+		
+		if (oldSize <= Size)
+			TheCollider.transform.localScale = new Vector3(1.0f, 1.0f, Size);
+		
+		oldSize = Size;
+		
+		if (Once)
 		{
-			other.transform.SendMessage("TakeDamage", damage);
-			hits++;
-			if (hits >= maxHits)
-				Destroy(gameObject);
+			Once = false;
+			SpellEffect.SetActive(true);
+			SpellEffect.GetComponent<ParticleSystem>().Play();
+		}
+	}
+	
+	void OnTriggerEnter(Collider _object)
+	{
+		if (_object.tag == "Enemy" || _object.tag == "Solid")
+		{
+			bool unique = true;
+			for (int i = 0; i < Hitting.Count; i++)
+			{
+				if (_object.gameObject == Hitting[i])
+				{
+					unique = false;
+					break;
+				}
+			}
+			if (unique)
+				Hitting.Add(_object.gameObject);
+		}
+	}
+	
+	void OnTriggerExit(Collider _object)
+	{
+		if (_object.tag == "Enemy" || _object.tag == "Solid")
+		{
+			for (int i = 0; i < Hitting.Count; i++)
+			{
+				if (_object.gameObject == Hitting [i])
+				{
+					Hitting.RemoveAt(i);
+					break;
+				}
+			}
 		}
 	}
 }

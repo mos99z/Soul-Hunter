@@ -86,6 +86,9 @@ public class Ragnarok_Phase_2_Controller : MonoBehaviour
 	private GameObject WetDebuff = null;
 	private GameObject StunnedDebuff = null;
 	
+	//sprite anmation
+	private bool slashing;
+	private float slashTicker;
 
 	// Use this for initialization
 	void Start ()
@@ -168,6 +171,11 @@ public class Ragnarok_Phase_2_Controller : MonoBehaviour
 		meteorTicker -= Time.deltaTime;
 		SockWaveCollider.enabled = false;
 		currentElementTimer -= Time.deltaTime;
+		slashTicker -= Time.deltaTime;
+		if (slashTicker <= 0)
+		{
+			slashing = false;
+		}
 	}
 
 	private void CheckHealth ()
@@ -410,6 +418,8 @@ public class Ragnarok_Phase_2_Controller : MonoBehaviour
 				Claw.SetActive(true);
 				meleeTicker = Random.Range(meleeMinTicker, meleeMaxTicker);
 				meleeCollider.enabled = true;
+				slashing = true;
+				slashTicker = 1.75f;
 			}
 		}
 		else if (distanceToPlayer.magnitude < flameBreathRange)
@@ -498,6 +508,8 @@ public class Ragnarok_Phase_2_Controller : MonoBehaviour
 				Claw.SetActive(true);
 				meleeTicker = Random.Range(meleeMinTicker, meleeMaxTicker);
 				meleeCollider.enabled = true;
+				slashing = true;
+				slashTicker = 1.75f;
 			}
 		}
 		else if (distanceToPlayer.magnitude < flameBreathRange)
@@ -532,34 +544,88 @@ public class Ragnarok_Phase_2_Controller : MonoBehaviour
 		{
 			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
 			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (slashing)
+			{
+				Vector3 tempPos = new Vector3(0, 5, -1);
+				sprite.transform.localPosition = tempPos;
+			}
+			else if (wayPointTicker > 0)
+			{
+				Vector3 tempPos = new Vector3(-0.5f, 0, -3);
+				sprite.transform.localPosition = tempPos;
+			}
 			if (dotProd >= 0.75f)
 			{
-				Animate.Play ("Rag_Idle_Up");
+				if (!slashing)
+				{
+					Animate.Play ("Rag_Idle_Up");
+				}
+				else
+				{
+					Animate.Play ("Rag_Slash_Up");
+				}
 			}
 			else if (dotProd <= -0.75f)
 			{
-				Animate.Play ("Rag_Idle_Down");
+				if (!slashing)
+				{
+					Animate.Play ("Rag_Idle_Down");
+				}
+				else
+				{
+					Animate.Play ("Rag_Slash_Down");
+				}
 			}
 			else if (dotProd > -0.25f && dotProd <= 0.25f)
 			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Rag_Idle_Left");
+				if (!slashing)
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Idle_Left");
+					else
+						Animate.Play ("Rag_Idle_Right");
+				}
 				else
-					Animate.Play ("Rag_Idle_Right");
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Slash_Left");
+					else
+						Animate.Play ("Rag_Slash_Right");
+				}
 			}
 			else if (dotProd > 0.25f && dotProd < 0.75f)
 			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Rag_Idle_Up_Left");
+				if (!slashing)
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Idle_Up_Left");
+					else
+						Animate.Play ("Rag_Idle_Up_Right");
+				}
 				else
-					Animate.Play ("Rag_Idle_Up_Right");
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Slash_Up_Left");
+					else
+						Animate.Play ("Rag_Slash_Up_Right");
+				}
 			}
 			else
 			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Rag_Idle_Down_Left");
+				if (!slashing)
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Idle_Down_Left");
+					else
+						Animate.Play ("Rag_Idle_Down_Right");
+				}
 				else
-					Animate.Play ("Rag_Idle_Down_Right");
+				{
+					if (crossProd.y < 0.0f)
+						Animate.Play ("Rag_Slash_Down_Left");
+					else
+						Animate.Play ("Rag_Slash_Down_Right");
+				}
 			}
 		}
 	}

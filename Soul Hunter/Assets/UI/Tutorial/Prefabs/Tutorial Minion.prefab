@@ -208,7 +208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorMat: {fileID: 2100000, guid: 4a0f71a98659d36468e937e66b3edd16, type: 2}
-  macSelect: {fileID: 0}
   tutor: {fileID: 0}
 --- !u!135 &13533348
 SphereCollider:

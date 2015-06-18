@@ -4,23 +4,23 @@ using System.Collections;
 public class BindingMinionCheck : MonoBehaviour
 {
 	//need objects
-	public GameObject player;
 	public GameObject BindCapt;
 	private Binding_Captain_Controller BCC;
 
 	//helper vars
-	private int numMinions = 0;
+	public int numMinions = 0;
 	public int numMinionsAllowed = 5;
 
 	void Start ()
 	{
 		BCC = (Binding_Captain_Controller)BindCapt.GetComponent("Binding_Captain_Controller");
+		player = GameBrain.Instance.Player;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		this.transform.position = player.transform.position;
+		this.transform.position = GameBrain.Instance.Player.transform.position;
 		if (numMinions >= numMinionsAllowed)
 		{
 			BCC.isSurrounded = true;
