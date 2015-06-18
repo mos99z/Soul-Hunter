@@ -11029,6 +11029,7 @@ MonoBehaviour:
   entType: 3
   RoomNumber: 0
   SavePoint: {fileID: 0}
+  SelectHealthBar: 1
 --- !u!195 &1087278895
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14148,9 +14149,10 @@ MonoBehaviour:
   CanDie: 1
   Lives: 1
   SoulValue: 0
-  entType: 1
+  entType: 3
   RoomNumber: 0
   SavePoint: {fileID: 0}
+  SelectHealthBar: 2
 --- !u!195 &1422330399
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -35,6 +35,9 @@ public class Living_Obj : MonoBehaviour
 	public int RoomNumber = 0;
 	public GameObject SavePoint = null;
 
+	//Select HealthBar display
+	public int SelectHealthBar = 0;
+
 	void Start ()
 	{
 		if (CurrHealth <= 0)
@@ -113,11 +116,35 @@ public class Living_Obj : MonoBehaviour
 
 		if (entType == EntityType.Boss)
 		{
-			GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay", CurrHealth);
-			GameBrain.Instance.HUDMaster.SendMessage("SetBossName", gameObject.name);
+			if (SelectHealthBar == 0)
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay", CurrHealth);
+				GameBrain.Instance.HUDMaster.SendMessage("SetBossName", gameObject.name);
+			}
+			else if (SelectHealthBar == 1)
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay1", CurrHealth);
+				GameBrain.Instance.HUDMaster.SendMessage("SetBossName1", gameObject.name);
+			}
+			else if (SelectHealthBar == 2)
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay2", CurrHealth);
+				GameBrain.Instance.HUDMaster.SendMessage("SetBossName2", gameObject.name);
+			}
+
 			if (CurrHealth == 0)
 			{
-				GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar", 0);
+				if (SelectHealthBar == 0)
+				{
+					GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar", 0);
+				}
+				else
+				{
+					if (SoulValue == SoulType.Red)
+					{
+						GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar", 0);
+					}
+				}
 			}
 		}
 
