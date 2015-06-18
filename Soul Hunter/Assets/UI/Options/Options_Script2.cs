@@ -27,7 +27,12 @@ public class Options_Script2 : MonoBehaviour
 	private int index;
 	private bool needsUpdate;
 	private bool opening;
+	public AudioSource TestSFX;
 	
+	// Event
+	public delegate void SFXEvent();
+	public static event SFXEvent SFXChanged;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -162,8 +167,7 @@ public class Options_Script2 : MonoBehaviour
 		MusicVolume = MusicSlider.value;
 		if (Options.activeSelf) 
 		{
-			GameBrain.Instance.Music [0].volume = MusicVolume;
-			GameBrain.Instance.Music [1].volume = MusicVolume;
+			GameBrain.Instance.Music.volume = MusicVolume;
 		}
 	}
 	
@@ -172,9 +176,9 @@ public class Options_Script2 : MonoBehaviour
 		SFXVolume = SFXSlider.value;
 		if (Options.activeSelf) 
 		{
-			GameBrain.Instance.Music [2].volume = SFXVolume;
-			if(GameBrain.Instance.Music[2].isPlaying == false)
-				GameBrain.Instance.Music [2].Play();		
+			TestSFX.volume = SFXVolume;
+			if(TestSFX.isPlaying == false)
+				TestSFX.Play();		
 		}
 	}
 	
@@ -199,8 +203,10 @@ public class Options_Script2 : MonoBehaviour
 		opening = true;
 		PlayerPrefs.SetFloat ("MusicVolume", MusicVolume);
 		PlayerPrefs.SetFloat ("SFXVolume", SFXVolume);
-		GameBrain.Instance.Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
-		GameBrain.Instance.Music [1].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		GameBrain.Instance.Music.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		if (SFXChanged != null)
+			SFXChanged ();
+		TestSFX.volume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		Options.SetActive (false);
 		if (MainMenu != null)
 		{
@@ -217,8 +223,8 @@ public class Options_Script2 : MonoBehaviour
 		opening = true;
 		MusicSlider.value = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		SFXSlider.value = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
-		GameBrain.Instance.Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
-		GameBrain.Instance.Music [1].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		GameBrain.Instance.Music.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		TestSFX.volume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		Options.SetActive (false);
 		if (MainMenu != null)
 		{

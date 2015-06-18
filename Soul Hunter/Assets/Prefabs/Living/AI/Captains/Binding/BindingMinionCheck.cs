@@ -6,6 +6,7 @@ public class BindingMinionCheck : MonoBehaviour
 	//need objects
 	public GameObject BindCapt;
 	private Binding_Captain_Controller BCC;
+	GameObject player;
 
 	//helper vars
 	public int numMinions = 0;

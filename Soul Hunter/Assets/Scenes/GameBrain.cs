@@ -89,6 +89,9 @@ public class GameBrain : MonoBehaviour {
 	public List<int> RoomsCleared;
 	public Vector3 RespawnLoc = Vector3.zero;
 	private GameInfo gameInfo;
+	public AudioSource Music;
+	public float MusicVolume;
+	public float SFXVolume;
 
 	public int FireLevel = 0;
 	public int WindLevel = 0;
@@ -114,7 +117,6 @@ public class GameBrain : MonoBehaviour {
 	//public GameObject Debuffs = null;		// replaced with master list script
 	public GameObject DisplayText = null;
 	public GameObject loadingScreen = null;
-	public AudioSource[] Music;// = GetComponents<AudioSource> ();
 
 
 
@@ -140,8 +142,8 @@ public class GameBrain : MonoBehaviour {
 
 	void Start ()
 	{
-		Music [0].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
-		Music [1].volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		MusicVolume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 
 		if (CurrentLevel >= 0) {
 			if (Player != null)
@@ -536,25 +538,13 @@ public class GameBrain : MonoBehaviour {
 		}
 	}
 
-	void ChangeMusic(int index)
+	void ChangeMusic(AudioClip clip)
 	{
-		if (Music [index].isPlaying)
+		if (Music.clip == clip)
 			return;
-
-		switch (index) {
-		case 0:
-		{
-			Music[1].Stop();
-			Music[0].Play();
-			break;
-		}
-		case 1:
-		{
-			Music[0].Stop();
-			Music[1].Play();
-			break;
-		}
-		}
+		Music.Stop ();
+		Music.clip = clip;
+		Music.Play ();
 	}
 
 	public void ChangeSoulHud()

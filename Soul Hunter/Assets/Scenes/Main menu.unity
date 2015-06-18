@@ -7598,6 +7598,10 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389249234}
+--- !u!4 &394151773 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 403986, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+  m_PrefabInternal: {fileID: 1081324071}
 --- !u!1 &406534304
 GameObject:
   m_ObjectHideFlags: 0
@@ -12826,6 +12830,7 @@ MonoBehaviour:
   - {fileID: 44477586}
   - {fileID: 389249234}
   - {fileID: 99190494}
+  TestSFX: {fileID: 0}
 --- !u!114 &882392396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12925,6 +12930,7 @@ MonoBehaviour:
   - {fileID: 44477586}
   - {fileID: 389249234}
   - {fileID: 99190494}
+  TestSFX: {fileID: 0}
 --- !u!114 &882392399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16102,6 +16108,10 @@ Prefab:
       propertyPath: PlayerFaceingIndicator
       value: 
       objectReference: {fileID: 962110945}
+    - target: {fileID: 127092, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
   m_IsPrefabParent: 0
@@ -18982,6 +18992,7 @@ Transform:
   - {fileID: 1026269816}
   - {fileID: 1582543606}
   - {fileID: 530516781}
+  - {fileID: 394151773}
   - {fileID: 102437408}
   - {fileID: 1896255471}
   m_Father: {fileID: 0}
@@ -19003,9 +19014,13 @@ MonoBehaviour:
   PlayerLivesLeft: 0
   SoulCount: 0
   MeleeEnemyCounter: 0
+  PlayerInFog: 0
   CurrentLevel: -1
   RoomsCleared: 
   RespawnLoc: {x: 0, y: 0, z: 0}
+  Music: {fileID: 0}
+  MusicVolume: 0
+  SFXVolume: 0
   FireLevel: 0
   WindLevel: 0
   EarthLevel: 0
@@ -19024,10 +19039,6 @@ MonoBehaviour:
   Souls: {fileID: 1026269815}
   DisplayText: {fileID: 530516780}
   loadingScreen: {fileID: 1896255470}
-  Music:
-  - {fileID: 1329567337}
-  - {fileID: 1329567336}
-  - {fileID: 1329567335}
   SpellHasBeenCast: 00000000000000000000000000000000000000000000000000
 --- !u!82 &1329567335
 AudioSource:
@@ -21939,7 +21950,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 127092, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
@@ -31866,7 +31877,7 @@ RectTransform:
   m_Children:
   - {fileID: 1482582254}
   m_Father: {fileID: 1329567333}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}

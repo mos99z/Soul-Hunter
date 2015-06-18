@@ -6,6 +6,7 @@ public class Fog_Controller : MonoBehaviour
 	public GameObject mouseMarker;		// mouse marker from game brain
 	public float duration = 2.0f;		// how long spell lasts
 	public float recoveryTime = 1.5f;	// how long for spell to recharge
+	public GameObject Blinded;
 
 	// TODO: enable this when blind is implemented
 //	public GameObject blind;	// debuff to apply
@@ -15,6 +16,9 @@ public class Fog_Controller : MonoBehaviour
 			mouseMarker = GameBrain.Instance.MouseMarker;
 		transform.position = mouseMarker.transform.position;
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
+
+		if (Blinded == null) 
+			Blinded = GameBrain.Instance.GetComponent<DebuffMasterList>().blinded;
 	}
 
 	void Update()
@@ -29,12 +33,14 @@ public class Fog_Controller : MonoBehaviour
 		if (col.tag == "Player") 
 		{
 			GameBrain.Instance.PlayerInFog = true;
-			if(Fog_Event_Manager.PlayerEntered != null)
-				Fog_Event_Manager.PlayerEntered();
+			GameBrain.Instance.SendMessage("");
 		}
 		if (col.tag == "Enemy")
 		{
 			// TODO: apply blind debuff
+			GameObject blind = Instantiate (Blinded);
+			blind.transform.parent = col.transform;
+			blind.transform.localPosition = new Vector3 (0, -col.transform.position.y, 0);
 		}
 	}
 
@@ -43,8 +49,12 @@ public class Fog_Controller : MonoBehaviour
 		if (col.tag == "Player") 
 		{
 			GameBrain.Instance.PlayerInFog = false;
-			if(Fog_Event_Manager.PlayerLeft != null)
-				Fog_Event_Manager.PlayerLeft();
+			GameBrain.Instance.SendMessage("");
+		}
+
+		if (col.tag == "Enemy") 
+		{
+			Destroy(col.transform.FindChild("Blinded(Clone)"));
 		}
 	}
 }
