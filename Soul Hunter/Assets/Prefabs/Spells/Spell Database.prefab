@@ -33,7 +33,7 @@ GameObject:
   - 132: {fileID: 13299938}
   m_Layer: 0
   m_Name: Magma
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - 132: {fileID: 13258320}
   m_Layer: 0
   m_Name: Freeze
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,7 +284,7 @@ GameObject:
   - 65: {fileID: 6559802}
   m_Layer: 0
   m_Name: Torch
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,7 +322,7 @@ GameObject:
   - 132: {fileID: 13272946}
   m_Layer: 0
   m_Name: Concrete
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +375,7 @@ GameObject:
   - 82: {fileID: 8229408}
   m_Layer: 0
   m_Name: Hydrant
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,7 +464,7 @@ GameObject:
   - 82: {fileID: 8227482}
   m_Layer: 0
   m_Name: Fire Ball
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,7 +517,7 @@ GameObject:
   - 132: {fileID: 13274754}
   m_Layer: 0
   m_Name: Rock Spike
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,7 +567,7 @@ GameObject:
   - 135: {fileID: 13588892}
   m_Layer: 0
   m_Name: Fog
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -621,7 +621,7 @@ GameObject:
   - 82: {fileID: 8226544}
   m_Layer: 0
   m_Name: Bolt
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,7 +640,7 @@ GameObject:
   - 82: {fileID: 8228638}
   m_Layer: 0
   m_Name: Wind Blade
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -658,7 +658,7 @@ GameObject:
   - 135: {fileID: 13510740}
   m_Layer: 0
   m_Name: Crystal Spikes
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,7 +693,7 @@ GameObject:
   - 136: {fileID: 13656882}
   m_Layer: 0
   m_Name: Steam
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,7 +711,7 @@ GameObject:
   - 132: {fileID: 13222466}
   m_Layer: 0
   m_Name: Barrier
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -796,7 +796,7 @@ GameObject:
   - 135: {fileID: 13502458}
   m_Layer: 0
   m_Name: Title Wave
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,7 +979,7 @@ GameObject:
   - 82: {fileID: 8298852}
   m_Layer: 2
   m_Name: Ground Spike 3
-  m_TagString: Untagged
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1103,7 +1103,7 @@ GameObject:
   - 136: {fileID: 13663482}
   m_Layer: 0
   m_Name: Shock Prism
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1316,7 +1316,7 @@ GameObject:
   - 82: {fileID: 8231228}
   m_Layer: 2
   m_Name: Ground Spike 2
-  m_TagString: Untagged
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1479,7 +1479,7 @@ GameObject:
   - 132: {fileID: 13234272}
   m_Layer: 2
   m_Name: Meteor
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1500,7 +1500,7 @@ GameObject:
   - 82: {fileID: 8255798}
   m_Layer: 2
   m_Name: Ground Spike 4
-  m_TagString: Untagged
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1605,7 +1605,7 @@ GameObject:
   - 132: {fileID: 13235334}
   m_Layer: 0
   m_Name: Bolt Chain
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1763,7 +1763,7 @@ GameObject:
   - 132: {fileID: 13254272}
   m_Layer: 0
   m_Name: Explosion
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1798,7 +1798,7 @@ GameObject:
   - 132: {fileID: 13233888}
   m_Layer: 0
   m_Name: Plasma
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1838,7 +1838,7 @@ GameObject:
   - 82: {fileID: 8233154}
   m_Layer: 2
   m_Name: Ground Spike 1
-  m_TagString: Untagged
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2016,7 +2016,7 @@ GameObject:
   - 132: {fileID: 13295910}
   m_Layer: 0
   m_Name: Gravity Well
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2037,7 +2037,7 @@ GameObject:
   - 82: {fileID: 8264122}
   m_Layer: 2
   m_Name: Ground Spike 5
-  m_TagString: Untagged
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2144,7 +2144,7 @@ GameObject:
   - 114: {fileID: 11470230}
   m_Layer: 0
   m_Name: Whirlwind
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2164,7 +2164,7 @@ GameObject:
   - 23: {fileID: 2330112}
   m_Layer: 0
   m_Name: Muck
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2182,7 +2182,7 @@ GameObject:
   - 136: {fileID: 13619670}
   m_Layer: 0
   m_Name: Sand Blast
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2219,7 +2219,7 @@ GameObject:
   - 132: {fileID: 13237640}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2256,7 +2256,7 @@ GameObject:
   - 132: {fileID: 13246040}
   m_Layer: 0
   m_Name: Poision Cloud
-  m_TagString: Spells
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

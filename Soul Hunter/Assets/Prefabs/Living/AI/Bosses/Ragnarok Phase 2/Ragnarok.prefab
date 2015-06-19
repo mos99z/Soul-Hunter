@@ -444,6 +444,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 6
   entType: 3
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11486476
 MonoBehaviour:
   m_ObjectHideFlags: 1

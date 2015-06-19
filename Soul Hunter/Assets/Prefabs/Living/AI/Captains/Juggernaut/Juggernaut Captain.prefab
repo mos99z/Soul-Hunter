@@ -13,7 +13,7 @@ GameObject:
   - 195: {fileID: 19594906}
   - 54: {fileID: 5462586}
   - 136: {fileID: 13624426}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Juggernaut Captain
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 444766}
   - 212: {fileID: 21204536}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: frog_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 478652}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 456168}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Direction Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 454282}
   - 212: {fileID: 21268902}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 416392}
   - 135: {fileID: 13517036}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Attack Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119470}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .200000003
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

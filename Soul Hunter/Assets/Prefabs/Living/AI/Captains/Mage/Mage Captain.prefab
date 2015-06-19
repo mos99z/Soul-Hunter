@@ -62,7 +62,7 @@ GameObject:
   - 114: {fileID: 11426390}
   - 54: {fileID: 5486936}
   - 136: {fileID: 13667146}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mage Captain
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161374}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .200000003
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

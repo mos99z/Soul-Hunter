@@ -6886,10 +6886,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 11479592, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
-      propertyPath: mouseMarker
-      value: 
-      objectReference: {fileID: 316358188}
     - target: {fileID: 11441260, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
       propertyPath: mouseMarker
       value: 
@@ -6906,10 +6902,6 @@ Prefab:
       propertyPath: mouseMarker
       value: 
       objectReference: {fileID: 316358188}
-    - target: {fileID: 127092, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
   m_IsPrefabParent: 0

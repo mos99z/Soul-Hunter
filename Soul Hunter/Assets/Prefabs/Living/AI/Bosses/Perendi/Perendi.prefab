@@ -95,7 +95,7 @@ GameObject:
   - 195: {fileID: 19590070}
   - 135: {fileID: 13526914}
   - 136: {fileID: 13685170}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Perendi
   m_TagString: Enemy
   m_Icon: {fileID: 0}

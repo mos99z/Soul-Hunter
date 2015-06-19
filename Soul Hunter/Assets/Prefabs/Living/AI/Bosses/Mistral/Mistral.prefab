@@ -30,7 +30,7 @@ GameObject:
   - 135: {fileID: 13545702}
   - 114: {fileID: 11469154}
   - 136: {fileID: 13641908}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mistral
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -185,6 +185,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 0
   entType: 3
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!135 &13545702
 SphereCollider:
   m_ObjectHideFlags: 1
