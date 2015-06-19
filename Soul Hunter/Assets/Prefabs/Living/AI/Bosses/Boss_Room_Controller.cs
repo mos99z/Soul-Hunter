@@ -21,7 +21,14 @@ public class Boss_Room_Controller : MonoBehaviour {
 	{
 		if (col.tag == "Player") 
 		{
-			GameBrain.Instance.HUDMaster.SendMessage("ActivateBossBar", 0);
+			if (numBosses.Length > 1)
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("ActivateDualBar", 0);
+			}
+			else
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("ActivateBossBar", 0);
+			}
 			for (int i = 0; i < numBosses.Length; i++)
 			{
 				numBosses[i].SetActive(true);

@@ -7,8 +7,7 @@ public class MeteorExplosion : MonoBehaviour {
 	{
 		if (_obj.tag.Contains("Enemy"))
 		{
-//			_obj.GetComponent<NavMeshAgent>().enabled = false;
-			_obj.transform.GetComponent<Rigidbody>().AddExplosionForce(25.0f, gameObject.transform.position, gameObject.transform.GetComponent<SphereCollider>().radius);
+			_obj.transform.GetComponent<Rigidbody>().AddExplosionForce(1000.0f, gameObject.transform.position, gameObject.transform.GetComponent<SphereCollider>().radius);
 		}
 	}
 }

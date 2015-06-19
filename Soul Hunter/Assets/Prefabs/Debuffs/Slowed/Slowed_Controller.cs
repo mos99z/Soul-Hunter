@@ -26,6 +26,17 @@ public class Slowed_Controller : MonoBehaviour
 				Destroy(gameObject);
 				return;
 			}
+			int children = transform.parent.childCount;
+			for (int child = 0; child < children; child++)
+			{
+				if (transform.parent.GetChild(child).name == "Slowed(Clone)" && transform.parent.GetChild(child) != transform)
+				{
+					transform.parent.GetChild(child).GetComponent<Slowed_Controller>().duration = duration;
+					Destroy(gameObject);
+					return;
+				}
+			}
+
 			if (transform.parent.tag == "Player")
 			{
 				origSpeed = transform.parent.GetComponent<Player_Movement_Controller>().Speed;
@@ -35,15 +46,6 @@ public class Slowed_Controller : MonoBehaviour
 			{
 				origSpeed = transform.parent.GetComponent<NavMeshAgent>().speed;
 				transform.parent.GetComponent<NavMeshAgent>().speed *= slowSpeedModifier;
-			}
-			int children = transform.parent.childCount;
-			for (int child = 0; child < children; child++)
-			{
-				if (transform.parent.GetChild(child).name == "Slowed(Clone)" && transform.parent.GetChild(child) != transform)
-				{
-					transform.parent.GetChild(child).GetComponent<Slowed_Controller>().duration = duration;
-					Destroy(gameObject);
-				}
 			}
 			check = false;
 		}
