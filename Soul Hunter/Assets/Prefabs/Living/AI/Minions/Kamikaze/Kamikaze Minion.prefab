@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 411252}
   - 65: {fileID: 6582542}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Tail Whip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 438496}
   - 212: {fileID: 21295088}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 481736}
   - 212: {fileID: 21218398}
   - 95: {fileID: 9546402}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Kamikaze Minion Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491682}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Direction Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 483752}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,6 +243,9 @@ MonoBehaviour:
   RoomNumber: 0
   SavePoint: {fileID: 0}
   SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
+  MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
+  LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
 --- !u!114 &11445974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  player: {fileID: 0}
   CountdownTimer: 1.5
   KamikazeDistance: 2
   ExplosionDamage: 100

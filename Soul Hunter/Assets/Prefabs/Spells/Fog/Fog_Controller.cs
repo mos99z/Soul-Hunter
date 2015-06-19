@@ -5,10 +5,8 @@ public class Fog_Controller : MonoBehaviour
 {
 	public GameObject mouseMarker;		// mouse marker from game brain
 	public float duration = 2.0f;		// how long spell lasts
-	public float damage = 5.0f;			// how much damage it does
 	public float recoveryTime = 1.5f;	// how long for spell to recharge
-
-	float timer = 0.0f;		// for ticking damage
+	public GameObject Blinded;
 
 	// TODO: enable this when blind is implemented
 //	public GameObject blind;	// debuff to apply
@@ -18,34 +16,56 @@ public class Fog_Controller : MonoBehaviour
 			mouseMarker = GameBrain.Instance.MouseMarker;
 		transform.position = mouseMarker.transform.position;
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
+
+		if (Blinded == null) 
+			Blinded = GameBrain.Instance.GetComponent<DebuffMasterList>().blinded;
 	}
 
 	void Update()
 	{
 		duration -= Time.deltaTime;
-		if (duration <= 0.0f)
-			Destroy (gameObject);
-	}
-
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Enemy")
+		if (duration <= 0.0f) 
 		{
-			other.transform.SendMessage("TakeDamage", damage);
-			// TODO: apply blind debuff
+			Destroy (gameObject);
+			GameBrain.Instance.PlayerInFog = false;
 		}
 	}
 
-	void OnTriggerStay(Collider other)
+	void OnTriggerEnter(Collider col)
 	{
-		if (other.tag == "Enemy")
+		if (col.tag == "Player") 
 		{
-			timer += Time.deltaTime;
-			if (timer >= 0.5f)
+			GameBrain.Instance.PlayerInFog = true;
+			GameBrain.Instance.SendMessage("PlayerEnteredFog");
+		}
+		if (col.tag == "Enemy")
+		{
+			if(col.name.Contains("Juggernaut"))
 			{
-				timer = 0.0f;
-				other.transform.SendMessage("TakeDamage", damage);
+				if (col.gameObject.GetComponent<Juggernaut_Captain_Controller>().isCharging == true)
+				{
+					return;
+				}
 			}
+			// TODO: apply blind debuff
+			GameObject blind = Instantiate (Blinded);
+			blind.GetComponent<Blinded_Controller>().Duration = duration;
+			blind.transform.parent = col.transform;
+			blind.transform.localPosition = new Vector3 (0, -col.transform.position.y, 0);
+		}
+	}
+
+	void OnTriggerExit(Collider col)
+	{
+		if (col.tag == "Player") 
+		{
+			GameBrain.Instance.PlayerInFog = false;
+			GameBrain.Instance.SendMessage("PlayerLeftFog");
+		}
+
+		if (col.tag == "Enemy") 
+		{
+			Destroy(col.transform.FindChild("Blinded(Clone)").gameObject);
 		}
 	}
 }

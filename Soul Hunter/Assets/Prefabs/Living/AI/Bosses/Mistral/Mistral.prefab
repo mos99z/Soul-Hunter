@@ -24,11 +24,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447054}
+  - 114: {fileID: 11469154}
   - 54: {fileID: 5421624}
   - 114: {fileID: 11409914}
   - 195: {fileID: 19525348}
   - 135: {fileID: 13545702}
-  - 114: {fileID: 11469154}
   - 136: {fileID: 13641908}
   m_Layer: 11
   m_Name: Mistral
@@ -188,6 +188,9 @@ MonoBehaviour:
   RoomNumber: 0
   SavePoint: {fileID: 0}
   SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
+  MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
+  LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
 --- !u!135 &13545702
 SphereCollider:
   m_ObjectHideFlags: 1

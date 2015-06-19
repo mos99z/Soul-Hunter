@@ -38,6 +38,11 @@ public class Living_Obj : MonoBehaviour
 	//Select HealthBar display
 	public int SelectHealthBar = 0;
 
+	//Blood splats
+	public GameObject SmallBloodSplat = null;
+	public GameObject MedBloodSplat = null;
+	public GameObject LargeBloodSplat = null;
+
 	void Start ()
 	{
 		if (CurrHealth <= 0)
@@ -344,9 +349,8 @@ public class Living_Obj : MonoBehaviour
 	{
 		IsAlive = false;
 		if (entType != EntityType.Player)
-			GameBrain.Instance.SendMessage ("AddKill");
-		if (transform.GetComponentInChildren<Animation> () != null)
-			transform.GetComponentInChildren<Animation> ().Play ("Death");
+			GameBrain.Instance.SendMessage("AddKill");
+
 	}
 
 	void DropSoul()
@@ -372,13 +376,38 @@ public class Living_Obj : MonoBehaviour
 			GameBrain.Instance.Save();
 		}
 
-		if (entType != EntityType.Player)
+		if (entType == EntityType.Minion)
+		{
+			if (SmallBloodSplat != null)
+			{
+				Instantiate(SmallBloodSplat, this.transform.position, SmallBloodSplat.transform.rotation);
+			}
 			Destroy (gameObject);
+		}
+		else if (entType == EntityType.Captain)
+		{
+			if (MedBloodSplat != null)
+			{
+				Instantiate(MedBloodSplat, this.transform.position, MedBloodSplat.transform.rotation);
+			}
+			Destroy (gameObject);
+		}
+		else if (entType == EntityType.Boss)
+		{
+			if (LargeBloodSplat != null)
+			{
+				Vector3 tempPos = this.transform.position;
+				tempPos.y += 5;
+				Instantiate(LargeBloodSplat, tempPos, this.transform.rotation);
+			}
+			Destroy (gameObject);
+		}
 		else
 		{
 //	TODO: Player "Death"
 			GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
 			GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
+			GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar");
 
 			GameBrain.Instance.SendMessage("SetMaxHealth", MaxHealth);
 			GameBrain.Instance.SendMessage("SetHealth", MaxHealth);

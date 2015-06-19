@@ -34,14 +34,18 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	float AOEChargeUp = 0.5f;
 	float currentAOETimer = 0.0f;
 	public GameObject DirectionIndicator = null;
+	GameObject player;
 	
 	
 	// Use this for initialization
 	void Start () 
 	{
+		Fog_Event_Manager.PlayerEntered += LosePlayer;
+		Fog_Event_Manager.PlayerLeft += FindPlayer;
 		navigation = GetComponent<NavMeshAgent> ();
 		navigation.updateRotation = false;
-		target = GameObject.FindGameObjectWithTag ("Player");
+		player = GameBrain.Instance.Player;
+		target = player;
 		safeZones = GameObject.FindGameObjectsWithTag ("SafeZone");
 		currentSpellBarrageTimer = SpellBarrageCooldown;
 		missileDamage = FelMissile.GetComponent<Fel_Missile_Controller> ().Damage;
@@ -55,7 +59,10 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	void OnDestroy()
 	{
 		boundingWalls.SendMessage("DestroyWalls");
+		Fog_Event_Manager.PlayerEntered -= LosePlayer;
+		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 	}
+
 	// Update is called once per frame
 	// The enemy will attack if the player is within range and is not currently moving towards a waypoint
 	// The enemy will move if: the player moves out of his comfort range; the enemy gets too close to a wall
@@ -221,33 +228,6 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		if (movementDirection.magnitude >= 1.0f) {
 			DirectionIndicator.transform.forward = navigation.velocity.normalized;
 		}
-		//Vector3 Forward = transform.forward;
-		//Vector3 PlayerDistance = target.transform.position - transform.position;
-		//PlayerDistance.y = 0.0f;
-		//float rotation = 0.0f;
-		//float angle = Vector3.Angle(PlayerDistance, Forward);
-		//
-		//// Rotation
-		//if (angle > 5.0f)
-		//{
-		//	if (Vector3.Cross (PlayerDistance, Forward).y > 0)
-		//		rotation = -1 * AngularAcceleration;
-		//	if (Vector3.Cross (PlayerDistance, Forward).y < 0)
-		//		rotation = 1 * AngularAcceleration;
-		//	
-		//	currentRotation += rotation;
-		//	currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-		//	currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-		//	transform.Rotate (0, currentRotation, 0);
-		//	
-		//	return false;
-		//} 
-		//
-		//else
-		//{
-		//	gameObject.transform.LookAt(target.transform.position);
-		//	return true;
-		//}
 	}
 	
 	// This function will search for the nearest safe zone. When found, it will
@@ -295,8 +275,16 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		destination = randomDirection.GetPoint(currentDistance);
 	}
 
-	void PlayerDead()
+	void LosePlayer()
 	{
-		target = null;
+		GameObject fakePlayer = player;
+		fakePlayer.transform.position += Random.insideUnitSphere * 3.5f;
+		fakePlayer.transform.position = new Vector3(fakePlayer.transform.position.x,0,fakePlayer.transform.position.z);
+		target = fakePlayer;
+	}
+	
+	void FindPlayer()
+	{
+		target = player;
 	}
 }

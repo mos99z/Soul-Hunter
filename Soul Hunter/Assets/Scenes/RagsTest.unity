@@ -3684,6 +3684,10 @@ MonoBehaviour:
   duration: 2
   damage: 5
   recoveryTime: 1.5
+  BurningDebuff: {fileID: 0}
+  BurningDamage: 10
+  DebuffChance: .899999976
+  DebuffDuration: 10
 --- !u!1 &147755330
 GameObject:
   m_ObjectHideFlags: 0
@@ -4250,7 +4254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 130456, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 454828, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4280,6 +4284,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11461252, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: LargeBloodSplat
+      value: 
+      objectReference: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
   m_IsPrefabParent: 0
@@ -11352,18 +11360,17 @@ MonoBehaviour:
   damage: 25.1000004
   duration: 1
   recoveryTime: 2
-  mouseMarker: {fileID: 0}
-  spawnHeight: 1
-  forceMode: 0
   knockback: 300
-  radius: 2
-  burning: {fileID: 0}
+  burnDamage: 10.1000004
   burnChance: .100000001
   burnDuration: 5
   burnTick: 1
-  burnDamage: 10.1000004
-  cripple: {fileID: 0}
   crippleChance: .150000006
+  crippleDuration: 5
+  SpellEffect: {fileID: 0}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &409158248
 GameObject:
   m_ObjectHideFlags: 0
@@ -12201,7 +12208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5f45cba6929284793401c7f7042151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseMarker: {fileID: 0}
   duration: 4
   startHeight: 30
   explosion: {fileID: 0}
@@ -12211,7 +12217,6 @@ MonoBehaviour:
   burnDamage: 8.10000038
   burnTick: 1
   burnTime: 5
-  cripple: {fileID: 0}
 --- !u!1 &480171315 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 129032, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
@@ -15537,6 +15542,10 @@ MonoBehaviour:
   entType: 0
   RoomNumber: 0
   SavePoint: {fileID: 0}
+  SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 0}
+  MedBloodSplat: {fileID: 0}
+  LargeBloodSplat: {fileID: 0}
 --- !u!54 &561819696
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24655,7 +24664,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseMarker: {fileID: 0}
   duration: 2
-  damage: 5
+  TickTimer: .25
+  MinDamage: 5.0999999
+  MaxDamage: 20.1000004
+  PushBackForce: 100
   recoveryTime: 1.5
 --- !u!1 &847528534
 GameObject:
@@ -29102,6 +29114,48 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1001 &937964206
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.58330727
+      objectReference: {fileID: 0}
+    - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 25.3875656
+      objectReference: {fileID: 0}
+    - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430964, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &939626945
 GameObject:
   m_ObjectHideFlags: 0
@@ -31465,12 +31519,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e61d48326939a4889c0cfeb025e2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseMarker: {fileID: 0}
-  startHeight: 1.5
-  duration: .300000012
-  damage: 15.1000004
-  recoveryTime: 1.5
-  maxHits: 4
+  DamageFire: 10.1000004
+  DamageLightning: 10.3999996
+  DamageTickRate: .100000001
+  RecoveryCostRate: .333333343
+  Range: 15
+  StartHeight: 1
+  ImpactEffectObj: {fileID: 0}
+  Duration: 10
+  TheCollider: {fileID: 0}
+  SpellEffect: {fileID: 0}
+  BurningDebuff: {fileID: 0}
+  BurningDamage: 5
+  DebuffChance: .5
+  DebuffDuration: 3
+  WALLS:
+    serializedVersion: 2
+    m_Bits: 0
+  PlayerFaceingIndicator: {fileID: 0}
 --- !u!1 &1034592240
 GameObject:
   m_ObjectHideFlags: 0
@@ -57392,11 +57458,16 @@ MonoBehaviour:
   mouseMarker: {fileID: 0}
   spawnHeight: -3
   speed: 1
+  Crystals: {fileID: 0}
   recoveryCost: 2
   duration: 1
-  damage: 5
+  DamageEarth: 1.29999995
+  DamageLightning: 1.39999998
   tickTime: .25
   slow: {fileID: 0}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1612898698
 GameObject:
   m_ObjectHideFlags: 0
@@ -59786,15 +59857,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b5cbe3c6e63c84883ebeb424418d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 100
-  ApplyDebuff: 0
-  Duration: 0
   FunctionName: TakeDamage
-  CollidableTag: Enemy
-  IsTagReciever: 1
-  AlternateReciever: 
+  TargetTag: Enemy
+  InitialDamage: 0
+  DamageSFXPlayer: {fileID: 0}
+  ApplyDebuff: 0
   DebuffType: 0
-  Debuffs: {fileID: 0}
+  DebuffChance: 0
+  DebuffDuration: 0
+  DebuffTickRate: 0
+  DebuffTickDamage: 0
 --- !u!132 &1704882284
 GUIText:
   m_ObjectHideFlags: 0
@@ -68964,6 +69036,11 @@ MonoBehaviour:
   duration: 2
   damage: 5
   recoveryTime: 1.5
+  SpellEffect: {fileID: 0}
+  GrowthRate: 2
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1994492660
 GameObject:
   m_ObjectHideFlags: 0

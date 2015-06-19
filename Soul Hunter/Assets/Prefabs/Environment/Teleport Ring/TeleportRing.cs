@@ -19,8 +19,8 @@ public class TeleportRing : MonoBehaviour
 		{
 			if (ao.progress == 0.9f) 
 			{
-				LoadingScreen.SetActive(false);
 				ao.allowSceneActivation = true;
+				LoadingScreen.SetActive(false);
 			}
 		}
 	}
@@ -35,6 +35,7 @@ public class TeleportRing : MonoBehaviour
 			LoadingScreen.SetActive(true);
 			LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 			ao = Application.LoadLevelAsync(levelToLoad);			// load this level
+			ao.allowSceneActivation = false;
 		}
 	}
 }

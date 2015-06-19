@@ -1,0 +1,847 @@
+fileFormatVersion: 2
+guid: 3d6a7752436d7154598f56a4cd23e4a3
+timeCreated: 1434726506
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Melee - Move_0
+    21300002: Melee - Move_1
+    21300004: Melee - Move_2
+    21300006: Melee - Move_3
+    21300008: Melee - Move_4
+    21300010: Melee - Move_5
+    21300012: Melee - Move_6
+    21300014: Melee - Move_7
+    21300016: Melee - Move_8
+    21300018: Melee - Move_9
+    21300020: Melee - Move_10
+    21300022: Melee - Move_11
+    21300024: Melee - Move_12
+    21300026: Melee - Move_13
+    21300028: Melee - Move_14
+    21300030: Melee - Move_15
+    21300032: Melee - Move_16
+    21300034: Melee - Move_17
+    21300036: Melee - Move_18
+    21300038: Melee - Move_19
+    21300040: Melee - Move_20
+    21300042: Melee - Move_21
+    21300044: Melee - Move_22
+    21300046: Melee - Move_23
+    21300048: Melee - Move_24
+    21300050: Melee - Move_25
+    21300052: Melee - Move_26
+    21300054: Melee - Move_27
+    21300056: Melee - Move_28
+    21300058: Melee - Move_29
+    21300060: Melee - Move_30
+    21300062: Melee - Move_31
+    21300064: Melee - Move_32
+    21300066: Melee - Move_33
+    21300068: Melee - Move_34
+    21300070: Melee - Move_35
+    21300072: Melee - Move_36
+    21300074: Melee - Move_37
+    21300076: Melee - Move_38
+    21300078: Melee - Move_39
+    21300080: Melee - Move_40
+    21300082: Melee - Move_41
+    21300084: Melee - Move_42
+    21300086: Melee - Move_43
+    21300088: Melee - Move_44
+    21300090: Melee - Move_45
+    21300092: Melee - Move_46
+    21300094: Melee - Move_47
+    21300096: Melee - Move_48
+    21300098: Melee - Move_49
+    21300100: Melee - Move_50
+    21300102: Melee - Move_51
+    21300104: Melee - Move_52
+    21300106: Melee - Move_53
+    21300108: Melee - Move_54
+    21300110: Melee - Move_55
+    21300112: Melee - Move_56
+    21300114: Melee - Move_57
+    21300116: Melee - Move_58
+    21300118: Melee - Move_59
+    21300120: Melee - Move_60
+    21300122: Melee - Move_61
+    21300124: Melee - Move_62
+    21300126: Melee - Move_63
+    21300128: Melee - Move_64
+    21300130: Melee - Move_65
+    21300132: Melee - Move_66
+    21300134: Melee - Move_67
+    21300136: Melee - Move_68
+    21300138: Melee - Move_69
+    21300140: Melee - Move_70
+    21300142: Melee - Move_71
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Melee - Move_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_2
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_3
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_4
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_5
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_6
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_7
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_8
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 428
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_10
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_11
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_12
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_13
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_14
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_15
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_16
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_17
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 368
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_19
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_20
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_21
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_22
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_23
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_24
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_25
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_26
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 308
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_28
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_29
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_30
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_31
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_32
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_33
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_34
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_35
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 248
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_37
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_38
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_39
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_40
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_41
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_42
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_43
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_44
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 188
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_46
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_47
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_48
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_49
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_50
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_51
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_52
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_53
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 128
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_55
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_56
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_57
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_58
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_59
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_60
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_61
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_62
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 68
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_64
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_65
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_66
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_67
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_68
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_69
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_70
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Melee - Move_71
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 8
+        width: 89
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

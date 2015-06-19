@@ -8,10 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437546}
+  - 114: {fileID: 11404842}
   - 195: {fileID: 19584262}
   - 54: {fileID: 5496112}
   - 135: {fileID: 13514452}
-  - 114: {fileID: 11404842}
   - 114: {fileID: 11486476}
   m_Layer: 11
   m_Name: Ragnarok
@@ -447,6 +447,9 @@ MonoBehaviour:
   RoomNumber: 0
   SavePoint: {fileID: 0}
   SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
+  MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
+  LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
 --- !u!114 &11486476
 MonoBehaviour:
   m_ObjectHideFlags: 1

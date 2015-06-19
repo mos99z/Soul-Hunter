@@ -223,60 +223,6 @@ Transform:
   - {fileID: 458823596}
   m_Father: {fileID: 349376889}
   m_RootOrder: 0
---- !u!1 &14577574
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 197134, guid: 47db093d2f8a04046a4cb400f75ca552, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 14577575}
-  - 65: {fileID: 14577578}
-  - 114: {fileID: 14577577}
-  m_Layer: 0
-  m_Name: Pit 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &14577575
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 469134, guid: 47db093d2f8a04046a4cb400f75ca552, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 14577574}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.36999989, z: 0}
-  m_LocalScale: {x: .166666672, y: 1, z: .166666672}
-  m_Children: []
-  m_Father: {fileID: 1796729450}
-  m_RootOrder: 1
---- !u!114 &14577577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11414890, guid: 47db093d2f8a04046a4cb400f75ca552,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 14577574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22873d516551a6443879eb5f78d78832, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &14577578
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6512558, guid: 47db093d2f8a04046a4cb400f75ca552,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 14577574}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 5.5, y: 1, z: 5.5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &27986817
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +497,14 @@ Prefab:
       propertyPath: boundingWalls
       value: 
       objectReference: {fileID: 1876495813}
+    - target: {fileID: 11433204, guid: c7a9bba0a2a0aef469d6301c3637c868, type: 2}
+      propertyPath: RoomNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 119470, guid: c7a9bba0a2a0aef469d6301c3637c868, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7a9bba0a2a0aef469d6301c3637c868, type: 2}
   m_IsPrefabParent: 0
@@ -2673,7 +2627,16 @@ Prefab:
       propertyPath: SoulValue
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 161374, guid: 635a4431c2761244b86df8d5ce880fce, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434028, guid: 635a4431c2761244b86df8d5ce880fce, type: 2}
+      propertyPath: RoomNumber
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 635a4431c2761244b86df8d5ce880fce, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &319332086
@@ -5152,25 +5115,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!1 &486490940 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 167644, guid: c914557d17e57264eb2baa822aabfdef, type: 2}
-  m_PrefabInternal: {fileID: 1231425026}
---- !u!208 &486490941
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 486490940}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: .5, y: .5, z: .5}
-  m_MoveThreshold: .100000001
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: .5
 --- !u!1 &488616769
 GameObject:
   m_ObjectHideFlags: 0
@@ -10782,8 +10726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaaf75ca4776b3745b68bd1c3e183610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Defence: 0
-  ElementType: 0
+  Defence: .25
+  ElementType: 2
   MaxHealth: 1000
   CurrHealth: 1000
   CanTakeDamage: 1
@@ -10794,6 +10738,9 @@ MonoBehaviour:
   RoomNumber: 0
   SavePoint: {fileID: 0}
   SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
+  MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
+  LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
 --- !u!195 &1087278895
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10846,7 +10793,7 @@ MonoBehaviour:
   AttackTimer: 5
   Damage: 100
   AttackCollider: {fileID: 309978269}
-  DirectionIndicator: {fileID: 0}
+  DirectionIndicator: {fileID: 309978267}
 --- !u!54 &1087278897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11784,18 +11731,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6538958, guid: c914557d17e57264eb2baa822aabfdef, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11473730, guid: c914557d17e57264eb2baa822aabfdef, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2326882, guid: c914557d17e57264eb2baa822aabfdef, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e13adca7e2dd79a44aca27bdc5daada2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c914557d17e57264eb2baa822aabfdef, type: 2}
   m_IsPrefabParent: 0
@@ -13853,6 +13788,9 @@ MonoBehaviour:
   RoomNumber: 0
   SavePoint: {fileID: 0}
   SelectHealthBar: 2
+  SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
+  MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
+  LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
 --- !u!195 &1422330399
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13899,7 +13837,7 @@ MonoBehaviour:
   SDCooldown: 6
   SDDistance: 2
   SDChargeUp: 1
-  DirectionIndicator: {fileID: 0}
+  DirectionIndicator: {fileID: 1587701157}
 --- !u!54 &1422330401
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15696,6 +15634,30 @@ Prefab:
       propertyPath: boundingWalls
       value: 
       objectReference: {fileID: 480851661}
+    - target: {fileID: 11470186, guid: 9c96b3ed91d7d2f41a80d474eadf312d, type: 2}
+      propertyPath: SoulValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470186, guid: 9c96b3ed91d7d2f41a80d474eadf312d, type: 2}
+      propertyPath: RoomNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 148052, guid: 9c96b3ed91d7d2f41a80d474eadf312d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21217326, guid: 9c96b3ed91d7d2f41a80d474eadf312d, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21217326, guid: 9c96b3ed91d7d2f41a80d474eadf312d, type: 2}
+      propertyPath: m_Color.b
+      value: .41911763
+      objectReference: {fileID: 0}
+    - target: {fileID: 21217326, guid: 9c96b3ed91d7d2f41a80d474eadf312d, type: 2}
+      propertyPath: m_Color.g
+      value: .41911763
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c96b3ed91d7d2f41a80d474eadf312d, type: 2}
   m_IsPrefabParent: 0

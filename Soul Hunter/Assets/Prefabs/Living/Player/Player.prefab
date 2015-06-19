@@ -1784,6 +1784,12 @@ MonoBehaviour:
   Lives: 3
   SoulValue: 0
   entType: 0
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
+  MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
+  LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
 --- !u!114 &11435092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1851,6 +1857,7 @@ MonoBehaviour:
     m_Bits: 2147483648
   ScreenCamera: {fileID: 0}
   GameOver: {fileID: 0}
+  isCrippled: 0
 --- !u!114 &11467702
 MonoBehaviour:
   m_ObjectHideFlags: 1
