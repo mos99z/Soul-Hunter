@@ -7,21 +7,19 @@ public class Sand_Blast_Controller : MonoBehaviour
 	public float duration = 2.0f;		// how long for spell to last
 	public float damage = 5.0f;			// how much damage to deal
 	public float recoveryTime = 1.5f;	// how long to recover from spell
-
-	float timer = 0.0f;
+	GameObject forwardIndicator = null;
 
 	void Start () 
 	{
-		if (mouseMarker == null)
-			mouseMarker = GameBrain.Instance.MouseMarker;
-		transform.LookAt(mouseMarker.transform.position);
+		forwardIndicator = GameBrain.Instance.Player.transform.FindChild ("Direction Indicator").gameObject;
+		transform.forward = forwardIndicator.transform.forward;
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
 	}
 	
 	void Update () 
 	{
 		transform.position = GameBrain.Instance.Player.transform.position;
-		transform.LookAt(mouseMarker.transform.position);
+		transform.forward = forwardIndicator.transform.forward;
 		duration -= Time.deltaTime;
 		if (duration <= 0.0f)
 			Destroy (gameObject);
@@ -30,20 +28,13 @@ public class Sand_Blast_Controller : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Enemy")
-			other.transform.SendMessage("TakeDamage", damage);
-	}
-	
-	void OnTriggerStay(Collider other)
-	{
-		if (other.tag == "Enemy")
 		{
-			timer += Time.deltaTime;
-			if (timer >= 0.5f)
-			{
-				timer = 0.0f;
-				other.transform.SendMessage("TakeDamage", damage);
-			}
+			GameObject debuff = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().blinded);
+			debuff.transform.parent = other.transform;
+			debuff.transform.localPosition = Vector3.zero;
+//TODO: Enable Once Blinded is added			debuff.GetComponent<Blinded_Controller>().Duration = 5.0f;
+
+			other.transform.SendMessage("TakeDamage", damage);
 		}
 	}
-
 }
