@@ -3,11 +3,10 @@ using System.Collections;
 
 public class Meteor_Controller : MonoBehaviour 
 {
-	public GameObject mouseMarker;		// mouse marker from game brain
 	public float duration = 2.0f;		// how long for meteor to hit the ground
 	public float startHeight = 30.0f;	// where on the yaxis to spawn the meteor
 	public GameObject explosion;		// the explosion effect to play when colliding
-	Vector3 target;						// where the meteor will land
+	Vector3 target = Vector3.zero;						// where the meteor will land
 
 	public float damage = 25.0f;		// damage to deal on spell
 	public float recoveryCost = 3.0f;	// spell cooldown
@@ -16,22 +15,17 @@ public class Meteor_Controller : MonoBehaviour
 	public float burnDamage = 8.1f;		// burning damage per tick
 	public float burnTick = 1.0f;		// how often burning ticks
 	public float burnTime = 5.0f;		// how long burning lasts
-	public GameObject cripple;			// crippled debuff
 
 	Vector3 origPos;	// for lerp function
 
 	void Start () 
 	{
-		if (mouseMarker == null)
-			mouseMarker = GameBrain.Instance.MouseMarker;
-		Vector3 spawn = target = mouseMarker.transform.position;
+		Vector3 spawn = target = GameBrain.Instance.MouseMarker.transform.position;
 		spawn.y = startHeight;
 		transform.position = origPos = spawn;
 
 		if (burn == null)
 			burn = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
-		if (cripple == null)
-			cripple = GameBrain.Instance.GetComponent<DebuffMasterList>().crippled;
 		
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryCost);
 		StartCoroutine("MoveMeteor", duration);
@@ -75,7 +69,7 @@ public class Meteor_Controller : MonoBehaviour
 				burning.GetComponent<Burning_Controller>().Duration = burnTime;
 				burning.GetComponent<Burning_Controller>().TickCycle = burnTick;
 				
-				GameObject cripp = Instantiate(cripple);
+				GameObject cripp = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().crippled);
 				cripp.transform.parent = other.transform;
 				cripp.transform.localPosition = Vector3.zero;
 			}

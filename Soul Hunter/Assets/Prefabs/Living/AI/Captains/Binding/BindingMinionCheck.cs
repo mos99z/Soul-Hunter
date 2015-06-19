@@ -15,7 +15,6 @@ public class BindingMinionCheck : MonoBehaviour
 	void Start ()
 	{
 		BCC = (Binding_Captain_Controller)BindCapt.GetComponent("Binding_Captain_Controller");
-		player = GameBrain.Instance.Player;
 	}
 	
 	// Update is called once per frame

@@ -45,6 +45,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 		if (AttackCollider == null)
 			AttackCollider = transform.GetComponent<SphereCollider> ();
+		Fog_Event_Manager.PlayerEntered += LosePlayer;
 	}
 	
 	// Update is called once per frame
@@ -67,7 +68,8 @@ public class Melee_Minion_Controller : MonoBehaviour {
 				destination.y = 0;
 				destination += transform.position;
 			}
-			SearchForPlayer ();
+			if(GameBrain.Instance.PlayerInFog == false)
+				SearchForPlayer ();
 		}
 		
 		else if (target != null) 
@@ -190,25 +192,6 @@ public class Melee_Minion_Controller : MonoBehaviour {
 					Animate.Play ("Melee_Idle_DownRight");
 			}
 		}
-//		Vector3 Forward = currentRotationtransform.forward;
-//		Vector3 PlayerDistance = target.transform.position - transform.position;
-//		PlayerDistance.y = 0.0f;
-//		float rotation = 0.0f;
-//		float angle = Vector3.Angle(PlayerDistance, Forward);
-//
-//		// Rotation
-//		if (angle > 5.0f)
-//		{
-//			if(Vector3.Cross(PlayerDistance, Forward).y > 0)
-//				rotation = -1 * AngularAcceleration;
-//			if(Vector3.Cross(PlayerDistance, Forward).y < 0)
-//				rotation = 1 * AngularAcceleration;
-//
-//			currentRotation += rotation;
-//			currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-//			currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-//			DirectionIndicator.transform.Rotate (0, 0, currentRotation);
-//		}
 	}
 
 	void SearchForNearestNode()
@@ -249,7 +232,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 
 		if (col.tag == "Spell") 
 		{
-			if(target == null)
+			if(target == null && GameBrain.Instance.PlayerInFog == false)
 			{
 				target = player;
 				
@@ -270,10 +253,12 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	{
 		if (isSwarming)
 			GameBrain.Instance.MeleeEnemyCounter--;
+
+		Fog_Event_Manager.PlayerEntered -= LosePlayer;
 	}
 
-	void PlayerDead()
+	void LosePlayer()
 	{
-		player = null;
+		target = null;
 	}
 }

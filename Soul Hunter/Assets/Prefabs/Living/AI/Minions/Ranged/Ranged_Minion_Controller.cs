@@ -24,17 +24,18 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	float currentAttackTimer = 0.0f;
 	public bool isFrozen = false;		// used for frozen debuff
 	public GameObject DirectionIndicator = null;
-	
-	
+
 	// Use this for initialization
 	void Start () 
 	{
+		Fog_Event_Manager.PlayerEntered += LosePlayer;
+		Fog_Event_Manager.PlayerLeft += FindPlayer;
 		navigation = GetComponent<NavMeshAgent> ();
 		navigation.updateRotation = false;
 		player = GameBrain.Instance.Player;
 		if (GameBrain.Instance.PlayerInFog == true)
 		{
-
+			LosePlayer();
 		}
 		else
 			target = player;
@@ -162,33 +163,6 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 		if (movementDirection.magnitude >= 1.0f) {
 			DirectionIndicator.transform.forward = navigation.velocity.normalized;
 		}
-		//Vector3 Forward = transform.forward;
-		//Vector3 PlayerDistance = target.transform.position - transform.position;
-		//PlayerDistance.y = 0.0f;
-		//float rotation = 0.0f;
-		//float angle = Vector3.Angle(PlayerDistance, Forward);
-		//
-		//// Rotation
-		//if (angle > 5.0f)
-		//{
-		//	if (Vector3.Cross (PlayerDistance, Forward).y > 0)
-		//		rotation = -1 * AngularAcceleration;
-		//	if (Vector3.Cross (PlayerDistance, Forward).y < 0)
-		//		rotation = 1 * AngularAcceleration;
-		//	
-		//	currentRotation += rotation;
-		//	currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-		//	currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-		//	transform.Rotate (0, currentRotation, 0);
-		//
-		//	return false;
-		//} 
-		//
-		//else
-		//{
-		//	gameObject.transform.LookAt(target.transform.position);
-		//	return true;
-		//}
 	}
 
 	// This function will search for the nearest safe zone. When found, it will
@@ -245,8 +219,22 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 		destination = randomDirection.GetPoint(currentDistance);
 	}
 
-	void PlayerDead()
+	void LosePlayer()
 	{
-		target = null;
+		GameObject fakePlayer = player;
+		fakePlayer.transform.position += Random.insideUnitSphere * 3.5f;
+		fakePlayer.transform.position = new Vector3(fakePlayer.transform.position.x,0,fakePlayer.transform.position.z);
+		target = fakePlayer;
+	}
+
+	void FindPlayer()
+	{
+		target = player;
+	}
+
+	void OnDestroy()
+	{
+		Fog_Event_Manager.PlayerEntered -= LosePlayer;
+		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 	}
 }

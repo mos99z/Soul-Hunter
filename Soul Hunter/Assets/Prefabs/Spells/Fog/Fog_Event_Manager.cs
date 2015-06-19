@@ -7,8 +7,8 @@ public class Fog_Event_Manager : MonoBehaviour
 	public delegate void FogEvent();
 	public static event FogEvent PlayerEntered;
 	public static event FogEvent PlayerLeft;
-
-	void  PlayerEnteredFog()
+	
+	void PlayerEnteredFog()
 	{
 		if(PlayerEntered != null)
 			PlayerEntered();

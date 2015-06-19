@@ -11,7 +11,7 @@ public class Moving_Wall_Controller : MonoBehaviour
 	public LayerMask wallLayer;		// only care about hitting walls
 
 	float time;						// save the waitTime
-	float playerWidth;				// keep track of the width of player
+//	float playerWidth;				// keep track of the width of player
 	Vector3 origPosition;			// keep track of where to go back to
 	bool isMoving = false;			// know if the wall is moving or not
 	bool atNew = false;				// know which spot the wall is at
@@ -21,7 +21,7 @@ public class Moving_Wall_Controller : MonoBehaviour
 	{
 		origPosition = transform.position;
 		time = waitTime;
-		playerWidth = player.GetComponent<CapsuleCollider>().radius * 2.0f;
+//		playerWidth = player.GetComponent<CapsuleCollider>().radius * 2.0f;
 		if (player == null)
 			Debug.Log ("Player MUST be set! Collisions will not kill player otherwise");
 	}

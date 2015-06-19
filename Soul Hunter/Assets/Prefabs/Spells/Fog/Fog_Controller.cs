@@ -24,8 +24,11 @@ public class Fog_Controller : MonoBehaviour
 	void Update()
 	{
 		duration -= Time.deltaTime;
-		if (duration <= 0.0f)
+		if (duration <= 0.0f) 
+		{
 			Destroy (gameObject);
+			GameBrain.Instance.PlayerInFog = false;
+		}
 	}
 
 	void OnTriggerEnter(Collider col)
@@ -33,12 +36,20 @@ public class Fog_Controller : MonoBehaviour
 		if (col.tag == "Player") 
 		{
 			GameBrain.Instance.PlayerInFog = true;
-			GameBrain.Instance.SendMessage("");
+			GameBrain.Instance.SendMessage("PlayerEnteredFog");
 		}
 		if (col.tag == "Enemy")
 		{
+			if(col.name.Contains("Juggernaut"))
+			{
+				if (col.gameObject.GetComponent<Juggernaut_Captain_Controller>().isCharging == true)
+				{
+					return;
+				}
+			}
 			// TODO: apply blind debuff
 			GameObject blind = Instantiate (Blinded);
+			blind.GetComponent<Blinded_Controller>().Duration = duration;
 			blind.transform.parent = col.transform;
 			blind.transform.localPosition = new Vector3 (0, -col.transform.position.y, 0);
 		}
@@ -49,12 +60,12 @@ public class Fog_Controller : MonoBehaviour
 		if (col.tag == "Player") 
 		{
 			GameBrain.Instance.PlayerInFog = false;
-			GameBrain.Instance.SendMessage("");
+			GameBrain.Instance.SendMessage("PlayerLeftFog");
 		}
 
 		if (col.tag == "Enemy") 
 		{
-			Destroy(col.transform.FindChild("Blinded(Clone)"));
+			Destroy(col.transform.FindChild("Blinded(Clone)").gameObject);
 		}
 	}
 }

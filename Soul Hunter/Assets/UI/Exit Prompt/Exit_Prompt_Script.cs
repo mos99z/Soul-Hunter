@@ -40,6 +40,7 @@ public class Exit_Prompt_Script : MonoBehaviour {
 		ao.allowSceneActivation = false;
 		GameBrain.Instance.SendMessage ("ChangeMusic", zero);
 		GameBrain.Instance.Player.SetActive (false);
+		GameBrain.Instance.CurrentLevel = -1;
 		MessagePrompt.SetActive (false);
 		PauseMenu.SetActive (false);
 		Time.timeScale = 1.0f;

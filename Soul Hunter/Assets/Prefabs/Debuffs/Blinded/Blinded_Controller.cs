@@ -8,10 +8,11 @@ public class Blinded_Controller : MonoBehaviour {
 	MonoBehaviour[] Scripts;
 	NavMeshAgent navigation;
 	Vector3 destination;
+	public float Duration = 0.0f;
 	// Use this for initialization
 	void Start ()
 	{
-	
+		Scripts = transform.parent.GetComponents<MonoBehaviour>();
 	}
 	
 	// Update is called once per frame
@@ -23,7 +24,7 @@ public class Blinded_Controller : MonoBehaviour {
 				return;
 			}
 
-			Scripts = transform.parent.GetComponents<MonoBehaviour>();
+			//Scripts = transform.parent.GetComponents<MonoBehaviour>();
 			for (int i = 0; i < Scripts.Length; i++)
 			{
 				Scripts[i].enabled = false;
@@ -37,7 +38,8 @@ public class Blinded_Controller : MonoBehaviour {
 
 			checkonce = false;
 		}
-		
+
+		Duration -= Time.deltaTime;
 		navigation.SetDestination (destination);
 		
 		
@@ -48,6 +50,8 @@ public class Blinded_Controller : MonoBehaviour {
 			destination += transform.position;
 		}
 
+		if (Duration <= 0.0f)
+			Destroy (gameObject);
 	}
 
 	void OnDestroy()

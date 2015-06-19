@@ -4,7 +4,8 @@ using System.Collections;
 public class Binding_Captain_Controller : MonoBehaviour
 {
 	//Helper Variables
-	public GameObject player;
+	public GameObject target;
+	GameObject player;
 	private NavMeshAgent navigation;
 	private Player_Caster_Controller PCC;
 	private Player_Movement_Controller PMC;
@@ -39,7 +40,9 @@ public class Binding_Captain_Controller : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		player = GameBrain.Instance.Player;
+		Fog_Event_Manager.PlayerEntered += LosePlayer;
+		Fog_Event_Manager.PlayerLeft += FindPlayer;
+		target = player = GameBrain.Instance.Player;
 		navigation = GetComponent<NavMeshAgent>();
 		navigation.updateRotation = false;
 		isSurrounded = false;
@@ -133,7 +136,7 @@ public class Binding_Captain_Controller : MonoBehaviour
 			navigation.SetDestination (player.transform.position);
 		}
 		DirectionIndicator.transform.LookAt(player.transform.position, new Vector3(0,1,0));
-		Vector3 movementDirection = DirectionIndicator.transform.forward;
+//		Vector3 movementDirection = DirectionIndicator.transform.forward;
 	}
 
 	private void OnTriggerEnter(Collider col)
@@ -146,5 +149,24 @@ public class Binding_Captain_Controller : MonoBehaviour
 				meleeCollider.enabled = false;
 			}
 		}
+	}
+
+	void LosePlayer()
+	{
+		GameObject fakePlayer = player;
+		fakePlayer.transform.position += Random.insideUnitSphere * 3.5f;
+		fakePlayer.transform.position = new Vector3(fakePlayer.transform.position.x,0,fakePlayer.transform.position.z);
+		target = fakePlayer;
+	}
+	
+	void FindPlayer()
+	{
+		target = player;
+	}
+
+	void OnDestroy()
+	{
+		Fog_Event_Manager.PlayerEntered -= LosePlayer;
+		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 	}
 }
