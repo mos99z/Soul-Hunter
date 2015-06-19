@@ -47,11 +47,24 @@ public class Gravity_Well_Controller : MonoBehaviour
 	{
 		if (other.tag == "Enemy")
 		{
+			if (other.GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Minion)
+				other.GetComponent<NavMeshAgent>().velocity = Vector3.zero;
+			else if (other.GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Captain)
+				other.GetComponent<NavMeshAgent>().velocity *= 0.33f;
+			else if (other.GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Boss)
+				other.GetComponent<NavMeshAgent>().velocity *= 0.66f;
+		}
+	}
+
+	void OnTriggerStay(Collider other)
+	{
+		if (other.tag == "Enemy")
+		{
 			GameObject debuff = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().slowed);
 			debuff.transform.parent = other.transform;
 			debuff.transform.localPosition = Vector3.zero;
-			debuff.GetComponent<Slowed_Controller>().duration = duration + 0.8f;
-
+			debuff.GetComponent<Slowed_Controller>().duration = 0.25f;
+			
 			switch (other.GetComponent<Living_Obj>().entType)
 			{
 			case Living_Obj.EntityType.Minion:
@@ -60,17 +73,13 @@ public class Gravity_Well_Controller : MonoBehaviour
 			case Living_Obj.EntityType.Captain:
 				debuff.GetComponent<Slowed_Controller>().slowSpeedModifier = 0.33f;
 				break;
-			}
-		}
-	}
+			case Living_Obj.EntityType.Boss:
+				debuff.GetComponent<Slowed_Controller>().slowSpeedModifier = 0.66f;
+				break;
 
-	void OnTriggerExit(Collider other)
-	{
-		if (other.tag == "Enemy")
-		{
-			if (other.transform.FindChild("Slowed(Clone)"))
-			{
-				Destroy(other.transform.FindChild("Slowed(Clone)").gameObject);
+			default:
+				Destroy(debuff);
+				break;
 			}
 		}
 	}

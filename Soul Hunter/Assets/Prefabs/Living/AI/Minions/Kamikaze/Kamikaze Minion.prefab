@@ -72,8 +72,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 423108}
-  - 195: {fileID: 19548272}
   - 114: {fileID: 11405262}
+  - 195: {fileID: 19548272}
   - 114: {fileID: 11445974}
   - 54: {fileID: 5417054}
   - 136: {fileID: 13671802}
@@ -240,6 +240,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 1
   entType: 1
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11445974
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -75,10 +75,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470856}
+  - 114: {fileID: 11470186}
   - 195: {fileID: 19503690}
   - 54: {fileID: 5425890}
   - 135: {fileID: 13551218}
-  - 114: {fileID: 11470186}
   - 114: {fileID: 11411686}
   m_Layer: 11
   m_Name: Binding Captain
@@ -232,7 +232,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.00999999, y: 0, z: 146.270004}
+  m_LocalPosition: {x: -.389999986, y: 0, z: -1.26998901}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438870}
@@ -283,7 +283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a044a36b445c545aae3167a5178374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomNumber: 5
   player: {fileID: 0}
   isSurrounded: 0
   boundingWalls: {fileID: 0}
@@ -314,7 +313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8c290f6410eca41935e4fd4baaaf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   BindCapt: {fileID: 148052}
   numMinions: 0
   numMinionsAllowed: 5
@@ -336,8 +334,11 @@ MonoBehaviour:
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
-  SoulValue: 5
+  SoulValue: 2
   entType: 2
+  RoomNumber: 5
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!135 &13513754
 SphereCollider:
   m_ObjectHideFlags: 1

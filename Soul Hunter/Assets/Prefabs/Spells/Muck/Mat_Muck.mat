@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BubbleParticleMaterial
-  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Name: Mat_Muck
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _PARALLAXMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -18,9 +18,9 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 5896466cb768a8e4f8b09e9a1feb96f2, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
+          m_Texture: {fileID: 2800000, guid: 47232ba223e2b0a4a85c57b93fb586be, type: 3}
+          m_Scale: {x: .100000001, y: .100000001}
+          m_Offset: {x: .100000001, y: .200000003}
       data:
         first:
           name: _BumpMap
@@ -39,7 +39,7 @@ Material:
         first:
           name: _ParallaxMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 17da6d53ec93a0444bd0f751b1d02477, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -54,8 +54,8 @@ Material:
           name: _EmissionMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
+          m_Scale: {x: .100000001, y: .100000001}
+          m_Offset: {x: .100000001, y: .200000003}
       data:
         first:
           name: _DetailMask
@@ -84,6 +84,10 @@ Material:
         second: .5
       data:
         first:
+          name: _Shininess
+        second: .078125
+      data:
+        first:
           name: _SrcBlend
         second: 1
       data:
@@ -92,12 +96,8 @@ Material:
         second: 0
       data:
         first:
-          name: _InvFade
-        second: 3
-      data:
-        first:
           name: _Parallax
-        second: .0199999996
+        second: 0
       data:
         first:
           name: _ZWrite
@@ -105,7 +105,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .5
+        second: 0
       data:
         first:
           name: _BumpScale
@@ -133,20 +133,24 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0
+        second: 1
+      data:
+        first:
+          name: _EdgeLength
+        second: 50
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _TintColor
-        second: {r: .130730957, g: .213700578, b: .45588237, a: .501960814}
+          name: _SpecColor
+        second: {r: .5, g: .5, b: .5, a: 1}
       data:
         first:
           name: _EmissionColorUI

@@ -6,12 +6,8 @@ public class Muck_Controller : MonoBehaviour
 	public GameObject mouseMarker;		// mouse marker from gameBrain
 	public float spawnHeight = 0.05f;	// offset for y-axis
 	public float duration = 4.0f;		// how long for spell to last
-	public float rotateSpeed = 135.0f;	// how much spin to give the spell
 	public float recoveryCost = 2.0f;	// how long for spell to cooldown
 	public float scaleShrink = 0.5f;	// how much to shrink spell
-	
-	public GameObject slow;						// slowed debuff
-	public Element weakness = Element.Water;	// element to assign to affected enemies
 
 	Vector3 origScale;		// original scale
 	Vector3 shrinkScale;	// shrink scale
@@ -23,13 +19,9 @@ public class Muck_Controller : MonoBehaviour
 		Vector3 spawn = mouseMarker.transform.position;
 		spawn.y = spawnHeight;
 		transform.position = spawn;
-		transform.Rotate(Vector3.right, 270.0f);
 
 		origScale = transform.localScale;
 		shrinkScale = new Vector3(origScale.x * scaleShrink, origScale.y * scaleShrink, origScale.z * scaleShrink);
-
-		if (slow == null)
-			slow = GameBrain.Instance.GetComponent<DebuffMasterList>().slowed;
 
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryCost);
 		StartCoroutine("ShrinkOverTime", duration/2.0f);
@@ -37,18 +29,21 @@ public class Muck_Controller : MonoBehaviour
 
 	void Update()
 	{
-		transform.RotateAround (transform.position, Vector3.up, rotateSpeed * Time.deltaTime);
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Enemy")
 		{
-			GameObject debuff = Instantiate(slow);
-			debuff.transform.parent = other.transform;
-			debuff.transform.localPosition = Vector3.zero;
-			if (other.GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Minion)
-				other.GetComponent<Living_Obj>().ElementType = weakness;
+			GameObject slowDebuff = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().slowed);
+			slowDebuff.transform.parent = other.transform;
+			slowDebuff.transform.localPosition = Vector3.zero;
+			slowDebuff.GetComponent<Slowed_Controller>().duration = 15.0f;
+
+			GameObject wetDebuff = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().wet);
+			wetDebuff.transform.parent = other.transform;
+			wetDebuff.transform.localPosition = Vector3.zero;
+			wetDebuff.GetComponent<Wet_Controller>().Duration = 30.0f;
 		}
 	}
 	

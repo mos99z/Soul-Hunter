@@ -8,10 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 430964}
+  - 114: {fileID: 11415216}
   - 195: {fileID: 19561548}
   - 136: {fileID: 13661080}
   - 54: {fileID: 5467190}
-  - 114: {fileID: 11415216}
   - 114: {fileID: 11425858}
   - 135: {fileID: 13571626}
   m_Layer: 0
@@ -172,6 +172,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 1
   entType: 1
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11425858
 MonoBehaviour:
   m_ObjectHideFlags: 1

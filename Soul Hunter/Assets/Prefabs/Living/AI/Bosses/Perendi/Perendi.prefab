@@ -89,11 +89,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 469638}
+  - 114: {fileID: 11469626}
   - 54: {fileID: 5476946}
   - 114: {fileID: 11497782}
   - 195: {fileID: 19590070}
   - 135: {fileID: 13526914}
-  - 114: {fileID: 11469626}
   - 136: {fileID: 13685170}
   m_Layer: 0
   m_Name: Perendi
@@ -334,6 +334,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 0
   entType: 1
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11491636
 MonoBehaviour:
   m_ObjectHideFlags: 1

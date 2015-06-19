@@ -103,10 +103,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 428252}
+  - 114: {fileID: 11489368}
   - 195: {fileID: 19589682}
   - 54: {fileID: 5458096}
   - 114: {fileID: 11457790}
-  - 114: {fileID: 11489368}
   - 135: {fileID: 13545862}
   - 135: {fileID: 13541486}
   m_Layer: 0
@@ -267,6 +267,7 @@ MonoBehaviour:
   GroundPoundDamage: 100
   ChargeDamage: 100
   Carrot: {fileID: 168064}
+  boundingWalls: {fileID: 0}
   AttackCooldown: 10
   StunTimer: 2
   GroundPoundTimer: 1
@@ -293,6 +294,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 5
   entType: 3
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!135 &13514316
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -2786,10 +2786,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 488632}
+  - 114: {fileID: 11403898}
   - 54: {fileID: 5421332}
   - 114: {fileID: 11400470}
   - 195: {fileID: 19534934}
-  - 114: {fileID: 11403898}
   - 136: {fileID: 13646570}
   m_Layer: 0
   m_Name: Mistral
@@ -3030,10 +3030,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 448724}
+  - 114: {fileID: 11450702}
   - 54: {fileID: 5436150}
   - 114: {fileID: 11446792}
   - 195: {fileID: 19505896}
-  - 114: {fileID: 11450702}
   - 136: {fileID: 13691592}
   m_Layer: 0
   m_Name: Perendi
@@ -3041,7 +3041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &177664
 GameObject:
   m_ObjectHideFlags: 1
@@ -4292,7 +4292,7 @@ Transform:
   - {fileID: 469700}
   - {fileID: 469752}
   m_Father: {fileID: 430510}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &416072
 Transform:
   m_ObjectHideFlags: 1
@@ -4634,11 +4634,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453246}
-  - {fileID: 448724}
   - {fileID: 488632}
   - {fileID: 459492}
   - {fileID: 415362}
   - {fileID: 433810}
+  - {fileID: 448724}
   m_Father: {fileID: 420858}
   m_RootOrder: 12
 --- !u!4 &431260
@@ -4745,7 +4745,7 @@ Transform:
   m_LocalScale: {x: 1.66550553, y: 1, z: .0598366708}
   m_Children: []
   m_Father: {fileID: 430510}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &434204
 Transform:
   m_ObjectHideFlags: 1
@@ -5146,14 +5146,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.20186234, y: 0, z: 267.091492}
+  m_LocalPosition: {x: 8.30186272, y: 0, z: 8.64149475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427216}
   - {fileID: 488430}
   - {fileID: 456068}
   m_Father: {fileID: 430510}
-  m_RootOrder: 1
+  m_RootOrder: 5
 --- !u!4 &448864
 Transform:
   m_ObjectHideFlags: 1
@@ -5487,7 +5487,7 @@ Transform:
   - {fileID: 416072}
   - {fileID: 429334}
   m_Father: {fileID: 430510}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &460872
 Transform:
   m_ObjectHideFlags: 1
@@ -6505,7 +6505,7 @@ Transform:
   - {fileID: 448638}
   - {fileID: 496734}
   m_Father: {fileID: 430510}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &489130
 Transform:
   m_ObjectHideFlags: 1
@@ -11428,6 +11428,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 0
   entType: 3
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11407550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11448,6 +11451,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 5
   entType: 2
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11408126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11574,7 +11580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd513cd5ab3dea49b44e78066d7a26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomNumber: 5
   MinRange: 5
   MaxRange: 18
   Mask:
@@ -11592,6 +11597,7 @@ MonoBehaviour:
   missileDamage: 0
   spellDamage: 0
   aoeDamage: 0
+  DirectionIndicator: {fileID: 0}
 --- !u!114 &11418694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11788,7 +11794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd513cd5ab3dea49b44e78066d7a26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomNumber: 2
   MinRange: 5
   MaxRange: 18
   Mask:
@@ -11806,6 +11811,7 @@ MonoBehaviour:
   missileDamage: 0
   spellDamage: 0
   aoeDamage: 0
+  DirectionIndicator: {fileID: 0}
 --- !u!114 &11445716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11865,6 +11871,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 5
   entType: 2
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11450702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11884,7 +11893,10 @@ MonoBehaviour:
   CanDie: 1
   Lives: 1
   SoulValue: 0
-  entType: 1
+  entType: 3
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 2
 --- !u!114 &11450710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11921,6 +11933,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 1
   entType: 1
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11451544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12015,7 +12030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd513cd5ab3dea49b44e78066d7a26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomNumber: 3
   MinRange: 5
   MaxRange: 18
   Mask:
@@ -12033,6 +12047,7 @@ MonoBehaviour:
   missileDamage: 0
   spellDamage: 0
   aoeDamage: 0
+  DirectionIndicator: {fileID: 0}
 --- !u!114 &11461816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12216,6 +12231,9 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 5
   entType: 2
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
 --- !u!114 &11482120
 MonoBehaviour:
   m_ObjectHideFlags: 1
