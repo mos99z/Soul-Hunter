@@ -344,9 +344,8 @@ public class Living_Obj : MonoBehaviour
 	{
 		IsAlive = false;
 		if (entType != EntityType.Player)
-			GameBrain.Instance.SendMessage ("AddKill");
-		if (transform.GetComponentInChildren<Animation> () != null)
-			transform.GetComponentInChildren<Animation> ().Play ("Death");
+			GameBrain.Instance.SendMessage("AddKill");
+
 	}
 
 	void DropSoul()
@@ -379,6 +378,7 @@ public class Living_Obj : MonoBehaviour
 //	TODO: Player "Death"
 			GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
 			GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
+			GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar");
 
 			GameBrain.Instance.SendMessage("SetMaxHealth", MaxHealth);
 			GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
