@@ -8,6 +8,7 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	public GameObject target;
 	bool isCountingDown = false;
 
+	public GameObject player;
 	public float CountdownTimer = 1.5f;
 	public float KamikazeDistance = 2.0f;
 	public float ExplosionDamage = 100.0f;
@@ -20,12 +21,15 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		Fog_Event_Manager.PlayerEntered += LosePlayer;
+		Fog_Event_Manager.PlayerLeft += FindPlayer;
+		player = GameBrain.Instance.Player;
 		if (Animate == null)
 			Animate = transform.GetComponentInChildren<Animator> ();
 		if (DirectionIndicator == null)
 			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 		navigation = GetComponent<NavMeshAgent>();
-		target = GameObject.FindGameObjectWithTag("Player");
+		target = player;
 		navigation.updateRotation = false;
 	}
 	
@@ -120,8 +124,22 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 			Explode ();
 	}
 
-	void PlayerDead()
+	void LosePlayer()
 	{
-		target = null;
+		GameObject fakePlayer = player;
+		fakePlayer.transform.position += Random.insideUnitSphere * 0.5f;
+		fakePlayer.transform.position = new Vector3(fakePlayer.transform.position.x,0,fakePlayer.transform.position.z);
+		target = fakePlayer;
+	}
+	
+	void FindPlayer()
+	{
+		target = player;
+	}
+
+	void OnDestroy()
+	{
+		Fog_Event_Manager.PlayerEntered -= LosePlayer;
+		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 	}
 }

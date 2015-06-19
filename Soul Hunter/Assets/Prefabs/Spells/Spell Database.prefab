@@ -53734,7 +53734,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -53749,7 +53749,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .100000016
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -53791,12 +53791,12 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: 1
+    radius: 7
     angle: 0
     length: .319999993
     boxX: 1
@@ -82039,7 +82039,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MaxParticleSize: .5
   m_CameraVelocityScale: 0

@@ -22,20 +22,24 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	float collisionTimer = 0.0f;
 	bool hasHitPlayer = false;
 	bool hasTurnedOffAttackArea = false;
-	bool isCharging = false;
+	public bool isCharging = false;
 	bool hasChargedUp = false;
 	bool hasCollided = false;
 	public Animator Animate = null;
 	public GameObject DirectionIndicator = null;
+	GameObject player;
 	
 	// Use this for initialization
 	void Start () 
 	{
+		Fog_Event_Manager.PlayerEntered += LosePlayer;
+		Fog_Event_Manager.PlayerLeft += FindPlayer;
 		if (Animate == null)
 			Animate = transform.GetComponentInChildren<Animator> ();
 		if (DirectionIndicator == null)
 			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
-		target = GameObject.FindGameObjectWithTag ("Player");
+		player = GameBrain.Instance.Player;
+		target = player;
 		
 		navigation = GetComponent<NavMeshAgent> ();
 		currentChargeCooldown = ChargeCooldown;
@@ -47,6 +51,8 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	void OnDestroy()
 	{
 		boundingWalls.SendMessage("DestroyWalls");
+		Fog_Event_Manager.PlayerEntered -= LosePlayer;
+		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 	}
 	// Update is called once per frame
 	void Update () 
@@ -169,34 +175,6 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 			//		Animate.Play ("Melee_Idle_DownRight");
 			//}
 		}
-
-		//Vector3 Forward = transform.forward;
-		//Vector3 PlayerDistance = target.transform.position - transform.position;
-		//PlayerDistance.y = 0.0f;
-		//float rotation = 0.0f;
-		//float angle = Vector3.Angle(PlayerDistance, Forward);
-		//
-		//// Rotation
-		//if (angle > 5.0f)
-		//{
-		//	if (Vector3.Cross (PlayerDistance, Forward).y > 0)
-		//		rotation = -1 * AngularAcceleration;
-		//	if (Vector3.Cross (PlayerDistance, Forward).y < 0)
-		//		rotation = 1 * AngularAcceleration;
-		//	
-		//	currentRotation += rotation;
-		//	currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-		//	currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-		//	transform.Rotate (0, currentRotation, 0);
-		//	
-		//	return false;
-		//} 
-		//
-		//else
-		//{
-		//	gameObject.transform.LookAt(target.transform.position);
-		//	return true;
-		//}
 	}
 
 	void OnTriggerEnter(Collider col)
@@ -218,13 +196,16 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		}
 	}
 
-	//void OnCollisionEnter(Collision col)
-	//{
-	//	if ((col.gameObject.tag == "Wall" || col.gameObject.tag == "Player") && isCharging == true) 
-	//	{
-	//		collisionTimer = 1.0f;
-	//		hasCollided = true;
-	//		transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
-	//	}
-	//}
+	void LosePlayer()
+	{
+		GameObject fakePlayer = player;
+		fakePlayer.transform.position += Random.insideUnitSphere * 3.5f;
+		fakePlayer.transform.position = new Vector3(fakePlayer.transform.position.x,0,fakePlayer.transform.position.z);
+		target = fakePlayer;
+	}
+	
+	void FindPlayer()
+	{
+		target = player;
+	}
 }

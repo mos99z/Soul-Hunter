@@ -205,6 +205,7 @@ public class Perendi_Controller : MonoBehaviour {
 	{
 		mistralAlive = false;
 		navigation.speed *= 1.5f;
+		navigation.angularSpeed *= 1.5f;
 		AttackMinimum *= 0.5f;
 		AttackMaximum *= 0.5f;
 		gameObject.GetComponent<Living_Obj>().SoulValue = SoulType.Red;
