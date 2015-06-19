@@ -6,86 +6,39 @@ public class Explosion_Controller : MonoBehaviour
 	public float damage = 25.1f;		// how much damage the spell does
 	public float duration = 1.0f;		// how long in seconds for the spell to last
 	public float recoveryTime = 2.0f;	// how long in seconds for spell to cooldown
-	public GameObject mouseMarker;		// mouse marker from gamebrain
-	public float spawnHeight = 1.0f;	// modify the height of the object
-	public ForceMode forceMode;			// used for which kind of force to use
-	public float knockback = 300.0f;	// how much force to apply on knockback
-	public float radius = 2.0f;			// how far to apply explosion force
+	public float knockback = 1000.0f;	// how much force to apply on knockback
 
-	public GameObject burning;			// debuff to apply
+	public float burnDamage = 10.1f;	// how much damage to deal each tick
 	public float burnChance = 0.10f;	// chance that debuff will apply
 	public float burnDuration = 5.0f;	// how long burn lasts
 	public float burnTick = 1.0f;		// how often to deal burn
-	public float burnDamage = 10.1f;	// how much damage to deal each tick
 
-	public GameObject cripple;			// debuff to apply
 	public float crippleChance = 0.15f;	// chance to apply debuff
+	public float crippleDuration = 5.0f; // Duration of Cripple
+
+	public GameObject SpellEffect = null;
+	public LayerMask LOSBlockers;
 
 	void Start () 
 	{
-		if (mouseMarker == null)
-			mouseMarker = GameBrain.Instance.MouseMarker;
-		Vector3 spawn = mouseMarker.transform.position;
-		spawn.y = spawnHeight;
-		transform.position = spawn;
+		RaycastHit colliderCheck = new RaycastHit();
+		Vector3 distance = (GameBrain.Instance.MouseMarker.transform.position - GameBrain.Instance.Player.transform.position);
+		distance.y = 0.0f;
+		Physics.Raycast (GameBrain.Instance.Player.transform.position + new Vector3 (0, 1.0f, 0), 
+		                 distance.normalized,
+		                 out colliderCheck,
+		                 distance.magnitude + transform.GetComponent<SphereCollider>().radius * transform.localScale.x,
+		                 LOSBlockers);
+		Vector3 startpos = Vector3.zero;
+		if (colliderCheck.collider != null)
+			startpos = colliderCheck.point - distance.normalized * transform.GetComponent<SphereCollider>().radius * transform.localScale.x;
+		else
+			startpos = GameBrain.Instance.MouseMarker.transform.position;
+		startpos.y = 1.25f;
 
-		foreach (Collider other in Physics.OverlapSphere(transform.position, radius))
-		{
-			if (other.GetComponent<Rigidbody>() != null && other.tag == "Enemy")	// if there is a rigidbody in range, apply some force and debuffs
-			{
-
-				other.GetComponent<Rigidbody>().AddExplosionForce(knockback, transform.position, radius, 0.0f, forceMode);
-				other.transform.SendMessage("TakeDamage", damage);
-
-				float chance = Random.Range(0.0f,1.0f);
-				if (chance <= burnChance)
-				{
-					GameObject burn = Instantiate(burning);
-					burn.transform.parent = other.transform;
-					burn.transform.localPosition = Vector3.zero;
-					burn.GetComponent<Burning_Controller>().Damage = burnDamage;
-					burn.GetComponent<Burning_Controller>().Duration = burnDuration;
-					burn.GetComponent<Burning_Controller>().TickCycle = burnTick;
-				}
-				chance = Random.Range(0.0f,1.0f);
-				if (chance <= crippleChance)
-				{
-					// TODO: make frozen debuff kill object
-//					int children = other.transform.childCount;
-//					for (int child = 0; child < children; child++)
-//					{
-//					if (transform.FindChild("Frozen(Clone)"))
-//						{
-//							other.GetComponent<Living_Obj>().CurrHealth = 0;
-//							other.SendMessage("PulseCheck");
-//							Debug.Log("cripple + frozen killed " + other.name);
-//							return;
-//						}
-//					}
-
-					GameObject cripp = Instantiate(cripple);
-					cripp.transform.parent = other.transform;
-					cripp.transform.localPosition = Vector3.zero;
-				}
-			}
-		}
-
-		if (burning == null)
-			burning = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
-		if (cripple == null)
-			cripple = GameBrain.Instance.GetComponent<DebuffMasterList>().crippled;
-
+		transform.position = startpos;
+		SpellEffect.GetComponent<ParticleSystem> ().Play ();
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
-
-		if (GameBrain.Instance.FireLevel > 0)
-		{
-			switch (GameBrain.Instance.FireLevel)
-			{
-			case 1: damage = damage*2.0f - 0.1f; break;
-			case 2: damage = damage*3.0f - 0.2f; break;
-			case 3: damage = damage*4.0f - 0.3f; break;
-			}
-		}
 	}
 	
 	void Update () 
@@ -97,38 +50,37 @@ public class Explosion_Controller : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Enemy")
+		if (other.tag == "Enemy")	// if there is a rigidbody in range, apply some force and debuffs
 		{
-			other.transform.SendMessage("TakeDamage", damage);
+			other.GetComponent<Rigidbody>().AddExplosionForce(knockback, transform.position, transform.GetComponent<SphereCollider>().radius);
 			
-			float chance = Random.Range(0.0f,1.0f);
+			float chance = Random.Range(0.0f, 1.0f);
 			if (chance <= burnChance)
 			{
-				GameObject burn = Instantiate(burning);
+				GameObject burn = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().burning);
 				burn.transform.parent = other.transform;
 				burn.transform.localPosition = Vector3.zero;
 				burn.GetComponent<Burning_Controller>().Damage = burnDamage;
 				burn.GetComponent<Burning_Controller>().Duration = burnDuration;
 				burn.GetComponent<Burning_Controller>().TickCycle = burnTick;
 			}
-			chance = Random.Range(0.0f,1.0f);
+
+			chance = Random.Range(0.0f, 1.0f);
 			if (chance <= crippleChance)
 			{
-//					int children = other.transform.childCount;
-//					for (int child = 0; child < children; child++)
-//					{
-//					if (transform.FindChild("Frozen(Clone)"))
-//						{
-//							other.GetComponent<Living_Obj>().CurrHealth = 0;
-//							other.SendMessage("PulseCheck");
-//							Debug.Log("cripple + frozen killed " + other.name);
-//							return;
-//						}
-//					}
-				GameObject cripp = Instantiate(cripple);
+				if (other.transform.FindChild("Frozen(Clone)"))
+				{
+					other.transform.GetComponent<Living_Obj>().SendMessage("Die");
+					return;
+				}
+				
+				GameObject cripp = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().crippled);
 				cripp.transform.parent = other.transform;
 				cripp.transform.localPosition = Vector3.zero;
+				cripp.transform.GetComponent<Crippled_Controller>().duration = crippleDuration;
 			}
+
+			other.transform.SendMessage("TakeDamage", damage);
 		}
 	}
 }

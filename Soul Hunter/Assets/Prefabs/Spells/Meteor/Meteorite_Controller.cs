@@ -11,6 +11,7 @@ public class Meteorite_Controller : MonoBehaviour {
 	public GameObject MainSpell = null;
 	public SphereCollider MainCollider = null;
 	public GameObject ImpactExplosion = null;
+
 	public LayerMask LOSBlockers;
 
 	private bool UpdatePos = true;
