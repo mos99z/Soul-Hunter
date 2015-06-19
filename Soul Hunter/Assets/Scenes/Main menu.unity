@@ -34387,6 +34387,9 @@ MonoBehaviour:
   RoomNumber: 0
   SavePoint: {fileID: 0}
   SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 0}
+  MedBloodSplat: {fileID: 0}
+  LargeBloodSplat: {fileID: 0}
 --- !u!54 &2031991671
 Rigidbody:
   m_ObjectHideFlags: 0
