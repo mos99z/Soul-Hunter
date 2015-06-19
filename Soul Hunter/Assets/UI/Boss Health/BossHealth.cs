@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
-	// captain's health stats
+	// Boss's health stats
 	public int curBossHealth;
 	public int maxBossHealth;
 	
