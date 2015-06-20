@@ -25,9 +25,19 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	public bool isFrozen = false;		// used for frozen debuff
 	public GameObject DirectionIndicator = null;
 
+	//animation stuff
+	public Animator Animate = null;
+	private bool underMelee = false;
+	private float attackTicker = 0;
+	public float attackLength = 0;
+	public GameObject spriteImage;
+
 	// Use this for initialization
 	void Start () 
 	{
+		if (Animate == null)
+			Animate = transform.GetComponentInChildren<Animator>();
+
 		Fog_Event_Manager.PlayerEntered += LosePlayer;
 		Fog_Event_Manager.PlayerLeft += FindPlayer;
 		navigation = GetComponent<NavMeshAgent> ();
@@ -47,25 +57,34 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 		if (DirectionIndicator == null)
 			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
+		TurnTowardsPlayer();
+
+		if (underMelee)
+		{
+			attackTicker += Time.deltaTime;
+			if (attackTicker >= attackLength)
+			{
+				underMelee = false;
+			}
+		}
+
 		if (isFrozen)
 			return;
-
-		TurnTowardsPlayer();
 
 		if (CheckPlayerDistance () == true && isMoving == false && attackCounter < 3) 
 		{
 			currentAttackTimer -= Time.deltaTime;
 			Vector3 lookAtPlayer = target.transform.position - transform.position;
 			DirectionIndicator.transform.forward = lookAtPlayer.normalized;
-			
+
+
 			if(currentAttackTimer <= 0.0f)
 			{
 				//Debug.Log("Enemy Attacked");
-				
 				Vector3 startLoc = transform.position;
 				startLoc.y = 1.5f;
 				GameObject RangedAttack = GameObject.Instantiate(FelMissile);
@@ -77,15 +96,15 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 				RangedAttack.transform.forward = newForward;
 				attackCounter++;
 				currentAttackTimer = AttackCooldown;
+				underMelee = true;
+				attackTicker = 0;
 			}
-			
 			if(attackCounter >= 3)
 			{
 				SideStrafe();
 				isMoving = true;
 			}
 		}
-		
 		else
 		{
 			if(isMoving == false)
@@ -105,12 +124,6 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 				
 			}
 		}
-		
-
-
-
-
-
 	}
 
 	// This function will check the distance of the player. It will return true if
@@ -160,8 +173,176 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	void TurnTowardsPlayer()
 	{
 		Vector3 movementDirection = navigation.velocity.normalized;
-		if (movementDirection.magnitude >= 1.0f) {
+		if (movementDirection.magnitude >= 1)
+		{
 			DirectionIndicator.transform.forward = navigation.velocity.normalized;
+			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (navigation.speed > 0.25f)
+			{
+				Vector3 tempPos = this.gameObject.transform.position;
+				tempPos.y = 2.38f;
+				spriteImage.transform.position = tempPos;
+			}
+			if (underMelee)
+			{
+				Vector3 tempPos = this.gameObject.transform.position;
+				tempPos.y = 2.22f;
+				spriteImage.transform.position = tempPos;
+			}
+			if (dotProd >= 0.75f)
+			{
+				if (underMelee)
+				{
+					Animate.Play ("Range_Slash_Up");
+				}
+				else
+				{
+					if (navigation.remainingDistance <= 0.05f)
+					{
+						Animate.Play ("Range_Idle_Up");
+					}
+					else
+					{
+						Animate.Play ("Range_Move_Up");
+					}
+				}
+			}
+			else if (dotProd <= -0.75f)
+			{
+				if (underMelee)
+				{
+					Animate.Play ("Range_Slash_Down");
+				}
+				else
+				{
+					if (navigation.remainingDistance <= 0.05f)
+					{
+						Animate.Play ("Range_Idle_Down");
+					}
+					else
+					{
+						Animate.Play ("Range_Move_Down");
+					}
+				}
+			}
+			else if (dotProd > -0.25f && dotProd <= 0.25f)
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Range_Slash_Left");
+					}
+					else
+					{
+						if (navigation.remainingDistance <= 0.05f)
+						{
+							Animate.Play ("Range_Idle_Left");
+						}
+						else
+						{
+							Animate.Play ("Range_Move_Left");
+						}
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Range_Slash_Right");
+					}
+					else
+					{
+						if (navigation.remainingDistance <= 0.05f)
+						{
+							Animate.Play ("Range_Idle_Right");
+						}
+						else
+						{
+							Animate.Play ("Range_Move_Right");
+						}
+					}
+				}
+			}
+			else if (dotProd > 0.25f && dotProd < 0.75f)
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Range_Slash_UpLeft");
+					}
+					else
+					{
+						if (navigation.remainingDistance <= 0.05f)
+						{
+							Animate.Play ("Range_Idle_UpLeft");
+						}
+						else
+						{
+							Animate.Play ("Range_Move_UpLeft");
+						}
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Range_Slash_UpRight");
+					}
+					else
+					{
+						if (navigation.remainingDistance <= 0.05f)
+						{
+							Animate.Play ("Range_Idle_UpRight");
+						}
+						else
+						{
+							Animate.Play ("Range_Move_UpRight");
+						}
+					}
+				}
+			}
+			else
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Range_Slash_DownLeft");
+					}
+					else
+					{
+						if (navigation.remainingDistance <= 0.05f)
+						{
+							Animate.Play ("Range_Idle_DownLeft");
+						}
+						else
+						{
+							Animate.Play ("Range_Move_DownLeft");
+						}
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Range_Slash_DownRight");
+					}
+					else
+					{
+						if (navigation.remainingDistance <= 0.05f)
+						{
+							Animate.Play ("Range_Idle_DownRight");
+						}
+						else
+						{
+							Animate.Play ("Range_Move_DownRight");
+						}
+					}
+				}
+			}
 		}
 	}
 

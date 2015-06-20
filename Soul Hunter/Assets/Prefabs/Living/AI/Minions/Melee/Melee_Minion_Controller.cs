@@ -25,10 +25,15 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	public float Damage = 100.0f;
 	public SphereCollider AttackCollider = null;
 	public bool isFrozen = false;		// used for frozen debuff
-	
 
 	public GameObject DirectionIndicator = null;
 	public Animator Animate = null;
+
+	//animation stuff
+	private bool underMelee = false;
+	private float attackTicker = 0;
+	public float attackLength = 0;
+	public GameObject spriteImage;
 
 	// Use this for initialization
 	void Start ()
@@ -53,7 +58,15 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	// If there is a target, the enemy will rotate around the player and lunge in after a certain amount of time has passed
 	void FixedUpdate () 
 	{
-		
+		if (underMelee)
+		{
+			attackTicker += Time.deltaTime;
+			if (attackTicker >= attackLength)
+			{
+				underMelee = false;
+			}
+		}
+
 		if (target == null) 
 		{
 			waypointTimer -= Time.deltaTime;
@@ -105,7 +118,6 @@ public class Melee_Minion_Controller : MonoBehaviour {
 					navigation.stoppingDistance = 2.0f;
 					destination = gameObject.transform.position;
 					DirectionIndicator.transform.forward = playerDirection.normalized;
-					
 				}
 			}
 			
@@ -116,7 +128,11 @@ public class Melee_Minion_Controller : MonoBehaviour {
 				navigation.SetDestination (target.transform.position);
 				
 				if(navigation.remainingDistance < 2.5f)
+				{
+					underMelee = true;
+					attackTicker = 0;
 					AttackCollider.enabled = true;
+				}
 				
 				if(lungeTimer <= 0.0f)
 				{
@@ -162,34 +178,170 @@ public class Melee_Minion_Controller : MonoBehaviour {
 			DirectionIndicator.transform.forward = navigation.velocity.normalized;
 			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
 			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (navigation.speed > 0.25f)
+			{
+				Vector3 tempPos = this.gameObject.transform.position;
+				tempPos.y = 0.93f;
+				spriteImage.transform.position = tempPos;
+			}
+			if (underMelee)
+			{
+				Vector3 tempPos = this.gameObject.transform.position;
+				tempPos.y = 2.21f;
+				spriteImage.transform.position = tempPos;
+			}
 			if (dotProd >= 0.75f)
 			{
-				Animate.Play ("Melee_Idle_Up");
+				if (underMelee)
+				{
+					Animate.Play ("Melee_Slash_Up");
+				}
+				else
+				{
+					if (navigation.speed == 0)
+					{
+						Animate.Play ("Melee_Idle_Up");
+					}
+					else
+					{
+						Animate.Play ("Melee_Move_Up");
+					}
+				}
 			}
 			else if (dotProd <= -0.75f)
 			{
-				Animate.Play ("Melee_Idle_Down");
+				if (underMelee)
+				{
+					Animate.Play ("Melee_Slash_Down");
+				}
+				else
+				{
+					if (navigation.speed == 0)
+					{
+						Animate.Play ("Melee_Idle_Down");
+					}
+					else
+					{
+						Animate.Play ("Melee_Move_Down");
+					}
+				}
 			}
 			else if (dotProd > -0.25f && dotProd <= 0.25f)
 			{
 				if (crossProd.y < 0.0f)
-					Animate.Play ("Melee_Idle_Left");
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Melee_Slash_Left");
+					}
+					else
+					{
+						if (navigation.speed == 0)
+						{
+							Animate.Play ("Melee_Idle_Left");
+						}
+						else
+						{
+							Animate.Play ("Melee_Move_Left");
+						}
+					}
+				}
 				else
-					Animate.Play ("Melee_Idle_Right");
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Melee_Slash_Right");
+					}
+					else
+					{
+						if (navigation.speed == 0)
+						{
+							Animate.Play ("Melee_Idle_Right");
+						}
+						else
+						{
+							Animate.Play ("Melee_Move_Right");
+						}
+					}
+				}
 			}
 			else if (dotProd > 0.25f && dotProd < 0.75f)
 			{
 				if (crossProd.y < 0.0f)
-					Animate.Play ("Melee_Idle_UpLeft");
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Melee_Slash_UpLeft");
+					}
+					else
+					{
+						if (navigation.speed == 0)
+						{
+							Animate.Play ("Melee_Idle_UpLeft");
+						}
+						else
+						{
+							Animate.Play ("Melee_Move_UpLeft");
+						}
+					}
+				}
 				else
-					Animate.Play ("Melee_Idle_UpRight");
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Melee_Slash_UpRight");
+					}
+					else
+					{
+						if (navigation.speed == 0)
+						{
+							Animate.Play ("Melee_Idle_UpRight");
+						}
+						else
+						{
+							Animate.Play ("Melee_Move_UpRight");
+						}
+					}
+				}
 			}
 			else
 			{
 				if (crossProd.y < 0.0f)
-					Animate.Play ("Melee_Idle_DownLeft");
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Melee_Slash_DownLeft");
+					}
+					else
+					{
+						if (navigation.speed == 0)
+						{
+							Animate.Play ("Melee_Idle_DownLeft");
+						}
+						else
+						{
+							Animate.Play ("Melee_Move_DownLeft");
+						}
+					}
+				}
 				else
-					Animate.Play ("Melee_Idle_DownRight");
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Melee_Slash_DownRight");
+					}
+					else
+					{
+						if (navigation.speed == 0)
+						{
+							Animate.Play ("Melee_Idle_DownRight");
+						}
+						else
+						{
+							Animate.Play ("Melee_Move_DownRight");
+						}
+					}
+				}
 			}
 		}
 	}
