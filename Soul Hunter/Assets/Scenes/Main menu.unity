@@ -168,7 +168,7 @@ GameObject:
   - 114: {fileID: 7803270}
   - 114: {fileID: 7803271}
   m_Layer: 5
-  m_Name: Bolt
+  m_Name: Bolt Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,11 +186,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 2
-  m_AnchorMin: {x: .0615457036, y: .628261387}
-  m_AnchorMax: {x: .292380214, y: .671000004}
-  m_AnchoredPosition: {x: -1.52587891e-05, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .0615457036, y: .585520566}
+  m_AnchorMax: {x: .292380214, y: .628261387}
+  m_AnchoredPosition: {x: .100000001, y: .400000006}
+  m_SizeDelta: {x: -.300000012, y: -.300000012}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &7803270
 MonoBehaviour:
@@ -6210,7 +6210,7 @@ GameObject:
   - 114: {fileID: 214540529}
   - 114: {fileID: 214540530}
   m_Layer: 5
-  m_Name: Barrier
+  m_Name: Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6228,11 +6228,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 1
-  m_AnchorMin: {x: .0615456998, y: .671000004}
-  m_AnchorMax: {x: .292380214, y: .713748276}
-  m_AnchoredPosition: {x: -1.52587891e-05, y: 0}
-  m_SizeDelta: {x: 0, y: -0}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .0615456998, y: .628261387}
+  m_AnchorMax: {x: .292380214, y: .671000004}
+  m_AnchoredPosition: {x: .148650005, y: .100000001}
+  m_SizeDelta: {x: .302469999, y: -.200000003}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &214540529
 MonoBehaviour:
@@ -7930,12 +7930,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 756451253}
+  m_Father: {fileID: 1641207667}
   m_RootOrder: 1
   m_AnchorMin: {x: .0807437003, y: .249503359}
   m_AnchorMax: {x: .92874378, y: .806000054}
-  m_AnchoredPosition: {x: .100000024, y: -.0250244141}
-  m_SizeDelta: {x: -.200000003, y: .0499880016}
+  m_AnchoredPosition: {x: .0937134027, y: -.0193786621}
+  m_SizeDelta: {x: -.234454349, y: .0444490612}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &444948158
 MonoBehaviour:
@@ -7953,8 +7953,8 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 47096b660869bdf48a059d09b1fbc970, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 16
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -7983,7 +7983,7 @@ GameObject:
   - 114: {fileID: 452745861}
   - 114: {fileID: 452745862}
   m_Layer: 5
-  m_Name: Fog
+  m_Name: Freeze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8001,11 +8001,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 8
-  m_AnchorMin: {x: .0615456998, y: .371789187}
-  m_AnchorMax: {x: .292380214, y: .414605439}
-  m_AnchoredPosition: {x: -.184494019, y: -.200000763}
-  m_SizeDelta: {x: -.0999300033, y: 0}
+  m_RootOrder: 9
+  m_AnchorMin: {x: .0615456998, y: .329000026}
+  m_AnchorMax: {x: .292380214, y: .371789187}
+  m_AnchoredPosition: {x: -.200000003, y: .0614910014}
+  m_SizeDelta: {x: -.100000001, y: -.123020001}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &452745861
 MonoBehaviour:
@@ -9266,7 +9266,7 @@ GameObject:
   - 114: {fileID: 592651668}
   - 114: {fileID: 592651669}
   m_Layer: 5
-  m_Name: Muck
+  m_Name: Plasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9284,11 +9284,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 15
-  m_AnchorMin: {x: .29240495, y: .628261387}
-  m_AnchorMax: {x: .522619963, y: .671000004}
-  m_AnchoredPosition: {x: -.100000001, y: -.0999950022}
-  m_SizeDelta: {x: .300000012, y: -.200010002}
+  m_RootOrder: 16
+  m_AnchorMin: {x: .29240495, y: .585520566}
+  m_AnchorMax: {x: .522619963, y: .628261387}
+  m_AnchoredPosition: {x: -.0999984741, y: 1.52587891e-05}
+  m_SizeDelta: {x: .300000012, y: -9.15530036e-05}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &592651668
 MonoBehaviour:
@@ -10141,7 +10141,7 @@ GameObject:
   - 114: {fileID: 682004919}
   - 114: {fileID: 682004920}
   m_Layer: 5
-  m_Name: Steam
+  m_Name: Tidal Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10159,11 +10159,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 21
-  m_AnchorMin: {x: .29240495, y: .371789187}
-  m_AnchorMax: {x: .522619963, y: .414605439}
-  m_AnchoredPosition: {x: -.27500999, y: -.200000003}
-  m_SizeDelta: {x: .549989998, y: .300000012}
+  m_RootOrder: 22
+  m_AnchorMin: {x: .29240495, y: .329000026}
+  m_AnchorMax: {x: .522619963, y: .371789187}
+  m_AnchoredPosition: {x: -.0862808228, y: -7.62939453e-06}
+  m_SizeDelta: {x: .172490001, y: 1.90729997e-06}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &682004919
 MonoBehaviour:
@@ -10539,7 +10539,7 @@ GameObject:
   - 114: {fileID: 700902874}
   - 114: {fileID: 700902875}
   m_Layer: 5
-  m_Name: Gravity Well
+  m_Name: Hydrant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10557,11 +10557,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 10
-  m_AnchorMin: {x: .0615457036, y: .286394596}
-  m_AnchorMax: {x: .292380214, y: .329000026}
-  m_AnchoredPosition: {x: .0821838379, y: -7.62939453e-06}
-  m_SizeDelta: {x: -.36432001, y: -0}
+  m_RootOrder: 11
+  m_AnchorMin: {x: .0615456998, y: .24360542}
+  m_AnchorMax: {x: .292380214, y: .286394596}
+  m_AnchoredPosition: {x: -.124969997, y: -.100000001}
+  m_SizeDelta: {x: -.219060004, y: .100000001}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &700902874
 MonoBehaviour:
@@ -12237,73 +12237,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 753796794}
---- !u!1 &756451252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 188740, guid: 7a97894180237e84a905f2b720405ae3, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 756451253}
-  - 222: {fileID: 756451255}
-  - 114: {fileID: 756451254}
-  m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &756451253
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22413236, guid: 7a97894180237e84a905f2b720405ae3,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 756451252}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1329957440}
-  - {fileID: 444948157}
-  - {fileID: 1432529951}
-  m_Father: {fileID: 1536283685}
-  m_RootOrder: 26
-  m_AnchorMin: {x: .569725811, y: .19362472}
-  m_AnchorMax: {x: .949274302, y: .782750666}
-  m_AnchoredPosition: {x: 0, y: -.150999069}
-  m_SizeDelta: {x: -.100000024, y: .39799881}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &756451254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400346, guid: 7a97894180237e84a905f2b720405ae3,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 756451252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: .852941155, g: .852941155, b: .852941155, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 28259d92c44aa8845ba257e974f06b98, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &756451255
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22206168, guid: 7a97894180237e84a905f2b720405ae3,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 756451252}
 --- !u!1 &771778698
 GameObject:
   m_ObjectHideFlags: 0
@@ -12716,7 +12649,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_AnchorMin: {x: .77081722, y: .0867505968}
   m_AnchorMax: {x: .949274302, y: .148498848}
   m_AnchoredPosition: {x: -.339996338, y: .419998169}
@@ -12817,7 +12750,7 @@ GameObject:
   - 114: {fileID: 859206351}
   - 114: {fileID: 859206352}
   m_Layer: 5
-  m_Name: Plasma
+  m_Name: Poison Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12835,11 +12768,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 16
-  m_AnchorMin: {x: .29240495, y: .585520566}
-  m_AnchorMax: {x: .522619963, y: .628261387}
-  m_AnchoredPosition: {x: 0, y: -.0999984741}
-  m_SizeDelta: {x: .100000001, y: 0}
+  m_RootOrder: 17
+  m_AnchorMin: {x: .29240495, y: .542769969}
+  m_AnchorMax: {x: .522619963, y: .585520566}
+  m_AnchoredPosition: {x: .199996948, y: -7.62939453e-06}
+  m_SizeDelta: {x: .100000001, y: 6.4849999e-05}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &859206351
 MonoBehaviour:
@@ -15134,7 +15067,7 @@ GameObject:
   - 114: {fileID: 988525487}
   - 114: {fileID: 988525488}
   m_Layer: 5
-  m_Name: Freeze
+  m_Name: Gravity Well
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15152,11 +15085,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 9
-  m_AnchorMin: {x: .0615456998, y: .329000026}
-  m_AnchorMax: {x: .292380214, y: .371789187}
-  m_AnchoredPosition: {x: .129638672, y: -.100013733}
-  m_SizeDelta: {x: -.269389987, y: -.200000003}
+  m_RootOrder: 10
+  m_AnchorMin: {x: .0615456998, y: .286394596}
+  m_AnchorMax: {x: .292380214, y: .329000026}
+  m_AnchoredPosition: {x: .100006104, y: -5.34057617e-05}
+  m_SizeDelta: {x: -.300000012, y: .000102999998}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &988525487
 MonoBehaviour:
@@ -15714,7 +15647,7 @@ GameObject:
   - 114: {fileID: 1024523915}
   - 114: {fileID: 1024523916}
   m_Layer: 5
-  m_Name: Fire Ball
+  m_Name: Fog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15732,11 +15665,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 7
-  m_AnchorMin: {x: .0615456998, y: .414605439}
-  m_AnchorMax: {x: .292380214, y: .457287967}
-  m_AnchoredPosition: {x: .00770568848, y: -.100000381}
-  m_SizeDelta: {x: .0153660001, y: 0}
+  m_RootOrder: 8
+  m_AnchorMin: {x: .0615456998, y: .371789187}
+  m_AnchorMax: {x: .292380214, y: .414605439}
+  m_AnchoredPosition: {x: 0, y: -2.28881836e-05}
+  m_SizeDelta: {x: 0, y: 3.81469999e-06}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1024523915
 MonoBehaviour:
@@ -15866,7 +15799,7 @@ GameObject:
   - 114: {fileID: 1048909910}
   - 114: {fileID: 1048909911}
   m_Layer: 5
-  m_Name: Rock Spike
+  m_Name: Sand Blast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15884,11 +15817,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 18
-  m_AnchorMin: {x: .29240495, y: .5}
-  m_AnchorMax: {x: .522619963, y: .542769969}
-  m_AnchoredPosition: {x: .101959229, y: -.100000381}
-  m_SizeDelta: {x: .196079999, y: .200000003}
+  m_RootOrder: 19
+  m_AnchorMin: {x: .29240495, y: .457287967}
+  m_AnchorMax: {x: .522619963, y: .5}
+  m_AnchoredPosition: {x: .100006104, y: -5.7220459e-06}
+  m_SizeDelta: {x: .146090001, y: -4.1962001e-05}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1048909910
 MonoBehaviour:
@@ -16113,7 +16046,7 @@ GameObject:
   - 114: {fileID: 1067252442}
   - 114: {fileID: 1067252443}
   m_Layer: 5
-  m_Name: Crystal Spikes
+  m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16131,10 +16064,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 5
-  m_AnchorMin: {x: .0615456998, y: .5}
-  m_AnchorMax: {x: .292380214, y: .542769969}
-  m_AnchoredPosition: {x: -.124938965, y: -9.53674316e-06}
+  m_RootOrder: 6
+  m_AnchorMin: {x: .0615456998, y: .457287967}
+  m_AnchorMax: {x: .292380214, y: .5}
+  m_AnchoredPosition: {x: .140469998, y: .26099968}
   m_SizeDelta: {x: -.219070002, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1067252442
@@ -16232,7 +16165,7 @@ GameObject:
   - 114: {fileID: 1078287813}
   - 114: {fileID: 1078287814}
   m_Layer: 5
-  m_Name: Explosion
+  m_Name: Fire Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16250,11 +16183,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 6
-  m_AnchorMin: {x: .0615456998, y: .457287967}
-  m_AnchorMax: {x: .292380214, y: .5}
-  m_AnchoredPosition: {x: -.124954224, y: -5.7220459e-06}
-  m_SizeDelta: {x: -.21909, y: 0}
+  m_RootOrder: 7
+  m_AnchorMin: {x: .0615456998, y: .414605439}
+  m_AnchorMax: {x: .292380214, y: .457287967}
+  m_AnchoredPosition: {x: -.199981689, y: .0835037231}
+  m_SizeDelta: {x: -.0999450013, y: -.166989997}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1078287813
 MonoBehaviour:
@@ -16726,7 +16659,7 @@ GameObject:
   - 114: {fileID: 1107455658}
   - 114: {fileID: 1107455659}
   m_Layer: 5
-  m_Name: Laser
+  m_Name: Magma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16744,11 +16677,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 12
-  m_AnchorMin: {x: .0615457036, y: .200789183}
-  m_AnchorMax: {x: .292380214, y: .24360542}
-  m_AnchoredPosition: {x: -.00241088867, y: .00717163086}
-  m_SizeDelta: {x: -.29519999, y: .0143619999}
+  m_RootOrder: 13
+  m_AnchorMin: {x: .0615457036, y: .158819556}
+  m_AnchorMax: {x: .292380214, y: .200789183}
+  m_AnchoredPosition: {x: .0149536133, y: 0}
+  m_SizeDelta: {x: -.498829991, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1107455658
 MonoBehaviour:
@@ -16902,7 +16835,7 @@ GameObject:
   - 114: {fileID: 1118906106}
   - 114: {fileID: 1118906107}
   m_Layer: 5
-  m_Name: Hydrant
+  m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16920,11 +16853,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 11
-  m_AnchorMin: {x: .0615457036, y: .24360542}
-  m_AnchorMax: {x: .292380214, y: .286394596}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -.300000012, y: -.300000012}
+  m_RootOrder: 12
+  m_AnchorMin: {x: .0615457036, y: .200789183}
+  m_AnchorMax: {x: .292380214, y: .24360542}
+  m_AnchoredPosition: {x: 0, y: -.0389995575}
+  m_SizeDelta: {x: -.300000012, y: -.299999237}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1118906106
 MonoBehaviour:
@@ -17071,6 +17004,10 @@ Prefab:
     - target: {fileID: 127092, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199642, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      propertyPath: m_Name
+      value: Poison Cloud
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
@@ -17668,7 +17605,7 @@ GameObject:
   - 114: {fileID: 1198451245}
   - 114: {fileID: 1198451246}
   m_Layer: 5
-  m_Name: Meteor
+  m_Name: Muck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17686,11 +17623,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 14
-  m_AnchorMin: {x: .29240495, y: .671000004}
-  m_AnchorMax: {x: .522619963, y: .713748276}
-  m_AnchoredPosition: {x: -3.81469727e-06, y: -2.28881836e-05}
-  m_SizeDelta: {x: 1.52590001e-05, y: 0}
+  m_RootOrder: 15
+  m_AnchorMin: {x: .29240495, y: .628261387}
+  m_AnchorMax: {x: .522619963, y: .671000004}
+  m_AnchoredPosition: {x: -.111244202, y: -7.62939453e-06}
+  m_SizeDelta: {x: -.177489996, y: -0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1198451245
 MonoBehaviour:
@@ -19663,12 +19600,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 756451253}
+  m_Father: {fileID: 1641207667}
   m_RootOrder: 0
   m_AnchorMin: {x: .0807437003, y: .848479807}
   m_AnchorMax: {x: .92874378, y: .954416811}
-  m_AnchoredPosition: {x: .200000003, y: .5}
-  m_SizeDelta: {x: 0, y: -1.0999999}
+  m_AnchoredPosition: {x: .193713382, y: .501922607}
+  m_SizeDelta: {x: -.0344543457, y: -1.10105276}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1329957441
 MonoBehaviour:
@@ -19994,7 +19931,7 @@ GameObject:
   - 114: {fileID: 1408488007}
   - 114: {fileID: 1408488008}
   m_Layer: 5
-  m_Name: Magma
+  m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20012,11 +19949,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 13
-  m_AnchorMin: {x: .0615457036, y: .158000007}
-  m_AnchorMax: {x: .292380214, y: .200789183}
-  m_AnchoredPosition: {x: -.00242614746, y: 0}
-  m_SizeDelta: {x: -.29519999, y: -1.71659995e-05}
+  m_RootOrder: 14
+  m_AnchorMin: {x: .29240495, y: .671000004}
+  m_AnchorMax: {x: .522619963, y: .713748276}
+  m_AnchoredPosition: {x: -.0250396729, y: -1.52587891e-05}
+  m_SizeDelta: {x: -.350010008, y: -4.76839996e-05}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1408488007
 MonoBehaviour:
@@ -21544,12 +21481,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 756451253}
+  m_Father: {fileID: 1641207667}
   m_RootOrder: 2
   m_AnchorMin: {x: .0807437003, y: .0583747998}
   m_AnchorMax: {x: .92874378, y: .195000008}
-  m_AnchoredPosition: {x: .100000024, y: .275001526}
-  m_SizeDelta: {x: -.200000003, y: -.550000012}
+  m_AnchoredPosition: {x: .0937134027, y: .284645081}
+  m_SizeDelta: {x: -.234454349, y: -.551354229}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1432529952
 MonoBehaviour:
@@ -21567,7 +21504,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 47096b660869bdf48a059d09b1fbc970, type: 3}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -23697,6 +23634,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437805511}
+  - {fileID: 1624182009}
   - {fileID: 214540528}
   - {fileID: 7803269}
   - {fileID: 1729963890}
@@ -23718,13 +23656,12 @@ RectTransform:
   - {fileID: 1656905460}
   - {fileID: 1956459847}
   - {fileID: 682004918}
-  - {fileID: 1624182009}
   - {fileID: 479510785}
   - {fileID: 1695796005}
   - {fileID: 344266940}
-  - {fileID: 756451253}
   - {fileID: 848466772}
   - {fileID: 1679140097}
+  - {fileID: 1641207667}
   m_Father: {fileID: 882392392}
   m_RootOrder: 11
   m_AnchorMin: {x: .202000007, y: .175376624}
@@ -26397,7 +26334,7 @@ GameObject:
   - 114: {fileID: 1624182010}
   - 114: {fileID: 1624182011}
   m_Layer: 5
-  m_Name: Title Wave
+  m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26415,11 +26352,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 22
-  m_AnchorMin: {x: .292380214, y: .329000026}
-  m_AnchorMax: {x: .522619963, y: .371789187}
-  m_AnchoredPosition: {x: -.0499992371, y: .200000763}
-  m_SizeDelta: {x: .0999149978, y: 0}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .0615456998, y: .671000004}
+  m_AnchorMax: {x: .292380214, y: .713748276}
+  m_AnchoredPosition: {x: .0862426758, y: -.0250015259}
+  m_SizeDelta: {x: -.127550006, y: .0499989986}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1624182010
 MonoBehaviour:
@@ -26618,6 +26555,70 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1640914271}
+--- !u!1 &1641207666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1641207667}
+  - 222: {fileID: 1641207669}
+  - 114: {fileID: 1641207668}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1641207667
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641207666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1329957440}
+  - {fileID: 444948157}
+  - {fileID: 1432529951}
+  m_Father: {fileID: 1536283685}
+  m_RootOrder: 28
+  m_AnchorMin: {x: .568162739, y: .194734812}
+  m_AnchorMax: {x: .949274302, y: .782750666}
+  m_AnchoredPosition: {x: 1.52587891e-05, y: 5.7220459e-06}
+  m_SizeDelta: {x: -3.05180001e-05, y: 1.52590001e-05}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1641207668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641207666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .768627465}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1641207669
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641207666}
 --- !u!1 &1648724842
 GameObject:
   m_ObjectHideFlags: 0
@@ -26696,7 +26697,7 @@ GameObject:
   - 114: {fileID: 1656905461}
   - 114: {fileID: 1656905462}
   m_Layer: 5
-  m_Name: Sand Blast
+  m_Name: Shock Prism
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26714,11 +26715,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 19
-  m_AnchorMin: {x: .29240495, y: .457287967}
-  m_AnchorMax: {x: .522619963, y: .5}
-  m_AnchoredPosition: {x: -7.62939453e-06, y: -.100009918}
-  m_SizeDelta: {x: -0, y: -.200000003}
+  m_RootOrder: 20
+  m_AnchorMin: {x: .29240495, y: .414605439}
+  m_AnchorMax: {x: .522619963, y: .457287967}
+  m_AnchoredPosition: {x: 0, y: -9.53674316e-06}
+  m_SizeDelta: {x: 0, y: 3.24249995e-05}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1656905461
 MonoBehaviour:
@@ -26897,7 +26898,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_AnchorMin: {x: .0615456998, y: .735125959}
   m_AnchorMax: {x: .530456781, y: .782750666}
   m_AnchoredPosition: {x: -7.62939453e-06, y: -1.52587891e-05}
@@ -27370,7 +27371,7 @@ GameObject:
   - 114: {fileID: 1729963891}
   - 114: {fileID: 1729963892}
   m_Layer: 5
-  m_Name: Bolt Chain
+  m_Name: Concrete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27388,11 +27389,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 3
-  m_AnchorMin: {x: .0615456998, y: .585520566}
-  m_AnchorMax: {x: .292380214, y: .628261387}
-  m_AnchoredPosition: {x: -.117240012, y: -0}
-  m_SizeDelta: {x: -.234499991, y: 0}
+  m_RootOrder: 4
+  m_AnchorMin: {x: .0615456998, y: .542769969}
+  m_AnchorMax: {x: .292380214, y: .585520566}
+  m_AnchoredPosition: {x: -.0999450684, y: -7.62939453e-06}
+  m_SizeDelta: {x: -.200000003, y: 1.90729997e-06}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1729963891
 MonoBehaviour:
@@ -32114,7 +32115,7 @@ GameObject:
   - 114: {fileID: 1857386584}
   - 114: {fileID: 1857386585}
   m_Layer: 5
-  m_Name: Concrete
+  m_Name: Crystal Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32132,11 +32133,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 4
-  m_AnchorMin: {x: .0615456998, y: .542769969}
-  m_AnchorMax: {x: .292380214, y: .585520566}
-  m_AnchoredPosition: {x: .00971984863, y: -.100000381}
-  m_SizeDelta: {x: .0194090009, y: 0}
+  m_RootOrder: 5
+  m_AnchorMin: {x: .0615456998, y: .5}
+  m_AnchorMax: {x: .292380214, y: .542769969}
+  m_AnchoredPosition: {x: .299987793, y: -4.19616699e-05}
+  m_SizeDelta: {x: 0, y: -3.24249995e-05}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1857386584
 MonoBehaviour:
@@ -32448,7 +32449,7 @@ GameObject:
   - 114: {fileID: 1860699539}
   - 114: {fileID: 1860699540}
   m_Layer: 5
-  m_Name: Poison Cloud
+  m_Name: Rock Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32466,11 +32467,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 17
-  m_AnchorMin: {x: .29240495, y: .542769969}
-  m_AnchorMax: {x: .522619963, y: .585520566}
-  m_AnchoredPosition: {x: .0769577026, y: 0}
-  m_SizeDelta: {x: .146090001, y: .100000001}
+  m_RootOrder: 18
+  m_AnchorMin: {x: .29240495, y: .5}
+  m_AnchorMax: {x: .522619963, y: .542769969}
+  m_AnchoredPosition: {x: .100021362, y: .0653991699}
+  m_SizeDelta: {x: -.0999450013, y: -.130799994}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1860699539
 MonoBehaviour:
@@ -33909,7 +33910,7 @@ GameObject:
   - 114: {fileID: 1956459848}
   - 114: {fileID: 1956459849}
   m_Layer: 5
-  m_Name: Shock Prism
+  m_Name: Steam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33927,11 +33928,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1536283685}
-  m_RootOrder: 20
-  m_AnchorMin: {x: .29240495, y: .414605439}
-  m_AnchorMax: {x: .522619963, y: .457287967}
-  m_AnchoredPosition: {x: -.125034332, y: 0}
-  m_SizeDelta: {x: .249950007, y: -.200000003}
+  m_RootOrder: 21
+  m_AnchorMin: {x: .29240495, y: .371789187}
+  m_AnchorMax: {x: .522619963, y: .414605439}
+  m_AnchoredPosition: {x: -.128540039, y: -1.52587891e-05}
+  m_SizeDelta: {x: .256969988, y: 1.33510002e-05}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1956459848
 MonoBehaviour:

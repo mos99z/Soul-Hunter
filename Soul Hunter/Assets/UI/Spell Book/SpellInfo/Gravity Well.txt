@@ -1,1 +1,1 @@
-0,0,0,Gravity Well,Place holder.
+3,3,4,Gravity Well,Increase the Earths gravitational pull in a large area to slow foes down dramatically. However, be warned that gravity does not harm foes.

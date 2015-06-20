@@ -4,7 +4,6 @@ using System.Collections;
 public class SpellMasterList : MonoBehaviour 
 {
 	// attach this to GameBrain to always get a single reference to each spell
-	public GameObject aquaJet;
 	public GameObject barrier;
 	public GameObject bolt;
 	public GameObject boltChain;
@@ -26,6 +25,7 @@ public class SpellMasterList : MonoBehaviour
 	public GameObject sandBlast;
 	public GameObject shockPrism;
 	public GameObject steam;
+	public GameObject tidalWave;
 	public GameObject torch;
 	public GameObject whirlwind;
 	public GameObject windBlade;
