@@ -29,6 +29,8 @@ public class TeleportRing : MonoBehaviour
 	{
 		if (other.tag == "Player")
 		{
+			if(levelToLoad == "Tally Scene")
+				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameOverMusic);
 			GameBrain.Instance.RoomsCleared.Clear();	// empty rooms cleared in prep for next level
 			GameBrain.Instance.CurrentLevel = nextLevel;// sets the gamebrain to know which level the player is now in
 			GameBrain.Instance.Save();					// save game progress

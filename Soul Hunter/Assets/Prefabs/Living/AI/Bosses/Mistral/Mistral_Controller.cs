@@ -41,6 +41,8 @@ public class Mistral_Controller : MonoBehaviour
 	public float Damage = 100.0f;
 	public SphereCollider AttackCollider;
 	public GameObject DirectionIndicator = null;
+
+	public AudioSource MeleeSFX;
 	
 //	private Living_Obj healthScript = null;
 	
@@ -284,6 +286,7 @@ public class Mistral_Controller : MonoBehaviour
 	{
 		if (col.tag == "Player") 
 		{
+			MeleeSFX.Play();
 			col.SendMessage("TakeDamage",Damage);
 		}
 	}

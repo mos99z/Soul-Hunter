@@ -28,6 +28,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	public Animator Animate = null;
 	public GameObject DirectionIndicator = null;
 	GameObject player;
+	public AudioSource MeleeSFX;
 
 	//animation stuff
 	private bool underMelee = false;
@@ -291,6 +292,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	{
 		if (col.tag == "Player" && hasHitPlayer == false) 
 		{
+			MeleeSFX.Play();
 			col.SendMessage("TakeDamage",Damage);
 			hasHitPlayer = true;
 		}

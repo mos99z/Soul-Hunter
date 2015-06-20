@@ -15,7 +15,7 @@ public class Spell_List_Controller : MonoBehaviour
 	//helper variables
 	private int selectedIndex = -1;
 	private string[] spellNames = {"Barrier","Bolt","Bolt Chain","Concrete","Crystal Spikes","Explosion","Fire Ball","Fog","Freeze","Gravity Well","Hydrant",
-		"Laser","Magma","Meteor","Muck","Plasma","Poison Cloud","Rock Spike","Sand Blast", "Shock Prism","Steam", "Title Wave", "Torch","Whirlwind","Wind Blade"};
+		"Laser","Magma","Meteor","Muck","Plasma","Poison Cloud","Rock Spike","Sand Blast", "Shock Prism","Steam", "Tidal Wave", "Torch","Whirlwind","Wind Blade"};
 	public Text NumSpellsDiscovered;
 	private bool needsUpdate;
 
