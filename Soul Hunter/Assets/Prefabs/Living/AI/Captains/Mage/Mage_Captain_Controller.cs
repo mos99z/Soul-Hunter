@@ -257,7 +257,15 @@ public class Mage_Captain_Controller : MonoBehaviour {
 			if (underMelee)
 			{
 				Vector3 tempPos = this.gameObject.transform.position;
-				tempPos.y = 2.21f;
+				tempPos.y = 4.87f;
+				tempPos.z -= 1;
+				spriteImage.transform.position = tempPos;
+			}
+			else
+			{
+				Vector3 tempPos = this.gameObject.transform.position;
+				tempPos.y = 3.89f;
+				tempPos.z -= 0.5f;
 				spriteImage.transform.position = tempPos;
 			}
 			if (dotProd >= 0.75f)

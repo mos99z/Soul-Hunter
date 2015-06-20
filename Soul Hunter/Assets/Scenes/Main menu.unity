@@ -22152,7 +22152,7 @@ Animator:
   m_GameObject: {fileID: 1502925793}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 20b647c106aca5442ad4c66be271224b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 743c4d60aabe08c4a9d7f029e43b28f3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -22185,7 +22185,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 13836cf686cf7b046a3299bceb53d3ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8ed8969dfecad04096c743a80b6d37d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1514713331
 GameObject:
@@ -34390,9 +34390,9 @@ MonoBehaviour:
   RoomNumber: 0
   SavePoint: {fileID: 0}
   SelectHealthBar: 0
-  SmallBloodSplat: {fileID: 0}
-  MedBloodSplat: {fileID: 0}
-  LargeBloodSplat: {fileID: 0}
+  SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
+  MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
+  LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
 --- !u!54 &2031991671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34437,13 +34437,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: .150000006
   DirectionIndicator: {fileID: 962110945}
-  Animations: {fileID: 1502925795}
+  Animate: {fileID: 1502925795}
   CursorColliders:
     serializedVersion: 2
     m_Bits: 2147483648
   ScreenCamera: {fileID: 0}
   GameOver: {fileID: 249581579}
   isCrippled: 0
+  underMelee: 0
+  attackLength: 1.5
+  spriteImage: {fileID: 1502925793}
 --- !u!114 &2031991674
 MonoBehaviour:
   m_ObjectHideFlags: 0

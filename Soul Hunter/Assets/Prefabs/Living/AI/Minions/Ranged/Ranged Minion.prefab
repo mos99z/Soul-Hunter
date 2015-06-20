@@ -76,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.38000011, z: 0}
+  m_LocalPosition: {x: 0, y: 1.04999995, z: -.100000001}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 449150}
@@ -173,7 +173,7 @@ MonoBehaviour:
   missleDamage: 0
   isFrozen: 0
   DirectionIndicator: {fileID: 0}
-  Animate: {fileID: 0}
+  Animate: {fileID: 9533312}
   attackLength: 1
   spriteImage: {fileID: 106020}
 --- !u!114 &11486548
