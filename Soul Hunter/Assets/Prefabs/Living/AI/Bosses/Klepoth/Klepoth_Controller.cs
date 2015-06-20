@@ -64,6 +64,7 @@ public class Klepoth_Controller : MonoBehaviour {
 	void OnDestroy()
 	{
 		boundingWalls.SendMessage("DestroyWalls");
+		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);	
 	}
 	// Update is called once per frame
 	void Update () 

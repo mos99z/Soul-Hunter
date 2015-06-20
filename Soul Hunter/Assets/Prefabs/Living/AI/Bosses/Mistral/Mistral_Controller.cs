@@ -301,8 +301,11 @@ public class Mistral_Controller : MonoBehaviour
 	{
 		if(perendiAlive)
 			Perendi.SendMessage ("OtherBossDead");
-		if (!perendiAlive)
+		if (!perendiAlive) 
+		{
 			boundingWalls.SendMessage("DestroyWalls");
+			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+		}
 	}
 
 	void PlayerDead()

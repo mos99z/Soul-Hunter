@@ -67,6 +67,7 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		boundingWalls.SendMessage("DestroyWalls");
 		Fog_Event_Manager.PlayerEntered -= LosePlayer;
 		Fog_Event_Manager.PlayerLeft -= FindPlayer;
+		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
 	}
 
 	// Update is called once per frame

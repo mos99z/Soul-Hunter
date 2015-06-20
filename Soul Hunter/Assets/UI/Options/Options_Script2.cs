@@ -28,10 +28,6 @@ public class Options_Script2 : MonoBehaviour
 	private bool needsUpdate;
 	private bool opening;
 	public AudioSource TestSFX;
-	
-	// Event
-	public delegate void SFXEvent();
-	public static event SFXEvent SFXChanged;
 
 	// Use this for initialization
 	void Start () 
@@ -150,6 +146,10 @@ public class Options_Script2 : MonoBehaviour
 	{
 		index = 0;
 		needsUpdate = true;
+		MusicVolume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
+		MusicSlider.value = MusicVolume;
+		SFXSlider.value = SFXVolume;
 	}
 	
 	void LoadData()
@@ -174,6 +174,8 @@ public class Options_Script2 : MonoBehaviour
 	public void AdjustSFXVol()
 	{
 		SFXVolume = SFXSlider.value;
+		AudioListener.volume = SFXSlider.value;
+		
 		if (Options.activeSelf) 
 		{
 			TestSFX.volume = SFXVolume;
@@ -204,8 +206,8 @@ public class Options_Script2 : MonoBehaviour
 		PlayerPrefs.SetFloat ("MusicVolume", MusicVolume);
 		PlayerPrefs.SetFloat ("SFXVolume", SFXVolume);
 		GameBrain.Instance.Music.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
-		if (SFXChanged != null)
-			SFXChanged ();
+		AudioListener.volume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
+
 		TestSFX.volume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		Options.SetActive (false);
 		if (MainMenu != null)

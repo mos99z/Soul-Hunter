@@ -78,12 +78,20 @@ public class GameBrain : MonoBehaviour {
 
 	public static GameBrain Instance;
 
+	public AudioClip MenuMusic;
+	public AudioClip GameplayMusic;
+	public AudioClip CaptainMusic;
+	public AudioClip BossMusic;
+	public AudioClip GameOverMusic;
+
 	public int PlayerMaxHealth = 1000;
 	public int PlayerCurrHealth = 1000;
 	public int PlayerLivesLeft = 3;
 	public int SoulCount = 0;
 	public int MeleeEnemyCounter = 0;
 	public bool PlayerInFog = false;
+	public bool FightingCaptain = false;
+	public bool FightingBoss = false;
 	// Level 0 is tutorial
 	public int CurrentLevel = -1;
 	public List<int> RoomsCleared;
@@ -144,6 +152,11 @@ public class GameBrain : MonoBehaviour {
 	{
 		MusicVolume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
+
+		AudioListener.volume = SFXVolume;
+		Music.ignoreListenerVolume = true;
+		Music.volume = MusicVolume;
+		Music.Play ();
 
 		if (CurrentLevel >= 0) {
 			if (Player != null)

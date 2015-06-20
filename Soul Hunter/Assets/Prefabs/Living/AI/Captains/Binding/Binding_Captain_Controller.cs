@@ -300,5 +300,6 @@ public class Binding_Captain_Controller : MonoBehaviour
 	{
 		Fog_Event_Manager.PlayerEntered -= LosePlayer;
 		Fog_Event_Manager.PlayerLeft -= FindPlayer;
+		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
 	}
 }
