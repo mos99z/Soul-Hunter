@@ -1,0 +1,1463 @@
+fileFormatVersion: 2
+guid: fc5c879609040a2439327d00462b0383
+timeCreated: 1434772943
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jugs - Slash_0
+    21300002: Jugs - Slash_1
+    21300004: Jugs - Slash_2
+    21300006: Jugs - Slash_3
+    21300008: Jugs - Slash_4
+    21300010: Jugs - Slash_5
+    21300012: Jugs - Slash_6
+    21300014: Jugs - Slash_7
+    21300016: Jugs - Slash_8
+    21300018: Jugs - Slash_9
+    21300020: Jugs - Slash_10
+    21300022: Jugs - Slash_11
+    21300024: Jugs - Slash_12
+    21300026: Jugs - Slash_13
+    21300028: Jugs - Slash_14
+    21300030: Jugs - Slash_15
+    21300032: Jugs - Slash_16
+    21300034: Jugs - Slash_17
+    21300036: Jugs - Slash_18
+    21300038: Jugs - Slash_19
+    21300040: Jugs - Slash_20
+    21300042: Jugs - Slash_21
+    21300044: Jugs - Slash_22
+    21300046: Jugs - Slash_23
+    21300048: Jugs - Slash_24
+    21300050: Jugs - Slash_25
+    21300052: Jugs - Slash_26
+    21300054: Jugs - Slash_27
+    21300056: Jugs - Slash_28
+    21300058: Jugs - Slash_29
+    21300060: Jugs - Slash_30
+    21300062: Jugs - Slash_31
+    21300064: Jugs - Slash_32
+    21300066: Jugs - Slash_33
+    21300068: Jugs - Slash_34
+    21300070: Jugs - Slash_35
+    21300072: Jugs - Slash_36
+    21300074: Jugs - Slash_37
+    21300076: Jugs - Slash_38
+    21300078: Jugs - Slash_39
+    21300080: Jugs - Slash_40
+    21300082: Jugs - Slash_41
+    21300084: Jugs - Slash_42
+    21300086: Jugs - Slash_43
+    21300088: Jugs - Slash_44
+    21300090: Jugs - Slash_45
+    21300092: Jugs - Slash_46
+    21300094: Jugs - Slash_47
+    21300096: Jugs - Slash_48
+    21300098: Jugs - Slash_49
+    21300100: Jugs - Slash_50
+    21300102: Jugs - Slash_51
+    21300104: Jugs - Slash_52
+    21300106: Jugs - Slash_53
+    21300108: Jugs - Slash_54
+    21300110: Jugs - Slash_55
+    21300112: Jugs - Slash_56
+    21300114: Jugs - Slash_57
+    21300116: Jugs - Slash_58
+    21300118: Jugs - Slash_59
+    21300120: Jugs - Slash_60
+    21300122: Jugs - Slash_61
+    21300124: Jugs - Slash_62
+    21300126: Jugs - Slash_63
+    21300128: Jugs - Slash_64
+    21300130: Jugs - Slash_65
+    21300132: Jugs - Slash_66
+    21300134: Jugs - Slash_67
+    21300136: Jugs - Slash_68
+    21300138: Jugs - Slash_69
+    21300140: Jugs - Slash_70
+    21300142: Jugs - Slash_71
+    21300144: Jugs - Slash_72
+    21300146: Jugs - Slash_73
+    21300148: Jugs - Slash_74
+    21300150: Jugs - Slash_75
+    21300152: Jugs - Slash_76
+    21300154: Jugs - Slash_77
+    21300156: Jugs - Slash_78
+    21300158: Jugs - Slash_79
+    21300160: Jugs - Slash_80
+    21300162: Jugs - Slash_81
+    21300164: Jugs - Slash_82
+    21300166: Jugs - Slash_83
+    21300168: Jugs - Slash_84
+    21300170: Jugs - Slash_85
+    21300172: Jugs - Slash_86
+    21300174: Jugs - Slash_87
+    21300176: Jugs - Slash_88
+    21300178: Jugs - Slash_89
+    21300180: Jugs - Slash_90
+    21300182: Jugs - Slash_91
+    21300184: Jugs - Slash_92
+    21300186: Jugs - Slash_93
+    21300188: Jugs - Slash_94
+    21300190: Jugs - Slash_95
+    21300192: Jugs - Slash_96
+    21300194: Jugs - Slash_97
+    21300196: Jugs - Slash_98
+    21300198: Jugs - Slash_99
+    21300200: Jugs - Slash_100
+    21300202: Jugs - Slash_101
+    21300204: Jugs - Slash_102
+    21300206: Jugs - Slash_103
+    21300208: Jugs - Slash_104
+    21300210: Jugs - Slash_105
+    21300212: Jugs - Slash_106
+    21300214: Jugs - Slash_107
+    21300216: Jugs - Slash_108
+    21300218: Jugs - Slash_109
+    21300220: Jugs - Slash_110
+    21300222: Jugs - Slash_111
+    21300224: Jugs - Slash_112
+    21300226: Jugs - Slash_113
+    21300228: Jugs - Slash_114
+    21300230: Jugs - Slash_115
+    21300232: Jugs - Slash_116
+    21300234: Jugs - Slash_117
+    21300236: Jugs - Slash_118
+    21300238: Jugs - Slash_119
+    21300240: Jugs - Slash_120
+    21300242: Jugs - Slash_121
+    21300244: Jugs - Slash_122
+    21300246: Jugs - Slash_123
+    21300248: Jugs - Slash_124
+    21300250: Jugs - Slash_125
+    21300252: Jugs - Slash_126
+    21300254: Jugs - Slash_127
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Jugs - Slash_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_2
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_3
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_4
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_5
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_6
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_7
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_8
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_9
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_10
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_11
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_12
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_13
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_14
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_15
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 680
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_17
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_18
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_19
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_20
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_21
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_22
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_23
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_24
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_25
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_26
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_27
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_28
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_29
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_30
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_31
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 587
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_33
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_34
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_35
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_36
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_37
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_38
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_39
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_40
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_41
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_42
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_43
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_44
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_45
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_46
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_47
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 494
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_49
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_50
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_51
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_52
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_53
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_54
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_55
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_56
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_57
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_58
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_59
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_60
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_61
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_62
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_63
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 401
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_65
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_66
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_67
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_68
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_69
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_70
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_71
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_72
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_73
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_74
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_75
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_76
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_77
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_78
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_79
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 308
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_81
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_82
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_83
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_84
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_85
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_86
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_87
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_88
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_89
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_90
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_91
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_92
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_93
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_94
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_95
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 215
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_97
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_98
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_99
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_100
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_101
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_102
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_103
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_104
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_105
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_106
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_107
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_108
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_109
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_110
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_111
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 122
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_113
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_114
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_115
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_116
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_117
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_118
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_119
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_120
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_121
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_122
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_123
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_124
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_125
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_126
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jugs - Slash_127
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 29
+        width: 118
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

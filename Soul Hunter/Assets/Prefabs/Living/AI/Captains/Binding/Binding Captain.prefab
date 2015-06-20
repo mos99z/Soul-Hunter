@@ -168,7 +168,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.58099997, z: -.5}
+  m_LocalPosition: {x: 0, y: 2.02999997, z: -.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 470856}
@@ -264,7 +264,7 @@ Animator:
   m_GameObject: {fileID: 178742}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 231b125bc2b50d845bd957c338f1e0b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: afeb43d8fcf39424db83515c7c96fdeb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -298,10 +298,13 @@ MonoBehaviour:
   aLengthTicker: 0
   abilityRange: 12
   abilityStart: 0
+  Animate: {fileID: 9524050}
   Claw: {fileID: 143036}
   stunAn: {fileID: 185654}
   pullAn: {fileID: 137442}
   StunDuration: .5
+  attackLength: 5
+  spriteImage: {fileID: 178742}
 --- !u!114 &11457914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3689,7 +3692,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a6cbb75bf4e7c14080a87f2a302d495, type: 3}
+  m_Sprite: {fileID: 21300288, guid: 7a6cbb75bf4e7c14080a87f2a302d495, type: 3}
   m_Color: {r: .682257533, g: .603373706, b: .882352948, a: 1}
 --- !u!212 &21247934
 SpriteRenderer:

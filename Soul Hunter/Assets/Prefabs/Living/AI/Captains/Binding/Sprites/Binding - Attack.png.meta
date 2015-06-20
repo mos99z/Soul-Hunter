@@ -1,105 +1,105 @@
 fileFormatVersion: 2
-guid: 7a6cbb75bf4e7c14080a87f2a302d495
-timeCreated: 1434130104
+guid: fa14814af3c87344cac94e1c9920d00b
+timeCreated: 1434764677
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Binding - Idle_0
-    21300002: Binding - Idle_1
-    21300004: Binding - Idle_2
-    21300006: Binding - Idle_3
-    21300008: Binding - Idle_4
-    21300010: Binding - Idle_5
-    21300012: Binding - Idle_6
-    21300014: Binding - Idle_7
-    21300016: Binding - Idle_8
-    21300018: Binding - Idle_9
-    21300020: Binding - Idle_10
-    21300022: Binding - Idle_11
-    21300024: Binding - Idle_12
-    21300026: Binding - Idle_13
-    21300028: Binding - Idle_14
-    21300030: Binding - Idle_15
-    21300032: Binding - Idle_16
-    21300034: Binding - Idle_17
-    21300036: Binding - Idle_18
-    21300038: Binding - Idle_19
-    21300040: Binding - Idle_20
-    21300042: Binding - Idle_21
-    21300044: Binding - Idle_22
-    21300046: Binding - Idle_23
-    21300048: Binding - Idle_24
-    21300050: Binding - Idle_25
-    21300052: Binding - Idle_26
-    21300054: Binding - Idle_27
-    21300056: Binding - Idle_28
-    21300058: Binding - Idle_29
-    21300060: Binding - Idle_30
-    21300062: Binding - Idle_31
-    21300064: Binding - Idle_32
-    21300066: Binding - Idle_33
-    21300068: Binding - Idle_34
-    21300070: Binding - Idle_35
-    21300072: Binding - Idle_36
-    21300074: Binding - Idle_37
-    21300076: Binding - Idle_38
-    21300078: Binding - Idle_39
-    21300080: Binding - Idle_40
-    21300082: Binding - Idle_41
-    21300084: Binding - Idle_42
-    21300086: Binding - Idle_43
-    21300088: Binding - Idle_44
-    21300090: Binding - Idle_45
-    21300092: Binding - Idle_46
-    21300094: Binding - Idle_47
-    21300096: Binding - Idle_48
-    21300098: Binding - Idle_49
-    21300100: Binding - Idle_50
-    21300102: Binding - Idle_51
-    21300104: Binding - Idle_52
-    21300106: Binding - Idle_53
-    21300108: Binding - Idle_54
-    21300110: Binding - Idle_55
-    21300112: Binding - Idle_56
-    21300114: Binding - Idle_57
-    21300116: Binding - Idle_58
-    21300118: Binding - Idle_59
-    21300120: Binding - Idle_60
-    21300122: Binding - Idle_61
-    21300124: Binding - Idle_62
-    21300126: Binding - Idle_63
-    21300128: Binding - Idle_64
-    21300130: Binding - Idle_65
-    21300132: Binding - Idle_66
-    21300134: Binding - Idle_67
-    21300136: Binding - Idle_68
-    21300138: Binding - Idle_69
-    21300140: Binding - Idle_70
-    21300142: Binding - Idle_71
-    21300144: Binding - Idle_72
-    21300146: Binding - Idle_73
-    21300148: Binding - Idle_74
-    21300150: Binding - Idle_75
-    21300152: Binding - Idle_76
-    21300154: Binding - Idle_77
-    21300156: Binding - Idle_78
-    21300158: Binding - Idle_79
-    21300160: Binding - Idle_80
-    21300162: Binding - Idle_81
-    21300164: Binding - Idle_82
-    21300166: Binding - Idle_83
-    21300168: Binding - Idle_84
-    21300170: Binding - Idle_85
-    21300172: Binding - Idle_86
-    21300174: Binding - Idle_87
-    21300176: Binding - Idle_88
-    21300178: Binding - Idle_89
-    21300180: Binding - Idle_90
-    21300182: Binding - Idle_91
-    21300184: Binding - Idle_92
-    21300186: Binding - Idle_93
-    21300188: Binding - Idle_94
-    21300190: Binding - Idle_95
+    21300000: Binding - Attack_0
+    21300002: Binding - Attack_1
+    21300004: Binding - Attack_2
+    21300006: Binding - Attack_3
+    21300008: Binding - Attack_4
+    21300010: Binding - Attack_5
+    21300012: Binding - Attack_6
+    21300014: Binding - Attack_7
+    21300016: Binding - Attack_8
+    21300018: Binding - Attack_9
+    21300020: Binding - Attack_10
+    21300022: Binding - Attack_11
+    21300024: Binding - Attack_12
+    21300026: Binding - Attack_13
+    21300028: Binding - Attack_14
+    21300030: Binding - Attack_15
+    21300032: Binding - Attack_16
+    21300034: Binding - Attack_17
+    21300036: Binding - Attack_18
+    21300038: Binding - Attack_19
+    21300040: Binding - Attack_20
+    21300042: Binding - Attack_21
+    21300044: Binding - Attack_22
+    21300046: Binding - Attack_23
+    21300048: Binding - Attack_24
+    21300050: Binding - Attack_25
+    21300052: Binding - Attack_26
+    21300054: Binding - Attack_27
+    21300056: Binding - Attack_28
+    21300058: Binding - Attack_29
+    21300060: Binding - Attack_30
+    21300062: Binding - Attack_31
+    21300064: Binding - Attack_32
+    21300066: Binding - Attack_33
+    21300068: Binding - Attack_34
+    21300070: Binding - Attack_35
+    21300072: Binding - Attack_36
+    21300074: Binding - Attack_37
+    21300076: Binding - Attack_38
+    21300078: Binding - Attack_39
+    21300080: Binding - Attack_40
+    21300082: Binding - Attack_41
+    21300084: Binding - Attack_42
+    21300086: Binding - Attack_43
+    21300088: Binding - Attack_44
+    21300090: Binding - Attack_45
+    21300092: Binding - Attack_46
+    21300094: Binding - Attack_47
+    21300096: Binding - Attack_48
+    21300098: Binding - Attack_49
+    21300100: Binding - Attack_50
+    21300102: Binding - Attack_51
+    21300104: Binding - Attack_52
+    21300106: Binding - Attack_53
+    21300108: Binding - Attack_54
+    21300110: Binding - Attack_55
+    21300112: Binding - Attack_56
+    21300114: Binding - Attack_57
+    21300116: Binding - Attack_58
+    21300118: Binding - Attack_59
+    21300120: Binding - Attack_60
+    21300122: Binding - Attack_61
+    21300124: Binding - Attack_62
+    21300126: Binding - Attack_63
+    21300128: Binding - Attack_64
+    21300130: Binding - Attack_65
+    21300132: Binding - Attack_66
+    21300134: Binding - Attack_67
+    21300136: Binding - Attack_68
+    21300138: Binding - Attack_69
+    21300140: Binding - Attack_70
+    21300142: Binding - Attack_71
+    21300144: Binding - Attack_72
+    21300146: Binding - Attack_73
+    21300148: Binding - Attack_74
+    21300150: Binding - Attack_75
+    21300152: Binding - Attack_76
+    21300154: Binding - Attack_77
+    21300156: Binding - Attack_78
+    21300158: Binding - Attack_79
+    21300160: Binding - Attack_80
+    21300162: Binding - Attack_81
+    21300164: Binding - Attack_82
+    21300166: Binding - Attack_83
+    21300168: Binding - Attack_84
+    21300170: Binding - Attack_85
+    21300172: Binding - Attack_86
+    21300174: Binding - Attack_87
+    21300176: Binding - Attack_88
+    21300178: Binding - Attack_89
+    21300180: Binding - Attack_90
+    21300182: Binding - Attack_91
+    21300184: Binding - Attack_92
+    21300186: Binding - Attack_93
+    21300188: Binding - Attack_94
+    21300190: Binding - Attack_95
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -139,969 +139,969 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 20
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Binding - Idle_0
+    - name: Binding - Attack_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 1535
-        width: 138
-        height: 160
+        x: 0
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_1
+    - name: Binding - Attack_1
       rect:
         serializedVersion: 2
-        x: 339
-        y: 1535
-        width: 135
-        height: 160
+        x: 128
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_2
+    - name: Binding - Attack_2
       rect:
         serializedVersion: 2
-        x: 605
-        y: 1535
-        width: 130
-        height: 160
+        x: 256
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_3
+    - name: Binding - Attack_3
       rect:
         serializedVersion: 2
-        x: 869
-        y: 1535
-        width: 127
-        height: 160
+        x: 384
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_4
+    - name: Binding - Attack_4
       rect:
         serializedVersion: 2
-        x: 1133
-        y: 1535
-        width: 127
-        height: 160
+        x: 512
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_5
+    - name: Binding - Attack_5
       rect:
         serializedVersion: 2
-        x: 1397
-        y: 1535
-        width: 126
-        height: 158
+        x: 640
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_6
+    - name: Binding - Attack_6
       rect:
         serializedVersion: 2
-        x: 1660
-        y: 1535
-        width: 125
-        height: 158
+        x: 768
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_7
+    - name: Binding - Attack_7
       rect:
         serializedVersion: 2
-        x: 1923
-        y: 1535
-        width: 125
-        height: 158
+        x: 896
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_8
+    - name: Binding - Attack_8
       rect:
         serializedVersion: 2
-        x: 2185
-        y: 1535
-        width: 127
-        height: 160
+        x: 1024
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_9
+    - name: Binding - Attack_9
       rect:
         serializedVersion: 2
-        x: 2446
-        y: 1535
-        width: 129
-        height: 160
+        x: 1152
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_10
+    - name: Binding - Attack_10
       rect:
         serializedVersion: 2
-        x: 2709
-        y: 1535
-        width: 130
-        height: 160
+        x: 1280
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_11
+    - name: Binding - Attack_11
       rect:
         serializedVersion: 2
-        x: 2970
-        y: 1535
-        width: 133
-        height: 160
+        x: 1408
+        y: 684
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_12
+    - name: Binding - Attack_12
       rect:
         serializedVersion: 2
-        x: 76
-        y: 1327
-        width: 138
-        height: 159
+        x: 0
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_13
+    - name: Binding - Attack_13
       rect:
         serializedVersion: 2
-        x: 344
-        y: 1327
-        width: 133
-        height: 159
+        x: 128
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_14
+    - name: Binding - Attack_14
       rect:
         serializedVersion: 2
-        x: 609
-        y: 1327
-        width: 130
-        height: 159
+        x: 256
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_15
+    - name: Binding - Attack_15
       rect:
         serializedVersion: 2
-        x: 874
-        y: 1327
-        width: 128
-        height: 158
+        x: 384
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_16
+    - name: Binding - Attack_16
       rect:
         serializedVersion: 2
-        x: 1138
-        y: 1327
-        width: 127
-        height: 159
+        x: 512
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_17
+    - name: Binding - Attack_17
       rect:
         serializedVersion: 2
-        x: 1402
-        y: 1327
-        width: 125
-        height: 158
+        x: 640
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_18
+    - name: Binding - Attack_18
       rect:
         serializedVersion: 2
-        x: 1665
-        y: 1327
-        width: 128
-        height: 159
+        x: 768
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_19
+    - name: Binding - Attack_19
       rect:
         serializedVersion: 2
-        x: 1927
-        y: 1327
-        width: 130
-        height: 159
+        x: 896
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_20
+    - name: Binding - Attack_20
       rect:
         serializedVersion: 2
-        x: 2190
-        y: 1327
-        width: 131
-        height: 159
+        x: 1024
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_21
+    - name: Binding - Attack_21
       rect:
         serializedVersion: 2
-        x: 2451
-        y: 1327
-        width: 133
-        height: 159
+        x: 1152
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_22
+    - name: Binding - Attack_22
       rect:
         serializedVersion: 2
-        x: 2712
-        y: 1327
-        width: 133
-        height: 159
+        x: 1280
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_23
+    - name: Binding - Attack_23
       rect:
         serializedVersion: 2
-        x: 2973
-        y: 1327
-        width: 132
-        height: 159
+        x: 1408
+        y: 588
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_24
+    - name: Binding - Attack_24
       rect:
         serializedVersion: 2
-        x: 75
-        y: 1104
-        width: 185
-        height: 169
+        x: 0
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_25
+    - name: Binding - Attack_25
       rect:
         serializedVersion: 2
-        x: 342
-        y: 1104
-        width: 182
-        height: 169
+        x: 128
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_26
+    - name: Binding - Attack_26
       rect:
         serializedVersion: 2
-        x: 608
-        y: 1104
-        width: 179
-        height: 169
+        x: 256
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_27
+    - name: Binding - Attack_27
       rect:
         serializedVersion: 2
-        x: 874
-        y: 1104
-        width: 179
-        height: 169
+        x: 384
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_28
+    - name: Binding - Attack_28
       rect:
         serializedVersion: 2
-        x: 1139
-        y: 1104
-        width: 178
-        height: 169
+        x: 512
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_29
+    - name: Binding - Attack_29
       rect:
         serializedVersion: 2
-        x: 1402
-        y: 1104
-        width: 181
-        height: 169
+        x: 640
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_30
+    - name: Binding - Attack_30
       rect:
         serializedVersion: 2
-        x: 1666
-        y: 1104
-        width: 181
-        height: 169
+        x: 768
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_31
+    - name: Binding - Attack_31
       rect:
         serializedVersion: 2
-        x: 1929
-        y: 1104
-        width: 182
-        height: 169
+        x: 896
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_32
+    - name: Binding - Attack_32
       rect:
         serializedVersion: 2
-        x: 2191
-        y: 1104
-        width: 184
-        height: 169
+        x: 1024
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_33
+    - name: Binding - Attack_33
       rect:
         serializedVersion: 2
-        x: 2451
-        y: 1104
-        width: 185
-        height: 169
+        x: 1152
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_34
+    - name: Binding - Attack_34
       rect:
         serializedVersion: 2
-        x: 2712
-        y: 1104
-        width: 185
-        height: 169
+        x: 1280
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_35
+    - name: Binding - Attack_35
       rect:
         serializedVersion: 2
-        x: 2972
-        y: 1104
-        width: 185
-        height: 169
+        x: 1408
+        y: 492
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_36
+    - name: Binding - Attack_36
       rect:
         serializedVersion: 2
-        x: 56
-        y: 891
-        width: 201
-        height: 162
+        x: 0
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_37
+    - name: Binding - Attack_37
       rect:
         serializedVersion: 2
-        x: 322
-        y: 891
-        width: 201
-        height: 162
+        x: 128
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_38
+    - name: Binding - Attack_38
       rect:
         serializedVersion: 2
-        x: 588
-        y: 891
-        width: 199
-        height: 162
+        x: 256
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_39
+    - name: Binding - Attack_39
       rect:
         serializedVersion: 2
-        x: 854
-        y: 891
-        width: 199
-        height: 162
+        x: 384
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_40
+    - name: Binding - Attack_40
       rect:
         serializedVersion: 2
-        x: 1119
-        y: 891
-        width: 198
-        height: 162
+        x: 512
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_41
+    - name: Binding - Attack_41
       rect:
         serializedVersion: 2
-        x: 1383
-        y: 891
-        width: 200
-        height: 162
+        x: 640
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_42
+    - name: Binding - Attack_42
       rect:
         serializedVersion: 2
-        x: 1646
-        y: 889
-        width: 201
-        height: 164
+        x: 768
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_43
+    - name: Binding - Attack_43
       rect:
         serializedVersion: 2
-        x: 1909
-        y: 886
-        width: 201
-        height: 167
+        x: 896
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_44
+    - name: Binding - Attack_44
       rect:
         serializedVersion: 2
-        x: 2171
-        y: 886
-        width: 200
-        height: 167
+        x: 1024
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_45
+    - name: Binding - Attack_45
       rect:
         serializedVersion: 2
-        x: 2432
-        y: 889
-        width: 200
-        height: 164
+        x: 1152
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_46
+    - name: Binding - Attack_46
       rect:
         serializedVersion: 2
-        x: 2692
-        y: 891
-        width: 205
-        height: 162
+        x: 1280
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_47
+    - name: Binding - Attack_47
       rect:
         serializedVersion: 2
-        x: 2952
-        y: 891
-        width: 207
-        height: 162
+        x: 1408
+        y: 396
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_48
+    - name: Binding - Attack_48
       rect:
         serializedVersion: 2
-        x: 84
-        y: 673
-        width: 121
-        height: 156
+        x: 0
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_49
+    - name: Binding - Attack_49
       rect:
         serializedVersion: 2
-        x: 345
-        y: 667
-        width: 121
-        height: 162
+        x: 128
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_50
+    - name: Binding - Attack_50
       rect:
         serializedVersion: 2
-        x: 609
-        y: 659
-        width: 118
-        height: 172
+        x: 256
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_51
+    - name: Binding - Attack_51
       rect:
         serializedVersion: 2
-        x: 872
-        y: 653
-        width: 118
-        height: 178
+        x: 384
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_52
+    - name: Binding - Attack_52
       rect:
         serializedVersion: 2
-        x: 1135
-        y: 647
-        width: 116
-        height: 184
+        x: 512
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_53
+    - name: Binding - Attack_53
       rect:
         serializedVersion: 2
-        x: 1397
-        y: 641
-        width: 118
-        height: 190
+        x: 640
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_54
+    - name: Binding - Attack_54
       rect:
         serializedVersion: 2
-        x: 1660
-        y: 638
-        width: 117
-        height: 193
+        x: 768
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_55
+    - name: Binding - Attack_55
       rect:
         serializedVersion: 2
-        x: 1924
-        y: 636
-        width: 116
-        height: 195
+        x: 896
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_56
+    - name: Binding - Attack_56
       rect:
         serializedVersion: 2
-        x: 2187
-        y: 638
-        width: 116
-        height: 193
+        x: 1024
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_57
+    - name: Binding - Attack_57
       rect:
         serializedVersion: 2
-        x: 2449
-        y: 641
-        width: 118
-        height: 190
+        x: 1152
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_58
+    - name: Binding - Attack_58
       rect:
         serializedVersion: 2
-        x: 2712
-        y: 647
-        width: 119
-        height: 184
+        x: 1280
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_59
+    - name: Binding - Attack_59
       rect:
         serializedVersion: 2
-        x: 2976
-        y: 658
-        width: 121
-        height: 171
+        x: 1408
+        y: 300
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_60
+    - name: Binding - Attack_60
       rect:
         serializedVersion: 2
-        x: 50
-        y: 466
-        width: 161
-        height: 155
+        x: 0
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_61
+    - name: Binding - Attack_61
       rect:
         serializedVersion: 2
-        x: 313
-        y: 458
-        width: 157
-        height: 163
+        x: 128
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_62
+    - name: Binding - Attack_62
       rect:
         serializedVersion: 2
-        x: 577
-        y: 451
-        width: 155
-        height: 170
+        x: 256
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_63
+    - name: Binding - Attack_63
       rect:
         serializedVersion: 2
-        x: 838
-        y: 444
-        width: 155
-        height: 175
+        x: 384
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_64
+    - name: Binding - Attack_64
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 440
-        width: 155
-        height: 179
+        x: 512
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_65
+    - name: Binding - Attack_65
       rect:
         serializedVersion: 2
-        x: 1360
-        y: 435
-        width: 156
-        height: 184
+        x: 640
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_66
+    - name: Binding - Attack_66
       rect:
         serializedVersion: 2
-        x: 1621
-        y: 435
-        width: 158
-        height: 184
+        x: 768
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_67
+    - name: Binding - Attack_67
       rect:
         serializedVersion: 2
-        x: 1882
-        y: 435
-        width: 160
-        height: 184
+        x: 896
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_68
+    - name: Binding - Attack_68
       rect:
         serializedVersion: 2
-        x: 2145
-        y: 440
-        width: 161
-        height: 179
+        x: 1024
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_69
+    - name: Binding - Attack_69
       rect:
         serializedVersion: 2
-        x: 2409
-        y: 444
-        width: 161
-        height: 175
+        x: 1152
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_70
+    - name: Binding - Attack_70
       rect:
         serializedVersion: 2
-        x: 2673
-        y: 447
-        width: 163
-        height: 174
+        x: 1280
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_71
+    - name: Binding - Attack_71
       rect:
         serializedVersion: 2
-        x: 2939
-        y: 452
-        width: 161
-        height: 169
+        x: 1408
+        y: 204
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_72
+    - name: Binding - Attack_72
       rect:
         serializedVersion: 2
-        x: 19
-        y: 257
-        width: 180
-        height: 163
+        x: 0
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_73
+    - name: Binding - Attack_73
       rect:
         serializedVersion: 2
-        x: 279
-        y: 257
-        width: 181
-        height: 163
+        x: 128
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_74
+    - name: Binding - Attack_74
       rect:
         serializedVersion: 2
-        x: 540
-        y: 257
-        width: 181
-        height: 163
+        x: 256
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_75
+    - name: Binding - Attack_75
       rect:
         serializedVersion: 2
-        x: 801
-        y: 257
-        width: 179
-        height: 163
+        x: 384
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_76
+    - name: Binding - Attack_76
       rect:
         serializedVersion: 2
-        x: 1061
-        y: 257
-        width: 182
-        height: 163
+        x: 512
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_77
+    - name: Binding - Attack_77
       rect:
         serializedVersion: 2
-        x: 1322
-        y: 257
-        width: 185
-        height: 163
+        x: 640
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_78
+    - name: Binding - Attack_78
       rect:
         serializedVersion: 2
-        x: 1584
-        y: 257
-        width: 186
-        height: 163
+        x: 768
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_79
+    - name: Binding - Attack_79
       rect:
         serializedVersion: 2
-        x: 1847
-        y: 257
-        width: 187
-        height: 163
+        x: 896
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_80
+    - name: Binding - Attack_80
       rect:
         serializedVersion: 2
-        x: 2111
-        y: 257
-        width: 185
-        height: 163
+        x: 1024
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_81
+    - name: Binding - Attack_81
       rect:
         serializedVersion: 2
-        x: 2375
-        y: 257
-        width: 183
-        height: 163
+        x: 1152
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_82
+    - name: Binding - Attack_82
       rect:
         serializedVersion: 2
-        x: 2640
-        y: 257
-        width: 185
-        height: 163
+        x: 1280
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_83
+    - name: Binding - Attack_83
       rect:
         serializedVersion: 2
-        x: 2904
-        y: 257
-        width: 187
-        height: 163
+        x: 1408
+        y: 108
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_84
+    - name: Binding - Attack_84
       rect:
         serializedVersion: 2
-        x: 44
-        y: 44
-        width: 184
-        height: 170
+        x: 0
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_85
+    - name: Binding - Attack_85
       rect:
         serializedVersion: 2
-        x: 305
-        y: 44
-        width: 182
-        height: 170
+        x: 128
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_86
+    - name: Binding - Attack_86
       rect:
         serializedVersion: 2
-        x: 566
-        y: 44
-        width: 181
-        height: 169
+        x: 256
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_87
+    - name: Binding - Attack_87
       rect:
         serializedVersion: 2
-        x: 829
-        y: 44
-        width: 178
-        height: 169
+        x: 384
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_88
+    - name: Binding - Attack_88
       rect:
         serializedVersion: 2
-        x: 1091
-        y: 44
-        width: 177
-        height: 169
+        x: 512
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_89
+    - name: Binding - Attack_89
       rect:
         serializedVersion: 2
-        x: 1354
-        y: 44
-        width: 176
-        height: 169
+        x: 640
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_90
+    - name: Binding - Attack_90
       rect:
         serializedVersion: 2
-        x: 1618
-        y: 44
-        width: 175
-        height: 169
+        x: 768
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_91
+    - name: Binding - Attack_91
       rect:
         serializedVersion: 2
-        x: 1883
-        y: 44
-        width: 173
-        height: 169
+        x: 896
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_92
+    - name: Binding - Attack_92
       rect:
         serializedVersion: 2
-        x: 2148
-        y: 44
-        width: 172
-        height: 169
+        x: 1024
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_93
+    - name: Binding - Attack_93
       rect:
         serializedVersion: 2
-        x: 2412
-        y: 44
-        width: 173
-        height: 169
+        x: 1152
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_94
+    - name: Binding - Attack_94
       rect:
         serializedVersion: 2
-        x: 2673
-        y: 44
-        width: 178
-        height: 169
+        x: 1280
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Binding - Idle_95
+    - name: Binding - Attack_95
       rect:
         serializedVersion: 2
-        x: 2933
-        y: 44
-        width: 184
-        height: 170
+        x: 1408
+        y: 12
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

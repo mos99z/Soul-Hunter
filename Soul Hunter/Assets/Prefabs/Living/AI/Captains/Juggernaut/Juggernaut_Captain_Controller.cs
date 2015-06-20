@@ -28,6 +28,12 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	public Animator Animate = null;
 	public GameObject DirectionIndicator = null;
 	GameObject player;
+
+	//animation stuff
+	private bool underMelee = false;
+	private float attackTicker = 0;
+	public float attackLength = 0;
+	public GameObject spriteImage;
 	
 	// Use this for initialization
 	void Start () 
@@ -57,6 +63,15 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if (underMelee)
+		{
+			attackTicker += Time.deltaTime;
+			if (attackTicker >= attackLength)
+			{
+				underMelee = false;
+			}
+		}
+
 		//this.gameObject.transform.position = new Vector3(gameObject.transform.position.x,0,gameObject.transform.position.z);
 		currentChargeCooldown -= Time.deltaTime;
 
@@ -126,7 +141,6 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 				hasTurnedOffAttackArea = true;
 				MeleeAttack.SetActive(false);
 				hasHitPlayer = false;
-
 			}
 
 			if(currentAttackTimer <= 0.0f)
@@ -137,6 +151,8 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		Vector3 playerDistance = target.transform.position - gameObject.transform.position;
 		if (playerDistance.magnitude < 2.5f && currentAttackTimer <= 0.0f) 
 		{
+			underMelee = true;
+			attackTicker = 0;
 			MeleeAttack.SetActive(true);
 			currentAttackTimer = AttackTimer;
 		}
@@ -145,35 +161,127 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	void TurnTowardsPlayer()
 	{
 		Vector3 movementDirection = navigation.velocity.normalized;
-		if (movementDirection.magnitude >= 1.0f) {
-			DirectionIndicator.transform.forward = navigation.velocity.normalized;
-//			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
-//			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
-			//if (dotProd >= 0.75f)
-			//	Animate.Play ("Melee_Idle_Up");
-			//else if (dotProd <= -0.75f)
-			//	Animate.Play ("Melee_Idle_Down");
-			//else if (dotProd > -0.25f && dotProd <= 0.25f)
-			//{
-			//	if (crossProd.y < 0.0f)
-			//		Animate.Play ("Melee_Idle_Left");
-			//	else
-			//		Animate.Play ("Melee_Idle_Right");
-			//}
-			//else if (dotProd > 0.25f && dotProd < 0.75f)
-			//{
-			//	if (crossProd.y < 0.0f)
-			//		Animate.Play ("Melee_Idle_UpLeft");
-			//	else
-			//		Animate.Play ("Melee_Idle_UpRight");
-			//}
-			//else
-			//{
-			//	if (crossProd.y < 0.0f)
-			//		Animate.Play ("Melee_Idle_DownLeft");
-			//	else
-			//		Animate.Play ("Melee_Idle_DownRight");
-			//}
+		if (underMelee)
+		{
+			movementDirection = player.transform.position - this.transform.position;
+			movementDirection = movementDirection.normalized;
+		}
+		if (movementDirection.magnitude >= 1.0f)
+		{
+			DirectionIndicator.transform.forward = movementDirection.normalized;
+			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (underMelee)
+			{
+				Vector3 tempPos = this.gameObject.transform.position;
+				tempPos.y = 2.21f;
+
+				spriteImage.transform.position = tempPos;
+			}
+			else
+			{
+				Vector3 tempPos = this.gameObject.transform.position;
+				tempPos.y = 2.01f;
+				tempPos.z -= 0.5f;
+				spriteImage.transform.position = tempPos;
+			}
+			if (dotProd >= 0.75f)
+			{
+				if (underMelee)
+				{
+					Animate.Play ("Jugs_Slash_Up");
+				}
+				else
+				{
+					Animate.Play ("Jugs_Move_Up");
+				}
+			}
+			else if (dotProd <= -0.75f)
+			{
+				if (underMelee)
+				{
+					Animate.Play ("Jugs_Slash_Down");
+				}
+				else
+				{
+					Animate.Play ("Jugs_Move_Down");
+				}
+			}
+			else if (dotProd > -0.25f && dotProd <= 0.25f)
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Jugs_Slash_Left");
+					}
+					else
+					{
+						Animate.Play ("Jugs_Move_Left");
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Jugs_Slash_Right");
+					}
+					else
+					{
+						Animate.Play ("Jugs_Move_Right");
+					}
+				}
+			}
+			else if (dotProd > 0.25f && dotProd < 0.75f)
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Jugs_Slash_UpLeft");
+					}
+					else
+					{
+						Animate.Play ("Jugs_Move_UpLeft");
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Jugs_Slash_UpRight");
+					}
+					else
+					{
+						Animate.Play ("Jugs_Move_UpRight");
+					}
+				}
+			}
+			else
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Jugs_Slash_DownLeft");
+					}
+					else
+					{
+						Animate.Play ("Jugs_Move_DownLeft");
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Jugs_Slash_DownRight");
+					}
+					else
+					{
+						Animate.Play ("Jugs_Move_DownRight");
+					}
+				}
+			}
 		}
 	}
 
