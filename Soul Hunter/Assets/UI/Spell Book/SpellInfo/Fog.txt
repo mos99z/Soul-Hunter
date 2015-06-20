@@ -1,1 +1,1 @@
-0,0,0,Fog,Place holder.
+1,2,5,Fog,Cover a large are in a thick mist and forse foes to lose sight of you.

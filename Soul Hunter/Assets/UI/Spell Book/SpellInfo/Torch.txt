@@ -1,1 +1,1 @@
-0,0,0,Torch,Place holder.
+1,2,2,Torch,Release a flamethrow on your foes. Great for igniting large groups and dealing good damage at the same time.
