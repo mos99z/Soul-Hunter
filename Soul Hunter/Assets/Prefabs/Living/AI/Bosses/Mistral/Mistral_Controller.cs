@@ -305,6 +305,7 @@ public class Mistral_Controller : MonoBehaviour
 		{
 			boundingWalls.SendMessage("DestroyWalls");
 			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+			GameBrain.Instance.FightingBoss = false;
 		}
 	}
 

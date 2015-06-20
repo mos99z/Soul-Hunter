@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   hurtDelay: .300000012
+  slowedDebuff: {fileID: 0}
 --- !u!135 &13502534
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -13,7 +13,7 @@ public class Ragnorak_Controller : MonoBehaviour
 	private Transform playerShadow;
 
 	//public GameObject boundingWalls;		// this will lock the player in a room
-
+	public AudioSource DeathSound;
 	//Behavior vars
 	public float wayPointMinTicker = 3;
 	public float wayPointMaxTicker = 3;
@@ -106,6 +106,8 @@ public class Ragnorak_Controller : MonoBehaviour
 	{
 		//boundingWalls.SendMessage("DestroyWalls");
 		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+		GameBrain.Instance.FightingBoss = false;
+		DeathSound.Play ();
 	}
 	// Update is called once per frame
 	void Update ()

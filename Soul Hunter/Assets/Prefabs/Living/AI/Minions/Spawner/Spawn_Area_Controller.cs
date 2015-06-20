@@ -52,6 +52,7 @@ public class Spawn_Area_Controller : MonoBehaviour {
 			if (AreaContainsCaptain)
 			{
 				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.CaptainMusic);
+				GameBrain.Instance.FightingCaptain = true;
 				Captain.SetActive(true);
 				HUDMast.SendMessage("ActivateCaptBar", 0);
 			}

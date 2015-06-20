@@ -58,6 +58,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 	{
 		boundingWalls.SendMessage("DestroyWalls");
 		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+		GameBrain.Instance.FightingCaptain = false;
 		Fog_Event_Manager.PlayerEntered -= LosePlayer;
 		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 	}

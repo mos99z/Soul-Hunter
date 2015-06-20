@@ -8,6 +8,7 @@ public class Rock_Spike_Controller : MonoBehaviour {
 	private float TimePassed = 0.0f;
 	public int MaxChildren = 0;
 	public int Child = 0;
+	public AudioSource[] RockSpikeSound;
 
 	void Start ()
 	{
@@ -26,9 +27,18 @@ public class Rock_Spike_Controller : MonoBehaviour {
 			Child++;
 			if (MaxChildren <= Child)
 				Destroy (gameObject, 1.0f);
+			
+			for (int i = 0; i < RockSpikeSound.Length; i++)
+			{
+				RockSpikeSound[i].Play();
+			}
 		}
 		else if (MaxChildren <= Child)
 		{
+			for (int i = 0; i < RockSpikeSound.Length; i++)
+			{
+				RockSpikeSound[i].Stop();
+			}
 			transform.position -= new Vector3(0, 10.0f * Time.deltaTime, 0);
 		}
 	}
