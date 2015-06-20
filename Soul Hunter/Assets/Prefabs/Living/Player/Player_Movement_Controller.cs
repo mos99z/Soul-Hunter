@@ -58,7 +58,7 @@ public class Player_Movement_Controller : MonoBehaviour {
 		GameObject[] enemyList = GameObject.FindGameObjectsWithTag ("Enemy");
 		for (int i = 0; i < enemyList.Length; i++) 
 		{
-			enemyList[i].SendMessage("PlayerDead");
+			enemyList[i].SendMessage("PlayerDead", SendMessageOptions.DontRequireReceiver);
 		}
 
 		//GameOver.SendMessage ("PlayerDead");

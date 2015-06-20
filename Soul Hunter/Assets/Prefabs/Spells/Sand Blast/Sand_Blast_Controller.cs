@@ -30,10 +30,9 @@ public class Sand_Blast_Controller : MonoBehaviour
 		if (other.tag == "Enemy")
 		{
 			GameObject debuff = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().blinded);
+			debuff.GetComponent<Blinded_Controller>().Duration = 5.0f;
 			debuff.transform.parent = other.transform;
 			debuff.transform.localPosition = Vector3.zero;
-//TODO: Enable Once Blinded is added			debuff.GetComponent<Blinded_Controller>().Duration = 5.0f;
-
 			other.transform.SendMessage("TakeDamage", damage);
 		}
 	}
