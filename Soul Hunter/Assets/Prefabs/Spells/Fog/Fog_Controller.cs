@@ -13,8 +13,7 @@ public class Fog_Controller : MonoBehaviour
 	void Start () 
 	{
 		duration += GameBrain.Instance.WindLevel;
-		transform.localScale *= 1.0f + GameBrain.Instance.FireLevel < GameBrain.Instance.WaterLevel ? (float)GameBrain.Instance.FireLevel 
-			: (float)GameBrain.Instance.WaterLevel / (float)GameBrain.Instance.NumberOfLevels;
+		transform.localScale *= 1.0f + (GameBrain.Instance.FireLevel < GameBrain.Instance.WaterLevel ? (float)GameBrain.Instance.FireLevel : (float)GameBrain.Instance.WaterLevel) / (float)GameBrain.Instance.NumberOfLevels;
 
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
