@@ -1,0 +1,1210 @@
+fileFormatVersion: 2
+guid: b633e0726cd3fe54daf33d3fc2a5543f
+timeCreated: 1434795863
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DuetSlash_0
+    21300002: DuetSlash_1
+    21300004: DuetSlash_2
+    21300006: DuetSlash_3
+    21300008: DuetSlash_4
+    21300010: DuetSlash_5
+    21300012: DuetSlash_6
+    21300014: DuetSlash_7
+    21300016: DuetSlash_8
+    21300018: DuetSlash_9
+    21300020: DuetSlash_10
+    21300022: DuetSlash_11
+    21300024: DuetSlash_12
+    21300026: DuetSlash_13
+    21300028: DuetSlash_14
+    21300030: DuetSlash_15
+    21300032: DuetSlash_16
+    21300034: DuetSlash_17
+    21300036: DuetSlash_18
+    21300038: DuetSlash_19
+    21300040: DuetSlash_20
+    21300042: DuetSlash_21
+    21300044: DuetSlash_22
+    21300046: DuetSlash_23
+    21300048: DuetSlash_24
+    21300050: DuetSlash_25
+    21300052: DuetSlash_26
+    21300054: DuetSlash_27
+    21300056: DuetSlash_28
+    21300058: DuetSlash_29
+    21300060: DuetSlash_30
+    21300062: DuetSlash_31
+    21300064: DuetSlash_32
+    21300066: DuetSlash_33
+    21300068: DuetSlash_34
+    21300070: DuetSlash_35
+    21300072: DuetSlash_36
+    21300074: DuetSlash_37
+    21300076: DuetSlash_38
+    21300078: DuetSlash_39
+    21300080: DuetSlash_40
+    21300082: DuetSlash_41
+    21300084: DuetSlash_42
+    21300086: DuetSlash_43
+    21300088: DuetSlash_44
+    21300090: DuetSlash_45
+    21300092: DuetSlash_46
+    21300094: DuetSlash_47
+    21300096: DuetSlash_48
+    21300098: DuetSlash_49
+    21300100: DuetSlash_50
+    21300102: DuetSlash_51
+    21300104: DuetSlash_52
+    21300106: DuetSlash_53
+    21300108: DuetSlash_54
+    21300110: DuetSlash_55
+    21300112: DuetSlash_56
+    21300114: DuetSlash_57
+    21300116: DuetSlash_58
+    21300118: DuetSlash_59
+    21300120: DuetSlash_60
+    21300122: DuetSlash_61
+    21300124: DuetSlash_62
+    21300126: DuetSlash_63
+    21300128: DuetSlash_64
+    21300130: DuetSlash_65
+    21300132: DuetSlash_66
+    21300134: DuetSlash_67
+    21300136: DuetSlash_68
+    21300138: DuetSlash_69
+    21300140: DuetSlash_70
+    21300142: DuetSlash_71
+    21300144: DuetSlash_72
+    21300146: DuetSlash_73
+    21300148: DuetSlash_74
+    21300150: DuetSlash_75
+    21300152: DuetSlash_76
+    21300154: DuetSlash_77
+    21300156: DuetSlash_78
+    21300158: DuetSlash_79
+    21300160: DuetSlash_80
+    21300162: DuetSlash_81
+    21300164: DuetSlash_82
+    21300166: DuetSlash_83
+    21300168: DuetSlash_84
+    21300170: DuetSlash_85
+    21300172: DuetSlash_86
+    21300174: DuetSlash_87
+    21300176: DuetSlash_88
+    21300178: DuetSlash_89
+    21300180: DuetSlash_90
+    21300182: DuetSlash_91
+    21300184: DuetSlash_92
+    21300186: DuetSlash_93
+    21300188: DuetSlash_94
+    21300190: DuetSlash_95
+    21300192: DuetSlash_96
+    21300194: DuetSlash_97
+    21300196: DuetSlash_98
+    21300198: DuetSlash_99
+    21300200: DuetSlash_100
+    21300202: DuetSlash_101
+    21300204: DuetSlash_102
+    21300206: DuetSlash_103
+    21300208: DuetSlash_104
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DuetSlash_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_2
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_3
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_4
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_5
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_6
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_7
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_8
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_9
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_10
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_11
+      rect:
+        serializedVersion: 2
+        x: 2794
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_12
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_13
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_14
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_15
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_16
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_17
+      rect:
+        serializedVersion: 2
+        x: 4318
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_18
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_19
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_20
+      rect:
+        serializedVersion: 2
+        x: 5080
+        y: 1028
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_22
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_23
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_24
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_25
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_26
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_27
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_28
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_29
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_30
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_31
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_32
+      rect:
+        serializedVersion: 2
+        x: 2794
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_33
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_34
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_35
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_36
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_37
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_38
+      rect:
+        serializedVersion: 2
+        x: 4318
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_39
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_40
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_41
+      rect:
+        serializedVersion: 2
+        x: 5080
+        y: 772
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_43
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_44
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_45
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_46
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_47
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_48
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_49
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_50
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_51
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_52
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_53
+      rect:
+        serializedVersion: 2
+        x: 2794
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_54
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_55
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_56
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_57
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_58
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_59
+      rect:
+        serializedVersion: 2
+        x: 4318
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_60
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_61
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_62
+      rect:
+        serializedVersion: 2
+        x: 5080
+        y: 516
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_64
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_65
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_66
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_67
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_68
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_69
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_70
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_71
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_72
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_73
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_74
+      rect:
+        serializedVersion: 2
+        x: 2794
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_75
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_76
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_77
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_78
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_79
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_80
+      rect:
+        serializedVersion: 2
+        x: 4318
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_81
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_82
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_83
+      rect:
+        serializedVersion: 2
+        x: 5080
+        y: 260
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_85
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_86
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_87
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_88
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_89
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_90
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_91
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_92
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_93
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_94
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_95
+      rect:
+        serializedVersion: 2
+        x: 2794
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_96
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_97
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_98
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_99
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_100
+      rect:
+        serializedVersion: 2
+        x: 4064
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_101
+      rect:
+        serializedVersion: 2
+        x: 4318
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_102
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_103
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetSlash_104
+      rect:
+        serializedVersion: 2
+        x: 5080
+        y: 4
+        width: 254
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

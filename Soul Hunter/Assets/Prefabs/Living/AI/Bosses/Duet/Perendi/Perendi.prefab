@@ -40,8 +40,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 485174}
   - 212: {fileID: 21271952}
+  - 95: {fileID: 9584328}
   m_Layer: 0
-  m_Name: Wolverine-Yellow_and_Blue-iOS
+  m_Name: Prendi_Ani
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +199,7 @@ Transform:
   - {fileID: 473232}
   - {fileID: 437288}
   m_Father: {fileID: 469638}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &437288
 Transform:
   m_ObjectHideFlags: 1
@@ -255,11 +256,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.20186234, y: 0, z: 267.091492}
+  m_LocalPosition: {x: 6.19999981, y: 0, z: 22.7000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 425262}
   - {fileID: 485174}
+  - {fileID: 425262}
   - {fileID: 469600}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -282,11 +283,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 2.69000006, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 469638}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &494608
 Transform:
   m_ObjectHideFlags: 1
@@ -314,6 +315,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &9584328
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126288}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ee6a90b852e908c43bd10527d66dba13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11469626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,7 +351,7 @@ MonoBehaviour:
   CanDie: 1
   Lives: 1
   SoulValue: 0
-  entType: 1
+  entType: 3
   RoomNumber: 0
   SavePoint: {fileID: 0}
   SelectHealthBar: 0
@@ -376,7 +394,9 @@ MonoBehaviour:
   SDCooldown: 6
   SDDistance: 2
   SDChargeUp: 1
-  DirectionIndicator: {fileID: 0}
+  DirectionIndicator: {fileID: 116122}
+  Animate: {fileID: 9584328}
+  spriteImage: {fileID: 126288}
 --- !u!135 &13526914
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -5703,8 +5723,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34796039722f20d4f9994e05ac494fb6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300070, guid: 20415cec64cc49a4791a401bfd720c8f, type: 3}
+  m_Color: {r: 1, g: .931034565, b: 0, a: 1}
 --- !u!212 &21280282
 SpriteRenderer:
   m_ObjectHideFlags: 1
