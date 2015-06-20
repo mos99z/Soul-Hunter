@@ -33400,6 +33400,10 @@ MonoBehaviour:
   speed: .200000003
   range: 5
   mouseMarker: {fileID: 0}
+  PlasmaTravel: {fileID: 0}
+  PlasmaHit: {fileID: 0}
+  Sphere: {fileID: 0}
+  PSystem: {fileID: 0}
 --- !u!1 &658623116
 GameObject:
   m_ObjectHideFlags: 0
@@ -42734,6 +42738,7 @@ MonoBehaviour:
   damage: 5
   recoveryTime: 1.5
   BurningDebuff: {fileID: 0}
+  Flame: {fileID: 0}
   BurningDamage: 10
   DebuffChance: .899999976
   DebuffDuration: 10
@@ -45656,6 +45661,7 @@ MonoBehaviour:
   ImpactRate: .25
   MaxChildren: 5
   Child: 0
+  RockSpikeSound: []
 --- !u!1 &1028813705
 GameObject:
   m_ObjectHideFlags: 0
@@ -49047,7 +49053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1087278892
 Transform:
   m_ObjectHideFlags: 0
@@ -49156,6 +49162,7 @@ MonoBehaviour:
   Damage: 100
   AttackCollider: {fileID: 309978269}
   DirectionIndicator: {fileID: 309978267}
+  MeleeSFX: {fileID: 0}
   Animate: {fileID: 1853867249}
   spriteImage: {fileID: 1853867246}
 --- !u!54 &1087278897
@@ -62127,13 +62134,15 @@ GameObject:
   - 114: {fileID: 1422330400}
   - 195: {fileID: 1422330399}
   - 136: {fileID: 1422330397}
+  - 82: {fileID: 1422330403}
+  - 82: {fileID: 1422330402}
   m_Layer: 0
   m_Name: Perendi
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1422330396
 Transform:
   m_ObjectHideFlags: 0
@@ -62239,6 +62248,8 @@ MonoBehaviour:
   DirectionIndicator: {fileID: 1587701157}
   Animate: {fileID: 987983058}
   spriteImage: {fileID: 987983055}
+  MeleeSFX: {fileID: 1422330403}
+  DischargeSFX: {fileID: 1422330402}
 --- !u!54 &1422330401
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -62255,6 +62266,144 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!82 &1422330402
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422330395}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8fdca1eebdd9c3842a7db6cc5004d21f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &1422330403
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422330395}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 196cadf79b730b44da211d30837ced4a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1427045933
 GameObject:
   m_ObjectHideFlags: 0
@@ -68083,6 +68232,7 @@ MonoBehaviour:
   EarthLevel: 0
   ElectricLevel: 0
   WaterLevel: 0
+  NumberOfLevels: 3
   NumEnemiesKilled: 0
   DamageTaken: 0
   DamageDealt: 0

@@ -16,7 +16,6 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 	private bool Resetting = false;
 
 	private List<GameObject> OnTop = new List<GameObject>();
-	public AudioSource SpikeTriggerSound;
 	
 
 	private Animator animations = null;
@@ -86,7 +85,6 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 		Triggering = false;
 
 		animations.Play ("Triggered");
-		SpikeTriggerSound.Play ();
 
 		for (int i = 0; i < OnTop.Count; i++) {
 			if(OnTop[i] == null){
