@@ -63,7 +63,7 @@ GameObject:
   - 135: {fileID: 13509792}
   - 136: {fileID: 13684048}
   m_Layer: 11
-  m_Name: Ranged Minion
+  m_Name: Ranged Minion 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,12 +163,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157a19c7b905a4a47a949cac9ed68dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinRange: 5
-  MaxRange: 18
+  MinRange: 6
+  MaxRange: 20
   Mask:
     serializedVersion: 2
     m_Bits: 256
-  AttackCooldown: 3
+  AttackCooldown: 2.75
   FelMissile: {fileID: 141786, guid: 61477904adaa7ed4fbd715899be8a272, type: 2}
   missleDamage: 50
   isFrozen: 0
@@ -189,12 +189,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 0
-  MaxHealth: 100
-  CurrHealth: 100
+  MaxHealth: 125
+  CurrHealth: 125
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
-  SoulValue: 1
+  SoulValue: 2
   entType: 1
   RoomNumber: 0
   SavePoint: {fileID: 0}
