@@ -1,0 +1,706 @@
+fileFormatVersion: 2
+guid: 20415cec64cc49a4791a401bfd720c8f
+timeCreated: 1434796689
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DuetMove2_0
+    21300002: DuetMove2_1
+    21300004: DuetMove2_2
+    21300006: DuetMove2_3
+    21300008: DuetMove2_4
+    21300010: DuetMove2_5
+    21300012: DuetMove2_6
+    21300014: DuetMove2_7
+    21300016: DuetMove2_8
+    21300018: DuetMove2_9
+    21300020: DuetMove2_10
+    21300022: DuetMove2_11
+    21300024: DuetMove2_12
+    21300026: DuetMove2_13
+    21300028: DuetMove2_14
+    21300030: DuetMove2_15
+    21300032: DuetMove2_16
+    21300034: DuetMove2_17
+    21300036: DuetMove2_18
+    21300038: DuetMove2_19
+    21300040: DuetMove2_20
+    21300042: DuetMove2_21
+    21300044: DuetMove2_22
+    21300046: DuetMove2_23
+    21300048: DuetMove2_24
+    21300050: DuetMove2_25
+    21300052: DuetMove2_26
+    21300054: DuetMove2_27
+    21300056: DuetMove2_28
+    21300058: DuetMove2_29
+    21300060: DuetMove2_30
+    21300062: DuetMove2_31
+    21300064: DuetMove2_32
+    21300066: DuetMove2_33
+    21300068: DuetMove2_34
+    21300070: DuetMove_0
+    21300072: DuetMove_1
+    21300074: DuetMove_2
+    21300076: DuetMove_3
+    21300078: DuetMove_4
+    21300080: DuetMove_5
+    21300082: DuetMove_6
+    21300084: DuetMove_7
+    21300086: DuetMove_8
+    21300088: DuetMove_9
+    21300090: DuetMove_10
+    21300092: DuetMove_11
+    21300094: DuetMove_12
+    21300096: DuetMove_13
+    21300098: DuetMove_14
+    21300100: DuetMove_15
+    21300102: DuetMove_16
+    21300104: DuetMove_17
+    21300106: DuetMove_18
+    21300108: DuetMove_19
+    21300110: DuetMove_20
+    21300112: DuetMove_21
+    21300114: DuetMove_22
+    21300116: DuetMove_23
+    21300118: DuetMove_24
+    21300120: DuetMove_25
+    21300122: DuetMove_26
+    21300124: DuetMove_27
+    21300126: DuetMove_28
+    21300128: DuetMove_29
+    21300130: DuetMove_30
+    21300132: DuetMove_31
+    21300134: DuetMove_32
+    21300136: DuetMove_33
+    21300138: DuetMove_34
+    21300140: DuetMove_35
+    21300142: DuetMove_36
+    21300144: DuetMove_37
+    21300146: DuetMove_38
+    21300148: DuetMove_39
+    21300150: DuetMove_40
+    21300152: DuetMove_41
+    21300154: DuetMove_42
+    21300156: DuetMove_43
+    21300158: DuetMove_44
+    21300160: DuetMove_45
+    21300162: DuetMove_46
+    21300164: DuetMove_47
+    21300166: DuetMove_48
+    21300168: DuetMove_49
+    21300170: DuetMove_50
+    21300172: DuetMove_51
+    21300174: DuetMove_52
+    21300176: DuetMove_53
+    21300178: DuetMove_54
+    21300180: DuetMove_55
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DuetMove_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_12
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_17
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_19
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_20
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_23
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_24
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_25
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_26
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_27
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_29
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_31
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_33
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_34
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_37
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_39
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_40
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_41
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_45
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_46
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_47
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_48
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 20
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_51
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 20
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_52
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 20
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_53
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 20
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_54
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 20
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DuetMove_55
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 20
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
