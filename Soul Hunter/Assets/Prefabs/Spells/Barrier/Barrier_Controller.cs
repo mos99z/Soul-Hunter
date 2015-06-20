@@ -19,6 +19,10 @@ public class Barrier_Controller : MonoBehaviour
 		transform.parent = GameBrain.Instance.Player.transform;
 		transform.position = GameBrain.Instance.Player.transform.position;
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
+		float Divi = (float)GameBrain.Instance.NumberOfLevels * 10.0f;
+		defence += (float)GameBrain.Instance.FireLevel / Divi + (float)GameBrain.Instance.ElectricLevel / Divi + (float)GameBrain.Instance.WaterLevel / Divi;
+		if (defence > 1.0f)
+			defence = 1.0f;
 	}
 
 	void Update()

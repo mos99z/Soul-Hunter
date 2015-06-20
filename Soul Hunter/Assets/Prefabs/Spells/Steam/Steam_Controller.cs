@@ -19,6 +19,9 @@ public class Steam_Controller : MonoBehaviour
 		
 	void Start ()
 	{
+		NumDamageSteps += GameBrain.Instance.FireLevel;
+		MaxDamage += 5.0f * (float)GameBrain.Instance.FireLevel;
+
 		for (int ListSize = 0; ListSize < NumDamageSteps; ListSize++)
 		{
 			DamageSteps.Add(new List<GameObject>());

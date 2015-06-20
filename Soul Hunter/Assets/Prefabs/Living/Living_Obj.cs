@@ -218,11 +218,31 @@ public class Living_Obj : MonoBehaviour
 
 		if (CanTakeDamage)
 		{
-			if (ElementType != Element.None)
+			Element ElementalDamage = (Element)Mathf.RoundToInt((_damage - rawDamage) * 10.0f);
+			// If the obj's elemental type and the damage's elemental type are both not of type none.
+
+			if (ElementalDamage != Element.None)
 			{
-				Element ElementalDamage = (Element)Mathf.RoundToInt((_damage - rawDamage) * 10.0f);
-				// If the obj's elemental type and the damage's elemental type are both not of type none.
-				if (ElementalDamage != Element.None)
+				switch (ElementalDamage)
+				{
+				case Element.Fire:
+					ActualDamage = (int)((float)ActualDamage * (1.0f + (float)GameBrain.Instance.FireLevel / 3.0f));
+					break;
+				case Element.Wind:
+					ActualDamage = (int)((float)ActualDamage * (1.0f + (float)GameBrain.Instance.WindLevel / 3.0f));
+					break;
+				case Element.Earth:
+					ActualDamage = (int)((float)ActualDamage * (1.0f + (float)GameBrain.Instance.EarthLevel / 3.0f));
+					break;
+				case Element.Lightning:
+					ActualDamage = (int)((float)ActualDamage * (1.0f + (float)GameBrain.Instance.ElectricLevel / 3.0f));
+					break;
+				case Element.Water:
+					ActualDamage = (int)((float)ActualDamage * (1.0f + (float)GameBrain.Instance.WaterLevel / 3.0f));
+					break;
+				}
+
+				if (ElementType != Element.None)
 				{
 					// Get elemental difference between obj's elemental type and damage type.
 					int ElementalDifference = (int)ElementalDamage - (int)ElementType;
@@ -297,6 +317,9 @@ public class Living_Obj : MonoBehaviour
 				CurrHealth = MaxHealth;
 				if (entType == EntityType.Player)
 				{
+					GameBrain.Instance.SendMessage("ChangeMusic", GameBrain.Instance.GameplayMusic);
+					GameBrain.Instance.FightingCaptain = false;
+					GameBrain.Instance.FightingBoss = false;
 					GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
 					GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
 					GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");

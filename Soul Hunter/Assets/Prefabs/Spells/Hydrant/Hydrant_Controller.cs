@@ -31,6 +31,12 @@ public class Hydrant_Controller : MonoBehaviour {
 
 	void Start ()
 	{
+		int waterValue = GameBrain.Instance.WaterLevel;
+		PushBackForce += waterValue * 0.05f;
+		DebuffChance += waterValue * 0.1f;
+		Duration += waterValue * 1.0f;
+		RecoveryCost -= waterValue * 0.02777777f;
+		
 		oldSize = Size;
 		//PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
         transform.position = new Vector3(transform.position.x, StartHeight, transform.position.z);

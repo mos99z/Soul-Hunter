@@ -18,6 +18,9 @@ public class Shock_Prism_Controller : MonoBehaviour
 
 	void Start () 
 	{
+		DurationFinal += 1.0f * (float)GameBrain.Instance.WaterLevel;
+		FlightDuration -= 0.25f * (float)GameBrain.Instance.ElectricLevel;
+
 		RaycastHit colliderCheck = new RaycastHit();
 		Vector3 distance = (GameBrain.Instance.MouseMarker.transform.position - GameBrain.Instance.Player.transform.position);
 		distance.y = 0.0f;

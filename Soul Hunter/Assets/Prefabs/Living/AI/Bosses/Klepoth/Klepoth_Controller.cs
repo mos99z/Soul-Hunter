@@ -38,6 +38,8 @@ public class Klepoth_Controller : MonoBehaviour {
 	//float debugTimer = 0.0f;
 	float groundPoundChecker = 0.5f;
 	Vector3 stunnedPosition;
+
+	public AudioSource DeathSound;
 	
 	
 
@@ -64,7 +66,9 @@ public class Klepoth_Controller : MonoBehaviour {
 	void OnDestroy()
 	{
 		boundingWalls.SendMessage("DestroyWalls");
+		DeathSound.Play ();
 		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);	
+		GameBrain.Instance.FightingBoss = false;
 	}
 	// Update is called once per frame
 	void Update () 

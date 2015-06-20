@@ -17,8 +17,13 @@ public class Wind_Blade_Controller : MonoBehaviour
 	private Vector3 StartLocation = Vector3.zero;
 	private Vector3 ForwardDirection = Vector3.zero;
 	private float killSwitch = 5.0f;
+	float pushForce = 7.0f;
 	
-	void Start () {
+	void Start ()
+	{
+		transform.localScale *= 1.0f + (float)GameBrain.Instance.WindLevel / (float)GameBrain.Instance.NumberOfLevels;
+		Range += 2.0f * (float)GameBrain.Instance.WindLevel;
+		pushForce += (float)GameBrain.Instance.WindLevel;
 
 		// Start at desired height
 		Vector3 newHeight = transform.position;
@@ -83,7 +88,7 @@ public class Wind_Blade_Controller : MonoBehaviour
 				Vector3 pushDirection = transform.forward;
 				pushDirection.y = 0.0f;
 				pushDirection.Normalize();
-				pushDirection *= 7.0f;
+				pushDirection *= pushForce;
 				_object.transform.GetComponent<Rigidbody>().velocity = pushDirection;
 			}
 		}

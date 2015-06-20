@@ -21,6 +21,11 @@ public class Explosion_Controller : MonoBehaviour
 
 	void Start () 
 	{
+		burnChance += (float)GameBrain.Instance.FireLevel / ((float)GameBrain.Instance.NumberOfLevels * 10.0f);
+		crippleChance += (float)GameBrain.Instance.EarthLevel / ((float)GameBrain.Instance.NumberOfLevels * 10.0f);
+		SpellEffect.GetComponent<ParticleSystem> ().startSize *= 1.0f + (float)GameBrain.Instance.EarthLevel / (float)GameBrain.Instance.NumberOfLevels;
+		transform.localScale *= 1.0f + (float)GameBrain.Instance.EarthLevel / (float)GameBrain.Instance.NumberOfLevels;
+
 		RaycastHit colliderCheck = new RaycastHit();
 		Vector3 distance = (GameBrain.Instance.MouseMarker.transform.position - GameBrain.Instance.Player.transform.position);
 		distance.y = 0.0f;

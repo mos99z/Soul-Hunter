@@ -25,6 +25,8 @@ public class Crystal_Spikes_Controller : MonoBehaviour
 
 	void Start () 
 	{
+		recoveryCost *= 1.0f - (float)GameBrain.Instance.WindLevel / ((float)GameBrain.Instance.NumberOfLevels * 2.0f);
+		duration += (float)GameBrain.Instance.EarthLevel * 0.5f;
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
 

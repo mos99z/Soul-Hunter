@@ -11,6 +11,8 @@ public class Gravity_Well_Controller : MonoBehaviour
 	
 	void Start () 
 	{
+		duration += GameBrain.Instance.ElectricLevel * 0.5f;
+
 		RaycastHit colliderCheck = new RaycastHit();
 		Vector3 distance = (GameBrain.Instance.MouseMarker.transform.position - GameBrain.Instance.Player.transform.position);
 		distance.y = 0.0f;

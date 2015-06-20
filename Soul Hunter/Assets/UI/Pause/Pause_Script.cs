@@ -51,14 +51,14 @@ public class Pause_Script : MonoBehaviour {
 			Time.timeScale = 1;
 			gamePaused = false;
 			PauseMenu.SetActive(false);
+			if(GameBrain.Instance.FightingBoss == true)
+				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.BossMusic);
+			else if(GameBrain.Instance.FightingCaptain == true)
+				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.CaptainMusic);
+			else
+				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
 		}
 
-		if(GameBrain.Instance.FightingBoss == true)
-			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.BossMusic);
-		else if(GameBrain.Instance.FightingCaptain == true)
-			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.CaptainMusic);
-		else
-			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
 	}
 
 	public void Options()
