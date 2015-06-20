@@ -16,6 +16,9 @@ public class Freeze_Controller : MonoBehaviour
 
 	void Start () 
 	{
+		chance += GameBrain.Instance.WindLevel < GameBrain.Instance.WaterLevel ? (float)GameBrain.Instance.WindLevel 
+			: (float)GameBrain.Instance.WaterLevel / ((float)GameBrain.Instance.NumberOfLevels * 2.0f);
+
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
 		Vector3 spawn = mouseMarker.transform.position;

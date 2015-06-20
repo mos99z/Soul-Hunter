@@ -20,6 +20,7 @@ public class Bolt_Chain_Controller : MonoBehaviour
 	
 	void Start () 
 	{
+		NumberOfJumps += GameBrain.Instance.ElectricLevel;
 		Vector3 mouseLocation = GameBrain.Instance.MouseMarker.transform.position;
 		float smallestLength = float.MaxValue;
 		int startingTarget = -1;

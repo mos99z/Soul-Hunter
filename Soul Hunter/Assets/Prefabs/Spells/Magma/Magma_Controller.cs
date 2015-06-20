@@ -22,6 +22,9 @@ public class Magma_Controller : MonoBehaviour
 
 	void Start () 
 	{
+		burningDuration += 1.0f * (float)GameBrain.Instance.FireLevel;
+		recoveryTime -= 0.25f * (float)GameBrain.Instance.EarthLevel;
+		
 		timer = 0.0f;
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;

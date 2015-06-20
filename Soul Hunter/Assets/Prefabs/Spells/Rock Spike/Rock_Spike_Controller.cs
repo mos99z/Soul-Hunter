@@ -11,6 +11,8 @@ public class Rock_Spike_Controller : MonoBehaviour {
 
 	void Start ()
 	{
+		ImpactRate -= 0.025f * (float)GameBrain.Instance.EarthLevel;
+
 		Vector3 lookAt = GameObject.FindGameObjectWithTag ("MouseMarker").transform.position;
 		lookAt.y = transform.position.y;
 		transform.LookAt (lookAt);

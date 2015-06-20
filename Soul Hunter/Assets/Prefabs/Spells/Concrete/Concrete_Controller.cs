@@ -23,6 +23,8 @@ public class Concrete_Controller : MonoBehaviour
 
 		if (slow == null)
 			slow = GameBrain.Instance.GetComponent<DebuffMasterList>().slowed;
+
+		transform.localScale *= 1.0f + (float)GameBrain.Instance.EarthLevel / (float)GameBrain.Instance.NumberOfLevels;
 	}
 	
 	void Update () 

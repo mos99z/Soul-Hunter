@@ -23,7 +23,11 @@ public class Fire_Ball_Controller : MonoBehaviour {
 	private float _75PercentDropRate = 0.0f;
 	private bool Reached75 = false;
 	
-	void Start () {
+	void Start ()
+	{
+		Range += 2.0f * GameBrain.Instance.FireLevel;
+		Speed += 0.05f * GameBrain.Instance.FireLevel;
+
 		_50PercentDropRate = 0.01f * StartHeight;
 		_75PercentDropRate = 0.03f * StartHeight;
 

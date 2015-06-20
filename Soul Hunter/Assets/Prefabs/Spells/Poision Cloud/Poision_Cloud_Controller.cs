@@ -20,6 +20,13 @@ public class Poision_Cloud_Controller : MonoBehaviour
 
 	void Start () 
 	{
+		duration += 2.0f * GameBrain.Instance.EarthLevel < GameBrain.Instance.ElectricLevel 
+			? (GameBrain.Instance.EarthLevel < GameBrain.Instance.WaterLevel 
+			   ? (float)GameBrain.Instance.EarthLevel : (GameBrain.Instance.WaterLevel < GameBrain.Instance.ElectricLevel 
+			                                          ? (float)GameBrain.Instance.WaterLevel : (float)GameBrain.Instance.ElectricLevel)) 
+				: GameBrain.Instance.ElectricLevel < GameBrain.Instance.WaterLevel 
+				? (float)GameBrain.Instance.ElectricLevel : (float)GameBrain.Instance.WaterLevel;
+
 		RaycastHit colliderCheck = new RaycastHit();
 		Vector3 distance = (GameBrain.Instance.MouseMarker.transform.position - GameBrain.Instance.Player.transform.position);
 		distance.y = 0.0f;

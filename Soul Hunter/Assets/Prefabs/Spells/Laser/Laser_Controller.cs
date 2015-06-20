@@ -31,6 +31,10 @@ public class Laser_Controller : MonoBehaviour {
 	
 	void Start ()
 	{
+		Range += 2.0f * GameBrain.Instance.FireLevel;
+		DebuffChance += 0.1f * GameBrain.Instance.ElectricLevel;
+		RecoveryCostRate -= 0.05f * GameBrain.Instance.ElectricLevel;
+
 		oldSize = Size;
 		//PlayerFaceingIndicator = GameObject.Find ("Direction Indicator");
 		transform.position = new Vector3(transform.position.x, StartHeight, transform.position.z);

@@ -12,6 +12,10 @@ public class Fog_Controller : MonoBehaviour
 //	public GameObject blind;	// debuff to apply
 	void Start () 
 	{
+		duration += GameBrain.Instance.WindLevel;
+		transform.localScale *= 1.0f + GameBrain.Instance.FireLevel < GameBrain.Instance.WaterLevel ? (float)GameBrain.Instance.FireLevel 
+			: (float)GameBrain.Instance.WaterLevel / (float)GameBrain.Instance.NumberOfLevels;
+
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
 		transform.position = mouseMarker.transform.position;

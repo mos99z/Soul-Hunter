@@ -14,6 +14,9 @@ public class Muck_Controller : MonoBehaviour
 
 	void Start () 
 	{
+		duration += (float)GameBrain.Instance.EarthLevel;
+
+
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
 		Vector3 spawn = mouseMarker.transform.position;
@@ -39,6 +42,7 @@ public class Muck_Controller : MonoBehaviour
 			slowDebuff.transform.parent = other.transform;
 			slowDebuff.transform.localPosition = Vector3.zero;
 			slowDebuff.GetComponent<Slowed_Controller>().duration = 15.0f;
+			slowDebuff.GetComponent<Slowed_Controller>().slowSpeedModifier = 0.5f + 0.05f * (float)GameBrain.Instance.WaterLevel;
 
 			GameObject wetDebuff = Instantiate(GameBrain.Instance.GetComponent<DebuffMasterList>().wet);
 			wetDebuff.transform.parent = other.transform;
