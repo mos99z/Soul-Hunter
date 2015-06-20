@@ -10,6 +10,8 @@ public class Aqua_Jet_Controller : MonoBehaviour
 	public float recoveryTime = 1.5f;	// how long for spell to cooldwon
 	public int maxHits = 5;				// how many times spelll can hit before dieing
 
+	public AudioSource AquaJetTravel;
+
 	int hits = 0;		// keep track of the hits
 	Vector3 origPos;	// where the spell starts
 	Vector3 targetPos;	// where the spell ends
