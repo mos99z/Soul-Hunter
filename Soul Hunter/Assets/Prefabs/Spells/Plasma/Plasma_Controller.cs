@@ -13,6 +13,13 @@ public class Plasma_Controller : MonoBehaviour
 	Vector3 startLoc = Vector3.zero;	// where the spell will spawn
 	Vector3 direction = Vector3.zero;	// direction for spell to travel
 
+	public AudioSource PlasmaTravel;
+	public AudioSource PlasmaHit;
+	public SphereCollider Sphere;
+	public GameObject PSystem;
+	bool die = false;
+	float deathCounter = 1.0f;
+
 	void Start ()
 	{
 		speed += 0.01f * GameBrain.Instance.FireLevel < GameBrain.Instance.ElectricLevel ? (float)GameBrain.Instance.FireLevel : (float)GameBrain.Instance.ElectricLevel;
@@ -34,7 +41,15 @@ public class Plasma_Controller : MonoBehaviour
 	
 	void Update ()
 	{
-
+		if (die) 
+		{
+			deathCounter -= Time.deltaTime;
+			if(deathCounter <= 0.0f)
+			{
+				PlasmaHit.Stop();
+				Destroy (gameObject);
+			}	
+		}
 	}
 	
 	void FixedUpdate ()
@@ -48,14 +63,24 @@ public class Plasma_Controller : MonoBehaviour
 	
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Enemy")
+		if (other.tag == "Enemy") 
 		{
 			other.transform.SendMessage ("TakeDamage", damage);
-			
-			Destroy(gameObject);
+			PlasmaTravel.Stop ();
+			PlasmaHit.Play ();
+			Sphere.enabled = false;
+			PSystem.SetActive(false);
+			die = true;
+
 		}
-		else if (other.tag == "Solid")
-			Destroy(gameObject);
+		else if (other.tag == "Solid") 
+		{
+			PlasmaTravel.Stop();
+			PlasmaHit.Play();
+			Sphere.enabled = false;
+			PSystem.SetActive(false);
+			die = true;
+		}
 	}
 	
 }

@@ -16,6 +16,7 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 	private bool Resetting = false;
 
 	private List<GameObject> OnTop = new List<GameObject>();
+	
 
 	private Animator animations = null;
 

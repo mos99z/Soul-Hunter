@@ -32,6 +32,8 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 	public float attackLength = 0;
 	public GameObject spriteImage;
 
+	public AudioSource RangedSFX;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -87,6 +89,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 				//Debug.Log("Enemy Attacked");
 				Vector3 startLoc = transform.position;
 				startLoc.y = 1.5f;
+				RangedSFX.Play();
 				GameObject RangedAttack = GameObject.Instantiate(FelMissile);
 				RangedAttack.GetComponent<Fel_Missile_Controller>().Damage = missleDamage;	// this assignment is necessary for cripple
 				RangedAttack.transform.position = startLoc;

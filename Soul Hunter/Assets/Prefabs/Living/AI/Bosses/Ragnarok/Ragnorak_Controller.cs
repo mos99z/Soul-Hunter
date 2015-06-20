@@ -13,7 +13,7 @@ public class Ragnorak_Controller : MonoBehaviour
 	private Transform playerShadow;
 
 	//public GameObject boundingWalls;		// this will lock the player in a room
-
+	public AudioSource DeathSound;
 	//Behavior vars
 	public float wayPointMinTicker = 3;
 	public float wayPointMaxTicker = 3;
@@ -71,6 +71,10 @@ public class Ragnorak_Controller : MonoBehaviour
 	private bool slashing;
 	private float slashTicker;
 
+	public AudioSource MeleeSFX;
+	public AudioSource FireBreathSFX;
+	public AudioSource ShockwaveSFX;
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -106,6 +110,8 @@ public class Ragnorak_Controller : MonoBehaviour
 	{
 		//boundingWalls.SendMessage("DestroyWalls");
 		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+		GameBrain.Instance.FightingBoss = false;
+		DeathSound.Play ();
 	}
 	// Update is called once per frame
 	void Update ()
@@ -228,6 +234,8 @@ public class Ragnorak_Controller : MonoBehaviour
 					flameBreathTicker = Random.Range(flameBreathMinTicker, flameBreathMaxTicker);
 				}
 				flameBreathCollider.enabled = true;
+				FireBreathSFX.Play ();
+				
 			}
 		}
 		else
@@ -284,6 +292,7 @@ public class Ragnorak_Controller : MonoBehaviour
 					doOnce = false;
 					bossCollider.enabled = true;
 					SockWaveCollider.enabled = true;
+					ShockwaveSFX.Play();
 				}
 			}
 		}
@@ -296,6 +305,7 @@ public class Ragnorak_Controller : MonoBehaviour
 				Claw.SetActive(true);
 				meleeTicker = Random.Range(meleeMinTicker, meleeMaxTicker);
 				meleeCollider.enabled = true;
+				MeleeSFX.Play();
 				slashing = true;
 				slashTicker = 1.75f;
 			}
@@ -324,6 +334,7 @@ public class Ragnorak_Controller : MonoBehaviour
 					flameBreathTicker = Random.Range(flameBreathMinTicker, flameBreathMaxTicker);
 				}
 				flameBreathCollider.enabled = true;
+				FireBreathSFX.Play ();
 			}
 		}
 		if (meteorTicker <= 0)
@@ -433,6 +444,7 @@ public class Ragnorak_Controller : MonoBehaviour
 		{
 			if (meleeCollider.enabled == true)
 			{
+
 				col.SendMessage("TakeDamage", meleeDamge);
 				meleeCollider.enabled = false;
 			}

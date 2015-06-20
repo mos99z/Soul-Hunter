@@ -34,6 +34,9 @@ public class Perendi_Controller : MonoBehaviour {
 	//animation stuff
 	public Animator Animate = null;
 	public GameObject spriteImage;
+
+	public AudioSource MeleeSFX;
+	public AudioSource DischargeSFX;
 	
 	// Use this for initialization
 	void Start ()
@@ -134,12 +137,14 @@ public class Perendi_Controller : MonoBehaviour {
 				if(currentSDCooldown <= 0.0f && CurrentlyDischarging == false)
 				{
 					ShockDischarge.SetActive(true);
+					DischargeSFX.Play ();
 					CurrentlyDischarging = true;
 					currentSDCooldown = Random.Range(2.0f,3.0f);
 				}
 				if(currentSDCooldown <= 0.0f && CurrentlyDischarging == true)
 				{
 					ShockDischarge.SetActive(false);
+					DischargeSFX.Stop();
 					CurrentlyDischarging = false;
 					currentSDCooldown = SDCooldown;
 					DischargingStatic = false;
@@ -229,6 +234,7 @@ public class Perendi_Controller : MonoBehaviour {
 	{
 		if (col.tag == "Player") 
 		{
+			MeleeSFX.Play ();
 			col.SendMessage("TakeDamage",Damage);
 		}
 	}
@@ -251,6 +257,7 @@ public class Perendi_Controller : MonoBehaviour {
 		{
 			boundingWalls.SendMessage("DestroyWalls");
 			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+			GameBrain.Instance.FightingBoss = false;
 		}
 
 	}

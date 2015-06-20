@@ -317,6 +317,9 @@ public class Living_Obj : MonoBehaviour
 				CurrHealth = MaxHealth;
 				if (entType == EntityType.Player)
 				{
+					GameBrain.Instance.SendMessage("ChangeMusic", GameBrain.Instance.GameplayMusic);
+					GameBrain.Instance.FightingCaptain = false;
+					GameBrain.Instance.FightingBoss = false;
 					GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
 					GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
 					GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");

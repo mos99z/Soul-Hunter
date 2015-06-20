@@ -20,6 +20,7 @@ public class Binding_Captain_Controller : MonoBehaviour
 	public float meleeDamge;
 	public float meleeRange = 5;
 	public SphereCollider meleeCollider;
+	public AudioSource MeleeAttack;
 
 	public float abilityMinTicker = 1;
 	public float abilityMaxTicker = 1;
@@ -277,6 +278,7 @@ public class Binding_Captain_Controller : MonoBehaviour
 		{
 			if (meleeCollider.enabled == true)
 			{
+				MeleeAttack.Play ();
 				col.SendMessage("TakeDamage", meleeDamge);
 				meleeCollider.enabled = false;
 			}
@@ -301,5 +303,6 @@ public class Binding_Captain_Controller : MonoBehaviour
 		Fog_Event_Manager.PlayerEntered -= LosePlayer;
 		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+		GameBrain.Instance.FightingCaptain = false;
 	}
 }

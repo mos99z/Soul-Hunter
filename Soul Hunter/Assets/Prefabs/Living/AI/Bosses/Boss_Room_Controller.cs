@@ -22,6 +22,7 @@ public class Boss_Room_Controller : MonoBehaviour {
 		if (col.tag == "Player") 
 		{
 			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.BossMusic);
+			GameBrain.Instance.FightingBoss = true;
 			if (numBosses.Length > 1)
 			{
 				GameBrain.Instance.HUDMaster.SendMessage("ActivateDualBar", 0);

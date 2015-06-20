@@ -189,7 +189,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1403295306}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: .411772847, y: .0270000007}
   m_AnchorMax: {x: .588454425, y: .0820000023}
   m_AnchoredPosition: {x: 0, y: 1.5}
@@ -471,6 +471,7 @@ RectTransform:
   - {fileID: 1485990113}
   - {fileID: 804498278}
   - {fileID: 91779918}
+  - {fileID: 1912591512}
   - {fileID: 515277409}
   m_Father: {fileID: 1444153546}
   m_RootOrder: 0
@@ -746,3 +747,73 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746068892}
+--- !u!1 &1912591511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1912591512}
+  - 222: {fileID: 1912591514}
+  - 114: {fileID: 1912591513}
+  m_Layer: 5
+  m_Name: Artists
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1912591512
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912591511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1403295306}
+  m_RootOrder: 4
+  m_AnchorMin: {x: .399262667, y: .254242152}
+  m_AnchorMax: {x: .601000011, y: .463000029}
+  m_AnchoredPosition: {x: .0999984741, y: -.200000763}
+  m_SizeDelta: {x: 0, y: -1.09999847}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1912591513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912591511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Artists:
+
+    Caris Frazier
+
+    Gregory Bey'
+--- !u!222 &1912591514
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912591511}

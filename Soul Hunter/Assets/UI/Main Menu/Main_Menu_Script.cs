@@ -221,9 +221,25 @@ public class Main_Menu_Script : MonoBehaviour
 			GameBrain.Instance.SendMessage ("ChangeMusic", GameBrain.Instance.GameplayMusic);
 			switch (GameBrain.Instance.CurrentLevel)
 			{
-			case 1: Application.LoadLevel("Level 1"); break;
-			case 2: Application.LoadLevel("Level 2"); break;
-			case 3: Application.LoadLevel("Level 3"); break;
+			case 1: 
+			{		
+				ao = Application.LoadLevelAsync("Level 1");
+				ao.allowSceneActivation = false;
+				Application.LoadLevel("Level 1"); 
+				break;
+			}
+			case 2:
+			{		
+				ao = Application.LoadLevelAsync("Level 2");
+				ao.allowSceneActivation = false;
+				break;
+			}
+			case 3:
+			{		
+				ao = Application.LoadLevelAsync("Level 3");
+				ao.allowSceneActivation = false;
+				break;
+			}
 			}
 		}
 

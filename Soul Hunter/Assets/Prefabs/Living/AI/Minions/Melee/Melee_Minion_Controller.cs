@@ -34,6 +34,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	private float attackTicker = 0;
 	public float attackLength = 0;
 	public GameObject spriteImage;
+	public AudioSource MeleeAttack;
 
 	// Use this for initialization
 	void Start ()
@@ -373,6 +374,7 @@ public class Melee_Minion_Controller : MonoBehaviour {
 	{
 		if (col.tag == "Player") 
 		{
+			MeleeAttack.Play ();
 			col.SendMessage("TakeDamage",Damage);
 			lungeTimer = 0.0f;
 		}

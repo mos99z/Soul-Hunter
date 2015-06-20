@@ -42,6 +42,9 @@ public class Mage_Captain_Controller : MonoBehaviour {
 	private float attackTicker = 0;
 	public float attackLength = 0;
 	public GameObject spriteImage;
+
+	public AudioSource RangedSFX;
+	public AudioSource SpellBarrageSFX;
 	
 	// Use this for initialization
 	void Start () 
@@ -68,6 +71,7 @@ public class Mage_Captain_Controller : MonoBehaviour {
 		Fog_Event_Manager.PlayerEntered -= LosePlayer;
 		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+		GameBrain.Instance.FightingCaptain = false;
 	}
 
 	// Update is called once per frame
@@ -114,6 +118,7 @@ public class Mage_Captain_Controller : MonoBehaviour {
 						underMelee = true;
 						Vector3 startLoc = transform.position;
 						startLoc.y = 1.5f;
+						RangedSFX.Play ();
 						GameObject missile = (GameObject)GameObject.Instantiate(FelMissile, startLoc, transform.rotation);
 						missile.GetComponent<Fel_Missile_Controller>().Damage = missileDamage; 		// needed for cripple
 						//RangedAttack.transform.position = startLoc;0
@@ -189,6 +194,8 @@ public class Mage_Captain_Controller : MonoBehaviour {
 
 				Vector3 startLoc = transform.position;
 				startLoc.y = 1.5f;
+				SpellBarrageSFX.Play();
+
 				GameObject spell = (GameObject)GameObject.Instantiate(SpellBarrage, startLoc, transform.rotation);
 				spell.GetComponent<Spell_Barrage_Controller>().Damage = spellDamage;		// needed for cripple
 				isCastingSpellBarrage = false;
