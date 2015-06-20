@@ -805,7 +805,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 497316}
@@ -1018,7 +1018,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 14.0600004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438646}
@@ -1695,7 +1695,7 @@ Animator:
   m_GameObject: {fileID: 117346}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 20b647c106aca5442ad4c66be271224b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 743c4d60aabe08c4a9d7f029e43b28f3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1851,13 +1851,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: .150000006
   DirectionIndicator: {fileID: 154108}
-  Animations: {fileID: 9570810}
+  Animate: {fileID: 9570810}
   CursorColliders:
     serializedVersion: 2
     m_Bits: 2147483648
   ScreenCamera: {fileID: 0}
   GameOver: {fileID: 0}
   isCrippled: 0
+  attackLength: 1
+  spriteImage: {fileID: 117346}
 --- !u!114 &11467702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3255,7 +3257,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 13836cf686cf7b046a3299bceb53d3ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8ed8969dfecad04096c743a80b6d37d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

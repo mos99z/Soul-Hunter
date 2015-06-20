@@ -26,8 +26,7 @@ public class Main_Menu_Script : MonoBehaviour
 	void Start () 
 	{
 		LoadingScreen = GameBrain.Instance.loadingScreen;
-		int zero = 0;
-		GameBrain.Instance.SendMessage("ChangeMusic", zero);
+		GameBrain.Instance.SendMessage("ChangeMusic", GameBrain.Instance.MenuMusic);
 
 		mainMenScript = (Main_Menu_Script)MainMenu.GetComponent("Main_Menu_Script");
 
@@ -166,7 +165,7 @@ public class Main_Menu_Script : MonoBehaviour
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync ("Tutorial");
 		ao.allowSceneActivation = false;
-		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
+		GameBrain.Instance.SendMessage ("ChangeMusic", GameBrain.Instance.GameplayMusic);
 		
 	}
 
@@ -182,7 +181,7 @@ public class Main_Menu_Script : MonoBehaviour
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync("Level 1");
 		ao.allowSceneActivation = false;
-		GameBrain.Instance.SendMessage ("ChangeMusic", 1);
+		GameBrain.Instance.SendMessage ("ChangeMusic", GameBrain.Instance.GameplayMusic);
 		
 	}
 
@@ -219,7 +218,7 @@ public class Main_Menu_Script : MonoBehaviour
 			LoadTutorial();
 		else if (GameBrain.Instance.CurrentLevel > 0)
 		{
-			GameBrain.Instance.SendMessage ("ChangeMusic", 1);
+			GameBrain.Instance.SendMessage ("ChangeMusic", GameBrain.Instance.GameplayMusic);
 			switch (GameBrain.Instance.CurrentLevel)
 			{
 			case 1: Application.LoadLevel("Level 1"); break;

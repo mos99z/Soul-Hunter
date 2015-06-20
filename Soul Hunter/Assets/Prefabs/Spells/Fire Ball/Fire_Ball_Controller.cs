@@ -27,6 +27,9 @@ public class Fire_Ball_Controller : MonoBehaviour {
 		_50PercentDropRate = 0.01f * StartHeight;
 		_75PercentDropRate = 0.03f * StartHeight;
 
+		SFXMoving.ignoreListenerVolume = false;
+		SFXImpact.ignoreListenerVolume = false;
+
 		// Start at desired height
 		Vector3 newHeight = transform.position;
 		newHeight.y = StartHeight;

@@ -1,0 +1,759 @@
+fileFormatVersion: 2
+guid: cdc1d5e85e55d0846809e66f9ef42e73
+timeCreated: 1434776700
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Mage_Slash_0
+    21300002: Mage_Slash_1
+    21300004: Mage_Slash_2
+    21300006: Mage_Slash_3
+    21300008: Mage_Slash_4
+    21300010: Mage_Slash_5
+    21300012: Mage_Slash_6
+    21300014: Mage_Slash_7
+    21300016: Mage_Slash_8
+    21300018: Mage_Slash_9
+    21300020: Mage_Slash_10
+    21300022: Mage_Slash_11
+    21300024: Mage_Slash_12
+    21300026: Mage_Slash_13
+    21300028: Mage_Slash_14
+    21300030: Mage_Slash_15
+    21300032: Mage_Slash_16
+    21300034: Mage_Slash_17
+    21300036: Mage_Slash_18
+    21300038: Mage_Slash_19
+    21300040: Mage_Slash_20
+    21300042: Mage_Slash_21
+    21300044: Mage_Slash_22
+    21300046: Mage_Slash_23
+    21300048: Mage_Slash_24
+    21300050: Mage_Slash_25
+    21300052: Mage_Slash_26
+    21300054: Mage_Slash_27
+    21300056: Mage_Slash_28
+    21300058: Mage_Slash_29
+    21300060: Mage_Slash_30
+    21300062: Mage_Slash_31
+    21300064: Mage_Slash_32
+    21300066: Mage_Slash_33
+    21300068: Mage_Slash_34
+    21300070: Mage_Slash_35
+    21300072: Mage_Slash_36
+    21300074: Mage_Slash_37
+    21300076: Mage_Slash_38
+    21300078: Mage_Slash_39
+    21300080: Mage_Slash_40
+    21300082: Mage_Slash_41
+    21300084: Mage_Slash_42
+    21300086: Mage_Slash_43
+    21300088: Mage_Slash_44
+    21300090: Mage_Slash_45
+    21300092: Mage_Slash_46
+    21300094: Mage_Slash_47
+    21300096: Mage_Slash_48
+    21300098: Mage_Slash_49
+    21300100: Mage_Slash_50
+    21300102: Mage_Slash_51
+    21300104: Mage_Slash_52
+    21300106: Mage_Slash_53
+    21300108: Mage_Slash_54
+    21300110: Mage_Slash_55
+    21300112: Mage_Slash_56
+    21300114: Mage_Slash_57
+    21300116: Mage_Slash_58
+    21300118: Mage_Slash_59
+    21300120: Mage_Slash_60
+    21300122: Mage_Slash_61
+    21300124: Mage_Slash_62
+    21300126: Mage_Slash_63
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Mage_Slash_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 921
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 921
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_2
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 921
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_3
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 921
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_4
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 921
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_5
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 921
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_6
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 921
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_7
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 921
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 790
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 790
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_10
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 790
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 790
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_12
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 790
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_13
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 790
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_14
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 790
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_15
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 790
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 659
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_17
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 659
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_18
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 659
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_19
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 659
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_20
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 659
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_21
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 659
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_22
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 659
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_23
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 659
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_25
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 528
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_26
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 528
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_27
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 528
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_28
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 528
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_29
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 528
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_30
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 528
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_31
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 528
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 397
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_33
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 397
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_34
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 397
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_35
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 397
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_36
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 397
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_37
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 397
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_38
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 397
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_39
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 397
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_41
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 266
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_42
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 266
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_43
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 266
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_44
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 266
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_45
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 266
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_46
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 266
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_47
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 266
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_49
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 135
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_50
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 135
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_51
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 135
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_52
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 135
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_53
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 135
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_54
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 135
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_55
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 135
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_57
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 4
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_58
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 4
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_59
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 4
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_60
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 4
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_61
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 4
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_62
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 4
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mage_Slash_63
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 4
+        width: 89
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

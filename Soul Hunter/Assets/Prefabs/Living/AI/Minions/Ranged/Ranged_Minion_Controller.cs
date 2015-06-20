@@ -181,13 +181,13 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 			if (navigation.speed > 0.25f)
 			{
 				Vector3 tempPos = this.gameObject.transform.position;
-				tempPos.y = 2.38f;
+				tempPos.y = 1.19f;
 				spriteImage.transform.position = tempPos;
 			}
 			if (underMelee)
 			{
 				Vector3 tempPos = this.gameObject.transform.position;
-				tempPos.y = 2.22f;
+				tempPos.y = 1.01f;
 				spriteImage.transform.position = tempPos;
 			}
 			if (dotProd >= 0.75f)
