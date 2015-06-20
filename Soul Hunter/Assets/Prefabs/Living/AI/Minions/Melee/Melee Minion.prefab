@@ -201,6 +201,8 @@ MonoBehaviour:
   isFrozen: 0
   DirectionIndicator: {fileID: 193342}
   Animate: {fileID: 9577718}
+  attackLength: 1
+  spriteImage: {fileID: 157290}
 --- !u!135 &13571626
 SphereCollider:
   m_ObjectHideFlags: 1

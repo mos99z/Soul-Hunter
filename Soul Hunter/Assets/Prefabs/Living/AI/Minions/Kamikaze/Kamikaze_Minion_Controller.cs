@@ -10,13 +10,19 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 
 	public GameObject player;
 	public float CountdownTimer = 1.5f;
-	public float KamikazeDistance = 2.0f;
+	public float KamikazeDistance = 3.0f;
 	public float ExplosionDamage = 100.0f;
-	public float ExplosionRange = 3.0f;
+	public float ExplosionRange = 6.0f;
 	public bool isFrozen = false;	// used for frozen debuff
 
 	public GameObject DirectionIndicator = null;
-	public Animator Animate = null;
+
+	// Appearance
+	public GameObject bombElement;
+	public GameObject overCharge;
+	public GameObject boutToBlow;
+	public GameObject boom;
+	private Living_Obj LVObj;
 
 	// Use this for initialization
 	void Start () 
@@ -24,13 +30,65 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 		Fog_Event_Manager.PlayerEntered += LosePlayer;
 		Fog_Event_Manager.PlayerLeft += FindPlayer;
 		player = GameBrain.Instance.Player;
-		if (Animate == null)
-			Animate = transform.GetComponentInChildren<Animator> ();
 		if (DirectionIndicator == null)
 			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 		navigation = GetComponent<NavMeshAgent>();
 		target = player;
 		navigation.updateRotation = false;
+
+		LVObj = (Living_Obj)this.gameObject.GetComponent<Living_Obj>();
+		Element elType = LVObj.ElementType;
+		switch (elType)
+		{
+		case Element.Fire:
+		{
+			bombElement.GetComponent<ParticleSystem>().startColor = new Color32(255, 0, 0, 255);
+			overCharge.GetComponent<ParticleSystem>().startColor = new Color32(239, 0, 0, 255);
+			boutToBlow.GetComponent<ParticleSystem>().startColor = new Color32(255, 0, 0, 255);
+			boom.GetComponent<ParticleSystem>().startColor = new Color32(255, 16, 16, 255);
+			break;
+		}
+		case Element.Wind:
+		{
+			bombElement.GetComponent<ParticleSystem>().startColor = new Color32(128, 128, 128, 255);
+			overCharge.GetComponent<ParticleSystem>().startColor = new Color32(112, 112, 112, 255);
+			boutToBlow.GetComponent<ParticleSystem>().startColor = new Color32(128, 128, 128, 255);
+			boom.GetComponent<ParticleSystem>().startColor = new Color32(144, 144, 144, 255);
+			break;
+		}
+		case Element.Earth:
+		{
+			bombElement.GetComponent<ParticleSystem>().startColor = new Color32(128, 64, 0, 255);
+			overCharge.GetComponent<ParticleSystem>().startColor = new Color32(112, 48, 0, 255);
+			boutToBlow.GetComponent<ParticleSystem>().startColor = new Color32(128, 64, 0, 255);
+			boom.GetComponent<ParticleSystem>().startColor = new Color32(144, 80, 16, 255);
+			break;
+		}
+		case Element.Lightning:
+		{
+			bombElement.GetComponent<ParticleSystem>().startColor = new Color32(255, 255, 0, 255);
+			overCharge.GetComponent<ParticleSystem>().startColor = new Color32(239, 239, 0, 255);
+			boutToBlow.GetComponent<ParticleSystem>().startColor = new Color32(255, 255, 0, 255);
+			boom.GetComponent<ParticleSystem>().startColor = new Color32(255, 255, 16, 255);
+			break;
+		}
+		case Element.Water:
+		{
+			bombElement.GetComponent<ParticleSystem>().startColor = new Color32(32, 32, 255, 255);
+			overCharge.GetComponent<ParticleSystem>().startColor = new Color32(16, 16, 255, 255);
+			boutToBlow.GetComponent<ParticleSystem>().startColor = new Color32(32, 32, 255, 255);
+			boom.GetComponent<ParticleSystem>().startColor = new Color32(48, 48, 255, 255);
+			break;
+		}
+		default:
+		{
+			bombElement.GetComponent<ParticleSystem>().startColor = new Color32(32, 32, 32, 255);
+			overCharge.GetComponent<ParticleSystem>().startColor = new Color32(16, 16, 16, 255);
+			boutToBlow.GetComponent<ParticleSystem>().startColor = new Color32(32, 32, 32, 255);
+			boom.GetComponent<ParticleSystem>().startColor = new Color32(48, 48, 48, 255);
+			break;
+		}
+		}
 	}
 	
 	// Update is called once per frame
@@ -49,6 +107,7 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 			if (playerDistance <= KamikazeDistance) 
 			{
 				isCountingDown = true;
+				boutToBlow.SetActive(true);
 				navigation.Stop();
 			}
 		}
@@ -56,7 +115,10 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 		if (isCountingDown == true) 
 		{
 			CountdownTimer -= Time.deltaTime;
-			
+			if (CountdownTimer <= 0.1f)
+			{
+				boom.SetActive(true);
+			}
 			if(CountdownTimer <= 0)
 			{
 				Explode();
@@ -84,37 +146,6 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 		Vector3 movementDirection = navigation.velocity.normalized;
 		if (movementDirection.magnitude >= 1.0f) {
 			DirectionIndicator.transform.forward = navigation.velocity.normalized;
-			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
-			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
-			if (dotProd >= 0.75f)
-			{
-				Animate.Play ("Kamikaze_Up");
-			}
-			else if (dotProd <= -0.75f)
-			{
-				Animate.Play ("Kamikaze_Down");
-			}
-			else if (dotProd > -0.25f && dotProd <= 0.25f)
-			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Kamikaze_Left");
-				else
-					Animate.Play ("Kamikaze_Right");
-			}
-			else if (dotProd > 0.25f && dotProd < 0.75f)
-			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Kamikaze_UpLeft");
-				else
-					Animate.Play ("Kamikaze_UpRight");
-			}
-			else
-			{
-				if (crossProd.y < 0.0f)
-					Animate.Play ("Kamikaze_DownLeft");
-				else
-					Animate.Play ("Kamikaze_DownRight");
-			}
 		}
 	}
 
