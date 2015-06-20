@@ -1,0 +1,1111 @@
+fileFormatVersion: 2
+guid: fa14814af3c87344cac94e1c9920d00b
+timeCreated: 1434764677
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Binding - Attack_0
+    21300002: Binding - Attack_1
+    21300004: Binding - Attack_2
+    21300006: Binding - Attack_3
+    21300008: Binding - Attack_4
+    21300010: Binding - Attack_5
+    21300012: Binding - Attack_6
+    21300014: Binding - Attack_7
+    21300016: Binding - Attack_8
+    21300018: Binding - Attack_9
+    21300020: Binding - Attack_10
+    21300022: Binding - Attack_11
+    21300024: Binding - Attack_12
+    21300026: Binding - Attack_13
+    21300028: Binding - Attack_14
+    21300030: Binding - Attack_15
+    21300032: Binding - Attack_16
+    21300034: Binding - Attack_17
+    21300036: Binding - Attack_18
+    21300038: Binding - Attack_19
+    21300040: Binding - Attack_20
+    21300042: Binding - Attack_21
+    21300044: Binding - Attack_22
+    21300046: Binding - Attack_23
+    21300048: Binding - Attack_24
+    21300050: Binding - Attack_25
+    21300052: Binding - Attack_26
+    21300054: Binding - Attack_27
+    21300056: Binding - Attack_28
+    21300058: Binding - Attack_29
+    21300060: Binding - Attack_30
+    21300062: Binding - Attack_31
+    21300064: Binding - Attack_32
+    21300066: Binding - Attack_33
+    21300068: Binding - Attack_34
+    21300070: Binding - Attack_35
+    21300072: Binding - Attack_36
+    21300074: Binding - Attack_37
+    21300076: Binding - Attack_38
+    21300078: Binding - Attack_39
+    21300080: Binding - Attack_40
+    21300082: Binding - Attack_41
+    21300084: Binding - Attack_42
+    21300086: Binding - Attack_43
+    21300088: Binding - Attack_44
+    21300090: Binding - Attack_45
+    21300092: Binding - Attack_46
+    21300094: Binding - Attack_47
+    21300096: Binding - Attack_48
+    21300098: Binding - Attack_49
+    21300100: Binding - Attack_50
+    21300102: Binding - Attack_51
+    21300104: Binding - Attack_52
+    21300106: Binding - Attack_53
+    21300108: Binding - Attack_54
+    21300110: Binding - Attack_55
+    21300112: Binding - Attack_56
+    21300114: Binding - Attack_57
+    21300116: Binding - Attack_58
+    21300118: Binding - Attack_59
+    21300120: Binding - Attack_60
+    21300122: Binding - Attack_61
+    21300124: Binding - Attack_62
+    21300126: Binding - Attack_63
+    21300128: Binding - Attack_64
+    21300130: Binding - Attack_65
+    21300132: Binding - Attack_66
+    21300134: Binding - Attack_67
+    21300136: Binding - Attack_68
+    21300138: Binding - Attack_69
+    21300140: Binding - Attack_70
+    21300142: Binding - Attack_71
+    21300144: Binding - Attack_72
+    21300146: Binding - Attack_73
+    21300148: Binding - Attack_74
+    21300150: Binding - Attack_75
+    21300152: Binding - Attack_76
+    21300154: Binding - Attack_77
+    21300156: Binding - Attack_78
+    21300158: Binding - Attack_79
+    21300160: Binding - Attack_80
+    21300162: Binding - Attack_81
+    21300164: Binding - Attack_82
+    21300166: Binding - Attack_83
+    21300168: Binding - Attack_84
+    21300170: Binding - Attack_85
+    21300172: Binding - Attack_86
+    21300174: Binding - Attack_87
+    21300176: Binding - Attack_88
+    21300178: Binding - Attack_89
+    21300180: Binding - Attack_90
+    21300182: Binding - Attack_91
+    21300184: Binding - Attack_92
+    21300186: Binding - Attack_93
+    21300188: Binding - Attack_94
+    21300190: Binding - Attack_95
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Binding - Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 684
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_19
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_21
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_22
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_23
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 588
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_30
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_31
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_33
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_34
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_35
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 492
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_40
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_41
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_42
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_43
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_44
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_45
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_46
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_47
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 396
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_53
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_55
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_56
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_57
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_58
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_59
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 300
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_62
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_63
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_64
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_66
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_67
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_68
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_69
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_70
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_71
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 204
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_73
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_74
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_75
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_76
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_77
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_78
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_79
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_80
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_81
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_82
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_83
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 108
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_85
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_86
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_87
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_88
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_89
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_90
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_91
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_92
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_93
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_94
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Binding - Attack_95
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 12
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

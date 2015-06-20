@@ -12,7 +12,6 @@ public class Plasma_Controller : MonoBehaviour
 
 	Vector3 startLoc = Vector3.zero;	// where the spell will spawn
 	Vector3 direction = Vector3.zero;	// direction for spell to travel
-	float killTimer = 4.0f;				// used to destroy object in case no collision happens
 
 	void Start ()
 	{
@@ -34,9 +33,7 @@ public class Plasma_Controller : MonoBehaviour
 	
 	void Update ()
 	{
-		killTimer -= Time.deltaTime;
-		if (killTimer <= 0.0f)
-			Destroy (gameObject);
+
 	}
 	
 	void FixedUpdate ()

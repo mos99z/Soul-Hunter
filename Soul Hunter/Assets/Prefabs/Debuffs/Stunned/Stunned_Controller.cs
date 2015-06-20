@@ -42,7 +42,8 @@ public class Stunned_Controller : MonoBehaviour {
 			Scripts = transform.parent.GetComponents<MonoBehaviour>();
 			for (int i = 0; i < Scripts.Length; i++)
 			{
-				Scripts[i].enabled = false;
+				if (i != 0)
+					Scripts[i].enabled = false;
 			}
 			if(transform.parent.tag == "Enemy")
 				transform.parent.GetComponent<NavMeshAgent>().enabled = false;

@@ -1,9 +1,12 @@
 fileFormatVersion: 2
 guid: 47232ba223e2b0a4a85c57b93fb586be
-timeCreated: 1433966981
+timeCreated: 1434685507
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: toxic_0
+    21300002: toxic_2
+    21300004: toxic_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -33,22 +36,52 @@ TextureImporter:
     aniso: 16
     mipBias: -1
     wrapMode: 1
-  nPOTScale: 0
+  nPOTScale: 1
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 0
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: .5, y: .5}
+  alignment: 9
+  spritePivot: {x: 0, y: 0}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 300
-  alphaIsTransparency: 1
-  textureType: 8
+  alphaIsTransparency: 0
+  textureType: 0
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: toxic_0
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 401
+        width: 753
+        height: 788
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: toxic_2
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 122
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: toxic_3
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 13
+        width: 145
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

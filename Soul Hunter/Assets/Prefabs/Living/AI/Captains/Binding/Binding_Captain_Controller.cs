@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Binding_Captain_Controller : MonoBehaviour
 {
@@ -30,12 +31,19 @@ public class Binding_Captain_Controller : MonoBehaviour
 
 	//Needed components
 	private GameObject DirectionIndicator = null;
+	public Animator Animate = null;
 	public GameObject Claw;
 	public GameObject stunAn;
 	public GameObject pullAn;
 
 	//Debuffs
 	public float StunDuration = 0.5f;
+
+	//animation stuff
+	private bool underMelee = false;
+	private float attackTicker = 0;
+	public float attackLength = 0;
+	public GameObject spriteImage;
 
 	// Use this for initialization
 	void Start ()
@@ -58,6 +66,14 @@ public class Binding_Captain_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (underMelee)
+		{
+			attackTicker += Time.deltaTime;
+			if (attackTicker >= attackLength)
+			{
+				underMelee = false;
+			}
+		}
 		TurnTowardsPlayer();
 		UpdateTickers();
 		DoStuff();
@@ -106,6 +122,8 @@ public class Binding_Captain_Controller : MonoBehaviour
 			{
 				if (!abilityStart)
 				{
+					underMelee = true;
+					attackTicker = 0;
 					navigation.SetDestination(this.transform.position);
 					if (isSurrounded)
 					{
@@ -135,8 +153,122 @@ public class Binding_Captain_Controller : MonoBehaviour
 		{
 			navigation.SetDestination (player.transform.position);
 		}
-		DirectionIndicator.transform.LookAt(player.transform.position, new Vector3(0,1,0));
-//		Vector3 movementDirection = DirectionIndicator.transform.forward;
+
+		Vector3 movementDirection = navigation.velocity.normalized;
+		if (underMelee)
+		{
+			movementDirection = player.transform.position - this.transform.position;
+			movementDirection = movementDirection.normalized;
+		}
+		if (movementDirection.magnitude >= 1.0f)
+		{
+			DirectionIndicator.transform.forward = movementDirection.normalized;
+			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (underMelee)
+				{
+				Vector3 tempPos = this.gameObject.transform.position;
+				tempPos.y = 2.21f;
+				spriteImage.transform.position = tempPos;
+			}
+			if (dotProd >= 0.75f)
+			{
+				if (underMelee)
+				{
+					Animate.Play ("Bind_Slash_Up");
+				}
+				else
+				{
+					Animate.Play ("Bind_Move_Up");
+				}
+			}
+			else if (dotProd <= -0.75f)
+			{
+				if (underMelee)
+				{
+					Animate.Play ("Bind_Slash_Down");
+				}
+				else
+				{
+					Animate.Play ("Bind_Move_Down");
+				}
+			}
+			else if (dotProd > -0.25f && dotProd <= 0.25f)
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Bind_Slash_Left");
+					}
+					else
+					{
+						Animate.Play ("Bind_Move_Left");
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Bind_Slash_Right");
+					}
+					else
+					{
+						Animate.Play ("Bind_Move_Right");
+					}
+				}
+			}
+			else if (dotProd > 0.25f && dotProd < 0.75f)
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Bind_Slash_UpLeft");
+					}
+					else
+					{
+						Animate.Play ("Bind_Move_UpLeft");
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Bind_Slash_UpRight");
+					}
+					else
+					{
+						Animate.Play ("Bind_Move_UpRight");
+					}
+				}
+			}
+			else
+			{
+				if (crossProd.y < 0.0f)
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Bind_Slash_DownLeft");
+					}
+					else
+					{
+						Animate.Play ("Bind_Move_DownLeft");
+					}
+				}
+				else
+				{
+					if (underMelee)
+					{
+						Animate.Play ("Bind_Slash_DownRight");
+					}
+					else
+					{
+						Animate.Play ("Bind_Move_DownRight");
+					}
+				}
+			}
+		}
 	}
 
 	private void OnTriggerEnter(Collider col)

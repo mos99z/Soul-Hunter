@@ -30,6 +30,7 @@ public class Player_Caster_Controller : MonoBehaviour {
 			}
 		} else if (Input.GetMouseButtonDown (0) && Pause_Script.gamePaused == false)
 		{
+			this.gameObject.GetComponent<Player_Movement_Controller>().underMelee = true;
 			CastSpell();
 		}
 	}

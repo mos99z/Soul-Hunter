@@ -8,13 +8,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 430964}
+  - 114: {fileID: 11415216}
   - 195: {fileID: 19561548}
   - 136: {fileID: 13661080}
   - 54: {fileID: 5467190}
-  - 114: {fileID: 11415216}
   - 114: {fileID: 11425858}
   - 135: {fileID: 13571626}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Melee Minion
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -201,6 +201,8 @@ MonoBehaviour:
   isFrozen: 0
   DirectionIndicator: {fileID: 193342}
   Animate: {fileID: 9577718}
+  attackLength: 1
+  spriteImage: {fileID: 157290}
 --- !u!135 &13571626
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -233,7 +235,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126538}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .200000003
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50

@@ -91,8 +91,7 @@ public class Ragnorak_Controller : MonoBehaviour
 			DirectionIndicator = transform.FindChild ("Direction Indicator").gameObject;
 		}
 		BurningDebuff = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
-
-//		player = GameBrain.Instance.Player;
+		
 		navigation = GetComponent<NavMeshAgent>();
 		navigation.updateRotation = false;
 		meleeCollider.enabled = false;

@@ -7,13 +7,11 @@ public class Slowed_Controller : MonoBehaviour
 	public float slowSpeedModifier = 0.5f;	// fraction to reduce objects speed by
 	public bool fromConcrete = false;		// used to cast stun after slow wears off from concrete spell
 
-	float timer;							// keep track of reference to duration
 	float origSpeed;						// remember objects original speed
 	bool check;								// check if a clone exists already
 
 	void Start () 
 	{
-		timer = 0.0f;
 		check = true;
 	}
 	
@@ -23,8 +21,7 @@ public class Slowed_Controller : MonoBehaviour
 		{
 			if (transform.parent.GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Boss)
 			{
-				Destroy(gameObject);
-				return;
+				slowSpeedModifier = 0.75f;
 			}
 			int children = transform.parent.childCount;
 			for (int child = 0; child < children; child++)
@@ -50,8 +47,8 @@ public class Slowed_Controller : MonoBehaviour
 			check = false;
 		}
 		
-		timer += Time.deltaTime;
-		if (timer >= duration)
+		duration -= Time.deltaTime;
+		if (duration <= 0.0f)
 		{
 			if (transform.parent.tag == "Player")
 				transform.parent.GetComponent<Player_Movement_Controller>().Speed = origSpeed;

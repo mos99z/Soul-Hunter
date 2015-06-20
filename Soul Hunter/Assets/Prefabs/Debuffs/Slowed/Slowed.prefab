@@ -9,8 +9,23 @@ GameObject:
   m_Component:
   - 4: {fileID: 420052}
   - 114: {fileID: 11493174}
-  - 198: {fileID: 19804832}
-  - 199: {fileID: 19969068}
+  m_Layer: 2
+  m_Name: Slowed
+  m_TagString: Debuffs
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &187212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 437844}
+  - 198: {fileID: 19805446}
+  - 199: {fileID: 19954196}
   m_Layer: 2
   m_Name: Slowed
   m_TagString: Debuffs
@@ -24,11 +39,24 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 437844}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &437844
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187212}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: -9, y: .289999992, z: 16.4500008}
+  m_LocalPosition: {x: 0, y: .100000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 420052}
   m_RootOrder: 0
 --- !u!114 &11493174
 MonoBehaviour:
@@ -43,18 +71,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   slowSpeedModifier: .5
---- !u!198 &19804832
+  fromConcrete: 0
+--- !u!198 &19805446
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150616}
+  m_GameObject: {fileID: 187212}
   lengthInSec: 3
   startDelay: 0
   speed: 1
   randomSeed: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   moveWithTransform: 1
   InitialModule:
@@ -1086,12 +1115,12 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19969068
+--- !u!199 &19954196
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150616}
+  m_GameObject: {fileID: 187212}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

@@ -1,0 +1,1111 @@
+fileFormatVersion: 2
+guid: 8f0f55e208265c743b95bb5835f55a21
+timeCreated: 1434741697
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Range_Idle_0
+    21300002: Range_Idle_1
+    21300004: Range_Idle_2
+    21300006: Range_Idle_3
+    21300008: Range_Idle_4
+    21300010: Range_Idle_5
+    21300012: Range_Idle_6
+    21300014: Range_Idle_7
+    21300016: Range_Idle_8
+    21300018: Range_Idle_9
+    21300020: Range_Idle_10
+    21300022: Range_Idle_11
+    21300024: Range_Idle_12
+    21300026: Range_Idle_13
+    21300028: Range_Idle_14
+    21300030: Range_Idle_15
+    21300032: Range_Idle_16
+    21300034: Range_Idle_17
+    21300036: Range_Idle_18
+    21300038: Range_Idle_19
+    21300040: Range_Idle_20
+    21300042: Range_Idle_21
+    21300044: Range_Idle_22
+    21300046: Range_Idle_23
+    21300048: Range_Idle_24
+    21300050: Range_Idle_25
+    21300052: Range_Idle_26
+    21300054: Range_Idle_27
+    21300056: Range_Idle_28
+    21300058: Range_Idle_29
+    21300060: Range_Idle_30
+    21300062: Range_Idle_31
+    21300064: Range_Idle_32
+    21300066: Range_Idle_33
+    21300068: Range_Idle_34
+    21300070: Range_Idle_35
+    21300072: Range_Idle_36
+    21300074: Range_Idle_37
+    21300076: Range_Idle_38
+    21300078: Range_Idle_39
+    21300080: Range_Idle_40
+    21300082: Range_Idle_41
+    21300084: Range_Idle_42
+    21300086: Range_Idle_43
+    21300088: Range_Idle_44
+    21300090: Range_Idle_45
+    21300092: Range_Idle_46
+    21300094: Range_Idle_47
+    21300096: Range_Idle_48
+    21300098: Range_Idle_49
+    21300100: Range_Idle_50
+    21300102: Range_Idle_51
+    21300104: Range_Idle_52
+    21300106: Range_Idle_53
+    21300108: Range_Idle_54
+    21300110: Range_Idle_55
+    21300112: Range_Idle_56
+    21300114: Range_Idle_57
+    21300116: Range_Idle_58
+    21300118: Range_Idle_59
+    21300120: Range_Idle_60
+    21300122: Range_Idle_61
+    21300124: Range_Idle_62
+    21300126: Range_Idle_63
+    21300128: Range_Idle_64
+    21300130: Range_Idle_65
+    21300132: Range_Idle_66
+    21300134: Range_Idle_67
+    21300136: Range_Idle_68
+    21300138: Range_Idle_69
+    21300140: Range_Idle_70
+    21300142: Range_Idle_71
+    21300144: Range_Idle_72
+    21300146: Range_Idle_73
+    21300148: Range_Idle_74
+    21300150: Range_Idle_75
+    21300152: Range_Idle_76
+    21300154: Range_Idle_77
+    21300156: Range_Idle_78
+    21300158: Range_Idle_79
+    21300160: Range_Idle_80
+    21300162: Range_Idle_81
+    21300164: Range_Idle_82
+    21300166: Range_Idle_83
+    21300168: Range_Idle_84
+    21300170: Range_Idle_85
+    21300172: Range_Idle_86
+    21300174: Range_Idle_87
+    21300176: Range_Idle_88
+    21300178: Range_Idle_89
+    21300180: Range_Idle_90
+    21300182: Range_Idle_91
+    21300184: Range_Idle_92
+    21300186: Range_Idle_93
+    21300188: Range_Idle_94
+    21300190: Range_Idle_95
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Range_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 638
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 547
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 456
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 365
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_59
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 274
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_61
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_62
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_63
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_64
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_65
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_66
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_67
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_68
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_69
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_70
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_71
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 183
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_73
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_74
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_75
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_76
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_77
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_78
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_79
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_80
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_81
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_82
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_83
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 92
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_85
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_86
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_87
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_88
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_89
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_90
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_91
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_92
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_93
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_94
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Range_Idle_95
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1
+        width: 93
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

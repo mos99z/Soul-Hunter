@@ -24,13 +24,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447054}
+  - 114: {fileID: 11469154}
   - 54: {fileID: 5421624}
   - 114: {fileID: 11409914}
   - 195: {fileID: 19525348}
   - 135: {fileID: 13545702}
-  - 114: {fileID: 11469154}
   - 136: {fileID: 13641908}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mistral
   m_TagString: Enemy
   m_Icon: {fileID: 0}

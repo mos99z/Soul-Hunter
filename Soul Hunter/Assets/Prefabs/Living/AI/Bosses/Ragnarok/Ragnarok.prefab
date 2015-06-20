@@ -76,11 +76,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493764}
+  - 114: {fileID: 11461252}
   - 195: {fileID: 19514534}
   - 54: {fileID: 5459652}
   - 135: {fileID: 13531632}
   - 114: {fileID: 11457140}
-  - 114: {fileID: 11461252}
   m_Layer: 11
   m_Name: Ragnarok
   m_TagString: Enemy
