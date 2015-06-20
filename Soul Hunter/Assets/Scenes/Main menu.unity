@@ -19304,6 +19304,10 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 41b61da9aff28754e8d071097d5de117, type: 3}
+    - target: {fileID: 11456246, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      propertyPath: mouseMarker
+      value: 
+      objectReference: {fileID: 316358188}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
   m_IsPrefabParent: 0

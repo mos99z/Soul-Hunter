@@ -323,6 +323,7 @@ public class Living_Obj : MonoBehaviour
 					GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
 					GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
 					GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
+					GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar");
 					Application.LoadLevel(Application.loadedLevel);	// gamebrain assigns player location based on save when scene loads
 
 					// below works to respawn player when dead, above should do so more eloquently
