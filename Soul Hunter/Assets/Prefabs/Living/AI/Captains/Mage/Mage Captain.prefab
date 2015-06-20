@@ -57,13 +57,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498938}
-  - 195: {fileID: 19509814}
   - 114: {fileID: 11434028}
+  - 195: {fileID: 19509814}
   - 114: {fileID: 11426390}
   - 54: {fileID: 5486936}
   - 136: {fileID: 13667146}
-  - 136: {fileID: 13636356}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mage Captain
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -243,19 +242,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13636356
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161374}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!136 &13667146
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -276,7 +262,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161374}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .200000003
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

@@ -8,12 +8,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441344}
-  - 114: {fileID: 11437304}
   - 114: {fileID: 11433204}
+  - 114: {fileID: 11437304}
   - 195: {fileID: 19594906}
   - 54: {fileID: 5462586}
   - 136: {fileID: 13624426}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Juggernaut Captain
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -238,6 +238,7 @@ MonoBehaviour:
   ChargeCooldown: 10
   ChargeChargeUp: 1
   Carrot: {fileID: 164996}
+  isCharging: 0
   Animate: {fileID: 0}
   DirectionIndicator: {fileID: 0}
 --- !u!135 &13517036
@@ -272,7 +273,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119470}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .200000003
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

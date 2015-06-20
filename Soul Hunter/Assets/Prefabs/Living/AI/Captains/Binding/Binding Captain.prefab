@@ -75,10 +75,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470856}
+  - 114: {fileID: 11470186}
   - 195: {fileID: 19503690}
   - 54: {fileID: 5425890}
   - 135: {fileID: 13551218}
-  - 114: {fileID: 11470186}
   - 114: {fileID: 11411686}
   m_Layer: 11
   m_Name: Binding Captain
@@ -247,7 +247,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148052}
   serializedVersion: 2
-  m_Mass: 9001
+  m_Mass: 1
   m_Drag: 1
   m_AngularDrag: 1
   m_UseGravity: 1
@@ -385,7 +385,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148052}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .200000003
   m_Speed: 4
   m_Acceleration: 4
   avoidancePriority: 50

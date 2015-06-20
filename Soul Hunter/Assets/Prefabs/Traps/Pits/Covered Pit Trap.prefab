@@ -17,6 +17,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &167544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 432284}
+  - 65: {fileID: 6550078}
+  - 114: {fileID: 11486792}
+  m_Layer: 0
+  m_Name: Pit 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &167644
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,6 +46,7 @@ GameObject:
   - 198: {fileID: 19855400}
   - 199: {fileID: 19988942}
   - 65: {fileID: 6538958}
+  - 208: {fileID: 20806680}
   m_Layer: 0
   m_Name: Covered Pit Trap
   m_TagString: Untagged
@@ -47,8 +65,21 @@ Transform:
   m_LocalScale: {x: 6, y: 1, z: 6}
   m_Children:
   - {fileID: 499370}
+  - {fileID: 432284}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &432284
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6.36999989, z: 0}
+  m_LocalScale: {x: .166666672, y: 1, z: .166666672}
+  m_Children: []
+  m_Father: {fileID: 406736}
+  m_RootOrder: 1
 --- !u!4 &499370
 Transform:
   m_ObjectHideFlags: 1
@@ -100,9 +131,21 @@ BoxCollider:
   m_GameObject: {fileID: 167644}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6550078
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 5.5, y: 1, z: 5.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11473730
 MonoBehaviour:
@@ -110,7 +153,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b8ed85b1bf8b184e818f1664ebfe28d, type: 3}
   m_Name: 
@@ -121,6 +164,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2d0167ce2b5730d4aabd8458900f652d, type: 3}
   - {fileID: 21300000, guid: 36729e31596e1a548975a1c128b972bf, type: 3}
   crackTime: 1
+--- !u!114 &11486792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22873d516551a6443879eb5f78d78832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19855400
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1210,6 +1264,21 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+--- !u!208 &20806680
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167644}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: .5, y: .5, z: .5}
+  m_MoveThreshold: .100000001
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
