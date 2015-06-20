@@ -401,6 +401,24 @@ public class Melee_Minion_Controller : MonoBehaviour {
 		}
 	}
 
+	void Aggro()
+	{
+		if(target == null && GameBrain.Instance.PlayerInFog == false)
+		{
+			target = player;
+			
+			SearchForNearestNode();
+			
+			navigation.updateRotation = false;
+			navigation.autoBraking = false;
+			waypointTimer = 0.0f;
+			currentAttackTimer = AttackTimer;
+			isSwarming = true;
+			destination = attackingWaypoints[closestShadow].transform.position;
+			GameBrain.Instance.MeleeEnemyCounter++;
+		}
+	}
+
 	void OnDestroy()
 	{
 		if (isSwarming)
