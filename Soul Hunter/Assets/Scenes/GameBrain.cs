@@ -106,6 +106,7 @@ public class GameBrain : MonoBehaviour {
 	public int EarthLevel = 0;
 	public int ElectricLevel = 0;
 	public int WaterLevel = 0;
+	public int NumberOfLevels = 3;
 
 	//Tally Specific Info
 	public int NumEnemiesKilled = 0;

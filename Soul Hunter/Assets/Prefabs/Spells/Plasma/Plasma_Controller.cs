@@ -22,6 +22,7 @@ public class Plasma_Controller : MonoBehaviour
 
 	void Start ()
 	{
+		speed += 0.01f * GameBrain.Instance.FireLevel < GameBrain.Instance.ElectricLevel ? (float)GameBrain.Instance.FireLevel : (float)GameBrain.Instance.ElectricLevel;
 		// set the appropriate spawn point
 		Vector3 spawn = GameBrain.Instance.Player.transform.position;
 		spawn.y = startHeight;

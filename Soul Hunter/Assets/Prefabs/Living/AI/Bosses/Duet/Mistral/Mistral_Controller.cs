@@ -45,6 +45,10 @@ public class Mistral_Controller : MonoBehaviour
 	public AudioSource MeleeSFX;
 	
 //	private Living_Obj healthScript = null;
+
+	//animation stuff
+	public Animator Animate = null;
+	public GameObject spriteImage;
 	
 	// Use this for initialization
 	void Start () 
@@ -62,6 +66,7 @@ public class Mistral_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+
 		if (perendiAlive) 
 		{
 			if (CheckPlayerDistance () == true && isMoving == false) 
@@ -91,7 +96,6 @@ public class Mistral_Controller : MonoBehaviour
 				{
 					isMoving = false;
 				}
-				
 			}
 			
 		}
@@ -206,37 +210,57 @@ public class Mistral_Controller : MonoBehaviour
 	// It will return false if the player is not in front of the enemy
 	void TurnTowardsPlayer()
 	{
-		Vector3 movementDirection = navigation.velocity.normalized;
-		if (movementDirection.magnitude >= 1.0f) {
-			DirectionIndicator.transform.forward = navigation.velocity.normalized;
+		Vector3 movementDirection = target.transform.position - this.transform.position;
+		movementDirection = movementDirection.normalized;
+		if (movementDirection.magnitude >= 1.0f)
+		{
+			DirectionIndicator.transform.forward = movementDirection.normalized;
+			float dotProd = Vector3.Dot (new Vector3 (0, 0, 1), movementDirection);
+			Vector3 crossProd = Vector3.Cross (new Vector3 (0, 0, 1), movementDirection);
+			if (dotProd >= 0.75f)
+			{
+
+				Animate.Play ("Duel_Move_Up");
+			}
+			else if (dotProd <= -0.75f)
+			{
+
+				Animate.Play ("Duel_Move_Down");
+			}
+			else if (dotProd > -0.25f && dotProd <= 0.25f)
+			{
+				if (crossProd.y < 0.0f)
+				{
+					Animate.Play ("Duel_Move_Left");
+				}
+				else
+				{
+					Animate.Play ("Duel_Move_Right");
+				}
+			}
+			else if (dotProd > 0.25f && dotProd < 0.75f)
+			{
+				if (crossProd.y < 0.0f)
+				{
+					Animate.Play ("Duel_Move_UpLeft");
+				}
+				else
+				{
+					Animate.Play ("Duel_Move_UpRight");
+				}
+			}
+			else
+			{
+				if (crossProd.y < 0.0f)
+				{
+					Animate.Play ("Duel_Move_DownLeft");
+				}
+				else
+				{
+					Animate.Play ("Duel_Move_DownRight");
+				}
+			}
 		}
-		//Vector3 Forward = transform.forward;
-		//Vector3 PlayerDistance = target.transform.position - transform.position;
-		//PlayerDistance.y = 0.0f;
-		//float rotation = 0.0f;
-		//float angle = Vector3.Angle(PlayerDistance, Forward);
-		//
-		//// Rotation
-		//if (angle > 5.0f)
-		//{
-		//	if (Vector3.Cross (PlayerDistance, Forward).y > 0)
-		//		rotation = -1 * AngularAcceleration;
-		//	if (Vector3.Cross (PlayerDistance, Forward).y < 0)
-		//		rotation = 1 * AngularAcceleration;
-		//	
-		//	currentRotation += rotation;
-		//	currentRotation = Mathf.Min (currentRotation, AngularAcceleration);
-		//	currentRotation = Mathf.Max (currentRotation, -AngularAcceleration);
-		//	transform.Rotate (0, currentRotation, 0);
-		//	
-		//	return false;
-		//} 
-		//
-		//else
-		//{
-		//	gameObject.transform.LookAt(target.transform.position);
-		//	return true;
-		//}
 	}
 	
 	// This function will search for the nearest safe zone. When found, it will

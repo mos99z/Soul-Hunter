@@ -10,6 +10,7 @@ public class Torch_Controller : MonoBehaviour
 	public float recoveryTime = 1.5f;	// how long to recover from spell
 
 	public GameObject BurningDebuff = null;
+	public GameObject Flame = null;
 	public float BurningDamage = 10.0f;
 	public float DebuffChance = 0.9f;
 	public float DebuffDuration = 10.0f;
@@ -18,6 +19,9 @@ public class Torch_Controller : MonoBehaviour
 	
 	void Start () 
 	{
+		transform.localScale = new Vector3 (1.0f + 0.5f * (float)GameBrain.Instance.WindLevel, 1.0f, 1.0f + 0.25f * (float)GameBrain.Instance.FireLevel);
+		Flame.GetComponent<ParticleSystem>().startSpeed *= 1.0f + (float)GameBrain.Instance.FireLevel / (float)GameBrain.Instance.NumberOfLevels;
+
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
 		transform.LookAt(mouseMarker.transform.position);

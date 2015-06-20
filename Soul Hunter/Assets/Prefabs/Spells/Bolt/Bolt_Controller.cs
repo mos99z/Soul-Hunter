@@ -39,6 +39,8 @@ public class Bolt_Controller : MonoBehaviour {
 
 		if (Stunned == null) 
 			Stunned = GameBrain.Instance.GetComponent<DebuffMasterList>().stunned;
+
+		MaxSpreadAngle *= 1.0f - (float)GameBrain.Instance.ElectricLevel / (float)GameBrain.Instance.NumberOfLevels;
 	}
 
 	void Update ()

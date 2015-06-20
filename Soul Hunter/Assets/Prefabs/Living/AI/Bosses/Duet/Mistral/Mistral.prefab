@@ -37,7 +37,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &178588
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,8 +62,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 401302}
   - 212: {fileID: 21294414}
+  - 95: {fileID: 9558404}
   m_Layer: 0
-  m_Name: Janet_van_Dyne_(Earth-80920)
+  m_Name: Mistril_Ani
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,11 +77,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 2.67000008, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 447054}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &427938
 Transform:
   m_ObjectHideFlags: 1
@@ -93,7 +94,7 @@ Transform:
   m_Children:
   - {fileID: 429616}
   m_Father: {fileID: 447054}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &429616
 Transform:
   m_ObjectHideFlags: 1
@@ -113,11 +114,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.75626421, y: 0, z: 265.503204}
+  m_LocalPosition: {x: -4.69999981, y: 0, z: 19.1000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 427938}
   - {fileID: 401302}
+  - {fileID: 427938}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!54 &5421624
@@ -135,75 +136,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!82 &8222402
-AudioSource:
+--- !u!95 &9558404
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139812}
+  m_GameObject: {fileID: 182754}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 196cadf79b730b44da211d30837ced4a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ee6a90b852e908c43bd10527d66dba13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11409914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -234,7 +183,9 @@ MonoBehaviour:
   AttackTimer: 5
   Damage: 100
   AttackCollider: {fileID: 13545702}
-  DirectionIndicator: {fileID: 0}
+  DirectionIndicator: {fileID: 178588}
+  Animate: {fileID: 9558404}
+  spriteImage: {fileID: 182754}
   MeleeSFX: {fileID: 0}
 --- !u!114 &11469154
 MonoBehaviour:
@@ -357,8 +308,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5470c64ac383096418d26f5511319ce6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300070, guid: 20415cec64cc49a4791a401bfd720c8f, type: 3}
+  m_Color: {r: .768627465, g: .768627465, b: .768627465, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

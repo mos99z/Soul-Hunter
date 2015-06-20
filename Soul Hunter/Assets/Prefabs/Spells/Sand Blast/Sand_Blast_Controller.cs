@@ -11,6 +11,8 @@ public class Sand_Blast_Controller : MonoBehaviour
 
 	void Start () 
 	{
+		transform.localScale *= 1.0f + (float)GameBrain.Instance.EarthLevel / (float)GameBrain.Instance.NumberOfLevels;
+
 		forwardIndicator = GameBrain.Instance.Player.transform.FindChild ("Direction Indicator").gameObject;
 		transform.forward = forwardIndicator.transform.forward;
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);

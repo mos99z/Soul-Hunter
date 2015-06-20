@@ -18,6 +18,9 @@ public class TidalWave_Controller : MonoBehaviour
 	
 	void Start () 
 	{
+		MoveSpeed += 0.5f * (float)GameBrain.Instance.WindLevel;
+		transform.localScale = new Vector3(1.0f + 0.5f * (float)GameBrain.Instance.WaterLevel, 1.0f, 1.0f);
+
 		transform.position = GameBrain.Instance.Player.transform.position - new Vector3(0.0f, UpDown, 0.0f);
 		Direction = GameBrain.Instance.Player.transform.FindChild ("Direction Indicator").forward.normalized;
 		transform.forward = -Direction;

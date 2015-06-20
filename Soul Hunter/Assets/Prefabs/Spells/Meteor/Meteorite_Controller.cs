@@ -18,6 +18,10 @@ public class Meteorite_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		FallSpeed += 0.05f * (float)GameBrain.Instance.WindLevel;
+		ImpactExplosion.GetComponent<Damage_Message>().DebuffChance += 0.833333f * (float)GameBrain.Instance.FireLevel;
+		transform.localScale *= 1.0f + (float)GameBrain.Instance.EarthLevel / (float)GameBrain.Instance.NumberOfLevels;
+
 		RaycastHit colliderCheck = new RaycastHit();
 		Vector3 distance = (GameBrain.Instance.MouseMarker.transform.position - GameBrain.Instance.Player.transform.position);
 		distance.y = 0.0f;

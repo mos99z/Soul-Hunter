@@ -21,6 +21,7 @@ public class Whirlwind_Controller : MonoBehaviour {
 	
 	void Start ()
 	{
+		Duration += 1.5f * (float)GameBrain.Instance.WindLevel;
 	}
 	
 	void Update ()
