@@ -62,6 +62,7 @@ public class Binding_Captain_Controller : MonoBehaviour
 		}
 		PCC = (Player_Caster_Controller)player.GetComponent("Player_Caster_Controller");
 		PMC = (Player_Movement_Controller)player.GetComponent("Player_Movement_Controller");
+		boundingWalls.SendMessage("ActivateWalls");
 	}
 	
 	// Update is called once per frame
@@ -304,5 +305,6 @@ public class Binding_Captain_Controller : MonoBehaviour
 		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
 		GameBrain.Instance.FightingCaptain = false;
+		boundingWalls.SendMessage("DestroyWalls");
 	}
 }
