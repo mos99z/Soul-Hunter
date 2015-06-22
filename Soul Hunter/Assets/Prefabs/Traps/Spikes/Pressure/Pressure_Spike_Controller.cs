@@ -18,11 +18,15 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 	private List<GameObject> OnTop = new List<GameObject>();
 	
 
+	public AudioSource SFX = null;
 	private Animator animations = null;
 
 	void Start()
 	{
-		animations = GetComponent<Animator> ();
+		if (animations == null)
+			animations = GetComponent<Animator> ();
+		if (SFX == null)
+			SFX = GetComponent<AudioSource> ();
 	}
 
 	void Update ()
@@ -42,6 +46,16 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 			ResetTimer -= Time.deltaTime;
 			if (ResetTimer <= 0.0f)
 				Reset();
+		}
+
+		for (int OnTrap = 0; OnTrap < OnTop.Count; OnTrap++)
+		{
+			if (OnTop[OnTrap] == null)
+			{
+				OnTop.RemoveAt(OnTrap);
+				if (OnTop.Count == 0)
+					Resetting = true;
+			}
 		}
 	}
 
@@ -84,6 +98,7 @@ public class Pressure_Spike_Controller : MonoBehaviour {
 		Triggered = true;
 		Triggering = false;
 
+		SFX.Play ();
 		animations.Play ("Triggered");
 
 		for (int i = 0; i < OnTop.Count; i++) {

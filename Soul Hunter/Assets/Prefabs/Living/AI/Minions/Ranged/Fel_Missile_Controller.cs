@@ -14,9 +14,10 @@ public class Fel_Missile_Controller : MonoBehaviour {
 	private Vector3 ForwardDirection = Vector3.zero;
 	private float killSwitch = 30.0f;
 	private bool dieing = false;
-	private GameObject player = null;
+	private GameObject Target = null;
 	
-	void Start () {
+	void Start ()
+	{
 		
 		// Start at desired height
 		Vector3 newHeight = transform.position;
@@ -24,8 +25,8 @@ public class Fel_Missile_Controller : MonoBehaviour {
 		transform.position = newHeight;
 		
 		// Face spell in right direction
-		player = GameObject.FindGameObjectWithTag ("Player");
-		Vector3 lookAt = player.transform.position;
+		Target = GameBrain.Instance.Player;
+		Vector3 lookAt = Target.transform.position;
 		lookAt.y = StartHeight;
 		transform.LookAt (lookAt);
 		
@@ -50,7 +51,7 @@ public class Fel_Missile_Controller : MonoBehaviour {
 			ForwardDirection *= Speed;
 			transform.position += ForwardDirection;
 			
-			Vector3 RotateAt = player.transform.position;
+			Vector3 RotateAt = Target.transform.position;
 			RotateAt.y = StartHeight;
 			Vector3 crossProd = Vector3.Cross(transform.forward.normalized, (RotateAt - transform.position).normalized);
 			if (crossProd.y > 0)

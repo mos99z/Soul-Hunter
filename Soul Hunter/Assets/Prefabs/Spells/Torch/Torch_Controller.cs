@@ -20,7 +20,8 @@ public class Torch_Controller : MonoBehaviour
 	void Start () 
 	{
 		transform.localScale = new Vector3 (1.0f + 0.5f * (float)GameBrain.Instance.WindLevel, 1.0f, 1.0f + 0.25f * (float)GameBrain.Instance.FireLevel);
-		Flame.GetComponent<ParticleSystem>().startSpeed *= 1.0f + (float)GameBrain.Instance.FireLevel / (float)GameBrain.Instance.NumberOfLevels;
+		if (Flame != null)
+			Flame.GetComponent<ParticleSystem>().startSpeed *= 1.0f + (float)GameBrain.Instance.FireLevel / (float)GameBrain.Instance.NumberOfLevels;
 
 		if (mouseMarker == null)
 			mouseMarker = GameBrain.Instance.MouseMarker;
@@ -34,6 +35,7 @@ public class Torch_Controller : MonoBehaviour
 	{
 		transform.position = GameBrain.Instance.Player.transform.position;
 		transform.LookAt(mouseMarker.transform.position);
+
 		duration -= Time.deltaTime;
 		if (duration <= 0.0f)
 			Destroy (gameObject);

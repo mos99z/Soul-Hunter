@@ -8427,6 +8427,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519044385}
+--- !u!1 &522326908 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 128968, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+  m_PrefabInternal: {fileID: 1324594444}
 --- !u!1 &530516780
 GameObject:
   m_ObjectHideFlags: 0
@@ -11812,10 +11816,6 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!1 &723115482 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 195820, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
-  m_PrefabInternal: {fileID: 1324594444}
 --- !u!1 &726915916 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 113064, guid: 336b851fb80e57b499cd77878ed44184, type: 2}
@@ -13243,7 +13243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Options: {fileID: 823252007}
-  MainMenu: {fileID: 0}
+  MainMenu: {fileID: 1801908752}
   SFXVolume: 0
   MusicVolume: 0
   MusicSlider: {fileID: 1281661831}
@@ -13308,7 +13308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MessagePrompt: {fileID: 696894302}
-  H: {fileID: 0}
   PauseMenu: {fileID: 1804831538}
   LoadingScreen: {fileID: 1896255470}
 --- !u!222 &882392402
@@ -13353,7 +13352,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c90be7061308fc04cb30ef7d7ada422b, type: 3}
   spells:
   - {fileID: 2039373384}
-  - {fileID: 723115482}
+  - {fileID: 522326908}
   - {fileID: 1324594445}
   - {fileID: 907270893}
   - {fileID: 1107440430}
@@ -19256,7 +19255,15 @@ Prefab:
       propertyPath: mouseMarker
       value: 
       objectReference: {fileID: 316358188}
-    - target: {fileID: 11400520, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+    - target: {fileID: 11491492, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      propertyPath: mouseMarker
+      value: 
+      objectReference: {fileID: 316358188}
+    - target: {fileID: 11456246, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      propertyPath: mouseMarker
+      value: 
+      objectReference: {fileID: 316358188}
+    - target: {fileID: 11441260, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
       propertyPath: mouseMarker
       value: 
       objectReference: {fileID: 316358188}
@@ -19544,7 +19551,7 @@ MonoBehaviour:
   PlayerMaxHealth: 0
   PlayerCurrHealth: 0
   PlayerLivesLeft: 0
-  SoulCount: 2000
+  SoulCount: 0
   MeleeEnemyCounter: 0
   PlayerInFog: 0
   FightingCaptain: 0

@@ -14,6 +14,7 @@ GameObject:
   - 54: {fileID: 5467190}
   - 114: {fileID: 11425858}
   - 135: {fileID: 13571626}
+  - 82: {fileID: 8214774}
   m_Layer: 11
   m_Name: Melee Minion 1
   m_TagString: Enemy
@@ -135,6 +136,75 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!82 &8214774
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126538}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 196cadf79b730b44da211d30837ced4a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9577718
 Animator:
   serializedVersion: 3
@@ -165,12 +235,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 0
-  MaxHealth: 150
-  CurrHealth: 150
+  MaxHealth: 100
+  CurrHealth: 100
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
-  SoulValue: 2
+  SoulValue: 1
   entType: 1
   RoomNumber: 0
   SavePoint: {fileID: 0}
@@ -203,6 +273,7 @@ MonoBehaviour:
   Animate: {fileID: 9577718}
   attackLength: 1
   spriteImage: {fileID: 157290}
+  MeleeAttack: {fileID: 8214774}
 --- !u!135 &13571626
 SphereCollider:
   m_ObjectHideFlags: 1

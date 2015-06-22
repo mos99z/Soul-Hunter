@@ -4,7 +4,6 @@ using System.Collections;
 public class Exit_Prompt_Script : MonoBehaviour {
 
 	public GameObject MessagePrompt;
-	public GameObject H;
 	public GameObject PauseMenu;
 	public GameObject LoadingScreen;
 	AsyncOperation ao = null;

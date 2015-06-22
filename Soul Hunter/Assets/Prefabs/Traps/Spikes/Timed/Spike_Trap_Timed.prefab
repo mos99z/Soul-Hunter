@@ -11,6 +11,8 @@ GameObject:
   - 33: {fileID: 3356420}
   - 23: {fileID: 2318544}
   - 65: {fileID: 6555586}
+  - 114: {fileID: 11462702}
+  - 208: {fileID: 20808864}
   m_Layer: 0
   m_Name: pCylinder26
   m_TagString: Untagged
@@ -44,8 +46,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 407368}
   - 95: {fileID: 9549710}
-  - 114: {fileID: 11439742}
-  - 65: {fileID: 6504028}
   - 82: {fileID: 8272056}
   m_Layer: 0
   m_Name: Spike_Trap_Timed
@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68644953, y: 0, z: 16.8954086}
+  m_LocalPosition: {x: .407430649, y: 0, z: 149.718826}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 403260}
@@ -215,18 +215,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112864}
   m_Mesh: {fileID: 4300000, guid: 3a53b48f513395e47b0e7406dc605bd4, type: 3}
---- !u!65 &6504028
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116334}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6555586
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -237,8 +225,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.65856147, y: 1.41670299, z: 1.65961361}
-  m_Center: {x: -.00142273307, y: -.686321974, z: -.00141462684}
+  m_Size: {x: 1.51999998, y: 1.14999998, z: 1.51999998}
+  m_Center: {x: 0, y: -.600000024, z: 0}
 --- !u!82 &8272056
 AudioSource:
   m_ObjectHideFlags: 1
@@ -257,24 +245,39 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - time: .100000001
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -10.0039835
+      outSlope: -10.0039835
+      tangentMode: 0
+    - time: .200000003
+      value: .5
+      inSlope: -2.50099587
+      outSlope: -2.50099587
+      tangentMode: 0
+    - time: .382708937
+      value: .220270276
+      inSlope: -.774723947
+      outSlope: -.774723947
+      tangentMode: 0
+    - time: .702017307
+      value: .0570463389
+      inSlope: -.299571216
+      outSlope: -.299571216
       tangentMode: 0
     - time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -.100039877
+      outSlope: -.100039877
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -282,7 +285,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -325,12 +328,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11439742
+--- !u!114 &11462702
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116334}
+  m_GameObject: {fileID: 104538}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 946f46ff12b6faf4ab4c17fb3f546250, type: 3}
@@ -340,8 +343,23 @@ MonoBehaviour:
   OffSet: 0
   ActivateTimer: 2
   DeactivateTimer: .25
-  SpikeTriggerSound: {fileID: 8272056}
-  animations: {fileID: 0}
+  SFX: {fileID: 8272056}
+  animations: {fileID: 9549710}
+--- !u!208 &20808864
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104538}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: .75999999, y: .574999988, z: .75999999}
+  m_MoveThreshold: .100000001
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -.00100000005, y: -.600000024, z: -.00100000005}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
