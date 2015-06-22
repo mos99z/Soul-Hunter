@@ -8803,7 +8803,7 @@ MonoBehaviour:
   damage: 2.0999999
   recoveryTime: 1.5
   BurningDebuff: {fileID: 158764, guid: 8a1c1cb0b6641904ba77091a2b687b5b, type: 2}
-  Flame: {fileID: 0}
+  Flame: {fileID: 139094}
   BurningDamage: 1.10000002
   DebuffChance: .800000012
   DebuffDuration: 20

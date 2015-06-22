@@ -8,14 +8,17 @@ public class Timed_Spike_Controller : MonoBehaviour {
 	public float ActivateTimer = 2.0f;
 	public float DeactivateTimer = 0.25f;
 	private float Timer = 0.0f;
-
 	private bool Active = false;
-
+	public AudioSource SFX = null;
 	public Animator animations = null;
 
 	void Start()
 	{
-		animations = GetComponentInParent<Animator> ();
+		if (animations == null)
+			animations = GetComponentInParent<Animator> ();
+		if (SFX == null)
+			SFX = GetComponentInParent<AudioSource> ();
+
 		Reset ();
 	}
 
@@ -49,6 +52,7 @@ public class Timed_Spike_Controller : MonoBehaviour {
 		Active = true;
 		Timer = 0.0f;
 		animations.Play ("Triggered");
+		SFX.Play ();
 	}
 
 	void Reset()

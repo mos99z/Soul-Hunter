@@ -14,7 +14,7 @@ GameObject:
   - 54: {fileID: 5467190}
   - 114: {fileID: 11425858}
   - 135: {fileID: 13571626}
-  - 82: {fileID: 8291312}
+  - 82: {fileID: 8214774}
   m_Layer: 11
   m_Name: Melee Minion 1
   m_TagString: Enemy
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!82 &8291312
+--- !u!82 &8214774
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -235,12 +235,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 0
-  MaxHealth: 150
-  CurrHealth: 150
+  MaxHealth: 100
+  CurrHealth: 100
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
-  SoulValue: 2
+  SoulValue: 1
   entType: 1
   RoomNumber: 0
   SavePoint: {fileID: 0}
@@ -273,7 +273,7 @@ MonoBehaviour:
   Animate: {fileID: 9577718}
   attackLength: 1
   spriteImage: {fileID: 157290}
-  MeleeAttack: {fileID: 8291312}
+  MeleeAttack: {fileID: 8214774}
 --- !u!135 &13571626
 SphereCollider:
   m_ObjectHideFlags: 1

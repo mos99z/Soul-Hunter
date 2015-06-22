@@ -62,7 +62,7 @@ GameObject:
   - 54: {fileID: 5493480}
   - 135: {fileID: 13509792}
   - 136: {fileID: 13684048}
-  - 82: {fileID: 8204562}
+  - 82: {fileID: 8257504}
   m_Layer: 11
   m_Name: Ranged Minion 1
   m_TagString: Enemy
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!82 &8204562
+--- !u!82 &8257504
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -233,12 +233,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157a19c7b905a4a47a949cac9ed68dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinRange: 6
-  MaxRange: 20
+  MinRange: 5
+  MaxRange: 18
   Mask:
     serializedVersion: 2
     m_Bits: 256
-  AttackCooldown: 2.75
+  AttackCooldown: 3
   FelMissile: {fileID: 141786, guid: 61477904adaa7ed4fbd715899be8a272, type: 2}
   missleDamage: 50
   isFrozen: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   Animate: {fileID: 9533312}
   attackLength: 1
   spriteImage: {fileID: 106020}
-  RangedSFX: {fileID: 8204562}
+  RangedSFX: {fileID: 8257504}
 --- !u!114 &11486548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,12 +260,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Defence: 0
   ElementType: 0
-  MaxHealth: 125
-  CurrHealth: 125
+  MaxHealth: 100
+  CurrHealth: 100
   CanTakeDamage: 1
   CanDie: 1
   Lives: 1
-  SoulValue: 2
+  SoulValue: 1
   entType: 1
   RoomNumber: 0
   SavePoint: {fileID: 0}
