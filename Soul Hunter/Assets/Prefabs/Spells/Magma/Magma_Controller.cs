@@ -15,7 +15,8 @@ public class Magma_Controller : MonoBehaviour
 	public float burningDuration = 5.0f;// how long debuff lasts
 	public float burningTick = 1.0f;	// how long to wait between dealing damage
 	public float burningDamage = 5.1f;	// how much damage to deal each tick
-
+	public LayerMask LOSBlockers;
+	
 	Vector3 origScale;		// reference starting point
 	Vector3 finalScale;		// keep for proportional reference
 	float timer;			// for dealing extra ticks of damage
@@ -26,26 +27,34 @@ public class Magma_Controller : MonoBehaviour
 		recoveryTime -= 0.25f * (float)GameBrain.Instance.EarthLevel;
 		
 		timer = 0.0f;
-		if (mouseMarker == null)
-			mouseMarker = GameBrain.Instance.MouseMarker;
-		transform.position = new Vector3( mouseMarker.transform.position.x, mouseMarker.transform.position.y + 0.1f, mouseMarker.transform.position.z);
+
+		RaycastHit colliderCheck = new RaycastHit();
+		Vector3 distance = (GameBrain.Instance.MouseMarker.transform.position - GameBrain.Instance.Player.transform.position);
+		distance.y = 0.0f;
+		Physics.Raycast (GameBrain.Instance.Player.transform.position + new Vector3 (0, 1.0f, 0), 
+		                 distance.normalized,
+		                 out colliderCheck,
+		                 distance.magnitude + transform.GetComponent<SphereCollider>().radius * transform.localScale.x,
+		                 LOSBlockers);
+		Vector3 startpos = Vector3.zero;
+		if (colliderCheck.collider != null)
+			startpos = colliderCheck.point - distance.normalized * transform.GetComponent<SphereCollider>().radius * transform.localScale.x;
+		else
+			startpos = GameBrain.Instance.MouseMarker.transform.position;
+		startpos.y = 0.1f;
+		
+		transform.position = startpos;
+
 		transform.Rotate(Vector3.right, 90.0f);		// so it spawns flat on the ground
 		origScale = transform.localScale;
 		finalScale = new Vector3 (origScale.x * scaleValue, origScale.y * scaleValue, origScale.z * scaleValue);
+
 		if (burning == null)
 			burning = GameBrain.Instance.GetComponent<DebuffMasterList>().burning;
-		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
-		StartCoroutine("ScaleOverTime", growSpeed);
 
-		if (GameBrain.Instance.FireLevel > 0)
-		{
-			switch (GameBrain.Instance.FireLevel)
-			{
-			case 1: damage = damage*2.0f - 0.1f; break;
-			case 2: damage = damage*3.0f - 0.2f; break;
-			case 3: damage = damage*4.0f - 0.3f; break;
-			}
-		}
+		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
+
+		StartCoroutine("ScaleOverTime", growSpeed);
 	}
 	
 	IEnumerator ScaleOverTime(float time)
@@ -66,17 +75,28 @@ public class Magma_Controller : MonoBehaviour
 	{
 		if (other.tag == "Enemy" || other.tag == "Player")
 		{
-			other.transform.SendMessage("TakeDamage", damage);
-
-			float chance = Random.Range(0.0f,1.0f);
-			if (chance <= burnChance)
+			RaycastHit colliderCheck = new RaycastHit();
+			Vector3 distance = (other.transform.position - transform.position);
+			distance.y = 0.0f;
+			Physics.Raycast (transform.position + new Vector3 (0, 1.0f, 0), 
+			                 distance.normalized,
+			                 out colliderCheck,
+			                 distance.magnitude,
+			                 LOSBlockers);
+			if (colliderCheck.collider == null)
 			{
-				GameObject debuff = Instantiate(burning);
-				debuff.transform.parent = other.transform;
-				debuff.transform.localPosition = Vector3.zero;
-				debuff.GetComponent<Burning_Controller>().Damage = burningDamage;
-				debuff.GetComponent<Burning_Controller>().Duration = burningDuration;
-				debuff.GetComponent<Burning_Controller>().TickCycle = burningTick;
+				other.transform.SendMessage("TakeDamage", damage);
+				
+				float chance = Random.Range(0.0f,1.0f);
+				if (chance <= burnChance)
+				{
+					GameObject debuff = Instantiate(burning);
+					debuff.transform.parent = other.transform;
+					debuff.transform.localPosition = Vector3.zero;
+					debuff.GetComponent<Burning_Controller>().Damage = burningDamage;
+					debuff.GetComponent<Burning_Controller>().Duration = burningDuration;
+					debuff.GetComponent<Burning_Controller>().TickCycle = burningTick;
+				}
 			}
 		}
 	}
@@ -85,11 +105,22 @@ public class Magma_Controller : MonoBehaviour
 	{
 		if (other.tag == "Enemy" || other.tag == "Player")
 		{
-			timer += Time.deltaTime;
-			if (timer >= tickRate)
+			RaycastHit colliderCheck = new RaycastHit ();
+			Vector3 distance = (other.transform.position - transform.position);
+			distance.y = 0.0f;
+			Physics.Raycast (transform.position + new Vector3 (0, 1.0f, 0), 
+			                 distance.normalized,
+			                 out colliderCheck,
+			                 distance.magnitude,
+			                 LOSBlockers);
+			if (colliderCheck.collider == null)
 			{
-				timer = 0.0f;
-				other.transform.SendMessage("TakeDamage", damage);
+				timer += Time.deltaTime;
+				if (timer >= tickRate)
+				{
+					timer = 0.0f;
+					other.transform.SendMessage ("TakeDamage", damage);
+				}
 			}
 		}
 	}

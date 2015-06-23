@@ -5,6 +5,7 @@ public class Timed_Spike_Controller : MonoBehaviour {
 
 	public float Damage = 500.0f;
 	public float OffSet = 0.0f;
+	private float OffSetCounter = 0.0f;
 	public float ActivateTimer = 2.0f;
 	public float DeactivateTimer = 0.25f;
 	private float Timer = 0.0f;
@@ -14,6 +15,7 @@ public class Timed_Spike_Controller : MonoBehaviour {
 
 	void Start()
 	{
+		OffSetCounter = OffSet;
 		if (animations == null)
 			animations = GetComponentInParent<Animator> ();
 		if (SFX == null)
@@ -24,8 +26,8 @@ public class Timed_Spike_Controller : MonoBehaviour {
 
 	void Update ()
 	{
-		if (OffSet > 0.0f)
-			OffSet -= Time.deltaTime;
+		if (OffSetCounter > 0.0f)
+			OffSetCounter -= Time.deltaTime;
 		else
 			Timer += Time.deltaTime;
 
@@ -59,6 +61,7 @@ public class Timed_Spike_Controller : MonoBehaviour {
 	{
 		Active = false;
 		Timer = 0.0f;
+		OffSetCounter = OffSet;
 		animations.Play ("Reset"); 
 	}
 }

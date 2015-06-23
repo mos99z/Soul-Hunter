@@ -17,39 +17,32 @@ public class Whirlwind_Controller : MonoBehaviour {
 	private float TickTime = 0.0f;
 	private bool Dieing = false;
 	private List<GameObject> Hitting = new List<GameObject>();
-	private bool Once = true;
 	
 	void Start ()
 	{
+		RaycastHit colliderCheck = new RaycastHit();
+		Vector3 distance = (GameBrain.Instance.MouseMarker.transform.position - GameBrain.Instance.Player.transform.position);
+		distance.y = 0.0f;
+		Physics.Raycast (GameBrain.Instance.Player.transform.position + new Vector3 (0, 1.0f, 0), 
+		                 distance.normalized,
+		                 out colliderCheck,
+		                 distance.magnitude + transform.GetComponent<SphereCollider>().radius * transform.localScale.x,
+		                 WALLS);
+		Vector3 startpos = Vector3.zero;
+		if (colliderCheck.collider != null)
+			startpos = colliderCheck.point - distance.normalized * transform.GetComponent<SphereCollider>().radius * transform.localScale.x;
+		else
+			startpos = GameBrain.Instance.MouseMarker.transform.position;
+		startpos.y = 0.0f;
+		
+		transform.position = startpos;
+
 		Duration += 1.5f * (float)GameBrain.Instance.WindLevel;
+		GameBrain.Instance.Player.SendMessage("SetRecoverTime", RecoveryCost);
 	}
 	
 	void Update ()
 	{
-		if (Once)
-		{
-			GameObject player = GameObject.FindGameObjectWithTag ("Player");
-			Vector3 rayDirection = player.transform.FindChild("Direction Indicator").transform.forward;
-			rayDirection.y = 0.0f;
-			Vector3 PlayerPos = player.transform.position;
-			PlayerPos.y = 1.0f;
-			Ray wallCheckRay = new Ray(PlayerPos, rayDirection);
-			GameObject mouseMarker = GameObject.Find ("MouseMarker");
-			Vector3 mousePos = mouseMarker.transform.position;
-			mousePos.y = 0.0f;
-			PlayerPos.y = 0.0f;
-			float DistanceCheck = (mousePos - PlayerPos).magnitude + 3.0f;
-			if (Physics.Raycast (wallCheckRay, DistanceCheck, WALLS))
-			{
-				Destroy(gameObject);
-				return;
-			}
-			Once = false;
-			Vector3 newPosition = mouseMarker.transform.position;
-			newPosition.y = 0.0f;
-			transform.position = newPosition;
-			player.SendMessage("SetRecoverTime", RecoveryCost);
-		}
 		AliveTime += Time.deltaTime;
 		if (!Dieing && AliveTime >= Duration - 0.5f) 
 		{
@@ -59,7 +52,6 @@ public class Whirlwind_Controller : MonoBehaviour {
 				ParticleSystems[i].Stop();
 			Dieing = true;
 		}
-
 		
 		TickTime += Time.deltaTime;
 		for (int i = 0; i < Hitting.Count; i++)
@@ -77,12 +69,14 @@ public class Whirlwind_Controller : MonoBehaviour {
 				Hitting[i].SendMessage ("TakeDamage", DamageLightning);
 			}
 
-			Vector3 PullDirection = transform.position - Hitting[i].transform.position;
-			PullDirection.y = 0.0f;
-			if (Hitting[i].transform.GetComponent<Rigidbody>())
-				Hitting[i].transform.GetComponent<Rigidbody>().AddForce(PullDirection * PullInForce);
+			if (Hitting[i].GetComponent<Living_Obj>().entType == Living_Obj.EntityType.Minion)
+			{
+				Vector3 PullDirection = transform.position - Hitting[i].transform.position;
+				PullDirection.y = 0.0f;
+				if (Hitting[i].transform.GetComponent<Rigidbody>())
+					Hitting[i].transform.GetComponent<Rigidbody>().AddForce(PullDirection * PullInForce * Time.deltaTime);
+			}
 		}
-		
 		if (TickTime >= DamageTickRate)
 			TickTime = 0.0f;
 	}

@@ -8631,6 +8631,9 @@ MonoBehaviour:
   burningDuration: 5
   burningTick: 1
   burningDamage: 5.0999999
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &11461060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8697,7 +8700,7 @@ MonoBehaviour:
   DamageLightning: 1.39999998
   DamageTickRate: .100000001
   RecoveryCost: 1.5
-  PullInForce: 10
+  PullInForce: 500
   Duration: 3
   WALLS:
     serializedVersion: 2
@@ -8757,6 +8760,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   ChainEffect: {fileID: 157646, guid: 469eac4d4fe057c4b99ac9fbe66c799d, type: 2}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &11481706
 MonoBehaviour:
   m_ObjectHideFlags: 1

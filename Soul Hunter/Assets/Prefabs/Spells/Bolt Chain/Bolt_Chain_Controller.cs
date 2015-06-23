@@ -16,7 +16,8 @@ public class Bolt_Chain_Controller : MonoBehaviour
 	bool DamageOnce = true;
 	List<GameObject> HitTargets = new List<GameObject>();
 	List<GameObject> Sparks = new List<GameObject>();
-
+	public LayerMask LOSBlockers;
+	
 	
 	void Start () 
 	{
@@ -27,11 +28,22 @@ public class Bolt_Chain_Controller : MonoBehaviour
 		Collider[] PossibleStarts = Physics.OverlapSphere (mouseLocation, 0.5f, Hitables);
 		for (int target = 0; target < PossibleStarts.Length; target++)
 		{
-			float tempDistance = (PossibleStarts[target].transform.position - mouseLocation).magnitude;
-			if (tempDistance < smallestLength)
+			RaycastHit colliderCheck = new RaycastHit();
+			Vector3 distance = (PossibleStarts[target].transform.position - GameBrain.Instance.Player.transform.position);
+			distance.y = 0.0f;
+			Physics.Raycast (GameBrain.Instance.Player.transform.position + new Vector3 (0, 1.0f, 0), 
+			                 distance.normalized,
+			                 out colliderCheck,
+			                 distance.magnitude,
+			                 LOSBlockers);
+			if (colliderCheck.collider == null)
 			{
-				startingTarget = target;
-				smallestLength = tempDistance;
+				float tempDistance = (PossibleStarts[target].transform.position - mouseLocation).magnitude;
+				if (tempDistance < smallestLength)
+				{
+					startingTarget = target;
+					smallestLength = tempDistance;
+				}
 			}
 		}
 		if (startingTarget == -1)
@@ -70,12 +82,23 @@ public class Bolt_Chain_Controller : MonoBehaviour
 						}
 						continue;
 					}
-					
-					float tempDistance = (Potentials[target].transform.position - HitTargets[HitTargets.Count - 1].transform.position).magnitude;
-					if (tempDistance < smallestDist)
+
+					RaycastHit colliderCheck = new RaycastHit();
+					Vector3 distance = (Potentials[target].transform.position - HitTargets[HitTargets.Count - 1].transform.position);
+					distance.y = 0.0f;
+					Physics.Raycast (HitTargets[HitTargets.Count - 1].transform.position + new Vector3 (0, 1.0f, 0), 
+					                 distance.normalized,
+					                 out colliderCheck,
+					                 distance.magnitude,
+					                 LOSBlockers);
+					if (colliderCheck.collider == null)
 					{
-						NextTarget = target;
-						smallestDist = tempDistance;
+						float tempDistance = (Potentials[target].transform.position - HitTargets[HitTargets.Count - 1].transform.position).magnitude;
+						if (tempDistance < smallestDist)
+						{
+							NextTarget = target;
+							smallestDist = tempDistance;
+						}
 					}
 				}
 				if (NextTarget == -1)
