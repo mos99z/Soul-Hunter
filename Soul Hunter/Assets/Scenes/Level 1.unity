@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5378510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.3000002, y: 0, z: 13.1999998}
+  m_LocalPosition: {x: -10, y: 0, z: 11.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1097716622}
@@ -133,6 +133,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 20
   SpawnDelay: .5
+  radius: 3
 --- !u!1001 &6191166
 Prefab:
   m_ObjectHideFlags: 0
@@ -394,7 +395,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 27986817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.6247635, y: 0, z: -10.8429718}
+  m_LocalPosition: {x: -10.9899998, y: 0, z: -10.1099997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 787321161}
@@ -414,6 +415,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 144128, guid: f91edbf23e0781b428e0fdca37271961, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &31268843
 GameObject:
   m_ObjectHideFlags: 0
@@ -9342,7 +9344,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 143980355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.1900005, y: 0, z: -8.52999973}
+  m_LocalPosition: {x: -16.8500004, y: 0, z: -8.03999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 409434144}
@@ -9362,6 +9364,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 5
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &145265734
 GameObject:
   m_ObjectHideFlags: 0
@@ -15115,7 +15118,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227003457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.1000004, y: 0, z: 16}
+  m_LocalPosition: {x: -11.0299997, y: 0, z: 15.4200001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321948054}
@@ -15135,6 +15138,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 1
+  radius: 3
 --- !u!1001 &227128201
 Prefab:
   m_ObjectHideFlags: 0
@@ -16694,6 +16698,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &315611696
 GameObject:
   m_ObjectHideFlags: 0
@@ -17966,6 +17971,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 187082, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
   NumberOfSpawns: 1
   SpawnDelay: 2
+  radius: 3
 --- !u!1 &320324976
 GameObject:
   m_ObjectHideFlags: 0
@@ -28084,6 +28090,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 144128, guid: f91edbf23e0781b428e0fdca37271961, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &507644512
 GameObject:
   m_ObjectHideFlags: 0
@@ -28489,6 +28496,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 144128, guid: f91edbf23e0781b428e0fdca37271961, type: 2}
   NumberOfSpawns: 5
   SpawnDelay: 1
+  radius: 3
 --- !u!1001 &520506175
 Prefab:
   m_ObjectHideFlags: 0
@@ -28672,6 +28680,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 187082, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &524222789
 GameObject:
   m_ObjectHideFlags: 0
@@ -35144,7 +35153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &616116840
 Transform:
   m_ObjectHideFlags: 0
@@ -35172,6 +35181,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &616975473
 GameObject:
   m_ObjectHideFlags: 0
@@ -44315,7 +44325,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 821883024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.6999998, y: 0, z: 14.8000002}
+  m_LocalPosition: {x: 12.0600004, y: 0, z: 14.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321948054}
@@ -44335,6 +44345,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 144128, guid: f91edbf23e0781b428e0fdca37271961, type: 2}
   NumberOfSpawns: 5
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &824267097
 GameObject:
   m_ObjectHideFlags: 0
@@ -46301,7 +46312,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 856521266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.6247635, y: 0, z: -10.8429718}
+  m_LocalPosition: {x: -12.1099997, y: 0, z: -11.2399998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321948054}
@@ -46321,6 +46332,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 1
+  radius: 3
 --- !u!1001 &857808438
 Prefab:
   m_ObjectHideFlags: 0
@@ -49405,6 +49417,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 144128, guid: f91edbf23e0781b428e0fdca37271961, type: 2}
   NumberOfSpawns: 5
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &944561954
 GameObject:
   m_ObjectHideFlags: 0
@@ -55421,6 +55434,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &1066614199
 GameObject:
   m_ObjectHideFlags: 0
@@ -55773,6 +55787,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 187082, guid: ebaa405fb8d97ea45adf3da1aef81a99, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 4
+  radius: 3
 --- !u!1 &1072819612
 GameObject:
   m_ObjectHideFlags: 0
@@ -64077,6 +64092,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 187082, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
   NumberOfSpawns: 3
   SpawnDelay: 2
+  radius: 3
 --- !u!1 &1286279733
 GameObject:
   m_ObjectHideFlags: 0
@@ -64292,7 +64308,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1300515292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.1999998, y: 0, z: -15.7799997}
+  m_LocalPosition: {x: 11.1000004, y: 0, z: -15.1899996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1097716622}
@@ -64312,6 +64328,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 144128, guid: f91edbf23e0781b428e0fdca37271961, type: 2}
   NumberOfSpawns: 20
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &1301707036
 GameObject:
   m_ObjectHideFlags: 0
@@ -65601,7 +65618,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1329767140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.61000013, y: 0, z: 40.5999985}
+  m_LocalPosition: {x: 6.94000006, y: 0, z: 40.5600014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1097716622}
@@ -65621,6 +65638,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 187082, guid: ebaa405fb8d97ea45adf3da1aef81a99, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &1331025206
 GameObject:
   m_ObjectHideFlags: 0
@@ -70911,7 +70929,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1381408992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.3000002, y: 0, z: -11.1999998}
+  m_LocalPosition: {x: 10.71, y: 0, z: -10.6999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 787321161}
@@ -70931,6 +70949,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &1381569400
 GameObject:
   m_ObjectHideFlags: 0
@@ -71486,7 +71505,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1400370253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.3000002, y: 0, z: -11.1999998}
+  m_LocalPosition: {x: 13.1300001, y: 0, z: -11.7700005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321948054}
@@ -71506,6 +71525,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 144128, guid: f91edbf23e0781b428e0fdca37271961, type: 2}
   NumberOfSpawns: 5
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &1407024490
 GameObject:
   m_ObjectHideFlags: 0
@@ -72508,7 +72528,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1440534842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.6599998, y: 0, z: 10.8999996}
+  m_LocalPosition: {x: -15.3500004, y: 0, z: 10.4899998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 409434144}
@@ -72528,6 +72548,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 5
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &1441248067
 GameObject:
   m_ObjectHideFlags: 0
@@ -80964,7 +80985,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1587230513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.7999992, y: -32.5, z: 9.10000038}
+  m_LocalPosition: {x: -9.85999966, y: 0, z: -14.4799995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1097716622}
@@ -80984,6 +81005,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 144128, guid: f91edbf23e0781b428e0fdca37271961, type: 2}
   NumberOfSpawns: 20
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &1587701157
 GameObject:
   m_ObjectHideFlags: 0
@@ -81876,6 +81898,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &1674829996
 GameObject:
   m_ObjectHideFlags: 0
@@ -85709,7 +85732,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1789349491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.1999998, y: 0, z: 2.5999999}
+  m_LocalPosition: {x: 10.9499998, y: 0, z: 1.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1321948054}
@@ -85729,6 +85752,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 187082, guid: 073a2c0f8d9ac8b46a1419757e6003af, type: 2}
   NumberOfSpawns: 3
   SpawnDelay: .25
+  radius: 3
 --- !u!1 &1790336660
 GameObject:
   m_ObjectHideFlags: 0
@@ -98367,6 +98391,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 10
   SpawnDelay: 1
+  radius: 3
 --- !u!1 &1985823614
 GameObject:
   m_ObjectHideFlags: 0
@@ -99984,7 +100009,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2042658533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.8400002, y: 0, z: 12.1800003}
+  m_LocalPosition: {x: 10.9499998, y: 0, z: 11.9700003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1097716622}
@@ -100004,6 +100029,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 126538, guid: 0d586c5d1f48e404eae873933c6851d0, type: 2}
   NumberOfSpawns: 20
   SpawnDelay: .5
+  radius: 3
 --- !u!1 &2044803527
 GameObject:
   m_ObjectHideFlags: 0
@@ -100088,6 +100114,7 @@ MonoBehaviour:
   EnemyToSpawn: {fileID: 187082, guid: ebaa405fb8d97ea45adf3da1aef81a99, type: 2}
   NumberOfSpawns: 1
   SpawnDelay: 2
+  radius: 3
 --- !u!1 &2047839640
 GameObject:
   m_ObjectHideFlags: 0
