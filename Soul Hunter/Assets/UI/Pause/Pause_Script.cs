@@ -13,6 +13,7 @@ public class Pause_Script : MonoBehaviour {
 	public GameObject MessagePrompt;
 
 	public GameObject[] pauseSouls = new GameObject[5];
+	AudioSource[] sources;
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +27,12 @@ public class Pause_Script : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == false) 
 		{
 			Time.timeScale = 0;
+			sources = GameObject.FindObjectsOfType<AudioSource>();
+			for (int i = 0; i < sources.Length; i++) 
+			{
+				if(sources[i] != GameBrain.Instance.Music)
+					sources[i].Pause();
+			}
 			gamePaused = true;
 			PauseMenu.SetActive(true);
 			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.MenuMusic);
@@ -49,6 +56,11 @@ public class Pause_Script : MonoBehaviour {
 			MessagePrompt.activeSelf == false) 
 		{
 			Time.timeScale = 1;
+			for (int i = 0; i < sources.Length; i++) 
+			{
+				if(sources[i] != GameBrain.Instance.Music)
+					sources[i].UnPause();
+			}
 			gamePaused = false;
 			PauseMenu.SetActive(false);
 			if(GameBrain.Instance.FightingBoss == true)

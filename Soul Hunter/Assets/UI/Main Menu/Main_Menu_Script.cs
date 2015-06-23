@@ -224,6 +224,7 @@ public class Main_Menu_Script : MonoBehaviour
 		GameBrain.Instance.EraseFile();
 		GameBrain.Instance.loadingScreen.SetActive(true);
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
+		GameBrain.Instance.Player.transform.position = Vector3.zero;
 		ao = Application.LoadLevelAsync ("Tutorial");
 		ao.allowSceneActivation = false;
 		GameBrain.Instance.SendMessage ("ChangeMusic", GameBrain.Instance.GameplayMusic);
