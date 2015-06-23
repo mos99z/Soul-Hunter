@@ -27,8 +27,8 @@ public class Spawner_Controller : MonoBehaviour {
 
 		if (currentTimer <= 0.0f) 
 		{
-			Vector3 spawnLocation;
-			spawnLocation = Random.insideUnitSphere * radius;
+			Vector3 spawnLocation = transform.position;
+			spawnLocation += Random.insideUnitSphere * radius;
 			spawnLocation.y = 0.0f;
 			Instantiate (EnemyToSpawn, spawnLocation, gameObject.transform.rotation);
 			NumberOfSpawns--;
