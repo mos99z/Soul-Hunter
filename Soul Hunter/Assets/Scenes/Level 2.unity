@@ -12508,8 +12508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowTarget: {fileID: 0}
-  DistanceOffset: 12
-  HeightOffset: 14
+  DistanceOffset: 24
+  HeightOffset: 28
   ObjectsToHide:
     serializedVersion: 2
     m_Bits: 0
@@ -57935,7 +57935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11489368, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
       propertyPath: SelectHealthBar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11457790, guid: e72126bf513bfb94b8bfa12473099e99, type: 2}
       propertyPath: DirectionIndicator

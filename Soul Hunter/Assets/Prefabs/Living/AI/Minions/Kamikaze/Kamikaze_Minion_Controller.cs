@@ -99,17 +99,17 @@ public class Kamikaze_Minion_Controller : MonoBehaviour {
 
 		TurnTowardsPlayer ();
 
-		if (isCountingDown == false) 
+
+		destination = target.transform.position;
+		navigation.SetDestination (destination);
+		float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
+
+		if (!isCountingDown && playerDistance <= KamikazeDistance) 
 		{
-			destination = target.transform.position;
-			navigation.SetDestination (destination);
-			float playerDistance = (target.transform.position - gameObject.transform.position).magnitude;
-			if (playerDistance <= KamikazeDistance) 
-			{
-				isCountingDown = true;
-				boutToBlow.SetActive(true);
-				navigation.Stop();
-			}
+			GetComponent<NavMeshAgent>().speed *= 0.5f;
+			isCountingDown = true;
+			boutToBlow.SetActive(true);
+			navigation.Stop();
 		}
 		
 		if (isCountingDown == true) 

@@ -94,7 +94,7 @@ public class Poision_Cloud_Controller : MonoBehaviour
 			if (colliderCheck.collider == null)
 			{
 				timer += Time.deltaTime;
-				if (timer >= 0.2f)
+				if (timer >= 0.4f)
 				{
 					timer = 0.0f;
 					other.transform.SendMessage("TakeDamage", damage);

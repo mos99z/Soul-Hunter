@@ -3269,7 +3269,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.7369099, y: -31.4966469, z: 1.28908825}
+  m_LocalPosition: {x: -14.6999998, y: 8.63000011, z: 1.29999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419108}
@@ -8616,7 +8616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   MoveSpeed: 4
-  damage: 5.5
+  damage: 50.5
   recoveryTime: 2
   PushBackPower: 20
 --- !u!114 &11450258
@@ -8755,8 +8755,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageWind: 2.20000005
   DamageLightning: 1.39999998
-  DamageTickRate: .100000001
-  RecoveryCost: 1.5
+  DamageTickRate: .25
+  RecoveryCost: 2.5
   PullInForce: 500
   Duration: 3
   WALLS:

@@ -31,7 +31,7 @@ public class TiggerSpikes : MonoBehaviour
 		{
 			for (int EachSpike = 0; EachSpike < Spikes.Length; EachSpike++)
 			{
-				Spikes[EachSpike].SendMessage("Reset");
+				Spikes[EachSpike].SendMessage("FreshStart");
 				Spikes[EachSpike].SetActive(false);
 			}
 		}

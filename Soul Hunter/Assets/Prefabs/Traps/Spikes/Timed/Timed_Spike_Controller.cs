@@ -61,7 +61,12 @@ public class Timed_Spike_Controller : MonoBehaviour {
 	{
 		Active = false;
 		Timer = 0.0f;
-		OffSetCounter = OffSet;
 		animations.Play ("Reset"); 
+	}
+
+	void FreshStart()
+	{
+		OffSetCounter = OffSet;
+		Reset ();
 	}
 }
