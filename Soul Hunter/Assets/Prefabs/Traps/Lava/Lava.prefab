@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.75, y: 1.61000001, z: 7.09000015}
+  m_LocalPosition: {x: -50.7000008, y: 1.69000006, z: 137.149994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450144}
@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burnDebuff: {fileID: 0}
-  lavaDamage: 10.1000004
-  waitTime: 1
+  lavaDamage: 50.0999985
+  waitTime: .5
   BurningDOTDuration: 10
   BurningDOTTickCycle: .5
   BurningDOTTickDamage: 5.0999999
