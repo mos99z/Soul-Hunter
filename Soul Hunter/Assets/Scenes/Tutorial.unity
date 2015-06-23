@@ -653,6 +653,12 @@ MonoBehaviour:
   Lives: 1
   SoulValue: 1
   entType: 1
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 0}
+  MedBloodSplat: {fileID: 0}
+  LargeBloodSplat: {fileID: 0}
 --- !u!114 &862953763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,6 +1579,18 @@ Prefab:
     - target: {fileID: 488746, guid: 6836fb0bc1544ed4e9c8d45204255994, type: 2}
       propertyPath: m_LocalPosition.z
       value: -.105999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 117422, guid: 6836fb0bc1544ed4e9c8d45204255994, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10207168, guid: 6836fb0bc1544ed4e9c8d45204255994, type: 2}
+      propertyPath: m_Text
+      value: 'Casting spells is simple. Click to cast a spell. After casting a
+
+        spell you will have to wait for the bar under your player to
+
+        finish charging.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6836fb0bc1544ed4e9c8d45204255994, type: 2}

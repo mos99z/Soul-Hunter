@@ -21,10 +21,22 @@ public class Main_Menu_Script : MonoBehaviour
 	public GameObject OptionsMenu;
 	private Main_Menu_Script mainMenScript;
 	AsyncOperation ao = null;
+
+	//title screen stuff
+	public GameObject TitleScreen;
+	public GameObject MainMen;
+	public GameObject PressKey;
+	public GameObject Logo;
+	private float blinkTicker = 0;
+	private bool hasPressed = false;
+	private float animateTicker = 0;
 	
 	// Use this for initialization
 	void Start () 
 	{
+		TitleScreen.SetActive(true);
+		MainMen.SetActive(false);
+
 		LoadingScreen = GameBrain.Instance.loadingScreen;
 		GameBrain.Instance.SendMessage("ChangeMusic", GameBrain.Instance.MenuMusic);
 
@@ -42,64 +54,113 @@ public class Main_Menu_Script : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (ao == null) 
+		if (TitleScreen.activeSelf)
 		{
-			if (!stall) {
-				if (Input.GetKeyDown (KeyCode.UpArrow)) {
-					index--;
-					if (index < 0)
-						index = 4;
-					needsUpdate = true;
-				} else if (Input.GetKeyDown (KeyCode.DownArrow)) {
-					index++;
-					if (index > 4)
-						index = 0;
-					needsUpdate = true;
-				}
-			}
-			
-			if (Input.GetKeyDown (KeyCode.Return)) {
-				switch (index) {
-				case 0:
-					{
-						MouseClick0 ();
-						break;
-					}
-				case 1:
-					{
-						MouseClick1 ();
-						break;
-					}
-				case 2:
-					{
-						MouseClick2 ();
-						break;
-					}
-				case 3:
-					{
-						MouseClick3 ();
-						break;
-					}
-				case 4:
-					{
-						MouseClick4 ();
-						break;
-					}
-				}
-			}
-			if (needsUpdate) {
-				MoveSoul ();
-				needsUpdate = false;
-			}
+			TitleScreenControl();
 		}
-
 		else
 		{
-			Debug.Log(ao.progress);
-			if (ao.progress == 0.9f) 
+			if (ao == null)
 			{
-				GameBrain.Instance.loadingScreen.SetActive(false);
-				ao.allowSceneActivation = true;
+				if (!stall)
+				{
+					if (Input.GetKeyDown (KeyCode.UpArrow))
+					{
+						index--;
+						if (index < 0)
+							index = 4;
+						needsUpdate = true;
+					}
+					else if (Input.GetKeyDown (KeyCode.DownArrow))
+					{
+						index++;
+						if (index > 4)
+							index = 0;
+						needsUpdate = true;
+					}
+				}
+			
+				if (Input.GetKeyDown (KeyCode.Return))
+				{
+					switch (index)
+					{
+					case 0:
+						{
+							MouseClick0 ();
+							break;
+						}
+					case 1:
+						{
+							MouseClick1 ();
+							break;
+						}
+					case 2:
+						{
+							MouseClick2 ();
+							break;
+						}
+					case 3:
+						{
+							MouseClick3 ();
+							break;
+						}
+					case 4:
+						{
+							MouseClick4 ();
+							break;
+						}
+					}
+				}
+				if (needsUpdate)
+				{
+					MoveSoul ();
+					needsUpdate = false;
+				}
+			} else {
+				Debug.Log (ao.progress);
+				if (ao.progress == 0.9f)
+				{
+					GameBrain.Instance.loadingScreen.SetActive (false);
+					ao.allowSceneActivation = true;
+				}
+			}
+		}
+	}
+
+	private void TitleScreenControl()
+	{
+		blinkTicker += Time.deltaTime;
+		if (blinkTicker >= 1)
+		{
+			blinkTicker = 0;
+			if (animateTicker > 0 && animateTicker < 0.5f)
+			{
+				blinkTicker = 0.99f;
+			}
+			PressKey.SetActive(!PressKey.activeSelf);
+		}
+		if (Input.anyKeyDown && !hasPressed)
+		{
+			hasPressed = true;
+			blinkTicker = 0.99f;
+		}
+		if (hasPressed)
+		{
+			animateTicker += Time.deltaTime;
+			if (animateTicker >= 0.5f)
+			{
+				PressKey.SetActive(false);
+			}
+			if (animateTicker > 1)
+			{
+				MainMen.SetActive(true);
+				TitleScreen.GetComponent<Image>().color = new Color(1, 1, 1, (1 - animateTicker / 2));
+				Logo.GetComponent<Image>().color = new Color(1, 1, 1, (1 - animateTicker / 2));
+				Input.ResetInputAxes();
+			}
+			if (animateTicker >= 2)
+			{
+				TitleScreen.SetActive(false);
 			}
 		}
 	}

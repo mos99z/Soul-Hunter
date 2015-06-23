@@ -158,8 +158,16 @@ public class Options_Script2 : MonoBehaviour
 		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		MusicSlider.value = MusicVolume;
 		SFXSlider.value = SFXVolume;
-		FullOn.SetActive(false);
-		FullOff.SetActive(true);
+		if (!Screen.fullScreen)
+		{
+			FullOn.SetActive(true);
+			FullOff.SetActive(false);
+		}
+		else
+		{
+			FullOn.SetActive(false);
+			FullOff.SetActive(true);
+		}
 	}
 	
 	public void AdjustMusVol()
