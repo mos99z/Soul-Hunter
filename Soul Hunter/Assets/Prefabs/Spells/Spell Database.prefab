@@ -1036,9 +1036,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 488922}
   - 132: {fileID: 13288342}
-  - 65: {fileID: 6528550}
   - 114: {fileID: 11448110}
   - 82: {fileID: 8234544}
+  - 136: {fileID: 13679694}
   m_Layer: 0
   m_Name: Tidal Wave
   m_TagString: Spell
@@ -3758,7 +3758,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 100.300003, z: -30.3500004}
+  m_LocalPosition: {x: 0, y: 100.300003, z: -24.6800003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488170}
@@ -5747,18 +5747,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186472}
   m_Mesh: {fileID: 4300000, guid: 4378b356041154f4589eab03254b8964, type: 3}
---- !u!65 &6528550
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148960}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.25, y: 5, z: 7}
-  m_Center: {x: 0, y: 2.5, z: 1}
 --- !u!65 &6556858
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -8700,6 +8688,9 @@ MonoBehaviour:
   burningDuration: 5
   burningTick: 1
   burningDamage: 5.0999999
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &11461060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8766,7 +8757,7 @@ MonoBehaviour:
   DamageLightning: 1.39999998
   DamageTickRate: .100000001
   RecoveryCost: 1.5
-  PullInForce: 10
+  PullInForce: 500
   Duration: 3
   WALLS:
     serializedVersion: 2
@@ -8826,6 +8817,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   ChainEffect: {fileID: 157646, guid: 469eac4d4fe057c4b99ac9fbe66c799d, type: 2}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &11481706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9910,6 +9904,19 @@ CapsuleCollider:
   m_Height: 2.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &13679694
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 2
+  m_Height: 4
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: -2}
 --- !u!136 &13688190
 CapsuleCollider:
   m_ObjectHideFlags: 1

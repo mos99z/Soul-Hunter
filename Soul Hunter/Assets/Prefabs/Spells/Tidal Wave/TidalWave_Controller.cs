@@ -101,7 +101,7 @@ public class TidalWave_Controller : MonoBehaviour
 			HitWall = true;
 			once = false;
 			MovingUp = false;
-			transform.GetComponent<BoxCollider>().enabled = false;
+			transform.GetComponent<CapsuleCollider>().enabled = false;
 			StartCoroutine("MoveDown");
 		}
 	}

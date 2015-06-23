@@ -6494,7 +6494,7 @@ Transform:
   m_GameObject: {fileID: 242384798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -47.0999985, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 30, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 2031991669}
   m_RootOrder: 4
@@ -16909,7 +16909,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 60
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -19317,7 +19317,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 11456246, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+    - target: {fileID: 11492426, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
       propertyPath: mouseMarker
       value: 
       objectReference: {fileID: 316358188}
@@ -19333,19 +19333,15 @@ Prefab:
       propertyPath: mouseMarker
       value: 
       objectReference: {fileID: 316358188}
-    - target: {fileID: 11428086, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
-      propertyPath: PlayerFaceingIndicator
-      value: 
-      objectReference: {fileID: 962110945}
     - target: {fileID: 11434534, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
       propertyPath: PlayerFaceingIndicator
       value: 
       objectReference: {fileID: 962110945}
-    - target: {fileID: 11441260, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
-      propertyPath: mouseMarker
+    - target: {fileID: 11428086, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      propertyPath: PlayerFaceingIndicator
       value: 
-      objectReference: {fileID: 316358188}
-    - target: {fileID: 11492426, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
+      objectReference: {fileID: 962110945}
+    - target: {fileID: 11400520, guid: 08f3285afb75ee142941feea9b7783e1, type: 2}
       propertyPath: mouseMarker
       value: 
       objectReference: {fileID: 316358188}

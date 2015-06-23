@@ -42,7 +42,8 @@ public class Explosion_Controller : MonoBehaviour
 		startpos.y = 1.25f;
 
 		transform.position = startpos;
-		SpellEffect.GetComponent<ParticleSystem> ().Play ();
+		if (SpellEffect != null)
+			SpellEffect.GetComponent<ParticleSystem> ().Play ();
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
 	}
 	
@@ -85,7 +86,8 @@ public class Explosion_Controller : MonoBehaviour
 				cripp.transform.GetComponent<Crippled_Controller>().duration = crippleDuration;
 			}
 
-			other.transform.SendMessage("TakeDamage", damage);
+
+			other.transform.SendMessage("TakeDamage", damage);
 		}
 	}
 }
