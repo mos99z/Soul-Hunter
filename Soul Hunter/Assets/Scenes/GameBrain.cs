@@ -431,19 +431,6 @@ public class GameBrain : MonoBehaviour {
 
 	void CheckHealth()
 	{
-		if (PlayerCurrHealth > PlayerMaxHealth)
-			PlayerCurrHealth = PlayerMaxHealth;
-		else if (PlayerCurrHealth <= 0)
-		{
-			DamageTaken += PlayerCurrHealth;
-			PlayerCurrHealth = 0;
-			ModLivesLeft( -1);
-
-			if (PlayerLivesLeft <= 0)
-				GameOver();
-			else
-				RespawnPlayer();
-		}
 		HUDMaster.GetComponent<StatsDisplay> ().SetHealthDisplay(PlayerCurrHealth);
 	}
 
@@ -474,16 +461,6 @@ public class GameBrain : MonoBehaviour {
 			PlayerLivesLeft = 0;
 		}
 		HUDMaster.GetComponent<StatsDisplay> ().SetLivesDisplay((uint)PlayerLivesLeft);
-	}
-
-	void RespawnPlayer()
-	{
-		PlayerCurrHealth = PlayerMaxHealth;
-	}
-
-	void GameOver()
-	{
-
 	}
 
 	void ModSouls(int _value)

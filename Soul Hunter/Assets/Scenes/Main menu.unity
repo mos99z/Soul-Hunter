@@ -34456,6 +34456,7 @@ MonoBehaviour:
   SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
   MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
   LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
+  playSprt: {fileID: 1502925796}
 --- !u!54 &2031991671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34505,7 +34506,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483648
   ScreenCamera: {fileID: 0}
-  GameOver: {fileID: 249581579}
   isCrippled: 0
   underMelee: 0
   attackLength: 1.5
