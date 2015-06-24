@@ -39,7 +39,7 @@ public class Spell_List_Controller : MonoBehaviour
 	void Start ()
 	{
 		spellCastBools = gameBrain.SpellHasBeenCast;
-		path = "Assets/UI/Spell Book/SpellInfo/";
+		path = "SpellInfo/";
 		fullPath = path + "NoneSelected";
 		elements[0] = "None";
 		elements[1] = "Fire";
