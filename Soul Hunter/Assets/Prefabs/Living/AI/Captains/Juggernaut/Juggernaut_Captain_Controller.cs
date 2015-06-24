@@ -51,6 +51,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 		navigation = GetComponent<NavMeshAgent> ();
 		currentChargeCooldown = ChargeCooldown;
 		currentChargeChargeUp = ChargeChargeUp;
+		navigation.stoppingDistance = 1.0f;
 		navigation.updateRotation = false;
 		boundingWalls.SendMessage("ActivateWalls");
 	}
@@ -101,6 +102,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 				
 				navigation.speed = 50.0f;
 				navigation.acceleration = 50.0f;
+				navigation.stoppingDistance = 0.0f;
 				navigation.autoBraking = false;
 
 				return;
@@ -302,6 +304,7 @@ public class Juggernaut_Captain_Controller : MonoBehaviour
 			collisionTimer = 1.0f;
 			navigation.speed = 3.5f;
 			navigation.acceleration = 8.0f;
+			navigation.stoppingDistance = 1.0f;
 			hasCollided = true;
 			navigation.autoBraking = true;
 			transform.GetComponent<Rigidbody>().velocity = Vector3.zero;

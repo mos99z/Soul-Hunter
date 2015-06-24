@@ -43,6 +43,10 @@ public class Living_Obj : MonoBehaviour
 	public GameObject MedBloodSplat = null;
 	public GameObject LargeBloodSplat = null;
 
+	[Header ("For the Player Only")]
+	public AudioSource DeathSound;
+
+
 	void Start ()
 	{
 		if (CurrHealth <= 0)
@@ -429,6 +433,8 @@ public class Living_Obj : MonoBehaviour
 		else
 		{
 //	TODO: Player "Death"
+
+			DeathSound.Play();
 			GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
 			GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
 			GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar");
