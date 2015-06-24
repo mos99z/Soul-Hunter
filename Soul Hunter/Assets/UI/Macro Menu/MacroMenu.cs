@@ -51,10 +51,14 @@ public class MacroMenu : MonoBehaviour
 	private Color32 selected;
 	private Color32 unSelected;
 
+	//Puase when paused
+	public bool paussed;
+
 	// Use this for initialization
 	void Start ()
 	{
 		hasChanged = false;
+		paussed = false;
 
 		resetButtons();
 		
@@ -65,26 +69,29 @@ public class MacroMenu : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (reset)
+		if (!paussed)
 		{
-			resetButtons();
-			reset = false;
-		}
-
-		if (hasChanged)
-		{
-			updateIndex();
-			hasChanged = false;
-		}
-
-		if (Input.GetKeyDown(KeyCode.Tab))
-		{
-			activateMenu();
-		}
-
-		if (Input.GetKeyDown(KeyCode.Space) && index == 3 && menObj.activeSelf)
-		{
-			AddSpell();
+			if (reset)
+			{
+				resetButtons();
+				reset = false;
+			}
+			
+			if (hasChanged)
+			{
+				updateIndex();
+				hasChanged = false;
+			}
+			
+			if (Input.GetKeyDown(KeyCode.Tab))
+			{
+				activateMenu();
+			}
+			
+			if (Input.GetKeyDown(KeyCode.Space) && index == 3 && menObj.activeSelf)
+			{
+				AddSpell();
+			}
 		}
 	}
 

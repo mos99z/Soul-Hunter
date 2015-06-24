@@ -7,6 +7,7 @@ public class Exit_Prompt_Script : MonoBehaviour {
 	public GameObject PauseMenu;
 	public GameObject LoadingScreen;
 	AsyncOperation ao = null;
+
 	// Use this for initialization
 	void Start () 
 	{

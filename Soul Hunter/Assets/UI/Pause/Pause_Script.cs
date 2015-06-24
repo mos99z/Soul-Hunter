@@ -12,12 +12,18 @@ public class Pause_Script : MonoBehaviour {
 	public GameObject SpellListMenu;
 	public GameObject MessagePrompt;
 
+	//pause other menus
+	private MacroMenu macroMen;
+	private MacroSelect macroSel;
+
 	public GameObject[] pauseSouls = new GameObject[5];
 	AudioSource[] sources;
 
 	// Use this for initialization
 	void Start ()
 	{
+		macroMen = (MacroMenu)GameBrain.Instance.HUDMaster.GetComponent("MacroMenu");
+		macroSel = (MacroSelect)GameBrain.Instance.HUDMaster.GetComponent("MacroSelect");
 		for (int i = 0; i < pauseSouls.Length; i++)
 		{
 			pauseSouls[i].SetActive(false);
@@ -26,7 +32,18 @@ public class Pause_Script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-	{		
+	{
+		if (gamePaused)
+		{
+			macroMen.paussed = true;
+			macroSel.paussed = true;
+		}
+		else
+		{
+			macroMen.paussed = false;
+			macroSel.paussed = false;
+		}
+
 		if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == false) 
 		{
 			Time.timeScale = 0;
@@ -40,7 +57,6 @@ public class Pause_Script : MonoBehaviour {
 			PauseMenu.SetActive(true);
 			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.MenuMusic);
 		}
-		
 		else if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == true)
 		{
 			Resume();
@@ -73,7 +89,6 @@ public class Pause_Script : MonoBehaviour {
 			else
 				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
 		}
-
 	}
 
 	public void Options()
@@ -93,7 +108,7 @@ public class Pause_Script : MonoBehaviour {
 
 	public void Exit()
 	{
-		MessagePrompt.SetActive (true);
+		MessagePrompt.SetActive(true);
 	}
 
 	public void ActivateSoul1()

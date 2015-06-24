@@ -45,10 +45,14 @@ public class MacroSelect : MonoBehaviour
 
 	public bool needsUpdate;
 
+	//Alow pussing
+	public bool paussed;
+
 	// Use this for initialization
 	void Start ()
 	{
 		needsUpdate = false;
+		paussed = false;
 
 		scrollTime = 0;
 		scrollDelay = (float)0.05;
@@ -69,18 +73,21 @@ public class MacroSelect : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		scrollTime += Time.deltaTime;
-
-		//only do calculations when needed
-		if (Input.GetAxis("Mouse ScrollWheel") != 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q) || needsUpdate)
+		if (!paussed)
 		{
-			toggleMacs();
+			scrollTime += Time.deltaTime;
 			
-			colorManagment();
-			
-			changeText();
-
-			needsUpdate = false;
+			//only do calculations when needed
+			if (Input.GetAxis("Mouse ScrollWheel") != 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q) || needsUpdate)
+			{
+				toggleMacs();
+				
+				colorManagment();
+				
+				changeText();
+				
+				needsUpdate = false;
+			}
 		}
 	}
 
