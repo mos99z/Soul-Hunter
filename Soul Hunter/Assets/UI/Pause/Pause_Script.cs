@@ -18,7 +18,10 @@ public class Pause_Script : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-	
+		for (int i = 0; i < pauseSouls.Length; i++)
+		{
+			pauseSouls[i].SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame
