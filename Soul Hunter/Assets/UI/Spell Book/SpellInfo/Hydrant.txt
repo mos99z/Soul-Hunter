@@ -1,0 +1,1 @@
+5,5,5,Hydrant,Cast a thin stream of highly pressurized water from your hands in the direction of your coursor. Though it deals little damage it can send a foe flying. The longer you spray a single foe the higher chance they have of becoming wet but you will be more fatigued.

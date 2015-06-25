@@ -1,0 +1,1 @@
+3,3,3,Rock Spike,Cast a a row of spikes from your feet in the direction of your coursor. Though slow it deals good damage. As the spikes increase in size so does their power.

@@ -1,0 +1,1 @@
+2,2,5,Freeze,Dramatically drop the temperature in small AOE span. The quick snap of cold not only deals damage but can potentially stun foes.

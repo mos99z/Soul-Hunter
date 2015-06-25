@@ -1,0 +1,1 @@
+4,5,5,Shock Prism,Send a ball of compacted water with an extremely high voltage running thru it to your cursor. It will deal damage to all foes that hit it while it’s traveling, however, once it reaches its destination it will expand and paralyze foes that are trapped with in it.

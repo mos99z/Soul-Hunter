@@ -1,0 +1,1 @@
+1,3,3,Explosion,Cast a good size explosion that can cripple foes and possibly ignite them.

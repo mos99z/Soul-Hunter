@@ -1,0 +1,1 @@
+1,1,3,Magma,Cast a pool of thick lava capable of igniteing foes that enter it as well as slowing them as long as they're in it.
