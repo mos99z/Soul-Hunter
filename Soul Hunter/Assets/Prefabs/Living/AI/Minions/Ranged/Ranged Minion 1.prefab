@@ -63,7 +63,7 @@ GameObject:
   - 135: {fileID: 13509792}
   - 136: {fileID: 13684048}
   - 82: {fileID: 8257504}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Ranged Minion 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -273,6 +273,7 @@ MonoBehaviour:
   SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
   MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
   LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
+  DeathSound: {fileID: 0}
 --- !u!135 &13509792
 SphereCollider:
   m_ObjectHideFlags: 1

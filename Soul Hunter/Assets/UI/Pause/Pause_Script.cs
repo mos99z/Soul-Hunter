@@ -50,12 +50,14 @@ public class Pause_Script : MonoBehaviour {
 			sources = GameObject.FindObjectsOfType<AudioSource>();
 			for (int i = 0; i < sources.Length; i++) 
 			{
-				if(sources[i] != GameBrain.Instance.Music)
+				if(sources[i] != GameBrain.Instance.CasualMusic)
 					sources[i].Pause();
 			}
 			gamePaused = true;
 			PauseMenu.SetActive(true);
-			GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.MenuMusic);
+			//GameBrain.Instance.GameMusic.Pause();
+			GameBrain.Instance.CasualMusic.Play ();
+			//GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.MenuMusic);
 		}
 		else if (Input.GetKeyDown (KeyCode.Escape) && gamePaused == true)
 		{
@@ -75,19 +77,29 @@ public class Pause_Script : MonoBehaviour {
 			MessagePrompt.activeSelf == false) 
 		{
 			Time.timeScale = 1;
+			GameBrain.Instance.CasualMusic.Stop();
 			for (int i = 0; i < sources.Length; i++) 
 			{
-				if(sources[i] != GameBrain.Instance.Music)
+				if(sources[i] != GameBrain.Instance.CasualMusic)
 					sources[i].UnPause();
 			}
 			gamePaused = false;
 			PauseMenu.SetActive(false);
-			if(GameBrain.Instance.FightingBoss == true)
-				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.BossMusic);
-			else if(GameBrain.Instance.FightingCaptain == true)
-				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.CaptainMusic);
-			else
-				GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+			//if(GameBrain.Instance.FightingBoss == true)
+			//{
+			//	GameBrain.Instance.
+			//	GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.BossMusic);
+			//}
+			//else if(GameBrain.Instance.FightingCaptain == true)
+			//{
+			//
+			//	GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.CaptainMusic);
+			//}
+			//else
+			//{
+			//	GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);
+			//
+			//}
 		}
 	}
 

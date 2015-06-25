@@ -16,9 +16,8 @@ public class Game_Over_Controller : MonoBehaviour {
 		{
 			if (Input.anyKey) 
 			{
-				int zero = 0;
 				gameObject.SetActive(false);
-				GameBrain.Instance.SendMessage("ChangeMusic", zero);
+				GameBrain.Instance.SendMessage("ChangeMusic", GameBrain.Instance.MenuMusic);
 				Application.LoadLevel ("Main menu");	
 			}
 		}

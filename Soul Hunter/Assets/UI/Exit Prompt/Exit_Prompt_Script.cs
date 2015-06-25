@@ -38,7 +38,6 @@ public class Exit_Prompt_Script : MonoBehaviour {
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync ("Main menu");
 		ao.allowSceneActivation = false;
-		GameBrain.Instance.ChangeMusic(MenuMusic);
 		GameBrain.Instance.Player.SetActive (false);
 		GameBrain.Instance.CurrentLevel = -1;
 		MessagePrompt.SetActive (false);

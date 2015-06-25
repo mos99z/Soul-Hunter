@@ -106,7 +106,8 @@ public class GameBrain : MonoBehaviour {
 	public List<int> RoomsCleared;
 	public Vector3 RespawnLoc = Vector3.zero;
 	private GameInfo gameInfo;
-	public AudioSource Music;
+	public AudioSource CasualMusic;
+	public AudioSource GameMusic;
 	public float MusicVolume;
 	public float SFXVolume;
 
@@ -161,9 +162,11 @@ public class GameBrain : MonoBehaviour {
 		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 
 		AudioListener.volume = SFXVolume;
-		Music.ignoreListenerVolume = true;
-		Music.volume = MusicVolume;
-		Music.Play ();
+		CasualMusic.ignoreListenerVolume = true;
+		CasualMusic.volume = MusicVolume;
+		GameMusic.ignoreListenerVolume = true;
+		GameMusic.volume = MusicVolume;
+		CasualMusic.Play ();
 
 		if (CurrentLevel >= 0) {
 			if (Player != null)
@@ -385,7 +388,7 @@ public class GameBrain : MonoBehaviour {
 		//SpellDatabase.transform.FindChild (_SpellName).GetComponent<GUIText>().text.;
 	}
 
-	void SpellWasCast(GameObject spell)
+	public void SpellWasCast(GameObject spell)
 	{
 		for (int i = 0; i < spellNames.Length; i++) 
 		{
@@ -470,12 +473,27 @@ public class GameBrain : MonoBehaviour {
 
 	public void ChangeMusic(AudioClip clip)
 	{
-		if (Music.clip == clip)
+		if (clip == MenuMusic || clip == GameOverMusic) 
+		{
+			if (CasualMusic.clip == clip)
 			return;
-		Music.Stop ();
-		Music.clip = clip;
-		Music.Play ();
+			CasualMusic.Stop ();
+			GameMusic.Stop();
+			CasualMusic.clip = clip;
+			CasualMusic.Play ();
 	}
+		else
+		{
+			if (GameMusic.clip == clip)
+				return;
+			CasualMusic.Stop ();
+			GameMusic.Stop();
+			GameMusic.clip = clip;
+			GameMusic.Play ();
+		}
+	}
+
+
 
 	public void ChangeSoulHud()
 	{

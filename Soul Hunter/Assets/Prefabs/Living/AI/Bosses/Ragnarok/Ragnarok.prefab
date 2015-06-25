@@ -268,7 +268,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -.5}
+  m_LocalPosition: {x: 0, y: 3.31999993, z: -.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493764}
@@ -328,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.870000005, y: 0, z: 15}
+  m_LocalPosition: {x: -.899999976, y: 0, z: 41.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454828}
@@ -587,6 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   sprite: {fileID: 137562}
+  boundingWalls: {fileID: 0}
   DeathSound: {fileID: 0}
   wayPointMinTicker: 9
   wayPointMaxTicker: 7
@@ -658,6 +659,9 @@ MonoBehaviour:
   SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
   MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
   LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
+  DeathSound: {fileID: 0}
+  HitSound: {fileID: 0}
+  playSprt: {fileID: 0}
 --- !u!135 &13531632
 SphereCollider:
   m_ObjectHideFlags: 1

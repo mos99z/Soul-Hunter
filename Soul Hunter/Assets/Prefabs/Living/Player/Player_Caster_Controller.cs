@@ -7,7 +7,6 @@ public class Player_Caster_Controller : MonoBehaviour {
 	private string SpellName;
 	private float Recovering = 0.0f;
 	private bool CanCast = true;
-	public GameObject GameBrain = null;
 	public GameObject RecoveryBar = null;
 	
 	void Start ()
@@ -38,11 +37,7 @@ public class Player_Caster_Controller : MonoBehaviour {
 	void CastSpell()
 	{
 		Instantiate(CurrSpell, transform.position, transform.rotation);
-		GameBrain.SendMessage ("SpellWasCast", CurrSpell);
-		if (GameBrain != null)
-			GameBrain.BroadcastMessage ("SpellCasted", CurrSpell.name, SendMessageOptions.RequireReceiver);
-		else
-			Debug.LogError ("GameBrain in script Player Caster Controller can not be null!");
+		GameBrain.Instance.SpellWasCast(CurrSpell);
 	}
 
 	public void ChangeSpell(GameObject _spell)

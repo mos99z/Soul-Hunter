@@ -377,7 +377,7 @@ public class Ranged_Minion_Controller : MonoBehaviour {
 
 	// This function will check if there is any Ranged Minion enemy too close.
 	// If there is, then the enemy will find a new location.
-	void OnTriggerStay(Collider col)
+	void OnTriggerEnter(Collider col)
 	{
 		if (isMoving == false && col.name.Contains ("Ranged")) 
 		{

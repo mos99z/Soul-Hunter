@@ -359,7 +359,7 @@ public class Ragnorak_Controller : MonoBehaviour
 			}
 			else if (wayPointTicker > 0)
 			{
-				Vector3 tempPos = new Vector3(-0.5f, 0, -3);
+				Vector3 tempPos = new Vector3(-0.5f, 5f, -3);
 				sprite.transform.localPosition = tempPos;
 			}
 			if (dotProd >= 0.75f)

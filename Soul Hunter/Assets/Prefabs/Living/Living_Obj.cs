@@ -43,6 +43,9 @@ public class Living_Obj : MonoBehaviour
 	public GameObject MedBloodSplat = null;
 	public GameObject LargeBloodSplat = null;
 
+	[Header ("For the Player Only")]
+	public AudioSource DeathSound;
+	public AudioSource HitSound;
 	//player blood splat
 	private bool isAnimating = false;
 	private float aniTicker = 0;
@@ -188,6 +191,8 @@ public class Living_Obj : MonoBehaviour
 		int ActualDamage = (int)(((float)rawDamage) * (1.0f - Defence));
 
 		Debug.Log(ActualDamage + " Damage recieved by " + transform.name);
+		if (entType == EntityType.Player)
+			HitSound.Play ();
 		
 		if (GameBrain.Instance.Player.GetComponent<Player_Movement_Controller>().isCrippled &&
 		    entType != EntityType.Player)
@@ -312,6 +317,7 @@ public class Living_Obj : MonoBehaviour
 		{
 			if (entType == EntityType.Player)
 			{
+				DeathSound.Play();
 				if (SmallBloodSplat != null)
 				{
 					Instantiate(SmallBloodSplat, this.transform.position, SmallBloodSplat.transform.rotation);

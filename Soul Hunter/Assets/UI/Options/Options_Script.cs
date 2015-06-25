@@ -182,7 +182,8 @@ public class Options_Script : MonoBehaviour
 		MusicVolume = MusicSlider.value;
 		if (Options.activeSelf) 
 		{
-			GameBrain.Instance.Music.volume = MusicVolume;
+			GameBrain.Instance.CasualMusic.volume = MusicVolume;
+			GameBrain.Instance.GameMusic.volume = MusicVolume;
 		}
 	}
 
@@ -222,7 +223,8 @@ public class Options_Script : MonoBehaviour
 		opening = true;
 		PlayerPrefs.SetFloat ("MusicVolume", MusicVolume);
 		PlayerPrefs.SetFloat ("SFXVolume", SFXVolume);
-		GameBrain.Instance.Music.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		GameBrain.Instance.CasualMusic.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		GameBrain.Instance.GameMusic.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		AudioListener.volume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		SFXSlider.interactable = false;
 		MusicSlider.interactable = false;
@@ -243,7 +245,8 @@ public class Options_Script : MonoBehaviour
 		opening = true;
 		MusicSlider.value = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		SFXSlider.value = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
-		GameBrain.Instance.Music.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		GameBrain.Instance.CasualMusic.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
+		GameBrain.Instance.GameMusic.volume = PlayerPrefs.GetFloat ("MusicVolume", 1.0f);
 		TestSFX.volume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 		SFXSlider.interactable = false;
 		MusicSlider.interactable = false;

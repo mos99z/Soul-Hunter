@@ -17487,75 +17487,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1048941861}
   m_Mesh: {fileID: 4300004, guid: 3a53b48f513395e47b0e7406dc605bd4, type: 3}
---- !u!1001 &1052774680
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2027377181}
-    m_Modifications:
-    - target: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.78999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .100000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 12.5699997
-      objectReference: {fileID: 0}
-    - target: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -.707106829
-      objectReference: {fileID: 0}
-    - target: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .707106829
-      objectReference: {fileID: 0}
-    - target: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 151444, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-      propertyPath: m_Name
-      value: Teleport Ring 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11447624, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1052774681 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 452920, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-  m_PrefabInternal: {fileID: 1052774680}
---- !u!1 &1052774682 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 151444, guid: 2fe7aa8355328de4a896e0aa4f4390a7, type: 2}
-  m_PrefabInternal: {fileID: 1052774680}
---- !u!114 &1052774683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1052774682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9024c519c72e224b9fc030356813744, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelToLoad: Level 3
-  nextLevel: 3
-  LoadingScreen: {fileID: 0}
 --- !u!1 &1055744040
 GameObject:
   m_ObjectHideFlags: 0
@@ -18191,6 +18122,8 @@ MonoBehaviour:
   SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
   MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
   LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
+  DeathSound: {fileID: 0}
+  HitSound: {fileID: 0}
   playSprt: {fileID: 0}
 --- !u!195 &1087278895
 NavMeshAgent:
@@ -24077,6 +24010,8 @@ MonoBehaviour:
   SmallBloodSplat: {fileID: 161692, guid: becab41403da05d46a37b92fc0f0061c, type: 2}
   MedBloodSplat: {fileID: 174136, guid: 863e5a31e1b2d7e48bfd22a88901e969, type: 2}
   LargeBloodSplat: {fileID: 140904, guid: 46179a6cb7ad9bd42b3b5f72d51953fb, type: 2}
+  DeathSound: {fileID: 0}
+  HitSound: {fileID: 0}
   playSprt: {fileID: 0}
 --- !u!195 &1422330399
 NavMeshAgent:
@@ -29842,7 +29777,6 @@ Transform:
   - {fileID: 1422330396}
   - {fileID: 6191169}
   - {fileID: 1055744041}
-  - {fileID: 1052774681}
   m_Father: {fileID: 1379031640}
   m_RootOrder: 13
 --- !u!1 &2027629750

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4235c4287ab5c9440b0d13cf599461dc
-timeCreated: 1435173686
+timeCreated: 1435239397
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -103,7 +103,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -122,7 +122,7 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
@@ -150,7 +150,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,9 +158,9 @@ TextureImporter:
     - name: Rag - Idle_1
       rect:
         serializedVersion: 2
-        x: 264
+        x: 263
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,9 +168,9 @@ TextureImporter:
     - name: Rag - Idle_2
       rect:
         serializedVersion: 2
-        x: 528
+        x: 526
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -178,9 +178,9 @@ TextureImporter:
     - name: Rag - Idle_3
       rect:
         serializedVersion: 2
-        x: 792
+        x: 789
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -188,9 +188,9 @@ TextureImporter:
     - name: Rag - Idle_4
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1052
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -198,9 +198,9 @@ TextureImporter:
     - name: Rag - Idle_5
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1315
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -208,9 +208,9 @@ TextureImporter:
     - name: Rag - Idle_6
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1578
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -218,9 +218,9 @@ TextureImporter:
     - name: Rag - Idle_7
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1841
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -228,9 +228,9 @@ TextureImporter:
     - name: Rag - Idle_8
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2104
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -238,9 +238,9 @@ TextureImporter:
     - name: Rag - Idle_9
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2367
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -248,9 +248,9 @@ TextureImporter:
     - name: Rag - Idle_10
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2630
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -258,9 +258,9 @@ TextureImporter:
     - name: Rag - Idle_11
       rect:
         serializedVersion: 2
-        x: 2904
+        x: 2893
         y: 1484
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -270,7 +270,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -278,9 +278,9 @@ TextureImporter:
     - name: Rag - Idle_13
       rect:
         serializedVersion: 2
-        x: 264
+        x: 263
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -288,9 +288,9 @@ TextureImporter:
     - name: Rag - Idle_14
       rect:
         serializedVersion: 2
-        x: 528
+        x: 526
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -298,9 +298,9 @@ TextureImporter:
     - name: Rag - Idle_15
       rect:
         serializedVersion: 2
-        x: 792
+        x: 789
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -308,9 +308,9 @@ TextureImporter:
     - name: Rag - Idle_16
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1052
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -318,9 +318,9 @@ TextureImporter:
     - name: Rag - Idle_17
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1315
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -328,9 +328,9 @@ TextureImporter:
     - name: Rag - Idle_18
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1578
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -338,9 +338,9 @@ TextureImporter:
     - name: Rag - Idle_19
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1841
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -348,9 +348,9 @@ TextureImporter:
     - name: Rag - Idle_20
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2104
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -358,9 +358,9 @@ TextureImporter:
     - name: Rag - Idle_21
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2367
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -368,9 +368,9 @@ TextureImporter:
     - name: Rag - Idle_22
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2630
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -378,9 +378,9 @@ TextureImporter:
     - name: Rag - Idle_23
       rect:
         serializedVersion: 2
-        x: 2904
+        x: 2893
         y: 1272
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -390,7 +390,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -398,9 +398,9 @@ TextureImporter:
     - name: Rag - Idle_25
       rect:
         serializedVersion: 2
-        x: 264
+        x: 263
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -408,9 +408,9 @@ TextureImporter:
     - name: Rag - Idle_26
       rect:
         serializedVersion: 2
-        x: 528
+        x: 526
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -418,9 +418,9 @@ TextureImporter:
     - name: Rag - Idle_27
       rect:
         serializedVersion: 2
-        x: 792
+        x: 789
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -428,9 +428,9 @@ TextureImporter:
     - name: Rag - Idle_28
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1052
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -438,9 +438,9 @@ TextureImporter:
     - name: Rag - Idle_29
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1315
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -448,9 +448,9 @@ TextureImporter:
     - name: Rag - Idle_30
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1578
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -458,9 +458,9 @@ TextureImporter:
     - name: Rag - Idle_31
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1841
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -468,9 +468,9 @@ TextureImporter:
     - name: Rag - Idle_32
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2104
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -478,9 +478,9 @@ TextureImporter:
     - name: Rag - Idle_33
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2367
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -488,9 +488,9 @@ TextureImporter:
     - name: Rag - Idle_34
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2630
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -498,9 +498,9 @@ TextureImporter:
     - name: Rag - Idle_35
       rect:
         serializedVersion: 2
-        x: 2904
+        x: 2893
         y: 1060
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -510,7 +510,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -518,9 +518,9 @@ TextureImporter:
     - name: Rag - Idle_37
       rect:
         serializedVersion: 2
-        x: 264
+        x: 263
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -528,9 +528,9 @@ TextureImporter:
     - name: Rag - Idle_38
       rect:
         serializedVersion: 2
-        x: 528
+        x: 526
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -538,9 +538,9 @@ TextureImporter:
     - name: Rag - Idle_39
       rect:
         serializedVersion: 2
-        x: 792
+        x: 789
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -548,9 +548,9 @@ TextureImporter:
     - name: Rag - Idle_40
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1052
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -558,9 +558,9 @@ TextureImporter:
     - name: Rag - Idle_41
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1315
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -568,9 +568,9 @@ TextureImporter:
     - name: Rag - Idle_42
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1578
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -578,9 +578,9 @@ TextureImporter:
     - name: Rag - Idle_43
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1841
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -588,9 +588,9 @@ TextureImporter:
     - name: Rag - Idle_44
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2104
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -598,9 +598,9 @@ TextureImporter:
     - name: Rag - Idle_45
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2367
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -608,9 +608,9 @@ TextureImporter:
     - name: Rag - Idle_46
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2630
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -618,9 +618,9 @@ TextureImporter:
     - name: Rag - Idle_47
       rect:
         serializedVersion: 2
-        x: 2904
+        x: 2893
         y: 848
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -630,7 +630,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -638,9 +638,9 @@ TextureImporter:
     - name: Rag - Idle_49
       rect:
         serializedVersion: 2
-        x: 264
+        x: 263
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -648,9 +648,9 @@ TextureImporter:
     - name: Rag - Idle_50
       rect:
         serializedVersion: 2
-        x: 528
+        x: 526
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -658,9 +658,9 @@ TextureImporter:
     - name: Rag - Idle_51
       rect:
         serializedVersion: 2
-        x: 792
+        x: 789
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -668,9 +668,9 @@ TextureImporter:
     - name: Rag - Idle_52
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1052
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -678,9 +678,9 @@ TextureImporter:
     - name: Rag - Idle_53
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1315
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -688,9 +688,9 @@ TextureImporter:
     - name: Rag - Idle_54
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1578
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -698,9 +698,9 @@ TextureImporter:
     - name: Rag - Idle_55
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1841
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -708,9 +708,9 @@ TextureImporter:
     - name: Rag - Idle_56
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2104
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -718,9 +718,9 @@ TextureImporter:
     - name: Rag - Idle_57
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2367
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -728,9 +728,9 @@ TextureImporter:
     - name: Rag - Idle_58
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2630
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -738,9 +738,9 @@ TextureImporter:
     - name: Rag - Idle_59
       rect:
         serializedVersion: 2
-        x: 2904
+        x: 2893
         y: 636
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -750,7 +750,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -758,9 +758,9 @@ TextureImporter:
     - name: Rag - Idle_61
       rect:
         serializedVersion: 2
-        x: 264
+        x: 263
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -768,9 +768,9 @@ TextureImporter:
     - name: Rag - Idle_62
       rect:
         serializedVersion: 2
-        x: 528
+        x: 526
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -778,9 +778,9 @@ TextureImporter:
     - name: Rag - Idle_63
       rect:
         serializedVersion: 2
-        x: 792
+        x: 789
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -788,9 +788,9 @@ TextureImporter:
     - name: Rag - Idle_64
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1052
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -798,19 +798,19 @@ TextureImporter:
     - name: Rag - Idle_65
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1315
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rag - Idle_66
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1578
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -818,9 +818,9 @@ TextureImporter:
     - name: Rag - Idle_67
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1841
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -828,9 +828,9 @@ TextureImporter:
     - name: Rag - Idle_68
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2104
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -838,9 +838,9 @@ TextureImporter:
     - name: Rag - Idle_69
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2367
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -848,9 +848,9 @@ TextureImporter:
     - name: Rag - Idle_70
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2630
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -858,9 +858,9 @@ TextureImporter:
     - name: Rag - Idle_71
       rect:
         serializedVersion: 2
-        x: 2904
+        x: 2893
         y: 424
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -870,7 +870,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -878,9 +878,9 @@ TextureImporter:
     - name: Rag - Idle_73
       rect:
         serializedVersion: 2
-        x: 264
+        x: 263
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -888,9 +888,9 @@ TextureImporter:
     - name: Rag - Idle_74
       rect:
         serializedVersion: 2
-        x: 528
+        x: 526
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -898,9 +898,9 @@ TextureImporter:
     - name: Rag - Idle_75
       rect:
         serializedVersion: 2
-        x: 792
+        x: 789
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -908,9 +908,9 @@ TextureImporter:
     - name: Rag - Idle_76
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1052
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -918,19 +918,19 @@ TextureImporter:
     - name: Rag - Idle_77
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1315
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Rag - Idle_78
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1578
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -938,9 +938,9 @@ TextureImporter:
     - name: Rag - Idle_79
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1841
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -948,9 +948,9 @@ TextureImporter:
     - name: Rag - Idle_80
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2104
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -958,9 +958,9 @@ TextureImporter:
     - name: Rag - Idle_81
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2367
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -968,9 +968,9 @@ TextureImporter:
     - name: Rag - Idle_82
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2630
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -978,9 +978,9 @@ TextureImporter:
     - name: Rag - Idle_83
       rect:
         serializedVersion: 2
-        x: 2904
+        x: 2893
         y: 212
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -990,7 +990,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -998,9 +998,9 @@ TextureImporter:
     - name: Rag - Idle_85
       rect:
         serializedVersion: 2
-        x: 264
+        x: 263
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1008,9 +1008,9 @@ TextureImporter:
     - name: Rag - Idle_86
       rect:
         serializedVersion: 2
-        x: 528
+        x: 526
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1018,9 +1018,9 @@ TextureImporter:
     - name: Rag - Idle_87
       rect:
         serializedVersion: 2
-        x: 792
+        x: 789
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1028,9 +1028,9 @@ TextureImporter:
     - name: Rag - Idle_88
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1052
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1038,9 +1038,9 @@ TextureImporter:
     - name: Rag - Idle_89
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1315
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1048,9 +1048,9 @@ TextureImporter:
     - name: Rag - Idle_90
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 1578
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1058,9 +1058,9 @@ TextureImporter:
     - name: Rag - Idle_91
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1841
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1068,9 +1068,9 @@ TextureImporter:
     - name: Rag - Idle_92
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 2104
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1078,9 +1078,9 @@ TextureImporter:
     - name: Rag - Idle_93
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2367
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1088,9 +1088,9 @@ TextureImporter:
     - name: Rag - Idle_94
       rect:
         serializedVersion: 2
-        x: 2640
+        x: 2630
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1098,9 +1098,9 @@ TextureImporter:
     - name: Rag - Idle_95
       rect:
         serializedVersion: 2
-        x: 2904
+        x: 2893
         y: 0
-        width: 264
+        width: 263
         height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
