@@ -38,7 +38,7 @@ public class Spell_List_Controller : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		spellCastBools = gameBrain.SpellHasBeenCast;
+		spellCastBools = GameBrain.Instance.SpellHasBeenCast;
 		path = "SpellInfo/";
 		fullPath = path + "NoneSelected";
 		elements[0] = "None";
@@ -64,7 +64,7 @@ public class Spell_List_Controller : MonoBehaviour
 
 	public void UpdateSpellList()
 	{
-		bool[] spellCastBools = gameBrain.SpellHasBeenCast;
+		spellCastBools = gameBrain.SpellHasBeenCast;
 		
 		for (int i = 0; i < spellCastBools.Length; i++) 
 		{
