@@ -31,7 +31,7 @@ public class SummonWall : MonoBehaviour
 		}
 	}
 
-	void DestroyWalls()
+	public void DestroyWalls()
 	{
 		for (int i = 0; i < walls.Length; i++)
 		{

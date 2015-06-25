@@ -43,6 +43,12 @@ public class Living_Obj : MonoBehaviour
 	public GameObject MedBloodSplat = null;
 	public GameObject LargeBloodSplat = null;
 
+	//player blood splat
+	private bool isAnimating = false;
+	private float aniTicker = 0;
+	private bool hasNotDied = true;
+	public SpriteRenderer playSprt;
+
 	void Start ()
 	{
 		if (CurrHealth <= 0)
@@ -91,84 +97,79 @@ public class Living_Obj : MonoBehaviour
 
 	void Update()
 	{
-		if (!IsAlive)
+		if (!isAnimating)
 		{
-			if (transform.GetComponentInChildren<Animation> () != null)
+			if (!IsAlive)
 			{
-				if (!transform.GetComponentInChildren<Animation> ().isPlaying)
-				{
-					if (entType == EntityType.Player)
-					{
-						// TODO: Restart Level
+				DropSoul ();
+			}
 
-					}
-					else
-						DropSoul ();
+			if (entType == EntityType.Captain)
+			{
+				GameBrain.Instance.HUDMaster.SendMessage("SetCaptainHealthDisplay", CurrHealth);
+				if (CurrHealth == 0)
+				{
+					GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar", 0);
 				}
 			}
-			else
-				DropSoul ();
-		}
-
-		if (entType == EntityType.Captain)
-		{
-			GameBrain.Instance.HUDMaster.SendMessage("SetCaptainHealthDisplay", CurrHealth);
-			if (CurrHealth == 0)
-			{
-				GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar", 0);
-			}
-		}
-
-		if (entType == EntityType.Boss)
-		{
-			if (SelectHealthBar == 0)
-			{
-				GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay", CurrHealth);
-				GameBrain.Instance.HUDMaster.SendMessage("SetBossName", gameObject.name);
-			}
-			else if (SelectHealthBar == 1)
-			{
-				GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay1", CurrHealth);
-				GameBrain.Instance.HUDMaster.SendMessage("SetBossName1", gameObject.name);
-			}
-			else if (SelectHealthBar == 2)
-			{
-				GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay2", CurrHealth);
-				GameBrain.Instance.HUDMaster.SendMessage("SetBossName2", gameObject.name);
-			}
-
-			if (CurrHealth == 0)
+			if (entType == EntityType.Boss)
 			{
 				if (SelectHealthBar == 0)
 				{
-					GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar", 0);
+					GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay", CurrHealth);
+					GameBrain.Instance.HUDMaster.SendMessage("SetBossName", gameObject.name);
 				}
-				else
+				else if (SelectHealthBar == 1)
 				{
-					if (SoulValue == SoulType.Red)
+					GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay1", CurrHealth);
+					GameBrain.Instance.HUDMaster.SendMessage("SetBossName1", gameObject.name);
+				}
+				else if (SelectHealthBar == 2)
+				{
+					GameBrain.Instance.HUDMaster.SendMessage("SetBossHealthDisplay2", CurrHealth);
+					GameBrain.Instance.HUDMaster.SendMessage("SetBossName2", gameObject.name);
+				}
+				if (CurrHealth == 0)
+				{
+					if (SelectHealthBar == 0)
 					{
-						GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar", 0);
+						GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar", 0);
+					}
+					else
+					{
+						if (SoulValue == SoulType.Red)
+						{
+							GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar", 0);
+						}
 					}
 				}
 			}
-		}
-
-		if (Image != null && FlashTimer > 0.0f)
-		{
-			FlashTimer -= Time.deltaTime;
-			if (FlashTimer <= 0.0f)
+			if (Image != null && FlashTimer > 0.0f)
 			{
-				Color flash = transform.GetComponentInChildren<SpriteRenderer>().color;
-				flash.a = 1.0f;
-				transform.GetComponentInChildren<SpriteRenderer>().color = flash;
+				FlashTimer -= Time.deltaTime;
+				if (FlashTimer <= 0.0f)
+				{
+					Color flash = transform.GetComponentInChildren<SpriteRenderer>().color;
+					flash.a = 1.0f;
+					transform.GetComponentInChildren<SpriteRenderer>().color = flash;
+				}
+			}
+			if (FlashCoolDown > 0.0f)
+				FlashCoolDown -= Time.deltaTime;
+		}
+		else
+		{
+			aniTicker += Time.deltaTime;
+			if (aniTicker >= 1.0f)
+			{
+				aniTicker = 0.0f;
+				isAnimating = false;
+				PulseCheck();
 			}
 		}
-
-		if (FlashCoolDown > 0.0f)
-			FlashCoolDown -= Time.deltaTime;
 	}
 
-	void Heal (int _heal)
+	private void Heal (int _heal)
 	{
 		if (_heal > 0)
 		{
@@ -179,7 +180,7 @@ public class Living_Obj : MonoBehaviour
 		}
 	}
 
-	void TakeDamage (float _damage)
+	private void TakeDamage (float _damage)
 	{
 		// Get actual damage value from damage parameter.
 		// Calculate damage reduction from defence before elements are accounted for.
@@ -305,32 +306,52 @@ public class Living_Obj : MonoBehaviour
 		}
 	}
 	
-	void PulseCheck()
+	private void PulseCheck()
 	{
-		if (CurrHealth <= 0 && CanDie)
+		if (CurrHealth <= 0 && CanDie && entType == EntityType.Player && hasNotDied)
 		{
-			Lives -= 1;
-			if (Lives <= 0)
-				Die();
-			else
+			if (entType == EntityType.Player)
 			{
-				CurrHealth = MaxHealth;
-				if (entType == EntityType.Player)
+				if (SmallBloodSplat != null)
 				{
-					GameBrain.Instance.SendMessage("ChangeMusic", GameBrain.Instance.GameplayMusic);
-					GameBrain.Instance.FightingCaptain = false;
-					GameBrain.Instance.FightingBoss = false;
-					GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
-					GameBrain.Instance.Save();
-					Application.LoadLevel(Application.loadedLevel);
+					Instantiate(SmallBloodSplat, this.transform.position, SmallBloodSplat.transform.rotation);
 				}
 			}
+
+			GameBrain.Instance.Player.GetComponent<Player_Movement_Controller>().enabled = false;
+			isAnimating = true;
+			hasNotDied = false;
+			playSprt.color = new Color(1, 1, 1, 0);
 		}
-		// Display immortal - Blue
-		else if (!CanDie)
+		if (!isAnimating)
 		{
-			CurrHealth = 1;
-			DisplayTextInfo("IMMORTAL", new Color(1.0f, 0.0f, 1.0f), 8.0f);
+			if (CurrHealth <= 0 && CanDie)
+			{
+				Lives -= 1;
+
+				if (Lives <= 0)
+					Die();
+				else
+				{
+					CurrHealth = MaxHealth;
+					if (entType == EntityType.Player)
+					{
+						GameBrain.Instance.SendMessage("ChangeMusic", GameBrain.Instance.GameplayMusic);
+						GameBrain.Instance.FightingCaptain = false;
+						GameBrain.Instance.FightingBoss = false;
+						GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
+						GameBrain.Instance.Save();
+						hasNotDied = true;
+						Application.LoadLevel(Application.loadedLevel);
+					}
+				}
+			}
+			// Display immortal - Blue
+			else if (!CanDie)
+			{
+				CurrHealth = 1;
+				DisplayTextInfo("IMMORTAL", new Color(1.0f, 0.0f, 1.0f), 8.0f);
+			}
 		}
 	}
 
@@ -421,6 +442,7 @@ public class Living_Obj : MonoBehaviour
 			GameBrain.Instance.ElectricLevel = GameBrain.Instance.ElectricLevelAtStart;
 			GameBrain.Instance.HUDMaster.GetComponent<Upgrades_Script>().CheckLevelAvailability();
 
+			GameBrain.Instance.RespawnLoc = Vector3.zero;
 			GameBrain.Instance.RoomsCleared.Clear();
 			GameBrain.Instance.RoomsCleared = new List<int>();
 			IsAlive = true;

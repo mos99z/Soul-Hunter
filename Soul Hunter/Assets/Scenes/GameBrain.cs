@@ -72,6 +72,12 @@ public class GameInfo		// for game save/load
 	public float RespawnLocX;
 	public float RespawnLocY;
 	public float RespawnLocZ;
+	public string Mac0;
+	public string Mac1;
+	public string Mac2;
+	public string Mac3;
+	public string Mac4;
+	public int lastMac;
 	//public bool[,] miniMap;	// to be enabled once figured out
 }
 
@@ -206,7 +212,15 @@ public class GameBrain : MonoBehaviour {
 				for (int i = 0; i < count; ++i)
 					GameObject.Find("Room " + RoomsCleared[i].ToString()).transform.FindChild("Spawn Area").gameObject.SetActive(false);
 				Player.transform.position = RespawnLoc;
+				Player.transform.SendMessage("SetRecoverTime", 0.01f, SendMessageOptions.RequireReceiver);
 			}
+			Player.GetComponent<Living_Obj>().playSprt.color = new Color(1, 1, 1, 1);
+			Player.GetComponent<Player_Movement_Controller>().enabled = true;
+
+			int children = Player.transform.childCount;
+			for (int child = 0; child < children; child++)
+				if (Player.transform.GetChild(child).name.Contains("Clone"))
+					Destroy(Player.transform.GetChild(child).gameObject);
 		}
 	}
 
@@ -434,8 +448,7 @@ public class GameBrain : MonoBehaviour {
 		WaterLevel = 0;
 		
 		RoomsCleared = new List<int>();
-		
-		LevelProgress = 0;
+
 		NumEnemiesKilled = 0;
 		DamageTaken = 0;
 		TotalSoulCount = 0;
@@ -444,13 +457,13 @@ public class GameBrain : MonoBehaviour {
 		NumCastedSpells = 0;
 		RespawnLoc = Vector3.zero;
 		transform.position = Vector3.zero;
-		
+
 		HUDMaster.GetComponent<MacroSelect> ().curMac = 0;
 		HUDMaster.GetComponent<MacroSelect> ().spells[0] = GameBrain.Instance.GetComponent<SpellMasterList> ().fireBall;
 		HUDMaster.GetComponent<MacroSelect> ().spells[1] = GameBrain.Instance.GetComponent<SpellMasterList> ().windBlade;
 		HUDMaster.GetComponent<MacroSelect> ().spells[2] = GameBrain.Instance.GetComponent<SpellMasterList> ().rockSpike;
 		HUDMaster.GetComponent<MacroSelect> ().spells[3] = GameBrain.Instance.GetComponent<SpellMasterList> ().bolt;
-		HUDMaster.GetComponent<MacroSelect> ().spells[4] = GameBrain.Instance.GetComponent<SpellMasterList> ().hydrant;
+		HUDMaster.GetComponent<MacroSelect> ().spells[4] = GameBrain.Instance.GetComponent<SpellMasterList> ().hydrant; 
 		
 		HUDMaster.GetComponent<MacroSelect> ().needsUpdate = true;
 	}
@@ -504,9 +517,16 @@ public class GameBrain : MonoBehaviour {
 		info.NumCastedSpells = NumCastedSpells;
 		
 		info.spellsCast = SpellHasBeenCast;
-		info.RespawnLocX = Player.transform.position.x;
-		info.RespawnLocY = Player.transform.position.y;
-		info.RespawnLocZ = Player.transform.position.z;
+		info.RespawnLocX = RespawnLoc.x;
+		info.RespawnLocY = RespawnLoc.y;
+		info.RespawnLocZ = RespawnLoc.z;
+
+		info.lastMac = HUDMaster.GetComponent<MacroSelect> ().curMac;
+		info.Mac0 = HUDMaster.GetComponent<MacroSelect> ().spells [0].name;
+		info.Mac1 = HUDMaster.GetComponent<MacroSelect> ().spells [1].name;
+		info.Mac2 = HUDMaster.GetComponent<MacroSelect> ().spells [2].name;
+		info.Mac3 = HUDMaster.GetComponent<MacroSelect> ().spells [3].name;
+		info.Mac4 = HUDMaster.GetComponent<MacroSelect> ().spells [4].name;
 	
 		bf.Serialize (file, info);
 		file.Close ();
@@ -547,6 +567,12 @@ public class GameBrain : MonoBehaviour {
 		info.RespawnLocX = info.RespawnLocY = info.RespawnLocZ = 0.0f;
 
 		HUDMaster.SetActive (true);
+		info.Mac0 = GameBrain.Instance.GetComponent<SpellMasterList> ().fireBall.name;
+		info.Mac1 = GameBrain.Instance.GetComponent<SpellMasterList> ().windBlade.name;
+		info.Mac2 = GameBrain.Instance.GetComponent<SpellMasterList> ().rockSpike.name;
+		info.Mac3 = GameBrain.Instance.GetComponent<SpellMasterList> ().bolt.name;
+		info.Mac4 = GameBrain.Instance.GetComponent<SpellMasterList> ().hydrant.name;
+		info.lastMac = 0;
 		HUDMaster.GetComponent<MacroSelect> ().spells[0] = GameBrain.Instance.GetComponent<SpellMasterList> ().fireBall;
 		HUDMaster.GetComponent<MacroSelect> ().spells[1] = GameBrain.Instance.GetComponent<SpellMasterList> ().windBlade;
 		HUDMaster.GetComponent<MacroSelect> ().spells[2] = GameBrain.Instance.GetComponent<SpellMasterList> ().rockSpike;
@@ -614,6 +640,17 @@ public class GameBrain : MonoBehaviour {
 			newRespawn.z = info.RespawnLocZ;
 			RespawnLoc = newRespawn;
 			Player.transform.position = RespawnLoc;
+
+
+			HUDMaster.SetActive (true);
+			HUDMaster.GetComponent<MacroSelect> ().spells[0] = GameBrain.Instance.GetComponent<SpellMasterList> ().GetSpell(info.Mac0);
+			HUDMaster.GetComponent<MacroSelect> ().spells[1] = GameBrain.Instance.GetComponent<SpellMasterList> ().GetSpell(info.Mac1);
+			HUDMaster.GetComponent<MacroSelect> ().spells[2] = GameBrain.Instance.GetComponent<SpellMasterList> ().GetSpell(info.Mac2);
+			HUDMaster.GetComponent<MacroSelect> ().spells[3] = GameBrain.Instance.GetComponent<SpellMasterList> ().GetSpell(info.Mac3);
+			HUDMaster.GetComponent<MacroSelect> ().spells[4] = GameBrain.Instance.GetComponent<SpellMasterList> ().GetSpell(info.Mac4);
+			HUDMaster.GetComponent<MacroSelect> ().curMac = info.lastMac;
+			HUDMaster.GetComponent<MacroSelect> ().needsUpdate = true;
+			HUDMaster.GetComponent<MacroSelect> ().SetCurrSpell();
 		}
 		else
 		{

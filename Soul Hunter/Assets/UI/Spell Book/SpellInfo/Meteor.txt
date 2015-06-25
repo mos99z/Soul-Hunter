@@ -1,1 +1,0 @@
-1,2,3,Meteor,Drop a large burning bolder from the sky at your cursor location that will cripple any foes it hits and burst into a small flaming AOE once it hits the ground that can iginte more foes.

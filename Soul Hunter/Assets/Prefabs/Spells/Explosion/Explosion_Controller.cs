@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Explosion_Controller : MonoBehaviour 
 {
-	public float damage = 25.1f;		// how much damage the spell does
+	[Header ("Damage Type will be applied in code")]
+	public int damage = 25;		// how much damage the spell does
 	public float duration = 1.0f;		// how long in seconds for the spell to last
 	public float recoveryTime = 2.0f;	// how long in seconds for spell to cooldown
 	public float knockback = 1000.0f;	// how much force to apply on knockback
@@ -18,6 +19,7 @@ public class Explosion_Controller : MonoBehaviour
 
 	public GameObject SpellEffect = null;
 	public LayerMask LOSBlockers;
+	float colliderSphereRadi = 0.0f;
 
 	void Start () 
 	{
@@ -45,6 +47,8 @@ public class Explosion_Controller : MonoBehaviour
 		if (SpellEffect != null)
 			SpellEffect.GetComponent<ParticleSystem> ().Play ();
 		GameBrain.Instance.Player.SendMessage("SetRecoverTime", recoveryTime);
+
+		colliderSphereRadi = GetComponent<SphereCollider> ().radius * transform.localScale.x + 1.0f;
 	}
 	
 	void Update () 
@@ -56,9 +60,23 @@ public class Explosion_Controller : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Enemy")	// if there is a rigidbody in range, apply some force and debuffs
+		if (other.tag == "Enemy" || other.tag == "Player")	// if there is a rigidbody in range, apply some force and debuffs
 		{
-			other.GetComponent<Rigidbody>().AddExplosionForce(knockback, transform.position, transform.GetComponent<SphereCollider>().radius);
+			float actualDamage = (float)damage;
+			Vector2 Hit;
+			Hit.x = other.transform.position.x;
+			Hit.y = other.transform.position.z;
+
+			Vector2 Hitter;
+			Hitter.x = transform.position.x;
+			Hitter.y = transform.position.z;
+
+			float magnit = (Hit - Hitter).magnitude;
+			actualDamage *= 1.0f - (magnit / colliderSphereRadi);
+			actualDamage = (float)Mathf.RoundToInt(actualDamage) + 0.1f;
+
+			if (other.tag == "Enemy")
+				other.GetComponent<Rigidbody>().AddExplosionForce(knockback, transform.position, transform.GetComponent<SphereCollider>().radius);
 			
 			float chance = Random.Range(0.0f, 1.0f);
 			if (chance <= burnChance)
@@ -86,8 +104,7 @@ public class Explosion_Controller : MonoBehaviour
 				cripp.transform.GetComponent<Crippled_Controller>().duration = crippleDuration;
 			}
 
-
-			other.transform.SendMessage("TakeDamage", damage);
+			other.transform.SendMessage("TakeDamage", actualDamage);
 		}
 	}
 }

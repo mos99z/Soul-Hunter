@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
 
@@ -252,7 +252,11 @@ public class Perendi_Controller : MonoBehaviour {
 	void OnDestroy()
 	{
 		if (mistralAlive)
+		{
+			GetComponent<Living_Obj>().RoomNumber = 0;
+			GetComponent<Living_Obj>().SavePoint = null;
 			Mistral.SendMessage ("OtherBossDead");
+		}
 		if (!mistralAlive) 
 		{
 			boundingWalls.SendMessage("DestroyWalls");

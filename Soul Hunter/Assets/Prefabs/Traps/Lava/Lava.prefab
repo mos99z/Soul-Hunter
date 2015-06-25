@@ -145,10 +145,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   burnDebuff: {fileID: 0}
   lavaDamage: 50.0999985
-  waitTime: .5
-  BurningDOTDuration: 10
-  BurningDOTTickCycle: .5
-  BurningDOTTickDamage: 5.0999999
+  waitTime: .100000001
+  BurningDOTDuration: 30
+  BurningDOTTickCycle: 1.5
+  BurningDOTTickDamage: 10.1000004
 --- !u!198 &19888576
 ParticleSystem:
   m_ObjectHideFlags: 1

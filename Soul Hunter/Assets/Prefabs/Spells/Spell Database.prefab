@@ -8336,7 +8336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseMarker: {fileID: 0}
   duration: .5
-  damage: 10
+  damage: 35.2999992
   recoveryTime: 1.5
 --- !u!114 &11403046
 MonoBehaviour:
@@ -8349,7 +8349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89af3951d816d28419eb09744e842d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 30.1000004
+  damage: 75
   duration: 1
   recoveryTime: 2
   knockback: 1000
@@ -8482,7 +8482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36aa841e61c9b7a45926ab434574c770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 30.2999992
+  Damage: 100.300003
   Colliders:
     serializedVersion: 2
     m_Bits: 512
@@ -8576,9 +8576,9 @@ MonoBehaviour:
   Crystals: {fileID: 172990}
   recoveryCost: 2
   duration: 5
-  DamageEarth: 1.29999995
-  DamageLightning: 1.39999998
-  tickTime: .25
+  DamageEarth: 10.3000002
+  DamageLightning: 10.3999996
+  tickTime: .5
   slow: {fileID: 150616, guid: 07fd5da6258277544b6f0208a016c4b3, type: 2}
   LOSBlockers:
     serializedVersion: 2
@@ -8647,7 +8647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36aa841e61c9b7a45926ab434574c770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20.2999992
+  Damage: 60.2999992
   Colliders:
     serializedVersion: 2
     m_Bits: 512
@@ -8793,7 +8793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36aa841e61c9b7a45926ab434574c770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 15.3000002
+  Damage: 40.2999992
   Colliders:
     serializedVersion: 2
     m_Bits: 512
@@ -8809,9 +8809,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: .800000012
-  damage: 5.4000001
+  damage: 70.4000015
+  damageDropOff: 10
   recoveryTime: 1.5
-  JumpDistance: 6
+  JumpDistance: 7
   NumberOfJumps: 7
   Hitables:
     serializedVersion: 2
@@ -8899,7 +8900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseMarker: {fileID: 0}
   spawnHeight: .0500000007
-  duration: 4
+  duration: 5
   rotateSpeed: 90
   recoveryCost: 2
   slow: {fileID: 150616, guid: 07fd5da6258277544b6f0208a016c4b3, type: 2}
@@ -8922,6 +8923,7 @@ MonoBehaviour:
   SpellEffect: {fileID: 106226}
   ImpactEffectObj: {fileID: 147526, guid: 2a3229b94c93b0d40b18743eca4c142c, type: 2}
   SFXMoving: {fileID: 8228638}
+  MaxTargetsHit: 5
 --- !u!114 &11494242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8933,7 +8935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394750ed4fc191944bfc14a0c5c4a3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100.400002
+  damage: 75.4000015
   recoveryCost: 3
   startHeight: 1.10000002
   speed: .0199999996
@@ -8954,7 +8956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36aa841e61c9b7a45926ab434574c770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 25.2999992
+  Damage: 80.3000031
   Colliders:
     serializedVersion: 2
     m_Bits: 512
@@ -8990,7 +8992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36aa841e61c9b7a45926ab434574c770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10.3000002
+  Damage: 20.2999992
   Colliders:
     serializedVersion: 2
     m_Bits: 512

@@ -628,7 +628,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11457328, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
       propertyPath: damage
-      value: 50.0999985
+      value: 250.100006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
@@ -975,7 +975,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11457328, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
       propertyPath: damage
-      value: 50.0999985
+      value: 250.100006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
@@ -1274,7 +1274,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11457328, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
       propertyPath: damage
-      value: 50.0999985
+      value: 250.100006
       objectReference: {fileID: 0}
     - target: {fileID: 19818292, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
@@ -1764,6 +1764,7 @@ MonoBehaviour:
   - {fileID: 522103796}
   AreaContainsCaptain: 0
   Captain: {fileID: 0}
+  RoomNumber: 6
 --- !u!65 &438954580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2138,11 +2139,11 @@ Prefab:
       objectReference: {fileID: 595973057}
     - target: {fileID: 11461252, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
       propertyPath: MaxHealth
-      value: 4000
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 11461252, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
       propertyPath: CurrHealth
-      value: 4000
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 11461252, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
       propertyPath: Defence
@@ -2158,6 +2159,54 @@ Prefab:
       objectReference: {fileID: 517888896}
     - target: {fileID: 11461252, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
       propertyPath: SelectHealthBar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461252, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: SavePoint
+      value: 
+      objectReference: {fileID: 1639555256}
+    - target: {fileID: 117448, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19986438, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 58d014008ff1cf548b2aea6e6ead8841, type: 2}
+    - target: {fileID: 19878706, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: UVModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19878706, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: UVModule.tilesY
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 140926, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 159396, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 134714, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130672, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154158, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19871480, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4287301230
+      objectReference: {fileID: 0}
+    - target: {fileID: 129032, guid: 43b80b2245ffe1b429441cfe0c62a3a8, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2226,6 +2275,7 @@ GameObject:
   - 33: {fileID: 529638969}
   - 65: {fileID: 529638968}
   - 23: {fileID: 529638967}
+  - 54: {fileID: 529638970}
   m_Layer: 31
   m_Name: Void 1
   m_TagString: VOID
@@ -2240,7 +2290,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529638965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: -.5, z: 148}
+  m_LocalPosition: {x: 2, y: -.50999999, z: 148}
   m_LocalScale: {x: 60, y: 1, z: 60}
   m_Children: []
   m_Father: {fileID: 778764708}
@@ -2291,6 +2341,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529638965}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &529638970
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529638965}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &536453473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,6 +3447,7 @@ MonoBehaviour:
   - {fileID: 694948132}
   AreaContainsCaptain: 1
   Captain: {fileID: 478738656}
+  RoomNumber: 0
 --- !u!65 &912307042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5229,7 +5295,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11457328, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
       propertyPath: damage
-      value: 50.0999985
+      value: 250.100006
       objectReference: {fileID: 0}
     - target: {fileID: 19818292, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
@@ -5426,6 +5492,7 @@ MonoBehaviour:
   - {fileID: 1300009704}
   AreaContainsCaptain: 0
   Captain: {fileID: 0}
+  RoomNumber: 2
 --- !u!65 &1372563761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5728,7 +5795,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421344809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.5, y: -5.9000001, z: 172.699997}
+  m_LocalPosition: {x: -1.23000002, y: 0, z: 161.300003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 279351657}
@@ -5839,6 +5906,7 @@ MonoBehaviour:
   - {fileID: 1897171518}
   AreaContainsCaptain: 0
   Captain: {fileID: 0}
+  RoomNumber: 0
 --- !u!65 &1453331138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6393,6 +6461,33 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 465934, guid: fffaed907bc7d774a95d72897907f68e, type: 2}
   m_PrefabInternal: {fileID: 1635898440}
+--- !u!1 &1639555256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1639555257}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1639555257
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1639555256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.70000005, y: -3.20000005, z: 301.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1778870063}
+  m_RootOrder: 7
 --- !u!1 &1651368113
 GameObject:
   m_ObjectHideFlags: 0
@@ -6845,6 +6940,7 @@ Transform:
   - {fileID: 826923389}
   - {fileID: 1716746802}
   - {fileID: 517888897}
+  - {fileID: 1639555257}
   m_Father: {fileID: 778764708}
   m_RootOrder: 13
 --- !u!1001 &1807467324
@@ -7453,6 +7549,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 158354032}
     m_Modifications:
+    - target: {fileID: 11457996, guid: 00ba80b95ae75914bbcf232dd7c4c3e3, type: 2}
+      propertyPath: Spawners.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 472278, guid: 00ba80b95ae75914bbcf232dd7c4c3e3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -50.5999985
@@ -7561,6 +7661,14 @@ Prefab:
       propertyPath: EnemyToSpawn
       value: 
       objectReference: {fileID: 187082, guid: 4c801e099b12b79438126479b85072ed, type: 2}
+    - target: {fileID: 11457996, guid: 00ba80b95ae75914bbcf232dd7c4c3e3, type: 2}
+      propertyPath: RoomNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11457996, guid: 00ba80b95ae75914bbcf232dd7c4c3e3, type: 2}
+      propertyPath: Spawners.Array.data[4]
+      value: 
+      objectReference: {fileID: 1158638481}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00ba80b95ae75914bbcf232dd7c4c3e3, type: 2}
   m_IsPrefabParent: 0

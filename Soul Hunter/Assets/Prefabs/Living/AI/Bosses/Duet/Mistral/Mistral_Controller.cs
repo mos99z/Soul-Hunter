@@ -326,8 +326,12 @@ public class Mistral_Controller : MonoBehaviour
 
 	void OnDestroy()
 	{
-		if(perendiAlive)
+		if (perendiAlive)
+		{
+			GetComponent<Living_Obj>().RoomNumber = 0;
+			GetComponent<Living_Obj>().SavePoint = null;
 			Perendi.SendMessage ("OtherBossDead");
+		}
 		if (!perendiAlive) 
 		{
 			boundingWalls.SendMessage("DestroyWalls");

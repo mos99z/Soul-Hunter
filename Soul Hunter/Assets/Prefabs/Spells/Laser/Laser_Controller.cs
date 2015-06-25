@@ -77,6 +77,7 @@ public class Laser_Controller : MonoBehaviour {
 						debuff.transform.localPosition = Vector3.zero;
 						debuff.GetComponent<Burning_Controller>().Duration = DebuffDuration;
 						debuff.GetComponent<Burning_Controller>().Damage = BurningDamage;
+						debuff.GetComponent<Burning_Controller>().TickCycle = 1.5f;
 					}
 				}
 			}

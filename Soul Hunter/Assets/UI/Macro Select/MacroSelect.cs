@@ -40,15 +40,16 @@ public class MacroSelect : MonoBehaviour
 	private Color32 selected;
 	private Color32 unSelected;
 
-	//Store Player
-	public GameObject Player = null;
-
 	public bool needsUpdate;
+
+	//Alow pussing
+	public bool paussed;
 
 	// Use this for initialization
 	void Start ()
 	{
 		needsUpdate = false;
+		paussed = false;
 
 		scrollTime = 0;
 		scrollDelay = (float)0.05;
@@ -69,18 +70,21 @@ public class MacroSelect : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		scrollTime += Time.deltaTime;
-
-		//only do calculations when needed
-		if (Input.GetAxis("Mouse ScrollWheel") != 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q) || needsUpdate)
+		if (!paussed)
 		{
-			toggleMacs();
+			scrollTime += Time.deltaTime;
 			
-			colorManagment();
-			
-			changeText();
-
-			needsUpdate = false;
+			//only do calculations when needed
+			if (Input.GetAxis("Mouse ScrollWheel") != 0 || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Q) || needsUpdate)
+			{
+				toggleMacs();
+				
+				colorManagment();
+				
+				changeText();
+				
+				needsUpdate = false;
+			}
 		}
 	}
 
@@ -88,12 +92,12 @@ public class MacroSelect : MonoBehaviour
 	{
 		float mouse = Input.GetAxis("Mouse ScrollWheel");
 		
-		if (Input.GetKeyDown(KeyCode.Q) || (mouse < 0 && scrollTime > scrollDelay))
+		if (Input.GetKeyDown(KeyCode.Q) || (mouse > 0 && scrollTime > scrollDelay))
 		{
 			scrollTime = 0;
 			curMac--;
 		}
-		if (Input.GetKeyDown(KeyCode.E) || (mouse > 0 && scrollTime > scrollDelay))
+		if (Input.GetKeyDown(KeyCode.E) || (mouse < 0 && scrollTime > scrollDelay))
 		{
 			scrollTime = 0;
 			curMac++;
@@ -203,8 +207,7 @@ public class MacroSelect : MonoBehaviour
 		string[] data3 = info3.Split(',');
 		curSpell.text = data3[0];
 
-		if (spells[curMac] != null)
-			Player.SendMessage ("ChangeSpell", spells[curMac], SendMessageOptions.DontRequireReceiver);
+		SetCurrSpell ();
 
 		int.TryParse(data3[1], out temp);
 		element1.sprite = elements[temp - 1];
@@ -212,5 +215,11 @@ public class MacroSelect : MonoBehaviour
 		element2.sprite = elements[temp - 1];
 		int.TryParse(data3[3], out temp);
 		element3.sprite = elements[temp - 1];
+	}
+
+	public void SetCurrSpell()
+	{
+		if (spells [curMac] != null)
+			GameBrain.Instance.Player.GetComponent<Player_Caster_Controller> ().ChangeSpell (spells [curMac]);
 	}
 }

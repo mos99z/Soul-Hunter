@@ -1,1 +1,0 @@
-2,3,4,Crystal Spikes,Create short lived spikes that slow all minions that walk threw them and deal desant damage at the same time.

@@ -71,8 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158d9f1162c9acd46b5bfbb28e03cf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
-  hurtDelay: .300000012
+  damage: 50
+  hurtDelay: .100000001
   slowedDebuff: {fileID: 0}
 --- !u!135 &13502534
 SphereCollider:

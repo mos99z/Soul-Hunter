@@ -66,4 +66,10 @@ public class Slowed_Controller : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
+
+	void OnDestroy()
+	{
+		if (transform.parent.tag == "Player")
+			transform.parent.GetComponent<Player_Movement_Controller>().Speed = origSpeed;
+	}
 }

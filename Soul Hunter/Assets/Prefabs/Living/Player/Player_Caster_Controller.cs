@@ -45,7 +45,7 @@ public class Player_Caster_Controller : MonoBehaviour {
 			Debug.LogError ("GameBrain in script Player Caster Controller can not be null!");
 	}
 
-	void ChangeSpell(GameObject _spell)
+	public void ChangeSpell(GameObject _spell)
 	{
 		CurrSpell = _spell;
 	}
@@ -56,6 +56,6 @@ public class Player_Caster_Controller : MonoBehaviour {
 		Recovering = _recovering;
 
 		RecoveryBar.SetActive (true);
-		RecoveryBar.SendMessage ("SetCoolDown", _recovering);
+		RecoveryBar.GetComponent<RecoveryBar>().SetCoolDown(_recovering);
 	}
 }

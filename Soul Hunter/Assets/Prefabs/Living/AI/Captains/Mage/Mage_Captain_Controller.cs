@@ -67,7 +67,7 @@ public class Mage_Captain_Controller : MonoBehaviour {
 
 	void OnDestroy()
 	{
-		boundingWalls.SendMessage("DestroyWalls");
+		boundingWalls.GetComponent<SummonWall> ().DestroyWalls ();
 		Fog_Event_Manager.PlayerEntered -= LosePlayer;
 		Fog_Event_Manager.PlayerLeft -= FindPlayer;
 		GameBrain.Instance.SendMessage("ChangeMusic",GameBrain.Instance.GameplayMusic);

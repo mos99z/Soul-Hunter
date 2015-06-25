@@ -1,1 +1,0 @@
-2,2,2,Wind Blade,Cast a thick blade of wind from your hands in the direction of your coursor. Though it deals little damage it will slightly pushback the foes it hits.

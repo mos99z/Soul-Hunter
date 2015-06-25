@@ -1,1 +1,0 @@
-1,4,5,Barrier,Cast unstable energy around your self. This energy will block 50% of all damage and deal damage to foes that come into contact with it.

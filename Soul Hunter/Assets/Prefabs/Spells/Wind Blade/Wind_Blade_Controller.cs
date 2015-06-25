@@ -13,7 +13,7 @@ public class Wind_Blade_Controller : MonoBehaviour
 	public GameObject SpellEffect = null;
 	public GameObject ImpactEffectObj = null;
 	public AudioSource SFXMoving = null;
-
+	public int MaxTargetsHit = 5;
 	private Vector3 StartLocation = Vector3.zero;
 	private Vector3 ForwardDirection = Vector3.zero;
 	private float killSwitch = 5.0f;
@@ -21,7 +21,7 @@ public class Wind_Blade_Controller : MonoBehaviour
 	
 	void Start ()
 	{
-		transform.localScale *= 1.0f + (float)GameBrain.Instance.WindLevel / (float)GameBrain.Instance.NumberOfLevels;
+		transform.localScale *= 1.0f + ((float)GameBrain.Instance.WindLevel / (float)GameBrain.Instance.NumberOfLevels * 0.5f);
 		Range += 2.0f * (float)GameBrain.Instance.WindLevel;
 		pushForce += (float)GameBrain.Instance.WindLevel;
 
@@ -64,7 +64,7 @@ public class Wind_Blade_Controller : MonoBehaviour
 	}
 	
 	void OnTriggerEnter(Collider _object){
-		if (_object.tag == "Enemy")
+		if (MaxTargetsHit > 0 && _object.tag == "Enemy")
 		{
 			Vector3 atCollider = _object.transform.position - transform.position;
 			atCollider.Normalize();
@@ -83,7 +83,7 @@ public class Wind_Blade_Controller : MonoBehaviour
 				}
 
 				_object.transform.SendMessage ("TakeDamage", Damage);
-
+				MaxTargetsHit--;
 //				Knock back hit target
 				Vector3 pushDirection = transform.forward;
 				pushDirection.y = 0.0f;

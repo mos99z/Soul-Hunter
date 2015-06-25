@@ -6,7 +6,9 @@ public class Exit_Prompt_Script : MonoBehaviour {
 	public GameObject MessagePrompt;
 	public GameObject PauseMenu;
 	public GameObject LoadingScreen;
+	public AudioClip MenuMusic = null;
 	AsyncOperation ao = null;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -32,12 +34,11 @@ public class Exit_Prompt_Script : MonoBehaviour {
 
 	public void Exit_Message_Yes()
 	{
-		int zero = 0;
 		LoadingScreen.SetActive(true);
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync ("Main menu");
 		ao.allowSceneActivation = false;
-		GameBrain.Instance.SendMessage ("ChangeMusic", zero);
+		GameBrain.Instance.ChangeMusic(MenuMusic);
 		GameBrain.Instance.Player.SetActive (false);
 		GameBrain.Instance.CurrentLevel = -1;
 		MessagePrompt.SetActive (false);

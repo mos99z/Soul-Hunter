@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cdc1d5e85e55d0846809e66f9ef42e73
-timeCreated: 1434776700
+timeCreated: 1435173838
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -118,7 +118,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 921
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -126,9 +126,9 @@ TextureImporter:
     - name: Mage_Slash_1
       rect:
         serializedVersion: 2
-        x: 89
+        x: 90
         y: 921
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -136,9 +136,9 @@ TextureImporter:
     - name: Mage_Slash_2
       rect:
         serializedVersion: 2
-        x: 178
+        x: 180
         y: 921
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,9 +146,9 @@ TextureImporter:
     - name: Mage_Slash_3
       rect:
         serializedVersion: 2
-        x: 267
+        x: 270
         y: 921
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,9 +156,9 @@ TextureImporter:
     - name: Mage_Slash_4
       rect:
         serializedVersion: 2
-        x: 356
+        x: 360
         y: 921
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,9 +166,9 @@ TextureImporter:
     - name: Mage_Slash_5
       rect:
         serializedVersion: 2
-        x: 445
+        x: 450
         y: 921
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -176,9 +176,9 @@ TextureImporter:
     - name: Mage_Slash_6
       rect:
         serializedVersion: 2
-        x: 534
+        x: 540
         y: 921
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -186,9 +186,9 @@ TextureImporter:
     - name: Mage_Slash_7
       rect:
         serializedVersion: 2
-        x: 623
+        x: 630
         y: 921
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -198,7 +198,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 790
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -206,9 +206,9 @@ TextureImporter:
     - name: Mage_Slash_9
       rect:
         serializedVersion: 2
-        x: 89
+        x: 90
         y: 790
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -216,9 +216,9 @@ TextureImporter:
     - name: Mage_Slash_10
       rect:
         serializedVersion: 2
-        x: 178
+        x: 180
         y: 790
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -226,9 +226,9 @@ TextureImporter:
     - name: Mage_Slash_11
       rect:
         serializedVersion: 2
-        x: 267
+        x: 270
         y: 790
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,9 +236,9 @@ TextureImporter:
     - name: Mage_Slash_12
       rect:
         serializedVersion: 2
-        x: 356
+        x: 360
         y: 790
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -246,9 +246,9 @@ TextureImporter:
     - name: Mage_Slash_13
       rect:
         serializedVersion: 2
-        x: 445
+        x: 450
         y: 790
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -256,9 +256,9 @@ TextureImporter:
     - name: Mage_Slash_14
       rect:
         serializedVersion: 2
-        x: 534
+        x: 540
         y: 790
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -266,9 +266,9 @@ TextureImporter:
     - name: Mage_Slash_15
       rect:
         serializedVersion: 2
-        x: 623
+        x: 630
         y: 790
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -278,7 +278,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 659
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -286,9 +286,9 @@ TextureImporter:
     - name: Mage_Slash_17
       rect:
         serializedVersion: 2
-        x: 89
+        x: 90
         y: 659
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -296,9 +296,9 @@ TextureImporter:
     - name: Mage_Slash_18
       rect:
         serializedVersion: 2
-        x: 178
+        x: 180
         y: 659
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -306,9 +306,9 @@ TextureImporter:
     - name: Mage_Slash_19
       rect:
         serializedVersion: 2
-        x: 267
+        x: 270
         y: 659
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -316,9 +316,9 @@ TextureImporter:
     - name: Mage_Slash_20
       rect:
         serializedVersion: 2
-        x: 356
+        x: 360
         y: 659
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -326,9 +326,9 @@ TextureImporter:
     - name: Mage_Slash_21
       rect:
         serializedVersion: 2
-        x: 445
+        x: 450
         y: 659
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -336,9 +336,9 @@ TextureImporter:
     - name: Mage_Slash_22
       rect:
         serializedVersion: 2
-        x: 534
+        x: 540
         y: 659
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -346,9 +346,9 @@ TextureImporter:
     - name: Mage_Slash_23
       rect:
         serializedVersion: 2
-        x: 623
+        x: 630
         y: 659
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -358,7 +358,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 528
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -366,9 +366,9 @@ TextureImporter:
     - name: Mage_Slash_25
       rect:
         serializedVersion: 2
-        x: 89
+        x: 90
         y: 528
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -376,9 +376,9 @@ TextureImporter:
     - name: Mage_Slash_26
       rect:
         serializedVersion: 2
-        x: 178
+        x: 180
         y: 528
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -386,9 +386,9 @@ TextureImporter:
     - name: Mage_Slash_27
       rect:
         serializedVersion: 2
-        x: 267
+        x: 270
         y: 528
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -396,9 +396,9 @@ TextureImporter:
     - name: Mage_Slash_28
       rect:
         serializedVersion: 2
-        x: 356
+        x: 360
         y: 528
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -406,9 +406,9 @@ TextureImporter:
     - name: Mage_Slash_29
       rect:
         serializedVersion: 2
-        x: 445
+        x: 450
         y: 528
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -416,9 +416,9 @@ TextureImporter:
     - name: Mage_Slash_30
       rect:
         serializedVersion: 2
-        x: 534
+        x: 540
         y: 528
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -426,9 +426,9 @@ TextureImporter:
     - name: Mage_Slash_31
       rect:
         serializedVersion: 2
-        x: 623
+        x: 630
         y: 528
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -438,7 +438,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 397
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -446,9 +446,9 @@ TextureImporter:
     - name: Mage_Slash_33
       rect:
         serializedVersion: 2
-        x: 89
+        x: 90
         y: 397
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -456,9 +456,9 @@ TextureImporter:
     - name: Mage_Slash_34
       rect:
         serializedVersion: 2
-        x: 178
+        x: 180
         y: 397
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -466,9 +466,9 @@ TextureImporter:
     - name: Mage_Slash_35
       rect:
         serializedVersion: 2
-        x: 267
+        x: 270
         y: 397
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -476,9 +476,9 @@ TextureImporter:
     - name: Mage_Slash_36
       rect:
         serializedVersion: 2
-        x: 356
+        x: 360
         y: 397
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -486,9 +486,9 @@ TextureImporter:
     - name: Mage_Slash_37
       rect:
         serializedVersion: 2
-        x: 445
+        x: 450
         y: 397
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -496,9 +496,9 @@ TextureImporter:
     - name: Mage_Slash_38
       rect:
         serializedVersion: 2
-        x: 534
+        x: 540
         y: 397
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -506,9 +506,9 @@ TextureImporter:
     - name: Mage_Slash_39
       rect:
         serializedVersion: 2
-        x: 623
+        x: 630
         y: 397
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -518,7 +518,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 266
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -526,9 +526,9 @@ TextureImporter:
     - name: Mage_Slash_41
       rect:
         serializedVersion: 2
-        x: 89
+        x: 90
         y: 266
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -536,9 +536,9 @@ TextureImporter:
     - name: Mage_Slash_42
       rect:
         serializedVersion: 2
-        x: 178
+        x: 180
         y: 266
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -546,9 +546,9 @@ TextureImporter:
     - name: Mage_Slash_43
       rect:
         serializedVersion: 2
-        x: 267
+        x: 270
         y: 266
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -556,9 +556,9 @@ TextureImporter:
     - name: Mage_Slash_44
       rect:
         serializedVersion: 2
-        x: 356
+        x: 360
         y: 266
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -566,9 +566,9 @@ TextureImporter:
     - name: Mage_Slash_45
       rect:
         serializedVersion: 2
-        x: 445
+        x: 450
         y: 266
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -576,9 +576,9 @@ TextureImporter:
     - name: Mage_Slash_46
       rect:
         serializedVersion: 2
-        x: 534
+        x: 540
         y: 266
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -586,9 +586,9 @@ TextureImporter:
     - name: Mage_Slash_47
       rect:
         serializedVersion: 2
-        x: 623
+        x: 630
         y: 266
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -598,7 +598,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 135
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -606,9 +606,9 @@ TextureImporter:
     - name: Mage_Slash_49
       rect:
         serializedVersion: 2
-        x: 89
+        x: 90
         y: 135
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -616,9 +616,9 @@ TextureImporter:
     - name: Mage_Slash_50
       rect:
         serializedVersion: 2
-        x: 178
+        x: 180
         y: 135
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -626,9 +626,9 @@ TextureImporter:
     - name: Mage_Slash_51
       rect:
         serializedVersion: 2
-        x: 267
+        x: 270
         y: 135
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -636,9 +636,9 @@ TextureImporter:
     - name: Mage_Slash_52
       rect:
         serializedVersion: 2
-        x: 356
+        x: 360
         y: 135
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -646,9 +646,9 @@ TextureImporter:
     - name: Mage_Slash_53
       rect:
         serializedVersion: 2
-        x: 445
+        x: 450
         y: 135
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -656,9 +656,9 @@ TextureImporter:
     - name: Mage_Slash_54
       rect:
         serializedVersion: 2
-        x: 534
+        x: 540
         y: 135
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -666,9 +666,9 @@ TextureImporter:
     - name: Mage_Slash_55
       rect:
         serializedVersion: 2
-        x: 623
+        x: 630
         y: 135
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -678,7 +678,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 4
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -686,9 +686,9 @@ TextureImporter:
     - name: Mage_Slash_57
       rect:
         serializedVersion: 2
-        x: 89
+        x: 90
         y: 4
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -696,9 +696,9 @@ TextureImporter:
     - name: Mage_Slash_58
       rect:
         serializedVersion: 2
-        x: 178
+        x: 180
         y: 4
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -706,9 +706,9 @@ TextureImporter:
     - name: Mage_Slash_59
       rect:
         serializedVersion: 2
-        x: 267
+        x: 270
         y: 4
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -716,9 +716,9 @@ TextureImporter:
     - name: Mage_Slash_60
       rect:
         serializedVersion: 2
-        x: 356
+        x: 360
         y: 4
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -726,9 +726,9 @@ TextureImporter:
     - name: Mage_Slash_61
       rect:
         serializedVersion: 2
-        x: 445
+        x: 450
         y: 4
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -736,9 +736,9 @@ TextureImporter:
     - name: Mage_Slash_62
       rect:
         serializedVersion: 2
-        x: 534
+        x: 540
         y: 4
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -746,9 +746,9 @@ TextureImporter:
     - name: Mage_Slash_63
       rect:
         serializedVersion: 2
-        x: 623
+        x: 630
         y: 4
-        width: 89
+        width: 90
         height: 131
       alignment: 0
       pivot: {x: 0, y: 0}

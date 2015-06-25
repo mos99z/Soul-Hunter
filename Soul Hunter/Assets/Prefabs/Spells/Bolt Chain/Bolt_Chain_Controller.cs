@@ -7,6 +7,7 @@ public class Bolt_Chain_Controller : MonoBehaviour
 	public float duration = 1.0f;		// how long for spell to last
 	float timer = 0.0f;
 	public float damage = 20.4f;			// how much damage to deal
+	public float damageDropOff = 10.0f;			// how much loss after each hit
 	public float recoveryTime = 1.5f;	// how long to recover from spell
 	public float JumpDistance = 2.0f;
 	public int NumberOfJumps = 7;
@@ -25,7 +26,7 @@ public class Bolt_Chain_Controller : MonoBehaviour
 		Vector3 mouseLocation = GameBrain.Instance.MouseMarker.transform.position;
 		float smallestLength = float.MaxValue;
 		int startingTarget = -1;
-		Collider[] PossibleStarts = Physics.OverlapSphere (mouseLocation, 0.5f, Hitables);
+		Collider[] PossibleStarts = Physics.OverlapSphere (mouseLocation, 2.0f, Hitables);
 		for (int target = 0; target < PossibleStarts.Length; target++)
 		{
 			RaycastHit colliderCheck = new RaycastHit();
@@ -145,6 +146,7 @@ public class Bolt_Chain_Controller : MonoBehaviour
 						damageMod = 3.0f;
 					}
 					HitTargets [target].SendMessage ("TakeDamage", (float)((int)damage * damageMod) + 0.4f);
+					damage -= damageDropOff;
 				}
 			}
 		} else if (timer >= duration)

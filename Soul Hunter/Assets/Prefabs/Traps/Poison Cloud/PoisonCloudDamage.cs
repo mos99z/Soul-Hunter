@@ -11,6 +11,7 @@ public class PoisonCloudDamage : MonoBehaviour
 	float timer;						// used for counting against delay
 	void Start () 
 	{
+		slowedDebuff = GameBrain.Instance.GetComponent<DebuffMasterList> ().slowed;
 		timer = 0.0f;
 	}
 	
@@ -31,7 +32,7 @@ public class PoisonCloudDamage : MonoBehaviour
 	
 	void OnTriggerStay(Collider other)
 	{
-		if (other.tag == "Player" || other.tag == "Enemy")
+		if (other.tag == "Player")
 		{
 			timer += Time.deltaTime;
 			if (timer >= hurtDelay)
@@ -44,7 +45,7 @@ public class PoisonCloudDamage : MonoBehaviour
 	
 	void OnTriggerExit(Collider other)
 	{
-		if (other.tag == "Player" || other.tag == "Enemy")
+		if (other.tag == "Player")
 		{
 			timer = 0.0f;
 		}

@@ -24,7 +24,7 @@ public class Spell_Bolt_Controller : MonoBehaviour {
 		transform.position = newHeight;
 		
 		// Face spell in right direction
-		player = GameObject.FindGameObjectWithTag ("Player");
+		player = GameBrain.Instance.Player;
 		Vector3 lookAt = player.transform.position;
 		lookAt.y = StartHeight;
 		transform.LookAt (lookAt);

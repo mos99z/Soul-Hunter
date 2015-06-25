@@ -11,6 +11,7 @@ public class Whirlwind_Controller : MonoBehaviour {
 	public float RecoveryCost = 1.5f;
 	public float PullInForce = 10.0f;
 	public float Duration = 3.0f;
+	public int MaxEffecting = 5;
 	public LayerMask WALLS;
 	
 	private float AliveTime = 0.0f;
@@ -83,7 +84,7 @@ public class Whirlwind_Controller : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider _object)
 	{
-		if (_object.tag == "Enemy")
+		if (_object.tag == "Enemy" && Hitting.Count <= MaxEffecting)
 			Hitting.Add(_object.gameObject);
 	}
 	

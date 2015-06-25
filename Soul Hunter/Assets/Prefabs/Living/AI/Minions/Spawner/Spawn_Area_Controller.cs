@@ -6,7 +6,8 @@ public class Spawn_Area_Controller : MonoBehaviour {
 	public GameObject[] Spawners = null;
 	public bool AreaContainsCaptain = false;
 	public GameObject Captain;
-
+	public int RoomNumber = 0;
+	bool active = false;
 	private GameObject HUDMast;
 
 	//float captainTimer = 2.0f;
@@ -28,23 +29,26 @@ public class Spawn_Area_Controller : MonoBehaviour {
 			}
 		}
 
-		bool stillNeeded= false;
+		bool notNeeded = true;
 		for (int i = 0; i < Spawners.Length; i++) {
 			if(Spawners[i] != null)
 			{
-				stillNeeded = true;
+				notNeeded = false;
 				break;
 			}
 		}
 
-		if (stillNeeded == false)
+		if (notNeeded)
 			Destroy (gameObject);
 	}
 
 	void OnTriggerEnter(Collider col)
 	{
-		if (col.tag == "Player") 
+		if (!active && col.tag == "Player") 
 		{
+			if (RoomNumber != 0)
+				GameBrain.Instance.RoomsCleared.Add(RoomNumber);
+			active = true;
 			for (int i = 0; i < Spawners.Length; i++)
 			{
 				Spawners[i].SetActive(true);
@@ -59,15 +63,16 @@ public class Spawn_Area_Controller : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit(Collider col)
-	{
-		if (col.tag == "Player") 
-		{
-			for (int i = 0; i < Spawners.Length; i++)
-			{
-				if(Spawners[i] != null)
-					Spawners[i].SetActive(false);
-			}
-		}
-	}
+	// Making the game a bit harder
+//	void OnTriggerExit(Collider col)
+//	{
+//		if (col.tag == "Player") 
+//		{
+//			for (int i = 0; i < Spawners.Length; i++)
+//			{
+//				if(Spawners[i] != null)
+//					Spawners[i].SetActive(false);
+//			}
+//		}
+//	}
 }
