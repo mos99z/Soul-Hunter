@@ -434,6 +434,12 @@ public class GameBrain : MonoBehaviour {
 
 	void CheckHealth()
 	{
+		if (PlayerCurrHealth > PlayerMaxHealth)
+		{
+			PlayerCurrHealth = PlayerMaxHealth;
+			Living_Obj tempLVOBJ = (Living_Obj)Player.GetComponent("Living_Obj");
+			tempLVOBJ.CurrHealth = PlayerCurrHealth;
+		}
 		HUDMaster.GetComponent<StatsDisplay> ().SetHealthDisplay(PlayerCurrHealth);
 	}
 
