@@ -50,10 +50,9 @@ public class Player_Caster_Controller : MonoBehaviour {
 		CurrSpell = _spell;
 	}
 
-	void SetRecoverTime(float _recovering)
+	public void SetRecoverTime(float _recovering)
 	{
-		if (_recovering > 0.0f)
-			CanCast = false;
+		CanCast = false;
 		Recovering = _recovering;
 
 		RecoveryBar.SetActive (true);

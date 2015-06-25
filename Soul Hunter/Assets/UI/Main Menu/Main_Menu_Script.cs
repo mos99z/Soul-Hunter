@@ -163,33 +163,25 @@ public class Main_Menu_Script : MonoBehaviour
 
 	public void LoadTutorial()
 	{
-		//GameOver.SendMessage ("Reset");
 		int zero = 0;
 		GameObject.Find ("GameBrain").SendMessage ("SetLevel", zero);
-		GameBrain.Instance.EraseFile();
 		GameBrain.Instance.loadingScreen.SetActive(true);
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
-		GameBrain.Instance.Player.transform.position = Vector3.zero;
 		ao = Application.LoadLevelAsync ("Tutorial");
 		ao.allowSceneActivation = false;
 		GameBrain.Instance.SendMessage ("ChangeMusic", GameBrain.Instance.GameplayMusic);
-		
 	}
 
 	public void LoadLevel1()
 	{
-		GameObject.Find ("GameBrain").SendMessage ("SetLevel", 1);
-//		DestroyImmediate (GameBrain.Instance.transform.FindChild ("Player").gameObject);
-//		GameObject newPlayer = Instantiate (player);
-//		newPlayer.transform.parent = GameBrain.Instance.transform;
-//		newPlayer.transform.localPosition = Vector3.zero;
 		GameBrain.Instance.EraseFile();
+		GameBrain.Instance.Load();
+		GameObject.Find ("GameBrain").SendMessage ("SetLevel", 1);
 		LoadingScreen.SetActive(true);
 		LoadingScreen.GetComponentInChildren<Animator>().Play("Loading_Screen");
 		ao = Application.LoadLevelAsync("Level 1");
 		ao.allowSceneActivation = false;
 		GameBrain.Instance.SendMessage ("ChangeMusic", GameBrain.Instance.GameplayMusic);
-		
 	}
 
 	public void Cancel()
@@ -219,38 +211,37 @@ public class Main_Menu_Script : MonoBehaviour
 
 	public void MouseClick1()
 	{
-		//Debug.Log("Continue from autosave");
 		GameBrain.Instance.Load();
-		if (GameBrain.Instance.CurrentLevel == 0)
+		if (GameBrain.Instance.LevelProgress == 0)
 			LoadTutorial();
-		else if (GameBrain.Instance.CurrentLevel > 0)
+		else if (GameBrain.Instance.LevelProgress > 0)
 		{
-			GameBrain.Instance.SendMessage ("ChangeMusic", GameBrain.Instance.GameplayMusic);
-			switch (GameBrain.Instance.CurrentLevel)
+			GameBrain.Instance.ChangeMusic(GameBrain.Instance.GameplayMusic);
+			switch (GameBrain.Instance.LevelProgress)
 			{
-			case 1: 
-			{		
-				ao = Application.LoadLevelAsync("Level 1");
-				ao.allowSceneActivation = false;
-				Application.LoadLevel("Level 1"); 
-				break;
-			}
-			case 2:
-			{		
-				ao = Application.LoadLevelAsync("Level 2");
-				ao.allowSceneActivation = false;
-				break;
-			}
-			case 3:
-			{		
-				ao = Application.LoadLevelAsync("Level 3");
-				ao.allowSceneActivation = false;
-				break;
-			}
+				case 1:
+				{		
+					ao = Application.LoadLevelAsync("Level 1");
+					ao.allowSceneActivation = false;
+//					Application.LoadLevel("Level 1"); 
+					break;
+				}
+				case 2:
+				{		
+					ao = Application.LoadLevelAsync("Level 2");
+					ao.allowSceneActivation = false;
+					break;
+				}
+				case 3:
+				{		
+					ao = Application.LoadLevelAsync("Level 3");
+					ao.allowSceneActivation = false;
+					break;
+				}
 			}
 		}
 
-
+		GameBrain.Instance.Player.GetComponent<Player_Caster_Controller> ().SetRecoverTime (0.001f);
 		index = 1;
 		needsUpdate = true;
 	}

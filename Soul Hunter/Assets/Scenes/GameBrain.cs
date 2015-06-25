@@ -57,8 +57,7 @@ public class GameInfo		// for game save/load
 	public int[] RoomsCleared;	// used for keeping track of minion rooms cleared and where to spawn player
 	
 	// Level 0 is tutorial
-	public int CurrentLevel;
-	
+	public int LevelProgress;
 	
 	//Tally Specific Info
 	public int NumEnemiesKilled;
@@ -70,7 +69,9 @@ public class GameInfo		// for game save/load
 	
 	// other info
 	public bool[] spellsCast;
-	//public GameObject[] selectedMacros;	
+	public float RespawnLocX;
+	public float RespawnLocY;
+	public float RespawnLocZ;
 	//public bool[,] miniMap;	// to be enabled once figured out
 }
 
@@ -88,12 +89,14 @@ public class GameBrain : MonoBehaviour {
 	public int PlayerCurrHealth = 1000;
 	public int PlayerLivesLeft = 3;
 	public int SoulCount = 0;
+	public int SoulsAtLevelStart = 0;
 	public int MeleeEnemyCounter = 0;
 	public bool PlayerInFog = false;
 	public bool FightingCaptain = false;
 	public bool FightingBoss = false;
 	// Level 0 is tutorial
 	public int CurrentLevel = -1;
+	public int LevelProgress = 0;
 	public List<int> RoomsCleared;
 	public Vector3 RespawnLoc = Vector3.zero;
 	private GameInfo gameInfo;
@@ -107,6 +110,11 @@ public class GameBrain : MonoBehaviour {
 	public int ElectricLevel = 0;
 	public int WaterLevel = 0;
 	public int NumberOfLevels = 3;
+	public int FireLevelAtStart = 0;
+	public int WindLevelAtStart = 0;
+	public int EarthLevelAtStart = 0;
+	public int ElectricLevelAtStart = 0;
+	public int WaterLevelAtStart = 0;
 
 	//Tally Specific Info
 	public int NumEnemiesKilled = 0;
@@ -121,15 +129,10 @@ public class GameBrain : MonoBehaviour {
 	public GameObject Player = null;
 	public GameObject MouseMarker = null;
 	public GameObject HUDMaster = null;
-	public GameObject Souls = null;		
-//	public GameObject Debuffs = null;
+	public GameObject Souls = null;
 	public GameObject DisplayText = null;
-//	public GameObject SpellDatabase = null;
 	public GameObject loadingScreen = null;
-
-
-
-
+	
 	public bool[] SpellHasBeenCast = {false, false, false, false, false, false, false, false, false,
 		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
 	string[] spellNames = {"Barrier","Bolt","Bolt Chain","Concrete","Crystal Spikes","Explosion","Fire Ball","Fog","Freeze","Gravity Well","Hydrant",
@@ -144,9 +147,6 @@ public class GameBrain : MonoBehaviour {
 			DontDestroyOnLoad (gameObject);
 			Instance = this;
 		}
-
-
-		
 	}
 
 	void Start ()
@@ -177,16 +177,10 @@ public class GameBrain : MonoBehaviour {
 				HUDMaster.SetActive (false);
 		}
 
-//		if (SpellDatabase != null)
-//			SpellDatabase.SetActive (false);
 		if (Souls != null)
 			Souls.SetActive (false);
-//		if (Debuffs != null)
-//			Debuffs.SetActive (false);
 		if (DisplayText != null)
 			DisplayText.SetActive (false);
-		LoadPlayerData ();
-		//gameInfo.RoomsCleared [3] = false;
 	}
 
 	void OnLevelWasLoaded(int level)
@@ -196,153 +190,29 @@ public class GameBrain : MonoBehaviour {
 		// currently using gamebrains actual level to load level position approriately
 
 		// send these messages to deactivate in case they are active
-		GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
-		GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
-
-		int count = RoomsCleared.Count;
-		if (CurrentLevel == 1)
+		GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar", SendMessageOptions.DontRequireReceiver);
+		GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar", SendMessageOptions.DontRequireReceiver);
+		GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar", SendMessageOptions.DontRequireReceiver);
+		if (CurrentLevel >= 0)
 		{
+			GameBrain.Instance.HUDMaster.SetActive(true);
+			GameBrain.Instance.Player.SetActive(true);
+			GameBrain.Instance.MouseMarker.SetActive(true);
+			int count = RoomsCleared.Count;
 			if (count == 0)
 				Player.transform.position = Vector3.zero;
 			else
 			{
 				for (int i = 0; i < count; ++i)
-				{
-					switch (RoomsCleared[i])
-					{
-					case 1: Destroy(GameObject.Find("Room 01").transform.FindChild("Spawn Area").gameObject); break;
-					case 2: 
-					{
-						Destroy(GameObject.Find("Room 02").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 02").transform.FindChild("Mage Captain").gameObject);
-						break;
-					}
-					case 3: 
-					{
-						Destroy(GameObject.Find("Room 03").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 03").transform.FindChild("Juggernaut Captain").gameObject);
-						break;
-					}
-					case 4: Destroy(GameObject.Find("Room 04").transform.FindChild("Spawn Area").gameObject); break;
-					case 5: 
-					{
-						Destroy(GameObject.Find("Room 05").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 05").transform.FindChild("Binding Captain").gameObject);
-						break;
-					}
-					}
-				}
-//				switch (RoomsCleared[count-1]) // spawn player in room last cleared
-//				{
-//				case 1: Player.transform.position = Vector3.zero; break;
-//				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
-//				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
-//				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
-//				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
-//				}
+					GameObject.Find("Room " + RoomsCleared[i].ToString()).transform.FindChild("Spawn Area").gameObject.SetActive(false);
 				Player.transform.position = RespawnLoc;
 			}
-			GameBrain.Instance.HUDMaster.SetActive(true);
-			GameBrain.Instance.Player.SetActive(true);
-			GameBrain.Instance.MouseMarker.SetActive(true);
 		}
-		else if (CurrentLevel == 2)
-		{
-			if (count == 0)
-				Player.transform.position = Vector3.zero;
-			else
-			{
-				for (int i = 0; i < count; ++i)
-				{
-					switch (RoomsCleared[i])
-					{
-					case 1: Destroy(GameObject.Find("Room 01").transform.FindChild("Spawn Area").gameObject); break;
-					case 2: 
-					{
-						Destroy(GameObject.Find("Room 02").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 02").transform.FindChild("Mage Captain").gameObject);
-						break;
-					}
-					case 3: 
-					{
-						Destroy(GameObject.Find("Room 03").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 03").transform.FindChild("Mage Captain").gameObject);
-						break;
-					}
-					case 4: Destroy(GameObject.Find("Room 04").transform.FindChild("Spawn Area").gameObject); break;
-					case 5: 
-					{
-						Destroy(GameObject.Find("Room 05").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 05").transform.FindChild("Mage Captain").gameObject);
-						break;
-					}
-					}
-				}
-//				switch (RoomsCleared[count-1]) // spawn player in room last cleared
-//				{
-//				case 1: Player.transform.position = Vector3.zero; break;
-//				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
-//				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
-//				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
-//				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
-//				}
-				Player.transform.position = RespawnLoc;
-			}
-			GameBrain.Instance.HUDMaster.SetActive(true);
-			GameBrain.Instance.Player.SetActive(true);
-			GameBrain.Instance.MouseMarker.SetActive(true);
-		}
-		else if (CurrentLevel == 3)
-		{
-			if (count == 0)
-				Player.transform.position = Vector3.zero;
-			else
-			{
-				for (int i = 0; i < count; ++i)
-				{
-					switch (RoomsCleared[i])
-					{
-					case 1: Destroy(GameObject.Find("Room 01").transform.FindChild("Spawn Area").gameObject); break;
-					case 2: 
-					{
-						Destroy(GameObject.Find("Room 02").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 02").transform.FindChild("Mage Captain").gameObject);
-						break;
-					}
-					case 3: 
-					{
-						Destroy(GameObject.Find("Room 03").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 03").transform.FindChild("Mage Captain").gameObject);
-						break;
-					}
-					case 4: Destroy(GameObject.Find("Room 04").transform.FindChild("Spawn Area").gameObject); break;
-					case 5: 
-					{
-						Destroy(GameObject.Find("Room 05").transform.FindChild("Spawn Area").gameObject);
-						Destroy(GameObject.Find("Room 05").transform.FindChild("Mage Captain").gameObject);
-						break;
-					}
-					}
-				}
-//				switch (RoomsCleared[count-1]) // spawn player in room last cleared
-//				{
-//				case 1: Player.transform.position = Vector3.zero; break;
-//				case 2: Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
-//				case 3: Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
-//				case 4: Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
-//				case 5: Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
-//				}
-				Player.transform.position = RespawnLoc;
-			}
-			GameBrain.Instance.HUDMaster.SetActive(true);
-			GameBrain.Instance.Player.SetActive(true);
-			GameBrain.Instance.MouseMarker.SetActive(true);
-		}
-
-
 	}
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.I))
+
+	void Update ()
+	{
+		if (Input.GetKey(KeyCode.I) && Input.GetKeyDown(KeyCode.V))
 		    Player.GetComponent<Living_Obj>().CanTakeDamage = !Player.GetComponent<Living_Obj>().CanTakeDamage;
 		if (CurrentLevel > 0)
 			GameTime += Time.deltaTime;
@@ -439,10 +309,8 @@ public class GameBrain : MonoBehaviour {
 			PlayerCurrHealth = 0;
 			ModLivesLeft( -1);
 
-			if (PlayerLivesLeft <= 0)
-				GameOver();
-			else
-				RespawnPlayer();
+			if (PlayerLivesLeft > 0)
+				PlayerCurrHealth = PlayerMaxHealth;
 		}
 		HUDMaster.GetComponent<StatsDisplay> ().SetHealthDisplay(PlayerCurrHealth);
 	}
@@ -474,16 +342,6 @@ public class GameBrain : MonoBehaviour {
 			PlayerLivesLeft = 0;
 		}
 		HUDMaster.GetComponent<StatsDisplay> ().SetLivesDisplay((uint)PlayerLivesLeft);
-	}
-
-	void RespawnPlayer()
-	{
-		PlayerCurrHealth = PlayerMaxHealth;
-	}
-
-	void GameOver()
-	{
-
 	}
 
 	void ModSouls(int _value)
@@ -522,10 +380,27 @@ public class GameBrain : MonoBehaviour {
 		}
 	}
 
-	void SetLevel(int _Level)
+	public void SetLevel(int _Level)
 	{
 		CurrentLevel = _Level;
-		if (CurrentLevel >= 0) {
+		if (CurrentLevel > LevelProgress)
+		{
+			RoomsCleared = new List<int>();
+			RespawnLoc = Vector3.zero;
+			LevelProgress = CurrentLevel;
+			SoulsAtLevelStart = SoulCount;
+			FireLevelAtStart = FireLevel;
+			WaterLevelAtStart = WaterLevel;
+			ElectricLevelAtStart = ElectricLevel;
+			EarthLevelAtStart = EarthLevel;
+			WindLevelAtStart = WindLevel;
+		}
+
+		if (CurrentLevel >= 0)
+		{
+			if (CurrentLevel == 0)
+				Reset();
+
 			if (Player != null)
 				Player.SetActive (true);
 			if (MouseMarker != null)
@@ -542,17 +417,45 @@ public class GameBrain : MonoBehaviour {
 			if (HUDMaster != null)
 				HUDMaster.SetActive (false);
 		}
+		Player.GetComponent<Player_Caster_Controller> ().SetRecoverTime (0.001f);
 	}
 
-	void LoadPlayerData()
+	public void Reset()
 	{
-		if (File.Exists (Application.persistentDataPath + "/PlayerInfo.dat")) 
-		{
-
-		}
+		SetMaxHealth(2000);
+		SetHealth(2000);
+		SetLivesLeft(3);
+		SetSouls(0);
+		
+		FireLevel = 0;
+		WindLevel = 0;
+		EarthLevel = 0;
+		ElectricLevel = 0;
+		WaterLevel = 0;
+		
+		RoomsCleared = new List<int>();
+		
+		LevelProgress = 0;
+		NumEnemiesKilled = 0;
+		DamageTaken = 0;
+		TotalSoulCount = 0;
+		DeathCount = 0;
+		GameTime = 0;
+		NumCastedSpells = 0;
+		RespawnLoc = Vector3.zero;
+		transform.position = Vector3.zero;
+		
+		HUDMaster.GetComponent<MacroSelect> ().curMac = 0;
+		HUDMaster.GetComponent<MacroSelect> ().spells[0] = GameBrain.Instance.GetComponent<SpellMasterList> ().fireBall;
+		HUDMaster.GetComponent<MacroSelect> ().spells[1] = GameBrain.Instance.GetComponent<SpellMasterList> ().windBlade;
+		HUDMaster.GetComponent<MacroSelect> ().spells[2] = GameBrain.Instance.GetComponent<SpellMasterList> ().rockSpike;
+		HUDMaster.GetComponent<MacroSelect> ().spells[3] = GameBrain.Instance.GetComponent<SpellMasterList> ().bolt;
+		HUDMaster.GetComponent<MacroSelect> ().spells[4] = GameBrain.Instance.GetComponent<SpellMasterList> ().hydrant;
+		
+		HUDMaster.GetComponent<MacroSelect> ().needsUpdate = true;
 	}
 
-	void ChangeMusic(AudioClip clip)
+	public void ChangeMusic(AudioClip clip)
 	{
 		if (Music.clip == clip)
 			return;
@@ -592,7 +495,7 @@ public class GameBrain : MonoBehaviour {
 		for (int i = 0; i < RoomsCleared.Count; i++)
 			info.RoomsCleared[i] = RoomsCleared[i];
 		
-		info.CurrentLevel = CurrentLevel;
+		info.LevelProgress = CurrentLevel;
 		info.NumEnemiesKilled = NumEnemiesKilled;
 		info.DamageTaken = DamageTaken;
 		info.TotalSoulCount = TotalSoulCount;
@@ -601,10 +504,10 @@ public class GameBrain : MonoBehaviour {
 		info.NumCastedSpells = NumCastedSpells;
 		
 		info.spellsCast = SpellHasBeenCast;
-		//info.selectedMacros = new GameObject[5];
-		//for (int i = 0; i < 5; ++i)
-		//	info.selectedMacros[i] = GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i];
-
+		info.RespawnLocX = Player.transform.position.x;
+		info.RespawnLocY = Player.transform.position.y;
+		info.RespawnLocZ = Player.transform.position.z;
+	
 		bf.Serialize (file, info);
 		file.Close ();
 	}
@@ -632,24 +535,31 @@ public class GameBrain : MonoBehaviour {
 		info.WaterLevel = 0;
 
 		info.RoomsCleared = new int[1];
-		info.RoomsCleared[0] = 0;
+		info.RoomsCleared[0] = -1;
 
-		info.CurrentLevel = 0;
+		info.LevelProgress = 1;
 		info.NumEnemiesKilled = 0;
 		info.DamageTaken = 0;
 		info.TotalSoulCount = 0;
 		info.DeathCount = 0;
 		info.GameTime = 0;
 		info.NumCastedSpells = 0;
+		info.RespawnLocX = info.RespawnLocY = info.RespawnLocZ = 0.0f;
+
+		HUDMaster.SetActive (true);
+		HUDMaster.GetComponent<MacroSelect> ().spells[0] = GameBrain.Instance.GetComponent<SpellMasterList> ().fireBall;
+		HUDMaster.GetComponent<MacroSelect> ().spells[1] = GameBrain.Instance.GetComponent<SpellMasterList> ().windBlade;
+		HUDMaster.GetComponent<MacroSelect> ().spells[2] = GameBrain.Instance.GetComponent<SpellMasterList> ().rockSpike;
+		HUDMaster.GetComponent<MacroSelect> ().spells[3] = GameBrain.Instance.GetComponent<SpellMasterList> ().bolt;
+		HUDMaster.GetComponent<MacroSelect> ().spells[4] = GameBrain.Instance.GetComponent<SpellMasterList> ().hydrant;
+		HUDMaster.GetComponent<MacroSelect> ().curMac = 0;
+
+		HUDMaster.GetComponent<MacroSelect> ().needsUpdate = true;
 
 		info.spellsCast = new bool[25];
 		for (int i = 0; i < 25; ++i)
 			info.spellsCast[i] = false;
-//		info.selectedMacros = new string[5];
-//		for (int i = 0; i < 5; ++i)			// TODO: when refactoring spells, assign the defaults here
-//			info.selectedMacros[i] = GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i].transform.name;
 
-		
 		bf.Serialize (file, info);
 		file.Close ();
 	}
@@ -659,24 +569,24 @@ public class GameBrain : MonoBehaviour {
 	{
 		string loadFile = Application.persistentDataPath + "/PlayerInfo.dat";
 		
-		if(File.Exists(loadFile))
+		if (File.Exists (loadFile))
 		{
-			BinaryFormatter bf = new BinaryFormatter();
-			FileStream file = File.Open(loadFile, FileMode.Open);
-			GameInfo info = (GameInfo)bf.Deserialize(file);
-			file.Close();
+			BinaryFormatter bf = new BinaryFormatter ();
+			FileStream file = File.Open (loadFile, FileMode.Open);
+			GameInfo info = (GameInfo)bf.Deserialize (file);
+			file.Close ();
 			
 			// set values of our gameBrain to those loaded from save
-			PlayerMaxHealth = info.PlayerMaxHealth;
-			GameBrain.Instance.Player.GetComponent<Living_Obj>().MaxHealth = info.PlayerMaxHealth;
+			SetMaxHealth (info.PlayerMaxHealth);
+			GameBrain.Instance.Player.GetComponent<Living_Obj> ().MaxHealth = info.PlayerMaxHealth;
 
-			PlayerCurrHealth = info.PlayerCurrHealth;
-			GameBrain.Instance.Player.GetComponent<Living_Obj>().CurrHealth = info.PlayerCurrHealth;
+			SetHealth (info.PlayerCurrHealth);
+			GameBrain.Instance.Player.GetComponent<Living_Obj> ().CurrHealth = info.PlayerCurrHealth;
 
-			PlayerLivesLeft = info.PlayerLivesLeft;
-			GameBrain.Instance.Player.GetComponent<Living_Obj>().Lives = info.PlayerLivesLeft;
+			SetLivesLeft (info.PlayerLivesLeft);
+			GameBrain.Instance.Player.GetComponent<Living_Obj> ().Lives = info.PlayerLivesLeft;
 
-			SoulCount = info.SoulCount;
+			SetSouls (info.SoulCount);
 
 			FireLevel = info.FireLevel;
 			WindLevel = info.WindLevel;
@@ -684,22 +594,31 @@ public class GameBrain : MonoBehaviour {
 			ElectricLevel = info.ElectricLevel;
 			WaterLevel = info.WaterLevel;
 
-			RoomsCleared.Clear();
-			for (int i = 0; i < info.RoomsCleared.Length; ++i)
-				RoomsCleared.Add(info.RoomsCleared[i]);
+			RoomsCleared = new List<int> ();
+			if (info.RoomsCleared.Length > 0 && info.RoomsCleared [0] != -1)
+				for (int i = 0; i < info.RoomsCleared.Length; ++i)
+					RoomsCleared.Add (info.RoomsCleared [i]);
 
-			CurrentLevel = info.CurrentLevel;
+			CurrentLevel = LevelProgress = info.LevelProgress;
 			NumEnemiesKilled = info.NumEnemiesKilled;
 			DamageTaken = info.DamageTaken;
 			TotalSoulCount = info.TotalSoulCount;
 			DeathCount = info.DeathCount;
 			GameTime = info.GameTime;
 			NumCastedSpells = info.NumCastedSpells;
-
 			SpellHasBeenCast = info.spellsCast;
-//			for (int i = 0; i < 5; i++)
-//				GameBrain.Instance.HUDMaster.GetComponent<MacroSelect>().spells[i] = info.selectedMacros[i];
+
+			Vector3 newRespawn;
+			newRespawn.x = info.RespawnLocX;
+			newRespawn.y = info.RespawnLocY;
+			newRespawn.z = info.RespawnLocZ;
+			RespawnLoc = newRespawn;
+			Player.transform.position = RespawnLoc;
+		}
+		else
+		{
+			EraseFile();
+			Load();
 		}
 	}
-
 }

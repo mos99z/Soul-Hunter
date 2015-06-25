@@ -16461,7 +16461,7 @@ GameObject:
   - 65: {fileID: 303557211}
   - 114: {fileID: 303557210}
   m_Layer: 0
-  m_Name: Spawn Area 1
+  m_Name: Spawn Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35153,7 +35153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &616116840
 Transform:
   m_ObjectHideFlags: 0
@@ -35609,7 +35609,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 627619315}
   m_Layer: 0
-  m_Name: Room 02
+  m_Name: Room 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35705,7 +35705,7 @@ GameObject:
   - 65: {fileID: 629005002}
   - 114: {fileID: 629005001}
   m_Layer: 0
-  m_Name: Boss Room Trigger
+  m_Name: Spawn Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55414,7 +55414,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1066022319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.3999996, y: 0, z: 9.60000038}
+  m_LocalPosition: {x: 9.92000008, y: 0, z: 9.22000027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 787321161}
@@ -55767,7 +55767,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1069249127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.0146027, y: 0, z: 9.40066528}
+  m_LocalPosition: {x: -10.7600002, y: 0, z: 9.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 787321161}
@@ -63280,7 +63280,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1263837997}
   m_Layer: 0
-  m_Name: Room 05
+  m_Name: Room 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70929,7 +70929,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1381408992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.71, y: 0, z: -10.6999998}
+  m_LocalPosition: {x: 10.29, y: 0, z: -10.2700005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 787321161}
@@ -78942,11 +78942,13 @@ MonoBehaviour:
   PlayerCurrHealth: 0
   PlayerLivesLeft: 0
   SoulCount: 0
+  SoulsAtLevelStart: 0
   MeleeEnemyCounter: 0
   PlayerInFog: 0
   FightingCaptain: 0
   FightingBoss: 0
   CurrentLevel: 1
+  LevelProgress: 0
   RoomsCleared: 
   RespawnLoc: {x: 0, y: 0, z: 0}
   Music: {fileID: 0}
@@ -82097,7 +82099,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1679735073}
   m_Layer: 0
-  m_Name: Room 03
+  m_Name: Room 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90929,7 +90931,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1832403559}
   m_Layer: 0
-  m_Name: Room 06
+  m_Name: Room 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94853,7 +94855,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908001230}
   m_LocalRotation: {x: .382683456, y: 0, z: 0, w: .923879504}
-  m_LocalPosition: {x: -38.4000015, y: 14, z: 125.5}
+  m_LocalPosition: {x: -1.39999998, y: 14, z: -5.30000019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526388461}
@@ -94927,7 +94929,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1915194285}
   m_Layer: 0
-  m_Name: Room 04
+  m_Name: Room 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97970,7 +97972,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1956876681}
   m_Layer: 0
-  m_Name: Room 01
+  m_Name: Room 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99572,7 +99574,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2027377181}
   m_Layer: 0
-  m_Name: Boss Room
+  m_Name: Room 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

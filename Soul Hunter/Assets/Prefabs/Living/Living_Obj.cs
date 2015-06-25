@@ -321,27 +321,8 @@ public class Living_Obj : MonoBehaviour
 					GameBrain.Instance.FightingCaptain = false;
 					GameBrain.Instance.FightingBoss = false;
 					GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
-					GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
-					GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
-					GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar");
-					Application.LoadLevel(Application.loadedLevel);	// gamebrain assigns player location based on save when scene loads
-
-					// below works to respawn player when dead, above should do so more eloquently
-
-					//int count = GameBrain.Instance.RoomsCleared.Count;
-					//if (count > 0)
-					//{
-					//	switch (GameBrain.Instance.RoomsCleared[count - 1])
-					//	{
-					//	case 1: GameBrain.Instance.Player.transform.position = Vector3.zero; break;
-					//	case 2: GameBrain.Instance.Player.transform.position = new Vector3(45.0f, 0.0f, 85.0f); break;
-					//	case 3: GameBrain.Instance.Player.transform.position = new Vector3(-40.0f, 0.0f, 85.0f); break;
-					//	case 4: GameBrain.Instance.Player.transform.position = new Vector3(-50.0f, 0.0f, 35.0f); break;
-					//	case 5: GameBrain.Instance.Player.transform.position = new Vector3(-20.0f, 0.0f, 140.0f); break;
-					//	}
-					//}
-					//else
-					//	GameBrain.Instance.Player.transform.position = Vector3.zero;
+					GameBrain.Instance.Save();
+					Application.LoadLevel(Application.loadedLevel);
 				}
 			}
 		}
@@ -374,7 +355,6 @@ public class Living_Obj : MonoBehaviour
 		IsAlive = false;
 		if (entType != EntityType.Player)
 			GameBrain.Instance.SendMessage("AddKill");
-
 	}
 
 	void DropSoul()
@@ -389,7 +369,7 @@ public class Living_Obj : MonoBehaviour
 
 		// captain dropping soul clears room
 		// TODO: check for entire rooms death for room cleared
-		if (entType == EntityType.Captain)
+		if (entType == EntityType.Captain || entType == EntityType.Boss)
 		{
 			GameBrain.Instance.RoomsCleared.Add(RoomNumber);
 			if (SavePoint != null)
@@ -428,24 +408,24 @@ public class Living_Obj : MonoBehaviour
 		}
 		else
 		{
-//	TODO: Player "Death"
-			GameBrain.Instance.HUDMaster.SendMessage("DeactivateCaptBar");
-			GameBrain.Instance.HUDMaster.SendMessage("DeactivateBossBar");
-			GameBrain.Instance.HUDMaster.SendMessage("DeactivateDualBar");
-
 			GameBrain.Instance.SendMessage("SetMaxHealth", MaxHealth);
 			GameBrain.Instance.SendMessage("SetHealth", MaxHealth);
 			CurrHealth = MaxHealth;
 			GameBrain.Instance.SendMessage("SetLivesLeft", 3);
 			Lives = 3;
-			GameBrain.Instance.SendMessage("SetSouls", 0);
+			GameBrain.Instance.SendMessage("SetSouls", GameBrain.Instance.SoulsAtLevelStart);
+			GameBrain.Instance.FireLevel = GameBrain.Instance.FireLevelAtStart;
+			GameBrain.Instance.WaterLevel = GameBrain.Instance.WaterLevelAtStart;
+			GameBrain.Instance.EarthLevel = GameBrain.Instance.EarthLevelAtStart;
+			GameBrain.Instance.WindLevel = GameBrain.Instance.WindLevelAtStart;
+			GameBrain.Instance.ElectricLevel = GameBrain.Instance.ElectricLevelAtStart;
+			GameBrain.Instance.HUDMaster.GetComponent<Upgrades_Script>().CheckLevelAvailability();
+
 			GameBrain.Instance.RoomsCleared.Clear();
 			GameBrain.Instance.RoomsCleared = new List<int>();
 			IsAlive = true;
+			GameBrain.Instance.Save();
 			Application.LoadLevel(Application.loadedLevel);
-
-//			Application.LoadLevel("Tally Scene");
-//			GameBrain.Instance.SendMessage("SetLevel", -2);
 		}
 	}
 

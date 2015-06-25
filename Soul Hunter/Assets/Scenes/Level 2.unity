@@ -4225,7 +4225,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 69709115}
   m_Layer: 0
-  m_Name: Room 03
+  m_Name: Room 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5890,7 +5890,7 @@ GameObject:
   - 65: {fileID: 118939702}
   - 114: {fileID: 118939701}
   m_Layer: 0
-  m_Name: Spawn Area 1
+  m_Name: Spawn Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8689,7 +8689,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 158354032}
   m_Layer: 0
-  m_Name: Room 05
+  m_Name: Room 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8777,7 +8777,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 169257400}
   m_Layer: 0
-  m_Name: Room 02
+  m_Name: Room 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10171,7 +10171,7 @@ Prefab:
       objectReference: {fileID: 1839088137}
     - target: {fileID: 189990, guid: 00ba80b95ae75914bbcf232dd7c4c3e3, type: 2}
       propertyPath: m_Name
-      value: Spawn Area 1
+      value: Spawn Area
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00ba80b95ae75914bbcf232dd7c4c3e3, type: 2}
@@ -13110,7 +13110,7 @@ GameObject:
   - 65: {fileID: 274517436}
   - 65: {fileID: 274517435}
   m_Layer: 0
-  m_Name: Boss Room Trigger
+  m_Name: Spawn Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13279,7 +13279,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 279351657}
   m_Layer: 0
-  m_Name: Room 04
+  m_Name: Room 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32779,7 +32779,7 @@ GameObject:
   - 65: {fileID: 752411606}
   - 114: {fileID: 752411605}
   m_Layer: 0
-  m_Name: Spawn Area 2
+  m_Name: Spawn Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65019,7 +65019,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1754824210}
   m_Layer: 0
-  m_Name: Room 07
+  m_Name: Room 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66379,7 +66379,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1778870063}
   m_Layer: 0
-  m_Name: Boss Room
+  m_Name: Room 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76175,7 +76175,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1953647802}
   m_Layer: 0
-  m_Name: Room 01
+  m_Name: Room 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82397,7 +82397,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2116516219}
   m_Layer: 0
-  m_Name: Room 06
+  m_Name: Room 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

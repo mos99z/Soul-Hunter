@@ -203,7 +203,8 @@ public class MacroSelect : MonoBehaviour
 		string[] data3 = info3.Split(',');
 		curSpell.text = data3[0];
 
-		Player.SendMessage ("ChangeSpell", spells[curMac], SendMessageOptions.RequireReceiver);
+		if (spells[curMac] != null)
+			Player.SendMessage ("ChangeSpell", spells[curMac], SendMessageOptions.DontRequireReceiver);
 
 		int.TryParse(data3[1], out temp);
 		element1.sprite = elements[temp - 1];

@@ -81,6 +81,7 @@ public class Pause_Script : MonoBehaviour {
 	public void Upgrades()
 	{
 		UpgradesMenu.SetActive (true);
+		GameBrain.Instance.HUDMaster.GetComponent<Upgrades_Script> ().CheckLevelAvailability ();
 	}
 
 	public void SpellList()

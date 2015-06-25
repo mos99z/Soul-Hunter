@@ -64,7 +64,7 @@ public class Upgrades_Script : MonoBehaviour
 	
 	}
 
-	void CheckLevelAvailability()
+	public void CheckLevelAvailability()
 	{
 		if (GB.FireLevel == 3 || GB.SoulCount < LevelCost [GB.FireLevel + 1])
 		{
@@ -144,6 +144,7 @@ public class Upgrades_Script : MonoBehaviour
 		else
 			WaterCost.text = "Water Upgrade Cost: Fully Upgraded";
 			
+		UpdateColors ();
 	}
 
 	public void UpgradeFire()
@@ -152,7 +153,6 @@ public class Upgrades_Script : MonoBehaviour
 		//GB.GetComponent<StatsDisplay> ().updateSoul = true;
 		GB.FireLevel++;
 		CheckLevelAvailability ();
-		FireImage.color = new Color32(255, ELVs[GB.FireLevel - 1], ELVs[GB.FireLevel - 1], 255);
 		GB.ChangeSoulHud();
 	}
 
@@ -161,32 +161,6 @@ public class Upgrades_Script : MonoBehaviour
 		GB.SoulCount -= LevelCost [GB.WindLevel + 1];
 		GB.WindLevel++;
 		CheckLevelAvailability ();
-
-		byte R = 0;
-		byte G = 0;
-		byte B = 0;
-		
-		switch (GB.WindLevel)
-		{
-		case 1:
-		{
-			R = G = B = 192;
-			break;
-		}
-		case 2:
-		{
-			R = G = B = 128;
-			break;
-		}
-		case 3:
-		{
-			R = G = B = 64;
-			break;
-		}
-		default:
-			break;
-		}
-		WindImage.color = new Color32(R, G, B, 255);
 		GB.ChangeSoulHud();
 	}
 
@@ -195,38 +169,6 @@ public class Upgrades_Script : MonoBehaviour
 		GB.SoulCount -= LevelCost [GB.EarthLevel + 1];
 		GB.EarthLevel++;
 		CheckLevelAvailability ();
-
-		byte R = 0;
-		byte G = 0;
-		byte B = 0;
-
-		switch (GB.EarthLevel)
-		{
-		case 1:
-		{
-			R = 160;
-			G = 125;
-			B = 65;
-			break;
-		}
-		case 2:
-		{
-			R = 180;
-			G = 130;
-			B = 50;
-			break;
-		}
-		case 3:
-		{
-			R = 170;
-			G = 100;
-			B = 0;
-			break;
-		}
-		default:
-			break;
-		}
-		EarthImage.color = new Color32(R, G, B, 255);
 		GB.ChangeSoulHud();
 	}
 
@@ -235,7 +177,6 @@ public class Upgrades_Script : MonoBehaviour
 		GB.SoulCount -= LevelCost [GB.ElectricLevel + 1];
 		GB.ElectricLevel++;
 		CheckLevelAvailability ();
-		ElectricImage.color = new Color32(255, 255, ELVs[GB.ElectricLevel - 1], 255);
 		GB.ChangeSoulHud();
 	}
 
@@ -244,8 +185,90 @@ public class Upgrades_Script : MonoBehaviour
 		GB.SoulCount -= LevelCost [GB.WaterLevel + 1];
 		GB.WaterLevel++;
 		CheckLevelAvailability ();
-		WaterImage.color = new Color32(ELVs[GB.WaterLevel - 1], ELVs[GB.WaterLevel - 1], 255, 255);
 		GB.ChangeSoulHud();
+	}
+
+	public void UpdateColors()
+	{
+// Fire
+		if (GB.FireLevel > 0)
+			FireImage.color = new Color32(255, ELVs[GB.FireLevel - 1], ELVs[GB.FireLevel - 1], 255);
+		else
+			FireImage.color = new Color32 (255, 255, 255, 255);
+// Wind
+		byte R = 255;
+		byte G = 255;
+		byte B = 255;
+		if (GB.WindLevel > 0) {
+			
+			switch (GB.WindLevel) {
+			case 1:
+				{
+					R = G = B = 192;
+					break;
+				}
+			case 2:
+				{
+					R = G = B = 128;
+					break;
+				}
+			case 3:
+				{
+					R = G = B = 64;
+					break;
+				}
+			default:
+				break;
+			}
+		}
+		WindImage.color = new Color32 (R, G, B, 255);
+
+//Earth
+		R = 255;
+		G = 255;
+		B = 255;
+		
+		if (GB.EarthLevel > 0)
+		{
+			switch (GB.EarthLevel)
+			{
+			case 1:
+				{
+					R = 160;
+					G = 125;
+					B = 65;
+					break;
+				}
+			case 2:
+				{
+					R = 180;
+					G = 130;
+					B = 50;
+					break;
+				}
+			case 3:
+				{
+					R = 170;
+					G = 100;
+					B = 0;
+					break;
+				}
+			default:
+				break;
+			}
+		}
+		EarthImage.color = new Color32 (R, G, B, 255);
+
+// Electric
+		if (GB.ElectricLevel > 0)
+			ElectricImage.color = new Color32(255, 255, ELVs[GB.ElectricLevel - 1], 255);
+		else
+			ElectricImage.color = new Color32 (255, 255, 255, 255);
+// Water
+		if (GB.WaterLevel > 0)
+			WaterImage.color = new Color32(ELVs[GB.WaterLevel - 1], ELVs[GB.WaterLevel - 1], 255, 255);
+		else
+			WaterImage.color = new Color32 (255, 255, 255, 255);
 	}
 
 	public void Close()

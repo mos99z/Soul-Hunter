@@ -552,7 +552,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 412550}
-  - 114: {fileID: 11478530}
   - 132: {fileID: 13215032}
   - 135: {fileID: 13569988}
   m_Layer: 0
@@ -9630,11 +9629,16 @@ MonoBehaviour:
   mouseMarker: {fileID: 129896}
   spawnHeight: -3
   speed: 1
+  Crystals: {fileID: 0}
   recoveryCost: 2
   duration: 1
-  damage: 5
+  DamageEarth: 1.29999995
+  DamageLightning: 1.39999998
   tickTime: .25
   slow: {fileID: 150616, guid: 07fd5da6258277544b6f0208a016c4b3, type: 2}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &11403910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9955,6 +9959,7 @@ MonoBehaviour:
   ImpactRate: .25
   MaxChildren: 5
   Child: 0
+  RockSpikeSound: []
 --- !u!114 &11406334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10418,6 +10423,11 @@ MonoBehaviour:
   duration: 2
   damage: 5
   recoveryTime: 1.5
+  BurningDebuff: {fileID: 0}
+  Flame: {fileID: 0}
+  BurningDamage: 10
+  DebuffChance: .899999976
+  DebuffDuration: 10
 --- !u!114 &11415592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10621,8 +10631,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseMarker: {fileID: 0}
   duration: 2
-  damage: 5
   recoveryTime: 1.5
+  Blinded: {fileID: 0}
 --- !u!114 &11419854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11041,13 +11051,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: .150000006
   DirectionIndicator: {fileID: 116266}
-  Animations: {fileID: 9521728}
+  Animate: {fileID: 0}
   CursorColliders:
     serializedVersion: 2
     m_Bits: 2147483648
   ScreenCamera: {fileID: 0}
   GameOver: {fileID: 164258}
   isCrippled: 0
+  underMelee: 0
+  attackLength: 0
+  spriteImage: {fileID: 0}
 --- !u!114 &11423586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11922,18 +11935,17 @@ MonoBehaviour:
   damage: 25.1000004
   duration: 1
   recoveryTime: 2
-  mouseMarker: {fileID: 0}
-  spawnHeight: 1
-  forceMode: 0
   knockback: 500
-  radius: 5
-  burning: {fileID: 158764, guid: 8a1c1cb0b6641904ba77091a2b687b5b, type: 2}
+  burnDamage: 10.1000004
   burnChance: .100000001
   burnDuration: 5
   burnTick: 1
-  burnDamage: 10.1000004
-  cripple: {fileID: 169850, guid: f59cbcdee176bf444a23ac848b1dc966, type: 2}
   crippleChance: .150000006
+  crippleDuration: 5
+  SpellEffect: {fileID: 0}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &11434484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12314,7 +12326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5f45cba6929284793401c7f7042151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseMarker: {fileID: 129896}
   duration: 2
   startHeight: 30
   explosion: {fileID: 172790, guid: 38edc1e6608538348bd9c94bd452cd76, type: 2}
@@ -12324,7 +12335,6 @@ MonoBehaviour:
   burnDamage: 8.10000038
   burnTick: 1
   burnTime: 5
-  cripple: {fileID: 169850, guid: f59cbcdee176bf444a23ac848b1dc966, type: 2}
 --- !u!114 &11437246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13131,12 +13141,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2581ecd0a94e2949b161078641751f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseMarker: {fileID: 0}
-  startHeight: 0
-  duration: 2
-  damage: 5.5
+  DamageWater: 5.5
+  DamageLighting: 5.5
+  TickRate: .5
   recoveryTime: 1.5
-  maxHits: 5
+  Sparks: {fileID: 0}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &11443370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13812,11 +13824,8 @@ MonoBehaviour:
   mouseMarker: {fileID: 129896}
   spawnHeight: .0500000007
   duration: 4
-  rotateSpeed: 135
   recoveryCost: 2
   scaleShrink: .5
-  slow: {fileID: 150616, guid: 07fd5da6258277544b6f0208a016c4b3, type: 2}
-  weakness: 5
 --- !u!114 &11453044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14325,6 +14334,7 @@ MonoBehaviour:
   - {fileID: 153472}
   - {fileID: 101352}
   - {fileID: 180234}
+  TestSFX: {fileID: 0}
 --- !u!114 &11461100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14498,6 +14508,7 @@ MonoBehaviour:
   - {fileID: 153472}
   - {fileID: 101352}
   - {fileID: 180234}
+  TestSFX: {fileID: 0}
 --- !u!114 &11464926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14737,6 +14748,12 @@ MonoBehaviour:
   Lives: 3
   SoulValue: 0
   entType: 0
+  RoomNumber: 0
+  SavePoint: {fileID: 0}
+  SelectHealthBar: 0
+  SmallBloodSplat: {fileID: 0}
+  MedBloodSplat: {fileID: 0}
+  LargeBloodSplat: {fileID: 0}
 --- !u!114 &11467750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14759,6 +14776,9 @@ MonoBehaviour:
   burningDuration: 5
   burningTick: 1
   burningDamage: 5.0999999
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &11468606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14949,11 +14969,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1b9ab9f5a217b409ee726bec6253ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
   duration: 2
   recoveryTime: .75
-  slowed: {fileID: 150616, guid: 07fd5da6258277544b6f0208a016c4b3, type: 2}
-  mouseMarker: {fileID: 0}
+  SpellEffect: {fileID: 0}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &11470090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14965,18 +14986,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a97dcc0fe4cb942beb74fbb7244bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuMusic: {fileID: 0}
+  GameplayMusic: {fileID: 0}
+  CaptainMusic: {fileID: 0}
+  BossMusic: {fileID: 0}
+  GameOverMusic: {fileID: 0}
   PlayerMaxHealth: 2000
   PlayerCurrHealth: 2000
   PlayerLivesLeft: 3
   SoulCount: 20000
+  SoulsAtLevelStart: 0
   MeleeEnemyCounter: 0
+  PlayerInFog: 0
+  FightingCaptain: 0
+  FightingBoss: 0
   CurrentLevel: 1
+  LevelProgress: 0
   RoomsCleared: 
+  RespawnLoc: {x: 0, y: 0, z: 0}
+  Music: {fileID: 0}
+  MusicVolume: 0
+  SFXVolume: 0
   FireLevel: 0
   WindLevel: 0
   EarthLevel: 0
   ElectricLevel: 0
   WaterLevel: 0
+  NumberOfLevels: 3
+  FireLevelAtStart: 0
+  WindLevelAtStart: 0
+  EarthLevelAtStart: 0
+  ElectricLevelAtStart: 0
+  WaterLevelAtStart: 0
   NumEnemiesKilled: 0
   DamageTaken: 0
   DamageDealt: 0
@@ -14990,10 +15031,6 @@ MonoBehaviour:
   Souls: {fileID: 153334}
   DisplayText: {fileID: 123814}
   loadingScreen: {fileID: 0}
-  Music:
-  - {fileID: 8234292}
-  - {fileID: 8219968}
-  - {fileID: 8257736}
   SpellHasBeenCast: 00000000000000000000000000000000000000000000000000
 --- !u!114 &11470592
 MonoBehaviour:
@@ -15407,7 +15444,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseMarker: {fileID: 0}
   duration: 2
-  damage: 5
+  TickTimer: .25
+  MinDamage: 5.0999999
+  MaxDamage: 20.1000004
+  PushBackForce: 100
   recoveryTime: 1.5
 --- !u!114 &11473862
 MonoBehaviour:
@@ -15737,23 +15777,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Angle: 135
---- !u!114 &11478530
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac5cbc14b488fe40b13446f0a88be20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseMarker: {fileID: 129896}
-  startHeight: 1.5
-  duration: 1
-  damage: 5.5
-  recoveryTime: 1.5
-  maxHits: 5
 --- !u!114 &11479076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16506,10 +16529,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90693b157974a64f881c6e91b7a3cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseMarker: {fileID: 0}
   duration: 2
   damage: 5
   recoveryTime: 1.5
+  JumpDistance: 2
+  NumberOfJumps: 7
+  Hitables:
+    serializedVersion: 2
+    m_Bits: 0
+  ChainEffect: {fileID: 0}
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &11485822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16735,12 +16766,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e61d48326939a4889c0cfeb025e2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseMarker: {fileID: 0}
-  startHeight: 1.5
-  duration: .300000012
-  damage: 15.1000004
-  recoveryTime: 1.5
-  maxHits: 4
+  DamageFire: 10.1000004
+  DamageLightning: 10.3999996
+  DamageTickRate: .100000001
+  RecoveryCostRate: .333333343
+  Range: 15
+  StartHeight: 1
+  ImpactEffectObj: {fileID: 0}
+  Duration: 10
+  TheCollider: {fileID: 0}
+  SpellEffect: {fileID: 0}
+  BurningDebuff: {fileID: 0}
+  BurningDamage: 5
+  DebuffChance: .5
+  DebuffDuration: 3
+  WALLS:
+    serializedVersion: 2
+    m_Bits: 0
+  PlayerFaceingIndicator: {fileID: 0}
 --- !u!114 &11488038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17211,6 +17254,11 @@ MonoBehaviour:
   duration: 2
   damage: 5
   recoveryTime: 1.5
+  SpellEffect: {fileID: 0}
+  GrowthRate: 2
+  LOSBlockers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &11495322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17653,6 +17701,10 @@ MonoBehaviour:
   speed: .200000003
   range: 5
   mouseMarker: {fileID: 0}
+  PlasmaTravel: {fileID: 0}
+  PlasmaHit: {fileID: 0}
+  Sphere: {fileID: 0}
+  PSystem: {fileID: 0}
 --- !u!114 &11499776
 MonoBehaviour:
   m_ObjectHideFlags: 1
