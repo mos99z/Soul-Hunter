@@ -97,7 +97,8 @@ public class GameBrain : MonoBehaviour {
 	public List<int> RoomsCleared;
 	public Vector3 RespawnLoc = Vector3.zero;
 	private GameInfo gameInfo;
-	public AudioSource Music;
+	public AudioSource CasualMusic;
+	public AudioSource GameMusic;
 	public float MusicVolume;
 	public float SFXVolume;
 
@@ -155,9 +156,11 @@ public class GameBrain : MonoBehaviour {
 		SFXVolume = PlayerPrefs.GetFloat ("SFXVolume", 1.0f);
 
 		AudioListener.volume = SFXVolume;
-		Music.ignoreListenerVolume = true;
-		Music.volume = MusicVolume;
-		Music.Play ();
+		CasualMusic.ignoreListenerVolume = true;
+		CasualMusic.volume = MusicVolume;
+		GameMusic.ignoreListenerVolume = true;
+		GameMusic.volume = MusicVolume;
+		CasualMusic.Play ();
 
 		if (CurrentLevel >= 0) {
 			if (Player != null)
@@ -431,19 +434,6 @@ public class GameBrain : MonoBehaviour {
 
 	void CheckHealth()
 	{
-		if (PlayerCurrHealth > PlayerMaxHealth)
-			PlayerCurrHealth = PlayerMaxHealth;
-		else if (PlayerCurrHealth <= 0)
-		{
-			DamageTaken += PlayerCurrHealth;
-			PlayerCurrHealth = 0;
-			ModLivesLeft( -1);
-
-			if (PlayerLivesLeft <= 0)
-				GameOver();
-			else
-				RespawnPlayer();
-		}
 		HUDMaster.GetComponent<StatsDisplay> ().SetHealthDisplay(PlayerCurrHealth);
 	}
 
@@ -474,16 +464,6 @@ public class GameBrain : MonoBehaviour {
 			PlayerLivesLeft = 0;
 		}
 		HUDMaster.GetComponent<StatsDisplay> ().SetLivesDisplay((uint)PlayerLivesLeft);
-	}
-
-	void RespawnPlayer()
-	{
-		PlayerCurrHealth = PlayerMaxHealth;
-	}
-
-	void GameOver()
-	{
-
 	}
 
 	void ModSouls(int _value)
@@ -554,12 +534,27 @@ public class GameBrain : MonoBehaviour {
 
 	void ChangeMusic(AudioClip clip)
 	{
-		if (Music.clip == clip)
-			return;
-		Music.Stop ();
-		Music.clip = clip;
-		Music.Play ();
+		if (clip == MenuMusic || clip == GameOverMusic) 
+		{
+			if (CasualMusic.clip == clip)
+				return;
+			CasualMusic.Stop ();
+			GameMusic.Stop();
+			CasualMusic.clip = clip;
+			CasualMusic.Play ();
+		}
+		else
+		{
+			if (GameMusic.clip == clip)
+				return;
+			CasualMusic.Stop ();
+			GameMusic.Stop();
+			GameMusic.clip = clip;
+			GameMusic.Play ();
+		}
 	}
+
+
 
 	public void ChangeSoulHud()
 	{

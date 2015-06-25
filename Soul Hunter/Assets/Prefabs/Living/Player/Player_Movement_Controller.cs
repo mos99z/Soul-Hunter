@@ -14,7 +14,6 @@ public class Player_Movement_Controller : MonoBehaviour {
 
 	public Camera ScreenCamera = null;
 	private Vector3 currentVelocity = Vector3.zero;
-	public GameObject GameOver;
 	public bool isCrippled;		// used for checking cripple on player
 
 	//animation stuff
@@ -23,7 +22,8 @@ public class Player_Movement_Controller : MonoBehaviour {
 	public float attackLength = 0;
 	public GameObject spriteImage;
 
-	void Start () {
+	void Start ()
+	{
 		//Cursor.visiblpie = false;
 		ScreenCamera = Camera.main;
 	}
@@ -188,8 +188,5 @@ public class Player_Movement_Controller : MonoBehaviour {
 		{
 			enemyList[i].SendMessage("PlayerDead", SendMessageOptions.DontRequireReceiver);
 		}
-
-		//GameOver.SendMessage ("PlayerDead");
-		GameOver.SetActive (true);
 	}
 }
